@@ -1,0 +1,84 @@
+  [ 1/73] ok                  177w     429tok  AMA Verband für Sensorik und Messtechn
+  [ 2/73] ok                  174w     627tok  automotive BerlinBrandenburg e.V. (aBB
+! [ 3/73] http_error            0w       0tok  Automotive Cluster Ostdeutschland e.V.
+  [ 4/73] ok                  400w    1014tok  Automotive Nordwest e.V.
+  [ 5/73] ok                 1951w    4873tok  automotive thüringen e.V.
+~ [ 6/73] thin_content         27w      71tok  AVK – Industrievereinigung Verstärkte 
+  [ 7/73] ok                  279w     737tok  Baden-Württemberg: Connected e.V. (bwc
+  [ 8/73] ok                 3288w    9788tok  bavAIRia e.V.
+  [ 9/73] ok                  281w     827tok  BDEW Bundesverband der Energie- und Wa
+  [10/73] ok                  183w     454tok  BIO Deutschland e.V.
+  [11/73] ok                15533w   38139tok  BioRN Network e.V.
+  [12/73] ok                  398w     912tok  Bundesverband Medizintechnologie e.V. 
+! [13/73] http_error            0w       0tok  Bundesverband Wärmepumpe e.V. (BWP)
+  [14/73] ok                 2324w    6673tok  Cluster Mechatronik & Automation
+  [15/73] ok                  158w     408tok  Cluster Mobility & Logistics
+  [16/73] ok                 9446w   24680tok  Composites United e.V.
+! [17/73] http_error            0w       0tok  CyberForum e.V.
+! [18/73] http_error            0w       0tok  Deutsche Gesellschaft für Nachhaltiges
+  [19/73] ok                 1293w    3209tok  ECPE European Center for Power Electro
+  [20/73] ok                19160w   53304tok  EtherCAT Technology Group e.V. (ETG)
+  [21/73] ok                  285w     825tok  Fachverband Biogas e.V.
+~ [22/73] thin_content         94w     284tok  Fachverband Werkzeugindustrie e.V. (FW
+  [23/73] ok                 1702w    4646tok  Forschungsvereinigung Antriebstechnik 
+  [24/73] ok                  211w     588tok  FVV e.V.
+  [25/73] ok                 1009w    2872tok  German Water Partnership e.V.
+  [26/73] ok                 1754w    4867tok  H2BZ-Initiative Hessen e.V.
+~ [27/73] thin_content         63w     161tok  Hamburg Aviation e.V.
+  [28/73] ok                 3232w    8411tok  Hanse-Aerospace e.V.
+  [29/73] ok                  151w     372tok  HyCologne – Wasserstoff Region Rheinla
+  [30/73] ok                  400w    1421tok  HYPOS e.V.
+! [31/73] http_error            0w       0tok  Industrievereinigung Kunststoffverpack
+  [32/73] ok                  419w    1149tok  InnoZent OWL e.V.
+~ [33/73] thin_content        125w     336tok  it's OWL – Intelligente Technische Sys
+! [34/73] http_error            0w       0tok  KI Bundesverband e.V.
+  [35/73] ok                  665w    1626tok  Kompetenznetzwerk Mechatronik BW e.V.
+  [36/73] ok                14341w   40549tok  Kunststoff-Netzwerk Franken e.V.
+  [37/73] ok                  884w    2322tok  kunststoffland NRW e.V.
+! [38/73] http_error            0w       0tok  Kunststoffrohrverband e.V. (KRV)
+  [39/73] ok                  185w     469tok  Life Science Nord e.V.
+  [40/73] ok                  714w    1943tok  Medical Valley EMN e.V.
+  [41/73] ok                 2111w    5851tok  medways e.V.
+! [42/73] http_error            0w       0tok  microTEC Südwest e.V.
+  [43/73] ok                  276w     722tok  NMWP.NRW e.V.
+  [44/73] ok                  228w     654tok  OpTecBB e.V.
+  [45/73] ok                  609w    1930tok  OptoNet e.V.
+  [46/73] ok                 4854w   12964tok  owl maschinenbau e.V.
+  [47/73] ok                  711w    1994tok  Packaging Valley Germany e.V.
+! [48/73] http_error            0w       0tok  PROFIBUS Nutzerorganisation e.V. (PNO)
+  [49/73] ok                 1060w    3363tok  Silicon Saxony e.V.
+  [50/73] ok                 3905w    9383tok  SPECTARIS e.V.
+! [51/73] http_error            0w       0tok  TecPart e.V.
+  [52/73] ok                  341w     936tok  VDMA e.V.
+~ [53/73] thin_content        130w     362tok  Verband der Automobilindustrie e.V. (V
+! [54/73] http_error            0w       0tok  Verband der Bahnindustrie in Deutschla
+~ [55/73] thin_content         35w      86tok  Verband der Diagnostica-Industrie e.V.
+  [56/73] ok                  214w     595tok  Virtual Dimension Center (VDC) w.V.
+  [57/73] ok                  364w    1005tok  Wetzlar Network
+  [58/73] ok                  196w     536tok  WindEnergy Network e.V.
+! [59/73] http_error            0w       0tok  Zentralverband Oberflächentechnik e.V.
+  [60/73] ok                  530w    1412tok  VIU – Verband Innovativer Unternehmen
+  [61/73] ok                 5145w   13646tok  AiF – Allianz für Industrie und Forsch
+  [62/73] ok                  203w     529tok  DTI – Dt. Verband f. Technologietransf
+~ [63/73] thin_content         90w     253tok  FTVT – Forschungs- u. Technologieverbu
+~ [64/73] thin_content          0w       0tok  TransferAllianz
+  [65/73] ok                  312w     853tok  Steinbeis
+  [66/73] ok                  278w     803tok  Innovationsallianz Baden-Württemberg
+  [67/73] ok                  477w    1305tok  BVMW – Der Mittelstand
+  [68/73] ok                  360w     940tok  Bitkom
+  [69/73] ok                  987w    2590tok  VDMA
+  [70/73] ok                 1563w    4150tok  ZVEI
+  [71/73] ok                  603w    1594tok  UnternehmerTUM
+  [72/73] ok                  997w    2187tok  German Accelerator
+  [73/73] ok                  846w    2075tok  Startup-Verband
+
+==========================================================
+  ok                  53
+  http_error          12
+  thin_content         8
+
+  usable pages:      53
+  tokens min/med/max 372 / 1594 / 53304
+  need chunking:     10
+
+  manifest -> /Users/giopato/Downloads/work/work/Constructor/Year 3/Year 3 Semester 1/Thesis/Thesis_work/Web_Scraping/results/fetch_manifest.csv

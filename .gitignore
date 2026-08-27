@@ -1,0 +1,20 @@
+# Python environment -- 389 MB, rebuilt with gpu_setup.sh
+.venv/
+__pycache__/
+*.pyc
+
+# macOS metadata. These are what arrive on a Linux box as "._filename" files
+# that no text editor can open, and as apparent duplicates of every file.
+.DS_Store
+._*
+
+# Large regenerable page caches. results/html_cache IS tracked: it is the
+# exact corpus the benchmark ran against, and those sites change, so without
+# it the numbers cannot be reproduced.
+results/html_cache_finalv1/
+results/html_cache_static_backup/
+
+# Run artefacts that are outputs, not inputs
+results/extractions_orphaned/
+*.tar.gz
+nohup.out

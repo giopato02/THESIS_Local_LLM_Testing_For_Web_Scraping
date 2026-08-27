@@ -1,0 +1,75 @@
+# ============================================================================
+# GROUND TRUTH WORKSHEET  --  NMWP.NRW e.V.
+#
+# URL : https://verein.nmwp.nrw/mitglieder
+# Page: 276 words, ~722 tokens
+#
+# WHAT TO DO
+#   1. Open the URL above in your browser, next to this file.
+#   2. SECTION A below is my best guess at the member companies.
+#      Read down it and DELETE any line that is not a member company.
+#   3. SECTION B is what I think is page furniture (menus, filters,
+#      categories). Skim it. If I wrongly binned a real company there,
+#      MOVE that line up into Section A.
+#   4. Then look at the WEBPAGE itself top to bottom. If a member is
+#      missing from Section A entirely, type it in. This step matters
+#      most -- it catches what my guessing missed.
+#   5. Keep names EXACTLY as printed (keep GmbH, AG, umlauts).
+#   6. Delete Section B entirely when you are done with it, or leave it --
+#      everything below the SECTION B marker is ignored either way.
+#   7. Save. Lines starting with # are ignored.
+#
+# When finished, run:  .venv/bin/python make_ground_truth.py --check
+# ============================================================================
+
+# --- SECTION A: likely member companies (43) -------------------------
+
+ACCESS e.V.
+Aixtron SE
+AMAC GmbH
+AMO GmbH
+Ätztechnik Herz GmbH & Co. KG
+CeNTech GmbH
+ChemCologne e.V.
+Circulania Services GmbH
+Coatema Coating Machinery GmbH
+Covestro Deutschland AG
+CTC GmbH
+Deutsche Gesellschaft für Materialkunde e.V.
+Deutsches Zentrum für Luft- und Raumfahrt e. V. (DLR)
+Element 3-5 GmbH
+Euromat® GmbH
+femtos GmbH
+Fraunhofer-Institut für Lasertechnik ILT
+Fraunhofer-Institut für Mikroelektronische Schaltungen und Systeme IMS
+HAVERKAMP GmbH
+HEGGEMANN AG
+Innolume GmbH
+ICS Innovation Coating Systems UG
+Institut für Metallurgische Prozesstechnik und Metallrecycling der RWTH Aachen
+Institut für Umwelt & Energie, Technik & Analytik e. V. (IUTA)
+Kunststoff-Institut Lüdenscheid
+Laserzentrum FH Münster am Fachbereich Physikalische Technik
+Leibniz-Institut für Analytische Wissenschaften – ISAS e.V.
+MaTech-Consult GmbH
+Meotec GmbH & Co. KG
+Microtrac GmbH
+Momentive Performance Materials GmbH
+nanobay
+neoxid GmbH
+phenox GmbH
+Pulsar Photonics GmbH
+Ruhr-Universität Bochum, Lehrstuhl für Laseranwendungstechnik
+RWTH Aachen, Gemeinschaftslabor für Elektronenmikroskopie
+RWTH Aachen, Institut f. Strukturmechanik und Leichtbau
+RWTH Aachen University, Lehrstuhl für Elektronische Bauelemente
+RWTH Aachen, Werkstoffe der Elektrotechnik
+Stahlinstitut VDEh
+Teijin Carbon Europe GmbH
+Universität Bielefeld, Fakultät für Physik
+Universität Duisburg-Essen, Werkstoffe der Elektrotechnik
+Leichtbau im Automobil (LiA), Universität Paderborn
+Lehrstuhl für Höchstfrequenztechnik und Quantenelektronik (HQE), Universität Siegen
+Institut für Anorganische und Materialchemie, Universität zu Köln
+Vitrum Technologies GmbH
+Zentrum für Brennstoffzellen Technik GmbH

@@ -1,0 +1,295 @@
+{
+ "key": "a|llama3.1:8b|few_shot_schema|constrained|005|2",
+ "raw": [
+  "AAM Eisenach Driveline GmbH",
+  "Adam-Opel-Straße 99",
+  "BELL Equipment (Deutschland) GmbH",
+  "BENTELER Automobiltechnik Eisenach GmbH",
+  "BINZ Ambulance- und Umwelttechnik GmbH",
+  "Borbet Thüringen GmbH",
+  "Brunel GmbH – neue Adresse ab 01.02.2025",
+  "C.H. Müller GmbH",
+  "CATL – Contemporary Amperex Technology GmbH",
+  "CERA SYSTEM Verschleißschutz GmbH",
+  "con-pearl GmbH",
+  "Dauch Corporation",
+  "Eichsfelder Schraubenwerk GmbH",
+  "EJOT SE & Co. KG",
+  "ELSCHUKOM GmbH",
+  "Erdrich Umformtechnik GmbH",
+  "F. Segura Deutschland GmbH",
+  "febana Feinmechanische Bauelemente GmbH",
+  "Feintool System Parts Ohrdruf GmbH",
+  "FFT Werkzeug + Karosserie GmbH",
+  "FSM Europe GmbH",
+  "GB Neuhaus",
+  "GEIGER Automotive GmbH",
+  "GEWES Gelenkwellenwerk Stadtilm GmbH",
+  "GKT Gräfenthaler Kunststofftechnik GmbH",
+  "GRAFE GmbH & Co. KG",
+  "H. Heinz Messwiderstände GmbH",
+  "Ha-Beck Erodier-, Laser- und Fertigungstechnik Inh. M. Haseke e.K.",
+  "Hasenthaler Kunststoffverarbeitung GmbH",
+  "Hehnke GmbH & Co. KG",
+  "HENNgineered GmbH",
+  "Hirschvogel Aluminium GmbH",
+  "Hirschvogel Eisenach GmbH",
+  "IWB Industrietechnik GmbH",
+  "IZOBLOK GmbH",
+  "KOMOS GmbH",
+  "Kümmel Fahrzeugteile GmbH & Co. KG",
+  "LINDIG Fördertechnik GmbH",
+  "MackSmaTec GmbH",
+  "Maximator GmbH",
+  "MDC Power GmbH",
+  "Melexis GmbH",
+  "MG Oberflächensysteme GmbH + Co.",
+  "MöllerTech Thüringen GmbH",
+  "Mubea Fahrwerksfedern GmbH",
+  "Nidec AMEC Platform Fluid Systems & Thermal Management",
+  "Nissha Advanced Technologies Europe GmbH",
+  "PMM-Oil GmbH",
+  "POLYCOMB GmbH",
+  "PRIME-tec GmbH",
+  "Profol Greiz GmbH",
+  "Robert Bosch GmbH",
+  "Sedlmayer GmbH Metallbearbeitung",
+  "Siemens AG",
+  "SUR-TECH Surface Technology GmbH",
+  "TALLAG Rottenbach GmbH",
+  "TALLAG Saalfeld GmbH",
+  "Technik in Form Blechbearbeitung GmbH",
+  "TESONA Systems & Engineering",
+  "TKF Thüringer Kugellagerfabrik GmbH",
+  "UST Umweltsensortechnik GmbH",
+  "VIA Laser & Systemtechnik GmbH & CO.KG",
+  "vista Stahl Service GmbH",
+  "Wiegand GmbH",
+  "WKF-GmbH Metallwarenfabrik",
+  "Motherson DRSC",
+  "NISSHA Schuster Kunststofftechnik GmbH",
+  "SAXONIA Galvanik GmbH",
+  "Sur-Tech Surface-Technology GmbH",
+  "Textilforschungsinstitut Thüringen-Vogtland e.V.",
+  "Thüringer Institut für Textil- und Kunststoffforschung e.V.",
+  "TWE GmbH & Co. KG / ISOWOOD"
+ ],
+ "records": [
+  {
+   "name": "AAM Eisenach Driveline GmbH"
+  },
+  {
+   "name": "Adam-Opel-Straße 99"
+  },
+  {
+   "name": "BELL Equipment (Deutschland) GmbH"
+  },
+  {
+   "name": "BENTELER Automobiltechnik Eisenach GmbH"
+  },
+  {
+   "name": "BINZ Ambulance- und Umwelttechnik GmbH"
+  },
+  {
+   "name": "Borbet Thüringen GmbH"
+  },
+  {
+   "name": "Brunel GmbH – neue Adresse ab 01.02.2025"
+  },
+  {
+   "name": "C.H. Müller GmbH"
+  },
+  {
+   "name": "CATL – Contemporary Amperex Technology GmbH"
+  },
+  {
+   "name": "CERA SYSTEM Verschleißschutz GmbH"
+  },
+  {
+   "name": "con-pearl GmbH"
+  },
+  {
+   "name": "Dauch Corporation"
+  },
+  {
+   "name": "Eichsfelder Schraubenwerk GmbH"
+  },
+  {
+   "name": "EJOT SE & Co. KG"
+  },
+  {
+   "name": "ELSCHUKOM GmbH"
+  },
+  {
+   "name": "Erdrich Umformtechnik GmbH"
+  },
+  {
+   "name": "F. Segura Deutschland GmbH"
+  },
+  {
+   "name": "febana Feinmechanische Bauelemente GmbH"
+  },
+  {
+   "name": "Feintool System Parts Ohrdruf GmbH"
+  },
+  {
+   "name": "FFT Werkzeug + Karosserie GmbH"
+  },
+  {
+   "name": "FSM Europe GmbH"
+  },
+  {
+   "name": "GB Neuhaus"
+  },
+  {
+   "name": "GEIGER Automotive GmbH"
+  },
+  {
+   "name": "GEWES Gelenkwellenwerk Stadtilm GmbH"
+  },
+  {
+   "name": "GKT Gräfenthaler Kunststofftechnik GmbH"
+  },
+  {
+   "name": "GRAFE GmbH & Co. KG"
+  },
+  {
+   "name": "H. Heinz Messwiderstände GmbH"
+  },
+  {
+   "name": "Ha-Beck Erodier-, Laser- und Fertigungstechnik Inh. M. Haseke e.K."
+  },
+  {
+   "name": "Hasenthaler Kunststoffverarbeitung GmbH"
+  },
+  {
+   "name": "Hehnke GmbH & Co. KG"
+  },
+  {
+   "name": "HENNgineered GmbH"
+  },
+  {
+   "name": "Hirschvogel Aluminium GmbH"
+  },
+  {
+   "name": "Hirschvogel Eisenach GmbH"
+  },
+  {
+   "name": "IWB Industrietechnik GmbH"
+  },
+  {
+   "name": "IZOBLOK GmbH"
+  },
+  {
+   "name": "KOMOS GmbH"
+  },
+  {
+   "name": "Kümmel Fahrzeugteile GmbH & Co. KG"
+  },
+  {
+   "name": "LINDIG Fördertechnik GmbH"
+  },
+  {
+   "name": "MackSmaTec GmbH"
+  },
+  {
+   "name": "Maximator GmbH"
+  },
+  {
+   "name": "MDC Power GmbH"
+  },
+  {
+   "name": "Melexis GmbH"
+  },
+  {
+   "name": "MG Oberflächensysteme GmbH + Co."
+  },
+  {
+   "name": "MöllerTech Thüringen GmbH"
+  },
+  {
+   "name": "Mubea Fahrwerksfedern GmbH"
+  },
+  {
+   "name": "Nidec AMEC Platform Fluid Systems & Thermal Management"
+  },
+  {
+   "name": "Nissha Advanced Technologies Europe GmbH"
+  },
+  {
+   "name": "PMM-Oil GmbH"
+  },
+  {
+   "name": "POLYCOMB GmbH"
+  },
+  {
+   "name": "PRIME-tec GmbH"
+  },
+  {
+   "name": "Profol Greiz GmbH"
+  },
+  {
+   "name": "Robert Bosch GmbH"
+  },
+  {
+   "name": "Sedlmayer GmbH Metallbearbeitung"
+  },
+  {
+   "name": "Siemens AG"
+  },
+  {
+   "name": "SUR-TECH Surface Technology GmbH"
+  },
+  {
+   "name": "TALLAG Rottenbach GmbH"
+  },
+  {
+   "name": "TALLAG Saalfeld GmbH"
+  },
+  {
+   "name": "Technik in Form Blechbearbeitung GmbH"
+  },
+  {
+   "name": "TESONA Systems & Engineering"
+  },
+  {
+   "name": "TKF Thüringer Kugellagerfabrik GmbH"
+  },
+  {
+   "name": "UST Umweltsensortechnik GmbH"
+  },
+  {
+   "name": "VIA Laser & Systemtechnik GmbH & CO.KG"
+  },
+  {
+   "name": "vista Stahl Service GmbH"
+  },
+  {
+   "name": "Wiegand GmbH"
+  },
+  {
+   "name": "WKF-GmbH Metallwarenfabrik"
+  },
+  {
+   "name": "Motherson DRSC"
+  },
+  {
+   "name": "NISSHA Schuster Kunststofftechnik GmbH"
+  },
+  {
+   "name": "SAXONIA Galvanik GmbH"
+  },
+  {
+   "name": "Sur-Tech Surface-Technology GmbH"
+  },
+  {
+   "name": "Textilforschungsinstitut Thüringen-Vogtland e.V."
+  },
+  {
+   "name": "Thüringer Institut für Textil- und Kunststoffforschung e.V."
+  },
+  {
+   "name": "TWE GmbH & Co. KG / ISOWOOD"
+  }
+ ]
+}

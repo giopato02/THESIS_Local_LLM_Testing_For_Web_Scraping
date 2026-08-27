@@ -1,0 +1,447 @@
+{
+ "key": "a|llama3.1:8b|few_shot_schema|constrained|005|1",
+ "raw": [
+  "AAM Eisenach Driveline GmbH",
+  "Adam-Opel-Straße 99",
+  "BELL Equipment (Deutschland) GmbH",
+  "BENTELER Automobiltechnik Eisenach GmbH",
+  "BINZ Ambulance- und Umwelttechnik GmbH",
+  "Borbet Thüringen GmbH",
+  "Brunel GmbH – neue Adresse ab 01.02.2025",
+  "C.H. Müller GmbH",
+  "CERA SYSTEM Verschleißschutz GmbH",
+  "CATL – Contemporary Amperex Technology GmbH",
+  "CE-LAB GmbH",
+  "Commerzbank AG Erfurt",
+  "con-pearl GmbH",
+  "Dauch Corporation",
+  "Eichsfelder Schraubenwerk GmbH",
+  "EJOT SE & Co. KG",
+  "ELSCHUKOM GmbH",
+  "Erdrich Umformtechnik GmbH",
+  "Ernst & Young GmbH Wirtschaftsprüfungsgesellschaft",
+  "ESW-Group",
+  "febana Feinmechanische Bauelemente GmbH",
+  "Feintool System Parts Ohrdruf GmbH",
+  "FFT Werkzeug + Karosserie GmbH",
+  "F. Segura Deutschland GmbH",
+  "FSM Europe GmbH",
+  "GB Neuhaus",
+  "GEIGER Automotive GmbH",
+  "GEFA Bank GmbH",
+  "GSM GmbH",
+  "H. Heinz Messwiderstände GmbH",
+  "Ha-Beck Erodier-, Laser- und Fertigungstechnik Inh. M. Haseke e.K.",
+  "Hasenthaler Kunststoffverarbeitung GmbH",
+  "Hehnke GmbH & Co. KG",
+  "HEngineered GmbH",
+  "Hirschvogel Aluminium GmbH",
+  "Hirschvogel Eisenach GmbH",
+  "IWB Industrietechnik GmbH",
+  "IZOBLOK GmbH",
+  "KOMOS GmbH",
+  "Kümmel Fahrzeugteile GmbH & Co. KG",
+  "LINDIG Fördertechnik GmbH",
+  "MackSmaTec GmbH",
+  "Marquardt Systronics GmbH",
+  "MDC Power GmbH",
+  "Melexis GmbH",
+  "MG Oberflächensysteme GmbH + Co.",
+  "MöllerTech Thüringen GmbH",
+  "Mubea Fahrwerksfedern GmbH",
+  "Nidec AMEC Platform Fluid Systems & Thermal Management",
+  "Nissha Advanced Technologies Europe GmbH",
+  "PMM-Oil GmbH",
+  "POLYCOMB GmbH",
+  "PRIME-tec GmbH",
+  "Profol Greiz GmbH",
+  "Rombach Rechtsanwälte Insolvenzverwalter Partnerschaft mbB",
+  "Sedlmayer GmbH Metallbearbeitung",
+  "SIEMENS AG",
+  "SSV-Kroschke GmbH",
+  "STOCKMANN Prüf- und Qualitätszentrum GmbH",
+  "Struensee & Dr. Rothe GmbH",
+  "TESONA Systems & Engineering",
+  "TKF Thüringer Kugellagerfabrik GmbH",
+  "TÜV Thüringen e.V.",
+  "TALLAG Rottenbach GmbH",
+  "TALLAG Saalfeld GmbH",
+  "Technik in Form Blechbearbeitung GmbH",
+  "UST Umweltsensortechnik GmbH",
+  "VIA Laser & Systemtechnik GmbH & CO.KG",
+  "vista Stahl Service GmbH",
+  "Wiegand GmbH",
+  "WKF-GmbH Metallwarenfabrik",
+  "actain engineering GmbH",
+  "Alpha-Engineering KG",
+  "ARC Solutions GmbH",
+  "BADER GmbH",
+  "Berghof Group GmbH",
+  "BLG Industrielogistik GmbH & Co. KG",
+  "EBZ ERFURT Bildungszentrum gGmbH",
+  "EuroQ GmbH",
+  "Friedrich Zufall GmbH & Co. KG",
+  "Härterei Reese",
+  "INNOMAN GmbH",
+  "IPOL GmbH",
+  "jambit GmbH",
+  "Konzept Informationssysteme GmbH",
+  "LEWELL Kartonagen GmbH",
+  "MAXX SOLAR & ENERGIE GmbH & Co. KG",
+  "Modell Technik Rapid Prototyping GmbH, Waltershausen",
+  "Möller Messtechnik Kalibrierlabor / Erstbemusterungen",
+  "OSK-Kiefer GmbH",
+  "PORTEC GmbH",
+  "schambeck GmbH",
+  "SEITEC GmbH",
+  "TARGO Leasing GmbH",
+  "Neways Technologies GmbH",
+  "Technische Universität Ilmenau | Thüringer Innovationszentrum Mobilität",
+  "Textilforschungsinstitut Thüringen-Vogtland e.V.",
+  "TITK Thüringisches Institut für Textil- und Kunststoff-Forschung e.V.",
+  "ATP adhesive systems AG",
+  "DST Dräxlmaier Systemtechnik GmbH",
+  "Fraunhofer-Institut für Digitale Medientechnologie IDMT",
+  "GBneuhaus GmbH",
+  "Innovent e.V.",
+  "KOMOS GmbH Komponenten Module Systeme",
+  "Motherson DRSC",
+  "NISSHA Schuster Kunststofftechnik GmbH",
+  "SAXONIA Galvanik GmbH",
+  "Sur-Tech Surface-Technology GmbH",
+  "Thüringer Institut für Textil- und Kunststoffforschung e.V.",
+  "TWE GmbH & Co. KG / ISOWOOD"
+ ],
+ "records": [
+  {
+   "name": "AAM Eisenach Driveline GmbH"
+  },
+  {
+   "name": "Adam-Opel-Straße 99"
+  },
+  {
+   "name": "BELL Equipment (Deutschland) GmbH"
+  },
+  {
+   "name": "BENTELER Automobiltechnik Eisenach GmbH"
+  },
+  {
+   "name": "BINZ Ambulance- und Umwelttechnik GmbH"
+  },
+  {
+   "name": "Borbet Thüringen GmbH"
+  },
+  {
+   "name": "Brunel GmbH – neue Adresse ab 01.02.2025"
+  },
+  {
+   "name": "C.H. Müller GmbH"
+  },
+  {
+   "name": "CERA SYSTEM Verschleißschutz GmbH"
+  },
+  {
+   "name": "CATL – Contemporary Amperex Technology GmbH"
+  },
+  {
+   "name": "CE-LAB GmbH"
+  },
+  {
+   "name": "Commerzbank AG Erfurt"
+  },
+  {
+   "name": "con-pearl GmbH"
+  },
+  {
+   "name": "Dauch Corporation"
+  },
+  {
+   "name": "Eichsfelder Schraubenwerk GmbH"
+  },
+  {
+   "name": "EJOT SE & Co. KG"
+  },
+  {
+   "name": "ELSCHUKOM GmbH"
+  },
+  {
+   "name": "Erdrich Umformtechnik GmbH"
+  },
+  {
+   "name": "Ernst & Young GmbH Wirtschaftsprüfungsgesellschaft"
+  },
+  {
+   "name": "ESW-Group"
+  },
+  {
+   "name": "febana Feinmechanische Bauelemente GmbH"
+  },
+  {
+   "name": "Feintool System Parts Ohrdruf GmbH"
+  },
+  {
+   "name": "FFT Werkzeug + Karosserie GmbH"
+  },
+  {
+   "name": "F. Segura Deutschland GmbH"
+  },
+  {
+   "name": "FSM Europe GmbH"
+  },
+  {
+   "name": "GB Neuhaus"
+  },
+  {
+   "name": "GEIGER Automotive GmbH"
+  },
+  {
+   "name": "GEFA Bank GmbH"
+  },
+  {
+   "name": "GSM GmbH"
+  },
+  {
+   "name": "H. Heinz Messwiderstände GmbH"
+  },
+  {
+   "name": "Ha-Beck Erodier-, Laser- und Fertigungstechnik Inh. M. Haseke e.K."
+  },
+  {
+   "name": "Hasenthaler Kunststoffverarbeitung GmbH"
+  },
+  {
+   "name": "Hehnke GmbH & Co. KG"
+  },
+  {
+   "name": "HEngineered GmbH"
+  },
+  {
+   "name": "Hirschvogel Aluminium GmbH"
+  },
+  {
+   "name": "Hirschvogel Eisenach GmbH"
+  },
+  {
+   "name": "IWB Industrietechnik GmbH"
+  },
+  {
+   "name": "IZOBLOK GmbH"
+  },
+  {
+   "name": "KOMOS GmbH"
+  },
+  {
+   "name": "Kümmel Fahrzeugteile GmbH & Co. KG"
+  },
+  {
+   "name": "LINDIG Fördertechnik GmbH"
+  },
+  {
+   "name": "MackSmaTec GmbH"
+  },
+  {
+   "name": "Marquardt Systronics GmbH"
+  },
+  {
+   "name": "MDC Power GmbH"
+  },
+  {
+   "name": "Melexis GmbH"
+  },
+  {
+   "name": "MG Oberflächensysteme GmbH + Co."
+  },
+  {
+   "name": "MöllerTech Thüringen GmbH"
+  },
+  {
+   "name": "Mubea Fahrwerksfedern GmbH"
+  },
+  {
+   "name": "Nidec AMEC Platform Fluid Systems & Thermal Management"
+  },
+  {
+   "name": "Nissha Advanced Technologies Europe GmbH"
+  },
+  {
+   "name": "PMM-Oil GmbH"
+  },
+  {
+   "name": "POLYCOMB GmbH"
+  },
+  {
+   "name": "PRIME-tec GmbH"
+  },
+  {
+   "name": "Profol Greiz GmbH"
+  },
+  {
+   "name": "Rombach Rechtsanwälte Insolvenzverwalter Partnerschaft mbB"
+  },
+  {
+   "name": "Sedlmayer GmbH Metallbearbeitung"
+  },
+  {
+   "name": "SIEMENS AG"
+  },
+  {
+   "name": "SSV-Kroschke GmbH"
+  },
+  {
+   "name": "STOCKMANN Prüf- und Qualitätszentrum GmbH"
+  },
+  {
+   "name": "Struensee & Dr. Rothe GmbH"
+  },
+  {
+   "name": "TESONA Systems & Engineering"
+  },
+  {
+   "name": "TKF Thüringer Kugellagerfabrik GmbH"
+  },
+  {
+   "name": "TÜV Thüringen e.V."
+  },
+  {
+   "name": "TALLAG Rottenbach GmbH"
+  },
+  {
+   "name": "TALLAG Saalfeld GmbH"
+  },
+  {
+   "name": "Technik in Form Blechbearbeitung GmbH"
+  },
+  {
+   "name": "UST Umweltsensortechnik GmbH"
+  },
+  {
+   "name": "VIA Laser & Systemtechnik GmbH & CO.KG"
+  },
+  {
+   "name": "vista Stahl Service GmbH"
+  },
+  {
+   "name": "Wiegand GmbH"
+  },
+  {
+   "name": "WKF-GmbH Metallwarenfabrik"
+  },
+  {
+   "name": "actain engineering GmbH"
+  },
+  {
+   "name": "Alpha-Engineering KG"
+  },
+  {
+   "name": "ARC Solutions GmbH"
+  },
+  {
+   "name": "BADER GmbH"
+  },
+  {
+   "name": "Berghof Group GmbH"
+  },
+  {
+   "name": "BLG Industrielogistik GmbH & Co. KG"
+  },
+  {
+   "name": "EBZ ERFURT Bildungszentrum gGmbH"
+  },
+  {
+   "name": "EuroQ GmbH"
+  },
+  {
+   "name": "Friedrich Zufall GmbH & Co. KG"
+  },
+  {
+   "name": "Härterei Reese"
+  },
+  {
+   "name": "INNOMAN GmbH"
+  },
+  {
+   "name": "IPOL GmbH"
+  },
+  {
+   "name": "jambit GmbH"
+  },
+  {
+   "name": "Konzept Informationssysteme GmbH"
+  },
+  {
+   "name": "LEWELL Kartonagen GmbH"
+  },
+  {
+   "name": "MAXX SOLAR & ENERGIE GmbH & Co. KG"
+  },
+  {
+   "name": "Modell Technik Rapid Prototyping GmbH, Waltershausen"
+  },
+  {
+   "name": "Möller Messtechnik Kalibrierlabor / Erstbemusterungen"
+  },
+  {
+   "name": "OSK-Kiefer GmbH"
+  },
+  {
+   "name": "PORTEC GmbH"
+  },
+  {
+   "name": "schambeck GmbH"
+  },
+  {
+   "name": "SEITEC GmbH"
+  },
+  {
+   "name": "TARGO Leasing GmbH"
+  },
+  {
+   "name": "Neways Technologies GmbH"
+  },
+  {
+   "name": "Technische Universität Ilmenau | Thüringer Innovationszentrum Mobilität"
+  },
+  {
+   "name": "Textilforschungsinstitut Thüringen-Vogtland e.V."
+  },
+  {
+   "name": "TITK Thüringisches Institut für Textil- und Kunststoff-Forschung e.V."
+  },
+  {
+   "name": "ATP adhesive systems AG"
+  },
+  {
+   "name": "DST Dräxlmaier Systemtechnik GmbH"
+  },
+  {
+   "name": "Fraunhofer-Institut für Digitale Medientechnologie IDMT"
+  },
+  {
+   "name": "GBneuhaus GmbH"
+  },
+  {
+   "name": "Innovent e.V."
+  },
+  {
+   "name": "KOMOS GmbH Komponenten Module Systeme"
+  },
+  {
+   "name": "Motherson DRSC"
+  },
+  {
+   "name": "NISSHA Schuster Kunststofftechnik GmbH"
+  },
+  {
+   "name": "SAXONIA Galvanik GmbH"
+  },
+  {
+   "name": "Sur-Tech Surface-Technology GmbH"
+  },
+  {
+   "name": "Thüringer Institut für Textil- und Kunststoffforschung e.V."
+  },
+  {
+   "name": "TWE GmbH & Co. KG / ISOWOOD"
+  }
+ ]
+}

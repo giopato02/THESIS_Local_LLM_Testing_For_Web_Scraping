@@ -1,0 +1,215 @@
+{
+ "key": "a|llama3.1:8b|zero_shot|constrained|039|1",
+ "raw": [
+  "altona Diagnostics GmbH",
+  "AstraZeneca GmbH",
+  "Eppendorf SE",
+  "Evotec SE",
+  "i3 Membrane GmbH",
+  "Indivumed GmbH",
+  "NSF PROSYSTEM GmbH",
+  "Olympus Surgical Technologies Europe",
+  "Abbott Automation Solutions GmbH",
+  "Allergopharma GmbH & Co. KG",
+  "BioAgilytix Europe GmbH",
+  "Chemische Fabrik Dr. Weigert GmbH & Co. KG",
+  "Deutsche Apotheker- und Ärztebank eG",
+  "Deutsches Elektronen-Synchrotron DESY",
+  "Dr. Brill + Partner GmbH Institut für Hygiene und Mikrobiologie",
+  "EurA AG",
+  "EUROIMMUN Medizinische Labordiagnostika AG",
+  "Fraunhofer ITMP - ScreeningPort",
+  "Fraunhofer-Einrichtung für Individualisierte Medizintechnik IMTE",
+  "handeln.de GmbH",
+  "Marken Germany GmbH",
+  "medac Gesellschaft für klinische Spezialpräparate m.b.H.",
+  "Nordmark Pharma GmbH",
+  "Philips GmbH",
+  "qtec services GmbH",
+  "Sysmex Europe SE",
+  "WEINMANN Emergency Medical Technology GmbH",
+  "A&O Pharma GmbH",
+  "acCELLerate GmbH",
+  "ADE Germany GmbH",
+  "ai6 Solutions GmbH",
+  "bornholdt lee GmbH",
+  "Cellbox Solutions GmbH",
+  "CrystalsFirst GmbH",
+  "FUSE-AI GmbH",
+  "GUS ERP GmbH",
+  "Indeed Innovation GmbH",
+  "Johner Institut GmbH",
+  "KEYMKR GmbH",
+  "Lemberg Solutions GmbH",
+  "MindPeak GmbH",
+  "PricewaterhouseCoopers GmbH Wirtschaftsprüfungsgesellschaft",
+  "slashwhy GmbH & Co. KG",
+  "SmartStep Consulting GmbH",
+  "Sydbank A/S",
+  "Uexküll & Stolberg Partnerschaft von Patent- und Rechtsanwälten mbB",
+  "42systems GmbH & Co. KG",
+  "Acquandas GmbH",
+  "Active Bioscience GmbH",
+  "AdvInno GmbH",
+  "Agena Bioscience GmbH",
+  "akampion"
+ ],
+ "records": [
+  {
+   "name": "altona Diagnostics GmbH"
+  },
+  {
+   "name": "AstraZeneca GmbH"
+  },
+  {
+   "name": "Eppendorf SE"
+  },
+  {
+   "name": "Evotec SE"
+  },
+  {
+   "name": "i3 Membrane GmbH"
+  },
+  {
+   "name": "Indivumed GmbH"
+  },
+  {
+   "name": "NSF PROSYSTEM GmbH"
+  },
+  {
+   "name": "Olympus Surgical Technologies Europe"
+  },
+  {
+   "name": "Abbott Automation Solutions GmbH"
+  },
+  {
+   "name": "Allergopharma GmbH & Co. KG"
+  },
+  {
+   "name": "BioAgilytix Europe GmbH"
+  },
+  {
+   "name": "Chemische Fabrik Dr. Weigert GmbH & Co. KG"
+  },
+  {
+   "name": "Deutsche Apotheker- und Ärztebank eG"
+  },
+  {
+   "name": "Deutsches Elektronen-Synchrotron DESY"
+  },
+  {
+   "name": "Dr. Brill + Partner GmbH Institut für Hygiene und Mikrobiologie"
+  },
+  {
+   "name": "EurA AG"
+  },
+  {
+   "name": "EUROIMMUN Medizinische Labordiagnostika AG"
+  },
+  {
+   "name": "Fraunhofer ITMP - ScreeningPort"
+  },
+  {
+   "name": "Fraunhofer-Einrichtung für Individualisierte Medizintechnik IMTE"
+  },
+  {
+   "name": "handeln.de GmbH"
+  },
+  {
+   "name": "Marken Germany GmbH"
+  },
+  {
+   "name": "medac Gesellschaft für klinische Spezialpräparate m.b.H."
+  },
+  {
+   "name": "Nordmark Pharma GmbH"
+  },
+  {
+   "name": "Philips GmbH"
+  },
+  {
+   "name": "qtec services GmbH"
+  },
+  {
+   "name": "Sysmex Europe SE"
+  },
+  {
+   "name": "WEINMANN Emergency Medical Technology GmbH"
+  },
+  {
+   "name": "A&O Pharma GmbH"
+  },
+  {
+   "name": "acCELLerate GmbH"
+  },
+  {
+   "name": "ADE Germany GmbH"
+  },
+  {
+   "name": "ai6 Solutions GmbH"
+  },
+  {
+   "name": "bornholdt lee GmbH"
+  },
+  {
+   "name": "Cellbox Solutions GmbH"
+  },
+  {
+   "name": "CrystalsFirst GmbH"
+  },
+  {
+   "name": "FUSE-AI GmbH"
+  },
+  {
+   "name": "GUS ERP GmbH"
+  },
+  {
+   "name": "Indeed Innovation GmbH"
+  },
+  {
+   "name": "Johner Institut GmbH"
+  },
+  {
+   "name": "KEYMKR GmbH"
+  },
+  {
+   "name": "Lemberg Solutions GmbH"
+  },
+  {
+   "name": "MindPeak GmbH"
+  },
+  {
+   "name": "PricewaterhouseCoopers GmbH Wirtschaftsprüfungsgesellschaft"
+  },
+  {
+   "name": "slashwhy GmbH & Co. KG"
+  },
+  {
+   "name": "SmartStep Consulting GmbH"
+  },
+  {
+   "name": "Sydbank A/S"
+  },
+  {
+   "name": "Uexküll & Stolberg Partnerschaft von Patent- und Rechtsanwälten mbB"
+  },
+  {
+   "name": "42systems GmbH & Co. KG"
+  },
+  {
+   "name": "Acquandas GmbH"
+  },
+  {
+   "name": "Active Bioscience GmbH"
+  },
+  {
+   "name": "AdvInno GmbH"
+  },
+  {
+   "name": "Agena Bioscience GmbH"
+  },
+  {
+   "name": "akampion"
+  }
+ ]
+}

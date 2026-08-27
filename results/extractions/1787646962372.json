@@ -1,0 +1,207 @@
+{
+ "key": "a|llama3.1:8b|zero_shot|constrained|012|3",
+ "raw": [
+  "1stQ Deutschland GmbH",
+  "A. Höfer GmbH",
+  "aap Implantate AG",
+  "Abbott GmbH",
+  "Abbott Medical GmbH",
+  "Abena GmbH",
+  "Abiomed Europe GmbH",
+  "Acandis GmbH",
+  "aescoLOGIC GmbH",
+  "Aesculap AG",
+  "ai6 Solutions GmbH",
+  "AKANNI Healthcare GmbH",
+  "AKRUS GmbH & Co.KG",
+  "aktivmed GmbH",
+  "ALCON Deutschland GmbH",
+  "AllCON GmbH",
+  "ALMO-Erzeugnisse GmbH",
+  "Ambu GmbH",
+  "AMEFA GmbH",
+  "amg International GmbH",
+  "AMPLITUDE GmbH",
+  "Andreas Fahl Medizintechnik-Vertrieb GmbH",
+  "Ansell GmbH",
+  "Arjo Deutschland GmbH",
+  "Arvato Supply Chain Solutions SE",
+  "ASSAmed GmbH",
+  "ATMOS MedizinTechnik GmbH & Co. KG",
+  "Attends GmbH",
+  "audibene GmbH",
+  "auric-direct GmbH",
+  "Avanos Medical GmbH",
+  "B. Braun Avitum AG",
+  "B. Braun Avitum Saxonia GmbH",
+  "B. Braun Deutschland GmbH & Co. KG",
+  "B. Braun Melsungen AG",
+  "B. Braun SE",
+  "B. Braun Surgical GmbH",
+  "Bausch & Lomb GmbH",
+  "Baxter Deutschland GmbH",
+  "BAYOOMED GmbH",
+  "BD Becton Dickinson GmbH",
+  "Beaver-Visitec International (BVI)",
+  "Beiersdorf AG",
+  "Bentley InnoMed GmbH",
+  "Berlin Heart GmbH",
+  "Best Care GmbH",
+  "betaMed GmbH",
+  "BGS Beta-Gamma-Service GmbH & Co. KG",
+  "BioCer Entwicklungs GmbH",
+  "Biocomposites GmbH"
+ ],
+ "records": [
+  {
+   "name": "1stQ Deutschland GmbH"
+  },
+  {
+   "name": "A. Höfer GmbH"
+  },
+  {
+   "name": "aap Implantate AG"
+  },
+  {
+   "name": "Abbott GmbH"
+  },
+  {
+   "name": "Abbott Medical GmbH"
+  },
+  {
+   "name": "Abena GmbH"
+  },
+  {
+   "name": "Abiomed Europe GmbH"
+  },
+  {
+   "name": "Acandis GmbH"
+  },
+  {
+   "name": "aescoLOGIC GmbH"
+  },
+  {
+   "name": "Aesculap AG"
+  },
+  {
+   "name": "ai6 Solutions GmbH"
+  },
+  {
+   "name": "AKANNI Healthcare GmbH"
+  },
+  {
+   "name": "AKRUS GmbH & Co.KG"
+  },
+  {
+   "name": "aktivmed GmbH"
+  },
+  {
+   "name": "ALCON Deutschland GmbH"
+  },
+  {
+   "name": "AllCON GmbH"
+  },
+  {
+   "name": "ALMO-Erzeugnisse GmbH"
+  },
+  {
+   "name": "Ambu GmbH"
+  },
+  {
+   "name": "AMEFA GmbH"
+  },
+  {
+   "name": "amg International GmbH"
+  },
+  {
+   "name": "AMPLITUDE GmbH"
+  },
+  {
+   "name": "Andreas Fahl Medizintechnik-Vertrieb GmbH"
+  },
+  {
+   "name": "Ansell GmbH"
+  },
+  {
+   "name": "Arjo Deutschland GmbH"
+  },
+  {
+   "name": "Arvato Supply Chain Solutions SE"
+  },
+  {
+   "name": "ASSAmed GmbH"
+  },
+  {
+   "name": "ATMOS MedizinTechnik GmbH & Co. KG"
+  },
+  {
+   "name": "Attends GmbH"
+  },
+  {
+   "name": "audibene GmbH"
+  },
+  {
+   "name": "auric-direct GmbH"
+  },
+  {
+   "name": "Avanos Medical GmbH"
+  },
+  {
+   "name": "B. Braun Avitum AG"
+  },
+  {
+   "name": "B. Braun Avitum Saxonia GmbH"
+  },
+  {
+   "name": "B. Braun Deutschland GmbH & Co. KG"
+  },
+  {
+   "name": "B. Braun Melsungen AG"
+  },
+  {
+   "name": "B. Braun SE"
+  },
+  {
+   "name": "B. Braun Surgical GmbH"
+  },
+  {
+   "name": "Bausch & Lomb GmbH"
+  },
+  {
+   "name": "Baxter Deutschland GmbH"
+  },
+  {
+   "name": "BAYOOMED GmbH"
+  },
+  {
+   "name": "BD Becton Dickinson GmbH"
+  },
+  {
+   "name": "Beaver-Visitec International (BVI)"
+  },
+  {
+   "name": "Beiersdorf AG"
+  },
+  {
+   "name": "Bentley InnoMed GmbH"
+  },
+  {
+   "name": "Berlin Heart GmbH"
+  },
+  {
+   "name": "Best Care GmbH"
+  },
+  {
+   "name": "betaMed GmbH"
+  },
+  {
+   "name": "BGS Beta-Gamma-Service GmbH & Co. KG"
+  },
+  {
+   "name": "BioCer Entwicklungs GmbH"
+  },
+  {
+   "name": "Biocomposites GmbH"
+  }
+ ]
+}

@@ -1,0 +1,13 @@
+rank,model,prompt_strategy,json_mode,f1,precision,recall,latency_mean_s,latency_sd_s,tokens_per_second,names_per_page,json_repair_rate_pct,n_runs
+1,llama3.1:8b,few_shot_schema,prompt_only,0.957,0.9714,0.945,56.1,67.8,14.5,69.6,0,30
+2,llama3.1:8b,few_shot_schema,constrained,0.957,0.9714,0.945,61.2,71.0,14.7,69.6,0,30
+3,qwen2.5-coder:7b,few_shot_schema,constrained,0.937,0.9819,0.909,53.0,48.4,15.4,62.4,0,30
+4,llama3.1:8b,zero_shot,prompt_only,0.9194,0.9556,0.9031,53.4,74.2,14.7,67.5,0,30
+5,llama3.1:8b,zero_shot,constrained,0.9194,0.9556,0.9031,58.5,76.3,14.9,67.5,0,30
+6,qwen2.5-coder:7b,zero_shot,prompt_only,0.9085,0.9851,0.9018,46.0,42.4,13.8,49.7,100,30
+7,qwen2.5-coder:7b,generic_multi_stage,prompt_only,0.874,0.9817,0.84,88.2,68.3,15.5,47.6,100,30
+8,qwen2.5-coder:7b,generic_multi_stage,constrained,0.8713,0.9213,0.84,103.1,80.1,15.5,52.9,0,30
+9,qwen2.5-coder:7b,zero_shot,constrained,0.8658,0.8841,0.8519,41.0,33.2,16.1,51.1,0,30
+10,qwen2.5-coder:7b,few_shot_schema,prompt_only,0.849,0.9017,0.8206,72.9,104.9,15.8,58.9,20,30
+11,llama3.1:8b,generic_multi_stage,prompt_only,0.7358,0.9854,0.6223,627.4,1713.3,15.1,32.3,40,30
+12,llama3.1:8b,generic_multi_stage,constrained,0.73,0.9854,0.6153,714.8,1983.3,14.7,32.0,0,30

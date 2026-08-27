@@ -1,0 +1,59 @@
+# ============================================================================
+# GROUND TRUTH WORKSHEET  --  Automotive Nordwest e.V.
+#
+# URL : https://www.automotive-nordwest.de/mitgliederliste/
+# Page: 400 words, ~1014 tokens
+#
+# WHAT TO DO
+#   1. Open the URL above in your browser, next to this file.
+#   2. SECTION A below is my best guess at the member companies.
+#      Read down it and DELETE any line that is not a member company.
+#   3. SECTION B is what I think is page furniture (menus, filters,
+#      categories). Skim it. If I wrongly binned a real company there,
+#      MOVE that line up into Section A.
+#   4. Then look at the WEBPAGE itself top to bottom. If a member is
+#      missing from Section A entirely, type it in. This step matters
+#      most -- it catches what my guessing missed.
+#   5. Keep names EXACTLY as printed (keep GmbH, AG, umlauts).
+#   6. Delete Section B entirely when you are done with it, or leave it --
+#      everything below the SECTION B marker is ignored either way.
+#   7. Save. Lines starting with # are ignored.
+#
+# When finished, run:  .venv/bin/python make_ground_truth.py --check
+# ============================================================================
+
+# --- SECTION A: likely member companies (33) -------------------------
+
+ATP Automotive Testing Papenburg GmbH
+Brandes Innovation
+Brumund Maschinenbau GmbH & Co. KG
+Constructor University Bremen gGmbH
+Container Terminal Wilhelmshaven JadeWeserPort-Marketing GmbH & Co. KG
+embeteco GmbH & Co. KG
+EuroQ GmbH
+Fraunhofer-Institut für Fertigungstechnik und Angewandte Materialforschung IFAM
+Global Q Automotive Services
+Goldbeck Nord GmbH
+Graepel Löningen GmbH & Co. KG
+Hochschule Bremen
+Hochschule Emden-Leer
+ifm electronic gmbh Vertrieb Deutschland
+ITNW Ingenieurtechnik NordWest GmbH
+ITS mobility GmbH
+Jabbusch Siekmann & Wasiljef GBR
+LMC │ LOGISTIKBERATUNG • PROJEKTMANAGEMENT
+Michael Schlüter System- und Produktoptimierung
+QSR24h GmbH
+REFA Nordwest e.V. Regionalverband Weser-Ems
+S&P Mergers and Acquisitions GmbH
+SALT AND PEPPER Holding GmbH & Co. KG
+SEH Fördersysteme GmbH
+Seifert Logistics Group
+SILVER ATENA
+Stadt Oldenburg
+SWMS Systemtechnik Ingenieurgesellschaft mbH
+TCC Car Components GmbH
+Treuhand Weser-Ems GmbH Wirtschaftsprüfungsgesellschaft
+TZI Technologie-Zentrum Informatik
+Wiosense GmbH & Co. KG
+XMSplus

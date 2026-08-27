@@ -1,0 +1,105 @@
+# ============================================================================
+# GROUND TRUTH WORKSHEET  --  InnoZent OWL e.V.
+#
+# URL : https://www.innozent-owl.de/netzwerk/mitglieder/
+# Page: 419 words, ~1149 tokens
+#
+# WHAT TO DO
+#   1. Open the URL above in your browser, next to this file.
+#   2. SECTION A below is my best guess at the member companies.
+#      Read down it and DELETE any line that is not a member company.
+#   3. SECTION B is what I think is page furniture (menus, filters,
+#      categories). Skim it. If I wrongly binned a real company there,
+#      MOVE that line up into Section A.
+#   4. Then look at the WEBPAGE itself top to bottom. If a member is
+#      missing from Section A entirely, type it in. This step matters
+#      most -- it catches what my guessing missed.
+#   5. Keep names EXACTLY as printed (keep GmbH, AG, umlauts).
+#   6. Delete Section B entirely when you are done with it, or leave it --
+#      everything below the SECTION B marker is ignored either way.
+#   7. Save. Lines starting with # are ignored.
+#
+# When finished, run:  .venv/bin/python make_ground_truth.py --check
+# ============================================================================
+
+# --- SECTION A: likely member companies (81) -------------------------
+
+AEU Tech GmbH
+Artgerecht Werbeagentur GmbH
+Aßmann, Mike | Business // Motivation // Personality
+azur - Allianz Zukunft Reifen
+BEDEM
+bib International College
+BREMER West GmbH & Co. KG
+BSA Kunststofftechnik GmbH
+Bundesverband Mittelständische Wirtschaft (BVMW)
+christmann informationstechnik + medien GmbH & Co. KG, Ilsede
+C-LAB
+code-x GmbH
+Condor MedTec
+Creos Lernideen und Beratung GmbH
+CTDI Schloss Holte GmbH
+DBS Training & Consulting GmbH
+Delta Media GmbH
+Edacentrum e.V.
+Erfinderclub Paderborn e.V
+FINDIQ GmbH
+Fischer Panda GmbH
+Fraunhofer ENAS-ASE
+Fraunhofer IEM
+Fraunhofer IOSB-INA
+Freund Maschinenfabrik GmbH & Co. KG
+HEGGEMANN AG
+Ingenieurbüro Andreas Heidemann GmbH & Co.KG
+helectronics gmbh
+HellwegWind GmbH
+Hochschule Bielefeld (HSBI)
+Industrieanlagen-Betriebsgesellschaft mbH
+IANUS Simulation GmbH
+IHK Ostwestfalen zu Bielefeld
+Innovative Card Systems GmbH
+insensiv GmbH
+Ising, Thorsten | Social Media, Online Marketing, Digitale Kommunikation, Schlangen
+Herbert Kannegiesser GmbH
+Kreishandwerkerschaft Paderborn-Lippe
+mechOnics ag
+Frank Michna | Kommunikationsberatung | Websites | Shops  | Social Media | KI-Anwendungsberatung
+MöllerFlex GmbH
+MSF-Vathauer Antriebstechnik GmbH
+myconsult GmbH
+Nuromedia GmbH
+ONLINE Systemlogistik GmbH & Co. KG
+OPTANO GmbH
+Ostfalia Hochschule für angewandte Wissenschaften, Wolfenbüttel
+OWITA GmbH
+Raumtänzer GmbH
+RTB GmbH und Co. KG
+S&N Invent GmbH
+S&Ü Hydraulik- und Maschinenbau GmbH
+SBH West GmbH
+SHWire, Schwering & Hasse Elektrodraht GmbH
+SIL System Integration Laboratory GmbH
+Silence Aircraft GmbH
+Skyline Express International GmbH
+Stührenberg GmbH
+TEAM GmbH
+Technische Hochschule Ostwestfalen-Lippe
+Technische Hochschule Ostwestfalen-Lippe - inIT
+Technologie- und Berufsbildungszentrum Paderborn (tbz)
+T.F. Wickeltechnik GmbH
+tomorrow bird GmbH
+Top Light GmbH & Co. KG
+Trenz Electronic GmbH
+Ulrich Rotte Anlagenbau und Fördertechnik GmbH
+Universität Bielefeld
+Universität Bielefeld - CITEC
+Universität Paderborn
+Universität Paderborn - CeOPP
+Universität Paderborn - Heinz Nixdorf Institut
+Universität Paderborn - Lehrstuhl für Konstruktions- und Antriebstechnik (KAt)
+Universität Paderborn - Software Innovation Campus
+Universität Paderborn - TecUP
+VerbundVolksbank OWL
+WestfalenWIND GmbH
+Wickord Buser Patentanwälte PartG mbB
+Wirtschaftsförderung Paderborn

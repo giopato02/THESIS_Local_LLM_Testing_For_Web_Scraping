@@ -1,0 +1,87 @@
+{
+ "key": "a|qwen2.5-coder:7b|few_shot_schema|constrained|040|3",
+ "raw": [
+  "1A CUE Consulting & Engineering GmbH",
+  "2be_die markenmacher GmbH",
+  "4BetterDevices",
+  "A.R.C. Laser GmbH",
+  "AB-CT – Advanced Breast-CT GmbH",
+  "ABF-Pharmazie GmbH & Co. KG / ABF, Apothekerin Eva Schreier e. K.",
+  "acad group GmbH",
+  "acterience management partners GmbH & Co. KG",
+  "ADVANOVA GmbH",
+  "AFRA GmbH",
+  "Ahead Care GmbH",
+  "Ajambow GmbH",
+  "Akkodis Edge Germany GmbH",
+  "ALBOMED GmbH",
+  "ALLISTRO GmbH",
+  "ALPO Medizintechnik GmbH",
+  "AMIPLANT GmbH",
+  "Antaks GmbH",
+  "APAGCoSyst Control Systems GmbH",
+  "AS Automation GmbH"
+ ],
+ "records": [
+  {
+   "name": "1A CUE Consulting & Engineering GmbH"
+  },
+  {
+   "name": "2be_die markenmacher GmbH"
+  },
+  {
+   "name": "4BetterDevices"
+  },
+  {
+   "name": "A.R.C. Laser GmbH"
+  },
+  {
+   "name": "AB-CT – Advanced Breast-CT GmbH"
+  },
+  {
+   "name": "ABF-Pharmazie GmbH & Co. KG / ABF, Apothekerin Eva Schreier e. K."
+  },
+  {
+   "name": "acad group GmbH"
+  },
+  {
+   "name": "acterience management partners GmbH & Co. KG"
+  },
+  {
+   "name": "ADVANOVA GmbH"
+  },
+  {
+   "name": "AFRA GmbH"
+  },
+  {
+   "name": "Ahead Care GmbH"
+  },
+  {
+   "name": "Ajambow GmbH"
+  },
+  {
+   "name": "Akkodis Edge Germany GmbH"
+  },
+  {
+   "name": "ALBOMED GmbH"
+  },
+  {
+   "name": "ALLISTRO GmbH"
+  },
+  {
+   "name": "ALPO Medizintechnik GmbH"
+  },
+  {
+   "name": "AMIPLANT GmbH"
+  },
+  {
+   "name": "Antaks GmbH"
+  },
+  {
+   "name": "APAGCoSyst Control Systems GmbH"
+  },
+  {
+   "name": "AS Automation GmbH"
+  }
+ ]
+}

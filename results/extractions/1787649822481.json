@@ -1,0 +1,111 @@
+{
+ "key": "a|llama3.1:8b|generic_multi_stage|constrained|039|2",
+ "raw": [
+  "altona Diagnostics GmbH",
+  "AstraZeneca GmbH",
+  "Eppendorf SE",
+  "Evotec SE",
+  "i3 Membrane GmbH",
+  "Indivumed GmbH",
+  "NSF PROSYSTEM GmbH",
+  "Olympus Surgical Technologies Europe",
+  "Abbott Automation Solutions GmbH",
+  "Allergopharma GmbH & Co. KG",
+  "BioAgilytix Europe GmbH",
+  "Chemische Fabrik Dr. Weigert GmbH & Co. KG",
+  "EUROIMMUN Medizinische Labordiagnostika AG",
+  "Fraunhofer ITMP - ScreeningPort",
+  "Fraunhofer-Einrichtung für Individualisierte Medizintechnik IMTE",
+  "medac Gesellschaft für klinische Spezialpräparate m.b.H.",
+  "Nordmark Pharma GmbH",
+  "Philips GmbH",
+  "Sysmex Europe SE",
+  "WEINMANN Emergency Medical Technology GmbH",
+  "acCELLerate GmbH",
+  "ADE Germany GmbH",
+  "Active Bioscience GmbH",
+  "AdvInno GmbH",
+  "Agena Bioscience GmbH",
+  "Acquandas GmbH"
+ ],
+ "records": [
+  {
+   "name": "altona Diagnostics GmbH"
+  },
+  {
+   "name": "AstraZeneca GmbH"
+  },
+  {
+   "name": "Eppendorf SE"
+  },
+  {
+   "name": "Evotec SE"
+  },
+  {
+   "name": "i3 Membrane GmbH"
+  },
+  {
+   "name": "Indivumed GmbH"
+  },
+  {
+   "name": "NSF PROSYSTEM GmbH"
+  },
+  {
+   "name": "Olympus Surgical Technologies Europe"
+  },
+  {
+   "name": "Abbott Automation Solutions GmbH"
+  },
+  {
+   "name": "Allergopharma GmbH & Co. KG"
+  },
+  {
+   "name": "BioAgilytix Europe GmbH"
+  },
+  {
+   "name": "Chemische Fabrik Dr. Weigert GmbH & Co. KG"
+  },
+  {
+   "name": "EUROIMMUN Medizinische Labordiagnostika AG"
+  },
+  {
+   "name": "Fraunhofer ITMP - ScreeningPort"
+  },
+  {
+   "name": "Fraunhofer-Einrichtung für Individualisierte Medizintechnik IMTE"
+  },
+  {
+   "name": "medac Gesellschaft für klinische Spezialpräparate m.b.H."
+  },
+  {
+   "name": "Nordmark Pharma GmbH"
+  },
+  {
+   "name": "Philips GmbH"
+  },
+  {
+   "name": "Sysmex Europe SE"
+  },
+  {
+   "name": "WEINMANN Emergency Medical Technology GmbH"
+  },
+  {
+   "name": "acCELLerate GmbH"
+  },
+  {
+   "name": "ADE Germany GmbH"
+  },
+  {
+   "name": "Active Bioscience GmbH"
+  },
+  {
+   "name": "AdvInno GmbH"
+  },
+  {
+   "name": "Agena Bioscience GmbH"
+  },
+  {
+   "name": "Acquandas GmbH"
+  }
+ ]
+}

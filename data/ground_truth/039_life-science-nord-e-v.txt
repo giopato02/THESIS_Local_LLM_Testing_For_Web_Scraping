@@ -1,0 +1,78 @@
+# ============================================================================
+# GROUND TRUTH WORKSHEET  --  Life Science Nord e.V.
+#
+# URL : https://www.lifesciencenord.de/de/mitglieder/member-companies.html
+# Page: 185 words, ~469 tokens
+#
+# WHAT TO DO
+#   1. Open the URL above in your browser, next to this file.
+#   2. SECTION A below is my best guess at the member companies.
+#      Read down it and DELETE any line that is not a member company.
+#   3. SECTION B is what I think is page furniture (menus, filters,
+#      categories). Skim it. If I wrongly binned a real company there,
+#      MOVE that line up into Section A.
+#   4. Then look at the WEBPAGE itself top to bottom. If a member is
+#      missing from Section A entirely, type it in. This step matters
+#      most -- it catches what my guessing missed.
+#   5. Keep names EXACTLY as printed (keep GmbH, AG, umlauts).
+#   6. Delete Section B entirely when you are done with it, or leave it --
+#      everything below the SECTION B marker is ignored either way.
+#   7. Save. Lines starting with # are ignored.
+#
+# When finished, run:  .venv/bin/python make_ground_truth.py --check
+# ============================================================================
+
+# --- SECTION A: likely member companies (50) -------------------------
+
+altona Diagnostics GmbH
+AstraZeneca GmbH
+Eppendorf SE
+Evotec SE
+i3 Membrane GmbH
+Indivumed GmbH
+NSF PROSYSTEM GmbH
+Olympus Surgical Technologies Europe
+Abbott Automation Solutions GmbH
+Allergopharma GmbH & Co. KG
+BioAgilytix Europe GmbH
+Chemische Fabrik Dr. Weigert GmbH & Co. KG
+Deutsche Apotheker- und Ärztebank eG
+Deutsches Elektronen-Synchrotron DESY
+Dr. Brill + Partner GmbH Institut für Hygiene und Mikrobiologie
+EurA AG
+EUROIMMUN Medizinische Labordiagnostika AG
+Fraunhofer ITMP - ScreeningPort
+Fraunhofer-Einrichtung für Individualisierte Medizintechnik IMTE
+handeln.de GmbH
+Marken Germany GmbH
+medac Gesellschaft für klinische Spezialpräparate m.b.H.
+Nordmark Pharma GmbH
+Philips GmbH
+qtec services GmbH
+Sysmex Europe SE
+WEINMANN Emergency Medical Technology GmbH
+A&O Pharma GmbH
+acCELLerate GmbH
+ADE Germany GmbH
+ai6 Solutions GmbH
+bornholdt lee GmbH
+Cellbox Solutions GmbH
+CrystalsFirst GmbH
+FUSE-AI GmbH
+GUS ERP GmbH
+Indeed Innovation GmbH
+Johner Institut GmbH
+KEYMKR GmbH
+Lemberg Solutions GmbH
+MindPeak GmbH
+PricewaterhouseCoopers GmbH Wirtschaftsprüfungsgesellschaft
+slashwhy GmbH & Co. KG
+SmartStep Consulting GmbH
+Sydbank A/S
+Uexküll & Stolberg Partnerschaft von Patent- und Rechtsanwälten mbB
+42systems GmbH & Co. KG
+Acquandas GmbH
+Active Bioscience GmbH
+AdvInno GmbH
+Agena Bioscience GmbH
+akampion

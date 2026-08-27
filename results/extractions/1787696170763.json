@@ -1,0 +1,35 @@
+{
+ "key": "a|gemma4:12b|few_shot_schema|constrained|005|3",
+ "raw": [
+  "Motherson DRSC",
+  "NISSHA Schuster Kunststofftechnik GmbH",
+  "SAXONIA Galvanik GmbH",
+  "Sur-Tech Surface-Technology GmbH",
+  "Textilforschungsinstitut Thüringen-Vogtland e.V.",
+  "Thüringer Institut für Textil- und Kunststoffforschung e.V.",
+  "TWE GmbH & Co. KG / ISOWOOD"
+ ],
+ "records": [
+  {
+   "name": "Motherson DRSC"
+  },
+  {
+   "name": "NISSHA Schuster Kunststofftechnik GmbH"
+  },
+  {
+   "name": "SAXONIA Galvanik GmbH"
+  },
+  {
+   "name": "Sur-Tech Surface-Technology GmbH"
+  },
+  {
+   "name": "Textilforschungsinstitut Thüringen-Vogtland e.V."
+  },
+  {
+   "name": "Thüringer Institut für Textil- und Kunststoffforschung e.V."
+  },
+  {
+   "name": "TWE GmbH & Co. KG / ISOWOOD"
+  }
+ ]
+}

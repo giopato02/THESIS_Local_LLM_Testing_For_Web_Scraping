@@ -1,0 +1,1183 @@
+{
+ "key": "a|llama3.1:8b|generic_multi_stage|constrained|050|3",
+ "raw": [
+  "2mag AG",
+  "5micron GmbH",
+  "A. Schweizer GmbH Optische Fabrik",
+  "Abbott GmbH",
+  "ADOS GmbH Mess- und Regeltechnik",
+  "AESCULAP AG",
+  "Agilent Technologies Deutschland GmbH",
+  "air-be-c Medizintechnik GmbH",
+  "Alcon Deutschland GmbH",
+  "ALS Automated Lab Solutions GmbH",
+  "Analytik Jena AG",
+  "Andreas Hettich GmbH",
+  "AOYAMA OPTICAL GERMANY GMBH",
+  "APOS GmbH",
+  "ASANUS Medizintechnik GmbH",
+  "asecos GmbH",
+  "asphericon GmbH",
+  "ATMOS MedizinTechnik GmbH & Co.KG",
+  "aXcent medical GmbH",
+  "Axel Semrau GmbH & Co. KG",
+  "B.Braun Avitum Saxonia GmbH",
+  "Bauer und Häselbarth-Chirurg GmbH",
+  "Bausch & Lomb GmbH",
+  "Befort Wetzlar OD GmbH",
+  "Belimed GmbH",
+  "Berghof Products+Instruments GmbH",
+  "Bierther Submikron GmbH",
+  "BlueSens gas sensor GmbH",
+  "bon Optic Vertriebsgesellschaft mbH",
+  "Bosch + Sohn GmbH u. Co. KG Fabrik medizinischer Apparate",
+  "Bosch Quantum Sensing",
+  "BOW Berliner Optikwelt GmbH",
+  "BRAND GMBH + CO KG",
+  "Braunwarth GmbH",
+  "Breas Medical GmbH",
+  "Breitfeld & Schliekert GmbH",
+  "Bruker BioSpin GmbH & Co.KG",
+  "BÜCHI Labortechnik GmbH",
+  "Carl Zeiss AG",
+  "Carl Zeiss Jena GmbH",
+  "Carl Zeiss Meditec AG",
+  "Carl Zeiss Microscopy GmbH",
+  "Carl Zeiss Vision GmbH",
+  "CEGLA Medizintechnik GmbH",
+  "CETONI GmbH",
+  "Christoph Miethke GmbH & Co. KG",
+  "COBLENS EYEWEAR GmbH",
+  "Coherent (Deutschland) GmbH",
+  "Coherent Kaiserslautern GmbH",
+  "Coherent LaserSystems GmbH & Co.KG",
+  "Condor GmbH Medicaltechnik",
+  "CRYSTAL GmbH",
+  "De Rigo Vision D.A.CH. GmbH",
+  "DITABIS AG",
+  "DMB-Apparatebau GmbH",
+  "Dornier MedTech Systems GmbH",
+  "Dr. Hönle Medizintechnik GmbH",
+  "Dr. Johannes Heidenhain GmbH",
+  "Dr. Mach GmbH + Co.",
+  "Dräger Safety AG & Co. KGaA",
+  "Drive Medical GmbH & Co. KG",
+  "DÜPERTHAL Sicherheitstechnik GmbH & Co. KG",
+  "DWK Life Sciences GmbH",
+  "eagleyard Photonics GmbH",
+  "Edmund Optics GmbH",
+  "Elementar Analysensysteme GmbH",
+  "Eppendorf SE",
+  "Eschenbach Optik GmbH",
+  "EsCo Orthopädie Service GmbH",
+  "ESSILOR GmbH",
+  "Excelitas Deutschland GmbH",
+  "F. & M. Lautenschläger GmbH & Co. KG",
+  "ficonTEC Service GmbH",
+  "Fisher & Paykel Healthcare GmbH & Co. KG",
+  "FLAIR Modellbrillen Dr. Eugen Beck GmbH & Co.KG",
+  "FMB Care GmbH",
+  "FPM Holding GmbH",
+  "FRANK OPTIC PRODUCTS GmbH Optische Technologien",
+  "Fraunhofer-Institut für Angewandte Optik und Feinmechanik IOF",
+  "Fraunhofer-Institut für Lasertechnik ILT",
+  "Fraunhofer-Institut für Nachrichtentechnik Heinrich-Hertz-Institut HHI",
+  "Fraunhofer-Institut für Photonische Mikrosysteme IPMS",
+  "Fraunhofer-Institut für Produktionstechnologie IPT",
+  "Fraunhofer-Institut für Schicht- und Oberflächentechnik IST",
+  "Fritsch GmbH Mahlen und Messen",
+  "Fritz Stephan GmbH Medizintechnik",
+  "Galifa Contactlinsen GmbH",
+  "Gardner Denver Thomas GmbH",
+  "GD Optical Competence GmbH",
+  "Gerstel GmbH & Co.KG",
+  "GETEMED Medizin- und Informationstechnik AG",
+  "Gilson International BV Deutschland",
+  "GIMMI GmbH",
+  "Gore Medical GmbH",
+  "Greiner GmbH Stahlmöbel",
+  "GTI medicare",
+  "HÄLSA Pharma GmbH",
+  "Hamamatsu Photonics Deutschland GmbH",
+  "Hans Müller HMP Medizintechnik GmbH",
+  "HECHT Contactlinsen GmbH",
+  "Heidelberg Engineering GmbH",
+  "Heidolph Scientific Products GmbH",
+  "HEINE Optotechnik GmbH & Co. KG",
+  "Hellma GmbH & Co. KG",
+  "Hengst SE",
+  "HENSEL-VISIT GmbH & Co. KG",
+  "Hermann Bock GmbH",
+  "Hermle Labortechnik GmbH",
+  "Herolab GmbH Laborgeräte",
+  "HEYER Medical AG",
+  "Hill-Rom GmbH",
+  "HiperScan GmbH",
+  "Hirschmann Laborgeräte GmbH & Co.KG",
+  "HiTec Zang GmbH",
+  "Hittech Prontor GmbH",
+  "HNP Mikrosysteme GmbH",
+  "Hoya Candeo Optronics Corporation",
+  "HOYA Lens Deutschland GmbH",
+  "HP Labortechnik GmbH",
+  "HP Medizintechnik GmbH",
+  "HUG GbR",
+  "ILUDEST Destilationsanlagen GmbH",
+  "Image Engineering GmbH & Co. KG",
+  "IMT Masken und Teilungen AG",
+  "INFICON GmbH",
+  "Infors GmbH",
+  "infoteam Software AG",
+  "INGENERIC GmbH",
+  "InProcess Instruments GmbH",
+  "INSTITUT FÜR UMWELT & ENERGIE, TECHNIK & ANALYTIK E. V.",
+  "Instrument Systems GmbH",
+  "INTEGRA Biosciences AG",
+  "interco GmbH",
+  "Intersurgical Beatmungsprodukte GmbH",
+  "Invacare GmbH",
+  "IT for Engineering (IT4E) GmbH",
+  "IVKO GmbH",
+  "J&M Analytik AG",
+  "JENOPTIK AG",
+  "JENOPTIK Diode Lab GmbH",
+  "JENOPTIK Laser GmbH",
+  "JENOPTIK Optical Systems GmbH",
+  "JENOPTIK Polymer Systems GmbH",
+  "Jos. Schneider Optische Werke GmbH",
+  "JÜKE Systemtechnik GmbH",
+  "JULABO GmbH",
+  "Kaiser Fototechnik GmbH & Co.KG",
+  "Karl Leibinger Medizintechnik GmbH & Co.KG",
+  "KARL STORZ SE & Co.KG",
+  "Kendrion Kuhnke Automation GmbH",
+  "KLS Martin SE & Co. KG",
+  "KNAUER Wissenschaftliche Geräte GmbH",
+  "Koberg & Tente GmbH + Co.",
+  "Kowa Optimed Deutschland GmbH",
+  "Kröber Medizintechnik GmbH",
+  "Landesinnung Chirurgiemechanik Baden Würtemberg, Sitz Tuttlingen",
+  "LAP GmbH Laser Applikationen",
+  "Laser 2000 GmbH",
+  "LASERVISION GmbH",
+  "LASOS Lasertechnik GmbH",
+  "LAUDA DR. R. WOBSER GmbH & Co.KG",
+  "Leica Camera AG",
+  "Leica Microsystems CMS GmbH",
+  "Leica Microsystems CMS GmbH Mannheim",
+  "Leica Microsystems GmbH",
+  "Lifeward GmbH",
+  "LIMO GmbH",
+  "LLS Rowiak LaserLabSolutions GmbH",
+  "Löwenstein Medical SE & Co. KG",
+  "Löwenstein Medical Technology GmbH+Co.KG",
+  "M&M Software GmbH",
+  "m2 Handels- und Vertriebs GmbH Mühle-Müller Pflegebetten",
+  "MAICO Diagnostics GmbH",
+  "mark’ennovy GmbH",
+  "Martin Christ Gefriertrocknungsanlagen GmbH",
+  "MARWITZ BERLIN",
+  "Matachana Germany GmbH",
+  "Medi-Tech-Park",
+  "Medicon eG Chirurgiemechaniker-Genossenschaft",
+  "MELAG oHG Medizintechnik",
+  "Memmert GmbH + Co.KG",
+  "Menicon GmbH Kontaktlinsen",
+  "MERSEN Deutschland Holding GmbH & Co. KG",
+  "Messer Group GmbH",
+  "Mettler Toledo GmbH",
+  "Meyer-Haake GmbH",
+  "Miele & Cie. KG",
+  "Mikrop AG",
+  "MMM Münchener Medizin Mechanik GmbH",
+  "MÖLLER-WEDEL-OPTICAL GmbH",
+  "MPG Optische Werke GmbH",
+  "MPG&E Handel und Service GmbH",
+  "MPV MEDICAL GmbH",
+  "Munich Surgical Imaging GmbH",
+  "NEOSTYLE GmbH & Co. KG",
+  "Netzsch Gerätebau GmbH",
+  "Newport Spectra-Physics GmbH",
+  "Nexopart",
+  "NIKA Optics GmbH",
+  "NOBLEX GmbH",
+  "nova:med GmbH & Co. KG",
+  "NOVOFLEX Präzisionstechnik",
+  "NRI Medizintechnik GmbH",
+  "OBE GmbH & Co. KG",
+  "OBERON GmbH Fiber Technologies",
+  "Oculus Optikgeräte GmbH",
+  "Ofa Bamberg GmbH",
+  "OHARA GmbH",
+  "OLYMPUS Deutschland GmbH",
+  "OLYMPUS SURGICAL TECHNOLOGIES EUROPE | Olympus Winter & Ibe GmbH",
+  "Optics Balzers Jena GmbH",
+  "Optiswiss AG",
+  "OPTOMECH GmbH",
+  "OWP Brillen GmbH",
+  "PARI GMBH",
+  "PENTAX Europe GmbH",
+  "PHARMA TEST Apparatebau AG",
+  "phenox GmbH",
+  "Philips GmbH Respironics",
+  "POG Präzisionsoptik Gera GmbH",
+  "Polytec GmbH",
+  "pricon GmbH & Co.KG",
+  "Protect Laserschutz GmbH",
+  "PTA GmbH",
+  "Purification Membranes Analytics - PMA GmbH",
+  "RADIMED Gesellschaft für Kommunikationsdienstleistungen und Medizintechnik mbH",
+  "Ratiolab GmbH",
+  "Rausch & Pausch Healthcare GmbH & Co KG",
+  "Reichmann Feinoptik GmbH",
+  "ResMed Deutschland GmbH",
+  "ResMed GmbH & Co.KG",
+  "Restek GmbH",
+  "Retsch GmbH",
+  "REUTER TECHNOLOGIE GmbH",
+  "Richard Wolf GmbH",
+  "Rodenstock GmbH",
+  "Rudolf Riester GmbH & Co.KG",
+  "Rupp + Hubrach Optik GmbH",
+  "S.I.E – System Industrie Electronic GmbH",
+  "S+M Rehberg GmbH",
+  "S1 Optics GmbH",
+  "Sartorius Lab Instruments GmbH & Co. KG",
+  "Satisloh GmbH",
+  "Schäfter + Kirchhoff GmbH",
+  "Schmidt & Bender GmbH & Co.KG Optisch-mechanische-Werkstatt",
+  "Schmidt + Haensch GmbH & Co.",
+  "SCHMITZ medical GmbH",
+  "SCHÖNE Optik-Maschinenfabrik GmbH",
+  "SCHOTT AG Business Unit Lighting+Imaging",
+  "SCHWIND eye-tech-solutions GmbH",
+  "seca GmbH & Co.KG",
+  "Semeda GmbH",
+  "Shimadzu Deutschland GmbH",
+  "SHP Steriltechnik AG",
+  "Sigma Laborzentrifugen GmbH",
+  "Silhouette Deutschland GmbH",
+  "Sill Optics GmbH & Co.KG",
+  "Söring GmbH",
+  "Spectral Engines GmbH",
+  "STARNA GmbH",
+  "STEINER-OPTIK GmbH",
+  "Stiegelmeyer GmbH & Co. KG",
+  "Stratemeyer - Eugen Stratemeyer GmbH & Co. KG",
+  "Sutter Medizintechnik GmbH",
+  "SWAROVSKI OPTIK KG",
+  "Swarovski Optik Vertriebs GmbH",
+  "Swiss Eye International GmbH",
+  "Swiss Optic AG",
+  "Systec GmbH & Co. KG",
+  "Thermo Fisher Scientific",
+  "TOPTICA Photonics SE",
+  "TOPTICA Projects GmbH",
+  "UltraFast Innovations GmbH",
+  "UniTransferKlinik Lübeck",
+  "UVEX ARBEITSSCHUTZ GmbH",
+  "VacuTec Meßtechnik GmbH",
+  "VACUUBRAND GMBH + CO. KG",
+  "Visibilia GmbH",
+  "VISIONIX DEUTSCHLAND GMBH",
+  "VISTAN BRILLEN GmbH",
+  "VISTEC AG Vision Technologies",
+  "VitalAire GmbH Niederlassung Bremen",
+  "VITRON Spezialwerkstoffe GmbH",
+  "Vivisol Deutschland GmbH",
+  "Volpi AG",
+  "VOYOU GmbH",
+  "WALDNER Holding SE & Co. KG",
+  "Walter Binde Optik GmbH & Co.KG",
+  "Walter H. Becker GmbH Metallwarenfabrik",
+  "WEINMANN Emergency Medical Technology GmbH",
+  "WILD Gruppe",
+  "Witeg Labortechnik GmbH",
+  "Wöhlk Contact-Linsen GmbH",
+  "LASER COMPONENTS GmbH"
+ ],
+ "records": [
+  {
+   "name": "2mag AG"
+  },
+  {
+   "name": "5micron GmbH"
+  },
+  {
+   "name": "A. Schweizer GmbH Optische Fabrik"
+  },
+  {
+   "name": "Abbott GmbH"
+  },
+  {
+   "name": "ADOS GmbH Mess- und Regeltechnik"
+  },
+  {
+   "name": "AESCULAP AG"
+  },
+  {
+   "name": "Agilent Technologies Deutschland GmbH"
+  },
+  {
+   "name": "air-be-c Medizintechnik GmbH"
+  },
+  {
+   "name": "Alcon Deutschland GmbH"
+  },
+  {
+   "name": "ALS Automated Lab Solutions GmbH"
+  },
+  {
+   "name": "Analytik Jena AG"
+  },
+  {
+   "name": "Andreas Hettich GmbH"
+  },
+  {
+   "name": "AOYAMA OPTICAL GERMANY GMBH"
+  },
+  {
+   "name": "APOS GmbH"
+  },
+  {
+   "name": "ASANUS Medizintechnik GmbH"
+  },
+  {
+   "name": "asecos GmbH"
+  },
+  {
+   "name": "asphericon GmbH"
+  },
+  {
+   "name": "ATMOS MedizinTechnik GmbH & Co.KG"
+  },
+  {
+   "name": "aXcent medical GmbH"
+  },
+  {
+   "name": "Axel Semrau GmbH & Co. KG"
+  },
+  {
+   "name": "B.Braun Avitum Saxonia GmbH"
+  },
+  {
+   "name": "Bauer und Häselbarth-Chirurg GmbH"
+  },
+  {
+   "name": "Bausch & Lomb GmbH"
+  },
+  {
+   "name": "Befort Wetzlar OD GmbH"
+  },
+  {
+   "name": "Belimed GmbH"
+  },
+  {
+   "name": "Berghof Products+Instruments GmbH"
+  },
+  {
+   "name": "Bierther Submikron GmbH"
+  },
+  {
+   "name": "BlueSens gas sensor GmbH"
+  },
+  {
+   "name": "bon Optic Vertriebsgesellschaft mbH"
+  },
+  {
+   "name": "Bosch + Sohn GmbH u. Co. KG Fabrik medizinischer Apparate"
+  },
+  {
+   "name": "Bosch Quantum Sensing"
+  },
+  {
+   "name": "BOW Berliner Optikwelt GmbH"
+  },
+  {
+   "name": "BRAND GMBH + CO KG"
+  },
+  {
+   "name": "Braunwarth GmbH"
+  },
+  {
+   "name": "Breas Medical GmbH"
+  },
+  {
+   "name": "Breitfeld & Schliekert GmbH"
+  },
+  {
+   "name": "Bruker BioSpin GmbH & Co.KG"
+  },
+  {
+   "name": "BÜCHI Labortechnik GmbH"
+  },
+  {
+   "name": "Carl Zeiss AG"
+  },
+  {
+   "name": "Carl Zeiss Jena GmbH"
+  },
+  {
+   "name": "Carl Zeiss Meditec AG"
+  },
+  {
+   "name": "Carl Zeiss Microscopy GmbH"
+  },
+  {
+   "name": "Carl Zeiss Vision GmbH"
+  },
+  {
+   "name": "CEGLA Medizintechnik GmbH"
+  },
+  {
+   "name": "CETONI GmbH"
+  },
+  {
+   "name": "Christoph Miethke GmbH & Co. KG"
+  },
+  {
+   "name": "COBLENS EYEWEAR GmbH"
+  },
+  {
+   "name": "Coherent (Deutschland) GmbH"
+  },
+  {
+   "name": "Coherent Kaiserslautern GmbH"
+  },
+  {
+   "name": "Coherent LaserSystems GmbH & Co.KG"
+  },
+  {
+   "name": "Condor GmbH Medicaltechnik"
+  },
+  {
+   "name": "CRYSTAL GmbH"
+  },
+  {
+   "name": "De Rigo Vision D.A.CH. GmbH"
+  },
+  {
+   "name": "DITABIS AG"
+  },
+  {
+   "name": "DMB-Apparatebau GmbH"
+  },
+  {
+   "name": "Dornier MedTech Systems GmbH"
+  },
+  {
+   "name": "Dr. Hönle Medizintechnik GmbH"
+  },
+  {
+   "name": "Dr. Johannes Heidenhain GmbH"
+  },
+  {
+   "name": "Dr. Mach GmbH + Co."
+  },
+  {
+   "name": "Dräger Safety AG & Co. KGaA"
+  },
+  {
+   "name": "Drive Medical GmbH & Co. KG"
+  },
+  {
+   "name": "DÜPERTHAL Sicherheitstechnik GmbH & Co. KG"
+  },
+  {
+   "name": "DWK Life Sciences GmbH"
+  },
+  {
+   "name": "eagleyard Photonics GmbH"
+  },
+  {
+   "name": "Edmund Optics GmbH"
+  },
+  {
+   "name": "Elementar Analysensysteme GmbH"
+  },
+  {
+   "name": "Eppendorf SE"
+  },
+  {
+   "name": "Eschenbach Optik GmbH"
+  },
+  {
+   "name": "EsCo Orthopädie Service GmbH"
+  },
+  {
+   "name": "ESSILOR GmbH"
+  },
+  {
+   "name": "Excelitas Deutschland GmbH"
+  },
+  {
+   "name": "F. & M. Lautenschläger GmbH & Co. KG"
+  },
+  {
+   "name": "ficonTEC Service GmbH"
+  },
+  {
+   "name": "Fisher & Paykel Healthcare GmbH & Co. KG"
+  },
+  {
+   "name": "FLAIR Modellbrillen Dr. Eugen Beck GmbH & Co.KG"
+  },
+  {
+   "name": "FMB Care GmbH"
+  },
+  {
+   "name": "FPM Holding GmbH"
+  },
+  {
+   "name": "FRANK OPTIC PRODUCTS GmbH Optische Technologien"
+  },
+  {
+   "name": "Fraunhofer-Institut für Angewandte Optik und Feinmechanik IOF"
+  },
+  {
+   "name": "Fraunhofer-Institut für Lasertechnik ILT"
+  },
+  {
+   "name": "Fraunhofer-Institut für Nachrichtentechnik Heinrich-Hertz-Institut HHI"
+  },
+  {
+   "name": "Fraunhofer-Institut für Photonische Mikrosysteme IPMS"
+  },
+  {
+   "name": "Fraunhofer-Institut für Produktionstechnologie IPT"
+  },
+  {
+   "name": "Fraunhofer-Institut für Schicht- und Oberflächentechnik IST"
+  },
+  {
+   "name": "Fritsch GmbH Mahlen und Messen"
+  },
+  {
+   "name": "Fritz Stephan GmbH Medizintechnik"
+  },
+  {
+   "name": "Galifa Contactlinsen GmbH"
+  },
+  {
+   "name": "Gardner Denver Thomas GmbH"
+  },
+  {
+   "name": "GD Optical Competence GmbH"
+  },
+  {
+   "name": "Gerstel GmbH & Co.KG"
+  },
+  {
+   "name": "GETEMED Medizin- und Informationstechnik AG"
+  },
+  {
+   "name": "Gilson International BV Deutschland"
+  },
+  {
+   "name": "GIMMI GmbH"
+  },
+  {
+   "name": "Gore Medical GmbH"
+  },
+  {
+   "name": "Greiner GmbH Stahlmöbel"
+  },
+  {
+   "name": "GTI medicare"
+  },
+  {
+   "name": "HÄLSA Pharma GmbH"
+  },
+  {
+   "name": "Hamamatsu Photonics Deutschland GmbH"
+  },
+  {
+   "name": "Hans Müller HMP Medizintechnik GmbH"
+  },
+  {
+   "name": "HECHT Contactlinsen GmbH"
+  },
+  {
+   "name": "Heidelberg Engineering GmbH"
+  },
+  {
+   "name": "Heidolph Scientific Products GmbH"
+  },
+  {
+   "name": "HEINE Optotechnik GmbH & Co. KG"
+  },
+  {
+   "name": "Hellma GmbH & Co. KG"
+  },
+  {
+   "name": "Hengst SE"
+  },
+  {
+   "name": "HENSEL-VISIT GmbH & Co. KG"
+  },
+  {
+   "name": "Hermann Bock GmbH"
+  },
+  {
+   "name": "Hermle Labortechnik GmbH"
+  },
+  {
+   "name": "Herolab GmbH Laborgeräte"
+  },
+  {
+   "name": "HEYER Medical AG"
+  },
+  {
+   "name": "Hill-Rom GmbH"
+  },
+  {
+   "name": "HiperScan GmbH"
+  },
+  {
+   "name": "Hirschmann Laborgeräte GmbH & Co.KG"
+  },
+  {
+   "name": "HiTec Zang GmbH"
+  },
+  {
+   "name": "Hittech Prontor GmbH"
+  },
+  {
+   "name": "HNP Mikrosysteme GmbH"
+  },
+  {
+   "name": "Hoya Candeo Optronics Corporation"
+  },
+  {
+   "name": "HOYA Lens Deutschland GmbH"
+  },
+  {
+   "name": "HP Labortechnik GmbH"
+  },
+  {
+   "name": "HP Medizintechnik GmbH"
+  },
+  {
+   "name": "HUG GbR"
+  },
+  {
+   "name": "ILUDEST Destilationsanlagen GmbH"
+  },
+  {
+   "name": "Image Engineering GmbH & Co. KG"
+  },
+  {
+   "name": "IMT Masken und Teilungen AG"
+  },
+  {
+   "name": "INFICON GmbH"
+  },
+  {
+   "name": "Infors GmbH"
+  },
+  {
+   "name": "infoteam Software AG"
+  },
+  {
+   "name": "INGENERIC GmbH"
+  },
+  {
+   "name": "InProcess Instruments GmbH"
+  },
+  {
+   "name": "INSTITUT FÜR UMWELT & ENERGIE, TECHNIK & ANALYTIK E. V."
+  },
+  {
+   "name": "Instrument Systems GmbH"
+  },
+  {
+   "name": "INTEGRA Biosciences AG"
+  },
+  {
+   "name": "interco GmbH"
+  },
+  {
+   "name": "Intersurgical Beatmungsprodukte GmbH"
+  },
+  {
+   "name": "Invacare GmbH"
+  },
+  {
+   "name": "IT for Engineering (IT4E) GmbH"
+  },
+  {
+   "name": "IVKO GmbH"
+  },
+  {
+   "name": "J&M Analytik AG"
+  },
+  {
+   "name": "JENOPTIK AG"
+  },
+  {
+   "name": "JENOPTIK Diode Lab GmbH"
+  },
+  {
+   "name": "JENOPTIK Laser GmbH"
+  },
+  {
+   "name": "JENOPTIK Optical Systems GmbH"
+  },
+  {
+   "name": "JENOPTIK Polymer Systems GmbH"
+  },
+  {
+   "name": "Jos. Schneider Optische Werke GmbH"
+  },
+  {
+   "name": "JÜKE Systemtechnik GmbH"
+  },
+  {
+   "name": "JULABO GmbH"
+  },
+  {
+   "name": "Kaiser Fototechnik GmbH & Co.KG"
+  },
+  {
+   "name": "Karl Leibinger Medizintechnik GmbH & Co.KG"
+  },
+  {
+   "name": "KARL STORZ SE & Co.KG"
+  },
+  {
+   "name": "Kendrion Kuhnke Automation GmbH"
+  },
+  {
+   "name": "KLS Martin SE & Co. KG"
+  },
+  {
+   "name": "KNAUER Wissenschaftliche Geräte GmbH"
+  },
+  {
+   "name": "Koberg & Tente GmbH + Co."
+  },
+  {
+   "name": "Kowa Optimed Deutschland GmbH"
+  },
+  {
+   "name": "Kröber Medizintechnik GmbH"
+  },
+  {
+   "name": "Landesinnung Chirurgiemechanik Baden Würtemberg, Sitz Tuttlingen"
+  },
+  {
+   "name": "LAP GmbH Laser Applikationen"
+  },
+  {
+   "name": "Laser 2000 GmbH"
+  },
+  {
+   "name": "LASERVISION GmbH"
+  },
+  {
+   "name": "LASOS Lasertechnik GmbH"
+  },
+  {
+   "name": "LAUDA DR. R. WOBSER GmbH & Co.KG"
+  },
+  {
+   "name": "Leica Camera AG"
+  },
+  {
+   "name": "Leica Microsystems CMS GmbH"
+  },
+  {
+   "name": "Leica Microsystems CMS GmbH Mannheim"
+  },
+  {
+   "name": "Leica Microsystems GmbH"
+  },
+  {
+   "name": "Lifeward GmbH"
+  },
+  {
+   "name": "LIMO GmbH"
+  },
+  {
+   "name": "LLS Rowiak LaserLabSolutions GmbH"
+  },
+  {
+   "name": "Löwenstein Medical SE & Co. KG"
+  },
+  {
+   "name": "Löwenstein Medical Technology GmbH+Co.KG"
+  },
+  {
+   "name": "M&M Software GmbH"
+  },
+  {
+   "name": "m2 Handels- und Vertriebs GmbH Mühle-Müller Pflegebetten"
+  },
+  {
+   "name": "MAICO Diagnostics GmbH"
+  },
+  {
+   "name": "mark’ennovy GmbH"
+  },
+  {
+   "name": "Martin Christ Gefriertrocknungsanlagen GmbH"
+  },
+  {
+   "name": "MARWITZ BERLIN"
+  },
+  {
+   "name": "Matachana Germany GmbH"
+  },
+  {
+   "name": "Medi-Tech-Park"
+  },
+  {
+   "name": "Medicon eG Chirurgiemechaniker-Genossenschaft"
+  },
+  {
+   "name": "MELAG oHG Medizintechnik"
+  },
+  {
+   "name": "Memmert GmbH + Co.KG"
+  },
+  {
+   "name": "Menicon GmbH Kontaktlinsen"
+  },
+  {
+   "name": "MERSEN Deutschland Holding GmbH & Co. KG"
+  },
+  {
+   "name": "Messer Group GmbH"
+  },
+  {
+   "name": "Mettler Toledo GmbH"
+  },
+  {
+   "name": "Meyer-Haake GmbH"
+  },
+  {
+   "name": "Miele & Cie. KG"
+  },
+  {
+   "name": "Mikrop AG"
+  },
+  {
+   "name": "MMM Münchener Medizin Mechanik GmbH"
+  },
+  {
+   "name": "MÖLLER-WEDEL-OPTICAL GmbH"
+  },
+  {
+   "name": "MPG Optische Werke GmbH"
+  },
+  {
+   "name": "MPG&E Handel und Service GmbH"
+  },
+  {
+   "name": "MPV MEDICAL GmbH"
+  },
+  {
+   "name": "Munich Surgical Imaging GmbH"
+  },
+  {
+   "name": "NEOSTYLE GmbH & Co. KG"
+  },
+  {
+   "name": "Netzsch Gerätebau GmbH"
+  },
+  {
+   "name": "Newport Spectra-Physics GmbH"
+  },
+  {
+   "name": "Nexopart"
+  },
+  {
+   "name": "NIKA Optics GmbH"
+  },
+  {
+   "name": "NOBLEX GmbH"
+  },
+  {
+   "name": "nova:med GmbH & Co. KG"
+  },
+  {
+   "name": "NOVOFLEX Präzisionstechnik"
+  },
+  {
+   "name": "NRI Medizintechnik GmbH"
+  },
+  {
+   "name": "OBE GmbH & Co. KG"
+  },
+  {
+   "name": "OBERON GmbH Fiber Technologies"
+  },
+  {
+   "name": "Oculus Optikgeräte GmbH"
+  },
+  {
+   "name": "Ofa Bamberg GmbH"
+  },
+  {
+   "name": "OHARA GmbH"
+  },
+  {
+   "name": "OLYMPUS Deutschland GmbH"
+  },
+  {
+   "name": "OLYMPUS SURGICAL TECHNOLOGIES EUROPE | Olympus Winter & Ibe GmbH"
+  },
+  {
+   "name": "Optics Balzers Jena GmbH"
+  },
+  {
+   "name": "Optiswiss AG"
+  },
+  {
+   "name": "OPTOMECH GmbH"
+  },
+  {
+   "name": "OWP Brillen GmbH"
+  },
+  {
+   "name": "PARI GMBH"
+  },
+  {
+   "name": "PENTAX Europe GmbH"
+  },
+  {
+   "name": "PHARMA TEST Apparatebau AG"
+  },
+  {
+   "name": "phenox GmbH"
+  },
+  {
+   "name": "Philips GmbH Respironics"
+  },
+  {
+   "name": "POG Präzisionsoptik Gera GmbH"
+  },
+  {
+   "name": "Polytec GmbH"
+  },
+  {
+   "name": "pricon GmbH & Co.KG"
+  },
+  {
+   "name": "Protect Laserschutz GmbH"
+  },
+  {
+   "name": "PTA GmbH"
+  },
+  {
+   "name": "Purification Membranes Analytics - PMA GmbH"
+  },
+  {
+   "name": "RADIMED Gesellschaft für Kommunikationsdienstleistungen und Medizintechnik mbH"
+  },
+  {
+   "name": "Ratiolab GmbH"
+  },
+  {
+   "name": "Rausch & Pausch Healthcare GmbH & Co KG"
+  },
+  {
+   "name": "Reichmann Feinoptik GmbH"
+  },
+  {
+   "name": "ResMed Deutschland GmbH"
+  },
+  {
+   "name": "ResMed GmbH & Co.KG"
+  },
+  {
+   "name": "Restek GmbH"
+  },
+  {
+   "name": "Retsch GmbH"
+  },
+  {
+   "name": "REUTER TECHNOLOGIE GmbH"
+  },
+  {
+   "name": "Richard Wolf GmbH"
+  },
+  {
+   "name": "Rodenstock GmbH"
+  },
+  {
+   "name": "Rudolf Riester GmbH & Co.KG"
+  },
+  {
+   "name": "Rupp + Hubrach Optik GmbH"
+  },
+  {
+   "name": "S.I.E – System Industrie Electronic GmbH"
+  },
+  {
+   "name": "S+M Rehberg GmbH"
+  },
+  {
+   "name": "S1 Optics GmbH"
+  },
+  {
+   "name": "Sartorius Lab Instruments GmbH & Co. KG"
+  },
+  {
+   "name": "Satisloh GmbH"
+  },
+  {
+   "name": "Schäfter + Kirchhoff GmbH"
+  },
+  {
+   "name": "Schmidt & Bender GmbH & Co.KG Optisch-mechanische-Werkstatt"
+  },
+  {
+   "name": "Schmidt + Haensch GmbH & Co."
+  },
+  {
+   "name": "SCHMITZ medical GmbH"
+  },
+  {
+   "name": "SCHÖNE Optik-Maschinenfabrik GmbH"
+  },
+  {
+   "name": "SCHOTT AG Business Unit Lighting+Imaging"
+  },
+  {
+   "name": "SCHWIND eye-tech-solutions GmbH"
+  },
+  {
+   "name": "seca GmbH & Co.KG"
+  },
+  {
+   "name": "Semeda GmbH"
+  },
+  {
+   "name": "Shimadzu Deutschland GmbH"
+  },
+  {
+   "name": "SHP Steriltechnik AG"
+  },
+  {
+   "name": "Sigma Laborzentrifugen GmbH"
+  },
+  {
+   "name": "Silhouette Deutschland GmbH"
+  },
+  {
+   "name": "Sill Optics GmbH & Co.KG"
+  },
+  {
+   "name": "Söring GmbH"
+  },
+  {
+   "name": "Spectral Engines GmbH"
+  },
+  {
+   "name": "STARNA GmbH"
+  },
+  {
+   "name": "STEINER-OPTIK GmbH"
+  },
+  {
+   "name": "Stiegelmeyer GmbH & Co. KG"
+  },
+  {
+   "name": "Stratemeyer - Eugen Stratemeyer GmbH & Co. KG"
+  },
+  {
+   "name": "Sutter Medizintechnik GmbH"
+  },
+  {
+   "name": "SWAROVSKI OPTIK KG"
+  },
+  {
+   "name": "Swarovski Optik Vertriebs GmbH"
+  },
+  {
+   "name": "Swiss Eye International GmbH"
+  },
+  {
+   "name": "Swiss Optic AG"
+  },
+  {
+   "name": "Systec GmbH & Co. KG"
+  },
+  {
+   "name": "Thermo Fisher Scientific"
+  },
+  {
+   "name": "TOPTICA Photonics SE"
+  },
+  {
+   "name": "TOPTICA Projects GmbH"
+  },
+  {
+   "name": "UltraFast Innovations GmbH"
+  },
+  {
+   "name": "UniTransferKlinik Lübeck"
+  },
+  {
+   "name": "UVEX ARBEITSSCHUTZ GmbH"
+  },
+  {
+   "name": "VacuTec Meßtechnik GmbH"
+  },
+  {
+   "name": "VACUUBRAND GMBH + CO. KG"
+  },
+  {
+   "name": "Visibilia GmbH"
+  },
+  {
+   "name": "VISIONIX DEUTSCHLAND GMBH"
+  },
+  {
+   "name": "VISTAN BRILLEN GmbH"
+  },
+  {
+   "name": "VISTEC AG Vision Technologies"
+  },
+  {
+   "name": "VitalAire GmbH Niederlassung Bremen"
+  },
+  {
+   "name": "VITRON Spezialwerkstoffe GmbH"
+  },
+  {
+   "name": "Vivisol Deutschland GmbH"
+  },
+  {
+   "name": "Volpi AG"
+  },
+  {
+   "name": "VOYOU GmbH"
+  },
+  {
+   "name": "WALDNER Holding SE & Co. KG"
+  },
+  {
+   "name": "Walter Binde Optik GmbH & Co.KG"
+  },
+  {
+   "name": "Walter H. Becker GmbH Metallwarenfabrik"
+  },
+  {
+   "name": "WEINMANN Emergency Medical Technology GmbH"
+  },
+  {
+   "name": "WILD Gruppe"
+  },
+  {
+   "name": "Witeg Labortechnik GmbH"
+  },
+  {
+   "name": "Wöhlk Contact-Linsen GmbH"
+  },
+  {
+   "name": "LASER COMPONENTS GmbH"
+  }
+ ]
+}

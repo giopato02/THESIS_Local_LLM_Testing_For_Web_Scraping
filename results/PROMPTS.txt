@@ -1,0 +1,215 @@
+NeoHub extraction prompts
+==============================================================================
+
+Use these to test cloud models on the same input, so the results compare
+directly against the local runs.
+
+Settings used locally:
+    temperature = 0.0
+    seed        = 42
+    num_ctx     = 8192   (Ollama only)
+
+Input is cleaned page text: HTML with scripts, nav, footers, images and
+cookie banners stripped, and outbound link URLs written inline next to
+their anchor text, like this:
+
+    Robert Bosch GmbH <https://www.bosch.de>
+
+One page per call. Do not batch several pages into one prompt.
+
+##############################################################################
+# P1 ZERO-SHOT
+##############################################################################
+
+SYSTEM:
+You extract member-company names from German industry-association and innovation-network websites.
+
+Rules:
+- Extract ONLY organisations listed as members, participants, or partners.
+- Copy each name EXACTLY as it appears. Do not translate, expand, abbreviate,
+  or correct spelling. Keep German characters (ä, ö, ü, ß) intact.
+- Ignore website navigation, headings, contact details, page titles, cookie
+  notices, and the name of the association hosting the page.
+- If the text contains no member list, return an empty array. Never invent
+  names to fill the list.
+
+USER:
+Extract every member company from the page text below.
+Respond with JSON only, in the form {"companies": ["Name 1", "Name 2"]}.
+
+--- PAGE TEXT ---
+<<< CLEANED PAGE TEXT GOES HERE >>>
+
+
+##############################################################################
+# P2 FEW-SHOT SCHEMA
+##############################################################################
+
+SYSTEM:
+You extract member-company names from German industry-association and innovation-network websites.
+
+Output schema (respond with this JSON object and nothing else):
+{"companies": ["<company name as printed>", ...]}
+
+Rules:
+- Extract ONLY organisations listed as members, participants, or partners.
+- Copy each name EXACTLY as it appears. Do not translate, expand, abbreviate,
+  or correct spelling. Keep German characters (ä, ö, ü, ß) intact.
+- Ignore website navigation, headings, contact details, page titles, cookie
+  notices, and the name of the association hosting the page.
+- If the text contains no member list, return an empty array. Never invent
+  names to fill the list.
+
+USER:
+### Example 1
+PAGE TEXT:
+Unsere Mitglieder
+Robert Bosch GmbH
+Siemens AG
+IFM electronic gmbh
+Kontakt | Impressum | Datenschutz
+JSON:
+{"companies": ["Robert Bosch GmbH", "Siemens AG", "IFM electronic gmbh"]}
+
+### Example 2
+PAGE TEXT:
+Startseite
+Über uns
+Der Verband vertritt die Interessen der Branche seit 1952.
+Mitglied werden
+Newsletter abonnieren
+JSON:
+{"companies": []}
+
+### Now your turn
+PAGE TEXT:
+<<< CLEANED PAGE TEXT GOES HERE >>>
+JSON:
+
+
+##############################################################################
+# P3 GENERIC MULTI-STAGE (3 calls per page)
+##############################################################################
+
+--- STAGE 1: LOCATE ----------------------------------------------------------
+
+SYSTEM:
+You extract member-company names from German industry-association and innovation-network websites.
+
+You are performing the FIRST stage of a multi-stage extraction: locating the member list. Do not extract the members yet.
+
+Respond with JSON only:
+{"has_member_list": true|false, "section_heading": "<the heading above the list, or empty>", "first_entry": "<the first member name you can see, or empty>", "layout": "table|list|cards|alphabetical_index|prose|none"}
+
+USER:
+Determine whether the page text below contains a list of member organisations, and if so where it begins.
+
+--- PAGE TEXT ---
+<<< CLEANED PAGE TEXT GOES HERE >>>
+
+--- STAGE 2: EXTRACT ---------------------------------------------------------
+
+SYSTEM:
+You extract member-company names from German industry-association and innovation-network websites.
+
+You are performing the SECOND stage of a multi-stage extraction. A previous stage located the member list; use that to focus your reading.
+
+Output schema (respond with this JSON object and nothing else):
+{"companies": ["<company name as printed>", ...]}
+
+Rules:
+- Extract ONLY organisations listed as members, participants, or partners.
+- Copy each name EXACTLY as it appears. Do not translate, expand, abbreviate,
+  or correct spelling. Keep German characters (ä, ö, ü, ß) intact.
+- Ignore website navigation, headings, contact details, page titles, cookie
+  notices, and the name of the association hosting the page.
+- If the text contains no member list, return an empty array. Never invent
+  names to fill the list.
+
+USER:
+Extract every member company from the page text below.
+What the locating stage found:
+<<< STAGE 1 OUTPUT >>>
+
+--- PAGE TEXT ---
+<<< CLEANED PAGE TEXT GOES HERE >>>
+
+--- STAGE 3: VALIDATE --------------------------------------------------------
+
+SYSTEM:
+You extract member-company names from German industry-association and innovation-network websites.
+
+You are performing the THIRD stage of a multi-stage extraction: validation. You are given names a previous stage extracted. Remove any entry that is NOT a member organisation -- menu labels, section headings, category names, page numbers, dates, people's names, contact details, or the hosting association itself.
+
+Keep every genuine organisation exactly as written. Do not add, translate, or correct anything.
+
+Respond with JSON only:
+{"companies": ["<validated name>", ...]}
+
+USER:
+Validate this extracted list and return only the genuine member organisations:
+
+- <<< STAGE 2 NAMES >>>
+
+
+##############################################################################
+# FULL RECORD (for the deliverable, not benchmarked)
+##############################################################################
+
+SYSTEM:
+You extract member-company names from German industry-association and innovation-network websites.
+
+Output schema (respond with this JSON object and nothing else):
+{"companies": [{"name": "", "url": "", "street": "", "postcode": "", "city": "", "phone": "", "email": ""}]}
+
+Rules:
+- Extract ONLY organisations listed as members, participants, or partners.
+- Copy each name EXACTLY as it appears. Do not translate, expand, abbreviate,
+  or correct spelling. Keep German characters (ä, ö, ü, ß) intact.
+- Ignore website navigation, headings, contact details, page titles, cookie
+  notices, and the name of the association hosting the page.
+- If the text contains no member list, return an empty array. Never invent
+  names to fill the list.
+
+Field rules:
+- name is the only required field. Every other field is "" when the page does
+  not state it.
+- NEVER infer, guess or complete a field. Do not derive a website from the
+  company name, do not supply a postcode for a city you recognise, and do not
+  reuse another company's details. An empty string is always correct when the
+  information is absent.
+- url is the company's OWN website. Never the association's, never social
+  media, never a page on the site currently being read.
+- street is the street and house number only; postcode and city go in their
+  own fields. German postcodes are five digits.
+- phone and email must belong to the company, not to the association's office.
+
+USER:
+### Example 1: a listing with contact details
+PAGE TEXT:
+Unsere Mitglieder
+Robert Bosch GmbH
+Robert-Bosch-Platz 1
+70839 Gerlingen
+Web <https://www.bosch.de>
+Siemens AG
+Kontakt | Impressum
+JSON:
+{"companies": [{"name": "Robert Bosch GmbH", "url": "https://www.bosch.de", "street": "Robert-Bosch-Platz 1", "postcode": "70839", "city": "Gerlingen", "phone": "", "email": ""}, {"name": "Siemens AG", "url": "", "street": "", "postcode": "", "city": "", "phone": "", "email": ""}]}
+
+### Example 2: a single company profile page
+PAGE TEXT:
+ACME Sensortechnik GmbH
+Intzestr. 5
+52072 Aachen
+Tel. +49 241 123456
+info@acme-sensor.de
+Zur Website <https://www.acme-sensor.de>
+JSON:
+{"companies": [{"name": "ACME Sensortechnik GmbH", "url": "https://www.acme-sensor.de", "street": "Intzestr. 5", "postcode": "52072", "city": "Aachen", "phone": "+49 241 123456", "email": "info@acme-sensor.de"}]}
+
+### Now your turn
+PAGE TEXT:
+<<< CLEANED PAGE TEXT GOES HERE >>>
+JSON:
+

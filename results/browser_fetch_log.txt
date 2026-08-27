@@ -1,0 +1,48 @@
+  skipping 6 ground-truth page(s): 012, 025, 039, 040, 043, 050
+  (their answer keys describe the current snapshot; use --force to override)
+
+  re-fetching 19 page(s) with a headless browser
+
+  [1/19] 006 AVK – Industrievereinigung Verstärkte Ku
+      round  1: 6 entries      round  2: 6 entries      round  3: 6 entries      rendered smaller (27 -> 9 words); keeping static version
+  [2/19] 007 Baden-Württemberg: Connected e.V. (bwcon
+      round  1: 97 entries      round  2: 97 entries      numbered pagination: pages 2-107
+      page 2 captured      page 3 captured      page 106 captured      page 107 captured      279 -> 1789 words (97 entries, 2 rounds)
+  [3/19] 008 bavAIRia e.V.
+      round  1: 499 entries      round  2: 499 entries      3288 -> 3305 words (499 entries, 2 rounds)
+  [4/19] 011 BioRN Network e.V.
+      round  1: 239 entries      round  2: 169 entries      rendered smaller (15533 -> 170 words); keeping static version
+  [5/19] 028 Hanse-Aerospace e.V.
+      round  1: 970 entries      round  2: 970 entries      round  3: 970 entries      rendered smaller (3232 -> 845 words); keeping static version
+  [6/19] 029 HyCologne – Wasserstoff Region Rheinland
+      round  1: 112 entries      round  2: 112 entries      151 -> 130 words (112 entries, 2 rounds)
+  [7/19] 035 Kompetenznetzwerk Mechatronik BW e.V.
+      round  1: 288 entries      round  2: 288 entries      665 -> 733 words (288 entries, 2 rounds)
+  [8/19] 041 medways e.V.
+      round  1: 71 entries      round  2: 71 entries      numbered pagination: pages 2-2
+      page 2 captured      2111 -> 4220 words (71 entries, 2 rounds)
+  [9/19] 046 owl maschinenbau e.V.
+      round  1: 95 entries      round  2: 95 entries      rendered smaller (4854 -> 572 words); keeping static version
+  [10/19] 049 Silicon Saxony e.V.
+      round  1: 118 entries      round  2: 118 entries      1060 -> 1114 words (118 entries, 2 rounds)
+  [11/19] 052 VDMA e.V.
+      round  1: 265 entries      round  2: 265 entries      341 -> 333 words (265 entries, 2 rounds)
+  [12/19] 057 Wetzlar Network
+      round  1: 17 entries      round  2: 17 entries      rendered smaller (364 -> 112 words); keeping static version
+  [13/19] 060 VIU – Verband Innovativer Unternehmen
+      round  1: 28 entries      round  2: 28 entries      530 -> 553 words (28 entries, 2 rounds)
+  [14/19] 061 AiF – Allianz für Industrie und Forschun
+      round  1: 232 entries      round  2: 232 entries      5145 -> 4869 words (232 entries, 2 rounds)
+  [15/19] 062 DTI – Dt. Verband f. Technologietransfer
+      round  1: 49 entries      round  2: 49 entries      203 -> 202 words (49 entries, 2 rounds)
+  [16/19] 067 BVMW – Der Mittelstand
+      round  1: 92 entries      round  2: 92 entries      477 -> 701 words (92 entries, 2 rounds)
+  [17/19] 069 VDMA
+      round  1: 99 entries      round  2: 77 entries      rendered smaller (987 -> 324 words); keeping static version
+  [18/19] 070 ZVEI
+      round  1: 0 entries      round  2: 369 entries      round  3: 369 entries      round  4: 369 entries      rendered smaller (1563 -> 419 words); keeping static version
+  [19/19] 072 German Accelerator
+      round  1: 378 entries      round  2: 378 entries      997 -> 2917 words (378 entries, 2 rounds)
+
+  done. Re-run fetcher.py to refresh the manifest:
+      .venv/bin/python fetcher.py

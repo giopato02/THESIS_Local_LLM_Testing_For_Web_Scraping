@@ -1,0 +1,69 @@
+# ============================================================================
+# GROUND TRUTH WORKSHEET  --  BDEW Bundesverband der Energie- und Wasserwirtschaft e.V.
+#
+# URL : https://www.bdew.de/verband/mitglieder/mitgliederuebersicht/
+# Page: 281 words, ~827 tokens
+#
+# WHAT TO DO
+#   1. Open the URL above in your browser, next to this file.
+#   2. SECTION A below is my best guess at the member companies.
+#      Read down it and DELETE any line that is not a member company.
+#   3. SECTION B is what I think is page furniture (menus, filters,
+#      categories). Skim it. If I wrongly binned a real company there,
+#      MOVE that line up into Section A.
+#   4. Then look at the WEBPAGE itself top to bottom. If a member is
+#      missing from Section A entirely, type it in. This step matters
+#      most -- it catches what my guessing missed.
+#   5. Keep names EXACTLY as printed (keep GmbH, AG, umlauts).
+#   6. Delete Section B entirely when you are done with it, or leave it --
+#      everything below the SECTION B marker is ignored either way.
+#   7. Save. Lines starting with # are ignored.
+#
+# When finished, run:  .venv/bin/python make_ground_truth.py --check
+# ============================================================================
+
+# --- SECTION A: likely member companies (83) -------------------------
+
+Å Energi Vannkraft AS Berlin Branch
+A.T. Kearney GmbH
+A/V/E GmbH
+ABO Energy GmbH & Co. KGaA
+Abwasserbetrieb der Stadt Goch AöR
+Abwassergesellschaft Magdeburg mbH
+Abwasserverband Lauter-Wetter
+Abwasserzweckverband Obere Freiberger Mulde
+adesso business consulting AG
+AFRY Management Consulting GmbH
+Aggerverband
+Albstadtwerke GmbH
+Albwerk GmbH & Co. KG
+Allego GmbH
+Allgäuer Kraftwerke GmbH
+Allgäuer Überlandwerk GmbH
+AllgäuNetz GmbH & Co. KG
+Alliander Netz Heinsberg GmbH
+Alpiq AG
+Alpiq Energie Deutschland GmbH
+Alterric Deutschland GmbH
+Ammerseewerke gKU
+Amprion GmbH
+AMRUM-Offshore West GmbH
+ANE GmbH & Co. KG
+AOV IT.Services GmbH
+Apoldaer Wasser GmbH
+ArcMind Technologies GmbH
+ARGE Netz GmbH & Co. KG
+Arvato Systems Digital GmbH
+ASCANETZ GmbH
+AUF Eberlein & Co. GmbH
+Avacon AG
+Avacon Hochdrucknetz GmbH
+Avacon Natur GmbH
+Avacon Netz GmbH
+Avacon Wasser GmbH
+AVIA Deutschland GmbH
+AVU Aktiengesellschaft für Versorgungs-Unternehmen
+AVU Netz GmbH
+AWE-Arkona-Windpark Entwicklungs-GmbH
+Axpo Deutschland GmbH
+Axpo Solar Deutschland GmbH

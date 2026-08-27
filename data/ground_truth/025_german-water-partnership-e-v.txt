@@ -1,0 +1,40 @@
+# ============================================================================
+# GROUND TRUTH WORKSHEET  --  German Water Partnership e.V.
+#
+# URL : https://germanwaterpartnership.de/mitglieder/
+# Page: 1009 words, ~2872 tokens
+#
+# WHAT TO DO
+#   1. Open the URL above in your browser, next to this file.
+#   2. SECTION A below is my best guess at the member companies.
+#      Read down it and DELETE any line that is not a member company.
+#   3. SECTION B is what I think is page furniture (menus, filters,
+#      categories). Skim it. If I wrongly binned a real company there,
+#      MOVE that line up into Section A.
+#   4. Then look at the WEBPAGE itself top to bottom. If a member is
+#      missing from Section A entirely, type it in. This step matters
+#      most -- it catches what my guessing missed.
+#   5. Keep names EXACTLY as printed (keep GmbH, AG, umlauts).
+#   6. Delete Section B entirely when you are done with it, or leave it --
+#      everything below the SECTION B marker is ignored either way.
+#   7. Save. Lines starting with # are ignored.
+#
+# When finished, run:  .venv/bin/python make_ground_truth.py --check
+# ============================================================================
+
+# --- SECTION A: likely member companies (35) -------------------------
+
+MolAquaTech GmbH
+DHI WASY GmbH
+KNESTEL Elektronik GmbH
+bbe Moldaenke GmbH
+Steinecker GmbH
+System S&P GmbH
+Anseros Klaus Nonnenmacher GmbH
+SKion Water GmbH
+Harzwasserwerke GmbH
+Roediger Vaccum GmbH
+Alton Automation GmbH
+Ingenieurgesellschaft Janisch & Schultz mbH
+hewitech GmbH & Co. KG
+HeGo Biotec International GmbH

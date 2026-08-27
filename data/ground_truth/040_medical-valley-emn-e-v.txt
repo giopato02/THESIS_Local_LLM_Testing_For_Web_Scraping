@@ -1,0 +1,46 @@
+# ============================================================================
+# GROUND TRUTH WORKSHEET  --  Medical Valley EMN e.V.
+#
+# URL : https://www.medical-valley-emn.de/ueber-uns/mitglieder-partner/
+# Page: 714 words, ~1943 tokens
+#
+# WHAT TO DO
+#   1. Open the URL above in your browser, next to this file.
+#   2. SECTION A below is my best guess at the member companies.
+#      Read down it and DELETE any line that is not a member company.
+#   3. SECTION B is what I think is page furniture (menus, filters,
+#      categories). Skim it. If I wrongly binned a real company there,
+#      MOVE that line up into Section A.
+#   4. Then look at the WEBPAGE itself top to bottom. If a member is
+#      missing from Section A entirely, type it in. This step matters
+#      most -- it catches what my guessing missed.
+#   5. Keep names EXACTLY as printed (keep GmbH, AG, umlauts).
+#   6. Delete Section B entirely when you are done with it, or leave it --
+#      everything below the SECTION B marker is ignored either way.
+#   7. Save. Lines starting with # are ignored.
+#
+# When finished, run:  .venv/bin/python make_ground_truth.py --check
+# ============================================================================
+
+# --- SECTION A: likely member companies (21) -------------------------
+
+1A CUE Consulting & Engineering GmbH
+2be_die markenmacher GmbH
+4BetterDevices
+A.R.C. Laser GmbH
+AB-CT – Advanced Breast-CT GmbH
+ABF-Pharmazie GmbH & Co. KG / ABF, Apothekerin Eva Schreier e. K.
+acad group GmbH
+acterience management partners GmbH & Co. KG
+ADVANOVA GmbH
+AFRA GmbH
+Ahead Care GmbH
+Ajambow GmbH
+Akkodis Edge Germany GmbH
+ALBOMED GmbH
+ALLISTRO GmbH
+ALPO Medizintechnik GmbH
+AMIPLANT GmbH
+Antaks GmbH
+APAGCoSyst Control Systems GmbH
+AS Automation GmbH

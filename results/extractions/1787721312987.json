@@ -1,0 +1,139 @@
+{
+ "key": "a|gemma4:12b|generic_multi_stage|prompt_only|004|2",
+ "raw": [
+  "ATP Automotive Testing Papenburg GmbH",
+  "Brandes Innovation",
+  "Brumund Maschinenbau GmbH & Co. KG",
+  "Constructor University Bremen gGmbH",
+  "Container Terminal Wilhelmshaven JadeWeserPort-Marketing GmbH & Co. KG",
+  "embeteco GmbH & Co. KG",
+  "EuroQ GmbH",
+  "Fraunhofer-Institut für Fertigungstechnik und Angewandte Materialforschung IFAM",
+  "Global Q Automotive Services",
+  "Goldbeck Nord GmbH Niederlassung Bremen",
+  "Graepel Löningen GmbH & Co. KG",
+  "Hochschule Bremen",
+  "Hochschule Emden-Leer",
+  "ifm electronic gmbh Vertrieb Deutschland",
+  "ITNW Ingenieurtechnik NordWest GmbH",
+  "ITS mobility GmbH",
+  "Jabbusch Siekmann & Wasiljef GBR",
+  "LMC │ LOGISTIKBERATUNG • PROJEKTMANAGEMENT",
+  "Michael Schlüter System- und Produktoptimierung",
+  "QSR24h GmbH",
+  "REFA Nordwest e.V. Regionalverband Weser-Ems",
+  "S&P Mergers and Acquisitions GmbH",
+  "SALT AND PEPPER Holding GmbH & Co. KG",
+  "SEH Fördersysteme GmbH",
+  "Seifert Logistics Group",
+  "SILVER ATENA",
+  "Stadt Oldenburg",
+  "SWMS Systemtechnik Ingenieurgesellschaft mbH",
+  "TCC Car Components GmbH",
+  "Treuhand Weser-Ems GmbH Wirtschaftsprüfungsgesellschaft",
+  "TZI Technologie-Zentrum Informatik",
+  "Wiosense GmbH & Co. KG",
+  "XMSplus"
+ ],
+ "records": [
+  {
+   "name": "ATP Automotive Testing Papenburg GmbH"
+  },
+  {
+   "name": "Brandes Innovation"
+  },
+  {
+   "name": "Brumund Maschinenbau GmbH & Co. KG"
+  },
+  {
+   "name": "Constructor University Bremen gGmbH"
+  },
+  {
+   "name": "Container Terminal Wilhelmshaven JadeWeserPort-Marketing GmbH & Co. KG"
+  },
+  {
+   "name": "embeteco GmbH & Co. KG"
+  },
+  {
+   "name": "EuroQ GmbH"
+  },
+  {
+   "name": "Fraunhofer-Institut für Fertigungstechnik und Angewandte Materialforschung IFAM"
+  },
+  {
+   "name": "Global Q Automotive Services"
+  },
+  {
+   "name": "Goldbeck Nord GmbH Niederlassung Bremen"
+  },
+  {
+   "name": "Graepel Löningen GmbH & Co. KG"
+  },
+  {
+   "name": "Hochschule Bremen"
+  },
+  {
+   "name": "Hochschule Emden-Leer"
+  },
+  {
+   "name": "ifm electronic gmbh Vertrieb Deutschland"
+  },
+  {
+   "name": "ITNW Ingenieurtechnik NordWest GmbH"
+  },
+  {
+   "name": "ITS mobility GmbH"
+  },
+  {
+   "name": "Jabbusch Siekmann & Wasiljef GBR"
+  },
+  {
+   "name": "LMC │ LOGISTIKBERATUNG • PROJEKTMANAGEMENT"
+  },
+  {
+   "name": "Michael Schlüter System- und Produktoptimierung"
+  },
+  {
+   "name": "QSR24h GmbH"
+  },
+  {
+   "name": "REFA Nordwest e.V. Regionalverband Weser-Ems"
+  },
+  {
+   "name": "S&P Mergers and Acquisitions GmbH"
+  },
+  {
+   "name": "SALT AND PEPPER Holding GmbH & Co. KG"
+  },
+  {
+   "name": "SEH Fördersysteme GmbH"
+  },
+  {
+   "name": "Seifert Logistics Group"
+  },
+  {
+   "name": "SILVER ATENA"
+  },
+  {
+   "name": "Stadt Oldenburg"
+  },
+  {
+   "name": "SWMS Systemtechnik Ingenieurgesellschaft mbH"
+  },
+  {
+   "name": "TCC Car Components GmbH"
+  },
+  {
+   "name": "Treuhand Weser-Ems GmbH Wirtschaftsprüfungsgesellschaft"
+  },
+  {
+   "name": "TZI Technologie-Zentrum Informatik"
+  },
+  {
+   "name": "Wiosense GmbH & Co. KG"
+  },
+  {
+   "name": "XMSplus"
+  }
+ ]
+}

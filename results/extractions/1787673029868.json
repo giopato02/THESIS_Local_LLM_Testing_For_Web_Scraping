@@ -1,0 +1,247 @@
+{
+ "key": "a|qwen2.5-coder:7b|generic_multi_stage|prompt_only|005|1",
+ "raw": [
+  "AAM Eisenach Driveline GmbH",
+  "BENTELER Automobiltechnik Eisenach GmbH",
+  "BMW Fahrzeugtechnik GmbH",
+  "Borbet Thüringen GmbH",
+  "CATL – Contemporary Amperex Technology GmbH",
+  "CERA SYSTEM Verschleißschutz GmbH",
+  "con-pearl GmbH",
+  "Eichsfelder Schraubenwerk GmbH",
+  "EJOT SE & Co. KG",
+  "ELSCHUKOM GmbH",
+  "Erdrich Umformtechnik GmbH",
+  "F. Segura Deutschland GmbH",
+  "febana Feinmechanische Bauelemente GmbH",
+  "Feintool System Parts Ohrdruf GmbH",
+  "FFT Werkzeug + Karosserie GmbH",
+  "GB Neuhaus",
+  "GEIGER Automobiltechnik GmbH",
+  "GME Automobiltechnik GmbH",
+  "Härterei Reese",
+  "INNOMAN GmbH",
+  "IPOL GmbH",
+  "jambit GmbH",
+  "Konzept Informationssysteme GmbH",
+  "LEWELL Kartonagen GmbH",
+  "MAXX SOLAR & ENERGIE GmbH & Co. KG",
+  "Modell Technik Rapid Prototyping GmbH, Waltershausen",
+  "Möller Messtechnik Kalibrierlabor / Erstbemusterungen",
+  "OSK-Kiefer GmbH",
+  "PORTEC GmbH",
+  "Rombach Rechtsanwälte Insolvenzverwalter Partnerschaft mbB",
+  "schambeck GmbH",
+  "SEITEC GmbH",
+  "SSV-Kroschke GmbH",
+  "STOCKMANN Prüf- und Qualitätszentrum GmbH",
+  "Struensee & Dr. Rothe GmbH",
+  "TARGO Leasing GmbH",
+  "TÜV Thüringen e.V.",
+  "actain engineering GmbH",
+  "Car Men GmbH",
+  "Fraunhofer-Institut für Digitale Medientechnologie IDMT",
+  "Fraunhofer-Institut für Keramische Technologien und Systeme IKTS",
+  "Hochschule Nordhausen",
+  "Materialforschungs- und -prüfanstalt an der Bauhaus-Universität Weimar (MFPA)",
+  "Neways Technologies GmbH",
+  "Technische Universität Ilmenau | Thüringer Innovationszentrum Mobilität",
+  "Textilforschungsinstitut Thüringen-Vogtland e.V.",
+  "TITK Thüringisches Institut für Textil- und Kunststoff-Forschung e.V.",
+  "ATP adhesive systems AG",
+  "C.H. Müller GmbH",
+  "DST Dräxlmaier Systemtechnik GmbH",
+  "GBneuhaus GmbH",
+  "Hehnke GmbH & Co. KG",
+  "Innovent e.V.",
+  "KOMOS GmbH Komponenten Module Systeme",
+  "Motherson DRSC",
+  "NISSHA Schuster Kunststofftechnik GmbH",
+  "SAXONIA Galvanik GmbH",
+  "Sur-Tech Surface-Technology GmbH",
+  "Thüringer Institut für Textil- und Kunststoffforschung e.V.",
+  "TWE GmbH & Co. KG / ISOWOOD"
+ ],
+ "records": [
+  {
+   "name": "AAM Eisenach Driveline GmbH"
+  },
+  {
+   "name": "BENTELER Automobiltechnik Eisenach GmbH"
+  },
+  {
+   "name": "BMW Fahrzeugtechnik GmbH"
+  },
+  {
+   "name": "Borbet Thüringen GmbH"
+  },
+  {
+   "name": "CATL – Contemporary Amperex Technology GmbH"
+  },
+  {
+   "name": "CERA SYSTEM Verschleißschutz GmbH"
+  },
+  {
+   "name": "con-pearl GmbH"
+  },
+  {
+   "name": "Eichsfelder Schraubenwerk GmbH"
+  },
+  {
+   "name": "EJOT SE & Co. KG"
+  },
+  {
+   "name": "ELSCHUKOM GmbH"
+  },
+  {
+   "name": "Erdrich Umformtechnik GmbH"
+  },
+  {
+   "name": "F. Segura Deutschland GmbH"
+  },
+  {
+   "name": "febana Feinmechanische Bauelemente GmbH"
+  },
+  {
+   "name": "Feintool System Parts Ohrdruf GmbH"
+  },
+  {
+   "name": "FFT Werkzeug + Karosserie GmbH"
+  },
+  {
+   "name": "GB Neuhaus"
+  },
+  {
+   "name": "GEIGER Automobiltechnik GmbH"
+  },
+  {
+   "name": "GME Automobiltechnik GmbH"
+  },
+  {
+   "name": "Härterei Reese"
+  },
+  {
+   "name": "INNOMAN GmbH"
+  },
+  {
+   "name": "IPOL GmbH"
+  },
+  {
+   "name": "jambit GmbH"
+  },
+  {
+   "name": "Konzept Informationssysteme GmbH"
+  },
+  {
+   "name": "LEWELL Kartonagen GmbH"
+  },
+  {
+   "name": "MAXX SOLAR & ENERGIE GmbH & Co. KG"
+  },
+  {
+   "name": "Modell Technik Rapid Prototyping GmbH, Waltershausen"
+  },
+  {
+   "name": "Möller Messtechnik Kalibrierlabor / Erstbemusterungen"
+  },
+  {
+   "name": "OSK-Kiefer GmbH"
+  },
+  {
+   "name": "PORTEC GmbH"
+  },
+  {
+   "name": "Rombach Rechtsanwälte Insolvenzverwalter Partnerschaft mbB"
+  },
+  {
+   "name": "schambeck GmbH"
+  },
+  {
+   "name": "SEITEC GmbH"
+  },
+  {
+   "name": "SSV-Kroschke GmbH"
+  },
+  {
+   "name": "STOCKMANN Prüf- und Qualitätszentrum GmbH"
+  },
+  {
+   "name": "Struensee & Dr. Rothe GmbH"
+  },
+  {
+   "name": "TARGO Leasing GmbH"
+  },
+  {
+   "name": "TÜV Thüringen e.V."
+  },
+  {
+   "name": "actain engineering GmbH"
+  },
+  {
+   "name": "Car Men GmbH"
+  },
+  {
+   "name": "Fraunhofer-Institut für Digitale Medientechnologie IDMT"
+  },
+  {
+   "name": "Fraunhofer-Institut für Keramische Technologien und Systeme IKTS"
+  },
+  {
+   "name": "Hochschule Nordhausen"
+  },
+  {
+   "name": "Materialforschungs- und -prüfanstalt an der Bauhaus-Universität Weimar (MFPA)"
+  },
+  {
+   "name": "Neways Technologies GmbH"
+  },
+  {
+   "name": "Technische Universität Ilmenau | Thüringer Innovationszentrum Mobilität"
+  },
+  {
+   "name": "Textilforschungsinstitut Thüringen-Vogtland e.V."
+  },
+  {
+   "name": "TITK Thüringisches Institut für Textil- und Kunststoff-Forschung e.V."
+  },
+  {
+   "name": "ATP adhesive systems AG"
+  },
+  {
+   "name": "C.H. Müller GmbH"
+  },
+  {
+   "name": "DST Dräxlmaier Systemtechnik GmbH"
+  },
+  {
+   "name": "GBneuhaus GmbH"
+  },
+  {
+   "name": "Hehnke GmbH & Co. KG"
+  },
+  {
+   "name": "Innovent e.V."
+  },
+  {
+   "name": "KOMOS GmbH Komponenten Module Systeme"
+  },
+  {
+   "name": "Motherson DRSC"
+  },
+  {
+   "name": "NISSHA Schuster Kunststofftechnik GmbH"
+  },
+  {
+   "name": "SAXONIA Galvanik GmbH"
+  },
+  {
+   "name": "Sur-Tech Surface-Technology GmbH"
+  },
+  {
+   "name": "Thüringer Institut für Textil- und Kunststoffforschung e.V."
+  },
+  {
+   "name": "TWE GmbH & Co. KG / ISOWOOD"
+  }
+ ]
+}

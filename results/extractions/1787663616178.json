@@ -1,0 +1,307 @@
+{
+ "key": "a|qwen2.5-coder:7b|generic_multi_stage|constrained|032|2",
+ "raw": [
+  "AEU Tech GmbH",
+  "Artgerecht Werbeagentur GmbH",
+  "azur - Allianz Zukunft Reifen",
+  "BEDEM",
+  "BREMER West GmbH & Co. KG",
+  "BSA Kunststofftechnik GmbH",
+  "Bundesverband Mittelständische Wirtschaft (BVMW)",
+  "christmann informationstechnik + medien GmbH & Co. KG",
+  "C-LAB",
+  "code-x GmbH",
+  "Condor MedTec",
+  "Creos Lernideen und Beratung GmbH",
+  "CTDI Schloss Holte GmbH",
+  "DBS Training & Consulting GmbH",
+  "Delta Media GmbH",
+  "Edacentrum e.V.",
+  "Erfinderclub Paderborn e.V",
+  "FINDIQ GmbH",
+  "Fischer Panda GmbH",
+  "Fraunhofer ENAS-ASE",
+  "Fraunhofer IEM",
+  "Fraunhofer IOSB-INA",
+  "Freund Maschinenfabrik GmbH & Co. KG",
+  "HEGGEMANN AG",
+  "Ingenieurbüro Andreas Heidemann GmbH & Co.KG",
+  "helectronics gmbh",
+  "HellwegWind GmbH",
+  "Hochschule Bielefeld (HSBI)",
+  "Industrieanlagen-Betriebsgesellschaft mbH",
+  "IANUS Simulation GmbH",
+  "IHK Ostwestfalen zu Bielefeld",
+  "Innovative Card Systems GmbH",
+  "insensiv GmbH",
+  "Herbert Kannegiesser GmbH",
+  "Kreishandwerkerschaft Paderborn-Lippe",
+  "mechOnics ag",
+  "MöllerFlex GmbH",
+  "MSF-Vathauer Antriebstechnik GmbH",
+  "myconsult GmbH",
+  "Nuromedia GmbH",
+  "ONLINE Systemlogistik GmbH & Co. KG",
+  "OPTANO GmbH",
+  "Ostfalia Hochschule für angewandte Wissenschaften, Wolfenbüttel",
+  "OWITA GmbH",
+  "Raumtänzer GmbH",
+  "RTB GmbH und Co. KG",
+  "S&N Invent GmbH",
+  "S&Ü Hydraulik- und Maschinenbau GmbH",
+  "SBH West GmbH",
+  "SHWire, Schwering & Hasse Elektrodraht GmbH",
+  "SIL System Integration Laboratory GmbH",
+  "Silence Aircraft GmbH",
+  "Skyline Express International GmbH",
+  "Stührenberg GmbH",
+  "TEAM GmbH",
+  "Technische Hochschule Ostwestfalen-Lippe",
+  "Technische Hochschule Ostwestfalen-Lippe - inIT",
+  "Technologie- und Berufsbildungszentrum Paderborn (tbz)",
+  "T.F. Wickeltechnik GmbH",
+  "tomorrow bird GmbH",
+  "Top Light GmbH & Co. KG",
+  "Trenz Electronic GmbH",
+  "Ulrich Rotte Anlagenbau und Fördertechnik GmbH",
+  "Universität Bielefeld",
+  "Universität Bielefeld - CITEC",
+  "Universität Paderborn",
+  "Universität Paderborn - CeOPP",
+  "Universität Paderborn - Heinz Nixdorf Institut",
+  "Universität Paderborn - Lehrstuhl für Konstruktions- und Antriebstechnik (KAt)",
+  "Universität Paderborn - Software Innovation Campus",
+  "Universität Paderborn - TecUP",
+  "VerbundVolksbank OWL",
+  "WestfalenWIND GmbH",
+  "Wickord Buser Patentanwälte PartG mbB",
+  "Wirtschaftsförderung Paderborn"
+ ],
+ "records": [
+  {
+   "name": "AEU Tech GmbH"
+  },
+  {
+   "name": "Artgerecht Werbeagentur GmbH"
+  },
+  {
+   "name": "azur - Allianz Zukunft Reifen"
+  },
+  {
+   "name": "BEDEM"
+  },
+  {
+   "name": "BREMER West GmbH & Co. KG"
+  },
+  {
+   "name": "BSA Kunststofftechnik GmbH"
+  },
+  {
+   "name": "Bundesverband Mittelständische Wirtschaft (BVMW)"
+  },
+  {
+   "name": "christmann informationstechnik + medien GmbH & Co. KG"
+  },
+  {
+   "name": "C-LAB"
+  },
+  {
+   "name": "code-x GmbH"
+  },
+  {
+   "name": "Condor MedTec"
+  },
+  {
+   "name": "Creos Lernideen und Beratung GmbH"
+  },
+  {
+   "name": "CTDI Schloss Holte GmbH"
+  },
+  {
+   "name": "DBS Training & Consulting GmbH"
+  },
+  {
+   "name": "Delta Media GmbH"
+  },
+  {
+   "name": "Edacentrum e.V."
+  },
+  {
+   "name": "Erfinderclub Paderborn e.V"
+  },
+  {
+   "name": "FINDIQ GmbH"
+  },
+  {
+   "name": "Fischer Panda GmbH"
+  },
+  {
+   "name": "Fraunhofer ENAS-ASE"
+  },
+  {
+   "name": "Fraunhofer IEM"
+  },
+  {
+   "name": "Fraunhofer IOSB-INA"
+  },
+  {
+   "name": "Freund Maschinenfabrik GmbH & Co. KG"
+  },
+  {
+   "name": "HEGGEMANN AG"
+  },
+  {
+   "name": "Ingenieurbüro Andreas Heidemann GmbH & Co.KG"
+  },
+  {
+   "name": "helectronics gmbh"
+  },
+  {
+   "name": "HellwegWind GmbH"
+  },
+  {
+   "name": "Hochschule Bielefeld (HSBI)"
+  },
+  {
+   "name": "Industrieanlagen-Betriebsgesellschaft mbH"
+  },
+  {
+   "name": "IANUS Simulation GmbH"
+  },
+  {
+   "name": "IHK Ostwestfalen zu Bielefeld"
+  },
+  {
+   "name": "Innovative Card Systems GmbH"
+  },
+  {
+   "name": "insensiv GmbH"
+  },
+  {
+   "name": "Herbert Kannegiesser GmbH"
+  },
+  {
+   "name": "Kreishandwerkerschaft Paderborn-Lippe"
+  },
+  {
+   "name": "mechOnics ag"
+  },
+  {
+   "name": "MöllerFlex GmbH"
+  },
+  {
+   "name": "MSF-Vathauer Antriebstechnik GmbH"
+  },
+  {
+   "name": "myconsult GmbH"
+  },
+  {
+   "name": "Nuromedia GmbH"
+  },
+  {
+   "name": "ONLINE Systemlogistik GmbH & Co. KG"
+  },
+  {
+   "name": "OPTANO GmbH"
+  },
+  {
+   "name": "Ostfalia Hochschule für angewandte Wissenschaften, Wolfenbüttel"
+  },
+  {
+   "name": "OWITA GmbH"
+  },
+  {
+   "name": "Raumtänzer GmbH"
+  },
+  {
+   "name": "RTB GmbH und Co. KG"
+  },
+  {
+   "name": "S&N Invent GmbH"
+  },
+  {
+   "name": "S&Ü Hydraulik- und Maschinenbau GmbH"
+  },
+  {
+   "name": "SBH West GmbH"
+  },
+  {
+   "name": "SHWire, Schwering & Hasse Elektrodraht GmbH"
+  },
+  {
+   "name": "SIL System Integration Laboratory GmbH"
+  },
+  {
+   "name": "Silence Aircraft GmbH"
+  },
+  {
+   "name": "Skyline Express International GmbH"
+  },
+  {
+   "name": "Stührenberg GmbH"
+  },
+  {
+   "name": "TEAM GmbH"
+  },
+  {
+   "name": "Technische Hochschule Ostwestfalen-Lippe"
+  },
+  {
+   "name": "Technische Hochschule Ostwestfalen-Lippe - inIT"
+  },
+  {
+   "name": "Technologie- und Berufsbildungszentrum Paderborn (tbz)"
+  },
+  {
+   "name": "T.F. Wickeltechnik GmbH"
+  },
+  {
+   "name": "tomorrow bird GmbH"
+  },
+  {
+   "name": "Top Light GmbH & Co. KG"
+  },
+  {
+   "name": "Trenz Electronic GmbH"
+  },
+  {
+   "name": "Ulrich Rotte Anlagenbau und Fördertechnik GmbH"
+  },
+  {
+   "name": "Universität Bielefeld"
+  },
+  {
+   "name": "Universität Bielefeld - CITEC"
+  },
+  {
+   "name": "Universität Paderborn"
+  },
+  {
+   "name": "Universität Paderborn - CeOPP"
+  },
+  {
+   "name": "Universität Paderborn - Heinz Nixdorf Institut"
+  },
+  {
+   "name": "Universität Paderborn - Lehrstuhl für Konstruktions- und Antriebstechnik (KAt)"
+  },
+  {
+   "name": "Universität Paderborn - Software Innovation Campus"
+  },
+  {
+   "name": "Universität Paderborn - TecUP"
+  },
+  {
+   "name": "VerbundVolksbank OWL"
+  },
+  {
+   "name": "WestfalenWIND GmbH"
+  },
+  {
+   "name": "Wickord Buser Patentanwälte PartG mbB"
+  },
+  {
+   "name": "Wirtschaftsförderung Paderborn"
+  }
+ ]
+}

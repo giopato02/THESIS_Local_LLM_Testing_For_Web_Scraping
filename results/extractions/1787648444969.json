@@ -1,0 +1,171 @@
+{
+ "key": "a|llama3.1:8b|few_shot_schema|constrained|009|1",
+ "raw": [
+  "Å Energi Vannkraft AS Berlin Branch",
+  "A.T. Kearney GmbH",
+  "A/V/E GmbH",
+  "ABO Energy GmbH & Co. KGaA",
+  "Abwasserbetrieb der Stadt Goch AöR",
+  "Abwassergesellschaft Magdeburg mbH",
+  "Abwasserzweckverband Obere Freiberger Mulde",
+  "adesso business consulting AG",
+  "AFRY Management Consulting GmbH",
+  "Aggerverband",
+  "Albstadtwerke GmbH",
+  "Albwerk GmbH & Co. KG",
+  "Allego GmbH c/o Design Offices",
+  "Allgäuer Kraftwerke GmbH",
+  "Allgäuer Überlandwerk GmbH",
+  "AllgäuNetz GmbH & Co. KG",
+  "Alliander Netz Heinsberg GmbH",
+  "Alpiq AG",
+  "Alpiq Energie Deutschland GmbH",
+  "Alterric Deutschland GmbH",
+  "Ammerseewerke gKU",
+  "Amprion GmbH",
+  "AMRUM-Offshore West GmbH",
+  "ANE GmbH & Co. KG",
+  "APODIER Wasser GmbH",
+  "ArcMind Technologies GmbH",
+  "ARGE Netz GmbH & Co. KG",
+  "Arvato Systems Digital GmbH",
+  "ASCANETZ GmbH",
+  "AUF Eberlein & Co. GmbH",
+  "Avacon AG",
+  "Avacon Hochdrucknetz GmbH",
+  "Avacon Natur GmbH",
+  "Avacon Netz GmbH",
+  "Avacon Wasser GmbH",
+  "AVIA Deutschland GmbH",
+  "AVU Aktiengesellschaft für Versorgungs-Unternehmen",
+  "AVU Netz GmbH",
+  "AWE-Arkona-Windpark Entwicklungs-GmbH",
+  "Axpo Deutschland GmbH",
+  "Axpo Solar Deutschland GmbH"
+ ],
+ "records": [
+  {
+   "name": "Å Energi Vannkraft AS Berlin Branch"
+  },
+  {
+   "name": "A.T. Kearney GmbH"
+  },
+  {
+   "name": "A/V/E GmbH"
+  },
+  {
+   "name": "ABO Energy GmbH & Co. KGaA"
+  },
+  {
+   "name": "Abwasserbetrieb der Stadt Goch AöR"
+  },
+  {
+   "name": "Abwassergesellschaft Magdeburg mbH"
+  },
+  {
+   "name": "Abwasserzweckverband Obere Freiberger Mulde"
+  },
+  {
+   "name": "adesso business consulting AG"
+  },
+  {
+   "name": "AFRY Management Consulting GmbH"
+  },
+  {
+   "name": "Aggerverband"
+  },
+  {
+   "name": "Albstadtwerke GmbH"
+  },
+  {
+   "name": "Albwerk GmbH & Co. KG"
+  },
+  {
+   "name": "Allego GmbH c/o Design Offices"
+  },
+  {
+   "name": "Allgäuer Kraftwerke GmbH"
+  },
+  {
+   "name": "Allgäuer Überlandwerk GmbH"
+  },
+  {
+   "name": "AllgäuNetz GmbH & Co. KG"
+  },
+  {
+   "name": "Alliander Netz Heinsberg GmbH"
+  },
+  {
+   "name": "Alpiq AG"
+  },
+  {
+   "name": "Alpiq Energie Deutschland GmbH"
+  },
+  {
+   "name": "Alterric Deutschland GmbH"
+  },
+  {
+   "name": "Ammerseewerke gKU"
+  },
+  {
+   "name": "Amprion GmbH"
+  },
+  {
+   "name": "AMRUM-Offshore West GmbH"
+  },
+  {
+   "name": "ANE GmbH & Co. KG"
+  },
+  {
+   "name": "APODIER Wasser GmbH"
+  },
+  {
+   "name": "ArcMind Technologies GmbH"
+  },
+  {
+   "name": "ARGE Netz GmbH & Co. KG"
+  },
+  {
+   "name": "Arvato Systems Digital GmbH"
+  },
+  {
+   "name": "ASCANETZ GmbH"
+  },
+  {
+   "name": "AUF Eberlein & Co. GmbH"
+  },
+  {
+   "name": "Avacon AG"
+  },
+  {
+   "name": "Avacon Hochdrucknetz GmbH"
+  },
+  {
+   "name": "Avacon Natur GmbH"
+  },
+  {
+   "name": "Avacon Netz GmbH"
+  },
+  {
+   "name": "Avacon Wasser GmbH"
+  },
+  {
+   "name": "AVIA Deutschland GmbH"
+  },
+  {
+   "name": "AVU Aktiengesellschaft für Versorgungs-Unternehmen"
+  },
+  {
+   "name": "AVU Netz GmbH"
+  },
+  {
+   "name": "AWE-Arkona-Windpark Entwicklungs-GmbH"
+  },
+  {
+   "name": "Axpo Deutschland GmbH"
+  },
+  {
+   "name": "Axpo Solar Deutschland GmbH"
+  }
+ ]
+}

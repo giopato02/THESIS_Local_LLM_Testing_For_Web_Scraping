@@ -1,0 +1,558 @@
+  stage:      A
+  models:     llama3.1:8b, qwen2.5-coder:7b, gemma4:12b
+  pages:      10
+  planned:    540 runs
+  already done: 0
+  to run:     540  (~6.8 h at 45 s/run)
+
+
+  === loading llama3.1:8b ===
+  [   1/540] zero_shot       constrained  039    21.2s raw=52   F1=1.0    eta   190m
+  [   2/540] zero_shot       constrained  039    15.2s raw=52   F1=1.0    eta   163m
+  [   3/540] zero_shot       constrained  039    15.4s raw=52   F1=1.0    eta   154m
+  [   4/540] zero_shot       constrained  043    20.0s raw=48   F1=0.9897 eta   160m
+  [   5/540] zero_shot       constrained  043    19.4s raw=48   F1=0.9897 eta   163m
+  [   6/540] zero_shot       constrained  043    18.3s raw=48   F1=0.9897 eta   163m
+  [   7/540] zero_shot       constrained  009    12.6s raw=42   F1=0.9647 eta   155m
+  [   8/540] zero_shot       constrained  009    12.1s raw=42   F1=0.9647 eta   149m
+  [   9/540] zero_shot       constrained  009    12.4s raw=42   F1=0.9647 eta   145m
+  [  10/540] zero_shot       constrained  012    14.7s raw=50   F1=1.0    eta   143m
+  [  11/540] zero_shot       constrained  012    14.2s raw=50   F1=1.0    eta   141m
+  [  12/540] zero_shot       constrained  012    13.6s raw=50   F1=1.0    eta   139m
+  [  13/540] zero_shot       constrained  004    12.3s raw=33   F1=0.9697 eta   136m
+  [  14/540] zero_shot       constrained  004    11.6s raw=33   F1=0.9697 eta   134m
+  [  15/540] zero_shot       constrained  004    12.2s raw=33   F1=0.9697 eta   132m
+  [  16/540] zero_shot       constrained  032    26.4s raw=79   F1=0.962  eta   138m
+  [  17/540] zero_shot       constrained  032    25.7s raw=79   F1=0.962  eta   143m
+  [  18/540] zero_shot       constrained  032    26.7s raw=79   F1=0.962  eta   147m
+  [  19/540] zero_shot       constrained  040     6.8s raw=20   F1=1.0    eta   142m
+  [  20/540] zero_shot       constrained  040     5.9s raw=20   F1=1.0    eta   138m
+  [  21/540] zero_shot       constrained  040     6.4s raw=20   F1=1.0    eta   134m
+  [  22/540] zero_shot       constrained  025     5.8s raw=14   F1=0.9286 eta   130m
+  [  23/540] zero_shot       constrained  025     4.0s raw=14   F1=0.9286 eta   125m
+  [  24/540] zero_shot       constrained  025     3.9s raw=14   F1=0.9286 eta   121m
+  [  25/540] zero_shot       constrained  005    49.9s raw=125  F1=0.9839 eta   133m
+  [  26/540] zero_shot       constrained  005    46.3s raw=124  F1=0.996  eta   143m
+  [  27/540] zero_shot       constrained  005    46.3s raw=124  F1=0.996  eta   152m
+  [  28/540] zero_shot       constrained  050   104.4s raw=297  F1=0.9949 eta   179m
+  [  29/540] zero_shot       constrained  050   101.1s raw=297  F1=0.9949 eta   202m
+  [  30/540] zero_shot       constrained  050   101.4s raw=297  F1=0.9949 eta   223m
+  [  31/540] zero_shot       prompt_only  039    14.8s raw=52   F1=1.0    eta   220m
+  [  32/540] zero_shot       prompt_only  039    14.4s raw=52   F1=1.0    eta   216m
+  [  33/540] zero_shot       prompt_only  039    14.6s raw=52   F1=1.0    eta   213m
+  [  34/540] zero_shot       prompt_only  043    18.8s raw=48   F1=0.9897 eta   211m
+  [  35/540] zero_shot       prompt_only  043    18.2s raw=48   F1=0.9897 eta   209m
+  [  36/540] zero_shot       prompt_only  043    18.5s raw=48   F1=0.9897 eta   207m
+  [  37/540] zero_shot       prompt_only  009    12.5s raw=42   F1=0.9647 eta   204m
+  [  38/540] zero_shot       prompt_only  009    12.1s raw=42   F1=0.9647 eta   201m
+  [  39/540] zero_shot       prompt_only  009    12.5s raw=42   F1=0.9647 eta   198m
+  [  40/540] zero_shot       prompt_only  012    14.0s raw=50   F1=1.0    eta   196m
+  [  41/540] zero_shot       prompt_only  012    13.8s raw=50   F1=1.0    eta   193m
+  [  42/540] zero_shot       prompt_only  012    14.4s raw=50   F1=1.0    eta   191m
+  [  43/540] zero_shot       prompt_only  004    12.7s raw=33   F1=0.9697 eta   189m
+  [  44/540] zero_shot       prompt_only  004    12.3s raw=33   F1=0.9697 eta   187m
+  [  45/540] zero_shot       prompt_only  004    12.3s raw=33   F1=0.9697 eta   184m
+  [  46/540] zero_shot       prompt_only  032    26.6s raw=79   F1=0.962  eta   185m
+  [  47/540] zero_shot       prompt_only  032    26.4s raw=79   F1=0.962  eta   185m
+  [  48/540] zero_shot       prompt_only  032    26.3s raw=79   F1=0.962  eta   185m
+  [  49/540] zero_shot       prompt_only  040     6.5s raw=20   F1=1.0    eta   182m
+  [  50/540] zero_shot       prompt_only  040     6.1s raw=20   F1=1.0    eta   179m
+  [  51/540] zero_shot       prompt_only  040     6.4s raw=20   F1=1.0    eta   176m
+  [  52/540] zero_shot       prompt_only  025     4.3s raw=14   F1=0.9286 eta   173m
+  [  53/540] zero_shot       prompt_only  025     3.9s raw=14   F1=0.9286 eta   170m
+  [  54/540] zero_shot       prompt_only  025     4.0s raw=14   F1=0.9286 eta   167m
+  [  55/540] zero_shot       prompt_only  005    47.1s raw=124  F1=0.996  eta   171m
+  [  56/540] zero_shot       prompt_only  005    45.8s raw=124  F1=0.996  eta   174m
+  [  57/540] zero_shot       prompt_only  005    46.4s raw=124  F1=0.996  eta   177m
+  [  58/540] zero_shot       prompt_only  050   100.0s raw=297  F1=0.9949 eta   188m
+  [  59/540] zero_shot       prompt_only  050    99.2s raw=297  F1=0.9949 eta   198m
+  [  60/540] zero_shot       prompt_only  050   100.3s raw=297  F1=0.9949 eta   208m
+  [  61/540] few_shot_schema constrained  039    16.1s raw=52   F1=1.0    eta   206m
+  [  62/540] few_shot_schema constrained  039    14.8s raw=52   F1=1.0    eta   204m
+  [  63/540] few_shot_schema constrained  039    14.8s raw=52   F1=1.0    eta   202m
+  [  64/540] few_shot_schema constrained  043    18.5s raw=48   F1=0.9897 eta   201m
+  [  65/540] few_shot_schema constrained  043    18.2s raw=48   F1=0.9897 eta   200m
+  [  66/540] few_shot_schema constrained  043    19.2s raw=48   F1=0.9897 eta   199m
+  [  67/540] few_shot_schema constrained  009    13.1s raw=41   F1=0.9286 eta   197m
+  [  68/540] few_shot_schema constrained  009    12.7s raw=42   F1=0.9647 eta   195m
+  [  69/540] few_shot_schema constrained  009    12.1s raw=42   F1=0.9647 eta   193m
+  [  70/540] few_shot_schema constrained  012    12.7s raw=50   F1=1.0    eta   191m
+  [  71/540] few_shot_schema constrained  012    12.3s raw=50   F1=1.0    eta   190m
+  [  72/540] few_shot_schema constrained  012    12.1s raw=50   F1=1.0    eta   188m
+  [  73/540] few_shot_schema constrained  004    12.4s raw=33   F1=0.9697 eta   186m
+  [  74/540] few_shot_schema constrained  004    12.3s raw=33   F1=0.9697 eta   185m
+  [  75/540] few_shot_schema constrained  004    12.6s raw=33   F1=0.9697 eta   183m
+  [  76/540] few_shot_schema constrained  032    27.0s raw=79   F1=0.962  eta   183m
+  [  77/540] few_shot_schema constrained  032    26.7s raw=79   F1=0.962  eta   183m
+  [  78/540] few_shot_schema constrained  032    26.5s raw=79   F1=0.962  eta   183m
+  [  79/540] few_shot_schema constrained  040     6.8s raw=20   F1=1.0    eta   181m
+  [  80/540] few_shot_schema constrained  040     5.6s raw=20   F1=1.0    eta   179m
+  [  81/540] few_shot_schema constrained  040     6.1s raw=20   F1=1.0    eta   177m
+  [  82/540] few_shot_schema constrained  025     5.2s raw=14   F1=0.9286 eta   175m
+  [  83/540] few_shot_schema constrained  025     3.8s raw=14   F1=0.9286 eta   172m
+  [  84/540] few_shot_schema constrained  025     4.0s raw=14   F1=0.9286 eta   170m
+  [  85/540] few_shot_schema constrained  005    48.0s raw=110  F1=0.8974 eta   172m
+  [  86/540] few_shot_schema constrained  005    24.9s raw=72   F1=0.6872 eta   172m
+  [  87/540] few_shot_schema constrained  005    25.1s raw=72   F1=0.6872 eta   172m
+  [  88/540] few_shot_schema constrained  050   102.9s raw=297  F1=0.9949 eta   179m
+  [  89/540] few_shot_schema constrained  050    99.1s raw=297  F1=0.9949 eta   185m
+  [  90/540] few_shot_schema constrained  050    99.6s raw=297  F1=0.9949 eta   190m
+  [  91/540] few_shot_schema prompt_only  039    15.4s raw=52   F1=1.0    eta   189m
+  [  92/540] few_shot_schema prompt_only  039    15.7s raw=52   F1=1.0    eta   188m
+  [  93/540] few_shot_schema prompt_only  039    14.6s raw=52   F1=1.0    eta   187m
+  [  94/540] few_shot_schema prompt_only  043    19.2s raw=48   F1=0.9897 eta   186m
+  [  95/540] few_shot_schema prompt_only  043    18.2s raw=48   F1=0.9897 eta   185m
+  [  96/540] few_shot_schema prompt_only  043    18.8s raw=48   F1=0.9897 eta   184m
+  [  97/540] few_shot_schema prompt_only  009    12.2s raw=42   F1=0.9647 eta   183m
+  [  98/540] few_shot_schema prompt_only  009    12.5s raw=42   F1=0.9647 eta   181m
+  [  99/540] few_shot_schema prompt_only  009    12.1s raw=42   F1=0.9647 eta   180m
+  [ 100/540] few_shot_schema prompt_only  012    12.3s raw=50   F1=1.0    eta   179m
+  [ 101/540] few_shot_schema prompt_only  012    12.3s raw=50   F1=1.0    eta   177m
+  [ 102/540] few_shot_schema prompt_only  012    11.9s raw=50   F1=1.0    eta   176m
+  [ 103/540] few_shot_schema prompt_only  004    12.1s raw=33   F1=0.9697 eta   175m
+  [ 104/540] few_shot_schema prompt_only  004    12.2s raw=33   F1=0.9697 eta   174m
+  [ 105/540] few_shot_schema prompt_only  004    12.1s raw=33   F1=0.9697 eta   172m
+  [ 106/540] few_shot_schema prompt_only  032    26.4s raw=79   F1=0.962  eta   172m
+  [ 107/540] few_shot_schema prompt_only  032    25.9s raw=79   F1=0.962  eta   172m
+  [ 108/540] few_shot_schema prompt_only  032    26.3s raw=79   F1=0.962  eta   172m
+  [ 109/540] few_shot_schema prompt_only  040     6.8s raw=20   F1=1.0    eta   170m
+  [ 110/540] few_shot_schema prompt_only  040     6.4s raw=20   F1=1.0    eta   169m
+  [ 111/540] few_shot_schema prompt_only  040     6.1s raw=20   F1=1.0    eta   167m
+  [ 112/540] few_shot_schema prompt_only  025     4.9s raw=14   F1=0.9286 eta   166m
+  [ 113/540] few_shot_schema prompt_only  025     4.8s raw=14   F1=0.9286 eta   164m
+  [ 114/540] few_shot_schema prompt_only  025     4.6s raw=14   F1=0.9286 eta   163m
+  [ 115/540] few_shot_schema prompt_only  005    25.8s raw=72   F1=0.6872 eta   162m
+  [ 116/540] few_shot_schema prompt_only  005    25.0s raw=72   F1=0.6872 eta   162m
+  [ 117/540] few_shot_schema prompt_only  005    25.1s raw=72   F1=0.6872 eta   162m
+  [ 118/540] few_shot_schema prompt_only  050    99.5s raw=297  F1=0.9949 eta   166m
+  [ 119/540] few_shot_schema prompt_only  050    98.2s raw=297  F1=0.9949 eta   170m
+  [ 120/540] few_shot_schema prompt_only  050    99.1s raw=297  F1=0.9949 eta   174m
+  [ 121/540] generic_multi_stageconstrained  039    28.5s raw=27   F1=0.6835 eta   174m
+  [ 122/540] generic_multi_stageconstrained  039    35.1s raw=26   F1=0.6667 eta   174m
+  [ 123/540] generic_multi_stageconstrained  039    33.7s raw=26   F1=0.6667 eta   174m
+  [ 124/540] generic_multi_stageconstrained  043    29.0s raw=24   F1=0.6575 eta   174m
+  [ 125/540] generic_multi_stageconstrained  043    27.9s raw=24   F1=0.6575 eta   174m
+  [ 126/540] generic_multi_stageconstrained  043    27.3s raw=24   F1=0.6575 eta   173m
+  [ 127/540] generic_multi_stageconstrained  009    33.0s raw=42   F1=0.9647 eta   173m
+  [ 128/540] generic_multi_stageconstrained  009    31.6s raw=42   F1=0.9647 eta   173m
+  [ 129/540] generic_multi_stageconstrained  009    31.6s raw=42   F1=0.9647 eta   173m
+  [ 130/540] generic_multi_stageconstrained  012    31.2s raw=49   F1=0.9899 eta   173m
+  [ 131/540] generic_multi_stageconstrained  012    29.2s raw=49   F1=0.9899 eta   173m
+  [ 132/540] generic_multi_stageconstrained  012    29.3s raw=49   F1=0.9899 eta   173m
+  [ 133/540] generic_multi_stageconstrained  004    29.7s raw=26   F1=0.8475 eta   173m
+  [ 134/540] generic_multi_stageconstrained  004    28.5s raw=26   F1=0.8475 eta   172m
+  [ 135/540] generic_multi_stageconstrained  004    27.6s raw=26   F1=0.8475 eta   172m
+  [ 136/540] generic_multi_stageconstrained  032    50.6s raw=55   F1=0.806  eta   173m
+  [ 137/540] generic_multi_stageconstrained  032    50.0s raw=55   F1=0.806  eta   174m
+  [ 138/540] generic_multi_stageconstrained  032    50.5s raw=55   F1=0.806  eta   174m
+  [ 139/540] generic_multi_stageconstrained  040    17.2s raw=21   F1=0.9756 eta   174m
+  [ 140/540] generic_multi_stageconstrained  040    14.5s raw=21   F1=0.9756 eta   173m
+  [ 141/540] generic_multi_stageconstrained  040    15.0s raw=21   F1=0.9756 eta   172m
+  [ 142/540] generic_multi_stageconstrained  025    12.3s raw=11   F1=0.88   eta   171m
+  [ 143/540] generic_multi_stageconstrained  025     9.8s raw=11   F1=0.88   eta   169m
+  [ 144/540] generic_multi_stageconstrained  025    10.1s raw=11   F1=0.88   eta   168m
+  [ 145/540] generic_multi_stageconstrained  005    88.1s raw=62   F1=0.6595 eta   171m
+  [ 146/540] generic_multi_stageconstrained  005    78.1s raw=64   F1=0.6738 eta   173m
+  [ 147/540] generic_multi_stageconstrained  005    78.4s raw=64   F1=0.6738 eta   174m
+  [ 148/540] generic_multi_stageconstrained  050   228.0s raw=294  F1=0.9898 eta   183m
+  [ 149/540] generic_multi_stageconstrained  050   216.0s raw=294  F1=0.9898 eta   191m
+  [ 150/540] generic_multi_stageconstrained  050   217.2s raw=294  F1=0.9898 eta   198m
+  [ 151/540] generic_multi_stageprompt_only  039    35.2s raw=26   F1=0.6667 eta   198m
+  [ 152/540] generic_multi_stageprompt_only  039    34.6s raw=26   F1=0.6667 eta   198m
+  [ 153/540] generic_multi_stageprompt_only  039    35.2s raw=26   F1=0.6667 eta   197m
+  [ 154/540] generic_multi_stageprompt_only  043    32.9s raw=24   F1=0.6575 eta   197m
+  [ 155/540] generic_multi_stageprompt_only  043    32.1s raw=24   F1=0.6575 eta   197m
+  [ 156/540] generic_multi_stageprompt_only  043    31.3s raw=24   F1=0.6575 eta   196m
+  [ 157/540] generic_multi_stageprompt_only  009    38.4s raw=42   F1=0.9647 eta   196m
+  [ 158/540] generic_multi_stageprompt_only  009    35.4s raw=42   F1=0.9647 eta   196m
+  [ 159/540] generic_multi_stageprompt_only  009    33.9s raw=42   F1=0.9647 eta   195m
+  [ 160/540] generic_multi_stageprompt_only  012    31.2s raw=49   F1=0.9899 eta   195m
+  [ 161/540] generic_multi_stageprompt_only  012    29.8s raw=49   F1=0.9899 eta   194m
+  [ 162/540] generic_multi_stageprompt_only  012    30.4s raw=49   F1=0.9899 eta   194m
+  [ 163/540] generic_multi_stageprompt_only  004    28.1s raw=26   F1=0.8475 eta   193m
+  [ 164/540] generic_multi_stageprompt_only  004    26.4s raw=26   F1=0.8475 eta   192m
+  [ 165/540] generic_multi_stageprompt_only  004    27.0s raw=26   F1=0.8475 eta   192m
+  [ 166/540] generic_multi_stageprompt_only  032    50.8s raw=55   F1=0.806  eta   192m
+  [ 167/540] generic_multi_stageprompt_only  032    49.9s raw=55   F1=0.806  eta   192m
+  [ 168/540] generic_multi_stageprompt_only  032    50.2s raw=55   F1=0.806  eta   192m
+  [ 169/540] generic_multi_stageprompt_only  040    17.5s raw=21   F1=0.9756 eta   191m
+  [ 170/540] generic_multi_stageprompt_only  040    15.5s raw=21   F1=0.9756 eta   190m
+  [ 171/540] generic_multi_stageprompt_only  040    15.2s raw=21   F1=0.9756 eta   189m
+  [ 172/540] generic_multi_stageprompt_only  025    12.4s raw=11   F1=0.88   eta   188m
+  [ 173/540] generic_multi_stageprompt_only  025     9.9s raw=11   F1=0.88   eta   187m
+  [ 174/540] generic_multi_stageprompt_only  025     9.6s raw=11   F1=0.88   eta   186m
+  [ 175/540] generic_multi_stageprompt_only  005    87.3s raw=62   F1=0.6595 eta   187m
+  [ 176/540] generic_multi_stageprompt_only  005    79.6s raw=64   F1=0.6738 eta   188m
+  [ 177/540] generic_multi_stageprompt_only  005    78.3s raw=64   F1=0.6738 eta   189m
+  [ 178/540] generic_multi_stageprompt_only  050   225.2s raw=294  F1=0.9898 eta   195m
+  [ 179/540] generic_multi_stageprompt_only  050   215.2s raw=294  F1=0.9898 eta   201m
+  [ 180/540] generic_multi_stageprompt_only  050   216.8s raw=294  F1=0.9898 eta   207m
+
+  === loading qwen2.5-coder:7b ===
+  [ 181/540] zero_shot       constrained  039    85.5s raw=52   F1=1.0    eta   208m
+  [ 182/540] zero_shot       constrained  039    15.8s raw=52   F1=1.0    eta   207m
+  [ 183/540] zero_shot       constrained  039    15.9s raw=52   F1=1.0    eta   205m
+  [ 184/540] zero_shot       constrained  043    22.1s raw=49   F1=1.0    eta   204m
+  [ 185/540] zero_shot       constrained  043    21.2s raw=49   F1=1.0    eta   203m
+  [ 186/540] zero_shot       constrained  043    21.7s raw=49   F1=1.0    eta   202m
+  [ 187/540] zero_shot       constrained  009    15.8s raw=43   F1=0.9767 eta   201m
+  [ 188/540] zero_shot       constrained  009    15.0s raw=43   F1=0.9767 eta   200m
+  [ 189/540] zero_shot       constrained  009    14.4s raw=43   F1=0.9767 eta   199m
+  [ 190/540] zero_shot       constrained  012    14.2s raw=50   F1=1.0    eta   198m
+  [ 191/540] zero_shot       constrained  012    13.6s raw=50   F1=1.0    eta   197m
+  [ 192/540] zero_shot       constrained  012    13.9s raw=50   F1=1.0    eta   195m
+  [ 193/540] zero_shot       constrained  004    14.2s raw=33   F1=0.9697 eta   194m
+  [ 194/540] zero_shot       constrained  004    13.5s raw=33   F1=0.9697 eta   193m
+  [ 195/540] zero_shot       constrained  004    13.2s raw=33   F1=0.9697 eta   192m
+  [ 196/540] zero_shot       constrained  032    28.0s raw=78   F1=0.9554 eta   191m
+  [ 197/540] zero_shot       constrained  032    26.7s raw=78   F1=0.9554 eta   190m
+  [ 198/540] zero_shot       constrained  032    27.3s raw=78   F1=0.9554 eta   190m
+  [ 199/540] zero_shot       constrained  040     7.2s raw=20   F1=1.0    eta   188m
+  [ 200/540] zero_shot       constrained  040     5.5s raw=20   F1=1.0    eta   187m
+  [ 201/540] zero_shot       constrained  040     6.4s raw=20   F1=1.0    eta   186m
+  [ 202/540] zero_shot       constrained  025     6.3s raw=14   F1=0.9286 eta   185m
+  [ 203/540] zero_shot       constrained  025     5.1s raw=14   F1=0.9286 eta   183m
+  [ 204/540] zero_shot       constrained  025     5.7s raw=14   F1=0.9286 eta   182m
+  [ 205/540] zero_shot       constrained  005    19.4s raw=36   F1=0.4375 eta   181m
+  [ 206/540] zero_shot       constrained  005    18.4s raw=36   F1=0.4375 eta   180m
+  [ 207/540] zero_shot       constrained  005    18.8s raw=36   F1=0.4375 eta   179m
+  [ 208/540] zero_shot       constrained  050  2725.5s raw=117  F1=0.5569 eta   250m !
+  [ 209/540] zero_shot       constrained  050  2713.0s raw=117  F1=0.5569 eta   320m !
+  [ 210/540] zero_shot       constrained  050  2690.1s raw=117  F1=0.5569 eta   388m !
+  [ 211/540] zero_shot       prompt_only  039    16.2s raw=52   F1=1.0    eta   385m
+  [ 212/540] zero_shot       prompt_only  039    16.6s raw=52   F1=1.0    eta   383m
+  [ 213/540] zero_shot       prompt_only  039    16.4s raw=52   F1=1.0    eta   380m
+  [ 214/540] zero_shot       prompt_only  043    20.7s raw=49   F1=1.0    eta   378m
+  [ 215/540] zero_shot       prompt_only  043    20.5s raw=49   F1=1.0    eta   376m
+  [ 216/540] zero_shot       prompt_only  043    20.7s raw=49   F1=1.0    eta   373m
+  [ 217/540] zero_shot       prompt_only  009    14.2s raw=43   F1=0.9767 eta   371m
+  [ 218/540] zero_shot       prompt_only  009    14.2s raw=43   F1=0.9767 eta   368m
+  [ 219/540] zero_shot       prompt_only  009    14.9s raw=43   F1=0.9767 eta   366m
+  [ 220/540] zero_shot       prompt_only  012    14.9s raw=50   F1=1.0    eta   363m
+  [ 221/540] zero_shot       prompt_only  012    14.3s raw=50   F1=1.0    eta   361m
+  [ 222/540] zero_shot       prompt_only  012    14.5s raw=50   F1=1.0    eta   358m
+  [ 223/540] zero_shot       prompt_only  004    14.0s raw=33   F1=0.9697 eta   356m
+  [ 224/540] zero_shot       prompt_only  004    14.2s raw=33   F1=0.9697 eta   354m
+  [ 225/540] zero_shot       prompt_only  004    14.0s raw=33   F1=0.9697 eta   351m
+  [ 226/540] zero_shot       prompt_only  032    28.6s raw=78   F1=0.9554 eta   349m
+  [ 227/540] zero_shot       prompt_only  032    28.1s raw=78   F1=0.9554 eta   347m
+  [ 228/540] zero_shot       prompt_only  032    28.1s raw=78   F1=0.9554 eta   345m
+  [ 229/540] zero_shot       prompt_only  040     7.1s raw=20   F1=1.0    eta   343m
+  [ 230/540] zero_shot       prompt_only  040     7.0s raw=20   F1=1.0    eta   340m
+  [ 231/540] zero_shot       prompt_only  040     6.9s raw=20   F1=1.0    eta   338m
+  [ 232/540] zero_shot       prompt_only  025     6.0s raw=16   F1=0.9655 eta   336m
+  [ 233/540] zero_shot       prompt_only  025     5.9s raw=16   F1=0.9655 eta   333m
+  [ 234/540] zero_shot       prompt_only  025     5.7s raw=16   F1=0.9655 eta   331m
+  [ 235/540] zero_shot       prompt_only  005    35.5s raw=66   F1=0.6842 eta   329m
+  [ 236/540] zero_shot       prompt_only  005    33.9s raw=66   F1=0.6842 eta   327m
+  [ 237/540] zero_shot       prompt_only  005    34.6s raw=66   F1=0.6842 eta   326m
+  [ 238/540] zero_shot       prompt_only  050    72.3s raw=192  F1=0.7787 eta   325m
+  [ 239/540] zero_shot       prompt_only  050    69.3s raw=192  F1=0.7787 eta   324m
+  [ 240/540] zero_shot       prompt_only  050    71.2s raw=192  F1=0.7787 eta   323m
+  [ 241/540] few_shot_schema constrained  039    14.7s raw=52   F1=1.0    eta   321m
+  [ 242/540] few_shot_schema constrained  039    14.5s raw=53   F1=0.9905 eta   319m
+  [ 243/540] few_shot_schema constrained  039    15.3s raw=53   F1=0.9905 eta   317m
+  [ 244/540] few_shot_schema constrained  043    20.0s raw=49   F1=1.0    eta   315m
+  [ 245/540] few_shot_schema constrained  043    19.8s raw=49   F1=1.0    eta   313m
+  [ 246/540] few_shot_schema constrained  043    19.5s raw=49   F1=1.0    eta   311m
+  [ 247/540] few_shot_schema constrained  009    13.9s raw=43   F1=0.9767 eta   309m
+  [ 248/540] few_shot_schema constrained  009    13.0s raw=43   F1=0.9767 eta   307m
+  [ 249/540] few_shot_schema constrained  009    12.5s raw=43   F1=0.9767 eta   305m
+  [ 250/540] few_shot_schema constrained  012    12.4s raw=50   F1=1.0    eta   303m
+  [ 251/540] few_shot_schema constrained  012    12.0s raw=50   F1=1.0    eta   301m
+  [ 252/540] few_shot_schema constrained  012    12.5s raw=50   F1=1.0    eta   299m
+  [ 253/540] few_shot_schema constrained  004    12.6s raw=33   F1=0.9697 eta   297m
+  [ 254/540] few_shot_schema constrained  004    12.2s raw=33   F1=0.9697 eta   295m
+  [ 255/540] few_shot_schema constrained  004    12.0s raw=33   F1=0.9697 eta   293m
+  [ 256/540] few_shot_schema constrained  032    26.3s raw=78   F1=0.9809 eta   291m
+  [ 257/540] few_shot_schema constrained  032    25.8s raw=78   F1=0.9809 eta   289m
+  [ 258/540] few_shot_schema constrained  032    25.7s raw=78   F1=0.9809 eta   288m
+  [ 259/540] few_shot_schema constrained  040     6.3s raw=20   F1=1.0    eta   286m
+  [ 260/540] few_shot_schema constrained  040     5.6s raw=20   F1=1.0    eta   284m
+  [ 261/540] few_shot_schema constrained  040     5.8s raw=20   F1=1.0    eta   282m
+  [ 262/540] few_shot_schema constrained  025     4.1s raw=10   F1=0.75   eta   280m
+  [ 263/540] few_shot_schema constrained  025     2.9s raw=10   F1=0.75   eta   278m
+  [ 264/540] few_shot_schema constrained  025     2.7s raw=10   F1=0.75   eta   276m
+  [ 265/540] few_shot_schema constrained  005     8.3s raw=7    F1=0.1069 eta   274m
+  [ 266/540] few_shot_schema constrained  005     4.0s raw=7    F1=0.1069 eta   272m
+  [ 267/540] few_shot_schema constrained  005     4.0s raw=7    F1=0.1069 eta   270m
+  [ 268/540] few_shot_schema constrained  050    10.1s raw=3    F1=0.0134 eta   268m
+  [ 269/540] few_shot_schema constrained  050     2.8s raw=3    F1=0.0134 eta   266m
+  [ 270/540] few_shot_schema constrained  050     2.7s raw=3    F1=0.0134 eta   264m
+  [ 271/540] few_shot_schema prompt_only  039    14.6s raw=53   F1=0.9905 eta   263m
+  [ 272/540] few_shot_schema prompt_only  039    15.6s raw=53   F1=0.9905 eta   261m
+  [ 273/540] few_shot_schema prompt_only  039    15.8s raw=53   F1=0.9905 eta   259m
+  [ 274/540] few_shot_schema prompt_only  043    19.4s raw=49   F1=1.0    eta   258m
+  [ 275/540] few_shot_schema prompt_only  043    19.6s raw=49   F1=1.0    eta   256m
+  [ 276/540] few_shot_schema prompt_only  043    18.6s raw=49   F1=1.0    eta   254m
+  [ 277/540] few_shot_schema prompt_only  009    13.4s raw=43   F1=0.9767 eta   253m
+  [ 278/540] few_shot_schema prompt_only  009    13.5s raw=43   F1=0.9767 eta   251m
+  [ 279/540] few_shot_schema prompt_only  009    12.8s raw=43   F1=0.9767 eta   249m
+  [ 280/540] few_shot_schema prompt_only  012    12.0s raw=50   F1=1.0    eta   248m
+  [ 281/540] few_shot_schema prompt_only  012    11.9s raw=50   F1=1.0    eta   246m
+  [ 282/540] few_shot_schema prompt_only  012    11.9s raw=50   F1=1.0    eta   245m
+  [ 283/540] few_shot_schema prompt_only  004    11.9s raw=33   F1=0.9697 eta   243m
+  [ 284/540] few_shot_schema prompt_only  004    12.0s raw=33   F1=0.9697 eta   241m
+  [ 285/540] few_shot_schema prompt_only  004    12.0s raw=33   F1=0.9697 eta   240m
+  [ 286/540] few_shot_schema prompt_only  032    25.5s raw=78   F1=0.9809 eta   238m
+  [ 287/540] few_shot_schema prompt_only  032    25.2s raw=78   F1=0.9809 eta   237m
+  [ 288/540] few_shot_schema prompt_only  032    25.4s raw=78   F1=0.9809 eta   236m
+  [ 289/540] few_shot_schema prompt_only  040     6.1s raw=20   F1=1.0    eta   234m
+  [ 290/540] few_shot_schema prompt_only  040     5.7s raw=20   F1=1.0    eta   232m
+  [ 291/540] few_shot_schema prompt_only  040     5.9s raw=20   F1=1.0    eta   231m
+  [ 292/540] few_shot_schema prompt_only  025     3.1s raw=10   F1=0.75   eta   229m
+  [ 293/540] few_shot_schema prompt_only  025     2.7s raw=10   F1=0.75   eta   227m
+  [ 294/540] few_shot_schema prompt_only  025     2.9s raw=10   F1=0.75   eta   226m
+  [ 295/540] few_shot_schema prompt_only  005     4.3s raw=7    F1=0.1069 eta   224m
+  [ 296/540] few_shot_schema prompt_only  005     4.3s raw=7    F1=0.1069 eta   222m
+  [ 297/540] few_shot_schema prompt_only  005     4.3s raw=7    F1=0.1069 eta   221m
+  [ 298/540] few_shot_schema prompt_only  050     2.5s raw=3    F1=0.0134 eta   219m
+  [ 299/540] few_shot_schema prompt_only  050     2.5s raw=3    F1=0.0134 eta   218m
+  [ 300/540] few_shot_schema prompt_only  050     2.5s raw=3    F1=0.0134 eta   216m
+  [ 301/540] generic_multi_stageconstrained  039    35.5s raw=52   F1=1.0    eta   215m
+  [ 302/540] generic_multi_stageconstrained  039    35.1s raw=52   F1=1.0    eta   214m
+  [ 303/540] generic_multi_stageconstrained  039    35.2s raw=52   F1=1.0    eta   213m
+  [ 304/540] generic_multi_stageconstrained  043    46.4s raw=49   F1=1.0    eta   212m
+  [ 305/540] generic_multi_stageconstrained  043    45.9s raw=49   F1=1.0    eta   211m
+  [ 306/540] generic_multi_stageconstrained  043    45.5s raw=49   F1=1.0    eta   210m
+  [ 307/540] generic_multi_stageconstrained  009    35.0s raw=43   F1=0.9767 eta   208m
+  [ 308/540] generic_multi_stageconstrained  009    32.4s raw=43   F1=0.9767 eta   207m
+  [ 309/540] generic_multi_stageconstrained  009    32.3s raw=43   F1=0.9767 eta   206m
+  [ 310/540] generic_multi_stageconstrained  012    32.5s raw=50   F1=1.0    eta   205m
+  [ 311/540] generic_multi_stageconstrained  012    31.2s raw=50   F1=1.0    eta   204m
+  [ 312/540] generic_multi_stageconstrained  012    30.8s raw=50   F1=1.0    eta   203m
+  [ 313/540] generic_multi_stageconstrained  004    29.6s raw=30   F1=0.9206 eta   201m
+  [ 314/540] generic_multi_stageconstrained  004    29.7s raw=30   F1=0.9206 eta   200m
+  [ 315/540] generic_multi_stageconstrained  004    28.8s raw=30   F1=0.9206 eta   199m
+  [ 316/540] generic_multi_stageconstrained  032    59.2s raw=75   F1=0.961  eta   198m
+  [ 317/540] generic_multi_stageconstrained  032    59.2s raw=75   F1=0.961  eta   197m
+  [ 318/540] generic_multi_stageconstrained  032    59.2s raw=75   F1=0.961  eta   197m
+  [ 319/540] generic_multi_stageconstrained  040    17.5s raw=19   F1=0.9744 eta   195m
+  [ 320/540] generic_multi_stageconstrained  040    14.0s raw=19   F1=0.9744 eta   194m
+  [ 321/540] generic_multi_stageconstrained  040    13.0s raw=19   F1=0.9744 eta   193m
+  [ 322/540] generic_multi_stageconstrained  025    13.3s raw=12   F1=0.8462 eta   191m
+  [ 323/540] generic_multi_stageconstrained  025    12.0s raw=12   F1=0.8462 eta   190m
+  [ 324/540] generic_multi_stageconstrained  025    11.9s raw=12   F1=0.8462 eta   189m
+  [ 325/540] generic_multi_stageconstrained  005    52.2s raw=38   F1=0.4691 eta   188m
+  [ 326/540] generic_multi_stageconstrained  005    47.9s raw=38   F1=0.4691 eta   187m
+  [ 327/540] generic_multi_stageconstrained  005    47.6s raw=38   F1=0.4691 eta   186m
+  [ 328/540] generic_multi_stageconstrained  050  2768.6s raw=114  F1=0.5512 eta   214m !
+  [ 329/540] generic_multi_stageconstrained  050  2754.4s raw=114  F1=0.5512 eta   242m !
+  [ 330/540] generic_multi_stageconstrained  050  2768.6s raw=114  F1=0.5512 eta   270m !
+  [ 331/540] generic_multi_stageprompt_only  039    37.1s raw=52   F1=1.0    eta   268m
+  [ 332/540] generic_multi_stageprompt_only  039    37.3s raw=52   F1=1.0    eta   266m
+  [ 333/540] generic_multi_stageprompt_only  039    35.9s raw=52   F1=1.0    eta   265m
+  [ 334/540] generic_multi_stageprompt_only  043    44.2s raw=49   F1=1.0    eta   263m
+  [ 335/540] generic_multi_stageprompt_only  043    43.5s raw=49   F1=1.0    eta   261m
+  [ 336/540] generic_multi_stageprompt_only  043    44.0s raw=49   F1=1.0    eta   260m
+  [ 337/540] generic_multi_stageprompt_only  009    30.8s raw=43   F1=0.9767 eta   258m
+  [ 338/540] generic_multi_stageprompt_only  009    30.4s raw=43   F1=0.9767 eta   256m
+  [ 339/540] generic_multi_stageprompt_only  009    33.1s raw=43   F1=0.9767 eta   255m
+  [ 340/540] generic_multi_stageprompt_only  012    30.5s raw=50   F1=1.0    eta   253m
+  [ 341/540] generic_multi_stageprompt_only  012    31.0s raw=50   F1=1.0    eta   251m
+  [ 342/540] generic_multi_stageprompt_only  012    30.4s raw=50   F1=1.0    eta   249m
+  [ 343/540] generic_multi_stageprompt_only  004    29.1s raw=30   F1=0.9206 eta   248m
+  [ 344/540] generic_multi_stageprompt_only  004    29.7s raw=30   F1=0.9206 eta   246m
+  [ 345/540] generic_multi_stageprompt_only  004    29.1s raw=30   F1=0.9206 eta   244m
+  [ 346/540] generic_multi_stageprompt_only  032    58.6s raw=75   F1=0.961  eta   243m
+  [ 347/540] generic_multi_stageprompt_only  032    57.0s raw=75   F1=0.961  eta   242m
+  [ 348/540] generic_multi_stageprompt_only  032    56.4s raw=75   F1=0.961  eta   240m
+  [ 349/540] generic_multi_stageprompt_only  040    14.6s raw=19   F1=0.9744 eta   238m
+  [ 350/540] generic_multi_stageprompt_only  040    14.4s raw=19   F1=0.9744 eta   237m
+  [ 351/540] generic_multi_stageprompt_only  040    15.2s raw=19   F1=0.9744 eta   235m
+  [ 352/540] generic_multi_stageprompt_only  025    11.0s raw=12   F1=0.8462 eta   233m
+  [ 353/540] generic_multi_stageprompt_only  025    10.6s raw=12   F1=0.8462 eta   231m
+  [ 354/540] generic_multi_stageprompt_only  025    10.7s raw=12   F1=0.8462 eta   229m
+  [ 355/540] generic_multi_stageprompt_only  005    65.0s raw=60   F1=0.6304 eta   228m
+  [ 356/540] generic_multi_stageprompt_only  005   108.8s raw=44   F1=0.5119 eta   227m
+  [ 357/540] generic_multi_stageprompt_only  005   106.0s raw=43   F1=0.503  eta   226m
+  [ 358/540] generic_multi_stageprompt_only  050   131.9s raw=171  F1=0.7281 eta   225m
+  [ 359/540] generic_multi_stageprompt_only  050   129.8s raw=171  F1=0.7281 eta   225m
+  [ 360/540] generic_multi_stageprompt_only  050   130.8s raw=171  F1=0.7281 eta   224m
+
+  === loading gemma4:12b ===
+  [ 361/540] zero_shot       constrained  039   110.1s raw=52   F1=1.0    eta   223m
+  [ 362/540] zero_shot       constrained  039   218.4s raw=52   F1=1.0    eta   223m
+  [ 363/540] zero_shot       constrained  039   215.7s raw=52   F1=1.0    eta   223m
+  [ 364/540] zero_shot       constrained  043   373.7s raw=0    F1=0.0    eta   224m !
+  [ 365/540] zero_shot       constrained  043   373.3s raw=0    F1=0.0    eta   225m !
+  [ 366/540] zero_shot       constrained  043   373.9s raw=0    F1=0.0    eta   226m !
+  [ 367/540] zero_shot       constrained  009   336.6s raw=0    F1=0.0    eta   227m !
+  [ 368/540] zero_shot       constrained  009   337.4s raw=0    F1=0.0    eta   228m !
+  [ 369/540] zero_shot       constrained  009   337.3s raw=0    F1=0.0    eta   228m !
+  [ 370/540] zero_shot       constrained  012   146.2s raw=50   F1=1.0    eta   227m
+  [ 371/540] zero_shot       constrained  012    98.7s raw=50   F1=0.98   eta   226m
+  [ 372/540] zero_shot       constrained  012    98.6s raw=50   F1=0.98   eta   225m
+  [ 373/540] zero_shot       constrained  004   353.4s raw=0    F1=0.0    eta   226m !
+  [ 374/540] zero_shot       constrained  004   338.3s raw=33   F1=0.9697 eta   226m
+  [ 375/540] zero_shot       constrained  004   265.2s raw=33   F1=0.9697 eta   226m
+  [ 376/540] zero_shot       constrained  032   345.3s raw=0    F1=0.0    eta   227m !
+  [ 377/540] zero_shot       constrained  032   344.9s raw=0    F1=0.0    eta   227m !
+  [ 378/540] zero_shot       constrained  032   343.1s raw=0    F1=0.0    eta   228m !
+  [ 379/540] zero_shot       constrained  040   338.1s raw=0    F1=0.0    eta   228m !
+  [ 380/540] zero_shot       constrained  040   338.6s raw=0    F1=0.0    eta   228m !
+  [ 381/540] zero_shot       constrained  040   338.5s raw=0    F1=0.0    eta   229m !
+  [ 382/540] zero_shot       constrained  025   308.1s raw=0    F1=0.0    eta   229m !
+  [ 383/540] zero_shot       constrained  025   308.3s raw=0    F1=0.0    eta   229m !
+  [ 384/540] zero_shot       constrained  025   308.7s raw=0    F1=0.0    eta   229m !
+  [ 385/540] zero_shot       constrained  005    65.6s raw=7    F1=0.1069 eta   227m !
+  [ 386/540] zero_shot       constrained  005    61.8s raw=7    F1=0.1069 eta   226m !
+  [ 387/540] zero_shot       constrained  005    62.0s raw=7    F1=0.1069 eta   224m !
+  [ 388/540] zero_shot       constrained  050   178.0s raw=3    F1=0.0134 eta   223m !
+  [ 389/540] zero_shot       constrained  050   160.7s raw=3    F1=0.0134 eta   222m !
+  [ 390/540] zero_shot       constrained  050   161.5s raw=3    F1=0.0134 eta   221m !
+  [ 391/540] zero_shot       prompt_only  039   109.5s raw=52   F1=1.0    eta   220m
+  [ 392/540] zero_shot       prompt_only  039   109.3s raw=52   F1=1.0    eta   219m
+  [ 393/540] zero_shot       prompt_only  039   109.2s raw=52   F1=1.0    eta   217m
+  [ 394/540] zero_shot       prompt_only  043   373.4s raw=0    F1=0.0    eta   217m !
+  [ 395/540] zero_shot       prompt_only  043   374.8s raw=0    F1=0.0    eta   218m !
+  [ 396/540] zero_shot       prompt_only  043   374.8s raw=0    F1=0.0    eta   218m !
+  [ 397/540] zero_shot       prompt_only  009   300.5s raw=43   F1=0.9767 eta   218m
+  [ 398/540] zero_shot       prompt_only  009   337.7s raw=0    F1=0.0    eta   218m !
+  [ 399/540] zero_shot       prompt_only  009   337.9s raw=0    F1=0.0    eta   218m !
+  [ 400/540] zero_shot       prompt_only  012   101.0s raw=50   F1=1.0    eta   216m
+  [ 401/540] zero_shot       prompt_only  012   101.6s raw=50   F1=1.0    eta   215m
+  [ 402/540] zero_shot       prompt_only  012   101.2s raw=50   F1=1.0    eta   213m
+  [ 403/540] zero_shot       prompt_only  004   266.5s raw=33   F1=0.9697 eta   213m
+  [ 404/540] zero_shot       prompt_only  004   354.0s raw=0    F1=0.0    eta   212m !
+  [ 405/540] zero_shot       prompt_only  004   353.9s raw=0    F1=0.0    eta   212m !
+  [ 406/540] zero_shot       prompt_only  032   344.4s raw=0    F1=0.0    eta   212m !
+  [ 407/540] zero_shot       prompt_only  032   344.8s raw=0    F1=0.0    eta   212m !
+  [ 408/540] zero_shot       prompt_only  032   344.8s raw=0    F1=0.0    eta   212m !
+  [ 409/540] zero_shot       prompt_only  040   338.8s raw=0    F1=0.0    eta   211m !
+  [ 410/540] zero_shot       prompt_only  040   339.3s raw=0    F1=0.0    eta   211m !
+  [ 411/540] zero_shot       prompt_only  040   339.2s raw=0    F1=0.0    eta   211m !
+  [ 412/540] zero_shot       prompt_only  025   308.5s raw=0    F1=0.0    eta   210m !
+  [ 413/540] zero_shot       prompt_only  025   308.3s raw=0    F1=0.0    eta   210m !
+  [ 414/540] zero_shot       prompt_only  025   308.4s raw=0    F1=0.0    eta   209m !
+  [ 415/540] zero_shot       prompt_only  005    64.9s raw=7    F1=0.1069 eta   207m !
+  [ 416/540] zero_shot       prompt_only  005    75.7s raw=7    F1=0.1069 eta   205m !
+  [ 417/540] zero_shot       prompt_only  005    75.6s raw=7    F1=0.1069 eta   204m !
+  [ 418/540] zero_shot       prompt_only  050   176.8s raw=3    F1=0.0134 eta   202m !
+  [ 419/540] zero_shot       prompt_only  050   158.3s raw=3    F1=0.0134 eta   201m !
+  [ 420/540] zero_shot       prompt_only  050   158.5s raw=3    F1=0.0134 eta   200m !
+  [ 421/540] few_shot_schema constrained  039   230.6s raw=52   F1=1.0    eta   198m
+  [ 422/540] few_shot_schema constrained  039   246.3s raw=52   F1=1.0    eta   198m
+  [ 423/540] few_shot_schema constrained  039   242.6s raw=52   F1=1.0    eta   196m
+  [ 424/540] few_shot_schema constrained  043   369.1s raw=0    F1=0.0    eta   196m !
+  [ 425/540] few_shot_schema constrained  043   368.9s raw=0    F1=0.0    eta   196m !
+  [ 426/540] few_shot_schema constrained  043   369.3s raw=0    F1=0.0    eta   195m !
+  [ 427/540] few_shot_schema constrained  009   332.2s raw=0    F1=0.0    eta   194m !
+  [ 428/540] few_shot_schema constrained  009   332.6s raw=0    F1=0.0    eta   194m !
+  [ 429/540] few_shot_schema constrained  009   332.8s raw=0    F1=0.0    eta   193m !
+  [ 430/540] few_shot_schema constrained  012   121.0s raw=50   F1=0.98   eta   191m
+  [ 431/540] few_shot_schema constrained  012   209.3s raw=50   F1=1.0    eta   190m
+  [ 432/540] few_shot_schema constrained  012   206.4s raw=50   F1=1.0    eta   189m
+  [ 433/540] few_shot_schema constrained  004   349.0s raw=0    F1=0.0    eta   188m !
+  [ 434/540] few_shot_schema constrained  004   304.4s raw=33   F1=0.9697 eta   187m
+  [ 435/540] few_shot_schema constrained  004   349.3s raw=0    F1=0.0    eta   186m !
+  [ 436/540] few_shot_schema constrained  032   339.4s raw=0    F1=0.0    eta   185m !
+  [ 437/540] few_shot_schema constrained  032   339.7s raw=0    F1=0.0    eta   184m !
+  [ 438/540] few_shot_schema constrained  032   340.4s raw=0    F1=0.0    eta   184m !
+  [ 439/540] few_shot_schema constrained  040   333.9s raw=0    F1=0.0    eta   183m !
+  [ 440/540] few_shot_schema constrained  040   334.3s raw=0    F1=0.0    eta   182m !
+  [ 441/540] few_shot_schema constrained  040   334.3s raw=0    F1=0.0    eta   181m !
+  [ 442/540] few_shot_schema constrained  025   303.9s raw=0    F1=0.0    eta   180m !
+  [ 443/540] few_shot_schema constrained  025   303.7s raw=0    F1=0.0    eta   178m !
+  [ 444/540] few_shot_schema constrained  025   303.7s raw=0    F1=0.0    eta   177m !
+  [ 445/540] few_shot_schema constrained  005    68.8s raw=7    F1=0.1069 eta   175m !
+  [ 446/540] few_shot_schema constrained  005    64.2s raw=7    F1=0.1069 eta   173m !
+  [ 447/540] few_shot_schema constrained  005    64.4s raw=7    F1=0.1069 eta   171m !
+  [ 448/540] few_shot_schema constrained  050   197.3s raw=3    F1=0.0134 eta   170m !
+  [ 449/540] few_shot_schema constrained  050   187.9s raw=3    F1=0.0134 eta   168m !
+  [ 450/540] few_shot_schema constrained  050   188.0s raw=3    F1=0.0134 eta   167m !
+  [ 451/540] few_shot_schema prompt_only  039   377.3s raw=0    F1=0.0    eta   166m !
+  [ 452/540] few_shot_schema prompt_only  039   239.6s raw=52   F1=1.0    eta   164m
+  [ 453/540] few_shot_schema prompt_only  039   239.6s raw=52   F1=1.0    eta   163m
+  [ 454/540] few_shot_schema prompt_only  043   368.5s raw=0    F1=0.0    eta   162m !
+  [ 455/540] few_shot_schema prompt_only  043   369.1s raw=0    F1=0.0    eta   161m !
+  [ 456/540] few_shot_schema prompt_only  043   369.1s raw=0    F1=0.0    eta   159m !
+  [ 457/540] few_shot_schema prompt_only  009   142.3s raw=43   F1=0.9767 eta   158m
+  [ 458/540] few_shot_schema prompt_only  009   332.3s raw=0    F1=0.0    eta   156m !
+  [ 459/540] few_shot_schema prompt_only  009   332.9s raw=0    F1=0.0    eta   155m !
+  [ 460/540] few_shot_schema prompt_only  012   208.9s raw=50   F1=1.0    eta   153m
+  [ 461/540] few_shot_schema prompt_only  012   169.5s raw=50   F1=1.0    eta   152m
+  [ 462/540] few_shot_schema prompt_only  012   169.7s raw=50   F1=1.0    eta   150m
+  [ 463/540] few_shot_schema prompt_only  004   348.4s raw=0    F1=0.0    eta   149m !
+  [ 464/540] few_shot_schema prompt_only  004   303.2s raw=33   F1=0.9697 eta   147m
+  [ 465/540] few_shot_schema prompt_only  004   303.3s raw=33   F1=0.9697 eta   146m
+  [ 466/540] few_shot_schema prompt_only  032   339.4s raw=0    F1=0.0    eta   144m !
+  [ 467/540] few_shot_schema prompt_only  032   339.8s raw=0    F1=0.0    eta   143m !
+  [ 468/540] few_shot_schema prompt_only  032   339.7s raw=0    F1=0.0    eta   142m !
+  [ 469/540] few_shot_schema prompt_only  040   333.4s raw=0    F1=0.0    eta   140m !
+  [ 470/540] few_shot_schema prompt_only  040   334.3s raw=0    F1=0.0    eta   139m !
+  [ 471/540] few_shot_schema prompt_only  040   334.3s raw=0    F1=0.0    eta   137m !
+  [ 472/540] few_shot_schema prompt_only  025   303.6s raw=0    F1=0.0    eta   136m !
+  [ 473/540] few_shot_schema prompt_only  025   303.7s raw=0    F1=0.0    eta   134m !
+  [ 474/540] few_shot_schema prompt_only  025   303.8s raw=0    F1=0.0    eta   133m !
+  [ 475/540] few_shot_schema prompt_only  005    66.9s raw=7    F1=0.1069 eta   131m !
+  [ 476/540] few_shot_schema prompt_only  005    59.0s raw=7    F1=0.1069 eta   128m !
+  [ 477/540] few_shot_schema prompt_only  005    59.0s raw=7    F1=0.1069 eta   126m !
+  [ 478/540] few_shot_schema prompt_only  050   194.7s raw=3    F1=0.0134 eta   124m !
+  [ 479/540] few_shot_schema prompt_only  050   502.9s raw=0    F1=0.0    eta   123m !
+  [ 480/540] few_shot_schema prompt_only  050   185.9s raw=3    F1=0.0134 eta   121m !
+  [ 481/540] generic_multi_stageconstrained  039   386.3s raw=52   F1=1.0    eta   120m
+  [ 482/540] generic_multi_stageconstrained  039   387.3s raw=52   F1=1.0    eta   118m
+  [ 483/540] generic_multi_stageconstrained  039   386.4s raw=52   F1=1.0    eta   117m
+  [ 484/540] generic_multi_stageconstrained  043   408.0s raw=0    F1=0.0    eta   115m !
+  [ 485/540] generic_multi_stageconstrained  043   417.9s raw=0    F1=0.0    eta   114m !
+  [ 486/540] generic_multi_stageconstrained  043   417.2s raw=0    F1=0.0    eta   112m !
+  [ 487/540] generic_multi_stageconstrained  009   397.4s raw=43   F1=0.9767 eta   111m
+  [ 488/540] generic_multi_stageconstrained  009   373.2s raw=0    F1=0.0    eta   109m !
+  [ 489/540] generic_multi_stageconstrained  009   398.3s raw=43   F1=0.9767 eta   107m
+  [ 490/540] generic_multi_stageconstrained  012   233.6s raw=50   F1=1.0    eta   106m
+  [ 491/540] generic_multi_stageconstrained  012   354.8s raw=50   F1=1.0    eta   104m
+  [ 492/540] generic_multi_stageconstrained  012   230.1s raw=50   F1=1.0    eta   102m
+  [ 493/540] generic_multi_stageconstrained  004   501.7s raw=33   F1=0.9697 eta   100m
+  [ 494/540] generic_multi_stageconstrained  004   539.0s raw=33   F1=0.9697 eta    99m
+  [ 495/540] generic_multi_stageconstrained  004   538.2s raw=33   F1=0.9697 eta    97m
+  [ 496/540] generic_multi_stageconstrained  032   394.1s raw=0    F1=0.0    eta    96m !
+  [ 497/540] generic_multi_stageconstrained  032   366.6s raw=0    F1=0.0    eta    94m !
+  [ 498/540] generic_multi_stageconstrained  032   366.2s raw=0    F1=0.0    eta    92m !
+  [ 499/540] generic_multi_stageconstrained  040   175.5s raw=20   F1=1.0    eta    90m
+  [ 500/540] generic_multi_stageconstrained  040   364.6s raw=0    F1=0.0    eta    88m !
+  [ 501/540] generic_multi_stageconstrained  040   174.1s raw=20   F1=1.0    eta    86m
+  [ 502/540] generic_multi_stageconstrained  025   499.4s raw=16   F1=0.9655 eta    84m
+  [ 503/540] generic_multi_stageconstrained  025   563.2s raw=16   F1=0.9655 eta    82m
+  [ 504/540] generic_multi_stageconstrained  025   562.7s raw=16   F1=0.9655 eta    81m
+  [ 505/540] generic_multi_stageconstrained  005   173.2s raw=7    F1=0.1069 eta    78m !
+  [ 506/540] generic_multi_stageconstrained  005   164.3s raw=7    F1=0.1069 eta    76m !
+  [ 507/540] generic_multi_stageconstrained  005   163.2s raw=7    F1=0.1069 eta    74m !
+  [ 508/540] generic_multi_stageconstrained  050   352.5s raw=3    F1=0.0134 eta    72m !
+  [ 509/540] generic_multi_stageconstrained  050   280.8s raw=3    F1=0.0134 eta    70m !
+  [ 510/540] generic_multi_stageconstrained  050   283.9s raw=3    F1=0.0134 eta    68m !
+  [ 511/540] generic_multi_stageprompt_only  039   393.4s raw=52   F1=1.0    eta    66m
+  [ 512/540] generic_multi_stageprompt_only  039   392.9s raw=52   F1=1.0    eta    64m
+  [ 513/540] generic_multi_stageprompt_only  039   390.6s raw=52   F1=1.0    eta    62m
+  [ 514/540] generic_multi_stageprompt_only  043   407.1s raw=0    F1=0.0    eta    60m !
+  [ 515/540] generic_multi_stageprompt_only  043   415.8s raw=0    F1=0.0    eta    58m !
+  [ 516/540] generic_multi_stageprompt_only  043   416.1s raw=0    F1=0.0    eta    55m !
+  [ 517/540] generic_multi_stageprompt_only  009   401.4s raw=43   F1=0.9767 eta    53m
+  [ 518/540] generic_multi_stageprompt_only  009   372.1s raw=0    F1=0.0    eta    51m !
+  [ 519/540] generic_multi_stageprompt_only  009   401.6s raw=43   F1=0.9767 eta    49m
+  [ 520/540] generic_multi_stageprompt_only  012   239.6s raw=50   F1=1.0    eta    47m
+  [ 521/540] generic_multi_stageprompt_only  012   361.7s raw=50   F1=1.0    eta    45m
+  [ 522/540] generic_multi_stageprompt_only  012   236.8s raw=50   F1=1.0    eta    42m
+  [ 523/540] generic_multi_stageprompt_only  004   502.8s raw=33   F1=0.9697 eta    40m
+  [ 524/540] generic_multi_stageprompt_only  004   502.2s raw=33   F1=0.9697 eta    38m
+  [ 525/540] generic_multi_stageprompt_only  004   499.5s raw=33   F1=0.9697 eta    36m
+  [ 526/540] generic_multi_stageprompt_only  032   392.8s raw=0    F1=0.0    eta    33m !
+  [ 527/540] generic_multi_stageprompt_only  032   365.5s raw=0    F1=0.0    eta    31m !
+  [ 528/540] generic_multi_stageprompt_only  032   365.7s raw=0    F1=0.0    eta    29m !
+  [ 529/540] generic_multi_stageprompt_only  040   176.6s raw=20   F1=1.0    eta    26m
+  [ 530/540] generic_multi_stageprompt_only  040   174.7s raw=20   F1=1.0    eta    24m
+  [ 531/540] generic_multi_stageprompt_only  040   174.1s raw=20   F1=1.0    eta    22m
+  [ 532/540] generic_multi_stageprompt_only  025   496.8s raw=16   F1=0.9655 eta    19m
+  [ 533/540] generic_multi_stageprompt_only  025   614.2s raw=0    F1=0.0    eta    17m !
+  [ 534/540] generic_multi_stageprompt_only  025   615.5s raw=0    F1=0.0    eta    15m !
+  [ 535/540] generic_multi_stageprompt_only  005   172.2s raw=7    F1=0.1069 eta    12m !
+  [ 536/540] generic_multi_stageprompt_only  005   161.5s raw=7    F1=0.1069 eta    10m !
+  [ 537/540] generic_multi_stageprompt_only  005   159.9s raw=7    F1=0.1069 eta     7m !
+  [ 538/540] generic_multi_stageprompt_only  050   348.9s raw=3    F1=0.0134 eta     5m !
+  [ 539/540] generic_multi_stageprompt_only  050   277.6s raw=3    F1=0.0134 eta     2m !
+  [ 540/540] generic_multi_stageprompt_only  050   284.9s raw=3    F1=0.0134 eta     0m !
+
+  540 runs in 1330.4 min
+  latency mean 147.7s  stdev 310.9s
+  results -> /home/coder/project/Web_Scraping_Engine/results/benchmark_results.csv
+  next:    .venv/bin/python evaluate.py

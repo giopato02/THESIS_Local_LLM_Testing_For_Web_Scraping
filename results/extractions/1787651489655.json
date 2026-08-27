@@ -1,0 +1,103 @@
+{
+ "key": "a|llama3.1:8b|generic_multi_stage|prompt_only|043|1",
+ "raw": [
+  "ACCESS e.V.",
+  "Aixtron SE",
+  "AMAC GmbH",
+  "AMO GmbH",
+  "Ätztechnik Herz GmbH & Co. KG",
+  "CeNTech GmbH",
+  "Covestro Deutschland AG",
+  "CTC GmbH",
+  "HAVERKAMP GmbH",
+  "HEGGEMANN AG",
+  "Innolume GmbH",
+  "ICS Innovation Coating Systems UG",
+  "Kunststoff-Institut Lüdenscheid",
+  "MaTech-Consult GmbH",
+  "Meotec GmbH & Co. KG",
+  "Microtrac GmbH",
+  "Momentive Performance Materials GmbH",
+  "nanobay",
+  "neoxid GmbH",
+  "phenox GmbH",
+  "Pulsar Photonics GmbH",
+  "Teijin Carbon Europe GmbH",
+  "Vitrum Technologies GmbH",
+  "Zentrum für Brennstoffzellen Technik GmbH"
+ ],
+ "records": [
+  {
+   "name": "ACCESS e.V."
+  },
+  {
+   "name": "Aixtron SE"
+  },
+  {
+   "name": "AMAC GmbH"
+  },
+  {
+   "name": "AMO GmbH"
+  },
+  {
+   "name": "Ätztechnik Herz GmbH & Co. KG"
+  },
+  {
+   "name": "CeNTech GmbH"
+  },
+  {
+   "name": "Covestro Deutschland AG"
+  },
+  {
+   "name": "CTC GmbH"
+  },
+  {
+   "name": "HAVERKAMP GmbH"
+  },
+  {
+   "name": "HEGGEMANN AG"
+  },
+  {
+   "name": "Innolume GmbH"
+  },
+  {
+   "name": "ICS Innovation Coating Systems UG"
+  },
+  {
+   "name": "Kunststoff-Institut Lüdenscheid"
+  },
+  {
+   "name": "MaTech-Consult GmbH"
+  },
+  {
+   "name": "Meotec GmbH & Co. KG"
+  },
+  {
+   "name": "Microtrac GmbH"
+  },
+  {
+   "name": "Momentive Performance Materials GmbH"
+  },
+  {
+   "name": "nanobay"
+  },
+  {
+   "name": "neoxid GmbH"
+  },
+  {
+   "name": "phenox GmbH"
+  },
+  {
+   "name": "Pulsar Photonics GmbH"
+  },
+  {
+   "name": "Teijin Carbon Europe GmbH"
+  },
+  {
+   "name": "Vitrum Technologies GmbH"
+  },
+  {
+   "name": "Zentrum für Brennstoffzellen Technik GmbH"
+  }
+ ]
+}
