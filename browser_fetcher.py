@@ -63,7 +63,7 @@ LOAD_MORE_TEXT = [
 # whether the page grew, never to extract names -- extraction stays with the LLM.
 COUNT_SELECTOR = (
     "article, li, tr, "
-    ".member, .mitglied, .partner, .card, .entry, "
+    ".member.mitglied.partner.card.entry, "
     "[class*='member'], [class*='mitglied'], [class*='partner'], "
     "[class*='card'], [class*='item']"
 )
@@ -126,7 +126,7 @@ def _walk_numbered_pagination(page, verbose: bool = True) -> list[str]:
     #   plain page numbers   2, 3, 4 ... 14
     #   record ranges        0-50, 51-100, 101-150
     # Both are just "click this to see more", so both are accepted.
-    RANGE = re.compile(r"^\d+\s*[-–—]\s*\d+$")
+    RANGE = re.compile(r"^\d+\s*[--, ]\s*\d+$")
     labels: list[str] = []
     loc = page.locator(link_sel)
     for i in range(min(loc.count(), 80)):
@@ -140,7 +140,7 @@ def _walk_numbered_pagination(page, verbose: bool = True) -> list[str]:
             labels.append(txt)
         elif RANGE.match(txt):
             # Skip the range that starts at the beginning -- already shown.
-            if not re.match(r"^(0|1)\s*[-–—]", txt):
+            if not re.match(r"^(0|1)\s*[--, ]", txt):
                 labels.append(txt)
 
     if not labels:

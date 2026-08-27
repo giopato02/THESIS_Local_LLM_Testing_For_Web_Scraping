@@ -150,7 +150,7 @@ def main() -> None:
 
     # ---------------- Sheet 3: Summary -------------------------------------
     sm = wb.create_sheet("Summary")
-    sm["A1"] = "NeoHub — network member extraction"
+    sm["A1"] = "NeoHub, network member extraction"
     sm["A1"].font = TITLE
     sm["A2"] = (f"Generated {datetime.now():%Y-%m-%d %H:%M} · "
                 f"{row-2} member records from {len(per_network)} networks")
@@ -178,11 +178,11 @@ def main() -> None:
         "",
         "NOTES",
         "Company websites are only present where the directory links to them. "
-        "Measured coverage: 95–98% on three of ten annotated pages, 0% on the "
+        "Measured coverage: 95-98% on three of ten annotated pages, 0% on the "
         "other seven, whose entries carry no outbound link or link only to a "
         "profile page on the association's own site.",
         "A blank 'company website' means no link was on the page. The model is "
-        "instructed never to guess a domain from a company name — an invented "
+        "instructed never to guess a domain from a company name, an invented "
         "URL that looks plausible is worse than an empty cell.",
         "Names are listed exactly as printed on the source page. No filtering "
         "has been applied: the Neovation name filter's verdict is on the "

@@ -17,10 +17,30 @@ prompting strategies are benchmarked against hand-labelled ground truth.
 
 | File | What it is |
 |---|---|
-| `THESIS_NOTES.md` | The running record of every measured finding, ~2,300 lines. Primary results are §3.13. Read the Status block at the top first. |
+| `THESIS_NOTES.md` | The running record of every measured finding, ~2,500 lines. Primary results are §3.13. Read the Status block at the top first. |
 | `config.py` | Every setting: models, `num_ctx`, temperature, chunking, schemas. |
 | `prompts.py` | All prompt strategies, grouped into arms. |
 | `benchmark.py` | The experiment runner. |
+
+## Models
+
+Three local models, all served through Ollama:
+
+| Model | Size | Role |
+|---|---|---|
+| `llama3.1:8b` | 4.9 GB | Best performer, F1 0.981 |
+| `qwen2.5-coder:7b` | 4.7 GB | Code-specialised comparison |
+| `gemma4:12b` | 7.6 GB | Largest, and the negative result |
+
+**`config.MODELS` lists only the first two.** `gemma4:12b` sits in
+`config.OPTIONAL_MODELS` because it cannot share 16 GB of laptop RAM with the
+others, so `benchmark.py --stage a` with no arguments silently runs a
+two-model grid. On a GPU node, always name all three explicitly:
+
+```bash
+.venv/bin/python benchmark.py --stage a --arm guideline \
+    --models llama3.1:8b qwen2.5-coder:7b gemma4:12b
+```
 
 ## Pipeline, in order
 
@@ -55,7 +75,7 @@ comparable.
 | `results/benchmark_results.csv` | One row per run: timing, token counts, precision/recall/F1, URL metrics. |
 | `results/extractions/*.json` | The raw text every model returned, one file per run. Lets the grid be re-scored without re-running it. |
 | `results/html_cache/` | The exact pages the benchmark ran against. Tracked deliberately: these sites change, so without this snapshot the numbers cannot be reproduced. |
-| `data/ground_truth/*.json` | Hand-labelled member lists, 785 companies across 10 pages. |
+| `data/ground_truth/*.json` | Hand-labelled member lists, 761 companies across 10 pages. |
 | `results/stage_a_gpu.log` | Full log of the 540-run GPU grid. |
 
 `NeoHub_Network_Members.xlsx` (2026-08-07) and
@@ -79,19 +99,51 @@ Best configuration: **`llama3.1:8b` + zero-shot + prompt-only JSON, F1 0.981.**
 Caveats are in §5 of `THESIS_NOTES.md` and are not optional reading: the
 ten-page corpus is small enough that one page moves an aggregate F1 by ~0.03.
 
+### Known-stale results in this snapshot
+
+`results/benchmark_results.csv` here is the original 540-run grid. Two things
+about it are superseded:
+
+1. **`generic_multi_stage` (P3) rows are being re-run.** Its validation stage
+   was receiving Python dict reprs (`- {'name': 'Robert Bosch GmbH'}`) instead
+   of company names, so the reported "best precision, worst recall" result for
+   P3 is not yet safe to cite. See §3.13c-2.
+2. **Page 043 changed.** A link-preservation ordering bug hid every logo-based
+   member link; fixing it altered that page's cleaned text. The other nine
+   pages are byte-identical, so the rest of the grid stands. See §3.13c.
+
+zero-shot and few-shot results are unaffected by both.
+
 ## Running it
 
 ```bash
 python3 -m venv .venv
 .venv/bin/pip install requests beautifulsoup4 lxml ollama pandas \
     matplotlib openpyxl python-docx ddgs
-ollama pull llama3.1:8b && ollama pull qwen2.5-coder:7b
 
-.venv/bin/python benchmark.py --stage a --arm guideline --dry-run
+ollama pull llama3.1:8b
+ollama pull qwen2.5-coder:7b
+ollama pull gemma4:12b          # ~17 GB for all three
+
+.venv/bin/python benchmark.py --stage a --arm guideline \
+    --models llama3.1:8b qwen2.5-coder:7b gemma4:12b --dry-run
 ```
 
 `gpu_setup.sh` does all of this on a fresh GPU node, and is safe to re-run:
-completed runs are skipped.
+completed runs are skipped, so an interrupted grid resumes where it stopped.
+
+Two things that will waste hours if missed:
+
+- **`ddgs` requires Python 3.9+.** On an older interpreter the whole `pip
+  install` line aborts and nothing gets installed. Drop it if the search
+  route is not needed.
+- **Verify Ollama is on the GPU before trusting any timing.** It falls back
+  to CPU silently, which looks like a working run producing useless numbers.
+  `gpu_setup.sh` gates on this; `ollama ps` must report `100% GPU`.
+
+Repetitions default to 3, which is wasted time here: output is deterministic
+at temperature 0 with a fixed seed. Pass `--reps 1` unless temperature is
+changed.
 
 ## Note on packaging
 

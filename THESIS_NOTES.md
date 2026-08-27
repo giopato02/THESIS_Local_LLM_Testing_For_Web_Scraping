@@ -1,7 +1,7 @@
 # Thesis Writing Notes
 
 Running log of findings worth putting in the thesis paper, organised by the
-chapter they belong to. Every number here was measured, not estimated — the
+chapter they belong to. Every number here was measured, not estimated, the
 command that produced it is noted so results can be regenerated.
 
 Thesis: *Comparative Evaluation of Local LLM Models and Generic Prompt
@@ -17,7 +17,7 @@ configuration: `llama3.1:8b` + zero-shot + prompt-only JSON, F1 0.981.
 
 gemma4:12b is closed as a negative finding and will not be re-run (§3.13).
 Outstanding: the URL grid arm (§3.13b, ~80 runs), production extraction with
-`few_shot_full_record`, ground-truth expansion to 30–60 pages.
+`few_shot_full_record`, ground-truth expansion to 30-60 pages.
 
 **Code location warning.** The authoritative source tree is the copy on the
 GPU node, not this directory. The local `benchmark.py` still loops all five
@@ -43,7 +43,7 @@ partners.
 
 ---
 
-## 1. Introduction — website heterogeneity
+## 1. Introduction: website heterogeneity
 
 Hendro's guideline asks for concrete examples of how varied these sites are
 (*"member lists may appear as cards, tables, logos, pagination, JavaScript
@@ -54,7 +54,7 @@ content, PDFs, or profile pages"*). These are real cases from the corpus:
 | Alphabetical index | BDEW | 26 letter pages, `?letter=A…Z`, ~1,600 members |
 | JS numbered pages | Medical Valley EMN | 14 pages × 20, JetSmartFilters, no URL variant |
 | JS pagination at scale | bwcon | **107** pagination pages |
-| Single flat list | SPECTARIS | 285 members, A–W, one page |
+| Single flat list | SPECTARIS | 285 members, A-W, one page |
 | Bare brand names | EtherCAT | 7,700+ members, almost no legal forms |
 | Category taxonomy | automotive BerlinBrandenburg | product categories, companies behind a search form |
 | Cookie wall only | BIO Deutschland | 183 words, all of it consent text |
@@ -66,7 +66,7 @@ the second category entirely.
 
 ---
 
-## 2. Method — pipeline design decisions
+## 2. Method: pipeline design decisions
 
 Each of these is a defensible choice with a reason; state the reason.
 
@@ -76,7 +76,7 @@ It also keeps network latency out of the measurement and avoids re-requesting
 73 real organisations' servers hundreds of times.
 
 **`num_ctx` is set explicitly (8192).** Ollama defaults to 4,096 tokens and
-**discards the overflow silently — it never raises an error**. One page in this
+**discards the overflow silently, it never raises an error**. One page in this
 corpus cleans to 53,304 tokens. Left at the default, the model would read a
 fraction of each page, return a short list, and every number in the thesis
 would measure a truncation bug rather than model capability.
@@ -100,7 +100,7 @@ downstream rule. The filter implementation was removed from the pipeline on
 
 ### Annotation rules for ground truth
 
-State these explicitly — examiners ask for the annotation guideline.
+State these explicitly, examiners ask for the annotation guideline.
 
 1. **Ground truth describes the cached snapshot, not the live website.** Many
    directories paginate; labelling from the live site would include members the
@@ -109,7 +109,7 @@ State these explicitly — examiners ask for the annotation guideline.
    Directories frequently print a town beside the company. Where the cleaned
    text puts name and location on **separate lines** (BDEW: `Amprion GmbH` /
    `Dortmund, Nordrhein-Westfalen`; InnoZent OWL: `AEU Tech GmbH,` /
-   `Borchen`), only the name is annotated — a key containing the location
+   `Borchen`), only the name is annotated, a key containing the location
    would score a correct extraction as both a miss and a false positive, one
    error counted twice. Where the text puts them on **one line**
    (`Ostfalia Hochschule für angewandte Wissenschaften, Wolfenbüttel`), the
@@ -117,7 +117,7 @@ State these explicitly — examiners ask for the annotation guideline.
 
    Applied programmatically (`tidy_worksheets.py --strip-city`), which strips a
    trailing `, X` only when `X` also occurs as a standalone line in the cached
-   page — so the page itself, not a guess, decides whether the town is a
+   page, so the page itself, not a guess, decides whether the town is a
    separate field. On InnoZent OWL this changed 76 of 79 entries and correctly
    left 3 untouched.
 3. **Section headings, category labels and membership-tier names are excluded.**
@@ -125,7 +125,7 @@ State these explicitly — examiners ask for the annotation guideline.
    headings cluster at the *end* of directories, after the main list.)
 4. **Testimonial and quote attributions are excluded.** Organisations named in
    a "voices from our network" block are not member-list entries.
-5. **Where a directory paginates, one page is the annotation unit** — the
+5. **Where a directory paginates, one page is the annotation unit**: the
    letter-A page for BDEW, page 1 for Medical Valley and BVMed. Labelling
    ~1,600 BDEW members was not feasible; the unit is documented per page.
 
@@ -136,11 +136,11 @@ State these explicitly — examiners ask for the annotation guideline.
 | P1 | `zero_shot` | instruction only | yes |
 | P2 | `few_shot_schema` | instruction + JSON schema + 2 worked examples | yes |
 | P3 | `generic_multi_stage` | 3 calls: locate list → extract → validate | yes |
-| — | `few_shot_with_url` | P2 plus the company website | no |
-| — | `few_shot_full_record` | name, website, street, postcode, city, phone, email | no |
+| - | `few_shot_with_url` | P2 plus the company website | no |
+| - | `few_shot_full_record` | name, website, street, postcode, city, phone, email | no |
 
 The last two exist for the deliverable, not the experiment. The grid stays at
-P1–P3 so it answers RQ2 without adding a fourth arm; the record schema is
+P1-P3 so it answers RQ2 without adding a fourth arm; the record schema is
 applied afterwards with whichever configuration wins. That leaves one
 assumption to state in Limitations: **the winner is selected on member-name
 extraction and applied unchanged to record extraction.** Closing that gap
@@ -152,7 +152,7 @@ worth it is RQ2.
 
 ---
 
-## 3. Results — data quality findings
+## 3. Results: data quality findings
 
 *These are findings in their own right, not just obstacles.*
 
@@ -184,8 +184,8 @@ Measured recovery after implementing pagination handling:
 | Site | Mechanism | Before | After | Gain |
 |---|---|---:|---:|---:|
 | BDEW | URL `?letter=A…Z` | 281 w | 13,255 w | **47×** |
-| Medical Valley EMN | JS numbered 1–14 | 714 w | 10,894 w | **15×** |
-| bwcon | JS numbered 1–107 | 279 w | 1,789 w | 6.4× |
+| Medical Valley EMN | JS numbered 1-14 | 714 w | 10,894 w | **15×** |
+| bwcon | JS numbered 1-107 | 279 w | 1,789 w | 6.4× |
 | German Accelerator | JS | 997 w | 2,917 w | 2.9× |
 
 Three pagination conventions were found and all three needed separate handling:
@@ -194,17 +194,17 @@ and record ranges (`0-50`, `51-100`).
 
 ### 3.3 Automated completeness checks failed; manual inspection succeeded
 
-Worth reporting honestly — it is a direct argument for human-validated ground
+Worth reporting honestly, it is a direct argument for human-validated ground
 truth.
 
 A keyword-based detector scanning HTML for pagination markers was wrong in
 **both** directions:
 
-- **BDEW scored 0** (missed) — it paginates with plain URL links, not JavaScript.
-- **SPECTARIS scored 61** (false alarm) — the markers were CMS boilerplate; the
+- **BDEW scored 0** (missed), it paginates with plain URL links, not JavaScript.
+- **SPECTARIS scored 61** (false alarm), the markers were CMS boilerplate; the
   page genuinely lists all 285 members.
 
-Both errors were caught by eye during hand-labelling — the truncated file's
+Both errors were caught by eye during hand-labelling, the truncated file's
 entries all began with "A".
 
 The replacement heuristic, **alphabet coverage of member initials**, separates
@@ -218,13 +218,13 @@ the cases cleanly and needs no network access (`check_completeness.py`):
 ### 3.4 The merged source file lost extraction depth
 
 `NEOHUB_final_merged_QA_reviewed` holds 817 networks (617 ZIM + 200
-private-funded) — broader than the previous 73 — but:
+private-funded), broader than the previous 73, but:
 
 - **485 rows have no URL at all**
 - of 332 URLs, only **14 have any path** beyond the domain
 - **0 of 59** deep member-list URLs from the earlier sheet survived
   (`acod.de/mitglieder-und-partner/` → `acod.de`)
-- only **30 of 59** organisations survive at all — the merge is not a superset
+- only **30 of 59** organisations survive at all, the merge is not a superset
 
 A homepage is not a member list, so a discovery step was required:
 `find_member_pages.py` scores internal links for member-directory vocabulary
@@ -246,12 +246,12 @@ this as a deployment finding: *a 12B model is not merely slower but unusable on
 consumer hardware at this context size.*
 
 **Latency variance justifies repetition.** The same model on the same page
-measured 20.9 s and 38.3 s in separate runs — hence 3 repetitions and
+measured 20.9 s and 38.3 s in separate runs, hence 3 repetitions and
 mean ± stdev rather than single-sample timings.
 
 ---
 
-## 4. Discussion — analysis of Neovation's post-processing filter
+## 4. Discussion: analysis of Neovation's post-processing filter
 
 *Retained as a measurement, not as pipeline behaviour. The filter was
 implemented, measured, and then removed from the pipeline on 2026-08-14 once
@@ -263,7 +263,7 @@ analysing rather than merely applying.
 
 **Rule 1, the legal-form whitelist** requires every name to contain
 GmbH/AG/KG/UG. Measured on one page, 77% of extracted names carried a legal
-form — so enforcement would discard 23% *there*, and approaching **100%** on a
+form, so enforcement would discard 23% *there*, and approaching **100%** on a
 bare-name directory such as EtherCAT's 7,700 members. Implemented as a recorded
 flag (`has_legal_form`), never enforced, so the cost is measurable.
 
@@ -291,7 +291,7 @@ quantifying a known risk, not as criticism.
 
 ---
 
-## 3.6 Stage A execution — design and early observations
+## 3.6 Stage A execution: design and early observations
 
 *Run started 2026-08-04. Numbers below are from the first block and must be
 replaced with final figures from `evaluate.py` once the run completes.*
@@ -312,19 +312,19 @@ begins, so the first 60 entries are zero-shot only.
 
 Repetition count follows the guideline's *"repeat non-deterministic runs at
 least three times"*. Decoding is deterministic (`temperature=0`, fixed seed),
-so the repetitions capture **latency variance rather than output variance** —
+so the repetitions capture **latency variance rather than output variance**, 
 justified by measuring 20.9 s and 38.3 s for the same model on the same page in
 separate runs (§3.5).
 
 ### Observed pace
 
 Warm 7B model, single-call strategies: **~37 s per run**, matching the 45 s
-planning estimate. The two `generic_multi_stage` blocks (runs 121–180 and
-301–360) issue three model calls per page and should run roughly 2.5× slower;
+planning estimate. The two `generic_multi_stage` blocks (runs 121-180 and
+301-360) issue three model calls per page and should run roughly 2.5× slower;
 the measured single-page comparison was 63.5 s vs 26 s (§2). That cost is a
 result for RQ2, not a performance problem.
 
-### Early accuracy — and what it says about the ground truth
+### Early accuracy: and what it says about the ground truth
 
 First block (qwen2.5-coder:7b, zero-shot, constrained decoding), 26 runs:
 
@@ -338,16 +338,16 @@ One page scored a perfect 1.000 (Life Science Nord, 52/52 companies, zero
 false positives).
 
 **These figures also serve as a validation of the annotation itself.** A
-systematic ground-truth error — locations left attached to names, section
-headings retained, or a truncated page annotated as complete — would depress F1
-into the 0.3–0.5 range regardless of model quality, because every correct
+systematic ground-truth error, locations left attached to names, section
+headings retained, or a truncated page annotated as complete, would depress F1
+into the 0.3-0.5 range regardless of model quality, because every correct
 extraction would register as both a miss and a false positive. Mean F1 near
 0.96 is therefore evidence that the annotation rules in §2 were applied
 consistently.
 
 The spread (0.750 to 1.000) is the substantive finding to develop: it indicates
 performance depends on page characteristics, which is exactly RQ3. Candidate
-explanations to test against the final data — sparse pages with heavy
+explanations to test against the final data, sparse pages with heavy
 navigation furniture (BVMed, Medical Valley) and the one chunked page
 (SPECTARIS, 296 names across 8 chunks).
 
@@ -371,7 +371,7 @@ One line per run:
 
 **Why the same page appears three times in a row.** Decoding is deterministic
 (`temperature=0`, fixed seed), so the three repetitions return byte-identical
-output — `raw` and `F1` are unchanged across them and only latency varies
+output, `raw` and `F1` are unchanged across them and only latency varies
 (30.4 s, 21.6 s, 21.5 s on the first block; the first run pays a warm-up cost).
 The repetitions measure timing variance, not answer variance.
 
@@ -385,7 +385,7 @@ Few-shot begins at run 61, multi-stage at 121, and Llama at 181.
 
 `prompt_only` asks the model to reply in JSON. `constrained` passes a JSON
 schema to Ollama's `format` parameter, which restricts token sampling so that
-no output violating the schema can be generated — the model is prevented from
+no output violating the schema can be generated, the model is prevented from
 producing invalid JSON rather than asked not to.
 
 Both are run because the difference is measurable and non-obvious.
@@ -400,7 +400,7 @@ Both are run because the difference is measurable and non-obvious.
 **Every prompt-only run required JSON repair.** The model never emitted a bare
 JSON object when simply asked; it wrapped the payload in conversational text
 each time. The bracket-balancing recovery layer succeeded in all 24 cases, so
-parse failures are zero — but a pipeline without that layer would have failed
+parse failures are zero, but a pipeline without that layer would have failed
 on every run. Reporting prompt-only results alone would therefore have
 concealed a hard dependency on post-hoc repair.
 
@@ -411,7 +411,7 @@ page 039   constrained 21.5 s  F1 1.0000  |  prompt_only 37.4 s  F1 1.0000
 page 043   constrained 30.1 s  F1 0.9897  |  prompt_only 47.4 s  F1 1.0000
 ```
 
-Constrained decoding is roughly **40% faster** and marginally less accurate —
+Constrained decoding is roughly **40% faster** and marginally less accurate, 
 a clean speed/validity trade-off for RQ4. (The aggregate F1 column above is not
 yet comparable: constrained has already processed page 050 and scored 0.0 three
 times, which prompt-only has not yet reached.)
@@ -431,7 +431,7 @@ Web                           <- link label
 ```
 
 The model locked onto the **wrong line of the repeating block** and returned
-city names — `Bremen`, `Duisburg`, `München`, `Zizers` — for all 54 entries. It
+city names, `Bremen`, `Duisburg`, `München`, `Zizers`, for all 54 entries. It
 is a systematic misidentification of which field is the company name, not a
 parsing or truncation fault, and it is invisible from the output alone: 54
 plausible German proper nouns in valid JSON.
@@ -440,7 +440,7 @@ This is the strongest available argument for measuring against hand-labelled
 ground truth. On raw count alone (`raw=54`) this run looks like a success.
 
 Whether few-shot examples or the multi-stage locate/extract/validate strategy
-recover this page is precisely RQ2, and the answer arrives in runs 61–180.
+recover this page is precisely RQ2, and the answer arrives in runs 61-180.
 
 ### Defect found and fixed during the run
 
@@ -456,7 +456,7 @@ boundary, so the trailing "ag" of a name was treated as the legal form *AG*:
 Forms of ≤3 characters now require preceding whitespace or punctuation, and
 compound forms (`SE & Co. KG`, `GmbH & Co.KG`) were added ahead of their parts.
 Impact was limited for scoring, since prediction and ground truth pass through
-the same normalisation and would mangle identically — but `company_name_clean`
+the same normalisation and would mangle identically, but `company_name_clean`
 in the deliverable would have been wrong, so Neovation would have received
 "2m" for "2mag AG".
 
@@ -470,7 +470,7 @@ model inference (the pipeline itself adds almost no overhead, since pages are
 served from the local HTML cache).
 
 The 4.5 h planning estimate assumed 45 s per run. The overrun is entirely
-attributable to `generic_multi_stage`, which averaged 88–715 s per run.
+attributable to `generic_multi_stage`, which averaged 88-715 s per run.
 
 ### Full configuration ranking
 
@@ -496,14 +496,14 @@ F1 = 0.957 (P 0.971 / R 0.945) at 56.1 s per page.**
 
 | Strategy | llama3.1:8b | qwen2.5-coder:7b |
 |---|---:|---:|
-| zero_shot | 0.919 | 0.866 – 0.909 |
+| zero_shot | 0.919 | 0.866 - 0.909 |
 | few_shot_schema | **0.957** | **0.937** (constrained) |
-| generic_multi_stage | 0.730 – 0.736 | 0.871 – 0.874 |
+| generic_multi_stage | 0.730 - 0.736 | 0.871 - 0.874 |
 
 Few-shot beats zero-shot for both models. Multi-stage is worst for both, and
 catastrophically so for llama.
 
-### By JSON mode — a model-dependent effect (RQ3)
+### By JSON mode: a model-dependent effect (RQ3)
 
 | Model | Prompt | constrained | prompt_only | Δ |
 |---|---|---:|---:|---:|
@@ -521,7 +521,7 @@ a genuine model × decoding-mode interaction and answers RQ3 directly.
 It is also counterintuitive and worth foregrounding: `qwen2.5-**coder**` is the
 code-specialised model, and it is the one that cannot reliably emit valid JSON.
 
-### Why multi-stage fails — the mechanism
+### Why multi-stage fails: the mechanism
 
 The failure is not random; it is the validation stage over-pruning.
 
@@ -560,18 +560,18 @@ loss at chunk boundaries rather than hallucination.
 ### Error analysis
 
 All 12 hard errors in the experiment (`unparseable JSON`) occurred on page 050,
-the single chunked page — 3 for qwen zero-shot and 9 across both models'
+the single chunked page, 3 for qwen zero-shot and 9 across both models'
 multi-stage runs. Long generated lists combined with chunking are where JSON
 integrity breaks down.
 
 **Correction to an earlier observation.** Page 050's catastrophic zero-shot
 result (§3.7, F1 = 0.000, 54 city names returned) is *not* robust across
-strategies. Few-shot recovered it substantially — 235 correct companies,
+strategies. Few-shot recovered it substantially, 235 correct companies,
 F1 = 0.807. The address-block confusion is therefore a **zero-shot weakness
 that worked examples correct**, which strengthens rather than weakens the RQ2
 finding.
 
-### Averaging artefact — a caution for the write-up
+### Averaging artefact: a caution for the write-up
 
 | Model | Mean F1 across all 6 configurations | Mean latency |
 |---|---:|---:|
@@ -580,7 +580,7 @@ finding.
 
 Averaged over configurations, qwen appears superior. This is an artefact: llama's
 mean is depressed by its two catastrophic multi-stage cells. **Report the best
-configuration per model, not the per-model mean** — averaging across a strategy
+configuration per model, not the per-model mean**, averaging across a strategy
 already shown to be defective is not a meaningful comparison.
 
 ### Precision/recall character, and which matters here
@@ -606,20 +606,20 @@ Correlation of latency with candidate predictors, best configuration:
 | output tokens generated | 0.986 |
 | input tokens (page size) | 0.919 |
 
-Runtime is governed by **generation volume, not page size** — the model spends
+Runtime is governed by **generation volume, not page size**: the model spends
 its time writing the answer, not reading the page. Measured rate:
 
-> **≈ 0.81 s per company extracted**, plus roughly 8–12 s fixed cost per page.
+> **≈ 0.81 s per company extracted**, plus roughly 8-12 s fixed cost per page.
 
 This is more useful than a per-page average, because it scales with what a
 directory actually contains. It also explains the spread in the per-page table:
 page 025 (14 members, 2 872 tokens) took 8.5 s while page 039 (52 members, 469
-tokens) took 30.3 s — six times fewer input tokens, three times the runtime.
+tokens) took 30.3 s, six times fewer input tokens, three times the runtime.
 
 ### Projection to ~300 pages
 
 Corpus profile of the 53 currently usable pages: median 1 885 tokens,
-30 pages < 2 k tokens, 11 at 2–6 k, 12 > 6 k.
+30 pages < 2 k tokens, 11 at 2-6 k, 12 > 6 k.
 
 | Assumption | Companies/page | Estimate |
 |---|---:|---:|
@@ -627,7 +627,7 @@ Corpus profile of the 53 currently usable pages: median 1 885 tokens,
 | Central estimate | ~45 | **≈ 4.0 h** |
 | Pessimistic (many large directories) | ~70 | **≈ 5.7 h** |
 
-**Plan for roughly 4–6 hours for 300 pages** on the winning configuration,
+**Plan for roughly 4-6 hours for 300 pages** on the winning configuration,
 single pass. This is an overnight job on the current laptop and needs no
 special hardware. Two caveats: pagination expansion (§3.2) increases per-page
 member counts and therefore runtime, and the estimate assumes the 300 pages are
@@ -635,14 +635,14 @@ genuine member directories rather than homepages requiring discovery first.
 
 ### Is gemma4:12b worth adding?
 
-**Yes — but only on the winning configuration, not the full grid.**
+**Yes, but only on the winning configuration, not the full grid.**
 
 Arguments for:
 
-- Hendro's guideline specifies **3–4 instruction-tuned local models**; two have
+- Hendro's guideline specifies **3-4 instruction-tuned local models**; two have
   been evaluated, so the study is currently below the recommended range.
-- Both models tested are 7–8B. gemma4:12b is a different size class, so it
-  tests whether capability scales with parameter count on this task — a
+- Both models tested are 7-8B. gemma4:12b is a different size class, so it
+  tests whether capability scales with parameter count on this task, a
   question neither current model can answer.
 - **Accuracy measurement is hardware-independent.** Memory pressure inflates
   latency but does not change the generated text, so precision/recall/F1 from a
@@ -653,13 +653,13 @@ Cost, extrapolated from the measured 444.8 s vs 38.3 s comparison on page 039
 
 | Scope | Runs | Estimated time |
 |---|---:|---:|
-| Full grid (as run for the other two) | 180 | ≈ 41 h — not feasible |
-| Winning config, 10 pages, 3 repetitions | 30 | **≈ 6.9 h** — feasible overnight |
+| Full grid (as run for the other two) | 180 | ≈ 41 h, not feasible |
+| Winning config, 10 pages, 3 repetitions | 30 | **≈ 6.9 h**: feasible overnight |
 | Winning config, 10 pages, 1 repetition | 10 | **≈ 2.3 h** |
 
 Recommended: run the winning configuration with 3 repetitions (~7 h,
 unattended) and report gemma4 as a **scaling observation** rather than a full
-factorial arm — accuracy compared directly against the other two models,
+factorial arm, accuracy compared directly against the other two models,
 latency reported with an explicit note that it reflects memory pressure on
 16 GB rather than model throughput. If CKL GPU access materialises, promote it
 to a full arm.
@@ -673,11 +673,11 @@ Command:
 
 ---
 
-## 3.10 Extending the schema to company websites — and a data-availability limit
+## 3.10 Extending the schema to company websites: and a data-availability limit
 
 Requested by Hendro (meeting 2026-08-06): the deliverable must carry each
 member's own website alongside its name, in a **single** extraction pass. His
-reasoning against two passes was cost and matching — running the model twice
+reasoning against two passes was cost and matching, running the model twice
 doubles tokens and creates a name-to-URL alignment problem afterwards.
 
 ### The pipeline could not have returned a URL at all
@@ -695,7 +695,7 @@ Robert Bosch GmbH        ->   Robert Bosch GmbH <https://www.bosch.de>
 Only links leaving the association's own domain are annotated. Hostname
 comparison uses shared name labels rather than the first label, because NMWP
 serves its directory from `verein.nmwp.nrw` and its member profiles from
-`portal.nmwp.de` — the same organisation on two domains, which a naive check
+`portal.nmwp.de`, the same organisation on two domains, which a naive check
 would have mistaken for member websites. Where an entry is a bare logo, the
 company name is recovered from the image's `alt` attribute, which `get_text()`
 would otherwise drop.
@@ -720,7 +720,7 @@ outbound link, or link to a profile page hosted by the association itself
 
 This qualifies the single-pass requirement. Where links exist, one pass is both
 sufficient and cheapest, exactly as specified. Where they do not, no prompting
-strategy can recover them — obtaining those URLs requires either a second fetch
+strategy can recover them, obtaining those URLs requires either a second fetch
 per member (following the association's profile page) or name-to-URL resolution
 through a search engine, which is the same technique already needed to fill the
 empty homepage column in the merged database.
@@ -730,13 +730,13 @@ empty homepage column in the merged database.
 `llama3.1:8b` with the extended few-shot schema on BDEW: **42 companies
 returned, 40 with correct company websites** (`A.T. Kearney GmbH` →
 `https://www.de.kearney.com/`). Latency rose from ~25 s to **92 s** on the same
-page — roughly 3.7×, because output length roughly doubles and runtime is
+page, roughly 3.7×, because output length roughly doubles and runtime is
 governed by generation volume (§3.9).
 
 ### Does Stage A need repeating?
 
 No. Stage A measured which model and prompt strategy extract member *names*
-best, and that comparison stands — RQ1–RQ3 concern model and prompt behaviour,
+best, and that comparison stands. RQ1-RQ3 concern model and prompt behaviour,
 not the output schema. The URL field is an extension of the deliverable, and it
 requires re-running only the **production** extraction, not the 360-run
 ablation.
@@ -745,7 +745,7 @@ Two points do need measuring before the extended schema is used at scale:
 
 1. Whether requesting a second field degrades name extraction. The 92 s vs 25 s
    latency change is established; the accuracy effect is not.
-2. URL correctness, which needs **no manual annotation** — a returned URL either
+2. URL correctness, which needs **no manual annotation**: a returned URL either
    appears in the cached page or the model invented it, so field-level accuracy
    is verifiable automatically. This satisfies the guideline's "field-level
    accuracy/F1" requirement at no annotation cost.
@@ -760,7 +760,7 @@ Two points do need measuring before the extended schema is used at scale:
 | Summary | per-network coverage, model and prompt used, and caveats |
 
 Network name and URL are joined in Python from the source URL list rather than
-requested from the model — the provenance is already known, so spending tokens
+requested from the model, the provenance is already known, so spending tokens
 re-deriving it would only introduce error.
 
 ---
@@ -778,7 +778,7 @@ Decisions from meeting 2026-08-07 (Marco, Yusif, Hafiz; Hendro absent).
 
 ### The identity problem
 
-Marco: a German company name is **not** legally unique — it is unique only
+Marco: a German company name is **not** legally unique, it is unique only
 *within a city*. Neovation's own record matching therefore keys on **name +
 physical address**, and a name-only match against their ~1M-record database
 produces a non-trivial number of ambiguous hits.
@@ -800,7 +800,7 @@ Marco's formulation: *"if getting the address of the company makes it more
 complicated or more hallucinating, then that's the second step that maybe we
 don't need, if we have unique pairs through the names only."*
 
-This materially reduces the extraction task — per-company address extraction is
+This materially reduces the extraction task, per-company address extraction is
 conditional, not universal, and depends on a measurement (how many names are
 ambiguous) that has not been made yet.
 
@@ -809,27 +809,27 @@ ambiguous) that has not been made yet.
 Evaluated against the finding that only 3 of 10 annotated pages carry member
 websites (§3.10):
 
-**1. Association profile pages — free, deterministic, verified.**
+**1. Association profile pages, free, deterministic, verified.**
 Directories such as NMWP link each member to a profile page on their own site.
 Fetching `portal.nmwp.de/enterprise/view?guid=2591` returns exactly one external
-link, `http://www.access-technology.de` — the company's website. One extra
+link, `http://www.access-technology.de`, the company's website. One extra
 request per member, no model involved, no ambiguity.
 
-**2. Matching against the existing company database — free, instant.**
+**2. Matching against the existing company database, free, instant.**
 Neovation holds ~5.6M company records; the `public.company` table written by
 `scraperng` carries a `domain` column, and the OpenCorporates import has now
 been merged successfully. Resolving an extracted name (plus city where the page
 provides one) is a local join rather than thousands of web requests.
 
-**3. Impressum scraping — deterministic, no model needed.**
+**3. Impressum scraping, deterministic, no model needed.**
 Marco's observation: German law requires an Impressum, so once a company URL is
 known its address and email can be read directly without AI. Tested on three
 extracted URLs: `ados.de/impressum` yielded `52078 Aachen` and `info@ados.de`;
 the other two yielded partial or no data on a naive path-guessing attempt. The
-approach is sound but needs a real implementation — following the page's own
+approach is sound but needs a real implementation, following the page's own
 "Impressum" link rather than guessing paths, and handling JS-rendered pages.
 
-**4. Search engine — last resort, and the only one that costs money.**
+**4. Search engine, last resort, and the only one that costs money.**
 Google's Custom Search JSON API allows 100 queries/day free and then bills per
 thousand; Microsoft has retired the Bing Search API; DuckDuckGo publishes no
 web-results API. Scraping results directly breaches terms and is blocked
@@ -849,7 +849,7 @@ company's own site.
 | 004 Automotive Nordwest | 0 | 0 | 6 | name + city |
 | 039, 012, 040, 025 | 0 | 0 | 0 | **name only** |
 
-**Full postal addresses appear only on pages that already carry links** — that
+**Full postal addresses appear only on pages that already carry links**, that
 is, exactly where they are not needed. Three further pages provide a city,
 which is sufficient for the name+city uniqueness rule. Four provide nothing but
 the name, and for those no extraction strategy can produce a disambiguating
@@ -858,14 +858,14 @@ key; they depend on route 1 or 2 above.
 ### Proximity as a matching signal (noted, not actioned)
 
 Marco observed that geographic proximity may matter for partner *matching*
-independently of the innovation score — a Bremen company may be likelier to
+independently of the innovation score, a Bremen company may be likelier to
 collaborate with a Bremen institution, particularly for hardware development.
 Not part of this thesis, but it strengthens the case for capturing city where
 it is cheaply available.
 
 ---
 
-## 3.11b Options for obtaining company URLs — evaluated
+## 3.11b Options for obtaining company URLs: evaluated
 
 > **Partly superseded by 3.11d**, which is the complete and current analysis.
 > The measurements here (profile-page coverage, domain-construction hit rate)
@@ -878,14 +878,14 @@ address, then use address + name to resolve the website through a search
 engine, on the grounds that a German company name is unique only within a city.
 
 The uniqueness argument is correct. The obstacle is that **the address is not on
-the pages that lack links** (§3.11) — full addresses appear only on pages that
+the pages that lack links** (§3.11), full addresses appear only on pages that
 already carry company websites. So the proposed chain cannot start where it is
 needed.
 
 The requirement is nevertheless satisfiable, by other routes. Five were
 evaluated.
 
-### Route 1 — Association member profile pages *(free, and near-universal)*
+### Route 1: Association member profile pages *(free, and near-universal)*
 
 **Corrected twice. This is the primary route, not a special case.**
 
@@ -911,7 +911,7 @@ truth**: for each annotated company, does a link exist whose anchor text, logo
 | 043 NMWP.NRW | 49 | **45 (92%)** | logo `alt` |
 | 025 German Water Partnership | 14 | **12 (86%)** | company name |
 | 012 BVMed | 50 | present | adjacent "Mehr lesen" link |
-| 040 Medical Valley EMN | 20 | none found | — |
+| 040 Medical Valley EMN | 20 | none found | - |
 
 **Five of the six link-free directories expose a per-member profile page**,
 covering roughly 204 of the 218 companies previously recorded as
@@ -919,7 +919,7 @@ name-only. The company website is not absent from these directories; it is one
 hop away, behind the association's own profile page.
 
 The reason the earlier counts failed is worth stating: **on 012 the link is not
-on the company name at all** — it sits on a "Mehr lesen" element beside it, so
+on the company name at all**, it sits on a "Mehr lesen" element beside it, so
 any method keyed on anchor text alone reports zero. Container-level matching is
 required.
 
@@ -941,7 +941,7 @@ is far narrower than that:
 | 004, 032, 025 | 126 | 1 each | no |
 
 An earlier count appeared to show profile pages on several sites, but it
-counted repeated navigation links rather than distinct destinations — the
+counted repeated navigation links rather than distinct destinations, the
 pattern `/mitgliederliste/` occurring 77 times on a 33-member page is one link
 in a template, not 77 profiles.
 
@@ -968,10 +968,10 @@ This is the strongest route: no cost, no API, no hallucination surface, and it
 supplies the address for the disambiguation problem at the same time. Cost is
 one extra HTTP request per member.
 
-Applicable wherever a directory has per-member profile pages — the same
+Applicable wherever a directory has per-member profile pages, the same
 structure that made those pages look "link-free" in the first place.
 
-### Route 2 — Match against Neovation's existing company database
+### Route 2: Match against Neovation's existing company database
 
 **Composition of the 5.6M figure** (from the kickoff deck p.6 and
 `Collected data and status of sources.pdf`):
@@ -1007,17 +1007,17 @@ Consequences:
   someone queries the URL-bearing subset.
 - **For addresses and for name disambiguation it is strong**, because that is
   exactly what a commercial register does contain. It is therefore the right
-  instrument for the ambiguity question in §3.11 — measuring how many extracted
-  names match more than one record — even if it contributes few URLs.
+  instrument for the ambiguity question in §3.11, measuring how many extracted
+  names match more than one record, even if it contributes few URLs.
 - **Access is a blocker.** The database sits in Neovation's PostgreSQL; the
   student has no access and would need an export or a query endpoint from
   Rayen.
 
-### Route 3 — Domain construction and verification *(free, measured)*
+### Route 3: Domain construction and verification *(free, measured)*
 
 Generate candidate domains from the company name, fetch each, and keep only one
-whose page actually contains that name. DNS resolution alone proves nothing —
-parked domains and squatters resolve — so the verification step is what
+whose page actually contains that name. DNS resolution alone proves nothing, 
+parked domains and squatters resolve, so the verification step is what
 separates this from guessing.
 
 **Measured on a random sample of 25 companies drawn from the six link-free
@@ -1038,7 +1038,7 @@ Treuhand Weser-Ems    -> treuhand.de     generic first word
 ```
 
 The verification threshold (half the name's tokens present on the page) is too
-permissive when the leading token is a common noun or a parent brand — the
+permissive when the leading token is a common noun or a parent brand, the
 parent's site legitimately contains the child's name. **Realistic accuracy is
 therefore about 60%, not 72%**, and the corrections needed are to weight
 distinctive tokens above generic ones and to reject single-word candidates
@@ -1051,7 +1051,7 @@ Failures (7 of 25) are mostly organisations with no obvious domain form:
 Even at 60%, this is the highest-coverage free route measured so far, and it
 reduces the volume a paid search API would need to handle by more than half.
 
-### Route 4 — Search API *(cheap, not free)*
+### Route 4: Search API *(cheap, not free)*
 
 **Correction to an earlier assessment in this document.** Search was previously
 characterised as prohibitively expensive; that was wrong. Current options:
@@ -1063,15 +1063,15 @@ characterised as prohibitively expensive; that was wrong. Current options:
 | Google Custom Search | 100/day free, then $5 per 1,000 |
 | Bing Search API | retired by Microsoft |
 
-At roughly 300 networks × ~50 members ≈ 15,000 lookups, that is **$15–75 in
-total** — not a barrier. The real limitation is result quality, not price: a
+At roughly 300 networks × ~50 members ≈ 15,000 lookups, that is **$15-75 in
+total**, not a barrier. The real limitation is result quality, not price: a
 top search result is frequently LinkedIn, Northdata, or a directory listing
 rather than the company's own site, so results need the same
 name-appears-on-page verification as Route 3.
 
-Sensible as the fallback for whatever Routes 1–3 leave unresolved.
+Sensible as the fallback for whatever Routes 1-3 leave unresolved.
 
-### Route 5 — Impressum scraping *(for address and email, once a URL is known)*
+### Route 5: Impressum scraping *(for address and email, once a URL is known)*
 
 German law requires an Impressum, so address and email can be read directly
 from a company site without a model. Tested on three extracted URLs:
@@ -1080,19 +1080,19 @@ partial or nothing under naive path-guessing. A real implementation follows the
 page's own "Impressum" link rather than guessing paths.
 
 This is the answer to the address requirement for companies whose URL is known
-— which, after Routes 1–4, should be most of them.
+- which, after Routes 1-4, should be most of them.
 
 ### Recommended order
 
 Revised after measuring profile-page coverage. The two general-purpose routes
 come first; the special cases fill gaps behind them.
 
-1. **Database match** — free, applies to any name present in Neovation's
+1. **Database match**: free, applies to any name present in Neovation's
    ~5.6M records, and measures the name-ambiguity rate as a by-product
-2. **Domain construction + verification** — free, applies to any company name
+2. **Domain construction + verification**: free, applies to any company name
    at all, ~5 of 6 in a first test
-3. **Search API** for whatever remains — ~$15–75 for the whole corpus
-4. **Profile pages** where a directory has them — free and complete, but
+3. **Search API** for whatever remains, ~$15-75 for the whole corpus
+4. **Profile pages** where a directory has them, free and complete, but
    measured at one directory of seven
 5. **Impressum** on every resolved URL, for address and email
 
@@ -1103,7 +1103,7 @@ auditable rather than asserted.
 
 **Sequencing matters more than any single route.** Each step is cheaper and
 more reliable than the one after it, so the honest way to decide whether the
-paid option is needed is to run the free ones first and measure the remainder —
+paid option is needed is to run the free ones first and measure the remainder, 
 rather than estimating coverage in advance, which is exactly the error made in
 the first assessment of Route 1.
 
@@ -1120,7 +1120,7 @@ Raised by Giorgi, and it is a genuine methodological risk rather than a detail.
 The Stage A ranking (§3.8) measured extraction of **names only**. Adding a
 second field changes the task in four ways:
 
-1. **Input grows** by 26–48% on pages carrying links, so more of the context
+1. **Input grows** by 26-48% on pages carrying links, so more of the context
    window is consumed and chunk boundaries shift.
 2. **Output roughly doubles**, and runtime is governed by generation volume
    (r = 0.990, §3.9). Measured on BDEW: **92 s versus ~25 s**, a 3.7× increase.
@@ -1131,15 +1131,15 @@ second field changes the task in four ways:
 4. **Output is now structured objects** rather than a flat list of strings.
 
 The consequence: **the winning configuration for names may not win for
-name+URL.** There is a specific reason to expect movement in the ranking —
+name+URL.** There is a specific reason to expect movement in the ranking, 
 `qwen2.5-coder` is the code-specialised model and lost on names, but multi-field
 structured JSON is closer to what it was trained for. Its higher precision
-(0.982–0.985 throughout) may also matter more when a wrong URL is worse than a
+(0.982-0.985 throughout) may also matter more when a wrong URL is worse than a
 missing one.
 
 Assuming the Stage A winner transfers would be an unmeasured assumption at the
 centre of the results chapter. The grid should therefore be re-run with the
-name+URL schema before a winner is declared for the deliverable — which is also
+name+URL schema before a winner is declared for the deliverable, which is also
 the plan for hardware reasons (§3.9).
 
 **Ground truth does not need re-annotating.** Name annotations are unchanged,
@@ -1149,7 +1149,7 @@ accuracy the guideline asks for at zero annotation cost.
 
 ---
 
-## 3.11d Company-URL acquisition — complete option analysis
+## 3.11d Company-URL acquisition: complete option analysis
 
 Marco's requirement (2026-08-07, restated 2026-08-11) is that every extracted
 company must carry its website. Below is every approach considered, what each
@@ -1161,18 +1161,18 @@ print no company URL in their visible text.
 
 ### Discovery methods
 
-#### D1 — Direct extraction from the directory page *(VIABLE, in use)*
+#### D1: Direct extraction from the directory page *(VIABLE, in use)*
 
 The LLM reads the listing and returns `{name, url}` where the page shows a link.
 Requires link annotation in the cleaner, since text extraction discards `href`
 attributes (§3.10).
 
-- **Coverage:** 3 of 10 pages (050, 005, 009) at 95–98% within those pages.
-- **Cost:** +26–48% input tokens, ~3.7× latency (92 s vs 25 s on BDEW).
+- **Coverage:** 3 of 10 pages (050, 005, 009) at 95-98% within those pages.
+- **Cost:** +26-48% input tokens, ~3.7× latency (92 s vs 25 s on BDEW).
 - **Verified:** 42 companies returned, 40 with correct websites.
 - **Limit:** cannot produce what is not on the page. Seven pages return empty.
 
-#### D2 — Follow per-member profile pages *(VIABLE, highest value)*
+#### D2: Follow per-member profile pages *(VIABLE, highest value)*
 
 Most directories that appear link-free actually link each member to a profile
 page on the association's own site. That page carries the company's real
@@ -1185,7 +1185,7 @@ website, street, postcode, city and an email address.
 | 043 NMWP.NRW | 49 | 45 (92%) |
 | 025 German Water Partnership | 14 | 12 (86%) |
 | 012 BVMed | 50 | present (link on "Mehr lesen") |
-| 040 Medical Valley EMN | 20 | none — genuine outlier |
+| 040 Medical Valley EMN | 20 | none, genuine outlier |
 
 - **Coverage:** ~204 of the 218 companies previously classed as name-only.
 - **Cost:** one HTTP request per member; optionally one small model call
@@ -1193,12 +1193,12 @@ website, street, postcode, city and an email address.
 - **Verified:** `llama3.1:8b` returned all six fields correctly from an
   Automotive Nordwest profile in 13.5 s on the laptop, ~2 s expected on an A100.
 
-The link is carried differently per site — on the company name, on the logo's
-`alt` attribute, or on an adjacent "Mehr lesen" element — so discovery must
+The link is carried differently per site, on the company name, on the logo's
+`alt` attribute, or on an adjacent "Mehr lesen" element, so discovery must
 match **name → anchor text, image alt, or enclosing container**, not anchor
 text alone.
 
-#### D3 — Meta-search with `ddgs` *(VIABLE, free)*
+#### D3: Meta-search with `ddgs` *(VIABLE, free)*
 
 Python library querying DuckDuckGo and aggregating results. No API key, no
 cost. Suggested by Neovation, who used it previously with a GPT-4-mini
@@ -1219,21 +1219,21 @@ ATP Automotive Testing        -> de.wikipedia.org/...   wrong
 - **Cost:** free. Rate-limited, and it scrapes rather than using an official
   API, so it is a grey area contractually.
 - **Note:** it resolved `Erfinderclub Paderborn`, which domain construction
-  (D4) failed on — the two methods fail on different inputs and therefore
+  (D4) failed on, the two methods fail on different inputs and therefore
   compose well.
 
-#### D3b — `ddgs` results ranked by an LLM *(VIABLE, best for hard cases)*
+#### D3b: `ddgs` results ranked by an LLM *(VIABLE, best for hard cases)*
 
-Return the top 5–10 search results and let the model choose the company's own
+Return the top 5-10 search results and let the model choose the company's own
 site, using the network name and any description as context. This is
-Neovation's existing pattern. It fixes exactly the D3 failure above — a model
+Neovation's existing pattern. It fixes exactly the D3 failure above, a model
 recognises a Wikipedia article as not being the company's website.
 
 - **Cost:** one small model call per unresolved company.
 - **Risk:** hallucination is bounded, because the model *selects from a
   supplied list* rather than generating a URL.
 
-#### D4 — Domain construction from the company name *(VIABLE, cheap pre-pass)*
+#### D4: Domain construction from the company name *(VIABLE, cheap pre-pass)*
 
 Generate candidate domains (concatenated, hyphenated, first-two-words,
 first-word) with umlaut transliteration across `.de`, `.com`, `.net`, then
@@ -1246,7 +1246,7 @@ fetch each and keep one whose page contains the company name.
   `treuhand.de`).
 - **Cost:** free, no third-party service.
 
-#### D5 — Lookup in Neovation's company database *(VIABLE, blocked on access)*
+#### D5: Lookup in Neovation's company database *(VIABLE, blocked on access)*
 
 Offered by Neovation on 2026-08-11: link extracted names against their records
 locally and read the domain from whichever source has one.
@@ -1259,7 +1259,7 @@ locally and read the domain from whichever source has one.
   extracted names are ambiguous, which decides whether per-company address
   extraction is needed at all.
 
-#### D6 — Google Maps / Places API *(VIABLE, paid)*
+#### D6: Google Maps / Places API *(VIABLE, paid)*
 
 Listed in the project's own source review. Returns business websites reliably.
 Requires a billing account and is subject to quota; not tested. Retained as a
@@ -1270,21 +1270,21 @@ fallback behind the free routes.
 None of the discovery methods is trustworthy without a check, and every check
 below is free.
 
-- **V1 — Name on page.** Fetch the candidate URL and confirm the company name
+- **V1, Name on page.** Fetch the candidate URL and confirm the company name
   appears. Catches parked domains, squatters and wrong search hits. Weak when
   the leading token is generic; weight distinctive tokens higher.
-- **V2 — Site references the network.** Marco's suggestion (2026-08-11): a
+- **V2, Site references the network.** Marco's suggestion (2026-08-11): a
   genuine member frequently mentions the association or displays its logo.
   Strong positive signal, and independent of V1.
-- **V3 — Email domain agreement.** Where a profile page yields
+- **V3, Email domain agreement.** Where a profile page yields
   `info@atp-papenburg.de`, the domain corroborates `atp-papenburg.de`. Free,
   and available exactly where D2 applies.
 
 ### Rejected approaches
 
-#### R1 — Extract the address first, then search on name + address
+#### R1: Extract the address first, then search on name + address
 
-Marco's original proposal (2026-08-07). The reasoning is sound — a German
+Marco's original proposal (2026-08-07). The reasoning is sound, a German
 company name is unique only within a city, so name + city disambiguates.
 
 **Rejected on measurement:** full postal addresses appear **only on the pages
@@ -1292,17 +1292,17 @@ that already carry company links**. Of the seven link-free pages, none has a
 postcode or street; three carry a city, four carry nothing but the name. The
 chain cannot start where it is needed.
 
-#### R2 — Feed raw HTML to the model instead of cleaned text
+#### R2: Feed raw HTML to the model instead of cleaned text
 
 Would let the model see `href` attributes directly.
 
-**Rejected:** raw pages in this corpus run to 800 KB against 1,500–13,000
-tokens of cleaned text — a 10–40× increase that no 8k context can absorb, and
+**Rejected:** raw pages in this corpus run to 800 KB against 1,500-13,000
+tokens of cleaned text, a 10-40× increase that no 8k context can absorb, and
 chunking it would multiply cost accordingly. It also does not solve the
 problem: the href on a member entry is usually the *profile* URL, not the
 company's website, so the model would confidently return association URLs.
 
-#### R3 — Single stage covering directory and profile pages together
+#### R3: Single stage covering directory and profile pages together
 
 Concatenate the directory page and every member profile into one prompt.
 
@@ -1311,7 +1311,7 @@ association, far beyond any context window in use and requiring ~20 chunks with
 no accuracy benefit over handling profiles individually. It also destroys the
 one-company-per-call property that makes profile extraction reliable.
 
-#### R4 — Hand-written parsers per association
+#### R4: Hand-written parsers per association
 
 Deterministic and exact for any site it covers.
 
@@ -1321,13 +1321,13 @@ eliminate, and adopting it would undercut the central claim. Generic
 format-based extraction (postcode shape, outbound non-social link, email
 pattern) achieves the same result without site-specific code.
 
-#### R5 — Paid search APIs as the primary route
+#### R5: Paid search APIs as the primary route
 
 Google Custom Search, Serper.dev, Brave.
 
 **Rejected as primary, retained as last resort:** superseded by `ddgs`, which
 is free. An earlier assessment in this document priced ~15,000 lookups at
-$15–75 and treated cost as the deciding factor; with a free library available
+$15-75 and treated cost as the deciding factor; with a free library available
 the deciding factor is result quality, not price.
 
 ### Recommended pipeline
@@ -1358,7 +1358,7 @@ and 2026-08-13 (Hendro). Two independent requirements converge on one schema:
 - **Marco (07.08), restated by Yusif (12.08):** a German company name is unique
   only within a city, so Neovation's record matching needs a disambiguating
   attribute. Yusif: *"in case you are able to get any extra information apart
-  from the name — address, city, country"*, the later stage can resolve the URL
+  from the name, address, city, country"*, the later stage can resolve the URL
   from name plus that data.
 
 The schema is therefore:
@@ -1391,7 +1391,7 @@ name 42   url 40   street 2   postcode 0   city 2   phone 0   email 0
 **BDEW's listing prints no addresses, and the model left those fields empty
 rather than inventing plausible German ones.** This is the abstention behaviour
 the "never infer" rule targets, and it is the failure mode that would be
-invisible without checking — 42 fabricated postcodes would look entirely
+invisible without checking, 42 fabricated postcodes would look entirely
 reasonable in a spreadsheet.
 
 ### Implementation notes
@@ -1400,8 +1400,8 @@ reasonable in a spreadsheet.
   `companies: list[str]`. Names remain plain strings so **scoring and the
   scoring is unchanged**, and Stage A results stay comparable across all
   strategies.
-- Three response shapes are accepted and normalised — bare string,
-  `{name, url}`, and the full record — because the strategies are compared
+- Three response shapes are accepted and normalised, bare string,
+  `{name, url}`, and the full record, because the strategies are compared
   against each other and a parsing difference would surface as an apparent
   accuracy difference.
 - Constrained decoding requires a **second JSON schema**: forcing the
@@ -1414,13 +1414,13 @@ reasonable in a spreadsheet.
 
 ---
 
-## 3.11f Division of work and remaining obstacles (meetings 12–13 Aug)
+## 3.11f Division of work and remaining obstacles (meetings 12-13 Aug)
 
 ### The link problem became a data task, not a code task
 
 Hendro (13.08) settled the approach: the merged file needs **a new column
 holding the URL that opens the member list directly**, not the network
-homepage — *"we need to put the link where it directly opens the list"*.
+homepage, *"we need to put the link where it directly opens the list"*.
 
 Yusif and Diego own that column, produced with an AI first draft followed by
 manual verification. Yusif's framing: an LLM alone is not reliable enough for
@@ -1439,7 +1439,7 @@ manual pass.
 
 Yusif, with Marco's prior agreement: networks that publish no member list are
 skipped, because there is nothing to extract. He put the useful floor at
-**50–100 networks**, not 800. Coverage is therefore a reporting figure, not a
+**50-100 networks**, not 800. Coverage is therefore a reporting figure, not a
 target.
 
 ### Newly discovered obstacles
@@ -1447,10 +1447,10 @@ target.
 Hafiz's audit of the merged file's links found three failure classes beyond
 those in §3.1:
 
-1. **Links that cannot be opened at all** — dead or certificate-rejected.
-2. **Links whose destination does not match the network name** — the row and
+1. **Links that cannot be opened at all**: dead or certificate-rejected.
+2. **Links whose destination does not match the network name**: the row and
    the site disagree.
-3. **Directories with no member link anywhere** — not in the anchor text, not
+3. **Directories with no member link anywhere**: not in the anchor text, not
    in the logo. One page showed roughly 70 members with links on only a
    handful, the rest being plain images. These are true outliers with no route
    except search.
@@ -1461,7 +1461,7 @@ Hafiz reports Gemini Pro produces poor extraction with hallucinated links.
 Notably he found **Claude's free tier outperformed Gemini Pro** on link
 finding, and that supplying the URLs as plain strings in the prompt is cheaper
 than attaching a spreadsheet, because the file must be read first. He also
-moved to batches of 5–10 networks rather than one large run.
+moved to batches of 5-10 networks rather than one large run.
 
 Decision pending with Marco. If cloud is dropped, the thesis's local-model
 framing strengthens: the cloud comparison would then rest on Hafiz's
@@ -1478,8 +1478,8 @@ is ultimately for.
 
 ### Blocker
 
-CKL access was upgraded on 13.08 but the environment failed to start —
-*"Environment setup failed. Insufficient resources"* — placing the session in a
+CKL access was upgraded on 13.08 but the environment failed to start, 
+*"Environment setup failed. Insufficient resources"*, placing the session in a
 queue. GPU capacity is allocated, not reserved. Hendro and Hafiz additionally
 need account upgrades before they can assist.
 
@@ -1578,7 +1578,7 @@ same annotations, temperature 0:
 Ground truth is 296 companies. **Recall rose from 0.723 to 0.997.**
 
 Note that the annotated page is *larger* (+30% tokens) and split into *more*
-chunks (2 → 3), so this is not a chunking effect — the harder configuration
+chunks (2 → 3), so this is not a chunking effect, the harder configuration
 scored better.
 
 ### Mechanism
@@ -1613,7 +1613,7 @@ What remains comparable:
 - **tokens per second**, which normalises for input size and is the honest
   hardware measure.
 - **Accuracy across models and prompts within the GPU run**, which is what
-  RQ1–RQ3 actually ask.
+  RQ1-RQ3 actually ask.
 
 The laptop results should be reported as a separate, earlier configuration,
 not as the consumer-hardware arm of a matched pair. Claiming otherwise would
@@ -1635,7 +1635,7 @@ URLs (§3.10), and the address-availability limit above.
 
 ---
 
-## 3.13 Full benchmark grid on GPU hardware (2026-08-25) — primary results
+## 3.13 Full benchmark grid on GPU hardware (2026-08-25): primary results
 
 The complete Stage A grid finished on the shared A100 slice. This is the
 definitive result set for RQ1 to RQ3 and supersedes the laptop numbers in
@@ -1678,7 +1678,7 @@ Pooled by model:
 | qwen2.5-coder:7b | 0.970 | 0.825 | 0.856 | 31.1 | 6/180 |
 | gemma4:12b | 0.503 | 0.348 | 0.353 | 20.0 | 118/180 |
 
-### RQ1 — best configuration
+### RQ1: best configuration
 
 **`llama3.1:8b` + `zero_shot` + `prompt_only`, F1 0.981** (P 0.983, R 0.978),
 26 s/page, no failures in 30 runs. Per page:
@@ -1703,7 +1703,7 @@ measure nothing about variance and only cost wall-clock time. Report this as
 a reproducibility property, and note that repetitions would only become
 informative at non-zero temperature.
 
-### RQ2 — prompting, and a caution about aggregate means
+### RQ2: prompting, and a caution about aggregate means
 
 Pooled across the two working models:
 
@@ -1755,7 +1755,7 @@ on single-chunk pages with short member lists, which is why the laptop run
 precision is the best of the three (0.985), so the filtering stage does work.
 It removes correct answers along with wrong ones.
 
-### RQ3 — constrained decoding is nearly free, except when it is not
+### RQ3: constrained decoding is nearly free, except when it is not
 
 For llama and gemma, constrained decoding costs nothing measurable in either
 accuracy or latency. For **qwen it is catastrophic on large inputs**:
@@ -1778,7 +1778,7 @@ for llama in prompt-only mode), but it is not free and the cost is
 model-specific. A production system should keep a latency ceiling and fall
 back to prompt-only with repair.
 
-### gemma4:12b — runaway generation, not a code fault
+### gemma4:12b: runaway generation, not a code fault
 
 gemma4 failed **118 of 180 runs**. The diagnosis is unambiguous.
 
@@ -1888,8 +1888,8 @@ asked. **The spreadsheet is an accurate rendering of what was measured.**
 The tempting shortcut is to leave the benchmark alone and run the URL strategy
 only for the deliverable. That would be a methodological error, for the reason
 already set out in §3.11c: adding a second field changes the task. Input grows
-26–48%, output roughly doubles, chunk boundaries move, and the task becomes
-**relational** — the model must bind a URL to the correct company rather than
+26-48%, output roughly doubles, chunk boundaries move, and the task becomes
+**relational**: the model must bind a URL to the correct company rather than
 merely recognise a name. On pages where the link sits three lines below the
 name, that is a different skill.
 
@@ -1928,7 +1928,7 @@ llama and roughly double for record output, this is about two hours, not a
 re-run of the full grid.
 
 The three guideline strategies do **not** need re-running. Their numbers stand
-and answer RQ1–RQ3 as posed. This is an additional arm answering a fourth
+and answer RQ1-RQ3 as posed. This is an additional arm answering a fourth
 question: what does asking for the URL cost?
 
 ---
@@ -1955,7 +1955,7 @@ the page had any. It did not. Neither did six others:
 | 032 | InnoZent OWL | 0 |
 | 039 | Life Science Nord | 0 |
 | 040 | Medical Valley EMN | 0 |
-| 043 | NMWP.NRW | **0 — wrong, see below** |
+| 043 | NMWP.NRW | **0, wrong, see below** |
 | 050 | SPECTARIS | 298 |
 
 Page 043 was the anomaly. Its raw HTML carries 53 outbound links, roughly 33
@@ -2057,7 +2057,7 @@ until the strategy is re-run.
 ### The defect
 
 `_run_multi_stage()` stage 2 returns **records** (`[{"name": "Robert Bosch
-GmbH"}, ...]`), because `_salvage_json()` normalises every strategy's output
+GmbH"}...]`), because `_salvage_json()` normalises every strategy's output
 into record form. `multi_stage_validate()` then interpolated that list
 directly:
 
@@ -2126,7 +2126,7 @@ column). Each member falls into exactly one of four states:
 | `company_site` | the model returned a company website, and that domain is present in the cached page | none, done in one pass |
 | `unverified` | a URL was returned that is **not** in the page text | reject; the model constructed it |
 | `profile_only` | no company site in the listing, but the member is linked to a profile page on the association's own site | stage 2: one fetch per member |
-| `none` | the member name is plain text with no link of any kind | search or Impressum (§3.11d routes 3–5) |
+| `none` | the member name is plain text with no link of any kind | search or Impressum (§3.11d routes 3-5) |
 
 Across 459 extracted records:
 
@@ -2216,14 +2216,14 @@ The industry partner maintains a Scrapy-based scraper. Reviewing it supports
 the thesis's central claim rather than undermining it.
 
 **It is a single-site scraper.** Its one spider targets firmenregister.de with
-hardcoded selectors — `//tr[@valign="top" and @bgcolor]`, fixed cell positions
+hardcoded selectors, `//tr[@valign="top" and @bgcolor]`, fixed cell positions
 (`cells[0]`→info, `cells[1]`→address), a fixed query-parameter dictionary and
 ISO-8859-1 encoding. Re-targeting it to another site means writing a new spider.
 That is exactly the per-site engineering cost this thesis proposes to replace
 with a single generic LLM-based extractor. `middlewares.py` and `items.py` are
 unmodified Scrapy templates.
 
-**Convergent design — independent validation.** Their spider enumerates
+**Convergent design, independent validation.** Their spider enumerates
 16 Bundesländer × 26 letters to exhaust a paginated search:
 
 ```python
@@ -2231,14 +2231,14 @@ for bdl in self.bundeslaender:
     for ch in ascii_lowercase:
 ```
 
-This is the same technique arrived at independently for BDEW's `?letter=A–Z`
+This is the same technique arrived at independently for BDEW's `?letter=A-Z`
 index (§3.2). Their `MIN_EXPECTED_NUMBER_ROWS = 15` guard shares the instinct
 behind the alphabet-coverage completeness check (§3.3). Two teams reaching the
 same solutions is worth reporting as evidence the approach is sound rather than
 ad hoc.
 
 **Adopted from it.** Adaptive throttling, replacing a fixed 2.5 s delay: the
-pause now follows measured response latency (1–30 s, doubling after a failure),
+pause now follows measured response latency (1-30 s, doubling after a failure),
 so slow hosts get more room and fast ones are not crawled needlessly. Their
 `AUTOTHROTTLE` settings were the model.
 
@@ -2258,7 +2258,7 @@ naming the researcher, institution and contact address.
 **Database target.** `pipelines/pgsql.py` writes to `public.company (name,
 fr_url, logo_url, jurisdiction_code, registered_address, postalcode,
 registered_office, domain, keywords, mail, description, retrieved_at,
-retrieved_from)`. Note this does **not** match the ERD circulated by the team —
+retrieved_from)`. Note this does **not** match the ERD circulated by the team, 
 the diagram and the running code have diverged, which needs clarifying before
 the output CSV is finalised.
 
@@ -2278,9 +2278,9 @@ and the most expensive thing tried. It did not merely underperform: it was the
 worst configuration in the study, at 11× the runtime of the best.
 
 The mechanism is specific. Adding the validation stage raised llama's precision
-from 0.971 to 0.985 and collapsed recall from 0.945 to 0.619 — 70 names per
+from 0.971 to 0.985 and collapsed recall from 0.945 to 0.619, 70 names per
 page became 32. **The validation step deletes correct entries to appear
-confident.** At 7–8B scale the model cannot reliably distinguish "this looks
+confident.** At 7-8B scale the model cannot reliably distinguish "this looks
 uncertain" from "this is wrong", so a second opinion destroys information
 rather than refining it.
 
@@ -2297,7 +2297,7 @@ termination failure, not a defence of the strategy.
 Replaced once Hendro clarified (2026-07-31) that "generic multi-stage" meant
 staged retrieval, not narrated reasoning. Worth noting the incompatibility that
 surfaced: CoT emits prose before its JSON, so constrained decoding would have
-suppressed the reasoning and silently degraded it into a slower zero-shot —
+suppressed the reasoning and silently degraded it into a slower zero-shot, 
 that grid cell would have produced a meaningless number that looked valid.
 
 **Two-pass extraction (names, then URLs).** Rejected by Hendro on token cost and
@@ -2330,7 +2330,7 @@ document, so nothing was lost, but the assumption that a real browser always
 sees more than `requests` is false.
 
 **Candidate extraction from semantic tags only.** The ground-truth worksheet
-generator inspected links, list items, table cells and headings — but not
+generator inspected links, list items, table cells and headings, but not
 `<span>` or `<div>`. SPECTARIS renders every member name in a bare `<span>`, so
 146 of 287 names were missing from the worksheet. Discovered only because a
 human noticed entries absent every other line. Fixed by including those tags
@@ -2345,7 +2345,7 @@ unaffected (prediction and ground truth mangle identically) but the delivered
 
 **Extracting postal addresses to enable search-based URL resolution.** Marco's
 suggestion (2026-08-07), and sound in principle: name + city is unique under
-German company law where a bare name is not. Measurement killed it —
+German company law where a bare name is not. Measurement killed it, 
 **full addresses appear only on the pages that already carry company links**,
 i.e. exactly where they are not needed. Three further pages provide a city;
 four provide nothing but the name. See §3.11.
@@ -2370,10 +2370,10 @@ after scoring every page for directory-ness.
 
 ### Hardware
 
-**gemma4:12b on 16 GB.** 444.8 s versus 38.3 s for qwen on identical input —
+**gemma4:12b on 16 GB.** 444.8 s versus 38.3 s for qwen on identical input, 
 11.6× slower **and one fewer company found**. The wall clock measures paging,
 not inference. Excluded from the ablation grid; a full grid arm would take
-40–80 hours. This is a deployment finding worth stating plainly: at this
+40-80 hours. This is a deployment finding worth stating plainly: at this
 context size a 12B model is not slower on consumer hardware, it is unusable.
 
 **gemma4:12b on datacentre hardware.** Adding a GPU removed the paging problem
@@ -2398,7 +2398,7 @@ being switched on globally.
 
 ## 5. Limitations
 
-- Ground truth covers 10 pages; the guideline recommends 30–60. This is now
+- Ground truth covers 10 pages; the guideline recommends 30-60. This is now
   quantified rather than assumed: the entire zero-shot vs few-shot difference
   in §3.13 comes from **one page out of ten**, and nine pages are identical.
   A single page moves an aggregate F1 by roughly 0.03, which exceeds most of
@@ -2477,27 +2477,32 @@ gunzip -c neohub.tar.gz | strings | grep -c PaxHeader
 
 ## Labelling progress
 
-- [x] 009 BDEW — 66 names (letter-A unit)
-- [x] 004 Automotive Nordwest — 32
-- [x] 005 automotive thüringen — 128 (~30 edits; section headings at the end)
-- [x] 040 Medical Valley EMN — 22 (page-1 unit, 1 change)
-- [x] 043 NMWP.NRW — 48
-- [x] 025 German Water Partnership — 14 (member *landing* page, not a directory:
-      only new members plus prose. Useful as a low-density precision test —
+- [x] 009 BDEW, 66 names (letter-A unit)
+- [x] 004 Automotive Nordwest, 32
+- [x] 005 automotive thüringen, 128 (~30 edits; section headings at the end)
+- [x] 040 Medical Valley EMN, 22 (page-1 unit, 1 change)
+- [x] 043 NMWP.NRW, 48
+- [x] 025 German Water Partnership, 14 (member *landing* page, not a directory:
+      only new members plus prose. Useful as a low-density precision test, 
       47 candidates reduced to 14. Noise sources on one page: schema.org
       microdata (`Employee`, `Administrator`), nav links (`Satzung`), and an
       unrendered CMS placeholder (`{title}`).)
-- [x] 039 Life Science Nord — 51
-- [x] 032 InnoZent OWL — 79 (76 entries had a trailing `, City` stripped)
-- [x] 012 BVMed — 49 (page-1 unit; 113 candidates reduced to 49)
-- [x] 050 SPECTARIS — 296
+- [x] 039 Life Science Nord, 51
+- [x] 032 InnoZent OWL, 79 (76 entries had a trailing `, City` stripped)
+- [x] 012 BVMed, 49 (page-1 unit; 113 candidates reduced to 49)
+- [x] 050 SPECTARIS, 296
 
-**Ground truth complete: 785 companies across 10 pages.**
+**Ground truth complete: 761 companies across 10 pages.**
+
+(Counted from `data/ground_truth/*.json`, and it matches the per-page table
+below. An earlier draft of this line said 785, which was an arithmetic slip:
+the individual page counts were always right, only the total was wrong. Use
+761 in the paper.)
 
 Annotation effort worth reporting: the candidate extractor's recall varied
 sharply by site markup. On SPECTARIS it found only 161 of 287 names because
 member names sit in bare `<span>` elements, which the original tag list did not
-inspect — 146 names, over half the directory, were absent until a human noticed
+inspect, 146 names, over half the directory, were absent until a human noticed
 entries missing every other line. The extractor now includes `span`/`div`
 restricted to leaf elements. This is a second instance of manual annotation
 catching a systematic automated failure (see §3.3).

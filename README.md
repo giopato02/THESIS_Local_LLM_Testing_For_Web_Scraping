@@ -1,7 +1,7 @@
-# NeoHub — LLM Member-Company Extraction Pipeline
+# NeoHub: LLM Member-Company Extraction Pipeline
 
 Bachelor thesis, Giorgi Pataridze (`gpataridze@constructor.university`)
-Constructor University Bremen × Neovation GmbH — NeoHub, work package AP1.
+Constructor University Bremen × Neovation GmbH, NeoHub, work package AP1.
 
 ---
 
@@ -12,8 +12,8 @@ lists are a useful signal for NeoHub: a company that joins a technical
 association is demonstrably engaged with its industry, which makes it a
 plausible R&D partner. This project takes 73 such association web pages and
 extracts the member company names **using a local language model** instead of
-73 hand-written scrapers. It then benchmarks two models — `llama3.1:8b` and
-`qwen2.5-coder:7b` — on speed *and* accuracy, to answer whether a model small
+73 hand-written scrapers. It then benchmarks two models, `llama3.1:8b` and
+`qwen2.5-coder:7b`, on speed *and* accuracy, to answer whether a model small
 enough to run on a laptop is good enough for the job.
 
 Running locally matters: it is free, unlimited, and no company data leaves
@@ -58,7 +58,7 @@ curl -s http://localhost:11434/api/version
 
 ## 4. Running it, in order
 
-### Step 1 — build the URL list *(done)*
+### Step 1: build the URL list *(done)*
 
 ```bash
 .venv/bin/python build_urls.py
@@ -67,7 +67,7 @@ curl -s http://localhost:11434/api/version
 Merges the team's two spreadsheets into `data/urls_73.csv`:
 59 member-list URLs (Diego) + 14 innovation-club homepages (Yusif) = 73.
 
-### Step 2 — download the pages *(done)*
+### Step 2: download the pages *(done)*
 
 ```bash
 .venv/bin/python fetcher.py
@@ -77,9 +77,9 @@ Downloads all 73 and caches them in `results/html_cache/`. Polite: 2.5 s
 between requests, honest User-Agent, retries with backoff, `robots.txt`
 recorded. Writes `results/fetch_manifest.csv`.
 
-Re-running is free — cached pages are skipped. Use `--refetch` to force.
+Re-running is free, cached pages are skipped. Use `--refetch` to force.
 
-### Step 3 — build the answer key *(needs you)*
+### Step 3: build the answer key *(needs you)*
 
 ```bash
 .venv/bin/python make_ground_truth.py
@@ -99,7 +99,7 @@ When finished:
 This validates the worksheets and writes the `.json` answer keys the scorer
 reads. **Stage A cannot produce accuracy numbers until this is done.**
 
-### Step 4 — Stage A, the ablation
+### Step 4: Stage A, the ablation
 
 ```bash
 .venv/bin/python benchmark.py --stage a
@@ -108,10 +108,10 @@ reads. **Stage A cannot produce accuracy numbers until this is done.**
 Every combination of 2 models × 3 prompts × 2 JSON modes, on the 10 labelled
 pages, repeated 3×. About 300 runs, ~4 hours. Preview first with `--dry-run`.
 
-Safe to interrupt — progress is saved after every run and re-running the same
+Safe to interrupt, progress is saved after every run and re-running the same
 command resumes.
 
-### Step 5 — read the results
+### Step 5: read the results
 
 ```bash
 .venv/bin/python evaluate.py
@@ -120,7 +120,7 @@ command resumes.
 Prints a ranking and tells you the winning configuration, plus the exact
 command to run Stage B.
 
-### Step 6 — Stage B, scale the winner
+### Step 6: Stage B, scale the winner
 
 ```bash
 .venv/bin/python benchmark.py --stage b --models <winner> --prompt <winner> --json-mode <winner>
@@ -133,7 +133,7 @@ the actual company list for the team.
 
 ## 5. What each file does
 
-### The engine — used on every run
+### The engine: used on every run
 
 | File | Role |
 |---|---|
@@ -181,8 +181,8 @@ the actual company list for the team.
 2026-07-28), filtering happens at database-insert time, not during scraping:
 *"the scraping stage will take as much data as possible from the source, but
 then we will filter this data before storing them in the database."* The
-filter's verdict rides along as columns — `passes_filter`, `blacklist_hit`,
-`has_legal_form`, `suspected_false_positive` — so Neovation can apply the rule
+filter's verdict rides along as columns, `passes_filter`, `blacklist_hit`,
+`has_legal_form`, `suspected_false_positive`, so Neovation can apply the rule
 with a single `WHERE passes_filter = True`, and can audit what that discards
 before committing to it.
 
@@ -197,7 +197,7 @@ also keeps network time out of the latency measurement and avoids hammering
 
 **`num_ctx` is set explicitly.**
 Ollama defaults to a 4,096-token context and **silently discards anything
-longer — it never raises an error**. One page here cleans to 53,000 tokens.
+longer, it never raises an error**. One page here cleans to 53,000 tokens.
 Without setting this, the model would read the first fraction of a page,
 return a short list, and the whole benchmark would measure a truncation bug.
 
@@ -217,8 +217,8 @@ would punish the model for the rulebook's choices.
 
 **The legal-form whitelist is recorded but not enforced.**
 The rulebook requires every name to contain GmbH/AG/KG/UG. Many directories
-print bare brand names — EtherCAT lists thousands of members with almost no
-legal forms — so enforcing it would delete entire member lists. The pipeline
+print bare brand names, EtherCAT lists thousands of members with almost no
+legal forms, so enforcing it would delete entire member lists. The pipeline
 records `has_legal_form` per name and reports what enforcement would cost.
 
 **The blacklist uses naive substring matching, faithfully.**
@@ -235,9 +235,9 @@ Found while running the fetcher over all 73 URLs:
 
 - **6 dead links** (HTTP 404) in the associations spreadsheet.
 - **6 bot-blocked** (HTTP 403).
-- **8 JS-rendered shells** — the page returns 200 but the member list loads
+- **8 JS-rendered shells**: the page returns 200 but the member list loads
   via JavaScript and is absent from the HTML.
-- **Several wrong URLs** — pointing at homepages, news feeds, "about us"
+- **Several wrong URLs**: pointing at homepages, news feeds, "about us"
   pages or product-category taxonomies rather than member lists. Confirmed
   so far: `014`, `028`, `035`, `044`, `047`, `049`.
 
@@ -249,13 +249,13 @@ re-verification.
 
 ## 9. Troubleshooting
 
-**`cannot reach Ollama`** — start it: `ollama serve`
+**`cannot reach Ollama`**: start it: `ollama serve`
 
-**Benchmark seems stuck** — a 12B model on 16 GB swaps heavily and can take
-5+ minutes per page. The 7–8B models average ~25–45 s.
+**Benchmark seems stuck**: a 12B model on 16 GB swaps heavily and can take
+5+ minutes per page. The 7-8B models average ~25-45 s.
 
-**No accuracy scores in the results** — the worksheets are not finished. Run
+**No accuracy scores in the results**: the worksheets are not finished. Run
 `make_ground_truth.py --check` and confirm it reports 10/10.
 
-**Want to start the experiment over** — delete `results/benchmark_results.csv`
+**Want to start the experiment over**: delete `results/benchmark_results.csv`
 and `results/extractions/`. The HTML cache and ground truth are unaffected.

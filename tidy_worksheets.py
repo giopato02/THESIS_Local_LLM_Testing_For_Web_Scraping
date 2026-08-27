@@ -48,7 +48,7 @@ ADDRESS_NOISE = re.compile(
 
 def is_location_suffix(extra: str) -> bool:
     """Is the text trailing a shorter name purely a German location?"""
-    extra = extra.strip(" ,-–|")
+    extra = extra.strip(",--|")
     if not extra:
         return False
     # Ends in a federal state: "Düsseldorf Nordrhein-Westfalen", "Bayern".
@@ -59,7 +59,7 @@ def is_location_suffix(extra: str) -> bool:
 
 
 def tidy_lines(lines: list[str]) -> tuple[list[str], list[tuple[str, str]]]:
-    """Return (kept lines, [(removed, kept_twin), ...])."""
+    """Return (kept lines, [(removed, kept_twin)...])."""
     # Index the content lines by their exact text for prefix lookup.
     content = [l for l in lines if l.strip() and not l.startswith("#")]
     by_text = {l.strip(): True for l in content}

@@ -136,7 +136,7 @@ def build_runs(wb, runs: list[dict]):
 def build_summary(wb, runs: list[dict], n_runs: int):
     ws = wb.create_sheet("Summary", 0)
 
-    ws["A1"] = "NeoHub — Stage A benchmark results"
+    ws["A1"] = "NeoHub, Stage A benchmark results"
     ws["A1"].font = TITLE
     ws["A2"] = ("Local LLM comparison for member-company extraction from German "
                 "innovation-network websites")
@@ -319,7 +319,7 @@ def build_about(wb, runs: list[dict]):
                   "Innovation Network Websites"),
         ("Author", "Giorgi Pataridze, Constructor University Bremen "
                    "(gpataridze@constructor.university)"),
-        ("Project", "NeoHub AP1 — Neovation GmbH × Constructor University Bremen"),
+        ("Project", "NeoHub AP1, Neovation GmbH × Constructor University Bremen"),
         ("", ""),
         ("EXPERIMENT", ""),
         ("Design", "2 models × 3 prompt strategies × 2 JSON modes × 10 pages "
@@ -328,7 +328,7 @@ def build_about(wb, runs: list[dict]):
                        f"({hours:.1f} hours)"),
         ("Hardware", "Apple M4 MacBook, 16 GB RAM; models served locally by "
                      "Ollama 0.32.1"),
-        ("Decoding", "temperature 0, fixed seed 42, num_ctx 8192 — set "
+        ("Decoding", "temperature 0, fixed seed 42, num_ctx 8192, set "
                      "explicitly because Ollama defaults to 4096 and truncates "
                      "silently"),
         ("Repetitions", "Decoding is deterministic, so repetitions measure "
@@ -339,9 +339,9 @@ def build_about(wb, runs: list[dict]):
         ("", ""),
         ("METRICS", ""),
         ("Precision", "Of the names the model returned, the share that are "
-                      "real members — low precision means hallucination"),
+                      "real members, low precision means hallucination"),
         ("Recall", "Of the members actually on the page, the share the model "
-                   "found — low recall means omission"),
+                   "found, low recall means omission"),
         ("F1", "Harmonic mean of precision and recall"),
         ("Scored against", "Hand-annotated ground truth: 785 companies across "
                            "10 pages"),
@@ -356,11 +356,11 @@ def build_about(wb, runs: list[dict]):
         ("", ""),
         ("ANNOTATION RULES", ""),
         ("1", "Ground truth describes the cached page snapshot, not the live "
-              "website — many directories paginate"),
+              "website, many directories paginate"),
         ("2", "Location is excluded where the page puts it on a separate line; "
               "kept where the page prints it on the same line"),
         ("3", "Section headings, category labels and membership tiers excluded"),
-        ("4", "Testimonial and quote attributions excluded — 'Name, Role, "
+        ("4", "Testimonial and quote attributions excluded, 'Name, Role, "
               "Company' is not a directory entry"),
         ("5", "For paginated directories one page is the annotation unit "
               "(BDEW letter A; Medical Valley and BVMed page 1)"),
@@ -372,12 +372,12 @@ def build_about(wb, runs: list[dict]):
                                  "recalculate; values also guarantee the file "
                                  "renders correctly in previewers, which show "
                                  "uncached formula cells as blank"),
-        ("Every figure is derived", "from the 360 rows on the Runs sheet — "
+        ("Every figure is derived", "from the 360 rows on the Runs sheet, "
                                     "averages across the 3 repetitions of each "
                                     "configuration"),
         ("Source data", "results/benchmark_results.csv (360 rows), produced by "
                         "benchmark.py"),
-        ("Regenerate", "python make_xlsx.py — rebuilds this workbook from the "
+        ("Regenerate", "python make_xlsx.py, rebuilds this workbook from the "
                        "source CSV"),
     ]
 

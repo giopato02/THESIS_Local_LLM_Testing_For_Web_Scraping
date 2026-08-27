@@ -139,12 +139,12 @@ def build() -> None:
     setup(doc)
 
     # ---- Title -----------------------------------------------------------
-    h(doc, "NeoHub — Work Package 1: Unternehmensdatenbank", size=17)
+    h(doc, "NeoHub, Work Package 1: Unternehmensdatenbank", size=17)
     h(doc, "Documentation: LLM-based extraction of member companies from "
            "innovation-network websites", size=11, color=MUTED, space_before=2)
     meta(doc, "Author", "Giorgi Pataridze (Constructor University Bremen)")
     meta(doc, "Partner", "Neovation GmbH × Constructor University Bremen")
-    meta(doc, "Period covered", "July – August 2026")
+    meta(doc, "Period covered", "July - August 2026")
     para(doc, "Prepared using the documentation template supplied by Marco "
               "Sparovek on 11.08.2026. Every figure quoted was measured; the "
               "producing script is named in each Metrics section.",
@@ -155,9 +155,9 @@ def build() -> None:
     # ---- Task 1: extraction pipeline ------------------------------------
     section(
         doc,
-        date="26.07.2026 – 04.08.2026",
+        date="26.07.2026 - 04.08.2026",
         wp="1. Unternehmensdatenbank",
-        title="Task 1 — Generic LLM extraction pipeline and model comparison",
+        title="Task 1, Generic LLM extraction pipeline and model comparison",
         author="Giorgi Pataridze",
         task_type="Testing a solution (comparative evaluation)",
         goal_intro=(
@@ -199,7 +199,7 @@ def build() -> None:
         emerging=[
             "num_ctx is set explicitly to 8,192 and pages exceeding it are "
             "split into ~6,000-token chunks on line boundaries, with results "
-            "merged and deduplicated — chunking rather than truncation, so no "
+            "merged and deduplicated, chunking rather than truncation, so no "
             "member is lost silently.",
             "The benchmark loop iterates model-outermost, so each model is "
             "loaded once and stays resident for its entire half of the run.",
@@ -233,9 +233,9 @@ def build() -> None:
     # ---- Task 2: pagination ---------------------------------------------
     section(
         doc,
-        date="31.07.2026 – 01.08.2026",
+        date="31.07.2026 - 01.08.2026",
         wp="1. Unternehmensdatenbank",
-        title="Task 2 — Detecting and recovering truncated member lists",
+        title="Task 2, Detecting and recovering truncated member lists",
         author="Giorgi Pataridze",
         task_type="Addressing a risk (silent data loss)",
         goal_intro=(
@@ -254,7 +254,7 @@ def build() -> None:
         problem=[
             "Target state: the full membership of each association.",
             "Actual state: BDEW's snapshot contained 43 companies, all "
-            "beginning with the letter A — the directory is indexed A–Z across "
+            "beginning with the letter A, the directory is indexed A-Z across "
             "26 separate pages holding roughly 1,600 members. Medical Valley "
             "served 20 of about 280, across 14 JavaScript-driven pages with no "
             "URL variant. 24 of 53 usable pages showed pagination markers.",
@@ -263,12 +263,12 @@ def build() -> None:
         ],
         emerging=[
             "Two mechanisms were implemented separately because they require "
-            "different handling: URL-based pagination (?letter=A–Z, ?page=N, "
+            "different handling: URL-based pagination (?letter=A-Z, ?page=N, "
             "record ranges such as 0-50 / 51-100) is followed with plain HTTP "
             "requests; JavaScript pagination is driven by a headless browser "
             "that scrolls, clicks 'load more', and walks numbered page links.",
             "An initial keyword-based detector was replaced after it proved "
-            "wrong in both directions — it scored BDEW at zero because that "
+            "wrong in both directions, it scored BDEW at zero because that "
             "site paginates with ordinary URL links rather than JavaScript, "
             "and raised a false alarm on SPECTARIS from CMS boilerplate. The "
             "replacement measures alphabet coverage of member initials, which "
@@ -293,8 +293,8 @@ def build() -> None:
     )
 
     # ---- Task 3: URL acquisition ----------------------------------------
-    h(doc, "Task 3 — Acquiring company websites", size=13)
-    meta(doc, "Date", "06.08.2026 – 11.08.2026")
+    h(doc, "Task 3, Acquiring company websites", size=13)
+    meta(doc, "Date", "06.08.2026 - 11.08.2026")
     meta(doc, "Work Package", "1. Unternehmensdatenbank")
     meta(doc, "Author", "Giorgi Pataridze")
     meta(doc, "Type", "Delivering a new feature")
@@ -339,7 +339,7 @@ def build() -> None:
           ["Stage", "Method", "Cost", "Coverage / result"],
           [
               ["1", "LLM reads the directory page", "included in extraction",
-               "3 of 10 pages; 95–98% within those"],
+               "3 of 10 pages; 95-98% within those"],
               ["2", "Follow per-member profile pages", "1 request + small model call",
                "~204 of 218 remaining companies"],
               ["3", "Construct domain from name, verify", "free",
@@ -358,33 +358,33 @@ def build() -> None:
 
     para(doc, "Approaches considered and rejected", italic=True, color=MUTED)
     bullets(doc, [
-        ("Address first, then search on name + address —", "proposed because a "
+        ("Address first, then search on name + address, ", "proposed because a "
          "German company name is unique only within a city, which is correct. "
          "Rejected on measurement: postal addresses appear only on the pages "
          "that already carry company links. Of the seven link-free pages none "
          "has a postcode or street, so the chain cannot start where it is needed."),
-        ("Feed raw HTML to the model —", "would expose href attributes "
-         "directly, but raw pages here reach 800 KB against 1,500–13,000 tokens "
-         "of cleaned text, a 10–40× increase no context window absorbs. It also "
+        ("Feed raw HTML to the model, ", "would expose href attributes "
+         "directly, but raw pages here reach 800 KB against 1,500-13,000 tokens "
+         "of cleaned text, a 10-40× increase no context window absorbs. It also "
          "would not help: the href on a member entry is usually the profile "
          "URL, not the company website."),
-        ("One single stage covering directory and all profiles together —",
+        ("One single stage covering directory and all profiles together, ",
          "roughly 204 profiles at ~600 tokens each is ~122,000 tokens for one "
          "association, requiring about 20 chunks with no accuracy gain over "
          "handling profiles individually."),
-        ("Hand-written parsers per association —", "exact, but 300 networks "
+        ("Hand-written parsers per association, ", "exact, but 300 networks "
          "would need 300 parsers, each breaking on redesign. This is the "
          "per-site cost the project set out to remove. Generic format-based "
          "extraction (postcode shape, outbound non-social link, email pattern) "
          "achieves the same result without site-specific code."),
-        ("Paid search APIs as the primary route —", "superseded by ddgs, which "
+        ("Paid search APIs as the primary route, ", "superseded by ddgs, which "
          "is free. Retained only as a last resort."),
     ])
 
     h(doc, "Metrics", size=11, space_before=10)
     bullets(doc, [
         "Link preservation verified: llama3.1:8b returned 42 companies from "
-        "BDEW with 40 correct websites, at +26–48% input tokens and 92 s "
+        "BDEW with 40 correct websites, at +26-48% input tokens and 92 s "
         "against 25 s for names alone.",
         "Profile-page route verified: llama3.1:8b returned all six fields "
         "(name, website, street, postcode, city, email) correctly from an "
@@ -394,7 +394,7 @@ def build() -> None:
         "NMWP's 49, 86% of German Water Partnership's 14.",
         "Success criterion: a website is accepted only if fetching it confirms "
         "the company name appears on the page. Two further free checks are "
-        "available — whether the site references the network (suggested by "
+        "available, whether the site references the network (suggested by "
         "Marco Sparovek), and whether it agrees with the email domain from the "
         "profile page.",
     ])
@@ -412,19 +412,19 @@ def build() -> None:
     # ---- Open items ------------------------------------------------------
     h(doc, "Open items", size=13)
     bullets(doc, [
-        ("Hardware —", "Constructor Knowledge Labs has confirmed access to an "
-         "A100 80 GB node. The full three-model grid is estimated at 3–5 hours "
-         "there against 60–100 hours on the laptop, and gemma4:12b becomes "
+        ("Hardware, ", "Constructor Knowledge Labs has confirmed access to an "
+         "A100 80 GB node. The full three-model grid is estimated at 3-5 hours "
+         "there against 60-100 hours on the laptop, and gemma4:12b becomes "
          "usable: on 16 GB it runs 11.6× slower than a 7B model purely through "
          "memory swapping."),
-        ("Database access —", "Neovation offered on 11.08.2026 to link "
+        ("Database access, ", "Neovation offered on 11.08.2026 to link "
          "extracted names against their records. This needs an export or query "
-         "endpoint, and would also measure how many names are ambiguous — the "
+         "endpoint, and would also measure how many names are ambiguous, the "
          "figure that decides whether per-company address extraction is "
          "required at all."),
-        ("Outlier —", "Medical Valley EMN is the one directory with neither "
+        ("Outlier, ", "Medical Valley EMN is the one directory with neither "
          "company links nor per-member profile pages: 20 companies reachable "
-         "only through stages 3–5."),
+         "only through stages 3-5."),
     ])
 
     doc.save(OUT)
