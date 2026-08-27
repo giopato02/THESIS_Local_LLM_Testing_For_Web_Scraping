@@ -29,11 +29,11 @@ we use the standard experimental pattern: ablate small, then scale the winner.
 THREE THINGS IN HERE THAT ARE EASY TO GET WRONG
 --------------------------------------------------------------------------
 1. MODEL-OUTERMOST LOOPING.
-   Your two models are 4.7 GB and 4.9 GB and cannot both sit in 16 GB of RAM
-   at once. If the loop switched models often, Ollama would evict and reload
-   from disk every time -- and you would be timing disk I/O, not inference.
-   So the outermost loop is the model: everything for Qwen finishes before
-   Llama is loaded once.
+   The three models are 4.7 GB, 4.9 GB and 7.6 GB and cannot sit in 16 GB of
+   RAM together. If the loop switched models often, Ollama would evict and
+   reload from disk every time -- and you would be timing disk I/O, not
+   inference. So the outermost loop is the model: everything for one model
+   finishes before the next is loaded.
 
 2. RESUMABILITY.
    A four-hour run will get interrupted -- a closed lid, a Ctrl-C, a crash.

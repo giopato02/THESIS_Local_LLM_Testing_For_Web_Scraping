@@ -333,9 +333,10 @@ def build_about(wb, runs: list[dict]):
                      "silently"),
         ("Repetitions", "Decoding is deterministic, so repetitions measure "
                         "latency variance, not output variance"),
-        ("Model order", "The loop is model-outermost: the two models are 4.7 GB "
-                        "and 4.9 GB and cannot both stay resident in 16 GB, so "
-                        "alternating them would time disk reloads"),
+        ("Model order", "The loop is model-outermost: the three models are "
+                        "4.7 GB, 4.9 GB and 7.6 GB and cannot stay resident "
+                        "together in 16 GB, so alternating them would time "
+                        "disk reloads"),
         ("", ""),
         ("METRICS", ""),
         ("Precision", "Of the names the model returned, the share that are "
@@ -343,7 +344,7 @@ def build_about(wb, runs: list[dict]):
         ("Recall", "Of the members actually on the page, the share the model "
                    "found, low recall means omission"),
         ("F1", "Harmonic mean of precision and recall"),
-        ("Scored against", "Hand-annotated ground truth: 785 companies across "
+        ("Scored against", "Hand-annotated ground truth: 761 companies across "
                            "10 pages"),
         ("Scored before filtering", "Accuracy compares RAW model output to "
                                     "ground truth. The Neovation name filter "

@@ -174,13 +174,15 @@ def build() -> None:
              "costs."),
         ],
         intended=[
-            "Build a five-stage pipeline: fetch and cache the page, strip HTML "
-            "to plain text, send the text to a local model via Ollama, apply "
-            "the Neovation name filter, and log the result.",
-            "Compare two models (llama3.1:8b, qwen2.5-coder:7b) against three "
-            "prompting strategies (zero-shot, few-shot schema, generic "
-            "multi-stage) and two JSON modes, on ten websites, repeated three "
-            "times: 360 runs.",
+            "Build a four-stage pipeline: fetch and cache the page, strip HTML "
+            "to plain text while preserving outbound links, send the text to a "
+            "local model via Ollama, and score the result. Name filtering is "
+            "deliberately excluded: per the meeting of 2026-07-28 it belongs at "
+            "database-insert time, not during extraction.",
+            "Compare three models (llama3.1:8b, qwen2.5-coder:7b, gemma4:12b) "
+            "against three prompting strategies (zero-shot, few-shot schema, "
+            "generic multi-stage) and two JSON modes, on ten websites, repeated "
+            "three times: 540 runs.",
             "Score against a manually annotated ground truth so that accuracy, "
             "not merely output volume, can be measured.",
         ],
@@ -192,9 +194,10 @@ def build() -> None:
             "the corpus cleans to 53,304 tokens, so most of it would have been "
             "discarded invisibly and the entire comparison would have measured "
             "a truncation defect rather than model capability.",
-            "Second issue: the two models occupy 4.7 GB and 4.9 GB and cannot "
-            "both remain resident in 16 GB of RAM. Alternating them between "
-            "runs would have measured disk reload time instead of inference.",
+            "Second issue: the models occupy 4.7 GB, 4.9 GB and 7.6 GB and "
+            "cannot remain resident together in 16 GB of RAM. Alternating them "
+            "between runs would have measured disk reload time instead of "
+            "inference.",
         ],
         emerging=[
             "num_ctx is set explicitly to 8,192 and pages exceeding it are "
@@ -208,7 +211,7 @@ def build() -> None:
             "latency never enters the measurement.",
         ],
         metrics=[
-            "Precision, recall and F1 per configuration, scored against 785 "
+            "Precision, recall and F1 per configuration, scored against 761 "
             "hand-annotated company names across ten pages.",
             "Result: llama3.1:8b with few-shot schema prompting achieved "
             "F1 = 0.957 (precision 0.971, recall 0.945) at 56 s per page. "

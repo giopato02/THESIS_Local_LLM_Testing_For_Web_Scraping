@@ -299,22 +299,18 @@ def write_companies(rows: list[dict]) -> None:
     """
     Emit the extracted company list, shaped for Rayen's UDB schema.
 
-    IMPORTANT -- this ships EVERY extracted name, not the filtered subset.
-
-    Per Marco (meeting 2026-07-28): "the scraping stage will take as much data
-    as possible from the source, but then we will filter this data before
-    storing them in the database." The Neovation filter is a load-time concern,
-    not a scrape-time one, so removing names here would destroy data the team
-    expects to receive.
-
-    Instead the filter's verdict travels alongside each name as columns:
-    passes_filter / blacklist_hit / has_legal_form / suspected_false_positive.
-    Neovation can apply the rule at insert time with a single WHERE clause,
-    and can audit what it would discard before committing to it.
+    This ships EVERY extracted name, unfiltered. Per Marco (meeting
+    2026-07-28): "the scraping stage will take as much data as possible from
+    the source, but then we will filter this data before storing them in the
+    database." Filtering is a load-time concern, so removing names here would
+    destroy data the team expects to receive. The Neovation filter module was
+    removed from this pipeline entirely on 2026-08-14.
 
     Columns map onto the ERD: company_name -> COMPANIES.name, source_url and
     source_association -> SOURCE, captured_at and content_hash ->
-    SOURCE_CAPTURE.
+    SOURCE_CAPTURE. Website and contact fields are populated only by the
+    record-returning strategies (--arm url); the name-only strategies leave
+    them empty by design.
     """
     import fetcher   # local import: only needed for the cache hash
 
@@ -331,6 +327,7 @@ def write_companies(rows: list[dict]) -> None:
             best_by_url[row["url_id"]] = row
 
     out_rows = []
+    seen: set[tuple[str, str]] = set()
     for row in best_by_url.values():
         path = EXTRACTIONS_DIR / f"{row['run_id']}.json"
         if not path.exists():
@@ -339,14 +336,22 @@ def write_companies(rows: list[dict]) -> None:
         cache = fetcher.cache_path(row["url"])
         content_hash = cache.stem if cache.exists() else ""
 
-        # The audit log holds one entry per extracted name with the filter's
-        # verdict already attached, so we can ship everything and annotate it.
-        for d in data.get("audit", []):
-            if d["reason"] == "duplicate":
+        # records is populated for every strategy; the name-only ones simply
+        # leave the optional fields empty. Older extraction files predate the
+        # records field, so fall back to the bare name list.
+        records = data.get("records") or [{"name": n} for n in data.get("raw", [])]
+
+        for rec in records:
+            name = (rec.get("name") or "").strip()
+            if not name:
+                continue
+            key = (row["url_id"], name.casefold())
+            if key in seen:
                 continue        # same name twice on one page is noise, not data
+            seen.add(key)
             out_rows.append({
-                "company_name_raw": d["original"],
-                "company_name_clean": d["cleaned"] or d["original"],
+                "company_name": name,
+                "company_website": rec.get("url", ""),
                 "source_association": row["org_name"],
                 "source_url": row["url"],
                 "source_kind": "association_member_list",
@@ -354,30 +359,30 @@ def write_companies(rows: list[dict]) -> None:
                 "content_hash": content_hash,
                 "extracted_by_model": row["model_name"],
                 "prompt_technique": row["prompt_technique"],
-                # --- Neovation filter verdict, for use at DB-insert time ---
-                "passes_filter": d["kept"],
-                "blacklist_hit": d["blacklist_hit"],
-                "has_legal_form": d["has_legal_form"],
-                "suspected_false_positive": d["suspected_false_positive"],
+                "street": rec.get("street", ""),
+                "postcode": rec.get("postcode", ""),
+                "city": rec.get("city", ""),
+                "phone": rec.get("phone", ""),
+                "email": rec.get("email", ""),
             })
 
-    fields = ["company_name_raw", "company_name_clean", "source_association",
-              "source_url", "source_kind", "captured_at", "content_hash",
-              "extracted_by_model", "prompt_technique", "passes_filter",
-              "blacklist_hit", "has_legal_form", "suspected_false_positive"]
+    if not out_rows:
+        print("\n  companies -> nothing to write (no extraction files matched)")
+        return
+
+    fields = list(out_rows[0].keys())
     with open(config.COMPANIES_CSV, "w", newline="", encoding="utf-8") as fh:
         writer = csv.DictWriter(fh, fieldnames=fields)
         writer.writeheader()
         writer.writerows(out_rows)
 
-    unique = len({r["company_name_clean"].casefold() for r in out_rows})
-    passing = sum(1 for r in out_rows if r["passes_filter"])
+    unique = len({r["company_name"].casefold() for r in out_rows})
+    with_site = sum(1 for r in out_rows if r["company_website"])
     print(f"\n  companies -> {config.COMPANIES_CSV}")
     print(f"              {len(out_rows)} rows (ALL extracted, unfiltered), "
           f"{unique} unique, {len(best_by_url)} sources")
-    print(f"              {passing} would pass the Neovation filter "
-          f"({len(out_rows)-passing} flagged for removal at insert time)")
-
+    print(f"              {with_site} carry a company website "
+          f"({with_site / len(out_rows) * 100:.0f}%)")
 
 
 def main() -> None:

@@ -302,8 +302,8 @@ replaced with final figures from `evaluate.py` once the run completes.*
 repetitions. Each (model, prompt, JSON mode) cell is a block of 30 runs.
 
 **Execution order is model-outermost, and this is a hardware constraint rather
-than a stylistic choice.** The two models occupy 4.7 GB and 4.9 GB and cannot
-both be resident in 16 GB alongside an 8k KV cache. Alternating them would make
+than a stylistic choice.** The three models occupy 4.7 GB, 4.9 GB and 7.6 GB
+and cannot be resident together in 16 GB alongside an 8k KV cache. Alternating them would make
 Ollama evict and reload weights from disk between runs, so the recorded latency
 would measure disk I/O rather than inference. Pinning the model for its entire
 180-run half removes that confound. A consequence worth anticipating when

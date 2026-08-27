@@ -139,7 +139,7 @@ OPTIONAL_MODELS = ["gemma4:12b"]
 TEMPERATURE = 0.0     # deterministic: this is an extraction task, not creative
 SEED = 42
 # Keep the model resident so we never time a cold reload. The benchmark loop
-# MUST iterate model-outermost; on 16 GB the two models cannot coexist.
+# MUST iterate model-outermost; on 16 GB the three models cannot coexist.
 KEEP_ALIVE = "10m"
 
 JSON_MODES = ["constrained", "prompt_only"]

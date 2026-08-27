@@ -1,261 +1,360 @@
-# NeoHub: LLM Member-Company Extraction Pipeline
+# NeoHub: local-LLM extraction of company information from innovation networks
 
 Bachelor thesis, Giorgi Pataridze (`gpataridze@constructor.university`)
-Constructor University Bremen × Neovation GmbH, NeoHub, work package AP1.
+Constructor University Bremen x Neovation GmbH, NeoHub, work package AP1.
+Supervised by Prof. Hendro Wicaksono.
+
+**Comparative Evaluation of Local LLM Models and Generic Prompt Strategies for
+Extracting Company Information from Innovation Network Websites**
 
 ---
 
-## 1. What this does, in one paragraph
+## 1. What this does
 
-German industry associations publish lists of their member companies. Those
-lists are a useful signal for NeoHub: a company that joins a technical
-association is demonstrably engaged with its industry, which makes it a
-plausible R&D partner. This project takes 73 such association web pages and
-extracts the member company names **using a local language model** instead of
-73 hand-written scrapers. It then benchmarks two models, `llama3.1:8b` and
-`qwen2.5-coder:7b`, on speed *and* accuracy, to answer whether a model small
-enough to run on a laptop is good enough for the job.
+German industry associations and innovation networks publish lists of their
+member companies. Those lists are a useful signal for NeoHub: a company that
+joins a technical association is demonstrably engaged with its industry, which
+makes it a plausible R&D partner.
 
-Running locally matters: it is free, unlimited, and no company data leaves
-the machine.
+This project extracts member company names, websites and contact details from
+those directories using local language models instead of one hand-written
+scraper per site. Every site is laid out differently, so a generic prompt-based
+extractor is the thing being tested.
+
+The study compares **three local models** and **three prompting strategies**,
+scored against hand-labelled ground truth:
+
+| Model | Size | Result |
+|---|---|---|
+| `llama3.1:8b` | 4.9 GB | Best overall, F1 0.981 |
+| `qwen2.5-coder:7b` | 4.7 GB | Code-specialised; strong precision, weaker recall |
+| `gemma4:12b` | 7.6 GB | Largest, and the negative result: failed 118 of 180 runs |
+
+The research questions are about **which model and which prompt** do this job
+best, and what that costs in time and reliability. Parameter count turned out
+to predict neither speed nor quality: the 12B model placed last on every
+strategy and was also the slowest.
+
+Running locally matters: it is free, unlimited, reproducible, and no data
+leaves the machine.
 
 ---
 
 ## 2. The pipeline
 
 ```
-  1 FETCH          2 CLEAN            3 EXTRACT        4 FILTER        5 EVALUATE
-  download    →    strip junk    →    ask the LLM  →   Neovation   →   score and
-  + cache          from HTML          for names        rulebook        report
+  1 FETCH           2 CLEAN             3 EXTRACT          4 EVALUATE
+  download     ->   strip junk,    ->   ask the model  ->  score against
+  + cache           keep links          for JSON           ground truth
 
-  fetcher.py       cleaner.py         extractor.py     neovation_      benchmark.py
-                                      prompts.py       filter.py       evaluate.py
+  fetcher.py        cleaner.py          extractor.py       benchmark.py
+  paginate.py                           prompts.py         evaluate.py
+  browser_fetcher.py
 
-  800 KB HTML      3,000 words        ["Bosch GmbH",   ["Bosch",       "Qwen: 24s,
-                   plain text          "Siemens AG"]    "Siemens"]      F1 0.91"
+  800 KB HTML       4,200 words         [{"name": "2mag    "llama3.1 zero-shot
+                    with <url>           AG", "url":        F1 0.981, 26 s"
+                    markers inline       "..."}]
 ```
+
+Names are reported exactly as extracted. **No filtering is applied.** Neovation
+applies their company-name rulebook at database-insert time (Marco, meeting
+2026-07-28), so filtering here would discard data the team expects to receive
+and would penalise the model for a downstream rule.
 
 ---
 
-## 3. Setup
+## 3. Prompt strategies
 
-Requires Python 3 and [Ollama](https://ollama.com) running locally.
+Selected with `benchmark.py --arm`:
+
+| arm | strategies | returns |
+|---|---|---|
+| `guideline` | `zero_shot`, `few_shot_schema`, `generic_multi_stage` | names only |
+| `url` | `zero_shot_full_record`, `few_shot_full_record`, `multi_stage_full_record` | name + website + street + postcode + city + phone + email |
+| `url_ablation` | `few_shot_with_url` | name + website only |
+
+The `guideline` arm is P1/P2/P3 from the supervisor's structure guideline and
+answers RQ1 to RQ3. The `url` arm mirrors it one-for-one, so the two are
+directly comparable and the question "does the ranking survive asking for a
+website?" can be answered per strategy rather than only in aggregate.
+
+Each strategy runs under two **JSON modes**:
+
+- `prompt_only`: the prompt asks for JSON, and a repair layer fixes markdown
+  fences or trailing prose. How often repair is needed is itself a result.
+- `constrained`: the schema is handed to Ollama, which restricts sampling so
+  only schema-valid output is possible.
+
+---
+
+## 4. Setup
+
+Requires Python 3.9+ and [Ollama](https://ollama.com).
 
 ```bash
 python3 -m venv .venv
-.venv/bin/pip install requests beautifulsoup4 lxml ollama pandas matplotlib
-ollama pull qwen2.5-coder:7b
+.venv/bin/pip install requests beautifulsoup4 lxml ollama pandas \
+    matplotlib openpyxl python-docx ddgs
+
 ollama pull llama3.1:8b
+ollama pull qwen2.5-coder:7b
+ollama pull gemma4:12b          # ~17 GB for all three
 ```
 
-Check Ollama is up:
+`gpu_setup.sh` does all of this on a fresh GPU node and is safe to re-run:
+completed runs are skipped, so an interrupted grid resumes where it stopped.
 
-```bash
-curl -s http://localhost:11434/api/version
-```
+Two traps worth knowing:
+
+- **`ddgs` needs Python 3.9+.** On an older interpreter the whole `pip install`
+  line aborts and nothing gets installed. Drop it if the search route is not
+  needed.
+- **Verify Ollama is on the GPU before trusting any timing.** It falls back to
+  CPU silently, which looks like a working run producing useless numbers.
+  `ollama ps` must report `100% GPU`.
 
 ---
 
-## 4. Running it, in order
+## 5. Running it
 
-### Step 1: build the URL list *(done)*
-
-```bash
-.venv/bin/python build_urls.py
-```
-
-Merges the team's two spreadsheets into `data/urls_73.csv`:
-59 member-list URLs (Diego) + 14 innovation-club homepages (Yusif) = 73.
-
-### Step 2: download the pages *(done)*
+### Build the URL list and download the pages
 
 ```bash
-.venv/bin/python fetcher.py
+.venv/bin/python build_urls.py      # -> data/urls_73.csv
+.venv/bin/python fetcher.py         # -> results/html_cache/
 ```
 
-Downloads all 73 and caches them in `results/html_cache/`. Polite: 2.5 s
-between requests, honest User-Agent, retries with backoff, `robots.txt`
-recorded. Writes `results/fetch_manifest.csv`.
+Polite: 2.5 s between requests, honest User-Agent, retries with backoff.
+Re-running is free; cached pages are skipped.
 
-Re-running is free, cached pages are skipped. Use `--refetch` to force.
-
-### Step 3: build the answer key *(needs you)*
+Paginated directories need more than one fetch:
 
 ```bash
-.venv/bin/python make_ground_truth.py
+.venv/bin/python paginate.py         # ?letter=A-Z, numbered pages, 0-50 ranges
+.venv/bin/python browser_fetcher.py  # JavaScript-rendered lists
 ```
 
-Generates ten worksheets in `data/ground_truth/`. Each has **Section A**
-(likely member companies) and **Section B** (probable page furniture,
-ignored). Delete wrong lines from A, rescue anything real from B, and add
-members the guesses missed by checking the live page.
-
-When finished:
+### Build the answer key
 
 ```bash
-.venv/bin/python make_ground_truth.py --check
+.venv/bin/python make_ground_truth.py          # writes worksheets
+.venv/bin/python make_ground_truth.py --check  # validates -> .json answer keys
 ```
 
-This validates the worksheets and writes the `.json` answer keys the scorer
-reads. **Stage A cannot produce accuracy numbers until this is done.**
+Each worksheet has Section A (likely members) and Section B (probable page
+furniture). Delete wrong lines from A, rescue anything real from B, and add
+members the guesses missed. **Accuracy cannot be scored until this is done.**
 
-### Step 4: Stage A, the ablation
+Current ground truth: **761 companies across 10 pages.**
+
+### Run the benchmark
+
+`config.MODELS` lists only llama and qwen, because `gemma4:12b` cannot share
+16 GB of laptop RAM with them. **Always name all three explicitly**, or you
+silently get a two-model grid:
 
 ```bash
-.venv/bin/python benchmark.py --stage a
+.venv/bin/python benchmark.py --stage a --arm guideline \
+    --models llama3.1:8b qwen2.5-coder:7b gemma4:12b --reps 1
 ```
 
-Every combination of 2 models × 3 prompts × 2 JSON modes, on the 10 labelled
-pages, repeated 3×. About 300 runs, ~4 hours. Preview first with `--dry-run`.
+Useful flags: `--dry-run` (show the plan), `--pages 043 050` (restrict pages),
+`--prompt <name>` (one strategy), `--json-mode`, `--limit`.
 
-Safe to interrupt, progress is saved after every run and re-running the same
+Repetitions default to 3, which is wasted time here: output is deterministic
+at temperature 0 with a fixed seed, and measured F1 standard deviation across
+three repetitions was exactly 0.000 on all ten pages. Use `--reps 1` unless
+temperature is changed.
+
+Safe to interrupt. Progress is saved after every run and re-running the same
 command resumes.
 
-### Step 5: read the results
+### Read the results
 
 ```bash
-.venv/bin/python evaluate.py
+.venv/bin/python evaluate.py           # rankings, charts, LaTeX tables
+.venv/bin/python dump_extractions.py   # raw per-company output, CSV + xlsx
+.venv/bin/python export_deliverable.py # the workbook Neovation receives
 ```
-
-Prints a ranking and tells you the winning configuration, plus the exact
-command to run Stage B.
-
-### Step 6: Stage B, scale the winner
-
-```bash
-.venv/bin/python benchmark.py --stage b --models <winner> --prompt <winner> --json-mode <winner>
-```
-
-Runs the best setup across every page that downloaded successfully, producing
-the actual company list for the team.
 
 ---
 
-## 5. What each file does
+## 6. What each file does
 
-### The engine: used on every run
-
-| File | Role |
-|---|---|
-| `config.py` | Every tunable setting: models, `num_ctx`, the ~70 blacklist terms, timeouts, paths. **Change behaviour here, not in the other files.** |
-| `cleaner.py` | HTML → plain text. Strips scripts, menus, cookie banners, images. Splits oversized pages into chunks. |
-| `prompts.py` | The three prompt techniques being compared. |
-| `extractor.py` | Talks to Ollama. Times the call, captures token counts, repairs malformed JSON. |
-| `neovation_filter.py` | Applies the team's rulebook and logs every deletion with its cause. |
-
-### One-time scripts
+### The engine, used on every run
 
 | File | Role |
 |---|---|
-| `build_urls.py` | Builds `data/urls_73.csv` from the two spreadsheets. |
-| `fetcher.py` | Downloads and caches the 73 pages. |
+| `config.py` | Every tunable setting: models, `num_ctx`, temperature, seed, chunking, JSON schemas, paths. Change behaviour here. |
+| `cleaner.py` | HTML to plain text. Strips scripts and menus, and writes outbound link URLs inline as `Name <https://url>` so the model can return a website. |
+| `prompts.py` | All prompt strategies, grouped into arms. |
+| `extractor.py` | Talks to Ollama. Times calls, captures token counts, repairs malformed JSON, drives the multi-stage strategies. |
+| `benchmark.py` | Runs the experiment grid, scores it, writes one CSV row per run. |
+
+### Data acquisition
+
+| File | Role |
+|---|---|
+| `build_urls.py` | Builds `data/urls_73.csv` from the team's spreadsheets. |
+| `fetcher.py` | Downloads and caches pages. |
+| `paginate.py` | Follows URL-based pagination so the whole member list is captured, not page one. |
+| `browser_fetcher.py` | Headless-browser fetching for JavaScript-rendered lists. |
+| `proxy_fetch.py` | Retries 403-blocked pages through rotating proxies. |
+| `find_member_pages.py` | Turns a network homepage into a member-list URL. |
+| `survey_finalv1.py` | Health-checks all 291 verified URLs in the Finalv1 sheet. |
+| `url_health.py` | Shareable report of which collected URLs actually work. |
+
+### Ground truth and inspection
+
+| File | Role |
+|---|---|
 | `make_ground_truth.py` | Generates labelling worksheets; `--check` converts them to answer keys. |
+| `tidy_worksheets.py` | Removes name+location duplicates from worksheets. |
+| `check_completeness.py` | Detects truncated member lists via alphabet coverage. |
+| `show_page.py` | Prints the cleaned text of a cached page, exactly what the model receives. |
 
-### The experiment
+### Output
 
 | File | Role |
 |---|---|
-| `benchmark.py` | Runs the experiment grid, writes one CSV row per run. |
-| `evaluate.py` | Aggregates results into rankings, charts, LaTeX tables and the company list. |
+| `evaluate.py` | Aggregates results into rankings, charts and LaTeX tables. |
+| `dump_extractions.py` | Flattens every run's raw output into one inspectable CSV and workbook. |
+| `make_xlsx.py` | Formatted workbook of the Stage A run. |
+| `export_deliverable.py` | The deliverable workbook in the layout Hendro specified. |
+| `make_documentation.py` | Work-package documentation in Neovation's template. |
 
 ---
 
-## 6. Output files
+## 7. Output files
 
 | Path | Contents |
 |---|---|
-| `results/html_cache/` | Raw downloaded HTML, one file per URL (named by hash). |
-| `results/fetch_manifest.csv` | Per-URL download outcome, size, token estimate, failure reason. |
-| `results/benchmark_results.csv` | **The thesis dataset.** One row per run. |
-| `results/extractions/*.json` | The actual names each run produced, so results can be re-scored without re-running. |
-| `results/extracted_companies.csv` | **The deliverable for Neovation.** Mapped to the UDB schema. |
-| `results/filter_impact.txt` | What the filter removed, and its suspected false positives. |
-| `results/charts/*.png` | Latency and accuracy charts. |
-| `results/results_tables.tex` | LaTeX table for the thesis. |
-
-`extracted_companies.csv` maps onto Rayen's ERD: `company_name_clean` →
-`COMPANIES.name`; `source_url` / `source_association` → `SOURCE`;
-`captured_at` / `content_hash` → `SOURCE_CAPTURE`.
-
-**It contains every extracted name, unfiltered.** Per Marco (meeting
-2026-07-28), filtering happens at database-insert time, not during scraping:
-*"the scraping stage will take as much data as possible from the source, but
-then we will filter this data before storing them in the database."* The
-filter's verdict rides along as columns, `passes_filter`, `blacklist_hit`,
-`has_legal_form`, `suspected_false_positive`, so Neovation can apply the rule
-with a single `WHERE passes_filter = True`, and can audit what that discards
-before committing to it.
+| `results/benchmark_results.csv` | **The thesis dataset.** One row per run: timing, token counts, precision/recall/F1, URL metrics. |
+| `results/extractions/*.json` | The raw text every model returned, one file per run, so the grid can be re-scored without re-running it. |
+| `results/extractions_long.csv` | Every extracted company as its own row, with which model, strategy and JSON mode produced it. |
+| `results/extractions_review.xlsx` | The same data plus agreement and field-coverage sheets. |
+| `results/html_cache/` | The exact pages the benchmark ran against. Tracked deliberately: these sites change, so without this snapshot the numbers cannot be reproduced. |
+| `data/ground_truth/*.json` | Hand-labelled member lists, 761 companies across 10 pages. |
+| `results/NeoHub_Network_Members.xlsx` | **The deliverable for Neovation.** |
+| `results/stage_a_gpu.log` | Full log of the 540-run GPU grid. |
 
 ---
 
-## 7. Design decisions worth knowing
+## 8. Design decisions worth knowing
 
 **Fetching is separate from extraction, and pages are cached.**
-Both models must see byte-identical input, or the comparison is invalid. It
-also keeps network time out of the latency measurement and avoids hammering
-73 real organisations across hundreds of runs.
+Every model must see byte-identical input or the comparison is invalid. It also
+keeps network time out of the latency measurement and avoids hammering real
+organisations across hundreds of runs.
 
 **`num_ctx` is set explicitly.**
 Ollama defaults to a 4,096-token context and **silently discards anything
 longer, it never raises an error**. One page here cleans to 53,000 tokens.
-Without setting this, the model would read the first fraction of a page,
-return a short list, and the whole benchmark would measure a truncation bug.
+Without setting this the model reads the first fraction of a page, returns a
+short list, and the benchmark measures a truncation bug. This affected 24 of
+53 pages before it was found.
 
 **Oversized pages are chunked, not truncated.**
 Split at ~6,000 tokens on line boundaries with a small overlap; results are
 merged and de-duplicated. Latency is summed, so a big page reports its true
-total cost.
+cost.
 
 **The benchmark loops model-outermost.**
-The models are 4.7 GB and 4.9 GB and cannot coexist in 16 GB of RAM. Switching
-frequently would mean timing disk loads instead of inference.
+The models cannot coexist in 16 GB of RAM. Switching frequently would time
+disk loads instead of inference.
 
-**Accuracy is scored *before* the filter.**
-Ground truth is "what names appear on this page". The filter deliberately
-removes valid companies (universities, associations), so scoring after it
-would punish the model for the rulebook's choices.
+**Link markup is preserved before text extraction.**
+`get_text()` discards `href` attributes, so without this the model cannot
+return a website at all. Preserving links also improved *name* recall from
+0.723 to 0.997 on a densely formatted page, because a trailing URL acts as a
+record delimiter between otherwise identical-looking lines.
 
-**The legal-form whitelist is recorded but not enforced.**
-The rulebook requires every name to contain GmbH/AG/KG/UG. Many directories
-print bare brand names, EtherCAT lists thousands of members with almost no
-legal forms, so enforcing it would delete entire member lists. The pipeline
-records `has_legal_form` per name and reports what enforcement would cost.
+**Annotation runs before any tag is removed.**
+`img` is stripped as junk, but logo-based directories put the company name in
+the image's `alt` attribute and the website in the surrounding link. Stripping
+first made that recovery branch unreachable and silently dropped every link on
+such pages.
 
-**The blacklist uses naive substring matching, faithfully.**
-That is what the rulebook specifies, and it has real false positives: `stadt`
-removes anything in Darmstadt, `kasse` removes anything in Kassel. Rather than
-silently deviating, every removal is logged with its triggering term and
-flagged when it looks like a collision, so the error rate is *measured*.
+**Internal links are excluded from what the model sees.**
+A link back to the association's own site is a member profile page, not a
+company website. Those are recovered separately in Python, as a hostname
+comparison, and become the fetch queue for the profile-page stage.
 
----
-
-## 8. Known data-quality problems
-
-Found while running the fetcher over all 73 URLs:
-
-- **6 dead links** (HTTP 404) in the associations spreadsheet.
-- **6 bot-blocked** (HTTP 403).
-- **8 JS-rendered shells**: the page returns 200 but the member list loads
-  via JavaScript and is absent from the HTML.
-- **Several wrong URLs**: pointing at homepages, news feeds, "about us"
-  pages or product-category taxonomies rather than member lists. Confirmed
-  so far: `014`, `028`, `035`, `044`, `047`, `049`.
-
-Only about 23 of the 73 URLs are genuine member directories. This is worth
-raising with the team: a substantial share of the collected links need
-re-verification.
+**Accuracy is scored on raw output.**
+Ground truth is "what names appear on this page". Scoring normalises legal
+suffixes and accents so `Siemens` matches `Siemens AG`, which is a scoring
+concern, not filtering.
 
 ---
 
-## 9. Troubleshooting
+## 9. Known data-quality problems
 
-**`cannot reach Ollama`**: start it: `ollama serve`
+From the health check over all 291 verified URLs in the Finalv1 sheet
+(`survey_finalv1.py`):
 
-**Benchmark seems stuck**: a 12B model on 16 GB swaps heavily and can take
-5+ minutes per page. The 7-8B models average ~25-45 s.
+| Category | Count | Share |
+|---|---:|---:|
+| `directory` (a member list is present in the HTML) | 153 | 52.6% |
+| `sparse` (HTTP 200 but little text: JS-rendered, or a search form) | 85 | 29.2% |
+| `thin` (HTTP 200 and almost nothing) | 41 | 14.1% |
+| `http_error` (4xx / 5xx) | 7 | 2.4% |
+| `unreachable` (DNS or connection failure) | 5 | 1.7% |
 
-**No accuracy scores in the results**: the worksheets are not finished. Run
+A human marking a URL "verified" means they opened it and saw a member page.
+That is not the same question as "can the pipeline extract from it": a
+JavaScript-rendered directory looks correct in a browser and arrives here as
+an empty page.
+
+Separately, of the 10 ground-truth pages only **4 carry outbound member
+links**. Three publish member names as plain text with no link of any kind, so
+their websites cannot be extracted in one pass at all and need the profile-page
+or search route.
+
+---
+
+## 10. Troubleshooting
+
+**`cannot reach Ollama`**: start it with `ollama serve`.
+
+**Benchmark seems stuck**: `gemma4:12b` generates until the context window
+fills and can take 5+ minutes per page. `qwen2.5-coder` under `constrained`
+mode on the largest page took 45 minutes on GPU and still failed. The 7-8B
+models under `prompt_only` average 25-45 s.
+
+**No accuracy scores**: the worksheets are not finished. Run
 `make_ground_truth.py --check` and confirm it reports 10/10.
 
-**Want to start the experiment over**: delete `results/benchmark_results.csv`
-and `results/extractions/`. The HTML cache and ground truth are unaffected.
+**Start the experiment over**: delete `results/benchmark_results.csv` and
+`results/extractions/`. The HTML cache and ground truth are unaffected.
+
+**Files arrive from macOS as unopenable binary twins**: archives made on macOS
+carry metadata that Linux extracts as real files. Pack with
+`COPYFILE_DISABLE=1 tar --no-xattrs --no-mac-metadata -czf out.tar.gz <dir>`.
+
+---
+
+## 11. Results and caveats
+
+Headline findings are summarised in section 1. The full record of every
+measured result, including the ones that did not work, is in
+**`THESIS_NOTES.md`** (~2,500 lines). Primary results are section 3.13; read
+the Status block at the top first.
+
+The caveats in section 5 of that document are not optional reading. The most
+important: the ten-page corpus is small enough that **one page moves an
+aggregate F1 by about 0.03**, which is larger than most of the differences the
+benchmark reports. Rankings at the top of the table are safe; differences under
+about 0.05 are not resolvable at this corpus size.
+
+### Known-stale results in this snapshot
+
+`results/benchmark_results.csv` is the original 540-run grid. Two things about
+it are superseded:
+
+1. **`generic_multi_stage` (P3) is being re-run.** Its validation stage was
+   receiving Python dict reprs instead of company names, so the reported
+   "best precision, worst recall" result for P3 is not yet safe to cite.
+2. **Page 043 changed.** The link-annotation ordering fix altered that page's
+   cleaned text. The other nine pages are byte-identical, so the rest stands.
+
+Zero-shot and few-shot results are unaffected by both.
