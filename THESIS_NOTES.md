@@ -2297,7 +2297,68 @@ column). Each member falls into exactly one of four states:
 | `profile_only` | no company site in the listing, but the member is linked to a profile page on the association's own site | stage 2: one fetch per member |
 | `none` | the member name is plain text with no link of any kind | search or Impressum (§3.11d routes 3-5) |
 
-Across 459 extracted records:
+### The ceiling, measured against ground truth (`link_coverage.py`)
+
+The figures below this heading come from model output on a partial run and are
+superseded. The authoritative measurement runs against the **hand-labelled
+ground truth**, so it states what is reachable in principle rather than what
+one model happened to find, across all 761 companies:
+
+| page | organisation | total | website | profile | none |
+|---|---|---:|---:|---:|---:|
+| 004 | Automotive Nordwest | 33 | 0 | 32 | 1 |
+| 005 | automotive thüringen | 125 | 123 | 0 | 2 |
+| 009 | BDEW | 43 | 40 | 2 | 1 |
+| 012 | BVMed | 50 | 0 | 0 | 50 |
+| 025 | German Water Partnership | 14 | 0 | 12 | 2 |
+| 032 | InnoZent OWL | 79 | 0 | 0 | 79 |
+| 039 | Life Science Nord | 52 | 0 | 51 | 1 |
+| 040 | Medical Valley EMN | 20 | 0 | 0 | 20 |
+| 043 | NMWP.NRW | 49 | 12 | 8 | 29 |
+| 050 | SPECTARIS | 296 | 295 | 0 | 1 |
+| **total** | | **761** | **470 (62%)** | **105 (14%)** | **186 (24%)** |
+
+- **62% is the stage 1 ceiling.** No model can exceed it, because the website
+  is not on the page for the other 38%. A model returning a website for one of
+  those 291 companies is fabricating it.
+- **14% need one profile-page fetch** (stage 3).
+- **24% need a web search** (stage 4). Three directories (BVMed, InnoZent OWL,
+  Medical Valley) print member names as plain text with no link of any kind,
+  which alone accounts for 149 companies.
+
+**A model's website coverage must be read against 62%, not against 100%.**
+Reporting "the model found websites for 55% of companies" without that ceiling
+would understate it badly; against the ceiling it is 89% of what was available.
+
+### Why this measurement needed two methods, and what that says about the task
+
+The first implementation matched company names against the clickable text of
+each link and returned 8%. That was wrong, and the reason is the finding:
+
+```
+2mag AG
+80992 München
+Schragenhofstr. 35
+Web <http://www.2mag.de>        <- the link's text is "Web"
+```
+
+On SPECTARIS the link is labelled "Web", not with the company name. Nothing in
+the markup connects the two; the only thing that does is **the order they
+appear in**. A second convention, used by BDEW, prints the name and link on
+one line, and a third links the name to a profile page.
+
+So the measurement needs positional logic, and the same is true of the
+extraction itself. **This is the concrete argument for using a model rather
+than a parser**: a lookup by link text finds 8% of what is there, and the
+association a model has to make is positional, not structural. It is also why
+preserving links improved *name* extraction (§3.11i): on these pages the
+trailing URL is the only marker of where one member's block ends.
+
+---
+
+The figures below are from model output on a partial 459-record run and are
+kept for the hallucination result, which the ceiling measurement does not
+cover. Across 459 extracted records:
 
 | status | records | share |
 |---|---:|---:|

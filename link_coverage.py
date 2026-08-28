@@ -1,0 +1,255 @@
+"""
+Stage 2: work out how each member company's website can be reached.
+
+This runs before any model and does not use one. For every company in the
+ground truth it looks at the directory page and decides which of three routes
+applies:
+
+    website     the page links straight to the company's own site.
+                Stage 1 (the model) can read it off the page in one pass.
+
+    profile     the page links the company to a profile page on the
+                association's own site. The website is one more fetch away.
+                This is the stage 3 queue.
+
+    none        the company name is plain text with no link of any kind.
+                Only a web search can find it. This is the stage 4 queue.
+
+The split is decided by comparing hostnames, which Python does exactly, so
+spending model tokens on it would be slower and less accurate.
+
+Because it runs against the hand-labelled ground truth rather than model
+output, the result is a CEILING: the best any model could possibly do at
+stage 1, and the true size of the stage 3 and 4 queues. Comparing a model's
+actual website coverage against this number separates "the model missed it"
+from "it was never on the page".
+
+Run:  .venv/bin/python link_coverage.py
+      .venv/bin/python link_coverage.py --page 050
+"""
+
+from __future__ import annotations
+
+import argparse
+import csv
+import json
+from collections import Counter
+from urllib.parse import urljoin, urlparse
+
+from bs4 import BeautifulSoup
+
+import cleaner
+import config
+import fetcher
+
+# The marker annotate_links() writes into the cleaned text: Name <https://url>
+import re
+URL_IN_TEXT = re.compile(r"<(https?://[^>\s]+)>")
+
+OUT_CSV = config.RESULTS_DIR / "link_coverage.csv"
+
+# Anchor text shorter than this is navigation ("Home", "Kontakt"), not a
+# company name. Measured: no ground-truth member name normalises shorter.
+MIN_KEY_LEN = 5
+
+
+def match_key(name: str) -> str:
+    """Same normalisation the scorer uses, so 'found' means the same thing."""
+    import benchmark
+    return benchmark.match_key(name)
+
+
+def same_org(host_a: str, host_b: str) -> bool:
+    """
+    True when two hostnames belong to the same organisation.
+
+    A plain equality test is not enough: one association serves its directory
+    from verein.nmwp.nrw and its member profiles from portal.nmwp.de. Those
+    are different hostnames, one organisation, and treating the profile pages
+    as company websites would be wrong. Comparing the meaningful name parts
+    catches it.
+    """
+    def labels(host: str) -> set[str]:
+        parts = host.replace("www.", "").lower().split(".")
+        return {p for p in parts
+                if len(p) >= 4 and p not in {"com", "net", "org", "info",
+                                             "portal", "verein", "www"}}
+    return bool(labels(host_a) & labels(host_b))
+
+
+def index_profile_links(html: str, page_url: str) -> dict[str, str]:
+    """
+    Return {company name -> profile page on the association's own site}.
+
+    Profile links are reliably matched by the link's clickable text, because a
+    directory that links each member to its own detail page uses the company
+    name as the link. Where the entry is a logo instead, the name is in the
+    image's alt attribute, so both are read.
+    """
+    soup = BeautifulSoup(html, "lxml")
+    own = urlparse(page_url).netloc
+    profile: dict[str, str] = {}
+
+    for a in soup.find_all("a", href=True):
+        href = urljoin(page_url, a["href"].strip())
+        if not href.startswith("http"):
+            continue
+        if not same_org(own, urlparse(href).netloc):
+            continue
+
+        text = " ".join(a.get_text(separator=" ").split())
+        if not text:
+            img = a.find("img")
+            if img:
+                text = (img.get("alt") or img.get("title") or "").strip()
+        key = match_key(text)
+        if len(key) >= MIN_KEY_LEN:
+            profile.setdefault(key, href)
+
+    return profile
+
+
+def index_websites(page_text: str, names: list[str]) -> dict[str, str]:
+    """
+    Return {company name -> its own website}, matched BY POSITION.
+
+    Matching on the link's clickable text does not work for company websites.
+    The commonest layout in this corpus prints:
+
+        2mag AG
+        80992 Munchen
+        Schragenhofstr. 35
+        Web <http://www.2mag.de>
+
+    where the link's text is "Web". The company name and its address are
+    ordinary text several lines above. Nothing connects them except the order
+    they appear in, which is exactly why this job needs a model rather than a
+    lookup, and why preserving links improved NAME extraction too: the URL is
+    the only marker of where one member's block ends (section 3.11i).
+
+    The same positional logic is applied here, so the number produced is the
+    ceiling a model could reach rather than an artefact of how links happen to
+    be labelled. A company's block runs from its own line to the line before
+    the next company, capped at MAX_BLOCK_LINES for pages that list a member
+    once and then discuss it at length.
+    """
+    MAX_BLOCK_LINES = 8
+    lines = page_text.split("\n")
+    wanted = {match_key(n) for n in names if match_key(n)}
+
+    # The URL marker must come off before the line is matched against a
+    # company name, or the two conventions in this corpus behave differently
+    # for no good reason. Some directories print
+    #     A.T. Kearney GmbH <https://www.kearney.com>
+    # on one line, others put the link three lines below the name. Stripping
+    # the marker makes the same code handle both.
+    bare = [URL_IN_TEXT.sub("", ln).strip() for ln in lines]
+
+    # Where each company's block starts. A name can appear more than once;
+    # the first occurrence is the listing, later ones are usually prose.
+    starts: list[tuple[int, str]] = []
+    seen: set[str] = set()
+    for i, line in enumerate(bare):
+        key = match_key(line)
+        if key in wanted and key not in seen:
+            seen.add(key)
+            starts.append((i, key))
+    starts.sort()
+
+    found: dict[str, str] = {}
+    for pos, (start, key) in enumerate(starts):
+        end = starts[pos + 1][0] if pos + 1 < len(starts) else len(lines)
+        end = min(end, start + MAX_BLOCK_LINES)
+        for line in lines[start:end]:
+            m = URL_IN_TEXT.search(line)
+            if m:
+                found[key] = m.group(1)
+                break
+    return found
+
+
+def main() -> None:
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--page", default=None, help="restrict to one url_id")
+    args = ap.parse_args()
+
+    with open(config.URLS_CSV, encoding="utf-8") as fh:
+        urls = {r["id"]: r for r in csv.DictReader(fh)}
+
+    rows = []
+    for gt_file in sorted(config.GROUND_TRUTH_DIR.glob("*.json")):
+        uid = gt_file.stem
+        if args.page and uid != args.page:
+            continue
+        row = urls.get(uid)
+        if not row:
+            continue
+        cache = fetcher.cache_path(row["url"])
+        if not cache.exists():
+            print(f"  ! no cached HTML for {uid}, skipping")
+            continue
+
+        html = cache.read_text(encoding="utf-8", errors="ignore")
+        companies = json.loads(gt_file.read_text(encoding="utf-8"))["companies"]
+
+        profile = index_profile_links(html, row["url"])
+        page = cleaner.process(html, row["url"])
+        website = index_websites(page.text, companies)
+
+        for name in companies:
+            key = match_key(name)
+            if key in website:
+                route, target = "website", website[key]
+            elif key in profile:
+                route, target = "profile", profile[key]
+            else:
+                route, target = "none", ""
+            rows.append({
+                "url_id": uid,
+                "org_name": row["org_name"],
+                "company": name,
+                "route": route,
+                "target": target,
+            })
+
+    if not rows:
+        raise SystemExit("no ground-truth pages matched")
+
+    with open(OUT_CSV, "w", newline="", encoding="utf-8-sig") as fh:
+        w = csv.DictWriter(fh, fieldnames=list(rows[0].keys()))
+        w.writeheader()
+        w.writerows(rows)
+
+    # ---- report ----------------------------------------------------------
+    per_page: dict[str, Counter] = {}
+    for r in rows:
+        per_page.setdefault(r["url_id"], Counter())[r["route"]] += 1
+
+    print(f"\n{'page':<6}{'organisation':<30}{'total':>7}"
+          f"{'website':>9}{'profile':>9}{'none':>7}")
+    print("-" * 68)
+    for uid in sorted(per_page):
+        c = per_page[uid]
+        org = next(r["org_name"] for r in rows if r["url_id"] == uid)
+        print(f"{uid:<6}{org[:28]:<30}{sum(c.values()):>7}"
+              f"{c['website']:>9}{c['profile']:>9}{c['none']:>7}")
+
+    total = Counter(r["route"] for r in rows)
+    n = len(rows)
+    print("-" * 68)
+    print(f"{'TOTAL':<36}{n:>7}{total['website']:>9}"
+          f"{total['profile']:>9}{total['none']:>7}")
+    print(f"{'':<36}{'':>7}{total['website']/n:>8.0%}"
+          f"{total['profile']/n:>9.0%}{total['none']/n:>7.0%}")
+
+    print(f"\n  stage 1 ceiling  {total['website']:>4} companies "
+          f"({total['website']/n:.0%}) have a website printed on the page")
+    print(f"  stage 3 queue    {total['profile']:>4} companies "
+          f"({total['profile']/n:.0%}) need one profile-page fetch")
+    print(f"  stage 4 queue    {total['none']:>4} companies "
+          f"({total['none']/n:.0%}) need a web search")
+    print(f"\n  -> {OUT_CSV}")
+
+
+if __name__ == "__main__":
+    main()
