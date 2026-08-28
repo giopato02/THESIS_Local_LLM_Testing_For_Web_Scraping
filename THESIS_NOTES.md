@@ -2196,6 +2196,71 @@ in the methodology rather than left for a reader to notice.
 
 ---
 
+## 3.13h Extracting a website is a harder task than extracting a name
+
+First scored results from the URL arm, `llama3.1:8b` + `zero_shot_full_record`
++ constrained, 9 runs (partial, the arm is still running):
+
+| | count |
+|---|---:|
+| addresses returned | 379 |
+| correct, the right address for that company | 295 |
+| wrong company, a real address bound to the wrong member | 84 |
+| invented, not on the page at all | **0** |
+| precision | 0.778 |
+| recall, against the 470-company ceiling | 0.565 |
+
+Website F1 is therefore about **0.65**, against roughly **0.98** for names with
+the same model. **Binding an address to the right company is a substantially
+harder task than recognising the name**, and the gap is the result.
+
+§3.11c predicted this before any of it was run: adding the field makes the task
+relational rather than one of recognition. The model must decide that
+`http://www.2mag.de`, printed three lines below `2mag AG` and labelled only
+"Web", belongs to that company and not to the one above or below it. On pages
+where entries are separated by nothing but line order, that inference is the
+whole job.
+
+### Two failure modes that must be reported separately
+
+**Invention: zero.** Every one of the 379 addresses appears in the page text.
+The "never infer a URL from a company name" rule holds, and this matches the
+abstention seen on address fields (§3.11e). For the deliverable this is the
+property that matters most: a blank cell is recoverable downstream, a
+fabricated domain silently corrupts the database.
+
+**Misattribution: 22%.** 84 of 379 are genuine addresses from the page attached
+to the wrong member. **No metric in this project caught this before.** The
+original check asked only whether a returned address appeared somewhere on the
+page, and a partner's link bound to a member company passes that test. The
+distinction only became visible once scoring compared against *which* company
+each address sits with (§3.13d).
+
+Precision on the website field is therefore 0.778, not the 1.000 the earlier
+check implied.
+
+### Method note worth carrying into the write-up
+
+The scorer itself was wrong on its first attempt, and in a way that would have
+been damaging: it built its "addresses really on this page" set from the
+ground-truth matches rather than from the page, so every link belonging to an
+unannotated company or a sponsor counted as invented. It reported **48
+hallucinations that were not hallucinations**.
+
+That is the fourth instance in this project of a component producing plausible
+wrong output without failing: silent context truncation (§3.2), link
+annotation running after images were stripped (§3.13c), the CSV header
+mismatch (§3.13g), and now a metric comparing against the wrong reference.
+
+The pattern is specific enough to state as a lesson: **scoring code needs the
+same scrutiny as extraction code, and arguably more.** A broken extractor
+produces obviously poor numbers. A broken metric produces confident numbers
+that are wrong, and nothing downstream objects. Both a false "the model
+hallucinates 13% of the time" and a false "precision is 1.000" were one
+careless line away here, and each would have reached the thesis as a finding.
+
+---
+
 ## 3.13f The production pipeline: four stages, and what each one is worth
 
 The benchmark answers "which model and prompt". The production pipeline is a
