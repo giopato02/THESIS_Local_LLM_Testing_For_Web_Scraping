@@ -134,6 +134,44 @@ def index_profile_links(html: str, page_url: str) -> dict[str, str]:
     return profile
 
 
+def index_websites_from_markup(html: str, page_url: str) -> dict[str, str]:
+    """
+    Return {company name -> its own website} taken from the markup itself.
+
+    Where a directory is a grid of logos, the HTML states the pairing outright:
+
+        <a href="http://www.aetztechnik-herz.de/">
+          <img alt="Ätztechnik Herz GmbH & Co. KG">
+        </a>
+
+    That is authoritative and must be preferred over anything positional. A
+    page can carry two separate listings, a text list and a logo grid, and
+    walking down from a name in one of them lands on a URL belonging to the
+    other. Measured on NMWP.NRW: positional matching alone paired "Aixtron SE"
+    with Effing's website and scored the model 0 correct out of 81, when the
+    model had in fact reproduced the markup's own pairings correctly.
+    """
+    soup = BeautifulSoup(html, "lxml")
+    own = urlparse(page_url).netloc
+    base_tag = soup.find("base", href=True)
+    base = urljoin(page_url, base_tag["href"].strip()) if base_tag else page_url
+
+    found: dict[str, str] = {}
+    for a in soup.find_all("a", href=True):
+        href = resolve(a["href"], base)
+        if not href.startswith("http") or same_org(own, urlparse(href).netloc):
+            continue
+        text = " ".join(a.get_text(separator=" ").split())
+        if not text:
+            img = a.find("img")
+            if img:
+                text = (img.get("alt") or img.get("title") or "").strip()
+        key = match_key(text)
+        if len(key) >= MIN_KEY_LEN:
+            found.setdefault(key, href)
+    return found
+
+
 def index_websites(page_text: str, names: list[str]) -> dict[str, str]:
     """
     Return {company name -> its own website}, matched BY POSITION.
@@ -219,7 +257,13 @@ def main() -> None:
 
         profile = index_profile_links(html, row["url"])
         page = cleaner.process(html, row["url"])
+
+        # Markup first, position second. Where an anchor names the company it
+        # points at, the page has stated the pairing and there is nothing to
+        # infer. Positional matching only fills the gap left by anchors
+        # labelled "Web", "Zur Website" and the like.
         website = index_websites(page.text, companies)
+        website.update(index_websites_from_markup(html, row["url"]))
 
         for name in companies:
             key = match_key(name)
