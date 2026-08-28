@@ -130,8 +130,14 @@ def load_profile_links() -> dict[str, dict[str, str]]:
         own = urlparse(row["url"]).netloc.replace("www.", "").lower()
         found: dict[str, str] = {}
 
+        # <base> redefines what relative links resolve against; ignoring it
+        # produces doubled paths that 404 (see link_coverage.py).
+        base_tag = soup.find("base", href=True)
+        base = (urljoin(row["url"], base_tag["href"].strip())
+                if base_tag else row["url"])
+
         for a in soup.find_all("a", href=True):
-            href = urljoin(row["url"], a["href"].strip())
+            href = urljoin(base, a["href"].strip())
             if not href.startswith("http"):
                 continue
             if urlparse(href).netloc.replace("www.", "").lower() != own:

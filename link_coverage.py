@@ -46,6 +46,22 @@ import fetcher
 import re
 URL_IN_TEXT = re.compile(r"<(https?://[^>\s]+)>")
 
+# A link written without a scheme, e.g. href="www.meotec.eu". Browsers treat
+# it as a relative path, and so does urljoin, gluing it onto the association's
+# own domain. On a member directory the intent is almost always the company's
+# own site, so it is recovered rather than followed into a 404.
+BARE_DOMAIN = re.compile(r"^(?:www\.)?[a-z0-9][a-z0-9-]*(?:\.[a-z0-9-]+)+(?:/|$)",
+                         re.IGNORECASE)
+
+
+def resolve(href: str, base: str) -> str:
+    """Turn one href into an absolute URL, handling the scheme-less case."""
+    href = href.strip()
+    if BARE_DOMAIN.match(href) and not href.startswith(("/", "?", "#")):
+        return "https://" + href
+    return urljoin(base, href)
+
+
 OUT_CSV = config.RESULTS_DIR / "link_coverage.csv"
 
 # Anchor text shorter than this is navigation ("Home", "Kontakt"), not a
@@ -90,8 +106,17 @@ def index_profile_links(html: str, page_url: str) -> dict[str, str]:
     own = urlparse(page_url).netloc
     profile: dict[str, str] = {}
 
+    # A <base> tag redefines what relative links resolve against. Life Science
+    # Nord serves its member list from /de/mitglieder/member-companies.html but
+    # declares <base href="https://www.lifesciencenord.de/">, so its relative
+    # hrefs are written as "de/mitglieder/...". Resolving those against the
+    # page URL instead produces /de/mitglieder/de/mitglieder/... and every one
+    # of its 51 profile pages 404s.
+    base_tag = soup.find("base", href=True)
+    base = urljoin(page_url, base_tag["href"].strip()) if base_tag else page_url
+
     for a in soup.find_all("a", href=True):
-        href = urljoin(page_url, a["href"].strip())
+        href = resolve(a["href"], base)
         if not href.startswith("http"):
             continue
         if not same_org(own, urlparse(href).netloc):

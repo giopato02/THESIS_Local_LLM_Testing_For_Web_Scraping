@@ -2196,6 +2196,122 @@ in the methodology rather than left for a reader to notice.
 
 ---
 
+## 3.13f The production pipeline: four stages, and what each one is worth
+
+The benchmark answers "which model and prompt". The production pipeline is a
+different thing: it uses **one** model and **one** prompt, the winner, and
+runs four stages to fill Neovation's database. Conflating the two caused real
+confusion and is worth stating plainly in the write-up.
+
+| stage | who does it | what | code |
+|---|---|---|---|
+| 1 | model | names + website where the directory prints one | `benchmark.py --stage b` |
+| 2 | Python | sort each company into website / profile / none | `link_coverage.py` |
+| 3 | fetch + model | open profile pages, read website and contact details | `fetch_profiles.py` |
+| 4 | Python + search | find whatever is still missing | not built |
+
+Stages 2 and 4 use no model. Deciding whether a link points at the association
+or at a company is a hostname comparison, which Python does exactly and for
+free.
+
+### Stage 3, measured (`fetch_profiles.py`)
+
+104 profile pages queued from the ground-truth corpus, 101 fetched. What those
+pages contain, by plain text search with no model involved:
+
+| field | present | 
+|---|---:|
+| website | 96% |
+| postcode | 97% |
+| street | 66% |
+| email | 37% |
+| phone | 28% |
+
+Median page length is **112 words**, one chunk, so extraction here is cheap
+compared with a directory page of several thousand words.
+
+This is the answer to a question open since the meetings of 12-13 August:
+**the address and contact fields Marco and Yusif asked for are on the profile
+pages, not in the directory listings.** BDEW's listing gives 42 members with
+2 streets, 0 postcodes and 0 phones (§3.11e); its profile pages give 97%
+postcodes. The fields were never missing from the web, only from the page the
+pipeline was reading.
+
+Stage 3 splits into `--fetch-only` and extraction, because fetching 104 pages
+politely is minutes of waiting that should not compete with a benchmark for
+the GPU.
+
+### Two bugs found building this, both about resolving links
+
+**`<base href>` was ignored.** Life Science Nord serves its member list from
+`/de/mitglieder/member-companies.html` but declares
+`<base href="https://www.lifesciencenord.de/">`, so its relative links are
+written as `de/mitglieder/...`. Resolving those against the page URL instead
+of the declared base produced `/de/mitglieder/de/mitglieder/...` and **all 51
+of its profile pages returned 404**. Fixed in `link_coverage.py` and
+`dump_extractions.py`; cached pages went from 50 to 101.
+
+**Links written without a scheme are not recovered.** `href="www.meotec.eu"`
+is treated as a relative path by browsers and by `urljoin`, so it is glued
+onto the association's domain. Measured across the whole corpus: **4 such
+links in 73 pages.** Fixing it properly means changing `cleaner.py`, which
+would alter what the model sees and break comparability with every run already
+completed, for four links. Recorded as a known limit and deliberately not
+fixed, on the same reasoning that kept page 043 the only changed page in
+§3.13c.
+
+### What is worth claiming for the thesis
+
+Stage 1 is the thesis. Stages 2 and 4 are engineering. Stage 3 sits in
+between and is a fair research question in its own right: it runs a model on a
+**different kind of page**, one company instead of a directory of hundreds, so
+whether the stage 1 winner also wins there is not obvious and is cheap to
+test. The coverage split (§3.13d) is a finding regardless of who computes it.
+
+---
+
+## 3.13g A silent CSV bug, and why it is worth reporting
+
+Adding the five URL columns to `CSV_FIELDS` broke the results file, and the
+failure was invisible.
+
+`benchmark.py` appended with `csv.DictWriter(fieldnames=CSV_FIELDS)` but only
+wrote a header when the file did not already exist:
+
+```python
+is_new = not config.BENCHMARK_CSV.exists()
+if is_new:
+    writer.writeheader()
+```
+
+The file existed, with the old 27-column header. New rows carried 32 values.
+Every column after `f1` therefore read back **shifted**: asking for `error`
+returned what should have been `url_returned`. The run reported normal
+progress throughout.
+
+It also broke resumability, because the skip logic tests `row.get("error")`,
+which was now the string `"0"` rather than empty, so completed runs would have
+been repeated.
+
+Detected only because a summary command raised `KeyError: 'url_returned'`.
+Nothing was lost: values were present and in order, so the file was repaired
+by padding the old rows.
+
+`benchmark.py` now compares the header on disk against `CSV_FIELDS` at
+startup and migrates by column name, keeping the previous file alongside.
+
+**Why it belongs in the write-up.** This is the third instance of the same
+failure mode in this project, after Ollama's silent context truncation (§3.2)
+and link annotation running after `img` was stripped (§3.13c). In all three a
+component kept reporting success while producing wrong output, and in all
+three the error surfaced only because something downstream happened to look.
+For a pipeline whose output is thousands of rows nobody reads individually,
+**the useful discipline is not "check the code" but "make each stage assert
+something about its own output"**: that the context was not exceeded, that
+links survived cleaning, that the header matches the rows.
+
+---
+
 ## 3.13e Temperature 0 does not guarantee reproducibility
 
 Found while investigating why gemma4's multi-stage failure rate collapsed

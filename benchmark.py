@@ -349,6 +349,44 @@ def build_plan(stage: str, models: list[str], pages: list[dict],
     return plan
 
 
+def _migrate_csv(old_header: list[str]) -> None:
+    """
+    Rewrite the results file so its header matches CSV_FIELDS.
+
+    Columns are only ever added, never reordered or removed, so an old row can
+    be brought forward by inserting an empty value wherever a new column sits.
+    Nothing is discarded, and the previous file is kept alongside in case the
+    migration itself is wrong.
+    """
+    backup = config.BENCHMARK_CSV.with_name(
+        config.BENCHMARK_CSV.stem + "_premigration.csv")
+    if not backup.exists():
+        backup.write_bytes(config.BENCHMARK_CSV.read_bytes())
+
+    with open(config.BENCHMARK_CSV, encoding="utf-8") as fh:
+        rows = list(csv.reader(fh))[1:]
+
+    added = [c for c in CSV_FIELDS if c not in old_header]
+    migrated = []
+    for row in rows:
+        if len(row) == len(CSV_FIELDS):
+            migrated.append(row)                      # already current
+        elif len(row) == len(old_header):
+            byname = dict(zip(old_header, row))
+            migrated.append([byname.get(c, "") for c in CSV_FIELDS])
+        # Anything else is a partial write from an interrupted run; dropping it
+        # is correct, since the run will simply be repeated.
+
+    with open(config.BENCHMARK_CSV, "w", newline="", encoding="utf-8") as fh:
+        writer = csv.writer(fh)
+        writer.writerow(CSV_FIELDS)
+        writer.writerows(migrated)
+
+    print(f"  ! added column(s): {', '.join(added) or 'none'}")
+    print(f"  ! migrated {len(migrated)} rows, previous file kept as "
+          f"{backup.name}\n")
+
+
 def run_key(item: dict) -> str:
     """Stable identifier used to skip work already done on a previous run."""
     return "|".join([
@@ -521,7 +559,21 @@ def main() -> None:
     if args.dry_run or not todo:
         return
 
+    # Appending to a file whose header predates a change to CSV_FIELDS writes
+    # rows wider than the header, and every column after the insertion point
+    # then reads back shifted by one. That happened when the five URL columns
+    # were added, and it is silent: the run looks fine and the data is wrong.
+    # Check the header on disk and migrate rather than trusting it.
     is_new = not config.BENCHMARK_CSV.exists()
+    if not is_new:
+        with open(config.BENCHMARK_CSV, encoding="utf-8") as check:
+            existing = next(csv.reader(check), [])
+        if existing and existing != CSV_FIELDS:
+            print(f"  ! results header has {len(existing)} columns, code expects "
+                  f"{len(CSV_FIELDS)}")
+            print(f"  ! migrating {config.BENCHMARK_CSV.name} before appending")
+            _migrate_csv(existing)
+
     fh = open(config.BENCHMARK_CSV, "a", newline="", encoding="utf-8")
     writer = csv.DictWriter(fh, fieldnames=CSV_FIELDS, extrasaction="ignore")
     if is_new:
