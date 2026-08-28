@@ -2204,15 +2204,28 @@ First scored results from the URL arm, `llama3.1:8b` + `zero_shot_full_record`
 | | count |
 |---|---:|
 | addresses returned | 379 |
-| correct, the right address for that company | 295 |
-| wrong company, a real address bound to the wrong member | 84 |
+| correct, the right address for that company | 364 |
+| wrong company, a real address bound to the wrong member | 15 |
 | invented, not on the page at all | **0** |
-| precision | 0.778 |
-| recall, against the 470-company ceiling | 0.565 |
+| precision | 0.960 |
+| recall, against the 494-company ceiling | 0.613 |
 
-Website F1 is therefore about **0.65**, against roughly **0.98** for names with
-the same model. **Binding an address to the right company is a substantially
-harder task than recognising the name**, and the gap is the result.
+Per page:
+
+| page | returned | correct | wrong company | precision | recall |
+|---|---:|---:|---:|---:|---:|
+| 005 automotive thüringen | 178 | 178 | 0 | 1.000 | 0.486 |
+| 009 BDEW | 120 | 117 | 3 | 0.975 | 0.975 |
+| 043 NMWP.NRW | 81 | 69 | 12 | 0.852 | 0.639 |
+
+Website F1 is therefore about **0.75**, against roughly **0.98** for names with
+the same model. **Binding an address to the right company is a harder task
+than recognising the name**, and the gap is the result. Note where the
+difficulty sits: precision is high (0.960), so what the model returns is
+almost always right. The gap is recall, and it is concentrated on page 005,
+which finds 178 of 366 available across three runs. That is the two-chunk
+page, so this is the output-length ceiling seen throughout (§3.13), not a
+failure to understand the task.
 
 §3.11c predicted this before any of it was run: adding the field makes the task
 relational rather than one of recognition. The model must decide that
@@ -2229,15 +2242,18 @@ abstention seen on address fields (§3.11e). For the deliverable this is the
 property that matters most: a blank cell is recoverable downstream, a
 fabricated domain silently corrupts the database.
 
-**Misattribution: 22%.** 84 of 379 are genuine addresses from the page attached
+**Misattribution: 4%.** 15 of 379 are genuine addresses from the page attached
 to the wrong member. **No metric in this project caught this before.** The
 original check asked only whether a returned address appeared somewhere on the
 page, and a partner's link bound to a member company passes that test. The
 distinction only became visible once scoring compared against *which* company
 each address sits with (§3.13d).
 
-Precision on the website field is therefore 0.778, not the 1.000 the earlier
-check implied.
+Precision on the website field is therefore 0.960, not the 1.000 the earlier
+check implied. The difference is small in this configuration but it is the
+only measure that can detect the failure at all, and misattribution is the
+error that silently corrupts a database, since a wrong-but-real address looks
+entirely plausible in a spreadsheet.
 
 ### Method note worth carrying into the write-up
 

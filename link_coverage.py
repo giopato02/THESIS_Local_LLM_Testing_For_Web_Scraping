@@ -85,12 +85,25 @@ def same_org(host_a: str, host_b: str) -> bool:
     as company websites would be wrong. Comparing the meaningful name parts
     catches it.
     """
-    def labels(host: str) -> set[str]:
-        parts = host.replace("www.", "").lower().split(".")
+    a = host_a.replace("www.", "").lower().strip(".")
+    b = host_b.replace("www.", "").lower().strip(".")
+    if a == b:
+        return True
+
+    # Same registrable domain, e.g. a.example.com and b.example.com. Checked
+    # before the label heuristic because that heuristic drops labels shorter
+    # than four characters, so a site on a short domain such as vda.de or
+    # aif.de produced an empty label set and failed to recognise its OWN
+    # links. Measured: 4 of the 73 corpus pages hit that case.
+    pa, pb = a.split("."), b.split(".")
+    if len(pa) >= 2 and len(pb) >= 2 and pa[-2:] == pb[-2:]:
+        return True
+
+    def labels(parts: list[str]) -> set[str]:
         return {p for p in parts
                 if len(p) >= 4 and p not in {"com", "net", "org", "info",
                                              "portal", "verein", "www"}}
-    return bool(labels(host_a) & labels(host_b))
+    return bool(labels(pa) & labels(pb))
 
 
 def index_profile_links(html: str, page_url: str) -> dict[str, str]:
