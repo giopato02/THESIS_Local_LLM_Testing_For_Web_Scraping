@@ -8,22 +8,35 @@ Thesis: *Comparative Evaluation of Local LLM Models and Generic Prompt
 Strategies for Extracting Company Information from Innovation Network Websites*
 Giorgi Pataridze · Constructor University Bremen × Neovation GmbH (NeoHub AP1)
 
-### Status (2026-08-26)
+### Status (2026-08-28)
 
-Full 540-run benchmark grid complete on GPU. **Primary results are §3.13**;
-§3.7 and §3.8 are the earlier laptop run and are superseded for accuracy,
-since link annotation (§3.11i) changed the input between them. Best
-configuration: `llama3.1:8b` + zero-shot + prompt-only JSON, F1 0.981.
+Full 540-run benchmark grid complete on GPU, plus a 60-run re-run of P3.
+**Primary results are §3.13**; §3.7 and §3.8 are the earlier laptop run and
+are superseded for accuracy, since link annotation (§3.11i) changed the input
+between them. Best configuration: `llama3.1:8b` + zero-shot + prompt-only JSON,
+F1 0.981.
 
-gemma4:12b is closed as a negative finding and will not be re-run (§3.13).
-Outstanding: the URL grid arm (§3.13b, ~80 runs), production extraction with
-`few_shot_full_record`, ground-truth expansion to 30-60 pages.
+**Multi-stage: use §3.13c-2, not the P3 rows in the §3.13 table.** A validator
+bug was found and fixed, and P3 re-run on 2026-08-28. The finding held and grew
+stronger; the corrected numbers live in §3.13c-2. The working dataset
+`results/benchmark_results.csv` now carries 420 rows: 360 original zero-shot and
+few-shot rows at 3 repetitions, plus 60 new P3 rows at 1 repetition. The
+original grid is archived as `results/benchmark_results_540_p3bug.csv`.
 
-**Code location warning.** The authoritative source tree is the copy on the
-GPU node, not this directory. The local `benchmark.py` still loops all five
-strategies (900 runs); the GPU copy was patched during the run to restrict the
-grid to the three guideline strategies (540 runs). Sync before editing, or a
-re-upload will silently revert the fix.
+gemma4:12b is closed as a negative finding (§3.13): it still fails 89 of 120
+single-stage runs. Its multi-stage failure rate dropping to zero after the fix
+is **unexplained** and must be diagnosed before it is written up (§3.13c-2).
+
+Outstanding: the URL arm (§3.13b, 180 runs), the gemma4 anomaly above,
+production extraction with `few_shot_full_record`, ground-truth expansion to
+30-60 pages.
+
+**Code sync.** The GPU node and this directory were reconciled on 2026-08-28;
+both now carry the same patched `benchmark.py`, `prompts.py`, `cleaner.py`,
+`extractor.py` and `gpu_setup.sh`. Neither syncs automatically: the GPU node's
+git remote is cluster-internal and unreachable from the laptop, so code moves
+by tarball, packed with `COPYFILE_DISABLE=1 tar --no-xattrs --no-mac-metadata`
+or macOS metadata arrives as unopenable binary twins of every file.
 
 ### Project roles
 
@@ -2103,16 +2116,76 @@ carry only a name. For the record variant it would have silently discarded
 every website and address stage 2 found. Fixed by filtering stage 2's records
 by the validated names rather than returning the validator's own output.
 
-### Consequence
+### Re-run result (60 runs, 2026-08-28): the finding is confirmed and was understated
 
-The honest position for the thesis: **the claim that multi-stage validation
-destroys recall is not safe to make until P3 is re-run with the fix.** The
-finding may survive intact, shrink, or reverse. Re-running costs 3 models x 1
-strategy x 2 JSON modes x 10 pages x 1 repetition = 60 runs, roughly 45
-minutes on GPU, which is cheap insurance for a result that currently appears
-in the abstract-level conclusions.
+P3 was re-run for all three models under both JSON modes at 1 repetition,
+against the archived buggy results in
+`results/benchmark_results_540_p3bug.csv`.
 
-zero-shot and few-shot are untouched by this bug; only P3 needs re-running.
+| model | mode | precision | recall | F1 | failures |
+|---|---|---|---|---|---|
+| llama3.1:8b | constrained | 0.987 to 0.986 | 0.765 to **0.720** | 0.845 to 0.824 | 0 to 0 |
+| llama3.1:8b | prompt_only | 0.987 to 0.986 | 0.764 to **0.701** | 0.845 to 0.810 | 0 to 0 |
+| qwen2.5-coder:7b | constrained | 0.984 to 0.979 | 0.822 to **0.810** | 0.870 to 0.860 | 3 to 0 |
+| qwen2.5-coder:7b | prompt_only | 0.981 to 0.975 | 0.849 to **0.839** | 0.896 to 0.891 | 0 to 0 |
+| gemma4:12b | constrained | 0.689 to 0.755 | 0.535 to 0.601 | 0.537 to 0.603 | **14 to 0** |
+| gemma4:12b | prompt_only | 0.660 to 0.755 | 0.502 to 0.601 | 0.506 to 0.603 | **15 to 0** |
+
+For the two working models the pattern is uniform: **precision is unchanged
+(0.98) and recall falls.** A validator that can finally read the names deletes
+more of them, and what it deletes was mostly correct. The claim now rests on a
+validation stage that receives well-formed input, which is the version that can
+be defended.
+
+**Write P3 up as confirmed, with the corrected numbers.** The earlier figures
+understated the effect.
+
+### Unexplained: gemma4's multi-stage failures went to zero
+
+gemma4 failed 29 of 60 multi-stage runs before the fix and **0 of 20 after**.
+That is not explained yet, and should not be written up until it is.
+
+The obvious hypothesis was prompt size, since `{'name': 'Robert Bosch GmbH'}`
+costs roughly twice the tokens of the bare name, and gemma4 fails by exhausting
+its context. **The token counts do not support it:**
+
+| | prompt | output | sum |
+|---|---:|---:|---:|
+| Before fix | 8,154 | 5,792 | 13,946 |
+| After fix | 8,086 | 5,354 | 13,440 |
+
+(Summed across the three multi-stage calls.) The prompt fell by 68 tokens,
+under 1%. That cannot account for a failure rate going from 47% to zero.
+
+Two other changes are candidates and neither is verified: the repetition count
+dropped from 3 to 1, and page 043's cleaned text changed (§3.13c). Neither
+should matter at temperature 0 with a fixed seed, where a deterministic failure
+ought to reproduce. **Diagnosis needed before this appears in the thesis:**
+read the `error` strings in the archived file to see which stage was failing.
+If they are `stage2`, the validator fix cannot be the cause and something else
+changed.
+
+The same question applies to qwen's `constrained` failures going 3 to 0. Those
+were recorded as stage-2 errors on page 050, and the fix only touched stage 3.
+
+**What this does not change: gemma4 remains unsuitable.** Only 29 of its 118
+failures were multi-stage. The other **89 were single-stage** (zero-shot and
+few-shot), which this bug never touched, so its overall failure rate stays near
+half of all runs. What the re-run does establish is that multi-stage is
+unambiguously gemma4's best strategy: F1 0.603 with no failures, against ~0.27
+for the single-stage strategies. That is consistent with the mechanism proposed
+in §3.13, that splitting the work into smaller calls leaves the runaway less
+room to develop per call.
+
+zero-shot and few-shot were untouched by this bug and did not need re-running.
+
+### A note on repetitions in the merged dataset
+
+`results/benchmark_results.csv` now holds 3 repetitions for zero-shot and
+few-shot and **1 for multi-stage**, because the buggy P3 rows were removed and
+replaced. Defensible given the measured determinism (F1 standard deviation
+exactly 0.000 across three repetitions on all ten pages), but it must be stated
+in the methodology rather than left for a reader to notice.
 
 ---
 
