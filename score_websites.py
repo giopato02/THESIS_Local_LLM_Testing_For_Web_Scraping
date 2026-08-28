@@ -70,20 +70,45 @@ def load_expected() -> tuple[dict[str, dict[str, str]], dict[str, set[str]]]:
         expected[url_id][company_key] = the host that belongs to that company
         on_page[url_id]               = every host printed anywhere on the page
 
-    The second is what separates "wrong company" from "invented": an address
-    in that set is real, it is simply attached to the wrong member.
+    The two come from different sources on purpose.
+
+    `expected` comes from link_coverage.py, which pairs a company with the
+    address printed beside it. Only companies in the ground truth appear.
+
+    `on_page` must come from the page itself, NOT from link_coverage. A
+    directory carries links the ground truth says nothing about: companies
+    that were not annotated, partners, sponsors. Building this set from the
+    matched subset would count every one of those as invented, which
+    overstates hallucination badly. Measured on a first attempt: 48 addresses
+    were reported invented that were in fact printed on the page.
+
+    Invention means the address is nowhere on the page. That claim is serious
+    enough that the check has to be made against the page.
     """
     if not COVERAGE_CSV.exists():
         raise SystemExit(f"run link_coverage.py first: {COVERAGE_CSV} is missing")
 
     expected: dict[str, dict[str, str]] = defaultdict(dict)
-    on_page: dict[str, set[str]] = defaultdict(set)
     with open(COVERAGE_CSV, encoding="utf-8-sig") as fh:
         for r in csv.DictReader(fh):
             if r["route"] == "website" and r["target"]:
-                host = host_of(r["target"])
-                expected[r["url_id"]][match_key(r["company"])] = host
-                on_page[r["url_id"]].add(host)
+                expected[r["url_id"]][match_key(r["company"])] = host_of(r["target"])
+
+    import re
+
+    import cleaner
+    import fetcher
+    marker = re.compile(r"<(https?://[^>\s]+)>")
+
+    on_page: dict[str, set[str]] = defaultdict(set)
+    with open(config.URLS_CSV, encoding="utf-8") as fh:
+        for row in csv.DictReader(fh):
+            path = fetcher.cache_path(row["url"])
+            if not path.exists():
+                continue
+            text = cleaner.process(
+                path.read_text(encoding="utf-8", errors="ignore"), row["url"]).text
+            on_page[row["id"]] = {host_of(u) for u in marker.findall(text)}
     return expected, on_page
 
 
