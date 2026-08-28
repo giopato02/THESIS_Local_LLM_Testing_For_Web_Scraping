@@ -255,6 +255,14 @@ def scan_corpus() -> None:
         print("  SKIP  run link_coverage.py first")
         return
 
+    # The scan reads link_coverage.csv, so a stale file reports stale
+    # problems. Warn rather than silently checking yesterday's output.
+    import os, time
+    age = time.time() - os.path.getmtime(cov)
+    if age > 3600:
+        print(f"  NOTE  link_coverage.csv is {age/3600:.1f} h old; re-run "
+              f"link_coverage.py first if the code has changed since")
+
     rows = list(csv.DictReader(open(cov, encoding="utf-8-sig")))
     by_page: dict[str, list[dict]] = {}
     for r in rows:
