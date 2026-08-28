@@ -155,16 +155,17 @@ silently get a two-model grid:
 
 ```bash
 .venv/bin/python benchmark.py --stage a --arm guideline \
-    --models llama3.1:8b qwen2.5-coder:7b gemma4:12b --reps 1
+    --models llama3.1:8b qwen2.5-coder:7b gemma4:12b
 ```
 
 Useful flags: `--dry-run` (show the plan), `--pages 043 050` (restrict pages),
 `--prompt <name>` (one strategy), `--json-mode`, `--limit`.
 
-Repetitions default to 3, which is wasted time here: output is deterministic
-at temperature 0 with a fixed seed, and measured F1 standard deviation across
-three repetitions was exactly 0.000 on all ten pages. Use `--reps 1` unless
-temperature is changed.
+Repetitions default to 3, and should stay there. Temperature 0 with a fixed
+seed is **not** sufficient for reproducibility on GPU: 22 of the 180
+configurations in the original grid returned different results across
+identical repetitions (3% of qwen cells, 10% of llama, 23% of gemma4).
+`--reps 1` exists for quick checks and costs you the ability to detect that.
 
 Safe to interrupt. Progress is saved after every run and re-running the same
 command resumes.

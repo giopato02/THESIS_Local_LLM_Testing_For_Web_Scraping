@@ -382,11 +382,15 @@ One line per run:
      └ run number of 360
 ```
 
-**Why the same page appears three times in a row.** Decoding is deterministic
-(`temperature=0`, fixed seed), so the three repetitions return byte-identical
-output, `raw` and `F1` are unchanged across them and only latency varies
-(30.4 s, 21.6 s, 21.5 s on the first block; the first run pays a warm-up cost).
-The repetitions measure timing variance, not answer variance.
+**Why the same page appears three times in a row.** Decoding was expected to be
+deterministic (`temperature=0`, fixed seed), so the three repetitions should
+return byte-identical output, with only latency varying (30.4 s, 21.6 s, 21.5 s
+on the first block; the first run pays a warm-up cost).
+
+That expectation is mostly right and not entirely: on the GPU grid, 22 of 180
+configurations disagreed across identical repetitions (§3.13e). The repetitions
+therefore measure both timing variance and, in a minority of cells, genuine
+answer variance. They are not redundant.
 
 **Why one prompt strategy runs for 60 consecutive runs.** Loop order is
 model → prompt → JSON mode → page → repetition, and the model is outermost for
@@ -1709,12 +1713,15 @@ Pooled by model:
 | 043 | NMWP.NRW | 722 | 1 | 1.000 | 0.980 | 0.990 | 18 |
 | 050 | SPECTARIS | 9383 | 3 | 0.993 | 0.997 | 0.995 | 100 |
 
-**Determinism.** Standard deviation of F1 across the three repetitions is
-exactly 0.000 on every one of the ten pages. At temperature 0 with a fixed
-seed, Ollama reproduces output bit-for-bit. The three repetitions therefore
-measure nothing about variance and only cost wall-clock time. Report this as
-a reproducibility property, and note that repetitions would only become
-informative at non-zero temperature.
+**Determinism, for this configuration only.** Standard deviation of F1 across
+the three repetitions is exactly 0.000 on every one of the ten pages *for
+llama3.1 + zero-shot + prompt-only*.
+
+**Do not generalise that to the grid.** Measured across all 180 configurations
+of the original 540-run grid, 22 of them returned different results across
+identical repetitions (§3.13e). Temperature 0 with a fixed seed is not
+sufficient for reproducibility on this hardware. The winning configuration
+happens to be stable; the grid as a whole is not.
 
 ### RQ2: prompting, and a caution about aggregate means
 
@@ -2189,6 +2196,95 @@ in the methodology rather than left for a reader to notice.
 
 ---
 
+## 3.13e Temperature 0 does not guarantee reproducibility
+
+Found while investigating why gemma4's multi-stage failure rate collapsed
+(§3.13c-2). This corrects a claim made earlier in this document and repeated
+in the README, and it changes the experimental design going forward.
+
+### What was claimed, and what is actually true
+
+The claim was that output is deterministic at `temperature=0` with `seed=42`,
+based on the winning configuration showing an F1 standard deviation of exactly
+0.000 across three repetitions on all ten pages. That measurement was correct.
+Generalising it to the whole grid was not.
+
+Across all 180 configurations of the original 540-run grid, counting cells
+where the three identical repetitions did not agree on F1 or on
+success/failure:
+
+| model | non-deterministic cells | rate |
+|---|---:|---:|
+| qwen2.5-coder:7b | 2 of 60 | 3% |
+| llama3.1:8b | 6 of 60 | 10% |
+| gemma4:12b | 14 of 60 | 23% |
+| **total** | **22 of 180** | **12%** |
+
+Examples from gemma4, same model, same prompt, same page, same seed:
+
+```
+zero_shot        constrained  004   F1 = [0.0, 0.9697]   errors = [False, True]
+zero_shot        prompt_only  009   F1 = [0.0, 0.9767]   errors = [False, True]
+few_shot_schema  constrained  012   F1 = [0.98, 1.0]     errors = [False]
+```
+
+The first two are the important shape: on one repetition the run succeeds with
+F1 ~0.97, on another it fails outright.
+
+### Why this happens
+
+Sampling is deterministic at temperature 0, but the forward pass is not
+bit-identical on a GPU. Floating-point addition is not associative, and
+parallel reduction kernels can combine partial sums in different orders
+depending on batching, memory layout and concurrent load. Tiny numeric
+differences occasionally flip a token choice where two candidates are nearly
+tied. Most of the time this changes nothing; occasionally it diverts
+generation onto a path that does not terminate.
+
+The rate tracks how close each model runs to the edge: qwen 3%, llama 10%,
+gemma4 23%. gemma4 spends most of its time near the context limit where a
+single diverted token decides between a clean stop and a runaway, so it is
+the most exposed.
+
+### This explains the gemma4 anomaly, without inventing a mechanism
+
+§3.13c-2 recorded that gemma4's multi-stage failures went from 29 of 60 to
+0 of 20 after the validator fix, and that the fix could not be the cause since
+every failure was recorded at `stage2`, which was not modified.
+
+The resolution is that **gemma4's failure rate is not a stable quantity**.
+29 is not divisible by 3, which already showed that identical repetitions were
+disagreeing. The re-run's 0 of 20 is not evidence that anything was fixed; it
+is a second sample from an unstable process.
+
+Report it that way. "The failure rate varies between identical runs" is a
+finding about deployment reliability and is more useful than a spurious
+before/after comparison.
+
+### Consequences for the experimental design
+
+1. **Repetitions are not redundant.** Earlier guidance in this document and in
+   the README said 3 repetitions measured nothing and recommended `--reps 1`.
+   That was wrong for 12% of cells. The guideline's instruction to *"repeat
+   non-deterministic runs at least three times"* applies here after all.
+2. **The P3 re-run used 1 repetition** (§3.13c-2), so its numbers carry
+   unquantified run-to-run variance. The direction of the P3 finding is safe,
+   since recall fell in all four model/mode cells for the two working models,
+   but the exact values are single samples.
+3. **Every gemma4 figure should carry this caveat.** At a 23% instability rate,
+   a single run of gemma4 is not a measurement.
+4. **Any future arm should use 3 repetitions**, or state plainly that it does
+   not and why.
+
+### For the limitations section
+
+This is a genuine reproducibility result and worth stating positively: a reader
+who reruns this pipeline with identical settings, seed and hardware **will not
+always reproduce these numbers exactly**. That is a property of GPU inference,
+not of this pipeline, and it is rarely reported in comparisons of this kind.
+
+---
+
 ## 3.13d Link taxonomy: what each directory actually publishes per member
 
 Measured across every extracted record (`dump_extractions.py`, `link_status`
@@ -2477,10 +2573,18 @@ being switched on globally.
   A single page moves an aggregate F1 by roughly 0.03, which exceeds most of
   the gaps the benchmark reports. Rankings at the top of the table are safe;
   differences under about 0.05 are not resolvable at this corpus size.
-- The three repetitions carry no information. Temperature 0 with a fixed seed
-  produced F1 standard deviation of exactly 0.000 on all ten pages, so the
-  grid measures determinism, not variance. Non-zero temperature would be
-  needed to report confidence intervals.
+- **Results are not fully reproducible, even at temperature 0 with a fixed
+  seed.** 22 of 180 configurations returned different output across identical
+  repetitions (§3.13e): 3% of qwen cells, 10% of llama, 23% of gemma4. GPU
+  floating-point reductions are not bit-stable, and a near-tied token
+  occasionally flips. A reader rerunning this pipeline with identical settings
+  and hardware will not always reproduce these numbers exactly.
+- Following from that, the P3 re-run (§3.13c-2) used a single repetition, so
+  its values are single samples. The direction of its finding is safe, since
+  recall fell in all four cells for the two working models, but the exact
+  numbers carry unquantified variance.
+- Every gemma4 figure carries a 23% per-cell instability rate. A single gemma4
+  run is not a measurement.
 - gemma4:12b was benchmarked only at `num_ctx = 8192`, and a 32k confirmation
   run was deliberately not performed (§3.13). Every gemma4 claim must name the
   context setting. The evidence that the window size is not the real constraint

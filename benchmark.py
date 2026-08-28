@@ -324,10 +324,12 @@ def build_plan(stage: str, models: list[str], pages: list[dict],
     """
     strategies = [prompt_only] if prompt_only else list(prompts.ARMS[arm])
     modes = [json_mode_only] if json_mode_only else config.JSON_MODES
-    # Repetitions measure sampling variance. At temperature 0 with a fixed
-    # seed the GPU grid produced an F1 standard deviation of exactly 0.000 on
-    # all ten pages, so extra repetitions buy nothing but wall clock; the
-    # override exists to spend that time on coverage instead.
+    # Repetitions are NOT redundant, despite temperature 0 and a fixed seed.
+    # 22 of the 180 configurations in the original GPU grid disagreed across
+    # identical repetitions: GPU floating-point reductions are not bit-stable,
+    # and a near-tied token occasionally flips. The rate rises with how close
+    # a model runs to its context limit (qwen 3%, llama 10%, gemma4 23%).
+    # The override exists for quick checks, not for production runs.
     reps = reps_override or (config.STAGE_A_REPETITIONS if stage == "a"
                              else config.STAGE_B_REPETITIONS)
 
@@ -468,8 +470,9 @@ def main() -> None:
     ap.add_argument("--pages", nargs="+", default=None,
                     help="restrict to these url_ids, e.g. --pages 043 050")
     ap.add_argument("--reps", type=int, default=None,
-                    help="override repetitions (output is deterministic at "
-                         "temperature 0, so 1 is usually enough)")
+                    help="override repetitions. Note that output is NOT fully "
+                         "deterministic even at temperature 0 (12%% of grid "
+                         "cells varied), so 1 is for quick checks only")
     args = ap.parse_args()
 
     if not preflight(args.models):
