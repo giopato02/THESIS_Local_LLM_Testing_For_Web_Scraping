@@ -54,6 +54,17 @@ BARE_DOMAIN = re.compile(r"^(?:www\.)?[a-z0-9][a-z0-9-]*(?:\.[a-z0-9-]+)+(?:/|$)
                          re.IGNORECASE)
 
 
+def host_of(url: str) -> str:
+    """Bare hostname, for deciding whether two entries claim the same site."""
+    u = url.strip().lower()
+    for prefix in ("https://", "http://", "//"):
+        if u.startswith(prefix):
+            u = u[len(prefix):]
+            break
+    u = u.split("?")[0].split("#")[0].split("/")[0]
+    return u[4:] if u.startswith("www.") else u
+
+
 def resolve(href: str, base: str) -> str:
     """Turn one href into an absolute URL, handling the scheme-less case."""
     href = href.strip()
@@ -275,8 +286,18 @@ def main() -> None:
         # points at, the page has stated the pairing and there is nothing to
         # infer. Positional matching only fills the gap left by anchors
         # labelled "Web", "Zur Website" and the like.
-        website = index_websites(page.text, companies)
-        website.update(index_websites_from_markup(html, row["url"]))
+        #
+        # A website belongs to ONE company, so a positional guess at an address
+        # the markup has already claimed is wrong by construction. Merging the
+        # two maps without enforcing that left both entries alive under
+        # different company names: on NMWP.NRW, 10 of 36 addresses were claimed
+        # twice, once correctly from the markup and once by a positional guess
+        # that had drifted into the wrong listing.
+        markup = index_websites_from_markup(html, row["url"])
+        claimed = {host_of(u) for u in markup.values()}
+        website = {k: v for k, v in index_websites(page.text, companies).items()
+                   if host_of(v) not in claimed}
+        website.update(markup)
 
         for name in companies:
             key = match_key(name)
