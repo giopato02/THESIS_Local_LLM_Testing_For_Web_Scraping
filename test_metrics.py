@@ -151,6 +151,36 @@ def test_same_org() -> None:
               "domain would treat its own links as company websites")
 
 
+def test_generic_labels() -> None:
+    """
+    A link's label either names a company or names the kind of link. Only the
+    first speaks for an address. Both directions of this were broken once:
+
+      treating "Web" as a company name  -> every positional pairing on
+        SPECTARIS was discarded and the corpus ceiling fell from 63% to 8%
+      ignoring short real names (AMAC)  -> a positional guess reassigned an
+        address the markup had already claimed, giving Aixtron SE the website
+        of a different company
+    """
+    import link_coverage as L
+    print("generic link labels")
+
+    for generic in ("Web", "Website", "zur Website", "mehr", "Kontakt", "Home"):
+        check(f"{generic!r} is a generic label",
+              L.match_key(generic) in L.GENERIC_LABELS, True)
+
+    for real in ("AMAC GmbH", "AMO GmbH", "CTC GmbH", "DLR",
+                 "2mag AG", "Ätztechnik Herz GmbH & Co. KG"):
+        check(f"{real!r} is not a generic label",
+              L.match_key(real) in L.GENERIC_LABELS, False)
+
+    # Short real names must still be short enough to fall under MIN_KEY_LEN,
+    # which is exactly why the claimed set and the pairing map differ.
+    if len(L.match_key("AMAC GmbH")) >= L.MIN_KEY_LEN:
+        print("  WARN  MIN_KEY_LEN no longer excludes short names; the split "
+              "between claimed and paired may be redundant")
+
+
 def test_host_of() -> None:
     import score_websites as S
     print("host_of")
@@ -271,8 +301,8 @@ def main() -> None:
                     help="also scan the real pages, needs link_coverage.csv")
     args = ap.parse_args()
 
-    for fn in (test_match_key, test_score, test_same_org, test_host_of,
-               test_website_classification):
+    for fn in (test_match_key, test_score, test_same_org, test_generic_labels,
+               test_host_of, test_website_classification):
         fn()
     if args.corpus:
         scan_corpus()

@@ -79,6 +79,21 @@ OUT_CSV = config.RESULTS_DIR / "link_coverage.csv"
 # company name. Measured: no ground-truth member name normalises shorter.
 MIN_KEY_LEN = 5
 
+# Link labels that identify the KIND of link rather than the company behind
+# it. SPECTARIS labels every member's website "Web"; NMWP puts the company
+# name in the logo's alt text. Only the second kind speaks for an address, so
+# only the second kind may block a positional pairing. Getting this wrong in
+# either direction is costly: treating "Web" as a company name discards every
+# positional pairing on SPECTARIS and drops the corpus ceiling from 63% to 8%,
+# while ignoring short real names such as AMAC lets a positional guess
+# reassign an address that the markup had already spoken for.
+GENERIC_LABELS = {
+    "web", "website", "webseite", "homepage", "home", "link", "url",
+    "zur website", "zur webseite", "website besuchen", "mehr", "mehr erfahren",
+    "more", "hier", "info", "infos", "details", "profil", "kontakt",
+    "email", "mail", "seite", "www", "internet",
+}
+
 
 def match_key(name: str) -> str:
     """Same normalisation the scorer uses, so 'found' means the same thing."""
@@ -168,7 +183,12 @@ def index_websites_from_markup(html: str, page_url: str) -> dict[str, str]:
           <img alt="Ätztechnik Herz GmbH & Co. KG">
         </a>
 
-    That is authoritative and must be preferred over anything positional. A
+    Returns (pairings, every labelled outbound href). The second is wider than
+    the first: a link whose label is too short to use as a key is still spoken
+    for by that label, and must not be reassigned positionally.
+
+    The pairing is authoritative and must be preferred over anything
+    positional. A
     page can carry two separate listings, a text list and a logo grid, and
     walking down from a name in one of them lands on a URL belonging to the
     other. Measured on NMWP.NRW: positional matching alone paired "Aixtron SE"
@@ -181,6 +201,7 @@ def index_websites_from_markup(html: str, page_url: str) -> dict[str, str]:
     base = urljoin(page_url, base_tag["href"].strip()) if base_tag else page_url
 
     found: dict[str, str] = {}
+    labelled: set[str] = set()
     for a in soup.find_all("a", href=True):
         href = resolve(a["href"], base)
         if not href.startswith("http") or same_org(own, urlparse(href).netloc):
@@ -191,9 +212,17 @@ def index_websites_from_markup(html: str, page_url: str) -> dict[str, str]:
             if img:
                 text = (img.get("alt") or img.get("title") or "").strip()
         key = match_key(text)
+        if not key or key in GENERIC_LABELS:
+            continue
+        # A link labelled with a company name is spoken for by that company,
+        # even when the name is too short to use as a lookup key. Short real
+        # names exist -- AMAC, AMO, CTC, DLR -- and excluding them from the
+        # claimed set let a positional guess reassign their address to a
+        # different company. That is how "Aixtron SE" acquired Effing's site.
+        labelled.add(href)
         if len(key) >= MIN_KEY_LEN:
             found.setdefault(key, href)
-    return found
+    return found, labelled
 
 
 def index_websites(page_text: str, names: list[str]) -> dict[str, str]:
@@ -293,8 +322,8 @@ def main() -> None:
         # different company names: on NMWP.NRW, 10 of 36 addresses were claimed
         # twice, once correctly from the markup and once by a positional guess
         # that had drifted into the wrong listing.
-        markup = index_websites_from_markup(html, row["url"])
-        claimed = {host_of(u) for u in markup.values()}
+        markup, labelled = index_websites_from_markup(html, row["url"])
+        claimed = {host_of(u) for u in labelled}
         website = {k: v for k, v in index_websites(page.text, companies).items()
                    if host_of(v) not in claimed}
         website.update(markup)
