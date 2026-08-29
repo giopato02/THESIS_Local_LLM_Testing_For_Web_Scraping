@@ -2196,6 +2196,106 @@ in the methodology rather than left for a reader to notice.
 
 ---
 
+## 3.13i URL arm, llama3.1:8b complete (180 runs): what the extra fields cost
+
+llama3.1:8b finished all three strategies under both JSON modes on the URL
+arm. This is the answer to the question §3.11c raised before any of it ran.
+
+### The ranking does not transfer
+
+Names only (from §3.13) against the same approach asked for the full record:
+
+| approach | names only | with full record | cost |
+|---|---:|---:|---:|
+| zero-shot | 0.981 | 0.855 | **-0.126** |
+| few-shot | 0.955 | 0.858 | -0.097 |
+| multi-stage | 0.824 | 0.747 | -0.077 |
+
+**Zero-shot's advantage disappears.** It leads by 0.026 on names and by
+-0.003 on records, which is to say not at all. The strategy that loses least
+is the one that was already behind, and the ordering at the top inverts within
+noise. Assuming the names-arm winner would carry over, which was the tempting
+shortcut, would have been wrong.
+
+### Name accuracy, all twelve llama configurations
+
+| strategy | JSON | name P | name R | name F1 | s/run |
+|---|---|---:|---:|---:|---:|
+| zero_shot | prompt_only | 0.983 | 0.978 | **0.981** | 26 |
+| zero_shot | constrained | 0.982 | 0.978 | 0.980 | 26 |
+| few_shot_schema | constrained | 0.977 | 0.942 | 0.955 | 24 |
+| few_shot_schema | prompt_only | 0.977 | 0.933 | 0.950 | 23 |
+| few_shot_full_record | prompt_only | 0.960 | 0.831 | 0.858 | 348 |
+| zero_shot_full_record | constrained | 0.950 | 0.833 | 0.855 | 538 |
+| few_shot_full_record | constrained | 0.961 | 0.824 | 0.852 | 346 |
+| zero_shot_full_record | prompt_only | 0.946 | 0.827 | 0.846 | 635 |
+| generic_multi_stage | constrained | 0.986 | 0.720 | 0.824 | 59 |
+| generic_multi_stage | prompt_only | 0.986 | 0.701 | 0.810 | 56 |
+| multi_stage_full_record | constrained | 0.987 | 0.630 | 0.747 | 367 |
+| multi_stage_full_record | prompt_only | 0.986 | 0.593 | 0.696 | 642 |
+
+**Precision barely moves; recall collapses.** Across every strategy precision
+stays between 0.946 and 0.987 whether one field is requested or seven. Recall
+falls from 0.978 to 0.83 for zero-shot and from 0.942 to 0.824 for few-shot.
+The model does not become less accurate about what a company is. It stops
+sooner, because each record now costs seven fields instead of one name, and
+the same output-length ceiling that truncates long pages (§3.13) is reached
+after fewer companies.
+
+### The runtime cost is the larger finding
+
+| | names only | full record | factor |
+|---|---:|---:|---:|
+| zero-shot | 26 s | 538-635 s | **21-24x** |
+| few-shot | 23-24 s | 346-348 s | 15x |
+| multi-stage | 56-59 s | 367-642 s | 7-11x |
+
+Asking for six extra fields costs an order of magnitude in wall clock, far more
+than the roughly 2x growth in output tokens would suggest. For a production run
+over 291 networks this is the difference between two hours and two days, and it
+is the single most important number for deciding whether to extract contact
+details in one pass or to fetch profile pages afterwards (§3.13f).
+
+Note also that zero-shot is now the **slowest** strategy at 538-635 s, having
+been the fastest on names. With no worked example the model generates far more
+per record, and few-shot's example evidently constrains that. The same anchoring
+that hurt few-shot on long name lists (§3.13) helps it here.
+
+### Website field: few-shot wins clearly
+
+Scored with `score_websites.py`, so "correct" means the address that belongs to
+that company, not merely one printed on the page:
+
+| strategy | JSON | web P | web R | web F1 |
+|---|---|---:|---:|---:|
+| few_shot_full_record | prompt_only | 0.949 | 0.708 | **0.811** |
+| zero_shot_full_record | prompt_only | 0.953 | 0.654 | 0.776 |
+| few_shot_full_record | constrained | 0.941 | 0.658 | 0.774 |
+| zero_shot_full_record | constrained | 0.950 | 0.487 | 0.644 |
+| multi_stage_full_record | constrained | 0.969 | 0.328 | 0.490 |
+| multi_stage_full_record | prompt_only | 0.963 | 0.217 | 0.354 |
+
+**`few_shot_full_record` + `prompt_only` is the configuration to use for the
+deliverable.** It leads on both name F1 (0.858) and website F1 (0.811), and is
+roughly twice as fast as either zero-shot variant.
+
+That few-shot wins here and lost on names is explicable rather than surprising:
+a seven-field record has a shape, and a worked example communicates that shape
+in a way a schema description does not. On a flat list of names there was no
+shape to demonstrate, so the example only capped output length.
+
+**Multi-stage is catastrophic for websites**, at recall 0.217-0.328. The
+validation stage discards whole records, and a discarded record takes its
+website with it. §3.13c-2 established that validation deletes correct entries;
+this shows the cost compounds when each entry carries more.
+
+### Invention stays near zero
+
+7 fabricated addresses out of 2,635 returned, **0.27%**, and all 7 came from
+`constrained` runs. The abstention property holds across every strategy.
+
+---
+
 ## 3.13h Extracting a website is a harder task than extracting a name
 
 First scored results from the URL arm, `llama3.1:8b` + `zero_shot_full_record`
