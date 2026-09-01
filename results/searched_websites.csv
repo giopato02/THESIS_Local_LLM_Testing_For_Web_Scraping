@@ -1,0 +1,33 @@
+﻿url_id,org_name,company,query,found_url,status,evidence,candidates_seen
+004,Automotive Nordwest e.V.,Goldbeck Nord GmbH,Goldbeck Nord GmbH Firma Webseite,https://www.goldbeck.de/standort/hamburg,domain_match,domain~goldbeck,1
+005,automotive thüringen e.V.,Brunel GmbH – neue Adresse ab,Brunel GmbH – neue Adresse ab Firma Webseite,https://www.brunel.net/de-de,verified,"domain~brunel, page~brunel",1
+005,automotive thüringen e.V.,TARGO Leasing GmbH,TARGO Leasing GmbH Firma Webseite,https://www.targobank.de/de/firmenkunden/leasing/index.html,verified,"domain~targo, page~targo",1
+009,BDEW Bundesverband der Energie- und Wasserwirtschaft e.V.,Allego GmbH,Allego GmbH Firma Webseite,https://www.allego.eu/de/,verified,"domain~allego, page~allego",1
+009,BDEW Bundesverband der Energie- und Wasserwirtschaft e.V.,ANE GmbH & Co. KG,ANE GmbH & Co. KG Firma Webseite,,unverified,,3
+012,Bundesverband Medizintechnologie e.V. (BVMed),1stQ Deutschland GmbH,1stQ Deutschland GmbH Firma Webseite,https://www.1stq.de/de/,verified,"domain~1stq, page~1stq",1
+012,Bundesverband Medizintechnologie e.V. (BVMed),A. Höfer GmbH,A. Höfer GmbH Firma Webseite,,unverified,,5
+012,Bundesverband Medizintechnologie e.V. (BVMed),aap Implantate AG,aap Implantate AG Firma Webseite,https://www.aap.de/,page_only,page~implantate,2
+012,Bundesverband Medizintechnologie e.V. (BVMed),Abbott GmbH,Abbott GmbH Firma Webseite,https://www.de.abbott/,page_only,page~abbott,4
+012,Bundesverband Medizintechnologie e.V. (BVMed),Abbott Medical GmbH,Abbott Medical GmbH Firma Webseite,https://www.abbott.com/de-de/homepage,verified,"domain~abbott, page~abbott",1
+012,Bundesverband Medizintechnologie e.V. (BVMed),Abena GmbH,Abena GmbH Firma Webseite,https://www.abena.de/,verified,"domain~abena, page~abena",1
+012,Bundesverband Medizintechnologie e.V. (BVMed),Abiomed Europe GmbH,Abiomed Europe GmbH Firma Webseite,,no_result,,2
+012,Bundesverband Medizintechnologie e.V. (BVMed),Acandis GmbH,Acandis GmbH Firma Webseite,https://acandis.com/,verified,"domain~acandis, page~acandis",1
+012,Bundesverband Medizintechnologie e.V. (BVMed),aescoLOGIC GmbH,aescoLOGIC GmbH Firma Webseite,https://www.aescologic.de/?id=145,verified,"domain~aescologic, page~aescologic",1
+012,Bundesverband Medizintechnologie e.V. (BVMed),Aesculap AG,Aesculap AG Firma Webseite,https://www.bkk-bba.de/unternehmen/traegerunternehmen,page_only,page~aesculap,5
+012,Bundesverband Medizintechnologie e.V. (BVMed),ai6 Solutions GmbH,ai6 Solutions GmbH Firma Webseite,,unverified,,3
+012,Bundesverband Medizintechnologie e.V. (BVMed),AKANNI Healthcare GmbH,AKANNI Healthcare GmbH Firma Webseite,https://akanni.de/,verified,"domain~akanni, page~healthcare",1
+012,Bundesverband Medizintechnologie e.V. (BVMed),AKRUS GmbH & Co.KG,AKRUS GmbH & Co.KG Firma Webseite,https://www.akrus.de/,verified,"domain~akrus, page~akrus",1
+012,Bundesverband Medizintechnologie e.V. (BVMed),aktivmed GmbH,aktivmed GmbH Firma Webseite,https://aktivmed.de/,verified,"domain~aktivmed, page~aktivmed",1
+012,Bundesverband Medizintechnologie e.V. (BVMed),ALCON Deutschland GmbH,ALCON Deutschland GmbH Firma Webseite,https://www.alcon.com/de-DE/impressum/,verified,"domain~alcon, page~alcon",1
+012,Bundesverband Medizintechnologie e.V. (BVMed),AllCON GmbH,AllCON GmbH Firma Webseite,https://allcon.de/,verified,"domain~allcon, page~allcon",1
+012,Bundesverband Medizintechnologie e.V. (BVMed),ALMO-Erzeugnisse GmbH,ALMO-Erzeugnisse GmbH Firma Webseite,https://www.almo-erzeugnisse.de/,verified,"domain~erzeugnisse, page~erzeugnisse",1
+012,Bundesverband Medizintechnologie e.V. (BVMed),Ambu GmbH,Ambu GmbH Firma Webseite,https://www.ambu.de/,verified,"domain~ambu, page~ambu",1
+012,Bundesverband Medizintechnologie e.V. (BVMed),AMEFA GmbH,AMEFA GmbH Firma Webseite,,unverified,,2
+012,Bundesverband Medizintechnologie e.V. (BVMed),amg International GmbH,amg International GmbH Firma Webseite,,unverified,,5
+012,Bundesverband Medizintechnologie e.V. (BVMed),AMPLITUDE GmbH,AMPLITUDE GmbH Firma Webseite,https://www.amplitude-ortho.com/de/ueber-amplitude,verified,"domain~amplitude, page~amplitude",1
+012,Bundesverband Medizintechnologie e.V. (BVMed),Andreas Fahl Medizintechnik-Vertrieb GmbH,Andreas Fahl Medizintechnik-Vertrieb GmbH Firma Webseite,https://www.fahl.com/de/unternehmen,verified,"domain~fahl, page~medizintechnik",1
+012,Bundesverband Medizintechnologie e.V. (BVMed),Ansell GmbH,Ansell GmbH Firma Webseite,https://www.ansell.com/de/de,domain_match,domain~ansell,1
+012,Bundesverband Medizintechnologie e.V. (BVMed),Arjo Deutschland GmbH,Arjo Deutschland GmbH Firma Webseite,https://www.arjo.com/de-de/,verified,"domain~arjo, page~arjo",1
+012,Bundesverband Medizintechnologie e.V. (BVMed),Arvato Supply Chain Solutions SE,Arvato Supply Chain Solutions SE Firma Webseite,https://arvato.com/,verified,"domain~arvato, page~arvato",1
+012,Bundesverband Medizintechnologie e.V. (BVMed),ASSAmed GmbH,ASSAmed GmbH Firma Webseite,https://www.assamed.de/,verified,"domain~assamed, page~assamed",1
+012,Bundesverband Medizintechnologie e.V. (BVMed),ATMOS MedizinTechnik GmbH & Co. KG,ATMOS MedizinTechnik GmbH & Co. KG Firma Webseite,https://atmosmed.com/,verified,"domain~atmos, page~medizintechnik",1

@@ -45,6 +45,43 @@ git remote is cluster-internal and unreachable from the laptop, so code moves
 by tarball, packed with `COPYFILE_DISABLE=1 tar --no-xattrs --no-mac-metadata`
 or macOS metadata arrives as unopenable binary twins of every file.
 
+### Next tasks, in order (2026-09-01)
+
+Experiments are complete. Nothing below is blocked on GPU time.
+
+**1. Finish stage 4 and merge it into the deliverable.**
+`search_websites.py` is running over the 165 companies with no link. When it
+finishes, the websites it confirms have to be joined into
+`NeoHub_Network_Members.xlsx`. Only `verified` and `domain_match` may be
+loaded; `page_only` is usually a directory and must stay out (§3.13l).
+
+**2. Run stage 3 extraction.**
+The 101 profile pages are already cached by `fetch_profiles.py --fetch-only`.
+Running the extraction needs a model and about 15 minutes. Those pages carry
+postcode 97% and website 96% of the time, so this is where the address and
+contact fields Marco and Yusif asked for actually come from (§3.13f).
+
+**3. Recover SPECTARIS.**
+296 companies, the largest page, absent from the deliverable because every
+full-record configuration fails on it. Extract names with the names-arm winner
+(F1 0.995 there) and attach websites positionally (§3.13k).
+
+**4. Production run over the 291 Finalv1 networks.**
+HTML already cached at `results/html_cache_finalv1/`. `build_urls.py` still
+targets the old 73-URL sheet and needs rewriting for Finalv1 first.
+
+**5. Work-package documentation for Neovation.**
+`make_documentation.py` generates it in Marco's template. Section 4c already
+holds the failed approaches he asked to see.
+
+**6. Chase Hafiz for the cloud numbers.**
+`results/PROMPTS.txt` was shared so his Gemini runs use identical input. This
+is the only comparison still blocked on someone else.
+
+**Deferred by decision:** expanding ground truth from 10 to 30 pages
+(Giorgi, 2026-09-01). Every accuracy figure keeps the ten-page caveat in §5
+until this is done, and one page still moves an aggregate F1 by about 0.03.
+
 ### Project roles
 
 Recorded because decisions in this document are attributed to individuals, and
@@ -2200,6 +2237,122 @@ few-shot and **1 for multi-stage**, because the buggy P3 rows were removed and
 replaced. Defensible given the measured determinism (F1 standard deviation
 exactly 0.000 across three repetitions on all ten pages), but it must be stated
 in the methodology rather than left for a reader to notice.
+
+---
+
+## 3.13k The deliverable, and the gap that stage 4 exists to close
+
+`export_deliverable.py` now builds the workbook from the configuration the
+study chose rather than from whichever run happened to return the most rows.
+That default was wrong for a deliverable: volume is not accuracy, and the most
+prolific run on a page can come from the model that fabricates (§3.13j).
+
+Current output, `llama3.1:8b` + `few_shot_full_record` + `prompt_only`:
+
+- **409 member records from 9 of the 10 networks**
+- **138 carry a company website, 34%**
+
+### SPECTARIS is missing, and no configuration can supply it
+
+All three repetitions failed on page 050 with `unparseable JSON`. Checking
+every other full-record configuration on that page: only qwen's
+`few_shot_full_record` produced anything at all, and it returned **3 companies
+out of 296** (F1 0.013).
+
+**No configuration in the study extracts full records from the largest page in
+the corpus.** 4,203 words, three chunks, 296 members: asking for seven fields
+per company exceeds what any of these models completes. That is a limitation
+of the one-pass full-record approach, not of a particular model, and it should
+be stated as such.
+
+The workaround is already available and is worth reporting as the practical
+recommendation: extract **names** with the names-arm winner, which scores
+F1 0.995 on that page, then attach websites from the page separately. 295 of
+SPECTARIS's 296 companies have a website printed beside them, and the
+positional pairing in `link_coverage.py` recovers it without a model. Splitting
+the task beats asking for it all at once, on exactly the page where asking for
+it all at once fails.
+
+### Why 34% coverage is the expected number, not a disappointment
+
+Against the ceiling from §3.13d rather than against 100%:
+
+| route | companies | share | who can supply the website |
+|---|---:|---:|---|
+| website on the page | 481 | 63% | stage 1, the model |
+| profile page only | 115 | 15% | stage 3, one fetch each |
+| no link at all | 165 | 22% | stage 4, web search |
+
+The deliverable's 34% reflects that it currently runs stage 1 only, over 9
+pages, one of which (SPECTARIS, 295 of the 481) is missing. The remaining 37%
+was never reachable in one pass.
+
+---
+
+## 3.13l Stage 4: web search, and why verification is the whole job
+
+Built as `search_websites.py`. Handles the 165 companies with no link of any
+kind. No model: a search returns candidates and Python decides whether any
+belongs to the company, which is string and hostname comparison.
+
+### The failure mode is accepting a plausible wrong answer
+
+A search always returns something. Every result looks reasonable. The value of
+this stage is refusing the ones that are wrong, for the same reason a
+fabricated URL is worse than a blank cell: a blank is visibly missing, a
+plausible wrong domain is a bad record nobody catches.
+
+The first live test of ten companies made this concrete. Eight results passed
+a name-appears-on-the-page check, and **three of those eight were business
+directories**:
+
+```
+Allego GmbH        -> elektro-einkaufsfuehrer.de     supplier directory
+A. Höfer GmbH      -> lieferanten.de/lieferant-653   supplier directory
+Abbott Medical     -> online-handelsregister.de      company registry
+```
+
+A directory naturally mentions every company it lists, so "the page names the
+company" is satisfied by exactly the results that are wrong.
+
+### The heuristic that fixed it
+
+A blocklist cannot enumerate the German B2B directory long tail. What
+distinguishes them is structural:
+
+> A company's own site carries its name in the **hostname**
+> (`hoefer.de`). A directory carries it in the **path**
+> (`lieferanten.de/lieferant-653-hoefer`).
+
+Rejecting results whose name-match is in the path and not the domain moved
+Allego to `allego.eu` and Abbott Medical to `abbott.com`, both correct, in the
+same ten-company sample.
+
+### Four outcomes, reported separately
+
+| status | meaning | safe to load |
+|---|---|---|
+| `verified` | domain resembles the name **and** the page mentions it | yes |
+| `domain_match` | domain resembles the name, page not confirmed | yes |
+| `page_only` | page mentions the name, domain does not resemble it | **no**, usually a directory |
+| `unverified` / `no_result` | nothing survived the filters | no |
+
+Collapsing `page_only` into "found" would inflate the coverage figure with
+exactly the results most likely to be wrong, so it is counted apart.
+
+### Known limits, measured on the ten-company sample
+
+- **Similar names are not separable.** `TARGO Leasing GmbH` resolves to
+  `targobank.de`: the domain genuinely resembles the name and the page
+  genuinely mentions it, but they are different companies. No string test
+  distinguishes these; only an address or registry check would.
+- **Short names fall through.** `aap Implantate AG` is correct at `aap.de`,
+  but a three-character token is below the matching threshold, so it is
+  reported as `page_only`. The threshold exists to stop three-letter fragments
+  matching everything, and lowering it would cost more than it gains.
+
+Both push in the safe direction: `page_only` under-claims rather than
+over-claims. For a database that is the right way to be wrong.
 
 ---
 
