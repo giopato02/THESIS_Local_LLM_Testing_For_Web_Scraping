@@ -1,0 +1,91 @@
+{
+ "key": "a|llama3.1:8b|multi_stage_full_record|prompt_only|004|1",
+ "raw": [
+  "ATP Automotive Testing Papenburg GmbH",
+  "Brumund Maschinenbau GmbH & Co. KG",
+  "Container Terminal Wilhelmshaven JadeWeserPort-Marketing GmbH & Co. KG",
+  "embeteco GmbH & Co. KG",
+  "EuroQ GmbH",
+  "Fraunhofer-Institut für Fertigungstechnik und Angewandte Materialforschung IFAM",
+  "Global Q Automotive Services",
+  "Graepel Löningen GmbH & Co. KG",
+  "ifm electronic gmbh Vertrieb Deutschland",
+  "ITNW Ingenieurtechnik NordWest GmbH",
+  "ITS mobility GmbH",
+  "LMC │ LOGISTIKBERATUNG • PROJEKTMANAGEMENT",
+  "QSR24h GmbH",
+  "SALT AND PEPPER Holding GmbH & Co. KG",
+  "SEH Fördersysteme GmbH",
+  "Seifert Logistics Group",
+  "SILVER ATENA",
+  "SWMS Systemtechnik Ingenieurgesellschaft mbH",
+  "TCC Car Components GmbH",
+  "Wiosense GmbH & Co. KG",
+  "XMSplus"
+ ],
+ "records": [
+  {
+   "name": "ATP Automotive Testing Papenburg GmbH"
+  },
+  {
+   "name": "Brumund Maschinenbau GmbH & Co. KG"
+  },
+  {
+   "name": "Container Terminal Wilhelmshaven JadeWeserPort-Marketing GmbH & Co. KG"
+  },
+  {
+   "name": "embeteco GmbH & Co. KG"
+  },
+  {
+   "name": "EuroQ GmbH"
+  },
+  {
+   "name": "Fraunhofer-Institut für Fertigungstechnik und Angewandte Materialforschung IFAM"
+  },
+  {
+   "name": "Global Q Automotive Services"
+  },
+  {
+   "name": "Graepel Löningen GmbH & Co. KG"
+  },
+  {
+   "name": "ifm electronic gmbh Vertrieb Deutschland"
+  },
+  {
+   "name": "ITNW Ingenieurtechnik NordWest GmbH"
+  },
+  {
+   "name": "ITS mobility GmbH"
+  },
+  {
+   "name": "LMC │ LOGISTIKBERATUNG • PROJEKTMANAGEMENT"
+  },
+  {
+   "name": "QSR24h GmbH"
+  },
+  {
+   "name": "SALT AND PEPPER Holding GmbH & Co. KG"
+  },
+  {
+   "name": "SEH Fördersysteme GmbH"
+  },
+  {
+   "name": "Seifert Logistics Group"
+  },
+  {
+   "name": "SILVER ATENA"
+  },
+  {
+   "name": "SWMS Systemtechnik Ingenieurgesellschaft mbH"
+  },
+  {
+   "name": "TCC Car Components GmbH"
+  },
+  {
+   "name": "Wiosense GmbH & Co. KG"
+  },
+  {
+   "name": "XMSplus"
+  }
+ ]
+}

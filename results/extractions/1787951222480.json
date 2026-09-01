@@ -1,0 +1,555 @@
+{
+ "key": "a|llama3.1:8b|zero_shot_full_record|constrained|050|1",
+ "raw": [
+  "2mag AG",
+  "5micron GmbH",
+  "A. Schweizer GmbH Optische Fabrik",
+  "Abbott GmbH",
+  "ADOS GmbH Mess- und Regeltechnik",
+  "AESCULAP AG",
+  "Agilent Technologies Deutschland GmbH",
+  "air-be-c Medizintechnik GmbH",
+  "Alcon Deutschland GmbH",
+  "ALS Automated Lab Solutions GmbH",
+  "Analytik Jena AG",
+  "Andreas Hettich GmbH",
+  "Andy Wolf Fashion GmbH",
+  "AOYAMA OPTICAL GERMANY GMBH",
+  "APOS GmbH",
+  "ASANUS Medizintechnik GmbH",
+  "asecos GmbH",
+  "asphericon GmbH",
+  "ATMOS MedizinTechnik GmbH & Co.KG",
+  "Bock",
+  "Bosch",
+  "Carl Zeiss",
+  "Dürr",
+  "Fresenius",
+  "Hengst",
+  "Hoya",
+  "HP",
+  "HUG",
+  "Inficon",
+  "Infors",
+  "InProcess Instruments",
+  "Instrument Systems",
+  "Integra Biosciences",
+  "Invacare",
+  "Jenoptik",
+  "Jos. Schneider Optische Werke GmbH",
+  "Karl Storz",
+  "KLS Martin",
+  "KNAUER Wissenschaftliche Geräte GmbH",
+  "Kowa",
+  "Kröber Medizintechnik GmbH",
+  "LAP GmbH Laser Applikationen",
+  "LASERVISION GmbH",
+  "LASOS Lasertechnik GmbH",
+  "Leica Camera AG",
+  "Leica Microsystems CMS GmbH",
+  "Leica Microsystems CMS GmbH Mannheim",
+  "Leica Microsystems GmbH",
+  "Lifeward GmbH",
+  "LIMO GmbH",
+  "LLS Rowiak LaserLabSolutions GmbH",
+  "Löwenstein Medical SE & Co. KG",
+  "M&M Software GmbH",
+  "Matachana Germany GmbH",
+  "Medi-Tech-Park",
+  "Medicon eG Chirurgiemechaniker-Genossenschaft",
+  "MELAG oHG Medizintechnik",
+  "Memmert GmbH + Co.KG",
+  "Menicon GmbH Kontaktlinsen",
+  "Mersen Deutschland Holding GmbH & Co. KG",
+  "Messer Group GmbH",
+  "Mettler Toledo GmbH",
+  "Meyer-Haake GmbH",
+  "Sartorius",
+  "Siemens",
+  "Spectris",
+  "Stefan",
+  "Toshiba",
+  "Walter",
+  "LASER COMPONENTS GmbH",
+  "Laser 2000 GmbH"
+ ],
+ "records": [
+  {
+   "name": "2mag AG",
+   "url": "http://www.2mag.de",
+   "street": "Schragenhofstr. 35",
+   "postcode": "80992",
+   "city": "München"
+  },
+  {
+   "name": "5micron GmbH",
+   "url": "http://www.5micron.de",
+   "street": "Rudower Chaussee 29",
+   "postcode": "12489",
+   "city": "Berlin"
+  },
+  {
+   "name": "A. Schweizer GmbH Optische Fabrik",
+   "url": "http://www.schweizer-optik.de",
+   "street": "Hans-Böckler-Straße 7",
+   "postcode": "91301",
+   "city": "Forchheim"
+  },
+  {
+   "name": "Abbott GmbH",
+   "url": "http://www.abbott.de",
+   "street": "Max-Planck-Ring 2",
+   "postcode": "65205",
+   "city": "Wiesbaden"
+  },
+  {
+   "name": "ADOS GmbH Mess- und Regeltechnik",
+   "url": "http://www.ados.de",
+   "street": "Trierer Straße 23-25",
+   "postcode": "52078",
+   "city": "Aachen"
+  },
+  {
+   "name": "AESCULAP AG",
+   "url": "http://www.aesculap.de",
+   "street": "Am Aesculap-Platz",
+   "postcode": "78532",
+   "city": "Tuttlingen"
+  },
+  {
+   "name": "Agilent Technologies Deutschland GmbH",
+   "url": "http://www.agilent.com",
+   "street": "Hewlet-Packard-Str. 8",
+   "postcode": "76337",
+   "city": "Waldbronn"
+  },
+  {
+   "name": "air-be-c Medizintechnik GmbH",
+   "url": "http://www.sauerstoffkonzentrator.de",
+   "street": "Fasaneninsel 1",
+   "postcode": "07548",
+   "city": "Gera"
+  },
+  {
+   "name": "Alcon Deutschland GmbH",
+   "url": "http://www.myalcon.de",
+   "street": "Bauhofstraße 16",
+   "postcode": "63762",
+   "city": "Großostheim"
+  },
+  {
+   "name": "ALS Automated Lab Solutions GmbH",
+   "url": "http://www.als-jena.de",
+   "street": "Otto-Eppenstein-Straße 30",
+   "postcode": "07745",
+   "city": "Jena"
+  },
+  {
+   "name": "Analytik Jena AG",
+   "url": "http://www.analytik-jena.de",
+   "street": "Konrad-Zuse-Straße 1",
+   "postcode": "07745",
+   "city": "Jena"
+  },
+  {
+   "name": "Andreas Hettich GmbH",
+   "url": "http://www.hettichlab.com",
+   "street": "Föhrenstraße 12",
+   "postcode": "78532",
+   "city": "Tuttlingen"
+  },
+  {
+   "name": "Andy Wolf Fashion GmbH",
+   "url": "http://www.andy-wolf.com",
+   "street": "Am Ökopark 21",
+   "postcode": "8230",
+   "city": "Hartberg"
+  },
+  {
+   "name": "AOYAMA OPTICAL GERMANY GMBH",
+   "url": "http://www.aoyama-optical.de",
+   "street": "Großbeerenstrasse 179",
+   "postcode": "14482",
+   "city": "Potsdam"
+  },
+  {
+   "name": "APOS GmbH",
+   "url": "http://www.apos.biz",
+   "street": "Am Marienhof 4",
+   "postcode": "22880",
+   "city": "Wedel"
+  },
+  {
+   "name": "ASANUS Medizintechnik GmbH",
+   "url": "http://www.asanus.de",
+   "street": "take off Gewerbepark 2",
+   "postcode": "78579",
+   "city": "Neuhausen ob Eck"
+  },
+  {
+   "name": "asecos GmbH",
+   "url": "http://www.asecos.com",
+   "street": "Weiherfeldsiedlung 16-18",
+   "postcode": "63584",
+   "city": "Gründau"
+  },
+  {
+   "name": "asphericon GmbH",
+   "url": "http://www.asphericon.de",
+   "street": "Stockholmer Str. 9",
+   "postcode": "07747",
+   "city": "Jena"
+  },
+  {
+   "name": "ATMOS MedizinTechnik GmbH & Co.KG",
+   "url": "http://www.atmosmed.de",
+   "street": "Ludwig-Kegel-Straße 16",
+   "postcode": "79853",
+   "city": "Lenzkirch"
+  },
+  {
+   "name": "Bock",
+   "street": "Nickelstr. 12",
+   "postcode": "33415",
+   "city": "Verl"
+  },
+  {
+   "name": "Bosch",
+   "street": "Boschstrasse 6",
+   "postcode": "35799",
+   "city": "Merenberg"
+  },
+  {
+   "name": "Carl Zeiss",
+   "street": "Carl-Zeiss-Str. 1",
+   "postcode": "07743",
+   "city": "Jena"
+  },
+  {
+   "name": "Dürr",
+   "street": "Messer-Platz 1",
+   "postcode": "65812",
+   "city": "Bad Soden"
+  },
+  {
+   "name": "Fresenius",
+   "street": "Moltkestr. 7",
+   "postcode": "78532",
+   "city": "Tuttlingen"
+  },
+  {
+   "name": "Hengst",
+   "url": "http://www.hengst.com/de/",
+   "street": "Nienkamp 55-85",
+   "postcode": "48147",
+   "city": "Münster"
+  },
+  {
+   "name": "Hoya",
+   "url": "http://www.hoya.de",
+   "street": "Krefelder Straße 350",
+   "postcode": "41066",
+   "city": "Mönchengladbach"
+  },
+  {
+   "name": "HP",
+   "url": "http://www.hp-lab.com",
+   "street": "Bruckmannring 19",
+   "postcode": "85764",
+   "city": "Oberschleißheim"
+  },
+  {
+   "name": "HUG",
+   "url": "http://www.hug-spectacles.com",
+   "street": "Tannenbergstraße 51",
+   "postcode": "73230",
+   "city": "Kirchheim unter Teck"
+  },
+  {
+   "name": "Inficon",
+   "url": "http://www.inficon.com",
+   "street": "Bonner Strasse 498",
+   "postcode": "50968",
+   "city": "Köln"
+  },
+  {
+   "name": "Infors",
+   "url": "http://www.infors-ht.de",
+   "street": "Dachauer Str. 6",
+   "postcode": "85254",
+   "city": "Einsbach"
+  },
+  {
+   "name": "InProcess Instruments",
+   "url": "http://www.in-process.com",
+   "street": "Sophie-Germain-Straße 1",
+   "postcode": "28201",
+   "city": "Bremen"
+  },
+  {
+   "name": "Instrument Systems",
+   "url": "http://www.instrumentsystems.de",
+   "street": "Kastenbauerstraße 2",
+   "postcode": "81677",
+   "city": "München"
+  },
+  {
+   "name": "Integra Biosciences",
+   "url": "http://www.integra-biosciences.com",
+   "street": "Tardisstrasse 201",
+   "postcode": "CH-7205",
+   "city": "Zizers"
+  },
+  {
+   "name": "Invacare",
+   "url": "http://www.invacare.de",
+   "street": "Am Achener Hof 8",
+   "postcode": "88316",
+   "city": "Isny"
+  },
+  {
+   "name": "Jenoptik",
+   "url": "http://www.jenoptik.com",
+   "street": "Carl-Zeiss-Str. 1",
+   "postcode": "07743",
+   "city": "Jena"
+  },
+  {
+   "name": "Jos. Schneider Optische Werke GmbH",
+   "url": "http://www.schneiderkreuznach.com",
+   "street": "Ringstraße 132",
+   "postcode": "55543",
+   "city": "Bad Kreuznach"
+  },
+  {
+   "name": "Karl Storz",
+   "url": "http://www.karlstorz.com",
+   "street": "Dr.-Karl-Storz-Str. 34",
+   "postcode": "78532",
+   "city": "Tuttlingen"
+  },
+  {
+   "name": "KLS Martin",
+   "url": "http://www.klsmartin.com",
+   "street": "KLS Martin Platz 1",
+   "postcode": "78532",
+   "city": "Tuttlingen"
+  },
+  {
+   "name": "KNAUER Wissenschaftliche Geräte GmbH",
+   "url": "http://www.knauer.net",
+   "street": "Hegauer Weg 38",
+   "postcode": "14163",
+   "city": "Berlin"
+  },
+  {
+   "name": "Kowa",
+   "url": "http://www.kowaoptimed.com",
+   "street": "Fichtenstrasse 123",
+   "postcode": "40233",
+   "city": "Düsseldorf"
+  },
+  {
+   "name": "Kröber Medizintechnik GmbH",
+   "url": "http://www.kroeber.de",
+   "street": "Salzheck 4",
+   "postcode": "56332",
+   "city": "Dieblich"
+  },
+  {
+   "name": "LAP GmbH Laser Applikationen",
+   "url": "http://www.lap-laser.com",
+   "street": "Zeppelinstr. 23",
+   "postcode": "21337",
+   "city": "Lüneburg"
+  },
+  {
+   "name": "LASERVISION GmbH",
+   "url": "http://www.uvex-laservision.de",
+   "street": "Würzburger Str. 152",
+   "postcode": "90766",
+   "city": "Fürth"
+  },
+  {
+   "name": "LASOS Lasertechnik GmbH",
+   "url": "http://www.lasos.com",
+   "street": "Franz-Loewen-Straße 2",
+   "postcode": "07745",
+   "city": "Jena"
+  },
+  {
+   "name": "Leica Camera AG",
+   "url": "http://www.leica-camera.com",
+   "street": "Am Leitz-Park 5",
+   "postcode": "35578",
+   "city": "Wetzlar"
+  },
+  {
+   "name": "Leica Microsystems CMS GmbH",
+   "url": "http://www.leica-microsystems.com",
+   "street": "Ernst-Leitz-Str. 17-27",
+   "postcode": "35578",
+   "city": "Wetzlar"
+  },
+  {
+   "name": "Leica Microsystems CMS GmbH Mannheim",
+   "url": "http://www.leica-microsystems.com",
+   "street": "Friedensplatz 3",
+   "postcode": "68165",
+   "city": "Mannheim"
+  },
+  {
+   "name": "Leica Microsystems GmbH",
+   "url": "http://www.leica-microsystems.com",
+   "street": "Ernst-Leitz-Straße 17-37",
+   "postcode": "35578",
+   "city": "Wetzlar"
+  },
+  {
+   "name": "Lifeward GmbH",
+   "url": "http://golifeward.com",
+   "street": "Leipziger Platz 15",
+   "postcode": "10117",
+   "city": "Berlin"
+  },
+  {
+   "name": "LIMO GmbH",
+   "url": "http://www.focuslight.com",
+   "street": "Bookenburgweg 4-8",
+   "postcode": "44319",
+   "city": "Dortmund"
+  },
+  {
+   "name": "LLS Rowiak LaserLabSolutions GmbH",
+   "url": "http://www.lls-rowiak.de",
+   "street": "Garbsener Landstr. 10",
+   "postcode": "30419",
+   "city": "Hannover"
+  },
+  {
+   "name": "Löwenstein Medical SE & Co. KG",
+   "url": "http://www.loewensteinmedical.com",
+   "street": "Arzbacher Straße 80",
+   "postcode": "56130",
+   "city": "Bad Ems"
+  },
+  {
+   "name": "M&M Software GmbH",
+   "url": "http://www.mm-software.com",
+   "street": "Industriestr. 5",
+   "postcode": "78112",
+   "city": "St. Georgen"
+  },
+  {
+   "name": "Matachana Germany GmbH",
+   "url": "http://www.matachana.de",
+   "street": "An der Trave 14",
+   "postcode": "23923",
+   "city": "Selmsdorf"
+  },
+  {
+   "name": "Medi-Tech-Park",
+   "url": "http://www.medi-tech-park.com",
+   "street": "Buschgrundstr. 23",
+   "postcode": "45894",
+   "city": "Gelsenkirchen"
+  },
+  {
+   "name": "Medicon eG Chirurgiemechaniker-Genossenschaft",
+   "url": "http://www.medicon.de",
+   "street": "Gänsäcker 15",
+   "postcode": "78532",
+   "city": "Tuttlingen"
+  },
+  {
+   "name": "MELAG oHG Medizintechnik",
+   "url": "http://www.melag.de",
+   "street": "Geneststraße 9-10",
+   "postcode": "10829",
+   "city": "Berlin"
+  },
+  {
+   "name": "Memmert GmbH + Co.KG",
+   "url": "http://www.memmert.com",
+   "street": "Äußere Rittersbacher Straße 38",
+   "postcode": "91126",
+   "city": "Schwabach"
+  },
+  {
+   "name": "Menicon GmbH Kontaktlinsen",
+   "url": "http://www.menicon.de",
+   "street": "Heinrich-Krumm-Str. 1-3",
+   "postcode": "63073",
+   "city": "Offenbach"
+  },
+  {
+   "name": "Mersen Deutschland Holding GmbH & Co. KG",
+   "url": "http://www.optosic.com",
+   "street": "Gartenstrasse 25",
+   "postcode": "61352",
+   "city": "Bad Homburg"
+  },
+  {
+   "name": "Messer Group GmbH",
+   "url": "http://www.messergroup.com/web/mg/medical-gases",
+   "street": "Messer-Platz 1",
+   "postcode": "65812",
+   "city": "Bad Soden"
+  },
+  {
+   "name": "Mettler Toledo GmbH",
+   "url": "http://www.mt.com",
+   "street": "Ockerweg 3",
+   "postcode": "35396",
+   "city": "Gießen"
+  },
+  {
+   "name": "Meyer-Haake GmbH",
+   "street": "Daimlerstr. 4",
+   "postcode": "61239",
+   "city": "Ober-Mörlen"
+  },
+  {
+   "name": "Sartorius",
+   "street": "Meyer-Haake-Str. 1",
+   "postcode": "61239",
+   "city": "Ober-Mörlen"
+  },
+  {
+   "name": "Siemens",
+   "street": "Siemensstr. 25",
+   "postcode": "78564",
+   "city": "Wehingen"
+  },
+  {
+   "name": "Spectris",
+   "street": "Siemensstr. 25",
+   "postcode": "78564",
+   "city": "Wehingen"
+  },
+  {
+   "name": "Stefan",
+   "street": "Nickelstr. 12",
+   "postcode": "33415",
+   "city": "Verl"
+  },
+  {
+   "name": "Toshiba",
+   "street": "Moltkestr. 7",
+   "postcode": "78532",
+   "city": "Tuttlingen"
+  },
+  {
+   "name": "Walter",
+   "street": "Moltkestr. 7",
+   "postcode": "78532",
+   "city": "Tuttlingen"
+  },
+  {
+   "name": "LASER COMPONENTS GmbH"
+  },
+  {
+   "name": "Laser 2000 GmbH"
+  }
+ ]
+}

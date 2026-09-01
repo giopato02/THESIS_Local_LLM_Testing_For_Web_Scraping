@@ -1,0 +1,535 @@
+nohup: ignoring input
+  stage:      A
+  models:     llama3.1:8b, qwen2.5-coder:7b, gemma4:12b
+  pages:      10
+  planned:    540 runs
+  already done: 24
+  to run:     516  (~6.5 h at 45 s/run)
+
+
+  === loading llama3.1:8b ===
+  [   1/516] zero_shot_full_recordconstrained  005   167.6s raw=61   F1=0.6595 eta  1439m
+  [   2/516] zero_shot_full_recordconstrained  005   165.6s raw=60   F1=0.6522 eta  1428m
+  [   3/516] zero_shot_full_recordconstrained  005   166.0s raw=60   F1=0.6522 eta  1424m
+  [   4/516] zero_shot_full_recordconstrained  050  2963.7s raw=71   F1=0.3052 eta  7390m !
+  [   5/516] zero_shot_full_recordconstrained  050  5589.2s raw=3    F1=0.0134 eta 15422m !
+  [   6/516] zero_shot_full_recordconstrained  050  5583.3s raw=3    F1=0.0134 eta 20736m !
+  [   7/516] zero_shot_full_recordprompt_only  039    84.4s raw=52   F1=1.0    eta 17841m
+  [   8/516] zero_shot_full_recordprompt_only  039    83.7s raw=52   F1=1.0    eta 15669m
+  [   9/516] zero_shot_full_recordprompt_only  039    84.1s raw=52   F1=1.0    eta 13980m
+  [  10/516] zero_shot_full_recordprompt_only  043    94.8s raw=49   F1=0.9592 eta 12637m
+  [  11/516] zero_shot_full_recordprompt_only  043    95.2s raw=49   F1=0.9592 eta 11538m
+  [  12/516] zero_shot_full_recordprompt_only  043    96.1s raw=49   F1=0.9592 eta 10623m
+  [  13/516] zero_shot_full_recordprompt_only  009    87.2s raw=42   F1=0.9647 eta  9843m
+  [  14/516] zero_shot_full_recordprompt_only  009    86.7s raw=42   F1=0.9647 eta  9174m
+  [  15/516] zero_shot_full_recordprompt_only  009    85.6s raw=42   F1=0.9647 eta  8593m
+  [  16/516] zero_shot_full_recordprompt_only  012    78.9s raw=50   F1=1.0    eta  8081m
+  [  17/516] zero_shot_full_recordprompt_only  012    78.9s raw=50   F1=1.0    eta  7629m
+  [  18/516] zero_shot_full_recordprompt_only  012    78.4s raw=50   F1=1.0    eta  7227m
+  [  19/516] zero_shot_full_recordprompt_only  004    57.0s raw=33   F1=0.9697 eta  6857m
+  [  20/516] zero_shot_full_recordprompt_only  004    56.4s raw=33   F1=0.9697 eta  6525m
+  [  21/516] zero_shot_full_recordprompt_only  004    57.0s raw=33   F1=0.9697 eta  6224m
+  [  22/516] zero_shot_full_recordprompt_only  032   143.8s raw=79   F1=0.962  eta  5983m
+  [  23/516] zero_shot_full_recordprompt_only  032   143.9s raw=79   F1=0.962  eta  5763m
+  [  24/516] zero_shot_full_recordprompt_only  032   144.5s raw=79   F1=0.962  eta  5561m
+  [  25/516] zero_shot_full_recordprompt_only  040    34.9s raw=20   F1=1.0    eta  5339m
+  [  26/516] zero_shot_full_recordprompt_only  040    33.9s raw=20   F1=1.0    eta  5134m
+  [  27/516] zero_shot_full_recordprompt_only  040    34.2s raw=20   F1=1.0    eta  4944m
+  [  28/516] zero_shot_full_recordprompt_only  025    25.4s raw=14   F1=0.9286 eta  4765m
+  [  29/516] zero_shot_full_recordprompt_only  025    24.8s raw=14   F1=0.9286 eta  4598m
+  [  30/516] zero_shot_full_recordprompt_only  025    24.7s raw=14   F1=0.9286 eta  4442m
+  [  31/516] zero_shot_full_recordprompt_only  005   168.8s raw=61   F1=0.6595 eta  4334m
+  [  32/516] zero_shot_full_recordprompt_only  005   166.2s raw=61   F1=0.6595 eta  4232m
+  [  33/516] zero_shot_full_recordprompt_only  005   166.3s raw=61   F1=0.6595 eta  4136m
+  [  34/516] zero_shot_full_recordprompt_only  050  5580.7s raw=3    F1=0.0134 eta  5325m !
+  [  35/516] zero_shot_full_recordprompt_only  050  5579.3s raw=3    F1=0.0134 eta  6440m !
+  [  36/516] zero_shot_full_recordprompt_only  050  5579.6s raw=3    F1=0.0134 eta  7488m !
+  [  37/516] few_shot_full_recordconstrained  039    65.5s raw=52   F1=1.0    eta  7285m
+  [  38/516] few_shot_full_recordconstrained  039    66.0s raw=52   F1=1.0    eta  7092m
+  [  39/516] few_shot_full_recordconstrained  039    64.6s raw=52   F1=1.0    eta  6909m
+  [  40/516] few_shot_full_recordconstrained  043    77.0s raw=49   F1=0.9592 eta  6737m
+  [  41/516] few_shot_full_recordconstrained  043    77.6s raw=49   F1=0.9592 eta  6574m
+  [  42/516] few_shot_full_recordconstrained  043    76.9s raw=49   F1=0.9592 eta  6419m
+  [  43/516] few_shot_full_recordconstrained  009    72.9s raw=42   F1=0.9647 eta  6270m
+  [  44/516] few_shot_full_recordconstrained  009    73.2s raw=42   F1=0.9647 eta  6127m
+  [  45/516] few_shot_full_recordconstrained  009    72.7s raw=42   F1=0.9647 eta  5991m
+  [  46/516] few_shot_full_recordconstrained  012    60.6s raw=50   F1=1.0    eta  5859m
+  [  47/516] few_shot_full_recordconstrained  012    61.5s raw=50   F1=1.0    eta  5732m
+  [  48/516] few_shot_full_recordconstrained  012    59.8s raw=50   F1=1.0    eta  5610m
+  [  49/516] few_shot_full_recordconstrained  004    44.0s raw=33   F1=0.9697 eta  5491m
+  [  50/516] few_shot_full_recordconstrained  004    43.6s raw=33   F1=0.9697 eta  5377m
+  [  51/516] few_shot_full_recordconstrained  004    43.9s raw=33   F1=0.9697 eta  5267m
+  [  52/516] few_shot_full_recordconstrained  032   115.6s raw=79   F1=0.962  eta  5171m
+  [  53/516] few_shot_full_recordconstrained  032   115.0s raw=79   F1=0.962  eta  5080m
+  [  54/516] few_shot_full_recordconstrained  032   114.0s raw=79   F1=0.962  eta  4991m
+  [  55/516] few_shot_full_recordconstrained  040    25.9s raw=20   F1=1.0    eta  4893m
+  [  56/516] few_shot_full_recordconstrained  040    25.5s raw=20   F1=1.0    eta  4799m
+  [  57/516] few_shot_full_recordconstrained  040    25.4s raw=20   F1=1.0    eta  4708m
+  [  58/516] few_shot_full_recordconstrained  025    16.4s raw=12   F1=0.9231 eta  4619m
+  [  59/516] few_shot_full_recordconstrained  025    14.9s raw=12   F1=0.9231 eta  4533m
+  [  60/516] few_shot_full_recordconstrained  025    14.9s raw=12   F1=0.9231 eta  4449m
+  [  61/516] few_shot_full_recordconstrained  005   196.3s raw=72   F1=0.7245 eta  4391m
+  [  62/516] few_shot_full_recordconstrained  005   159.6s raw=58   F1=0.6374 eta  4330m
+  [  63/516] few_shot_full_recordconstrained  005   157.6s raw=58   F1=0.6374 eta  4271m
+  [  64/516] few_shot_full_recordconstrained  050  2820.6s raw=16   F1=0.0769 eta  4527m !
+  [  65/516] few_shot_full_recordconstrained  050  2813.6s raw=16   F1=0.0769 eta  4773m !
+  [  66/516] few_shot_full_recordconstrained  050  2814.9s raw=16   F1=0.0769 eta  5010m !
+  [  67/516] few_shot_full_recordprompt_only  039    64.8s raw=52   F1=1.0    eta  4932m
+  [  68/516] few_shot_full_recordprompt_only  039    66.2s raw=52   F1=1.0    eta  4856m
+  [  69/516] few_shot_full_recordprompt_only  039    65.1s raw=52   F1=1.0    eta  4781m
+  [  70/516] few_shot_full_recordprompt_only  043    76.6s raw=49   F1=0.9592 eta  4711m
+  [  71/516] few_shot_full_recordprompt_only  043    77.7s raw=49   F1=0.9592 eta  4642m
+  [  72/516] few_shot_full_recordprompt_only  043    76.5s raw=49   F1=0.9592 eta  4575m
+  [  73/516] few_shot_full_recordprompt_only  009    72.7s raw=42   F1=0.9647 eta  4510m
+  [  74/516] few_shot_full_recordprompt_only  009    72.6s raw=42   F1=0.9647 eta  4446m
+  [  75/516] few_shot_full_recordprompt_only  009    71.4s raw=42   F1=0.9647 eta  4384m
+  [  76/516] few_shot_full_recordprompt_only  012    60.3s raw=50   F1=1.0    eta  4322m
+  [  77/516] few_shot_full_recordprompt_only  012    60.3s raw=50   F1=1.0    eta  4262m
+  [  78/516] few_shot_full_recordprompt_only  012    60.4s raw=50   F1=1.0    eta  4204m
+  [  79/516] few_shot_full_recordprompt_only  004    44.2s raw=33   F1=0.9697 eta  4145m
+  [  80/516] few_shot_full_recordprompt_only  004    43.7s raw=33   F1=0.9697 eta  4088m
+  [  81/516] few_shot_full_recordprompt_only  004    43.7s raw=33   F1=0.9697 eta  4032m
+  [  82/516] few_shot_full_recordprompt_only  032   114.6s raw=79   F1=0.962  eta  3984m
+  [  83/516] few_shot_full_recordprompt_only  032   114.3s raw=79   F1=0.962  eta  3937m
+  [  84/516] few_shot_full_recordprompt_only  032   113.1s raw=79   F1=0.962  eta  3890m
+  [  85/516] few_shot_full_recordprompt_only  040    27.1s raw=20   F1=1.0    eta  3838m
+  [  86/516] few_shot_full_recordprompt_only  040    26.4s raw=20   F1=1.0    eta  3787m
+  [  87/516] few_shot_full_recordprompt_only  040    26.4s raw=20   F1=1.0    eta  3737m
+  [  88/516] few_shot_full_recordprompt_only  025    15.0s raw=12   F1=0.9231 eta  3687m
+  [  89/516] few_shot_full_recordprompt_only  025    14.7s raw=12   F1=0.9231 eta  3638m
+  [  90/516] few_shot_full_recordprompt_only  025    15.3s raw=12   F1=0.9231 eta  3590m
+  [  91/516] few_shot_full_recordprompt_only  005   194.5s raw=72   F1=0.7245 eta  3558m
+  [  92/516] few_shot_full_recordprompt_only  005   195.2s raw=72   F1=0.7245 eta  3526m
+  [  93/516] few_shot_full_recordprompt_only  005   194.4s raw=72   F1=0.7245 eta  3494m
+  [  94/516] few_shot_full_recordprompt_only  050  2812.5s raw=16   F1=0.0769 eta  3660m !
+  [  95/516] few_shot_full_recordprompt_only  050  2808.5s raw=16   F1=0.0769 eta  3820m !
+  [  96/516] few_shot_full_recordprompt_only  050  2810.2s raw=16   F1=0.0769 eta  3976m !
+  [  97/516] multi_stage_full_recordconstrained  039    81.8s raw=24   F1=0.6316 eta  3932m
+  [  98/516] multi_stage_full_recordconstrained  039    82.8s raw=26   F1=0.6667 eta  3888m
+  [  99/516] multi_stage_full_recordconstrained  039    82.9s raw=26   F1=0.6667 eta  3845m
+  [ 100/516] multi_stage_full_recordconstrained  043    89.3s raw=26   F1=0.6933 eta  3804m
+  [ 101/516] multi_stage_full_recordconstrained  043    87.8s raw=26   F1=0.6933 eta  3763m
+  [ 102/516] multi_stage_full_recordconstrained  043    88.1s raw=26   F1=0.6933 eta  3723m
+  [ 103/516] multi_stage_full_recordconstrained  009    86.2s raw=33   F1=0.8421 eta  3684m
+  [ 104/516] multi_stage_full_recordconstrained  009    85.5s raw=33   F1=0.8421 eta  3646m
+  [ 105/516] multi_stage_full_recordconstrained  009    84.3s raw=33   F1=0.8421 eta  3608m
+  [ 106/516] multi_stage_full_recordconstrained  012    74.5s raw=41   F1=0.9011 eta  3570m
+  [ 107/516] multi_stage_full_recordconstrained  012    72.6s raw=41   F1=0.9011 eta  3532m
+  [ 108/516] multi_stage_full_recordconstrained  012    73.6s raw=41   F1=0.9011 eta  3496m
+  [ 109/516] multi_stage_full_recordconstrained  004    55.5s raw=21   F1=0.7778 eta  3459m
+  [ 110/516] multi_stage_full_recordconstrained  004    55.3s raw=21   F1=0.7778 eta  3422m
+  [ 111/516] multi_stage_full_recordconstrained  004    55.9s raw=21   F1=0.7778 eta  3386m
+  [ 112/516] multi_stage_full_recordconstrained  032   136.7s raw=52   F1=0.7786 eta  3356m
+  [ 113/516] multi_stage_full_recordconstrained  032   136.7s raw=57   F1=0.8235 eta  3326m
+  [ 114/516] multi_stage_full_recordconstrained  032   137.6s raw=57   F1=0.8235 eta  3297m
+  [ 115/516] multi_stage_full_recordconstrained  040    33.4s raw=17   F1=0.9189 eta  3262m
+  [ 116/516] multi_stage_full_recordconstrained  040    34.2s raw=17   F1=0.9189 eta  3228m
+  [ 117/516] multi_stage_full_recordconstrained  040    33.3s raw=17   F1=0.9189 eta  3194m
+  [ 118/516] multi_stage_full_recordconstrained  025    25.3s raw=14   F1=0.9286 eta  3161m
+  [ 119/516] multi_stage_full_recordconstrained  025    24.8s raw=14   F1=0.9286 eta  3128m
+  [ 120/516] multi_stage_full_recordconstrained  025    24.9s raw=14   F1=0.9286 eta  3095m
+  [ 121/516] multi_stage_full_recordconstrained  005   191.1s raw=43   F1=0.515  eta  3072m
+  [ 122/516] multi_stage_full_recordconstrained  005   185.9s raw=43   F1=0.515  eta  3049m
+  [ 123/516] multi_stage_full_recordconstrained  005   184.2s raw=43   F1=0.515  eta  3027m
+  [ 124/516] multi_stage_full_recordconstrained  050  2908.9s raw=81   F1=0.4244 eta  3148m !
+  [ 125/516] multi_stage_full_recordconstrained  050  2896.3s raw=82   F1=0.4286 eta  3266m !
+  [ 126/516] multi_stage_full_recordconstrained  050  2898.4s raw=82   F1=0.4286 eta  3381m !
+  [ 127/516] multi_stage_full_recordprompt_only  039   104.4s raw=26   F1=0.6667 eta  3351m
+  [ 128/516] multi_stage_full_recordprompt_only  039   103.8s raw=26   F1=0.6667 eta  3322m
+  [ 129/516] multi_stage_full_recordprompt_only  039   103.4s raw=26   F1=0.6667 eta  3293m
+  [ 130/516] multi_stage_full_recordprompt_only  043   107.9s raw=26   F1=0.6933 eta  3264m
+  [ 131/516] multi_stage_full_recordprompt_only  043   105.6s raw=26   F1=0.6933 eta  3236m
+  [ 132/516] multi_stage_full_recordprompt_only  043   105.3s raw=26   F1=0.6933 eta  3208m
+  [ 133/516] multi_stage_full_recordprompt_only  009   101.1s raw=33   F1=0.8421 eta  3181m
+  [ 134/516] multi_stage_full_recordprompt_only  009    98.0s raw=33   F1=0.8421 eta  3153m
+  [ 135/516] multi_stage_full_recordprompt_only  009    99.3s raw=33   F1=0.8421 eta  3127m
+  [ 136/516] multi_stage_full_recordprompt_only  012    93.2s raw=41   F1=0.9011 eta  3100m
+  [ 137/516] multi_stage_full_recordprompt_only  012    92.0s raw=41   F1=0.9011 eta  3073m
+  [ 138/516] multi_stage_full_recordprompt_only  012    92.0s raw=41   F1=0.9011 eta  3047m
+  [ 139/516] multi_stage_full_recordprompt_only  004    68.5s raw=21   F1=0.7778 eta  3020m
+  [ 140/516] multi_stage_full_recordprompt_only  004    67.5s raw=21   F1=0.7778 eta  2994m
+  [ 141/516] multi_stage_full_recordprompt_only  004    67.5s raw=21   F1=0.7778 eta  2968m
+  [ 142/516] multi_stage_full_recordprompt_only  032   170.4s raw=56   F1=0.8148 eta  2946m
+  [ 143/516] multi_stage_full_recordprompt_only  032   165.9s raw=52   F1=0.7786 eta  2925m
+  [ 144/516] multi_stage_full_recordprompt_only  032   164.7s raw=52   F1=0.7786 eta  2904m
+  [ 145/516] multi_stage_full_recordprompt_only  040    43.3s raw=17   F1=0.9189 eta  2878m
+  [ 146/516] multi_stage_full_recordprompt_only  040    43.1s raw=17   F1=0.9189 eta  2853m
+  [ 147/516] multi_stage_full_recordprompt_only  040    42.6s raw=17   F1=0.9189 eta  2827m
+  [ 148/516] multi_stage_full_recordprompt_only  025    34.3s raw=14   F1=0.9286 eta  2802m
+  [ 149/516] multi_stage_full_recordprompt_only  025    31.2s raw=14   F1=0.9286 eta  2777m
+  [ 150/516] multi_stage_full_recordprompt_only  025    32.1s raw=14   F1=0.9286 eta  2752m
+  [ 151/516] multi_stage_full_recordprompt_only  005  2820.3s raw=6    F1=0.0923 eta  2840m !
+  [ 152/516] multi_stage_full_recordprompt_only  005  2811.7s raw=6    F1=0.0923 eta  2926m !
+  [ 153/516] multi_stage_full_recordprompt_only  005  2807.4s raw=6    F1=0.0923 eta  3010m !
+  [ 154/516] multi_stage_full_recordprompt_only  050  2900.2s raw=64   F1=0.35   eta  3096m !
+  [ 155/516] multi_stage_full_recordprompt_only  050  2892.9s raw=64   F1=0.35   eta  3180m !
+  [ 156/516] multi_stage_full_recordprompt_only  050  2895.5s raw=64   F1=0.35   eta  3262m !
+
+  === loading qwen2.5-coder:7b ===
+  [ 157/516] zero_shot_full_recordconstrained  039    39.5s raw=0    F1=0.0    eta  3234m
+  [ 158/516] zero_shot_full_recordconstrained  039     0.4s raw=0    F1=0.0    eta  3204m
+  [ 159/516] zero_shot_full_recordconstrained  039     0.4s raw=0    F1=0.0    eta  3175m
+  [ 160/516] zero_shot_full_recordconstrained  043    92.5s raw=49   F1=0.9592 eta  3150m
+  [ 161/516] zero_shot_full_recordconstrained  043    91.8s raw=49   F1=0.9592 eta  3125m
+  [ 162/516] zero_shot_full_recordconstrained  043    91.8s raw=49   F1=0.9592 eta  3100m
+  [ 163/516] zero_shot_full_recordconstrained  009    88.9s raw=43   F1=0.9767 eta  3076m
+  [ 164/516] zero_shot_full_recordconstrained  009    88.0s raw=43   F1=0.9767 eta  3051m
+  [ 165/516] zero_shot_full_recordconstrained  009    86.9s raw=43   F1=0.9767 eta  3027m
+  [ 166/516] zero_shot_full_recordconstrained  012    76.6s raw=50   F1=1.0    eta  3003m
+  [ 167/516] zero_shot_full_recordconstrained  012    76.4s raw=50   F1=1.0    eta  2979m
+  [ 168/516] zero_shot_full_recordconstrained  012    75.5s raw=50   F1=1.0    eta  2956m
+  [ 169/516] zero_shot_full_recordconstrained  004    54.9s raw=33   F1=0.9697 eta  2932m
+  [ 170/516] zero_shot_full_recordconstrained  004    55.1s raw=33   F1=0.9697 eta  2908m
+  [ 171/516] zero_shot_full_recordconstrained  004    54.0s raw=33   F1=0.9697 eta  2885m
+  [ 172/516] zero_shot_full_recordconstrained  032   143.2s raw=79   F1=0.9494 eta  2864m
+  [ 173/516] zero_shot_full_recordconstrained  032   142.1s raw=79   F1=0.9494 eta  2844m
+  [ 174/516] zero_shot_full_recordconstrained  032   142.8s raw=79   F1=0.9494 eta  2824m
+  [ 175/516] zero_shot_full_recordconstrained  040    32.8s raw=20   F1=1.0    eta  2801m
+  [ 176/516] zero_shot_full_recordconstrained  040    31.7s raw=20   F1=1.0    eta  2778m
+  [ 177/516] zero_shot_full_recordconstrained  040    31.4s raw=20   F1=1.0    eta  2755m
+  [ 178/516] zero_shot_full_recordconstrained  025    23.1s raw=14   F1=0.9286 eta  2732m
+  [ 179/516] zero_shot_full_recordconstrained  025    22.1s raw=14   F1=0.9286 eta  2710m
+  [ 180/516] zero_shot_full_recordconstrained  025    22.1s raw=14   F1=0.9286 eta  2687m
+  [ 181/516] zero_shot_full_recordconstrained  005   187.4s raw=66   F1=0.6105 eta  2670m
+  [ 182/516] zero_shot_full_recordconstrained  005   189.2s raw=66   F1=0.6211 eta  2653m
+  [ 183/516] zero_shot_full_recordconstrained  005   187.1s raw=66   F1=0.6211 eta  2637m
+  [ 184/516] zero_shot_full_recordconstrained  050  2860.2s raw=35   F1=0.1994 eta  2700m !
+  [ 185/516] zero_shot_full_recordconstrained  050  2853.4s raw=35   F1=0.1994 eta  2763m !
+  [ 186/516] zero_shot_full_recordconstrained  050  2847.8s raw=35   F1=0.1994 eta  2824m !
+  [ 187/516] zero_shot_full_recordprompt_only  039    82.8s raw=53   F1=0.9905 eta  2803m
+  [ 188/516] zero_shot_full_recordprompt_only  039    83.1s raw=53   F1=0.9905 eta  2782m
+  [ 189/516] zero_shot_full_recordprompt_only  039    81.8s raw=53   F1=0.9905 eta  2761m
+  [ 190/516] zero_shot_full_recordprompt_only  043    91.9s raw=49   F1=0.9592 eta  2741m
+  [ 191/516] zero_shot_full_recordprompt_only  043    91.9s raw=49   F1=0.9592 eta  2721m
+  [ 192/516] zero_shot_full_recordprompt_only  043    91.7s raw=49   F1=0.9592 eta  2701m
+  [ 193/516] zero_shot_full_recordprompt_only  009    86.2s raw=43   F1=0.9767 eta  2681m
+  [ 194/516] zero_shot_full_recordprompt_only  009    87.0s raw=43   F1=0.9767 eta  2661m
+  [ 195/516] zero_shot_full_recordprompt_only  009    86.0s raw=43   F1=0.9767 eta  2642m
+  [ 196/516] zero_shot_full_recordprompt_only  012    75.7s raw=50   F1=1.0    eta  2622m
+  [ 197/516] zero_shot_full_recordprompt_only  012    75.0s raw=50   F1=1.0    eta  2603m
+  [ 198/516] zero_shot_full_recordprompt_only  012    75.5s raw=50   F1=1.0    eta  2583m
+  [ 199/516] zero_shot_full_recordprompt_only  004    54.3s raw=33   F1=0.9697 eta  2564m
+  [ 200/516] zero_shot_full_recordprompt_only  004    55.0s raw=33   F1=0.9697 eta  2544m
+  [ 201/516] zero_shot_full_recordprompt_only  004    54.2s raw=33   F1=0.9697 eta  2525m
+  [ 202/516] zero_shot_full_recordprompt_only  032   136.4s raw=79   F1=0.9494 eta  2508m
+  [ 203/516] zero_shot_full_recordprompt_only  032   137.9s raw=79   F1=0.9494 eta  2491m
+  [ 204/516] zero_shot_full_recordprompt_only  032   136.9s raw=79   F1=0.9494 eta  2475m
+  [ 205/516] zero_shot_full_recordprompt_only  040    31.5s raw=20   F1=1.0    eta  2456m
+  [ 206/516] zero_shot_full_recordprompt_only  040    31.4s raw=20   F1=1.0    eta  2437m
+  [ 207/516] zero_shot_full_recordprompt_only  040    31.4s raw=20   F1=1.0    eta  2418m
+  [ 208/516] zero_shot_full_recordprompt_only  025    23.0s raw=14   F1=0.9286 eta  2399m
+  [ 209/516] zero_shot_full_recordprompt_only  025    21.9s raw=14   F1=0.9286 eta  2380m
+  [ 210/516] zero_shot_full_recordprompt_only  025    22.5s raw=14   F1=0.9286 eta  2362m
+  [ 211/516] zero_shot_full_recordprompt_only  005   179.9s raw=63   F1=0.631  eta  2347m
+  [ 212/516] zero_shot_full_recordprompt_only  005   188.9s raw=67   F1=0.6178 eta  2333m
+  [ 213/516] zero_shot_full_recordprompt_only  005   187.7s raw=67   F1=0.6178 eta  2319m
+  [ 214/516] zero_shot_full_recordprompt_only  050  2850.2s raw=34   F1=0.1939 eta  2367m !
+  [ 215/516] zero_shot_full_recordprompt_only  050  2848.5s raw=34   F1=0.1939 eta  2415m !
+  [ 216/516] zero_shot_full_recordprompt_only  050  2851.2s raw=34   F1=0.1939 eta  2462m !
+  [ 217/516] few_shot_full_recordconstrained  039    66.8s raw=53   F1=0.9905 eta  2444m
+  [ 218/516] few_shot_full_recordconstrained  039    64.8s raw=53   F1=0.9905 eta  2426m
+  [ 219/516] few_shot_full_recordconstrained  039    64.5s raw=53   F1=0.9905 eta  2408m
+  [ 220/516] few_shot_full_recordconstrained  043    77.0s raw=49   F1=0.9388 eta  2391m
+  [ 221/516] few_shot_full_recordconstrained  043    76.3s raw=49   F1=0.9388 eta  2374m
+  [ 222/516] few_shot_full_recordconstrained  043    75.6s raw=49   F1=0.9388 eta  2357m
+  [ 223/516] few_shot_full_recordconstrained  009    73.8s raw=43   F1=0.9767 eta  2340m
+  [ 224/516] few_shot_full_recordconstrained  009    73.8s raw=43   F1=0.9767 eta  2323m
+  [ 225/516] few_shot_full_recordconstrained  009    72.7s raw=43   F1=0.9767 eta  2307m
+  [ 226/516] few_shot_full_recordconstrained  012    59.0s raw=50   F1=1.0    eta  2290m
+  [ 227/516] few_shot_full_recordconstrained  012    58.8s raw=50   F1=1.0    eta  2273m
+  [ 228/516] few_shot_full_recordconstrained  012    59.2s raw=50   F1=1.0    eta  2256m
+  [ 229/516] few_shot_full_recordconstrained  004    46.0s raw=33   F1=0.9697 eta  2240m
+  [ 230/516] few_shot_full_recordconstrained  004    43.9s raw=33   F1=0.9697 eta  2223m
+  [ 231/516] few_shot_full_recordconstrained  004    43.4s raw=33   F1=0.9697 eta  2207m
+  [ 232/516] few_shot_full_recordconstrained  032     1.1s raw=0    F1=0.0    eta  2189m
+  [ 233/516] few_shot_full_recordconstrained  032     0.7s raw=0    F1=0.0    eta  2172m
+  [ 234/516] few_shot_full_recordconstrained  032     0.3s raw=0    F1=0.0    eta  2155m
+  [ 235/516] few_shot_full_recordconstrained  040    26.2s raw=20   F1=1.0    eta  2139m
+  [ 236/516] few_shot_full_recordconstrained  040    25.2s raw=20   F1=1.0    eta  2123m
+  [ 237/516] few_shot_full_recordconstrained  040    24.9s raw=20   F1=1.0    eta  2107m
+  [ 238/516] few_shot_full_recordconstrained  025     1.8s raw=0    F1=0.0    eta  2091m
+  [ 239/516] few_shot_full_recordconstrained  025     0.5s raw=0    F1=0.0    eta  2074m
+  [ 240/516] few_shot_full_recordconstrained  025     0.5s raw=0    F1=0.0    eta  2058m
+  [ 241/516] few_shot_full_recordconstrained  005   165.7s raw=61   F1=0.6378 eta  2046m
+  [ 242/516] few_shot_full_recordconstrained  005   166.9s raw=61   F1=0.6378 eta  2033m
+  [ 243/516] few_shot_full_recordconstrained  005   166.1s raw=61   F1=0.6378 eta  2020m
+  [ 244/516] few_shot_full_recordconstrained  050    13.4s raw=3    F1=0.0134 eta  2005m
+  [ 245/516] few_shot_full_recordconstrained  050     5.5s raw=3    F1=0.0134 eta  1989m
+  [ 246/516] few_shot_full_recordconstrained  050     5.2s raw=3    F1=0.0134 eta  1974m
+  [ 247/516] few_shot_full_recordprompt_only  039    64.4s raw=53   F1=0.9905 eta  1960m
+  [ 248/516] few_shot_full_recordprompt_only  039    64.6s raw=53   F1=0.9905 eta  1946m
+  [ 249/516] few_shot_full_recordprompt_only  039    64.5s raw=53   F1=0.9905 eta  1932m
+  [ 250/516] few_shot_full_recordprompt_only  043    92.7s raw=49   F1=0.9388 eta  1919m
+  [ 251/516] few_shot_full_recordprompt_only  043    93.6s raw=49   F1=0.9388 eta  1906m
+  [ 252/516] few_shot_full_recordprompt_only  043    92.7s raw=49   F1=0.9388 eta  1893m
+  [ 253/516] few_shot_full_recordprompt_only  009    86.6s raw=43   F1=0.9767 eta  1879m
+  [ 254/516] few_shot_full_recordprompt_only  009    89.2s raw=43   F1=0.9767 eta  1866m
+  [ 255/516] few_shot_full_recordprompt_only  009    87.3s raw=43   F1=0.9767 eta  1854m
+  [ 256/516] few_shot_full_recordprompt_only  012    58.7s raw=50   F1=1.0    eta  1840m
+  [ 257/516] few_shot_full_recordprompt_only  012    59.5s raw=50   F1=1.0    eta  1827m
+  [ 258/516] few_shot_full_recordprompt_only  012    59.6s raw=50   F1=1.0    eta  1814m
+  [ 259/516] few_shot_full_recordprompt_only  004    43.4s raw=33   F1=0.9697 eta  1801m
+  [ 260/516] few_shot_full_recordprompt_only  004    43.1s raw=33   F1=0.9697 eta  1787m
+  [ 261/516] few_shot_full_recordprompt_only  004    42.8s raw=33   F1=0.9697 eta  1774m
+  [ 262/516] few_shot_full_recordprompt_only  032     1.2s raw=0    F1=0.0    eta  1761m
+  [ 263/516] few_shot_full_recordprompt_only  032     0.5s raw=0    F1=0.0    eta  1747m
+  [ 264/516] few_shot_full_recordprompt_only  032     0.7s raw=0    F1=0.0    eta  1734m
+  [ 265/516] few_shot_full_recordprompt_only  040    24.9s raw=20   F1=1.0    eta  1721m
+  [ 266/516] few_shot_full_recordprompt_only  040    24.2s raw=20   F1=1.0    eta  1708m
+  [ 267/516] few_shot_full_recordprompt_only  040    24.4s raw=20   F1=1.0    eta  1695m
+  [ 268/516] few_shot_full_recordprompt_only  025     0.7s raw=0    F1=0.0    eta  1682m
+  [ 269/516] few_shot_full_recordprompt_only  025     0.3s raw=0    F1=0.0    eta  1669m
+  [ 270/516] few_shot_full_recordprompt_only  025     0.2s raw=0    F1=0.0    eta  1656m
+  [ 271/516] few_shot_full_recordprompt_only  005  2785.0s raw=7    F1=0.1069 eta  1685m !
+  [ 272/516] few_shot_full_recordprompt_only  005  2785.8s raw=7    F1=0.1069 eta  1714m !
+  [ 273/516] few_shot_full_recordprompt_only  005  2778.0s raw=7    F1=0.1069 eta  1741m !
+  [ 274/516] few_shot_full_recordprompt_only  050     5.8s raw=3    F1=0.0134 eta  1728m
+  [ 275/516] few_shot_full_recordprompt_only  050     5.2s raw=3    F1=0.0134 eta  1715m
+  [ 276/516] few_shot_full_recordprompt_only  050     5.3s raw=3    F1=0.0134 eta  1702m
+  [ 277/516] multi_stage_full_recordconstrained  039   102.2s raw=52   F1=1.0    eta  1690m
+  [ 278/516] multi_stage_full_recordconstrained  039   102.8s raw=52   F1=1.0    eta  1678m
+  [ 279/516] multi_stage_full_recordconstrained  039   102.2s raw=52   F1=1.0    eta  1667m
+  [ 280/516] multi_stage_full_recordconstrained  043   117.5s raw=49   F1=0.9592 eta  1655m
+  [ 281/516] multi_stage_full_recordconstrained  043   115.9s raw=49   F1=0.9592 eta  1644m
+  [ 282/516] multi_stage_full_recordconstrained  043   116.7s raw=49   F1=0.9592 eta  1633m
+  [ 283/516] multi_stage_full_recordconstrained  009   107.0s raw=43   F1=0.9767 eta  1622m
+  [ 284/516] multi_stage_full_recordconstrained  009   106.0s raw=43   F1=0.9767 eta  1610m
+  [ 285/516] multi_stage_full_recordconstrained  009   105.6s raw=43   F1=0.9767 eta  1599m
+  [ 286/516] multi_stage_full_recordconstrained  012    94.1s raw=50   F1=1.0    eta  1588m
+  [ 287/516] multi_stage_full_recordconstrained  012    92.1s raw=50   F1=1.0    eta  1577m
+  [ 288/516] multi_stage_full_recordconstrained  012    93.3s raw=50   F1=1.0    eta  1566m
+  [ 289/516] multi_stage_full_recordconstrained  004    69.3s raw=25   F1=0.8276 eta  1554m
+  [ 290/516] multi_stage_full_recordconstrained  004    68.3s raw=25   F1=0.8276 eta  1543m
+  [ 291/516] multi_stage_full_recordconstrained  004    68.9s raw=25   F1=0.8276 eta  1532m
+  [ 292/516] multi_stage_full_recordconstrained  032   158.3s raw=71   F1=0.9333 eta  1522m
+  [ 293/516] multi_stage_full_recordconstrained  032   154.3s raw=71   F1=0.9333 eta  1512m
+  [ 294/516] multi_stage_full_recordconstrained  032   155.9s raw=71   F1=0.9333 eta  1502m
+  [ 295/516] multi_stage_full_recordconstrained  040    40.9s raw=19   F1=0.9744 eta  1491m
+  [ 296/516] multi_stage_full_recordconstrained  040    42.2s raw=19   F1=0.9744 eta  1479m
+  [ 297/516] multi_stage_full_recordconstrained  040    41.2s raw=19   F1=0.9744 eta  1468m
+  [ 298/516] multi_stage_full_recordconstrained  025    27.8s raw=12   F1=0.8462 eta  1457m
+  [ 299/516] multi_stage_full_recordconstrained  025    27.4s raw=12   F1=0.8462 eta  1446m
+  [ 300/516] multi_stage_full_recordconstrained  025    28.4s raw=12   F1=0.8462 eta  1435m
+  [ 301/516] multi_stage_full_recordconstrained  005  2802.4s raw=7    F1=0.1069 eta  1457m !
+  [ 302/516] multi_stage_full_recordconstrained  005  2797.7s raw=7    F1=0.1069 eta  1478m !
+  [ 303/516] multi_stage_full_recordconstrained  005  2797.5s raw=7    F1=0.1069 eta  1499m !
+  [ 304/516] multi_stage_full_recordconstrained  050  2882.4s raw=37   F1=0.2162 eta  1521m !
+  [ 305/516] multi_stage_full_recordconstrained  050  2876.7s raw=37   F1=0.2162 eta  1542m !
+  [ 306/516] multi_stage_full_recordconstrained  050  2879.2s raw=37   F1=0.2162 eta  1562m !
+  [ 307/516] multi_stage_full_recordprompt_only  039   102.1s raw=52   F1=1.0    eta  1551m
+  [ 308/516] multi_stage_full_recordprompt_only  039   102.7s raw=52   F1=1.0    eta  1540m
+  [ 309/516] multi_stage_full_recordprompt_only  039   102.2s raw=52   F1=1.0    eta  1528m
+  [ 310/516] multi_stage_full_recordprompt_only  043   115.1s raw=49   F1=0.9592 eta  1517m
+  [ 311/516] multi_stage_full_recordprompt_only  043   116.7s raw=49   F1=0.9592 eta  1506m
+  [ 312/516] multi_stage_full_recordprompt_only  043   115.4s raw=49   F1=0.9592 eta  1496m
+  [ 313/516] multi_stage_full_recordprompt_only  009   104.3s raw=43   F1=0.9767 eta  1485m
+  [ 314/516] multi_stage_full_recordprompt_only  009   105.7s raw=43   F1=0.9767 eta  1474m
+  [ 315/516] multi_stage_full_recordprompt_only  009   103.5s raw=43   F1=0.9767 eta  1463m
+  [ 316/516] multi_stage_full_recordprompt_only  012    91.2s raw=50   F1=1.0    eta  1452m
+  [ 317/516] multi_stage_full_recordprompt_only  012    92.4s raw=50   F1=1.0    eta  1441m
+  [ 318/516] multi_stage_full_recordprompt_only  012    91.3s raw=50   F1=1.0    eta  1430m
+  [ 319/516] multi_stage_full_recordprompt_only  004    67.2s raw=25   F1=0.8276 eta  1419m
+  [ 320/516] multi_stage_full_recordprompt_only  004    67.0s raw=25   F1=0.8276 eta  1408m
+  [ 321/516] multi_stage_full_recordprompt_only  004    67.2s raw=25   F1=0.8276 eta  1397m
+  [ 322/516] multi_stage_full_recordprompt_only  032   152.2s raw=71   F1=0.9333 eta  1388m
+  [ 323/516] multi_stage_full_recordprompt_only  032   154.2s raw=71   F1=0.9333 eta  1378m
+  [ 324/516] multi_stage_full_recordprompt_only  032   153.2s raw=71   F1=0.9333 eta  1368m
+  [ 325/516] multi_stage_full_recordprompt_only  040    41.5s raw=19   F1=0.9744 eta  1357m
+  [ 326/516] multi_stage_full_recordprompt_only  040    41.7s raw=19   F1=0.9744 eta  1346m
+  [ 327/516] multi_stage_full_recordprompt_only  040    42.1s raw=19   F1=0.9744 eta  1335m
+  [ 328/516] multi_stage_full_recordprompt_only  025    27.7s raw=12   F1=0.8462 eta  1324m
+  [ 329/516] multi_stage_full_recordprompt_only  025    27.4s raw=12   F1=0.8462 eta  1314m
+  [ 330/516] multi_stage_full_recordprompt_only  025    27.3s raw=12   F1=0.8462 eta  1303m
+  [ 331/516] multi_stage_full_recordprompt_only  005    35.4s raw=7    F1=0.1069 eta  1292m !
+  [ 332/516] multi_stage_full_recordprompt_only  005    45.4s raw=7    F1=0.1069 eta  1282m !
+  [ 333/516] multi_stage_full_recordprompt_only  005    45.8s raw=7    F1=0.1069 eta  1272m !
+  [ 334/516] multi_stage_full_recordprompt_only  050  2867.3s raw=37   F1=0.2162 eta  1287m !
+  [ 335/516] multi_stage_full_recordprompt_only  050  2870.9s raw=37   F1=0.2162 eta  1302m !
+  [ 336/516] multi_stage_full_recordprompt_only  050  2868.7s raw=37   F1=0.2162 eta  1316m !
+
+  === loading gemma4:12b ===
+  [ 337/516] zero_shot_full_recordconstrained  039   489.2s raw=0    F1=0.0    eta  1309m !
+  [ 338/516] zero_shot_full_recordconstrained  039   239.0s raw=52   F1=1.0    eta  1300m
+  [ 339/516] zero_shot_full_recordconstrained  039   239.0s raw=52   F1=1.0    eta  1291m
+  [ 340/516] zero_shot_full_recordconstrained  043   332.3s raw=0    F1=0.0    eta  1283m !
+  [ 341/516] zero_shot_full_recordconstrained  043   331.8s raw=0    F1=0.0    eta  1275m !
+  [ 342/516] zero_shot_full_recordconstrained  043   332.0s raw=0    F1=0.0    eta  1267m !
+  [ 343/516] zero_shot_full_recordconstrained  009   326.2s raw=0    F1=0.0    eta  1259m !
+  [ 344/516] zero_shot_full_recordconstrained  009   326.8s raw=0    F1=0.0    eta  1250m !
+  [ 345/516] zero_shot_full_recordconstrained  009   327.1s raw=0    F1=0.0    eta  1242m !
+  [ 346/516] zero_shot_full_recordconstrained  012   219.8s raw=50   F1=1.0    eta  1233m
+  [ 347/516] zero_shot_full_recordconstrained  012   164.1s raw=50   F1=1.0    eta  1224m
+  [ 348/516] zero_shot_full_recordconstrained  012   164.1s raw=50   F1=1.0    eta  1214m
+  [ 349/516] zero_shot_full_recordconstrained  004   169.6s raw=33   F1=0.9697 eta  1205m
+  [ 350/516] zero_shot_full_recordconstrained  004   170.3s raw=33   F1=0.9697 eta  1196m
+  [ 351/516] zero_shot_full_recordconstrained  004   169.6s raw=33   F1=0.9697 eta  1186m
+  [ 352/516] zero_shot_full_recordconstrained  032   333.2s raw=0    F1=0.0    eta  1178m !
+  [ 353/516] zero_shot_full_recordconstrained  032   334.0s raw=0    F1=0.0    eta  1171m !
+  [ 354/516] zero_shot_full_recordconstrained  032   334.0s raw=0    F1=0.0    eta  1163m !
+  [ 355/516] zero_shot_full_recordconstrained  040   328.1s raw=0    F1=0.0    eta  1155m !
+  [ 356/516] zero_shot_full_recordconstrained  040   328.3s raw=0    F1=0.0    eta  1147m !
+  [ 357/516] zero_shot_full_recordconstrained  040   328.4s raw=0    F1=0.0    eta  1139m !
+  [ 358/516] zero_shot_full_recordconstrained  025   121.4s raw=16   F1=0.9655 eta  1129m
+  [ 359/516] zero_shot_full_recordconstrained  025   121.6s raw=16   F1=0.9655 eta  1120m
+  [ 360/516] zero_shot_full_recordconstrained  025   120.7s raw=16   F1=0.9655 eta  1111m
+  [ 361/516] zero_shot_full_recordconstrained  005   151.8s raw=7    F1=0.1069 eta  1102m !
+  [ 362/516] zero_shot_full_recordconstrained  005   147.8s raw=7    F1=0.1069 eta  1092m !
+  [ 363/516] zero_shot_full_recordconstrained  005   147.3s raw=7    F1=0.1069 eta  1083m !
+  [ 364/516] zero_shot_full_recordconstrained  050   169.0s raw=3    F1=0.0134 eta  1075m !
+  [ 365/516] zero_shot_full_recordconstrained  050   160.2s raw=3    F1=0.0134 eta  1066m !
+  [ 366/516] zero_shot_full_recordconstrained  050   160.0s raw=3    F1=0.0134 eta  1057m !
+  [ 367/516] zero_shot_full_recordprompt_only  039   286.7s raw=52   F1=1.0    eta  1049m
+  [ 368/516] zero_shot_full_recordprompt_only  039   291.1s raw=52   F1=1.0    eta  1041m
+  [ 369/516] zero_shot_full_recordprompt_only  039   291.6s raw=52   F1=1.0    eta  1033m
+  [ 370/516] zero_shot_full_recordprompt_only  043   332.5s raw=0    F1=0.0    eta  1025m !
+  [ 371/516] zero_shot_full_recordprompt_only  043   331.9s raw=0    F1=0.0    eta  1018m !
+  [ 372/516] zero_shot_full_recordprompt_only  043   331.9s raw=0    F1=0.0    eta  1010m !
+  [ 373/516] zero_shot_full_recordprompt_only  009   326.2s raw=0    F1=0.0    eta  1003m !
+  [ 374/516] zero_shot_full_recordprompt_only  009   327.0s raw=0    F1=0.0    eta   995m !
+  [ 375/516] zero_shot_full_recordprompt_only  009   327.0s raw=0    F1=0.0    eta   987m !
+  [ 376/516] zero_shot_full_recordprompt_only  012   210.2s raw=50   F1=1.0    eta   979m
+  [ 377/516] zero_shot_full_recordprompt_only  012   266.2s raw=50   F1=1.0    eta   971m
+  [ 378/516] zero_shot_full_recordprompt_only  012   266.3s raw=50   F1=1.0    eta   963m
+  [ 379/516] zero_shot_full_recordprompt_only  004   199.7s raw=33   F1=0.9697 eta   955m
+  [ 380/516] zero_shot_full_recordprompt_only  004   162.4s raw=33   F1=0.9697 eta   946m
+  [ 381/516] zero_shot_full_recordprompt_only  004   163.2s raw=33   F1=0.9697 eta   938m
+  [ 382/516] zero_shot_full_recordprompt_only  032   333.6s raw=0    F1=0.0    eta   931m !
+  [ 383/516] zero_shot_full_recordprompt_only  032   333.9s raw=0    F1=0.0    eta   923m !
+  [ 384/516] zero_shot_full_recordprompt_only  032   334.0s raw=0    F1=0.0    eta   916m !
+  [ 385/516] zero_shot_full_recordprompt_only  040   328.1s raw=0    F1=0.0    eta   908m !
+  [ 386/516] zero_shot_full_recordprompt_only  040   328.5s raw=0    F1=0.0    eta   901m !
+  [ 387/516] zero_shot_full_recordprompt_only  040   328.2s raw=0    F1=0.0    eta   893m !
+  [ 388/516] zero_shot_full_recordprompt_only  025   135.6s raw=16   F1=0.9655 eta   885m
+  [ 389/516] zero_shot_full_recordprompt_only  025   297.8s raw=0    F1=0.0    eta   877m !
+  [ 390/516] zero_shot_full_recordprompt_only  025   298.0s raw=0    F1=0.0    eta   870m !
+  [ 391/516] zero_shot_full_recordprompt_only  005   157.6s raw=7    F1=0.1069 eta   862m !
+  [ 392/516] zero_shot_full_recordprompt_only  005   152.6s raw=7    F1=0.1069 eta   853m !
+  [ 393/516] zero_shot_full_recordprompt_only  005   152.2s raw=7    F1=0.1069 eta   845m !
+  [ 394/516] zero_shot_full_recordprompt_only  050   169.6s raw=3    F1=0.0134 eta   837m !
+  [ 395/516] zero_shot_full_recordprompt_only  050   161.3s raw=3    F1=0.0134 eta   829m !
+  [ 396/516] zero_shot_full_recordprompt_only  050   162.1s raw=3    F1=0.0134 eta   821m !
+  [ 397/516] few_shot_full_recordconstrained  039   177.4s raw=52   F1=1.0    eta   813m
+  [ 398/516] few_shot_full_recordconstrained  039   177.1s raw=52   F1=1.0    eta   805m
+  [ 399/516] few_shot_full_recordconstrained  039   176.1s raw=52   F1=1.0    eta   797m
+  [ 400/516] few_shot_full_recordconstrained  043   316.7s raw=0    F1=0.0    eta   790m !
+  [ 401/516] few_shot_full_recordconstrained  043   316.7s raw=0    F1=0.0    eta   782m !
+  [ 402/516] few_shot_full_recordconstrained  043   317.4s raw=0    F1=0.0    eta   775m !
+  [ 403/516] few_shot_full_recordconstrained  009   311.5s raw=0    F1=0.0    eta   768m !
+  [ 404/516] few_shot_full_recordconstrained  009   312.1s raw=0    F1=0.0    eta   761m !
+  [ 405/516] few_shot_full_recordconstrained  009   312.1s raw=0    F1=0.0    eta   753m !
+  [ 406/516] few_shot_full_recordconstrained  012   337.8s raw=0    F1=0.0    eta   746m !
+  [ 407/516] few_shot_full_recordconstrained  012   303.5s raw=50   F1=1.0    eta   739m
+  [ 408/516] few_shot_full_recordconstrained  012   338.8s raw=0    F1=0.0    eta   732m !
+  [ 409/516] few_shot_full_recordconstrained  004   188.5s raw=33   F1=0.9697 eta   724m
+  [ 410/516] few_shot_full_recordconstrained  004   328.5s raw=0    F1=0.0    eta   717m !
+  [ 411/516] few_shot_full_recordconstrained  004   328.2s raw=0    F1=0.0    eta   710m !
+  [ 412/516] few_shot_full_recordconstrained  032   319.8s raw=0    F1=0.0    eta   703m !
+  [ 413/516] few_shot_full_recordconstrained  032   319.1s raw=0    F1=0.0    eta   696m !
+  [ 414/516] few_shot_full_recordconstrained  032   319.1s raw=0    F1=0.0    eta   689m !
+  [ 415/516] few_shot_full_recordconstrained  040   313.1s raw=0    F1=0.0    eta   682m !
+  [ 416/516] few_shot_full_recordconstrained  040   313.3s raw=0    F1=0.0    eta   674m !
+  [ 417/516] few_shot_full_recordconstrained  040   313.8s raw=0    F1=0.0    eta   667m !
+  [ 418/516] few_shot_full_recordconstrained  025   283.0s raw=0    F1=0.0    eta   660m !
+  [ 419/516] few_shot_full_recordconstrained  025   282.8s raw=0    F1=0.0    eta   653m !
+  [ 420/516] few_shot_full_recordconstrained  025   282.9s raw=0    F1=0.0    eta   646m !
+  [ 421/516] few_shot_full_recordconstrained  005   565.5s raw=0    F1=0.0    eta   640m !
+  [ 422/516] few_shot_full_recordconstrained  005   563.6s raw=0    F1=0.0    eta   633m !
+  [ 423/516] few_shot_full_recordconstrained  005   562.1s raw=0    F1=0.0    eta   627m !
+  [ 424/516] few_shot_full_recordconstrained  050   143.7s raw=3    F1=0.0134 eta   620m !
+  [ 425/516] few_shot_full_recordconstrained  050   135.0s raw=3    F1=0.0134 eta   612m !
+  [ 426/516] few_shot_full_recordconstrained  050   134.6s raw=3    F1=0.0134 eta   604m !
+  [ 427/516] few_shot_full_recordprompt_only  039   250.0s raw=52   F1=1.0    eta   597m
+  [ 428/516] few_shot_full_recordprompt_only  039   236.2s raw=52   F1=1.0    eta   590m
+  [ 429/516] few_shot_full_recordprompt_only  039   236.0s raw=52   F1=1.0    eta   582m
+  [ 430/516] few_shot_full_recordprompt_only  043   316.8s raw=0    F1=0.0    eta   575m !
+  [ 431/516] few_shot_full_recordprompt_only  043   317.0s raw=0    F1=0.0    eta   569m !
+  [ 432/516] few_shot_full_recordprompt_only  043   317.3s raw=0    F1=0.0    eta   562m !
+  [ 433/516] few_shot_full_recordprompt_only  009   311.6s raw=0    F1=0.0    eta   555m !
+  [ 434/516] few_shot_full_recordprompt_only  009   312.1s raw=0    F1=0.0    eta   548m !
+  [ 435/516] few_shot_full_recordprompt_only  009   312.2s raw=0    F1=0.0    eta   541m !
+  [ 436/516] few_shot_full_recordprompt_only  012   337.5s raw=0    F1=0.0    eta   534m !
+  [ 437/516] few_shot_full_recordprompt_only  012   302.8s raw=50   F1=1.0    eta   527m
+  [ 438/516] few_shot_full_recordprompt_only  012   302.8s raw=50   F1=1.0    eta   520m
+  [ 439/516] few_shot_full_recordprompt_only  004   327.6s raw=0    F1=0.0    eta   513m !
+  [ 440/516] few_shot_full_recordprompt_only  004   328.5s raw=0    F1=0.0    eta   506m !
+  [ 441/516] few_shot_full_recordprompt_only  004   328.3s raw=0    F1=0.0    eta   499m !
+  [ 442/516] few_shot_full_recordprompt_only  032   319.1s raw=0    F1=0.0    eta   492m !
+  [ 443/516] few_shot_full_recordprompt_only  032   319.0s raw=0    F1=0.0    eta   486m !
+  [ 444/516] few_shot_full_recordprompt_only  032   318.9s raw=0    F1=0.0    eta   479m !
+  [ 445/516] few_shot_full_recordprompt_only  040   313.1s raw=0    F1=0.0    eta   472m !
+  [ 446/516] few_shot_full_recordprompt_only  040   313.3s raw=0    F1=0.0    eta   465m !
+  [ 447/516] few_shot_full_recordprompt_only  040   313.5s raw=0    F1=0.0    eta   458m !
+  [ 448/516] few_shot_full_recordprompt_only  025   282.9s raw=0    F1=0.0    eta   451m !
+  [ 449/516] few_shot_full_recordprompt_only  025   282.8s raw=0    F1=0.0    eta   444m !
+  [ 450/516] few_shot_full_recordprompt_only  025   283.0s raw=0    F1=0.0    eta   437m !
+  [ 451/516] few_shot_full_recordprompt_only  005   565.5s raw=0    F1=0.0    eta   431m !
+  [ 452/516] few_shot_full_recordprompt_only  005   563.2s raw=0    F1=0.0    eta   425m !
+  [ 453/516] few_shot_full_recordprompt_only  005   562.5s raw=0    F1=0.0    eta   419m !
+  [ 454/516] few_shot_full_recordprompt_only  050   142.2s raw=3    F1=0.0134 eta   411m !
+  [ 455/516] few_shot_full_recordprompt_only  050   137.9s raw=3    F1=0.0134 eta   404m !
+  [ 456/516] few_shot_full_recordprompt_only  050   138.1s raw=3    F1=0.0134 eta   397m !
+  [ 457/516] multi_stage_full_recordconstrained  039   390.9s raw=0    F1=0.0    eta   390m !
+  [ 458/516] multi_stage_full_recordconstrained  039   392.3s raw=0    F1=0.0    eta   384m !
+  [ 459/516] multi_stage_full_recordconstrained  039   391.9s raw=0    F1=0.0    eta   377m !
+  [ 460/516] multi_stage_full_recordconstrained  043   348.6s raw=0    F1=0.0    eta   370m !
+  [ 461/516] multi_stage_full_recordconstrained  043   349.6s raw=0    F1=0.0    eta   364m !
+  [ 462/516] multi_stage_full_recordconstrained  043   348.8s raw=0    F1=0.0    eta   357m !
+  [ 463/516] multi_stage_full_recordconstrained  009   362.4s raw=0    F1=0.0    eta   350m !
+  [ 464/516] multi_stage_full_recordconstrained  009   362.9s raw=0    F1=0.0    eta   344m !
+  [ 465/516] multi_stage_full_recordconstrained  009   362.1s raw=0    F1=0.0    eta   337m !
+  [ 466/516] multi_stage_full_recordconstrained  012   372.4s raw=50   F1=1.0    eta   330m
+  [ 467/516] multi_stage_full_recordconstrained  012   367.8s raw=50   F1=1.0    eta   324m
+  [ 468/516] multi_stage_full_recordconstrained  012   366.9s raw=50   F1=1.0    eta   317m
+  [ 469/516] multi_stage_full_recordconstrained  004   653.1s raw=33   F1=0.9697 eta   311m
+  [ 470/516] multi_stage_full_recordconstrained  004   651.9s raw=33   F1=0.9697 eta   305m
+  [ 471/516] multi_stage_full_recordconstrained  004   651.1s raw=33   F1=0.9697 eta   298m
+  [ 472/516] multi_stage_full_recordconstrained  032   383.8s raw=0    F1=0.0    eta   292m !
+  [ 473/516] multi_stage_full_recordconstrained  032   356.7s raw=0    F1=0.0    eta   285m !
+  [ 474/516] multi_stage_full_recordconstrained  032   355.8s raw=0    F1=0.0    eta   278m !
+  [ 475/516] multi_stage_full_recordconstrained  040   260.8s raw=20   F1=1.0    eta   272m
+  [ 476/516] multi_stage_full_recordconstrained  040   354.2s raw=0    F1=0.0    eta   265m !
+  [ 477/516] multi_stage_full_recordconstrained  040   259.2s raw=20   F1=1.0    eta   258m
+  [ 478/516] multi_stage_full_recordconstrained  025   607.7s raw=0    F1=0.0    eta   252m !
+  [ 479/516] multi_stage_full_recordconstrained  025   606.9s raw=0    F1=0.0    eta   245m !
+  [ 480/516] multi_stage_full_recordconstrained  025   607.0s raw=0    F1=0.0    eta   239m !
+  [ 481/516] multi_stage_full_recordconstrained  005   313.8s raw=7    F1=0.1069 eta   232m !
+  [ 482/516] multi_stage_full_recordconstrained  005   302.2s raw=7    F1=0.1069 eta   225m !
+  [ 483/516] multi_stage_full_recordconstrained  005   301.3s raw=7    F1=0.1069 eta   219m !
+  [ 484/516] multi_stage_full_recordconstrained  050   364.3s raw=3    F1=0.0134 eta   212m !
+  [ 485/516] multi_stage_full_recordconstrained  050   286.9s raw=3    F1=0.0134 eta   205m !
+  [ 486/516] multi_stage_full_recordconstrained  050   287.8s raw=3    F1=0.0134 eta   199m !
+  [ 487/516] multi_stage_full_recordprompt_only  039   390.9s raw=0    F1=0.0    eta   192m !
+  [ 488/516] multi_stage_full_recordprompt_only  039   392.1s raw=0    F1=0.0    eta   185m !
+  [ 489/516] multi_stage_full_recordprompt_only  039   391.7s raw=0    F1=0.0    eta   179m !
+  [ 490/516] multi_stage_full_recordprompt_only  043   349.3s raw=0    F1=0.0    eta   172m !
+  [ 491/516] multi_stage_full_recordprompt_only  043   349.7s raw=0    F1=0.0    eta   165m !
+  [ 492/516] multi_stage_full_recordprompt_only  043   348.7s raw=0    F1=0.0    eta   159m !
+  [ 493/516] multi_stage_full_recordprompt_only  009   362.6s raw=0    F1=0.0    eta   152m !
+  [ 494/516] multi_stage_full_recordprompt_only  009   363.4s raw=0    F1=0.0    eta   145m !
+  [ 495/516] multi_stage_full_recordprompt_only  009   362.3s raw=0    F1=0.0    eta   139m !
+  [ 496/516] multi_stage_full_recordprompt_only  012   421.7s raw=50   F1=1.0    eta   132m
+  [ 497/516] multi_stage_full_recordprompt_only  012   417.5s raw=50   F1=1.0    eta   126m
+  [ 498/516] multi_stage_full_recordprompt_only  012   416.7s raw=50   F1=1.0    eta   119m
+  [ 499/516] multi_stage_full_recordprompt_only  004   682.9s raw=33   F1=0.9697 eta   113m
+  [ 500/516] multi_stage_full_recordprompt_only  004   681.9s raw=33   F1=0.9697 eta   106m
+  [ 501/516] multi_stage_full_recordprompt_only  004   681.5s raw=33   F1=0.9697 eta   100m
+  [ 502/516] multi_stage_full_recordprompt_only  032   383.9s raw=0    F1=0.0    eta    93m !
+  [ 503/516] multi_stage_full_recordprompt_only  032   356.7s raw=0    F1=0.0    eta    86m !
+  [ 504/516] multi_stage_full_recordprompt_only  032   355.9s raw=0    F1=0.0    eta    80m !
+  [ 505/516] multi_stage_full_recordprompt_only  040   278.4s raw=20   F1=1.0    eta    73m
+  [ 506/516] multi_stage_full_recordprompt_only  040   309.8s raw=20   F1=1.0    eta    66m
+  [ 507/516] multi_stage_full_recordprompt_only  040   309.3s raw=20   F1=1.0    eta    60m
+  [ 508/516] multi_stage_full_recordprompt_only  025   608.1s raw=0    F1=0.0    eta    53m !
+  [ 509/516] multi_stage_full_recordprompt_only  025   606.9s raw=0    F1=0.0    eta    46m !
+  [ 510/516] multi_stage_full_recordprompt_only  025   607.5s raw=0    F1=0.0    eta    40m !
+  [ 511/516] multi_stage_full_recordprompt_only  005   319.2s raw=7    F1=0.1069 eta    33m !
+  [ 512/516] multi_stage_full_recordprompt_only  005   306.6s raw=7    F1=0.1069 eta    27m !
+  [ 513/516] multi_stage_full_recordprompt_only  005   307.3s raw=7    F1=0.1069 eta    20m !
+  [ 514/516] multi_stage_full_recordprompt_only  050   365.5s raw=3    F1=0.0134 eta    13m !
+  [ 515/516] multi_stage_full_recordprompt_only  050   292.8s raw=3    F1=0.0134 eta     7m !
+  [ 516/516] multi_stage_full_recordprompt_only  050   293.2s raw=3    F1=0.0134 eta     0m !
+
+  516 runs in 3422.3 min
+  latency mean 397.8s  stdev 851.5s
+  results -> /home/coder/project/Web_Scraping_Engine/results/benchmark_results.csv
+  next:    .venv/bin/python evaluate.py

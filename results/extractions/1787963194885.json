@@ -1,0 +1,257 @@
+{
+ "key": "a|llama3.1:8b|zero_shot_full_record|prompt_only|009|3",
+ "raw": [
+  "Å Energi Vannkraft AS Berlin Branch",
+  "A.T. Kearney GmbH",
+  "A/V/E GmbH",
+  "ABO Energy GmbH & Co. KGaA",
+  "Abwasserbetrieb der Stadt Goch AöR",
+  "Abwassergesellschaft Magdeburg mbH",
+  "Abwasserverband Lauter-Wetter",
+  "adesso business consulting AG",
+  "AFRY Management Consulting GmbH",
+  "Aggerverband",
+  "Albstadtwerke GmbH",
+  "Albwerk GmbH & Co. KG",
+  "Allego GmbH c/o Design Offices",
+  "Allgäuer Kraftwerke GmbH",
+  "Allgäuer Überlandwerk GmbH",
+  "AllgäuNetz GmbH & Co. KG",
+  "Alliander Netz Heinsberg GmbH",
+  "Alpiq AG",
+  "Alpiq Energie Deutschland GmbH",
+  "Alterric Deutschland GmbH",
+  "Ammerseewerke gKU",
+  "Amprion GmbH",
+  "AMRUM-Offshore West GmbH",
+  "ANE GmbH & Co. KG",
+  "AOV IT.Services GmbH",
+  "Apoldaer Wasser GmbH",
+  "ArcMind Technologies GmbH",
+  "ARGE Netz GmbH & Co. KG",
+  "Arvato Systems Digital GmbH",
+  "ASCANETZ GmbH",
+  "AUF Eberlein & Co. GmbH",
+  "Avacon AG",
+  "Avacon Hochdrucknetz GmbH",
+  "Avacon Natur GmbH",
+  "Avacon Netz GmbH",
+  "Avacon Wasser GmbH",
+  "AVIA Deutschland GmbH",
+  "AVU Aktiengesellschaft für Versorgungs-Unternehmen",
+  "AVU Netz GmbH",
+  "AWE-Arkona-Windpark Entwicklungs-GmbH",
+  "Axpo Deutschland GmbH",
+  "Axpo Solar Deutschland GmbH"
+ ],
+ "records": [
+  {
+   "name": "Å Energi Vannkraft AS Berlin Branch",
+   "url": "https://www.aenergi.no",
+   "city": "Berlin"
+  },
+  {
+   "name": "A.T. Kearney GmbH",
+   "url": "https://www.de.kearney.com/",
+   "city": "Berlin"
+  },
+  {
+   "name": "A/V/E GmbH",
+   "url": "http://www.ave-online.de",
+   "city": "Halle (Saale)"
+  },
+  {
+   "name": "ABO Energy GmbH & Co. KGaA",
+   "url": "https://www.aboenergy.com/",
+   "city": "Wiesbaden"
+  },
+  {
+   "name": "Abwasserbetrieb der Stadt Goch AöR",
+   "url": "http://www.goch.de",
+   "city": "Goch"
+  },
+  {
+   "name": "Abwassergesellschaft Magdeburg mbH",
+   "url": "http://www.agm-magdeburg.de",
+   "city": "Magdeburg"
+  },
+  {
+   "name": "Abwasserverband Lauter-Wetter",
+   "url": "https://www.avlw.de/",
+   "city": "Laubach"
+  },
+  {
+   "name": "adesso business consulting AG",
+   "url": "https://www.adesso-bc.com/",
+   "city": "Hameln"
+  },
+  {
+   "name": "AFRY Management Consulting GmbH",
+   "url": "http://www.afry.com",
+   "city": "Düsseldorf"
+  },
+  {
+   "name": "Aggerverband",
+   "url": "http://www.aggerverband.de",
+   "city": "Gummersbach"
+  },
+  {
+   "name": "Albstadtwerke GmbH",
+   "url": "http://www.albstadtwerke.de",
+   "city": "Albstadt"
+  },
+  {
+   "name": "Albwerk GmbH & Co. KG",
+   "url": "http://www.albwerk.de",
+   "city": "Geislingen an der Steige"
+  },
+  {
+   "name": "Allego GmbH c/o Design Offices",
+   "url": "http://www.allego.eu",
+   "city": "Berlin"
+  },
+  {
+   "name": "Allgäuer Kraftwerke GmbH",
+   "url": "http://www.allgaeukraft.de",
+   "city": "Sonthofen"
+  },
+  {
+   "name": "Allgäuer Überlandwerk GmbH",
+   "url": "http://www.auew.de",
+   "city": "Kempten (Allgäu)"
+  },
+  {
+   "name": "AllgäuNetz GmbH & Co. KG",
+   "url": "http://www.allgaeunetz.com",
+   "city": "Kempten (Allgäu)"
+  },
+  {
+   "name": "Alliander Netz Heinsberg GmbH",
+   "url": "http://www.netz-heinsberg.de",
+   "city": "Heinsberg"
+  },
+  {
+   "name": "Alpiq AG",
+   "url": "http://www.alpiq.com",
+   "city": "OLTEN"
+  },
+  {
+   "name": "Alpiq Energie Deutschland GmbH",
+   "url": "https://www.alpiq.com/de",
+   "city": "Berlin"
+  },
+  {
+   "name": "Alterric Deutschland GmbH",
+   "url": "https://www.alterric.com/",
+   "city": "Aurich"
+  },
+  {
+   "name": "Ammerseewerke gKU",
+   "url": "https://www.ammerseewerke.de/",
+   "city": "Eching am Ammersee"
+  },
+  {
+   "name": "Amprion GmbH",
+   "url": "http://www.amprion.net",
+   "city": "Dortmund"
+  },
+  {
+   "name": "AMRUM-Offshore West GmbH",
+   "url": "https://www.rwe.com/der-konzern/laender-und-standorte/offshore-windpark-amrumbank-west/",
+   "city": "Essen"
+  },
+  {
+   "name": "ANE GmbH & Co. KG",
+   "url": "https://ane.energy/",
+   "city": "Husum"
+  },
+  {
+   "name": "AOV IT.Services GmbH",
+   "url": "http://www.aov.de/",
+   "city": "Gütersloh"
+  },
+  {
+   "name": "Apoldaer Wasser GmbH",
+   "url": "http://www.wasserapolda.de",
+   "city": "Apolda"
+  },
+  {
+   "name": "ArcMind Technologies GmbH",
+   "url": "http://www.arcmind.com",
+   "city": "Essen"
+  },
+  {
+   "name": "ARGE Netz GmbH & Co. KG",
+   "url": "http://www.arge-netz.de",
+   "city": "Husum"
+  },
+  {
+   "name": "Arvato Systems Digital GmbH",
+   "url": "https://www.arvato-systems.de",
+   "city": "Gütersloh"
+  },
+  {
+   "name": "ASCANETZ GmbH",
+   "url": "http://www.ascanetz.de/",
+   "city": "Aschersleben"
+  },
+  {
+   "name": "AUF Eberlein & Co. GmbH",
+   "city": "Adelshofen"
+  },
+  {
+   "name": "Avacon AG",
+   "url": "http://www.avacon.de",
+   "city": "Helmstedt"
+  },
+  {
+   "name": "Avacon Hochdrucknetz GmbH",
+   "url": "https://www.avacon-hochdrucknetz.de/de.html",
+   "city": "Helmstedt"
+  },
+  {
+   "name": "Avacon Natur GmbH",
+   "url": "http://www.avacon-natur.de",
+   "city": "Sarstedt"
+  },
+  {
+   "name": "Avacon Netz GmbH",
+   "url": "https://www.avacon-netz.de",
+   "city": "Helmstedt"
+  },
+  {
+   "name": "Avacon Wasser GmbH",
+   "url": "https://www.avacon-wasser.de",
+   "city": "Wolfenbüttel"
+  },
+  {
+   "name": "AVIA Deutschland GmbH",
+   "url": "http://www.avia.de",
+   "city": "München"
+  },
+  {
+   "name": "AVU Aktiengesellschaft für Versorgungs-Unternehmen",
+   "url": "http://www.avu.de",
+   "city": "Gevelsberg"
+  },
+  {
+   "name": "AVU Netz GmbH",
+   "url": "http://www.avu-netz.de",
+   "city": "Gevelsberg"
+  },
+  {
+   "name": "AWE-Arkona-Windpark Entwicklungs-GmbH",
+   "city": "Hamburg"
+  },
+  {
+   "name": "Axpo Deutschland GmbH",
+   "url": "http://www.axpo.com",
+   "city": "Leipzig"
+  },
+  {
+   "name": "Axpo Solar Deutschland GmbH",
+   "url": "https://www.axpo.com/de",
+   "city": "Berlin"
+  }
+ ]
+}

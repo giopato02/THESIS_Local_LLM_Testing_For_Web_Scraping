@@ -1,0 +1,230 @@
+{
+ "key": "a|llama3.1:8b|few_shot_full_record|constrained|043|3",
+ "raw": [
+  "ACCESS e.V.",
+  "Aixtron SE",
+  "AMAC GmbH",
+  "AMO GmbH",
+  "Ätztechnik Herz GmbH & Co. KG",
+  "CeNTech GmbH",
+  "ChemCologne e. V.",
+  "Circulania Services GmbH",
+  "Coatema Coating Machinery GmbH",
+  "Covestro Deutschland AG",
+  "CTC GmbH",
+  "Deutsche Gesellschaft für Materialkunde e.V.",
+  "Deutsches Zentrum für Luft- und Raumfahrt e. V. (DLR)",
+  "Element 3-5 GmbH",
+  "Euromat® GmbH",
+  "femtos GmbH",
+  "Fraunhofer-Institut für Lasertechnik ILT",
+  "Fraunhofer-Institut für Mikroelektronische Schaltungen und Systeme IMS",
+  "HAVERKAMP GmbH",
+  "HEGGEMANN AG",
+  "Innolume GmbH",
+  "ICS Innovation Coating Systems UG",
+  "Institut für Metallurgische Prozesstechnik und Metallrecycling der RWTH Aachen",
+  "Institut für Energie- und Umwelttechnik e. V. (IUTA)",
+  "Kunststoff-Institut Lüdenscheid",
+  "Laserzentrum FH Münster am Fachbereich Physikalische Technik",
+  "Leibniz-Institut für Analytische Wissenschaften – ISAS e.V.",
+  "MaTech-Consult GmbH",
+  "Meotec GmbH & Co. KG",
+  "Microtrac GmbH",
+  "Momentive Performance Materials GmbH",
+  "nanobay",
+  "neoxid GmbH",
+  "phenox GmbH",
+  "Pi Integral Solutions Limited",
+  "Ruhr-Universität Bochum, Lehrstuhl für Laseranwendungstechnik",
+  "RWTH Aachen, Gemeinschaftslabor für Elektronenmikroskopie",
+  "RWTH Aachen, Institut f. Strukturmechanik und Leichtbau",
+  "RWTH Aachen University, Lehrstuhl für Elektronische Bauelemente",
+  "RWTH Aachen, Werkstoffe der Elektrotechnik",
+  "Stahlinstitut VDEh",
+  "Teijin Carbon Europe GmbH",
+  "Universität Bielefeld, Fakultät für Physik",
+  "Universität Duisburg-Essen, Werkstoffe der Elektrotechnik",
+  "Leichtbau im Automobil (LiA), Universität Paderborn",
+  "Lehrstuhl für Höchstfrequenztechnik und Quantenelektronik (HQE), Universität Siegen",
+  "Institut für Anorganische und Materialchemie, Universität zu Köln",
+  "Vitrum Technologies GmbH",
+  "Zentrum für Brennstoffzellen Technik GmbH"
+ ],
+ "records": [
+  {
+   "name": "ACCESS e.V."
+  },
+  {
+   "name": "Aixtron SE"
+  },
+  {
+   "name": "AMAC GmbH",
+   "url": "http://www.effing-aachen.de/"
+  },
+  {
+   "name": "AMO GmbH"
+  },
+  {
+   "name": "Ätztechnik Herz GmbH & Co. KG",
+   "url": "http://www.aetztechnik-herz.de/"
+  },
+  {
+   "name": "CeNTech GmbH"
+  },
+  {
+   "name": "ChemCologne e. V.",
+   "url": "http://www.chemcologne.de/"
+  },
+  {
+   "name": "Circulania Services GmbH"
+  },
+  {
+   "name": "Coatema Coating Machinery GmbH"
+  },
+  {
+   "name": "Covestro Deutschland AG"
+  },
+  {
+   "name": "CTC GmbH",
+   "url": "https://ctc-composites.com/de/"
+  },
+  {
+   "name": "Deutsche Gesellschaft für Materialkunde e.V.",
+   "url": "https://www.dgm.de/"
+  },
+  {
+   "name": "Deutsches Zentrum für Luft- und Raumfahrt e. V. (DLR)",
+   "url": "http://www.dlr.de"
+  },
+  {
+   "name": "Element 3-5 GmbH",
+   "url": "https://www.element3-5.com/"
+  },
+  {
+   "name": "Euromat® GmbH"
+  },
+  {
+   "name": "femtos GmbH",
+   "url": "http://www.femtos.eu"
+  },
+  {
+   "name": "Fraunhofer-Institut für Lasertechnik ILT"
+  },
+  {
+   "name": "Fraunhofer-Institut für Mikroelektronische Schaltungen und Systeme IMS"
+  },
+  {
+   "name": "HAVERKAMP GmbH"
+  },
+  {
+   "name": "HEGGEMANN AG"
+  },
+  {
+   "name": "Innolume GmbH",
+   "url": "https://www.innolume.com/"
+  },
+  {
+   "name": "ICS Innovation Coating Systems UG",
+   "url": "http://ics-lacke.de/"
+  },
+  {
+   "name": "Institut für Metallurgische Prozesstechnik und Metallrecycling der RWTH Aachen",
+   "url": "http://www.metallurgie.rwth-aachen.de/new/src/index2.php?route=page_main"
+  },
+  {
+   "name": "Institut für Energie- und Umwelttechnik e. V. (IUTA)",
+   "url": "http://www.iuta.de"
+  },
+  {
+   "name": "Kunststoff-Institut Lüdenscheid"
+  },
+  {
+   "name": "Laserzentrum FH Münster am Fachbereich Physikalische Technik",
+   "url": "https://www.fh-muenster.de/laserzentrum/index.php"
+  },
+  {
+   "name": "Leibniz-Institut für Analytische Wissenschaften – ISAS e.V.",
+   "url": "https://www.isas.de/"
+  },
+  {
+   "name": "MaTech-Consult GmbH"
+  },
+  {
+   "name": "Meotec GmbH & Co. KG"
+  },
+  {
+   "name": "Microtrac GmbH"
+  },
+  {
+   "name": "Momentive Performance Materials GmbH",
+   "url": "https://www.momentive.com/de-DE/"
+  },
+  {
+   "name": "nanobay"
+  },
+  {
+   "name": "neoxid GmbH"
+  },
+  {
+   "name": "phenox GmbH",
+   "url": "http://www.phenox.net/"
+  },
+  {
+   "name": "Pi Integral Solutions Limited",
+   "url": "https://www.pulsar-photonics.de/"
+  },
+  {
+   "name": "Ruhr-Universität Bochum, Lehrstuhl für Laseranwendungstechnik",
+   "url": "http://www.lat.rub.de/"
+  },
+  {
+   "name": "RWTH Aachen, Gemeinschaftslabor für Elektronenmikroskopie",
+   "url": "http://www.gfe.rwth-aachen.de/"
+  },
+  {
+   "name": "RWTH Aachen, Institut f. Strukturmechanik und Leichtbau",
+   "url": "http://www.sla.rwth-aachen.de"
+  },
+  {
+   "name": "RWTH Aachen University, Lehrstuhl für Elektronische Bauelemente",
+   "url": "https://www.eld.rwth-aachen.de/go/id/psfz/"
+  },
+  {
+   "name": "RWTH Aachen, Werkstoffe der Elektrotechnik",
+   "url": "http://www.iwe1.rwth-aachen.de"
+  },
+  {
+   "name": "Stahlinstitut VDEh",
+   "url": "http://www.stahl-online.de/index.php/ueber-uns/vdeh/"
+  },
+  {
+   "name": "Teijin Carbon Europe GmbH"
+  },
+  {
+   "name": "Universität Bielefeld, Fakultät für Physik",
+   "url": "http://www2.physik.uni-bielefeld.de/"
+  },
+  {
+   "name": "Universität Duisburg-Essen, Werkstoffe der Elektrotechnik"
+  },
+  {
+   "name": "Leichtbau im Automobil (LiA), Universität Paderborn",
+   "url": "https://mb.uni-paderborn.de/leichtbau/"
+  },
+  {
+   "name": "Lehrstuhl für Höchstfrequenztechnik und Quantenelektronik (HQE), Universität Siegen",
+   "url": "https://www.hqe.eti.uni-siegen.de"
+  },
+  {
+   "name": "Institut für Anorganische und Materialchemie, Universität zu Köln"
+  },
+  {
+   "name": "Vitrum Technologies GmbH",
+   "url": "https://www.vitrum-technologies.com/"
+  },
+  {
+   "name": "Zentrum für Brennstoffzellen Technik GmbH"
+  }
+ ]
+}

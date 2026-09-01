@@ -1,0 +1,324 @@
+{
+ "key": "a|llama3.1:8b|multi_stage_full_record|prompt_only|050|1",
+ "raw": [
+  "MELAG oHG Medizintechnik",
+  "Memmert GmbH + Co.KG",
+  "Messer Group GmbH",
+  "Mettler Toledo GmbH",
+  "Meyer-Haake GmbH",
+  "Miele & Cie. KG",
+  "Mikrop AG",
+  "MMM Münchener Medizin Mechanik GmbH",
+  "MÖLLER-WEDEL-OPTICAL GmbH",
+  "MPG Optische Werke GmbH",
+  "MPG&E Handel und Service GmbH",
+  "MPV MEDICAL GmbH",
+  "Munich Surgical Imaging GmbH",
+  "NEOSTYLE GmbH & Co. KG",
+  "Netzsch Gerätebau GmbH",
+  "Newport Spectra-Physics GmbH",
+  "NIKA Optics GmbH",
+  "NOBLEX GmbH",
+  "nova:med GmbH & Co. KG",
+  "NOVOFLEX Präzisionstechnik",
+  "NRI Medizintechnik GmbH",
+  "OBE GmbH & Co. KG",
+  "OBERON GmbH Fiber Technologies",
+  "Oculus Optikgeräte GmbH",
+  "Ofa Bamberg GmbH",
+  "OHARA GmbH",
+  "OLYMPUS Deutschland GmbH",
+  "Optics Balzers Jena GmbH",
+  "Optiswiss AG",
+  "OPTOMECH GmbH",
+  "OWP Brillen GmbH",
+  "PARI GMBH",
+  "PENTAX Europe GmbH",
+  "PHARMA TEST Apparatebau AG",
+  "phenox GmbH",
+  "Philips GmbH Respironics",
+  "POG Präzisionsoptik Gera GmbH",
+  "Polytec GmbH",
+  "pricon GmbH & Co.KG",
+  "Protect Laserschutz GmbH",
+  "PTA GmbH",
+  "Purification Membranes Analytics - PMA GmbH",
+  "RADIMED Gesellschaft für Kommunikationsdienstleistungen und Medizintechnik mbH",
+  "Ratiolab GmbH",
+  "Rausch & Pausch Healthcare GmbH & Co KG",
+  "Reichmann Feinoptik GmbH",
+  "ResMed Deutschland GmbH",
+  "ResMed GmbH & Co.KG",
+  "Restek GmbH",
+  "Retsch GmbH",
+  "REUTER TECHNOLOGIE GmbH",
+  "Richard Wolf GmbH",
+  "Rodenstock GmbH",
+  "Rudolf Riester GmbH & Co.KG",
+  "Rupp + Hubrach Optik GmbH",
+  "Walter Binde Optik GmbH & Co.KG",
+  "Walter H. Becker GmbH Metallwarenfabrik",
+  "WEINMANN Emergency Medical Technology GmbH",
+  "WILD Gruppe",
+  "Witeg Labortechnik GmbH",
+  "Wöhlk Contact-Linsen GmbH",
+  "LASER COMPONENTS GmbH",
+  "Laser 2000 GmbH",
+  "LASERVISION GmbH"
+ ],
+ "records": [
+  {
+   "name": "MELAG oHG Medizintechnik",
+   "url": "http://www.melag.de"
+  },
+  {
+   "name": "Memmert GmbH + Co.KG",
+   "url": "http://www.memmert.com"
+  },
+  {
+   "name": "Messer Group GmbH",
+   "url": "http://www.messergroup.com/web/mg/medical-gases"
+  },
+  {
+   "name": "Mettler Toledo GmbH",
+   "url": "http://www.mt.com"
+  },
+  {
+   "name": "Meyer-Haake GmbH",
+   "url": "http://www.meyer-haake.com"
+  },
+  {
+   "name": "Miele & Cie. KG",
+   "url": "http://www.miele-professional.de"
+  },
+  {
+   "name": "Mikrop AG",
+   "url": "http://www.mikrop.ch"
+  },
+  {
+   "name": "MMM Münchener Medizin Mechanik GmbH",
+   "url": "http://www.mmmgroup.com"
+  },
+  {
+   "name": "MÖLLER-WEDEL-OPTICAL GmbH",
+   "url": "http://www.moeller-wedel-optical.com"
+  },
+  {
+   "name": "MPG Optische Werke GmbH",
+   "url": "http://www.mpg-eyewear.com/uber-uns/mpg-optische-werke/"
+  },
+  {
+   "name": "MPG&E Handel und Service GmbH",
+   "url": "http://www.mpge.de"
+  },
+  {
+   "name": "MPV MEDICAL GmbH",
+   "url": "http://www.mpvmedical.com"
+  },
+  {
+   "name": "Munich Surgical Imaging GmbH",
+   "url": "http://www.munichimaging.de"
+  },
+  {
+   "name": "NEOSTYLE GmbH & Co. KG",
+   "url": "http://www.neoeyewear.de"
+  },
+  {
+   "name": "Netzsch Gerätebau GmbH",
+   "url": "http://www.netzsch-thermal-analysis.com"
+  },
+  {
+   "name": "Newport Spectra-Physics GmbH",
+   "url": "http://www.newport.com"
+  },
+  {
+   "name": "NIKA Optics GmbH",
+   "url": "http://www.nika.de"
+  },
+  {
+   "name": "NOBLEX GmbH",
+   "url": "http://www.docter-germany.com/index.php/de/"
+  },
+  {
+   "name": "nova:med GmbH & Co. KG",
+   "url": "http://www.novamed.de"
+  },
+  {
+   "name": "NOVOFLEX Präzisionstechnik",
+   "url": "http://www.novoflex.de"
+  },
+  {
+   "name": "NRI Medizintechnik GmbH",
+   "url": "http://www.nri-med.de"
+  },
+  {
+   "name": "OBE GmbH & Co. KG",
+   "url": "http://www.obe.de"
+  },
+  {
+   "name": "OBERON GmbH Fiber Technologies",
+   "url": "http://www.oberonfiber.com"
+  },
+  {
+   "name": "Oculus Optikgeräte GmbH",
+   "url": "http://www.oculus.de"
+  },
+  {
+   "name": "Ofa Bamberg GmbH",
+   "url": "http://www.ofa.de"
+  },
+  {
+   "name": "OHARA GmbH",
+   "url": "http://www.ohara-gmbh.com"
+  },
+  {
+   "name": "OLYMPUS Deutschland GmbH",
+   "url": "http://www.olympus.de/medical"
+  },
+  {
+   "name": "Optics Balzers Jena GmbH",
+   "url": "http://www.opticsbalzers.com"
+  },
+  {
+   "name": "Optiswiss AG",
+   "url": "http://www.optiswiss.ch"
+  },
+  {
+   "name": "OPTOMECH GmbH",
+   "url": "http://www.optomech.de"
+  },
+  {
+   "name": "OWP Brillen GmbH",
+   "url": "http://www.owp.de"
+  },
+  {
+   "name": "PARI GMBH",
+   "url": "http://www.pari.de"
+  },
+  {
+   "name": "PENTAX Europe GmbH",
+   "url": "http://www.pentaxmedical.com"
+  },
+  {
+   "name": "PHARMA TEST Apparatebau AG",
+   "url": "http://www.pharma-test.com"
+  },
+  {
+   "name": "phenox GmbH",
+   "url": "http://www.phenox.info"
+  },
+  {
+   "name": "Philips GmbH Respironics",
+   "url": "http://www.healthcare.philips.com"
+  },
+  {
+   "name": "POG Präzisionsoptik Gera GmbH",
+   "url": "http://www.pog.eu"
+  },
+  {
+   "name": "Polytec GmbH",
+   "url": "http://www.polytec.de"
+  },
+  {
+   "name": "pricon GmbH & Co.KG",
+   "url": "http://www.pricon.de"
+  },
+  {
+   "name": "Protect Laserschutz GmbH",
+   "url": "http://www.protect-laserschutz.de"
+  },
+  {
+   "name": "PTA GmbH",
+   "url": "http://www.pta.de"
+  },
+  {
+   "name": "Purification Membranes Analytics - PMA GmbH",
+   "url": "http://www.membrapure.de"
+  },
+  {
+   "name": "RADIMED Gesellschaft für Kommunikationsdienstleistungen und Medizintechnik mbH",
+   "url": "http://www.radimed.de"
+  },
+  {
+   "name": "Ratiolab GmbH",
+   "url": "http://www.ratiolab.com"
+  },
+  {
+   "name": "Rausch & Pausch Healthcare GmbH & Co KG",
+   "url": "http://www.rapa.com"
+  },
+  {
+   "name": "Reichmann Feinoptik GmbH",
+   "url": "http://www.reichmann-feinoptik.de"
+  },
+  {
+   "name": "ResMed Deutschland GmbH",
+   "url": "http://www.resmed.de/fachhandel"
+  },
+  {
+   "name": "ResMed GmbH & Co.KG",
+   "url": "http://www.resmed.de"
+  },
+  {
+   "name": "Restek GmbH",
+   "url": "http://www.restekgmbh.de"
+  },
+  {
+   "name": "Retsch GmbH",
+   "url": "http://www.retsch.de"
+  },
+  {
+   "name": "REUTER TECHNOLOGIE GmbH",
+   "url": "http://www.reuter-technologie.de"
+  },
+  {
+   "name": "Richard Wolf GmbH",
+   "url": "http://www.richard-wolf.com"
+  },
+  {
+   "name": "Rodenstock GmbH",
+   "url": "http://www.rodenstock.de"
+  },
+  {
+   "name": "Rudolf Riester GmbH & Co.KG",
+   "url": "http://www.riester.de"
+  },
+  {
+   "name": "Rupp + Hubrach Optik GmbH",
+   "url": "http://www.brillenglas.de"
+  },
+  {
+   "name": "Walter Binde Optik GmbH & Co.KG",
+   "url": "http://www.binde-optik.de"
+  },
+  {
+   "name": "Walter H. Becker GmbH Metallwarenfabrik",
+   "url": "http://www.becker-triftern.de"
+  },
+  {
+   "name": "WEINMANN Emergency Medical Technology GmbH",
+   "url": "http://www.weinmann-emergency.de"
+  },
+  {
+   "name": "WILD Gruppe",
+   "url": "http://www.wild.at"
+  },
+  {
+   "name": "Witeg Labortechnik GmbH",
+   "url": "http://www.witeg.de"
+  },
+  {
+   "name": "Wöhlk Contact-Linsen GmbH",
+   "url": "http://www.woehlk.com"
+  },
+  {
+   "name": "LASER COMPONENTS GmbH"
+  },
+  {
+   "name": "Laser 2000 GmbH"
+  },
+  {
+   "name": "LASERVISION GmbH"
+  }
+ ]
+}

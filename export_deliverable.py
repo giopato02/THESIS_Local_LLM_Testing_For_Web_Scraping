@@ -59,14 +59,31 @@ def header(ws, row: int, labels: list[str], widths: list[int]) -> None:
     ws.row_dimensions[row].height = 26
 
 
-def load(stage: str | None):
-    """Return the best run per URL, with its extracted names."""
+def load(stage: str | None, model: str | None = None,
+         prompt: str | None = None, json_mode: str | None = None):
+    """
+    Return one run per URL, with its extracted records.
+
+    Without a configuration filter this keeps whichever run returned the most
+    rows per page, which is the wrong thing for a deliverable: volume is not
+    accuracy, and the most prolific run on a page may come from a model that
+    fabricates. The 960-run study settled which configuration to ship
+    (llama3.1:8b + few_shot_full_record + prompt_only, section 3.13j), so the
+    deliverable should be built from that one and say so.
+    """
     with open(config.URLS_CSV, encoding="utf-8") as fh:
         urls = {r["id"]: r for r in csv.DictReader(fh)}
     with open(config.BENCHMARK_CSV, encoding="utf-8") as fh:
         runs = list(csv.DictReader(fh))
     if stage:
         runs = [r for r in runs if r["stage"] == stage]
+    if model:
+        runs = [r for r in runs if r["model_name"] == model]
+    if prompt:
+        runs = [r for r in runs if r["prompt_technique"] == prompt]
+    if json_mode:
+        runs = [r for r in runs if r["json_mode"] == json_mode]
+    runs = [r for r in runs if not r.get("error")]
 
     best: dict[str, dict] = {}
     for r in runs:
@@ -87,9 +104,22 @@ def load(stage: str | None):
 def main() -> None:
     ap = argparse.ArgumentParser()
     ap.add_argument("--stage", choices=["a", "b"], default=None)
+    ap.add_argument("--model", default="llama3.1:8b")
+    ap.add_argument("--prompt", default="few_shot_full_record")
+    ap.add_argument("--json-mode", default="prompt_only")
+    ap.add_argument("--any-config", action="store_true",
+                    help="ignore the configuration filter and keep whichever "
+                         "run returned most rows per page")
     args = ap.parse_args()
 
-    records = load(args.stage)
+    if args.any_config:
+        records = load(args.stage)
+        chosen = "best-by-volume across all configurations"
+    else:
+        records = load(args.stage, args.model, args.prompt, args.json_mode)
+        chosen = f"{args.model} / {args.prompt} / {args.json_mode}"
+    print(f"  configuration: {chosen}")
+    print(f"  pages: {len(records)}")
     if not records:
         raise SystemExit("no extractions found -- run benchmark.py first")
 

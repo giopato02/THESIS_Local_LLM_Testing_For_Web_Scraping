@@ -1,0 +1,71 @@
+{
+ "key": "a|llama3.1:8b|few_shot_full_record|prompt_only|050|1",
+ "raw": [
+  "seleon GmbH",
+  "D-A-CH, CooperVision GmbH",
+  "JENOPTIK AG",
+  "OBE",
+  "ATMOS MedizinTechnik GmbH & Co. KG",
+  "Jüke Systemtechnik GmbH",
+  "KaWe – KIRCHNER & WILHELM GmbH + Co. KG",
+  "Ofa Bamberg GmbH",
+  "Richard Wolf GmbH",
+  "Sutter Medizintechnik GmbH",
+  "LASER COMPONENTS GmbH",
+  "Elementar Analysensysteme GmbH",
+  "LAUDA DR. R. WOBSER GMBH & CO. KG",
+  "Sigma Laborzentrifugen GmbH",
+  "Laser 2000 GmbH",
+  "LASERVISION GmbH"
+ ],
+ "records": [
+  {
+   "name": "seleon GmbH"
+  },
+  {
+   "name": "D-A-CH, CooperVision GmbH"
+  },
+  {
+   "name": "JENOPTIK AG"
+  },
+  {
+   "name": "OBE"
+  },
+  {
+   "name": "ATMOS MedizinTechnik GmbH & Co. KG"
+  },
+  {
+   "name": "Jüke Systemtechnik GmbH"
+  },
+  {
+   "name": "KaWe – KIRCHNER & WILHELM GmbH + Co. KG"
+  },
+  {
+   "name": "Ofa Bamberg GmbH"
+  },
+  {
+   "name": "Richard Wolf GmbH"
+  },
+  {
+   "name": "Sutter Medizintechnik GmbH"
+  },
+  {
+   "name": "LASER COMPONENTS GmbH"
+  },
+  {
+   "name": "Elementar Analysensysteme GmbH"
+  },
+  {
+   "name": "LAUDA DR. R. WOBSER GMBH & CO. KG"
+  },
+  {
+   "name": "Sigma Laborzentrifugen GmbH"
+  },
+  {
+   "name": "Laser 2000 GmbH"
+  },
+  {
+   "name": "LASERVISION GmbH"
+  }
+ ]
+}

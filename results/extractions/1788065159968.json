@@ -1,0 +1,19 @@
+{
+ "key": "a|qwen2.5-coder:7b|few_shot_full_record|prompt_only|050|2",
+ "raw": [
+  "LASER COMPONENTS GmbH",
+  "Laser 2000 GmbH",
+  "LASERVISION GmbH"
+ ],
+ "records": [
+  {
+   "name": "LASER COMPONENTS GmbH"
+  },
+  {
+   "name": "Laser 2000 GmbH"
+  },
+  {
+   "name": "LASERVISION GmbH"
+  }
+ ]
+}

@@ -1,0 +1,79 @@
+nohup: ignoring input
+  stage:      A
+  models:     llama3.1:8b, qwen2.5-coder:7b, gemma4:12b
+  pages:      10
+  planned:    60 runs
+  already done: 0
+  to run:     60  (~0.8 h at 45 s/run)
+
+
+  === loading llama3.1:8b ===
+  [   1/60] generic_multi_stageconstrained  039    66.4s raw=37   F1=0.8315 eta    65m
+  [   2/60] generic_multi_stageconstrained  043    36.0s raw=32   F1=0.7654 eta    49m
+  [   3/60] generic_multi_stageconstrained  009    29.8s raw=33   F1=0.8421 eta    42m
+  [   4/60] generic_multi_stageconstrained  012    26.8s raw=41   F1=0.9011 eta    37m
+  [   5/60] generic_multi_stageconstrained  004    26.2s raw=19   F1=0.7308 eta    34m
+  [   6/60] generic_multi_stageconstrained  032    52.2s raw=52   F1=0.7786 eta    36m
+  [   7/60] generic_multi_stageconstrained  040    16.5s raw=18   F1=0.8947 eta    32m
+  [   8/60] generic_multi_stageconstrained  025    11.9s raw=11   F1=0.88   eta    29m
+  [   9/60] generic_multi_stageconstrained  005    89.1s raw=60   F1=0.6448 eta    34m
+  [  10/60] generic_multi_stageconstrained  050   231.4s raw=286  F1=0.9759 eta    49m
+  [  11/60] generic_multi_stageprompt_only  039    35.6s raw=27   F1=0.6835 eta    46m
+  [  12/60] generic_multi_stageprompt_only  043    36.4s raw=32   F1=0.7654 eta    44m
+  [  13/60] generic_multi_stageprompt_only  009    31.1s raw=33   F1=0.8421 eta    42m
+  [  14/60] generic_multi_stageprompt_only  012    29.6s raw=41   F1=0.9011 eta    39m
+  [  15/60] generic_multi_stageprompt_only  004    24.8s raw=19   F1=0.7308 eta    37m
+  [  16/60] generic_multi_stageprompt_only  032    52.4s raw=52   F1=0.7786 eta    37m
+  [  17/60] generic_multi_stageprompt_only  040    17.0s raw=18   F1=0.8947 eta    34m
+  [  18/60] generic_multi_stageprompt_only  025    11.9s raw=11   F1=0.88   eta    32m
+  [  19/60] generic_multi_stageprompt_only  005    88.7s raw=60   F1=0.6448 eta    33m
+  [  20/60] generic_multi_stageprompt_only  050   231.9s raw=286  F1=0.9759 eta    38m
+
+  === loading qwen2.5-coder:7b ===
+  [  21/60] generic_multi_stageconstrained  039    63.1s raw=52   F1=1.0    eta    37m
+  [  22/60] generic_multi_stageconstrained  043    45.7s raw=49   F1=0.9592 eta    36m
+  [  23/60] generic_multi_stageconstrained  009    34.6s raw=43   F1=0.9767 eta    35m
+  [  24/60] generic_multi_stageconstrained  012    32.0s raw=50   F1=1.0    eta    33m
+  [  25/60] generic_multi_stageconstrained  004    30.5s raw=28   F1=0.8852 eta    32m
+  [  26/60] generic_multi_stageconstrained  032    58.7s raw=75   F1=0.961  eta    31m
+  [  27/60] generic_multi_stageconstrained  040    16.8s raw=19   F1=0.9744 eta    29m
+  [  28/60] generic_multi_stageconstrained  025    12.0s raw=12   F1=0.8462 eta    27m
+  [  29/60] generic_multi_stageconstrained  005    51.4s raw=36   F1=0.45   eta    27m
+  [  30/60] generic_multi_stageconstrained  050  2874.8s raw=114  F1=0.5512 eta    73m !
+  [  31/60] generic_multi_stageprompt_only  039    36.2s raw=52   F1=1.0    eta    69m
+  [  32/60] generic_multi_stageprompt_only  043    44.2s raw=49   F1=0.9592 eta    65m
+  [  33/60] generic_multi_stageprompt_only  009    30.4s raw=43   F1=0.9767 eta    61m
+  [  34/60] generic_multi_stageprompt_only  012    30.2s raw=50   F1=1.0    eta    57m
+  [  35/60] generic_multi_stageprompt_only  004    27.3s raw=25   F1=0.8276 eta    54m
+  [  36/60] generic_multi_stageprompt_only  032    57.9s raw=75   F1=0.961  eta    51m
+  [  37/60] generic_multi_stageprompt_only  040    15.7s raw=19   F1=0.9744 eta    48m
+  [  38/60] generic_multi_stageprompt_only  025    12.1s raw=12   F1=0.8462 eta    45m
+  [  39/60] generic_multi_stageprompt_only  005  2807.1s raw=62   F1=0.6344 eta    67m
+  [  40/60] generic_multi_stageprompt_only  050   136.7s raw=171  F1=0.7281 eta    63m
+
+  === loading gemma4:12b ===
+  [  41/60] generic_multi_stageconstrained  039   468.6s raw=52   F1=1.0    eta    62m
+  [  42/60] generic_multi_stageconstrained  043   359.1s raw=0    F1=0.0    eta    60m !
+  [  43/60] generic_multi_stageconstrained  009   319.2s raw=43   F1=0.9767 eta    57m
+  [  44/60] generic_multi_stageconstrained  012   237.0s raw=50   F1=1.0    eta    54m
+  [  45/60] generic_multi_stageconstrained  004   510.1s raw=33   F1=0.9697 eta    53m
+  [  46/60] generic_multi_stageconstrained  032   394.8s raw=0    F1=0.0    eta    50m !
+  [  47/60] generic_multi_stageconstrained  040   216.3s raw=20   F1=1.0    eta    46m
+  [  48/60] generic_multi_stageconstrained  025   505.3s raw=16   F1=0.9655 eta    44m
+  [  49/60] generic_multi_stageconstrained  005   160.4s raw=7    F1=0.1069 eta    40m !
+  [  50/60] generic_multi_stageconstrained  050   355.5s raw=3    F1=0.0134 eta    37m !
+  [  51/60] generic_multi_stageprompt_only  039   399.1s raw=52   F1=1.0    eta    34m
+  [  52/60] generic_multi_stageprompt_only  043   359.1s raw=0    F1=0.0    eta    30m !
+  [  53/60] generic_multi_stageprompt_only  009   324.6s raw=43   F1=0.9767 eta    27m
+  [  54/60] generic_multi_stageprompt_only  012   243.4s raw=50   F1=1.0    eta    23m
+  [  55/60] generic_multi_stageprompt_only  004   510.9s raw=33   F1=0.9697 eta    20m
+  [  56/60] generic_multi_stageprompt_only  032   394.4s raw=0    F1=0.0    eta    16m !
+  [  57/60] generic_multi_stageprompt_only  040   217.0s raw=20   F1=1.0    eta    12m
+  [  58/60] generic_multi_stageprompt_only  025   505.2s raw=16   F1=0.9655 eta     8m
+  [  59/60] generic_multi_stageprompt_only  005   158.7s raw=7    F1=0.1069 eta     4m !
+  [  60/60] generic_multi_stageprompt_only  050   352.5s raw=3    F1=0.0134 eta     0m !
+
+  60 runs in 242.7 min
+  latency mean 242.6s  stdev 512.5s
+  results -> /home/coder/project/Web_Scraping_Engine/results/benchmark_results.csv
+  next:    .venv/bin/python evaluate.py

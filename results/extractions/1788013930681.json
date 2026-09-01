@@ -1,0 +1,121 @@
+{
+ "key": "a|llama3.1:8b|multi_stage_full_record|prompt_only|043|3",
+ "raw": [
+  "Aixtron SE",
+  "AMAC GmbH",
+  "AMO GmbH",
+  "Ätztechnik Herz GmbH & Co. KG",
+  "CeNTech GmbH",
+  "Circulania Services GmbH",
+  "Coatema Coating Machinery GmbH",
+  "Covestro Deutschland AG",
+  "CTC GmbH",
+  "Element 3-5 GmbH",
+  "Euromat® GmbH",
+  "femtos GmbH",
+  "HAVERKAMP GmbH",
+  "HEGGEMANN AG",
+  "Innolume GmbH",
+  "ICS Innovation Coating Systems UG",
+  "MaTech-Consult GmbH",
+  "Meotec GmbH & Co. KG",
+  "Microtrac GmbH",
+  "Momentive Performance Materials GmbH",
+  "nanobay",
+  "neoxid GmbH",
+  "phenox GmbH",
+  "Teijin Carbon Europe GmbH",
+  "Vitrum Technologies GmbH",
+  "Zentrum für Brennstoffzellen Technik GmbH"
+ ],
+ "records": [
+  {
+   "name": "Aixtron SE"
+  },
+  {
+   "name": "AMAC GmbH",
+   "url": "http://www.effing-aachen.de/"
+  },
+  {
+   "name": "AMO GmbH"
+  },
+  {
+   "name": "Ätztechnik Herz GmbH & Co. KG",
+   "url": "http://www.aetztechnik-herz.de/"
+  },
+  {
+   "name": "CeNTech GmbH"
+  },
+  {
+   "name": "Circulania Services GmbH"
+  },
+  {
+   "name": "Coatema Coating Machinery GmbH"
+  },
+  {
+   "name": "Covestro Deutschland AG"
+  },
+  {
+   "name": "CTC GmbH",
+   "url": "https://ctc-composites.com/de/"
+  },
+  {
+   "name": "Element 3-5 GmbH",
+   "url": "https://www.element3-5.com/"
+  },
+  {
+   "name": "Euromat® GmbH"
+  },
+  {
+   "name": "femtos GmbH",
+   "url": "http://www.femtos.eu"
+  },
+  {
+   "name": "HAVERKAMP GmbH"
+  },
+  {
+   "name": "HEGGEMANN AG"
+  },
+  {
+   "name": "Innolume GmbH",
+   "url": "https://www.innolume.com/"
+  },
+  {
+   "name": "ICS Innovation Coating Systems UG",
+   "url": "http://ics-lacke.de/"
+  },
+  {
+   "name": "MaTech-Consult GmbH"
+  },
+  {
+   "name": "Meotec GmbH & Co. KG"
+  },
+  {
+   "name": "Microtrac GmbH"
+  },
+  {
+   "name": "Momentive Performance Materials GmbH",
+   "url": "https://www.momentive.com/de-DE/"
+  },
+  {
+   "name": "nanobay"
+  },
+  {
+   "name": "neoxid GmbH"
+  },
+  {
+   "name": "phenox GmbH",
+   "url": "http://www.phenox.net/"
+  },
+  {
+   "name": "Teijin Carbon Europe GmbH"
+  },
+  {
+   "name": "Vitrum Technologies GmbH",
+   "url": "https://www.vitrum-technologies.com/"
+  },
+  {
+   "name": "Zentrum für Brennstoffzellen Technik GmbH"
+  }
+ ]
+}

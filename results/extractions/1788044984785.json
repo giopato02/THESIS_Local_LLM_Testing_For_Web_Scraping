@@ -1,0 +1,63 @@
+{
+ "key": "a|qwen2.5-coder:7b|zero_shot_full_record|prompt_only|025|2",
+ "raw": [
+  "Harzwasserwerke GmbH",
+  "Roediger Vacuum GmbH",
+  "MolAquaTech GmbH",
+  "DHI WASY GmbH",
+  "KNESTEL Elektronik GmbH",
+  "bbe Moldaenke GmbH",
+  "Steinecker GmbH",
+  "System S&P GmbH",
+  "Anseros Klaus Nonnenmacher GmbH",
+  "SKion Water GmbH",
+  "Alton Automation GmbH",
+  "Ingenieurgesellschaft Janisch & Schultz mbH",
+  "hewitech GmbH & Co. KG",
+  "HeGo Biotec International GmbH"
+ ],
+ "records": [
+  {
+   "name": "Harzwasserwerke GmbH"
+  },
+  {
+   "name": "Roediger Vacuum GmbH"
+  },
+  {
+   "name": "MolAquaTech GmbH"
+  },
+  {
+   "name": "DHI WASY GmbH"
+  },
+  {
+   "name": "KNESTEL Elektronik GmbH"
+  },
+  {
+   "name": "bbe Moldaenke GmbH"
+  },
+  {
+   "name": "Steinecker GmbH"
+  },
+  {
+   "name": "System S&P GmbH"
+  },
+  {
+   "name": "Anseros Klaus Nonnenmacher GmbH"
+  },
+  {
+   "name": "SKion Water GmbH"
+  },
+  {
+   "name": "Alton Automation GmbH"
+  },
+  {
+   "name": "Ingenieurgesellschaft Janisch & Schultz mbH"
+  },
+  {
+   "name": "hewitech GmbH & Co. KG"
+  },
+  {
+   "name": "HeGo Biotec International GmbH"
+  }
+ ]
+}

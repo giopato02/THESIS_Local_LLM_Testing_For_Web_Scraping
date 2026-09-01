@@ -1,0 +1,267 @@
+{
+ "key": "a|llama3.1:8b|multi_stage_full_record|prompt_only|032|3",
+ "raw": [
+  "AEU Tech GmbH",
+  "azur - Allianz Zukunft Reifen",
+  "BREMER West GmbH & Co. KG",
+  "BSA Kunststofftechnik GmbH",
+  "christmann informationstechnik + medien GmbH & Co. KG",
+  "C-LAB",
+  "code-x GmbH",
+  "Condor MedTec",
+  "Creos Lernideen und Beratung GmbH",
+  "CTDI Schloss Holte GmbH",
+  "DBS Training & Consulting GmbH",
+  "Delta Media GmbH",
+  "FINDIQ GmbH",
+  "Fischer Panda GmbH",
+  "Fraunhofer ENAS-ASE",
+  "Fraunhofer IEM",
+  "Fraunhofer IOSB-INA",
+  "Freund Maschinenfabrik GmbH & Co. KG",
+  "HEGGEMANN AG",
+  "helectronics gmbh",
+  "HellwegWind GmbH",
+  "IANUS Simulation GmbH",
+  "Innovative Card Systems GmbH",
+  "insensiv GmbH",
+  "Herbert Kannegiesser GmbH",
+  "mechOnics ag",
+  "MöllerFlex GmbH",
+  "MSF-Vathauer Antriebstechnik GmbH",
+  "myconsult GmbH",
+  "Nuromedia GmbH",
+  "ONLINE Systemlogistik GmbH & Co. KG",
+  "OPTANO GmbH",
+  "OWITA GmbH",
+  "Raumtänzer GmbH",
+  "RTB GmbH und Co. KG",
+  "S&N Invent GmbH",
+  "S&Ü Hydraulik- und Maschinenbau GmbH",
+  "SBH West GmbH",
+  "SHWire, Schwering & Hasse Elektrodraht GmbH",
+  "SIL System Integration Laboratory GmbH",
+  "Silence Aircraft GmbH",
+  "Skyline Express International GmbH",
+  "Stührenberg GmbH",
+  "TEAM GmbH",
+  "T.F. Wickeltechnik GmbH",
+  "tomorrow bird GmbH",
+  "Top Light GmbH & Co. KG",
+  "Trenz Electronic GmbH",
+  "Ulrich Rotte Anlagenbau und Fördertechnik GmbH",
+  "VerbundVolksbank OWL",
+  "WestfalenWIND GmbH",
+  "Wickord Buser Patentanwälte PartG mbB"
+ ],
+ "records": [
+  {
+   "name": "AEU Tech GmbH",
+   "city": "Borchen"
+  },
+  {
+   "name": "azur - Allianz Zukunft Reifen",
+   "city": "Willich"
+  },
+  {
+   "name": "BREMER West GmbH & Co. KG",
+   "city": "Paderborn"
+  },
+  {
+   "name": "BSA Kunststofftechnik GmbH",
+   "city": "Gütersloh"
+  },
+  {
+   "name": "christmann informationstechnik + medien GmbH & Co. KG",
+   "city": "Ilsede"
+  },
+  {
+   "name": "C-LAB",
+   "city": "Paderborn"
+  },
+  {
+   "name": "code-x GmbH",
+   "city": "Paderborn"
+  },
+  {
+   "name": "Condor MedTec",
+   "city": "Salzkotten"
+  },
+  {
+   "name": "Creos Lernideen und Beratung GmbH",
+   "city": "Bielefeld"
+  },
+  {
+   "name": "CTDI Schloss Holte GmbH",
+   "city": "Schloß Holte-Stukenbrock"
+  },
+  {
+   "name": "DBS Training & Consulting GmbH",
+   "city": "Dortmund"
+  },
+  {
+   "name": "Delta Media GmbH",
+   "city": "Paderborn"
+  },
+  {
+   "name": "FINDIQ GmbH",
+   "city": "Vlotho"
+  },
+  {
+   "name": "Fischer Panda GmbH",
+   "city": "Paderborn"
+  },
+  {
+   "name": "Fraunhofer ENAS-ASE",
+   "city": "Paderborn"
+  },
+  {
+   "name": "Fraunhofer IEM",
+   "city": "Paderborn"
+  },
+  {
+   "name": "Fraunhofer IOSB-INA",
+   "city": "Lemgo"
+  },
+  {
+   "name": "Freund Maschinenfabrik GmbH & Co. KG",
+   "city": "Paderborn"
+  },
+  {
+   "name": "HEGGEMANN AG",
+   "city": "Büren"
+  },
+  {
+   "name": "helectronics gmbh",
+   "city": "Büren"
+  },
+  {
+   "name": "HellwegWind GmbH",
+   "city": "Paderborn"
+  },
+  {
+   "name": "IANUS Simulation GmbH",
+   "city": "Dortmund"
+  },
+  {
+   "name": "Innovative Card Systems GmbH",
+   "city": "Paderborn"
+  },
+  {
+   "name": "insensiv GmbH",
+   "city": "Bielefeld"
+  },
+  {
+   "name": "Herbert Kannegiesser GmbH",
+   "city": "Vlotho"
+  },
+  {
+   "name": "mechOnics ag",
+   "city": "Paderborn"
+  },
+  {
+   "name": "MöllerFlex GmbH",
+   "city": "Delbrück"
+  },
+  {
+   "name": "MSF-Vathauer Antriebstechnik GmbH",
+   "city": "Detmold"
+  },
+  {
+   "name": "myconsult GmbH",
+   "city": "Salzkotten"
+  },
+  {
+   "name": "Nuromedia GmbH",
+   "city": "Köln"
+  },
+  {
+   "name": "ONLINE Systemlogistik GmbH & Co. KG",
+   "city": "Paderborn"
+  },
+  {
+   "name": "OPTANO GmbH",
+   "city": "Paderborn"
+  },
+  {
+   "name": "OWITA GmbH",
+   "city": "Lemgo"
+  },
+  {
+   "name": "Raumtänzer GmbH",
+   "city": "Paderborn"
+  },
+  {
+   "name": "RTB GmbH und Co. KG",
+   "city": "Bad Lippspringe"
+  },
+  {
+   "name": "S&N Invent GmbH",
+   "city": "Paderborn"
+  },
+  {
+   "name": "S&Ü Hydraulik- und Maschinenbau GmbH",
+   "city": "Marienmünster | Löwendorf"
+  },
+  {
+   "name": "SBH West GmbH",
+   "city": "Paderborn"
+  },
+  {
+   "name": "SHWire, Schwering & Hasse Elektrodraht GmbH",
+   "city": "Lügde"
+  },
+  {
+   "name": "SIL System Integration Laboratory GmbH",
+   "city": "Paderborn"
+  },
+  {
+   "name": "Silence Aircraft GmbH",
+   "city": "Schloß Holte-Stukenbrock"
+  },
+  {
+   "name": "Skyline Express International GmbH",
+   "city": "Lage"
+  },
+  {
+   "name": "Stührenberg GmbH",
+   "city": "Detmold"
+  },
+  {
+   "name": "TEAM GmbH",
+   "city": "Paderborn"
+  },
+  {
+   "name": "T.F. Wickeltechnik GmbH",
+   "city": "Neulingen"
+  },
+  {
+   "name": "tomorrow bird GmbH",
+   "city": "Bielefeld"
+  },
+  {
+   "name": "Top Light GmbH & Co. KG",
+   "city": "Spenge"
+  },
+  {
+   "name": "Trenz Electronic GmbH",
+   "city": "Hüllhorst"
+  },
+  {
+   "name": "Ulrich Rotte Anlagenbau und Fördertechnik GmbH",
+   "city": "Salzkotten"
+  },
+  {
+   "name": "VerbundVolksbank OWL",
+   "city": "Paderborn"
+  },
+  {
+   "name": "WestfalenWIND GmbH",
+   "city": "Paderborn"
+  },
+  {
+   "name": "Wickord Buser Patentanwälte PartG mbB",
+   "city": "Paderborn"
+  }
+ ]
+}

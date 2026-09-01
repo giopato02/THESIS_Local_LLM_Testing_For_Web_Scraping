@@ -1,0 +1,111 @@
+{
+ "key": "a|llama3.1:8b|multi_stage_full_record|constrained|039|3",
+ "raw": [
+  "altona Diagnostics GmbH",
+  "AstraZeneca GmbH",
+  "Eppendorf SE",
+  "Evotec SE",
+  "i3 Membrane GmbH",
+  "Indivumed GmbH",
+  "NSF PROSYSTEM GmbH",
+  "Olympus Surgical Technologies Europe",
+  "Abbott Automation Solutions GmbH",
+  "Allergopharma GmbH & Co. KG",
+  "BioAgilytix Europe GmbH",
+  "Chemische Fabrik Dr. Weigert GmbH & Co. KG",
+  "Deutsche Apotheker- und Ärztebank eG",
+  "EurA AG",
+  "EUROIMMUN Medizinische Labordiagnostika AG",
+  "medac Gesellschaft für klinische Spezialpräparate m.b.H.",
+  "Nordmark Pharma GmbH",
+  "Philips GmbH",
+  "Sysmex Europe SE",
+  "WEINMANN Emergency Medical Technology GmbH",
+  "acCELLerate GmbH",
+  "Acquandas GmbH",
+  "Active Bioscience GmbH",
+  "AdvInno GmbH",
+  "Agena Bioscience GmbH",
+  "akampion"
+ ],
+ "records": [
+  {
+   "name": "altona Diagnostics GmbH"
+  },
+  {
+   "name": "AstraZeneca GmbH"
+  },
+  {
+   "name": "Eppendorf SE"
+  },
+  {
+   "name": "Evotec SE"
+  },
+  {
+   "name": "i3 Membrane GmbH"
+  },
+  {
+   "name": "Indivumed GmbH"
+  },
+  {
+   "name": "NSF PROSYSTEM GmbH"
+  },
+  {
+   "name": "Olympus Surgical Technologies Europe"
+  },
+  {
+   "name": "Abbott Automation Solutions GmbH"
+  },
+  {
+   "name": "Allergopharma GmbH & Co. KG"
+  },
+  {
+   "name": "BioAgilytix Europe GmbH"
+  },
+  {
+   "name": "Chemische Fabrik Dr. Weigert GmbH & Co. KG"
+  },
+  {
+   "name": "Deutsche Apotheker- und Ärztebank eG"
+  },
+  {
+   "name": "EurA AG"
+  },
+  {
+   "name": "EUROIMMUN Medizinische Labordiagnostika AG"
+  },
+  {
+   "name": "medac Gesellschaft für klinische Spezialpräparate m.b.H."
+  },
+  {
+   "name": "Nordmark Pharma GmbH"
+  },
+  {
+   "name": "Philips GmbH"
+  },
+  {
+   "name": "Sysmex Europe SE"
+  },
+  {
+   "name": "WEINMANN Emergency Medical Technology GmbH"
+  },
+  {
+   "name": "acCELLerate GmbH"
+  },
+  {
+   "name": "Acquandas GmbH"
+  },
+  {
+   "name": "Active Bioscience GmbH"
+  },
+  {
+   "name": "AdvInno GmbH"
+  },
+  {
+   "name": "Agena Bioscience GmbH"
+  },
+  {
+   "name": "akampion"
+  }
+ ]
+}

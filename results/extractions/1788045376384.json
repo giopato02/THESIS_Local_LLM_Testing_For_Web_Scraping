@@ -1,0 +1,610 @@
+{
+ "key": "a|qwen2.5-coder:7b|zero_shot_full_record|prompt_only|005|2",
+ "raw": [
+  "AAM Eisenach Driveline GmbH",
+  "BINZ Ambulance- und Umwelttechnik GmbH",
+  "FSM Europe GmbH",
+  "GSM GmbH",
+  "HAKO GmbH, Werk Waltershausen",
+  "ifm electronic gmbh vertrieb deutschland",
+  "LINDIG Fördertechnik GmbH",
+  "MackSmaTec GmbH",
+  "Maximator GmbH",
+  "PAATZ Viernau GmbH",
+  "SIEMENS AG",
+  "3plusplus GmbH",
+  "5PL Competence Center GmbH | Hauptsitz",
+  "Alpha-Engineering KG",
+  "ARC Solutions GmbH",
+  "BADER GmbH",
+  "Berghof Group GmbH",
+  "BLG Industrielogistik GmbH & Co. KG",
+  "Brunel GmbH – neue Adresse ab 01.02.2025",
+  "CE-LAB GmbH",
+  "Commerzbank AG Erfurt",
+  "EBZ ERFURT Bildungszentrum gGmbH",
+  "Ernst & Young GmbH Wirtschaftsprüfungsgesellschaft",
+  "EuroQ GmbH",
+  "Friedrich Zufall GmbH & Co. KG",
+  "GEFA Bank GmbH",
+  "Härterei Reese",
+  "INNOMAN GmbH",
+  "IPOL GmbH",
+  "jambit GmbH",
+  "Konzept Informationssysteme GmbH",
+  "LEWELL Kartonagen GmbH",
+  "MAXX SOLAR & ENERGIE GmbH & Co. KG",
+  "Modell Technik Rapid Prototyping GmbH, Waltershausen",
+  "Möller Messtechnik Kalibrierlabor / Erstbemusterungen",
+  "OSK-Kiefer GmbH",
+  "PORTEC GmbH",
+  "Rombach Rechtsanwälte Insolvenzverwalter Partnerschaft mbB",
+  "schambeck GmbH",
+  "SEITEC GmbH",
+  "SSV-Kroschke GmbH",
+  "STOCKMANN Prüf- und Qualitätszentrum GmbH",
+  "Struensee & Dr. Rothe GmbH",
+  "TARGO Leasing GmbH",
+  "TÜV Thüringen e.V.",
+  "actain engineering GmbH",
+  "Car Men GmbH",
+  "Fachhochschule Erfurt",
+  "Fraunhofer-Institut für Digitale Medientechnologie IDMT",
+  "Fraunhofer-Institut für Keramische Technologien und Systeme IKTS",
+  "Hochschule Nordhausen",
+  "Materialforschungs- und -prüfanstalt an der Bauhaus-Universität Weimar (MFPA)",
+  "Neways Technologies GmbH",
+  "Porsche AG",
+  "RWE AG",
+  "Volkswagen AG",
+  "Wärtsilä AG",
+  "Xing Group",
+  "Yokogawa Electric Corporation",
+  "ZTE Corporation",
+  "Motherson DRSC",
+  "NISSHA Schuster Kunststofftechnik GmbH",
+  "SAXONIA Galvanik GmbH",
+  "Sur-Tech Surface-Technology GmbH",
+  "Textilforschungsinstitut Thüringen-Vogtland e.V.",
+  "Thüringer Institut für Textil- und Kunststoffforschung e.V.",
+  "TWE GmbH & Co. KG / ISOWOOD"
+ ],
+ "records": [
+  {
+   "name": "AAM Eisenach Driveline GmbH",
+   "url": "https://www.aam.com/",
+   "street": "Stedtfelder Straße 5",
+   "postcode": "99819",
+   "city": "Krauthausen",
+   "email": "info@aam-eisenach.de"
+  },
+  {
+   "name": "BINZ Ambulance- und Umwelttechnik GmbH",
+   "url": "https://www.binz-automotive.com/",
+   "street": "Am Vogelherd 21",
+   "postcode": "98693",
+   "city": "Ilmenau",
+   "email": "info@binz-ambulance.de"
+  },
+  {
+   "name": "FSM Europe GmbH",
+   "url": "https://www.fsmautomation.com/",
+   "street": "Krämpferstraße 2",
+   "postcode": "99084",
+   "city": "Erfurt",
+   "email": "info@fsm-europe.de"
+  },
+  {
+   "name": "GSM GmbH",
+   "url": "https://www.gsmotion.de/",
+   "street": "Zeppelinweg 2",
+   "postcode": "99734",
+   "city": "Nordhausen",
+   "email": "info@gsm-gmbh.de"
+  },
+  {
+   "name": "HAKO GmbH, Werk Waltershausen",
+   "url": "https://www.multicar.de/",
+   "street": "Industriestraße 3",
+   "postcode": "99880",
+   "city": "Waltershausen",
+   "email": "info@hako.de"
+  },
+  {
+   "name": "ifm electronic gmbh vertrieb deutschland",
+   "url": "https://www.ifm.com/de/de/applications/010/automobilindustrie.html",
+   "street": "Friedrichstraße 1",
+   "postcode": "45128",
+   "city": "Essen",
+   "email": "info@ifm.de"
+  },
+  {
+   "name": "LINDIG Fördertechnik GmbH",
+   "url": "https://www.lindig.com/",
+   "street": "Albert-Lindig-Straße 1",
+   "postcode": "99819",
+   "city": "Krauthausen",
+   "email": "info@lindig.de"
+  },
+  {
+   "name": "MackSmaTec GmbH",
+   "url": "https://www.macksmatec.de/",
+   "street": "Sonnenacker 2",
+   "postcode": "99834",
+   "city": "Gerstungen OT Marksuhl",
+   "email": "info@macksmatec.de"
+  },
+  {
+   "name": "Maximator GmbH",
+   "url": "https://www.maximator.de/",
+   "street": "Lange Straße 6",
+   "postcode": "99734",
+   "city": "Nordhausen",
+   "email": "info@maximator.de"
+  },
+  {
+   "name": "PAATZ Viernau GmbH",
+   "url": "https://www.paatz.com/",
+   "street": "Hergeser Weg 1",
+   "postcode": "98587",
+   "city": "Steinbach-Hallenberg",
+   "email": "info@paatz.de"
+  },
+  {
+   "name": "SIEMENS AG",
+   "url": "https://www.automation.siemens.com/",
+   "street": "Europaplatz 1",
+   "postcode": "99091",
+   "city": "Erfurt",
+   "email": "info@siemens.com"
+  },
+  {
+   "name": "3plusplus GmbH",
+   "url": "https://www.3plusplus.com/",
+   "street": "Pfütschbergstraße 1",
+   "postcode": "98527",
+   "city": "Suhl",
+   "email": "info@3plusplus.de"
+  },
+  {
+   "name": "5PL Competence Center GmbH | Hauptsitz",
+   "url": "https://www.5pl-cc.com/",
+   "street": "Johannesstraße 162",
+   "postcode": "99084",
+   "city": "Erfurt",
+   "email": "info@5pl-cc.de"
+  },
+  {
+   "name": "Alpha-Engineering KG",
+   "url": "https://www.alphaengineering.eu/",
+   "street": "Augsburger Straße 10",
+   "postcode": "99091",
+   "city": "Erfurt",
+   "email": "info@alphaengineering.de"
+  },
+  {
+   "name": "ARC Solutions GmbH",
+   "url": "https://www.arcsolutions.eu/",
+   "street": "Annaberger Straße 73",
+   "postcode": "09111",
+   "city": "Chemnitz",
+   "email": "info@arcsolutions.de"
+  },
+  {
+   "name": "BADER GmbH",
+   "url": "https://bader.network/",
+   "street": "Hergeser Weg 3",
+   "postcode": "98587",
+   "city": "Steinbach-Hallenberg",
+   "email": "info@bader.de"
+  },
+  {
+   "name": "Berghof Group GmbH",
+   "url": "https://www.berghof-systeme.de/",
+   "street": "Lindenstraße 2",
+   "postcode": "07426",
+   "city": "Königsee",
+   "email": "info@berghof-group.de"
+  },
+  {
+   "name": "BLG Industrielogistik GmbH & Co. KG",
+   "url": "https://www.blg.de/",
+   "street": "Dürrerhöfer Allee 2",
+   "postcode": "99817",
+   "city": "Eisenach",
+   "email": "info@blg.de"
+  },
+  {
+   "name": "Brunel GmbH – neue Adresse ab 01.02.2025",
+   "url": "https://www.brunel.de/",
+   "street": "Regierungsstraße 39",
+   "postcode": "99084",
+   "city": "Erfurt",
+   "email": "info@brunel.de"
+  },
+  {
+   "name": "CE-LAB GmbH",
+   "url": "https://www.ce-lab.de/",
+   "street": "Am Hammergrund 1",
+   "postcode": "98693",
+   "city": "Ilmenau",
+   "email": "info@ce-lab.de"
+  },
+  {
+   "name": "Commerzbank AG Erfurt",
+   "url": "https://www.commerzbank.com/firmenkunden/?fk",
+   "street": "Juri-Gagarin-Ring 86",
+   "postcode": "99084",
+   "city": "Erfurt",
+   "email": "info@commerzbank.de"
+  },
+  {
+   "name": "EBZ ERFURT Bildungszentrum gGmbH",
+   "url": "https://www.ebz-verbund.de/",
+   "street": "Schwerborner Straße 35",
+   "postcode": "99086",
+   "city": "Erfurt",
+   "email": "info@ebz-verbund.de"
+  },
+  {
+   "name": "Ernst & Young GmbH Wirtschaftsprüfungsgesellschaft",
+   "url": "https://www.de.ey.com",
+   "street": "Grimmaische Straße 25",
+   "postcode": "04109",
+   "city": "Leipzig",
+   "email": "info@ey.de"
+  },
+  {
+   "name": "EuroQ GmbH",
+   "url": "https://www.euroq.eu",
+   "street": "Stedinger Straße 32",
+   "postcode": "26723",
+   "city": "Emden",
+   "email": "info@euroq.de"
+  },
+  {
+   "name": "Friedrich Zufall GmbH & Co. KG",
+   "url": "https://www.zufall.de/",
+   "street": "Eichrodter Weg 141",
+   "postcode": "99817",
+   "city": "Eisenach",
+   "email": "info@zufall.de"
+  },
+  {
+   "name": "GEFA Bank GmbH",
+   "url": "https://www.gefa.de",
+   "street": "42347 Wuppertal",
+   "postcode": "0361",
+   "city": "55048292",
+   "email": "info@gefa.de"
+  },
+  {
+   "name": "Härterei Reese",
+   "url": "https://www.haerterei.com",
+   "street": "Otto-Schott-Straße 4",
+   "postcode": "99427",
+   "city": "Weimar",
+   "email": "info@haerterei.com"
+  },
+  {
+   "name": "INNOMAN GmbH",
+   "url": "https://www.innoman.de",
+   "street": "Am Vogelherd 50",
+   "postcode": "98693",
+   "city": "Ilmenau",
+   "email": "info@innoman.de"
+  },
+  {
+   "name": "IPOL GmbH",
+   "url": "https://www.ipol.eu",
+   "street": "Mühlenstraße 25",
+   "postcode": "98693",
+   "city": "Ilmenau",
+   "email": "info@ipol.de"
+  },
+  {
+   "name": "jambit GmbH",
+   "url": "https://www.jambit.com",
+   "street": "Anger 81",
+   "postcode": "99084",
+   "city": "Erfurt",
+   "email": "info@jambit.com"
+  },
+  {
+   "name": "Konzept Informationssysteme GmbH",
+   "url": "https://www.konzept-is.de",
+   "street": "Am Weiher 13",
+   "postcode": "88709",
+   "city": "Meersburg",
+   "email": "info@konzept-is.de"
+  },
+  {
+   "name": "LEWELL Kartonagen GmbH",
+   "url": "https://www.lewell.de",
+   "street": "Reundorfer Straße 15",
+   "postcode": "96215",
+   "city": "Lichtenfels-Seubelsdorf",
+   "email": "info@lewell.de"
+  },
+  {
+   "name": "MAXX SOLAR & ENERGIE GmbH & Co. KG",
+   "url": "https://www.maxx-solar.de",
+   "street": "Lauchaer Höhe 14",
+   "postcode": "99880",
+   "city": "Waltershausen",
+   "email": "info@maxx-solar.de"
+  },
+  {
+   "name": "Modell Technik Rapid Prototyping GmbH, Waltershausen",
+   "url": "https://www.modelltechnik.de",
+   "street": "Ziegeleistraße 3b",
+   "postcode": "99880",
+   "city": "Waltershausen",
+   "email": "info@modelltechnik.de"
+  },
+  {
+   "name": "Möller Messtechnik Kalibrierlabor / Erstbemusterungen",
+   "url": "https://www.messtechnik-moeller.de",
+   "street": "Rasdorfer Straße 22",
+   "postcode": "36419",
+   "city": "Geisa",
+   "email": "info@messtechnik-moeller.de"
+  },
+  {
+   "name": "OSK-Kiefer GmbH",
+   "url": "https://www.osk-kiefer.com",
+   "street": "A.d.unt. Kreuzstück 10",
+   "postcode": "07381",
+   "city": "Oppurg",
+   "email": "info@osk-kiefer.com"
+  },
+  {
+   "name": "PORTEC GmbH",
+   "url": "https://www.portec-gmbh.de",
+   "street": "Am Köhlersgehäu 32",
+   "postcode": "98544",
+   "city": "Zella-Mehlis",
+   "email": "info@portec-gmbh.de"
+  },
+  {
+   "name": "Rombach Rechtsanwälte Insolvenzverwalter Partnerschaft mbB",
+   "url": "https://www.rombach-rechtsanwaelte.de",
+   "street": "Hirschlachufer 11",
+   "postcode": "99084",
+   "city": "Erfurt",
+   "email": "info@rombach-rechtsanwaelte.de"
+  },
+  {
+   "name": "schambeck GmbH",
+   "url": "https://www.schambeck-group.com",
+   "street": "Dr.-Troch-Straße 13",
+   "postcode": "99867",
+   "city": "Gotha",
+   "email": "info@schambeck-group.com"
+  },
+  {
+   "name": "SEITEC GmbH",
+   "url": "https://www.seitec.info",
+   "street": "Oberköditz 7A",
+   "postcode": "07426",
+   "city": "Königsee",
+   "email": "info@seitec.info"
+  },
+  {
+   "name": "SSV-Kroschke GmbH",
+   "url": "https://www.ssv-kroschke.de",
+   "street": "Hellwigstraße 2",
+   "postcode": "99848",
+   "city": "Wutha-Farnroda",
+   "email": "info@ssv-kroschke.de"
+  },
+  {
+   "name": "STOCKMANN Prüf- und Qualitätszentrum GmbH",
+   "url": "https://www.stockmann-gmbh.de",
+   "street": "Straße nach Kölleda 27",
+   "postcode": "99610",
+   "city": "Leubingen",
+   "email": "info@stockmann-gmbh.de"
+  },
+  {
+   "name": "Struensee & Dr. Rothe GmbH",
+   "url": "https://crestcom.com/leadership-traner/wolfgang-struensee/",
+   "street": "Margarethenstraße 4",
+   "postcode": "99867",
+   "city": "Gotha",
+   "email": "info@crestcom.com"
+  },
+  {
+   "name": "TARGO Leasing GmbH",
+   "url": "https://www.targo-leasing.de",
+   "street": "Fritz-Vomfelde-Straße 2-4",
+   "postcode": "40547",
+   "city": "Düsseldorf",
+   "email": "info@targo-leasing.de"
+  },
+  {
+   "name": "TÜV Thüringen e.V.",
+   "url": "https://www.tuev-thueringen.de",
+   "street": "Steinweg 3",
+   "postcode": "99084",
+   "city": "Erfurt",
+   "email": "info@tuev-thueringen.de"
+  },
+  {
+   "name": "actain engineering GmbH",
+   "url": "https://www.actain.de",
+   "street": "Europaplatz 7",
+   "postcode": "99091",
+   "city": "Erfurt",
+   "email": "info@actain.de"
+  },
+  {
+   "name": "Car Men GmbH",
+   "url": "http://www.car-men.de",
+   "street": "Zum Talblick 14",
+   "postcode": "61479",
+   "city": "Glashütten",
+   "email": "info@car-men.de"
+  },
+  {
+   "name": "Fachhochschule Erfurt",
+   "url": "https://www.fh-erfurt.de",
+   "street": "Postfach 450155",
+   "postcode": "Erfurt",
+   "city": "0361 6700-700",
+   "email": "info@fh-erfurt.de"
+  },
+  {
+   "name": "Fraunhofer-Institut für Digitale Medientechnologie IDMT",
+   "url": "https://www.idmt.fraunhofer.de",
+   "street": "Ehrenbergstraße 31",
+   "postcode": "98693",
+   "city": "Ilmenau",
+   "email": "info@idmt.fraunhofer.de"
+  },
+  {
+   "name": "Fraunhofer-Institut für Keramische Technologien und Systeme IKTS",
+   "url": "https://www.ikts.fraunhofer.de",
+   "street": "Michael-Farady-Straße 1",
+   "postcode": "07629",
+   "city": "Hermsdorf",
+   "email": "info@ikts.fraunhofer.de"
+  },
+  {
+   "name": "Hochschule Nordhausen",
+   "url": "https://www.fh-nordhausen.de",
+   "street": "Weinberghof 4",
+   "postcode": "99734",
+   "city": "Nordhausen",
+   "email": "info@fh-nordhausen.de"
+  },
+  {
+   "name": "Materialforschungs- und -prüfanstalt an der Bauhaus-Universität Weimar (MFPA)",
+   "url": "https://www.mfpa.de",
+   "street": "Coudraystraße 9",
+   "postcode": "99423",
+   "city": "Weimar",
+   "email": "info@mfpa.de"
+  },
+  {
+   "name": "Neways Technologies GmbH",
+   "url": "https://www.neways.de",
+   "street": "Karl-Liebknecht-Straße 10",
+   "postcode": "70178",
+   "city": "Stuttgart",
+   "email": "info@neways.de"
+  },
+  {
+   "name": "Porsche AG",
+   "url": "https://www.porsche.com",
+   "street": "Porschestraße 1",
+   "postcode": "70771",
+   "city": "Leipzig",
+   "email": "info@porsche.com"
+  },
+  {
+   "name": "RWE AG",
+   "url": "https://www.rwe.com",
+   "street": "RWEstraße 1",
+   "postcode": "70178",
+   "city": "Stuttgart",
+   "email": "info@rwe.com"
+  },
+  {
+   "name": "Volkswagen AG",
+   "url": "https://www.volkswagen.de",
+   "street": "Volkswagenstraße 1",
+   "postcode": "70178",
+   "city": "Stuttgart",
+   "email": "info@volkswagen.de"
+  },
+  {
+   "name": "Wärtsilä AG",
+   "url": "https://www.wartsila.com",
+   "street": "Wärtsilästraße 1",
+   "postcode": "70178",
+   "city": "Stuttgart",
+   "email": "info@wartsila.com"
+  },
+  {
+   "name": "Xing Group",
+   "url": "https://www.xing.com",
+   "street": "Xingstraße 1",
+   "postcode": "70178",
+   "city": "Stuttgart",
+   "email": "info@xing.com"
+  },
+  {
+   "name": "Yokogawa Electric Corporation",
+   "url": "https://www.yokogawa.com",
+   "street": "Yokogawastraße 1",
+   "postcode": "70178",
+   "city": "Stuttgart",
+   "email": "info@yokogawa.com"
+  },
+  {
+   "name": "ZTE Corporation",
+   "url": "https://www.zte.com",
+   "street": "ZTEstraße 1",
+   "postcode": "70178",
+   "city": "Stuttgart",
+   "email": "info@zte.com"
+  },
+  {
+   "name": "Motherson DRSC",
+   "url": "https://careers.motherson.com/de/location/kronach",
+   "street": "Lindenstraße 10-12",
+   "postcode": "96317",
+   "city": "Kronach",
+   "phone": "09261 968 0"
+  },
+  {
+   "name": "NISSHA Schuster Kunststofftechnik GmbH",
+   "url": "https://iml-specialist.com/",
+   "street": "Lauchaer Höhe 13",
+   "postcode": "99880",
+   "city": "Waltershausen",
+   "phone": "03622 4010100"
+  },
+  {
+   "name": "SAXONIA Galvanik GmbH",
+   "url": "https://www.saxonia-galvanik.de",
+   "street": "Erzstraße 5",
+   "postcode": "09633",
+   "city": "Halsbrücke",
+   "phone": "03731 7820"
+  },
+  {
+   "name": "Sur-Tech Surface-Technology GmbH",
+   "url": "https://www.sur-tech.de",
+   "street": "Emsetalstraße 1c",
+   "postcode": "99880",
+   "city": "Waltershausen",
+   "phone": "03622 5710"
+  },
+  {
+   "name": "Textilforschungsinstitut Thüringen-Vogtland e.V.",
+   "url": "https://www.titv-greiz.de",
+   "street": "Zeulenrodaer Straße 42",
+   "postcode": "07973",
+   "city": "Greiz",
+   "phone": "03661 6110"
+  },
+  {
+   "name": "Thüringer Institut für Textil- und Kunststoffforschung e.V.",
+   "url": "https://www.titk.de",
+   "street": "Breitscheidstraße 97",
+   "postcode": "07407",
+   "city": "Rudolstadt",
+   "phone": "03672 379100"
+  },
+  {
+   "name": "TWE GmbH & Co. KG / ISOWOOD",
+   "url": "https://www.twe-group.com",
+   "street": "Breitscheidstraße 156",
+   "postcode": "07407",
+   "city": "Rudolstadt",
+   "phone": "03672 31990"
+  }
+ ]
+}

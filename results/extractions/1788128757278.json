@@ -1,0 +1,19 @@
+{
+ "key": "a|gemma4:12b|few_shot_full_record|prompt_only|050|3",
+ "raw": [
+  "LASER COMPONENTS GmbH",
+  "Laser 2000 GmbH",
+  "LASERVISION GmbH"
+ ],
+ "records": [
+  {
+   "name": "LASER COMPONENTS GmbH"
+  },
+  {
+   "name": "Laser 2000 GmbH"
+  },
+  {
+   "name": "LASERVISION GmbH"
+  }
+ ]
+}

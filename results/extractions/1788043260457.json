@@ -1,0 +1,275 @@
+{
+ "key": "a|qwen2.5-coder:7b|zero_shot_full_record|constrained|050|3",
+ "raw": [
+  "MELAG oHG Medizintechnik",
+  "Memmert GmbH + Co.KG",
+  "Menicon GmbH Kontaktlinsen",
+  "MERSEN Deutschland Holding GmbH & Co. KG",
+  "Messer Group GmbH",
+  "Mettler Toledo GmbH",
+  "Meyer-Haake GmbH",
+  "Miele & Cie. KG",
+  "Mikrop AG",
+  "MMM Münchener Medizin Mechanik GmbH",
+  "MÖLLER-WEDEL-OPTICAL GmbH",
+  "MPG Optische Werke GmbH",
+  "MPG&E Handel und Service GmbH",
+  "MPV MEDICAL GmbH",
+  "Munich Surgical Imaging GmbH",
+  "NEOSTYLE GmbH & Co. KG",
+  "Netzsch Gerätebau GmbH",
+  "Newport Spectra-Physics GmbH",
+  "Nexopart",
+  "NIKA Optics GmbH",
+  "NOBLEX GmbH",
+  "nova:med GmbH & Co. KG",
+  "NOVOFLEX Präzisionstechnik",
+  "NRI Medizintechnik GmbH",
+  "OBE setzt auf Qualitätsprodukte „Made in Germany“.",
+  "WEINMANN Emergency Medical Technology GmbH",
+  "WALDNER Holding SE & Co. KG",
+  "Walter Binde Optik GmbH & Co.KG",
+  "Walter H. Becker GmbH Metallwarenfabrik",
+  "WILD Gruppe",
+  "Witeg Labortechnik GmbH",
+  "Wöhlk Contact-Linsen GmbH",
+  "LASER COMPONENTS GmbH",
+  "Laser 2000 GmbH",
+  "LASERVISION GmbH"
+ ],
+ "records": [
+  {
+   "name": "MELAG oHG Medizintechnik",
+   "url": "http://www.melag.de",
+   "street": "Geneststraße 9-10",
+   "postcode": "10829",
+   "city": "Berlin"
+  },
+  {
+   "name": "Memmert GmbH + Co.KG",
+   "url": "http://www.memmert.com",
+   "street": "Äußere Rittersbacher Straße 38",
+   "postcode": "91126",
+   "city": "Schwabach"
+  },
+  {
+   "name": "Menicon GmbH Kontaktlinsen",
+   "url": "http://www.menicon.de",
+   "street": "Heinrich-Krumm-Str. 1-3",
+   "postcode": "63073",
+   "city": "Offenbach"
+  },
+  {
+   "name": "MERSEN Deutschland Holding GmbH & Co. KG",
+   "url": "http://www.optosic.com",
+   "street": "Gartenstrasse 25",
+   "postcode": "61352",
+   "city": "Bad Homburg"
+  },
+  {
+   "name": "Messer Group GmbH",
+   "url": "http://www.messergroup.com/web/mg/medical-gases",
+   "street": "Messer-Platz 1",
+   "postcode": "65812",
+   "city": "Bad Soden"
+  },
+  {
+   "name": "Mettler Toledo GmbH",
+   "url": "http://www.mt.com",
+   "street": "Ockerweg 3",
+   "postcode": "35396",
+   "city": "Gießen"
+  },
+  {
+   "name": "Meyer-Haake GmbH",
+   "url": "http://www.meyer-haake.com",
+   "street": "Daimlerstr. 4",
+   "postcode": "61239",
+   "city": "Ober-Mörlen"
+  },
+  {
+   "name": "Miele & Cie. KG",
+   "url": "http://www.miele-professional.de",
+   "street": "Carl-Miele-Straße 29",
+   "postcode": "33332",
+   "city": "Gütersloh"
+  },
+  {
+   "name": "Mikrop AG",
+   "url": "http://www.mikrop.ch",
+   "street": "Industriestr. 22",
+   "postcode": "9301",
+   "city": "Wittenbach"
+  },
+  {
+   "name": "MMM Münchener Medizin Mechanik GmbH",
+   "url": "http://www.mmmgroup.com",
+   "street": "Semmelweisstraße 6",
+   "postcode": "82152",
+   "city": "Planegg"
+  },
+  {
+   "name": "MÖLLER-WEDEL-OPTICAL GmbH",
+   "url": "http://www.moeller-wedel-optical.com",
+   "street": "Rosengarten 10",
+   "postcode": "22880",
+   "city": "Wedel"
+  },
+  {
+   "name": "MPG Optische Werke GmbH",
+   "url": "http://www.mpg-eyewear.com/uber-uns/mpg-optische-werke/",
+   "street": "Gildestraße 1",
+   "postcode": "24960",
+   "city": "Glücksburg"
+  },
+  {
+   "name": "MPG&E Handel und Service GmbH",
+   "url": "http://www.mpge.de",
+   "street": "Moorweg 105",
+   "postcode": "24582",
+   "city": "Bordesholm"
+  },
+  {
+   "name": "MPV MEDICAL GmbH",
+   "url": "http://www.mpvmedical.com",
+   "street": "Wernher-v.-Braun-Straße 1",
+   "postcode": "85640",
+   "city": "Putzbrunn"
+  },
+  {
+   "name": "Munich Surgical Imaging GmbH",
+   "url": "http://www.munichimaging.de",
+   "street": "Türkenstraße 89",
+   "postcode": "80799",
+   "city": "München"
+  },
+  {
+   "name": "NEOSTYLE GmbH & Co. KG",
+   "url": "http://www.neoeyewear.de",
+   "street": "Hertich-Str. 23",
+   "postcode": "71229",
+   "city": "Leonberg"
+  },
+  {
+   "name": "Netzsch Gerätebau GmbH",
+   "url": "http://www.netzsch-thermal-analysis.com",
+   "street": "Wittelsbacher Straße 42",
+   "postcode": "95100",
+   "city": "Selb"
+  },
+  {
+   "name": "Newport Spectra-Physics GmbH",
+   "url": "http://www.newport.com",
+   "street": "Guerickeweg 7",
+   "postcode": "64291",
+   "city": "Darmstadt"
+  },
+  {
+   "name": "Nexopart",
+   "url": "http://www.nexopart.com/de",
+   "street": "Ennigerloher Str. 64",
+   "postcode": "59302",
+   "city": "Oelde"
+  },
+  {
+   "name": "NIKA Optics GmbH",
+   "url": "http://www.nika.de",
+   "street": "Auf dem Meer 1",
+   "postcode": "56333",
+   "city": "Winningen"
+  },
+  {
+   "name": "NOBLEX GmbH",
+   "url": "http://www.docter-germany.com/index.php/de/",
+   "street": "Seerasen 2",
+   "postcode": "98673",
+   "city": "Eisfeld"
+  },
+  {
+   "name": "nova:med GmbH & Co. KG",
+   "url": "http://www.novamed.de",
+   "street": "Marktplatz 7",
+   "postcode": "91475",
+   "city": "Lonnerstadt"
+  },
+  {
+   "name": "NOVOFLEX Präzisionstechnik",
+   "url": "http://www.novoflex.de",
+   "street": "Brahmsstr. 7",
+   "postcode": "87700",
+   "city": "Memmingen"
+  },
+  {
+   "name": "NRI Medizintechnik GmbH",
+   "url": "http://www.optosic.com",
+   "street": "Gartenstrasse 25",
+   "postcode": "61352",
+   "city": "Bad Homburg"
+  },
+  {
+   "name": "OBE setzt auf Qualitätsprodukte „Made in Germany“.",
+   "url": "http://www.studiomiau.com",
+   "street": "Klenzestr. 101",
+   "postcode": "80469",
+   "city": "München"
+  },
+  {
+   "name": "WEINMANN Emergency Medical Technology GmbH",
+   "url": "http://www.weinmann-emergency.de",
+   "street": "Frohbösestraße 12",
+   "postcode": "22525",
+   "city": "Hamburg"
+  },
+  {
+   "name": "WALDNER Holding SE & Co. KG",
+   "url": "http://www.waldner-lab.de",
+   "street": "Anton-Waldner-Straße 10-16",
+   "postcode": "88239",
+   "city": "Wangen"
+  },
+  {
+   "name": "Walter Binde Optik GmbH & Co.KG",
+   "url": "http://www.binde-optik.de",
+   "street": "Königstraße 134 b",
+   "postcode": "32427",
+   "city": "Minden"
+  },
+  {
+   "name": "Walter H. Becker GmbH Metallwarenfabrik",
+   "url": "http://www.becker-triftern.de",
+   "street": "Anzenkirchener Str. 4",
+   "postcode": "84371",
+   "city": "Triftern"
+  },
+  {
+   "name": "WILD Gruppe",
+   "url": "http://www.wild.at",
+   "street": "Wildstraße 4",
+   "postcode": "A-9100",
+   "city": "Völkermarkt"
+  },
+  {
+   "name": "Witeg Labortechnik GmbH",
+   "url": "http://www.witeg.de",
+   "street": "Am Bildacker 16",
+   "postcode": "97877",
+   "city": "Wertheim"
+  },
+  {
+   "name": "Wöhlk Contact-Linsen GmbH",
+   "url": "http://www.woehlk.com",
+   "street": "Bürgermeister-Schade-Straße 12-16",
+   "postcode": "24232",
+   "city": "Schönkirchen"
+  },
+  {
+   "name": "LASER COMPONENTS GmbH"
+  },
+  {
+   "name": "Laser 2000 GmbH"
+  },
+  {
+   "name": "LASERVISION GmbH"
+  }
+ ]
+}

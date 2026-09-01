@@ -1,0 +1,70 @@
+{
+ "key": "a|gemma4:12b|multi_stage_full_record|constrained|005|1",
+ "raw": [
+  "Motherson DRSC",
+  "NISSHA Schuster Kunststofftechnik GmbH",
+  "SAXONIA Galvanik GmbH",
+  "Sur-Tech Surface-Technology GmbH",
+  "Textilforschungsinstitut Thüringen-Vogtland e.V.",
+  "Thüringer Institut für Textil- und Kunststoffforschung e.V.",
+  "TWE GmbH & Co. KG / ISOWOOD"
+ ],
+ "records": [
+  {
+   "name": "Motherson DRSC",
+   "url": "https://careers.motherson.com/de/location/kronach",
+   "street": "Lindenstraße 10-12",
+   "postcode": "96317",
+   "city": "Kronach",
+   "phone": "09261 968 0"
+  },
+  {
+   "name": "NISSHA Schuster Kunststofftechnik GmbH",
+   "url": "https://iml-specialist.com/",
+   "street": "Lauchaer Höhe 13",
+   "postcode": "99880",
+   "city": "Waltershausen",
+   "phone": "03622 4010100"
+  },
+  {
+   "name": "SAXONIA Galvanik GmbH",
+   "url": "https://www.saxonia-galvanik.de",
+   "street": "Erzstraße 5",
+   "postcode": "09633",
+   "city": "Halsbrücke",
+   "phone": "03731 7820"
+  },
+  {
+   "name": "Sur-Tech Surface-Technology GmbH",
+   "url": "https://www.sur-tech.de",
+   "street": "Emsetalstraße 1c",
+   "postcode": "99880",
+   "city": "Waltershausen",
+   "phone": "03622 5710"
+  },
+  {
+   "name": "Textilforschungsinstitut Thüringen-Vogtland e.V.",
+   "url": "https://www.titv-greiz.de",
+   "street": "Zeulenrodaer Straße42",
+   "postcode": "07973",
+   "city": "Greiz",
+   "phone": "03661 6110"
+  },
+  {
+   "name": "Thüringer Institut für Textil- und Kunststoffforschung e.V.",
+   "url": "https://www.titk.de",
+   "street": "Breitscheidstraße 97",
+   "postcode": "07407",
+   "city": "Rudolstadt",
+   "phone": "03672 379100"
+  },
+  {
+   "name": "TWE GmbH & Co. KG / ISOWOOD",
+   "url": "https://www.twe-group.com",
+   "street": "Breitscheidstraße 156",
+   "postcode": "07407",
+   "city": "Rudolstadt",
+   "phone": "03672 31990"
+  }
+ ]
+}
