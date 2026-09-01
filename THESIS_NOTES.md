@@ -8,9 +8,16 @@ Thesis: *Comparative Evaluation of Local LLM Models and Generic Prompt
 Strategies for Extracting Company Information from Innovation Network Websites*
 Giorgi Pataridze · Constructor University Bremen × Neovation GmbH (NeoHub AP1)
 
-### Status (2026-08-28)
+### Status (2026-09-01)
 
-Full 540-run benchmark grid complete on GPU, plus a 60-run re-run of P3.
+All experiments complete: 960 runs. The 540-run names grid, a 60-run re-run of
+P3 after a validator bug, and the 540-run URL arm covering all three models,
+three strategies and both JSON modes.
+
+**Two winners, and the difference between them is a finding.** For names only,
+`llama3.1:8b` + zero-shot + prompt-only, F1 0.981. For the full record that the
+deliverable needs, `llama3.1:8b` + few-shot + prompt-only, name F1 0.858 and
+website F1 0.811 with zero fabricated addresses. See §3.13j.
 **Primary results are §3.13**; §3.7 and §3.8 are the earlier laptop run and
 are superseded for accuracy, since link annotation (§3.11i) changed the input
 between them. Best configuration: `llama3.1:8b` + zero-shot + prompt-only JSON,
@@ -2193,6 +2200,92 @@ few-shot and **1 for multi-stage**, because the buggy P3 rows were removed and
 replaced. Defensible given the measured determinism (F1 standard deviation
 exactly 0.000 across three repetitions on all ten pages), but it must be stated
 in the methodology rather than left for a reader to notice.
+
+---
+
+## 3.13j URL arm complete: 960 runs, and why name accuracy alone picks the wrong model
+
+All three models, three strategies, two JSON modes, ten pages, three
+repetitions. `results/benchmark_results.csv` now holds 960 rows and
+`results/extractions_long.csv` 41,802 extracted records.
+
+### The finding that matters most for the deliverable
+
+On **name** accuracy in the URL arm the top two models are indistinguishable:
+
+| model | strategy | JSON | name F1 |
+|---|---|---|---:|
+| qwen2.5-coder:7b | zero_shot_full_record | prompt_only | **0.859** |
+| llama3.1:8b | few_shot_full_record | prompt_only | **0.858** |
+
+A one-thousandth difference across 30 runs each. On that evidence alone the two
+models are interchangeable for this task.
+
+On **website** accuracy they are not close at all:
+
+| model | strategy | JSON | web P | web R | web F1 |
+|---|---|---|---:|---:|---:|
+| llama3.1:8b | few_shot_full_record | prompt_only | 0.949 | 0.708 | **0.811** |
+| llama3.1:8b | zero_shot_full_record | prompt_only | 0.953 | 0.654 | 0.776 |
+| llama3.1:8b | few_shot_full_record | constrained | 0.941 | 0.658 | 0.774 |
+| llama3.1:8b | zero_shot_full_record | constrained | 0.950 | 0.487 | 0.644 |
+| qwen2.5-coder:7b | few_shot_full_record | either | 0.907 | 0.368 | 0.524 |
+| llama3.1:8b | multi_stage_full_record | constrained | 0.969 | 0.328 | 0.490 |
+| qwen2.5-coder:7b | zero_shot_full_record | constrained | 0.898 | 0.310 | 0.461 |
+| llama3.1:8b | multi_stage_full_record | prompt_only | 0.963 | 0.217 | 0.354 |
+| qwen2.5-coder:7b | multi_stage_full_record | either | 0.929 | 0.217 | 0.352 |
+| gemma4:12b | any | either | 1.000 | 0.057 | 0.108 |
+
+**llama's best is 0.811, qwen's best is 0.524.** The same two configurations
+that tie on names differ by 0.29 on websites.
+
+**Two models can be equally good at finding company names and very unequal at
+binding a website to the right one.** Had this study measured only the metric
+the guideline asked for, it would have declared the models equivalent and the
+deliverable would have been built on the weaker one. This is the strongest
+argument in the thesis for scoring every field the deliverable actually needs,
+rather than the one the ground truth happens to contain.
+
+### Hallucination is a property of the model, not of the task
+
+| model | invented | returned | rate |
+|---|---:|---:|---:|
+| llama3.1:8b | 7 | 2,431 | **0.3%** |
+| qwen2.5-coder:7b | 45 | 2,114 | **2.1%** |
+| gemma4:12b | 0 | 42 | 0.0% |
+
+Same prompts, same pages, same instruction never to infer a URL from a company
+name. qwen fabricates web addresses at seven times llama's rate, and 45 of the
+52 fabrications in the entire study are its `zero_shot_full_record` runs.
+gemma4's zero is not a virtue: it returned 42 addresses in total.
+
+For a database Neovation will act on, a 2.1% fabrication rate is
+disqualifying in a way that a lower recall is not. A missing website is a task
+for stage 3 or 4; a plausible wrong domain is a bad record nobody will catch.
+
+### gemma4:12b is not usable for record extraction
+
+Website recall **0.057**. It returned 42 addresses across 180 runs where llama
+returned 2,431. Its precision of 1.000 is an artefact of near-total abstention.
+
+Its ordering across strategies also inverts: `few_shot_full_record` is its
+**worst** configuration (name F1 0.167, 25 failures of 30) while
+`generic_multi_stage` is its best (0.603). More structure in the prompt makes
+it worse, which is the opposite of the pattern in both working models.
+
+### Final configuration for the deliverable
+
+**`llama3.1:8b` + `few_shot_full_record` + `prompt_only`.**
+
+- name F1 0.858, the joint best in the URL arm
+- website F1 0.811, clear of everything else by 0.29
+- **zero fabricated addresses in 414 returned**
+- 348 s/page, roughly half the cost of either zero-shot variant
+
+Note this is a different configuration from the names-arm winner
+(`zero_shot` + `prompt_only`, F1 0.981). The thesis reports both, and the
+distinction is the point: the best configuration depends on which fields the
+task requires.
 
 ---
 
