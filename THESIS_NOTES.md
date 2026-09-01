@@ -2354,6 +2354,50 @@ exactly the results most likely to be wrong, so it is counted apart.
 Both push in the safe direction: `page_only` under-claims rather than
 over-claims. For a database that is the right way to be wrong.
 
+### Result over all 165 companies
+
+| status | count | share |
+|---|---:|---:|
+| `verified` | 105 | 64% |
+| `domain_match` | 8 | 5% |
+| `page_only` (rejected) | 25 | 15% |
+| `unverified` | 19 | 12% |
+| `no_result` | 8 | 5% |
+| **confirmed and loadable** | **113** | **68%** |
+
+A hand inspection of 14 randomly sampled confirmed results found **13
+correct**. The one error is instructive: `Hochschule Bielefeld` matched
+`chancenportal-bielefeld.de` on the token "bielefeld", a city rather than the
+institution. Place names are now stopwords, and the check then prefers
+`hsbi.de` correctly. The general case needs a gazetteer.
+
+Inspecting the 25 rejected as `page_only`, most are in fact correct
+(`aap.de`, `de.abbott`, `investors.bd.com`, `bgs.eu`). The filter is
+deliberately conservative and the cost is visible: roughly 15 correct answers
+are withheld to keep out a smaller number of directory entries. For a database
+Neovation will act on, that trade is the right way round, but it should be
+reported rather than hidden inside a coverage percentage.
+
+### End-to-end coverage, the number this project is for
+
+| stage | who supplies it | companies | share |
+|---|---|---:|---:|
+| 1 | model, website printed on the page | 481 | 63% |
+| 3 | profile page fetch (96% carry a website) | 110 | 15% |
+| 4 | web search, confirmed | 113 | 15% |
+| | **reachable in total** | **704** | **93%** |
+| | still without a website | 57 | 7% |
+
+**93% of 761 member companies can be given a verified website**, against the
+63% any single-pass extraction could reach. The three stages are complementary
+rather than redundant: each covers a distinct failure of the one before, and
+none of them alone gets past two thirds.
+
+That framing is the practical contribution alongside the model comparison. The
+benchmark answers which model to use; this answers what the pipeline as a whole
+can actually deliver, and shows that the answer depends far more on how each
+directory publishes its data than on which model reads it.
+
 ---
 
 ## 3.13j URL arm complete: 960 runs, and why name accuracy alone picks the wrong model

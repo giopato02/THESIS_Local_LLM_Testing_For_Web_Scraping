@@ -103,6 +103,16 @@ STOPWORDS = {
     "software", "computer", "data", "medizin", "medical", "pharma", "chemie",
     "kunststoff", "metall", "maschinenbau", "werke", "werk", "partner",
     "partners", "projekt", "projekte", "innovation", "innovations",
+    # Place names. Found by spot-check: "Hochschule Bielefeld" matched
+    # chancenportal-bielefeld.de on the city, which would equally have matched
+    # any other organisation in Bielefeld. Only the cities appearing in this
+    # corpus are listed; the general problem needs a gazetteer.
+    "bielefeld", "berlin", "muenchen", "munich", "hamburg", "koeln",
+    "cologne", "frankfurt", "stuttgart", "duesseldorf", "dortmund", "essen",
+    "bremen", "hannover", "nuernberg", "aachen", "paderborn", "erfurt",
+    "leipzig", "dresden", "chemnitz", "bochum", "wuppertal", "bonn",
+    "muenster", "karlsruhe", "mannheim", "augsburg", "kiel", "luebeck",
+    "rostock", "jena", "ilmenau", "suhl", "goettingen", "kassel",
 }
 
 
