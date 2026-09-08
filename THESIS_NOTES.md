@@ -56,7 +56,7 @@ finishes, the websites it confirms have to be joined into
 loaded; `page_only` is usually a directory and must stay out (§3.13l).
 
 **2. Run stage 3 extraction.**
-The 101 profile pages are already cached by `fetch_profiles.py --fetch-only`.
+The 114 profile pages are already cached by `fetch_profiles.py --fetch-only`.
 Running the extraction needs a model and about 15 minutes. Those pages carry
 postcode 97% and website 96% of the time, so this is where the address and
 contact fields Marco and Yusif asked for actually come from (§3.13f).
@@ -2688,8 +2688,9 @@ free.
 
 ### Stage 3, measured (`fetch_profiles.py`)
 
-104 profile pages queued from the ground-truth corpus, 101 fetched. What those
-pages contain, by plain text search with no model involved:
+114 profile pages queued from the ground-truth corpus (115 companies, a few
+sharing a page), 112 fetched. What those pages contain, by plain text search
+with no model involved:
 
 | field | present | 
 |---|---:|
@@ -2709,7 +2710,7 @@ pages, not in the directory listings.** BDEW's listing gives 42 members with
 postcodes. The fields were never missing from the web, only from the page the
 pipeline was reading.
 
-Stage 3 splits into `--fetch-only` and extraction, because fetching 104 pages
+Stage 3 splits into `--fetch-only` and extraction, because fetching 114 pages
 politely is minutes of waiting that should not compete with a benchmark for
 the GPU.
 
