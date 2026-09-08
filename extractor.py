@@ -116,6 +116,36 @@ def _salvage_json(text: str) -> tuple[list[dict] | None, bool]:
 RECORD_FIELDS = ("name", "url", "street", "postcode", "city", "phone", "email")
 
 
+# Markdown link syntax the model sometimes wraps a URL in, and the angle
+# brackets that annotate_links() writes into the page text. Observed live on
+# profile pages: "[www.centech.de](https://www.centech.de)" was returned as the
+# url field, which fails every downstream check and would reach the deliverable
+# as unusable text. The model is copying the shape of what it was shown rather
+# than making anything up, so this is cleaned rather than rejected.
+_MD_LINK = re.compile(r"^\[([^\]]*)\]\(\s*([^)\s]+)\s*\)$")
+
+
+def _clean_url(value: str) -> str:
+    """Reduce whatever the model returned to a bare URL, or "" if it is not one."""
+    v = value.strip().strip("<>").strip()
+    m = _MD_LINK.match(v)
+    if m:
+        # Prefer the target; fall back to the label when the target is empty.
+        v = (m.group(2) or m.group(1)).strip()
+    v = v.strip("<>\"'` ").rstrip(".,;")
+    if not v:
+        return ""
+    if v.startswith("//"):
+        v = "https:" + v
+    elif not v.startswith(("http://", "https://")):
+        # "www.example.de" and "example.de" are both common; anything without
+        # a dot is not a URL at all.
+        if "." not in v.split("/")[0] or " " in v:
+            return ""
+        v = "https://" + v
+    return v
+
+
 def _as_record(item) -> dict | None:
     """
     Normalise one returned entry into a record dict.
@@ -156,7 +186,9 @@ def _as_record(item) -> dict | None:
         for k in keys:
             v = item.get(k)
             if isinstance(v, str) and v.strip():
-                rec[field] = v.strip()
+                value = _clean_url(v) if field == "url" else v.strip()
+                if value:
+                    rec[field] = value
                 break
     return rec
 

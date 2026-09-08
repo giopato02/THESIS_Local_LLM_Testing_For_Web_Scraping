@@ -181,6 +181,38 @@ def test_generic_labels() -> None:
               "between claimed and paired may be redundant")
 
 
+def test_clean_url() -> None:
+    """
+    Whatever the model returns for a URL must reduce to a bare URL or nothing.
+
+    Observed live on profile pages: the model returned
+    "[www.centech.de](https://www.centech.de)", copying the markdown shape of
+    what it had been shown. That fails every downstream check and would reach
+    the deliverable as unusable text.
+    """
+    import extractor as E
+    print("url cleaning")
+
+    check("markdown link unwrapped",
+          E._clean_url("[www.centech.de](https://www.centech.de)"),
+          "https://www.centech.de")
+    check("angle brackets stripped",
+          E._clean_url("<http://www.2mag.de>"), "http://www.2mag.de")
+    check("scheme added to a bare host",
+          E._clean_url("www.example.de"), "https://www.example.de")
+    check("already clean is untouched",
+          E._clean_url("https://ok.de/"), "https://ok.de/")
+    check("trailing punctuation removed",
+          E._clean_url("  https://x.de.  "), "https://x.de")
+    check("protocol-relative gets a scheme",
+          E._clean_url("//cdn.example.de"), "https://cdn.example.de")
+
+    # Must reject rather than invent. A url field that is prose is not a URL,
+    # and turning it into one would put garbage in the database.
+    for junk in ("not a url", "", "   ", "n/a", "[label only]()"):
+        check(f"{junk!r} rejected", E._clean_url(junk), "")
+
+
 def test_host_of() -> None:
     import score_websites as S
     print("host_of")
@@ -310,7 +342,7 @@ def main() -> None:
     args = ap.parse_args()
 
     for fn in (test_match_key, test_score, test_same_org, test_generic_labels,
-               test_host_of, test_website_classification):
+               test_clean_url, test_host_of, test_website_classification):
         fn()
     if args.corpus:
         scan_corpus()
