@@ -59,6 +59,30 @@ def header(ws, row: int, labels: list[str], widths: list[int]) -> None:
     ws.row_dimensions[row].height = 26
 
 
+def load_searched() -> dict[str, tuple[str, str]]:
+    """
+    {company name -> (website, how it was found)} from stage 4.
+
+    Only `verified` and `domain_match` are loaded. `page_only` results are
+    excluded deliberately: the page names the company but the domain does not
+    resemble it, which is the signature of a directory entry rather than the
+    company's own site (section 3.13l). Loading those would put plausible
+    wrong addresses into the database, which is the one failure this pipeline
+    is built to avoid.
+    """
+    path = config.RESULTS_DIR / "searched_websites.csv"
+    if not path.exists():
+        return {}
+    import benchmark
+    out: dict[str, tuple[str, str]] = {}
+    with open(path, encoding="utf-8-sig") as fh:
+        for r in csv.DictReader(fh):
+            if r["status"] in ("verified", "domain_match") and r["found_url"]:
+                out[benchmark.match_key(r["company"])] = (r["found_url"],
+                                                          f"search ({r['status']})")
+    return out
+
+
 def load(stage: str | None, model: str | None = None,
          prompt: str | None = None, json_mode: str | None = None):
     """
@@ -118,8 +142,10 @@ def main() -> None:
     else:
         records = load(args.stage, args.model, args.prompt, args.json_mode)
         chosen = f"{args.model} / {args.prompt} / {args.json_mode}"
+    searched = load_searched()
     print(f"  configuration: {chosen}")
     print(f"  pages: {len(records)}")
+    print(f"  stage 4 websites available to merge: {len(searched)}")
     if not records:
         raise SystemExit("no extractions found -- run benchmark.py first")
 
@@ -130,10 +156,13 @@ def main() -> None:
     ws.title = "Network members"
     # Hendro's four columns first, so the sheet still opens the way he
     # specified; the disambiguation fields Marco and Yusif asked for follow.
-    header(ws, 1, ["company name", "company website", "network name",
-                   "network url", "street", "postcode", "city", "phone",
-                   "email"],
-           [46, 38, 32, 38, 30, 10, 20, 20, 30])
+    # "website source" is not decoration. A website read off the directory
+    # page and one found by a later web search carry different confidence, and
+    # Neovation should be able to tell them apart before acting on a record.
+    header(ws, 1, ["company name", "company website", "website source",
+                   "network name", "network url", "street", "postcode",
+                   "city", "phone", "email"],
+           [46, 38, 18, 32, 38, 30, 10, 20, 20, 30])
 
     row = 2
     per_network: dict[str, dict] = {}
@@ -141,7 +170,7 @@ def main() -> None:
                                      key=lambda r: r[0].get("org_name", "")):
         network = url_row.get("org_name", run["org_name"])
         net_url = url_row.get("url", run["url"])
-        kept = with_url = 0
+        kept = with_url = from_search = 0
 
         # Prefer structured records; fall back to bare names for runs made
         # before the record schema existed.
@@ -152,9 +181,16 @@ def main() -> None:
                 continue
             kept += 1
             site = (rec.get("url") or "").strip()
+            source = "directory page" if site else ""
+            if not site:
+                import benchmark
+                hit = searched.get(benchmark.match_key(name))
+                if hit:
+                    site, source = hit
+                    from_search += 1
             if site:
                 with_url += 1
-            values = [name, site, network, net_url,
+            values = [name, site, source, network, net_url,
                       (rec.get("street") or "").strip(),
                       (rec.get("postcode") or "").strip(),
                       (rec.get("city") or "").strip(),
@@ -164,7 +200,7 @@ def main() -> None:
                 c = ws.cell(row=row, column=col, value=val)
                 c.font = BASE
                 c.border = BOX
-                c.alignment = Alignment(wrap_text=(col in (1, 3)),
+                c.alignment = Alignment(wrap_text=(col in (1, 4)),
                                         vertical="top")
                 if row % 2 == 0:
                     c.fill = ALT
@@ -172,6 +208,7 @@ def main() -> None:
 
         per_network[network] = {
             "url": net_url, "members": kept, "with_url": with_url,
+            "from_search": from_search,
             "model": run["model_name"], "prompt": run["prompt_technique"],
         }
 
