@@ -30,6 +30,10 @@ import ollama
 import config
 import prompts
 
+# Shared client so the timeout applies to every call in the pipeline. Ollama's
+# module-level functions use a default client with no deadline.
+_CLIENT = ollama.Client(timeout=getattr(config, "REQUEST_TIMEOUT_S", 900))
+
 
 @dataclass
 class ExtractionResult:
@@ -237,7 +241,12 @@ def _call_once(model: str, system: str, user: str, constrained: bool,
         kwargs["format"] = schema or config.COMPANY_LIST_SCHEMA
 
     start = time.perf_counter()
-    resp = ollama.chat(**kwargs)
+    # A request with no deadline can wait forever. Observed live: a 16,000-word
+    # profile page stalled a run for 19 minutes, the model unloaded underneath
+    # it, and the client kept waiting on a connection that was never going to
+    # answer. A hang is indistinguishable from slow work, which is the worst
+    # property a long-running job can have.
+    resp = _CLIENT.chat(**kwargs)
     elapsed = time.perf_counter() - start
 
     return resp["message"]["content"], dict(resp), elapsed

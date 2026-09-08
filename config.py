@@ -142,6 +142,13 @@ SEED = 42
 # MUST iterate model-outermost; on 16 GB the three models cannot coexist.
 KEEP_ALIVE = "10m"
 
+# Deadline on a single Ollama request. Without one the client waits forever:
+# a 16,000-word profile page stalled a run for 19 minutes while the model
+# unloaded underneath it, and a hang looks exactly like slow work. 15 minutes
+# is well past the slowest legitimate run measured (2,769 s was qwen under
+# constrained decoding on the largest page, which is itself pathological).
+REQUEST_TIMEOUT_S = 900
+
 JSON_MODES = ["constrained", "prompt_only"]
 
 # JSON Schemas handed to Ollama's `format` parameter in constrained mode.

@@ -127,6 +127,13 @@ def main() -> None:
     ap.add_argument("--json-mode", default="prompt_only",
                     choices=config.JSON_MODES)
     ap.add_argument("--limit", type=int, default=None)
+    ap.add_argument("--restart", action="store_true",
+                    help="ignore what is already in profile_records.csv")
+    ap.add_argument("--max-words", type=int, default=5000,
+                    help="skip pages whose CLEANED text exceeds this. The "
+                         "corpus runs 101 to 16,018 cleaned words with a "
+                         "median of 110, so this separates the one outlier "
+                         "without touching anything normal")
     args = ap.parse_args()
 
     CACHE.mkdir(parents=True, exist_ok=True)
@@ -153,15 +160,45 @@ def main() -> None:
         return
 
     # ---- extraction --------------------------------------------------------
+    # Resumable, because a single oversized page can stall the whole run and a
+    # restart should not repeat the hundred pages that already worked. One
+    # profile page in the ground-truth queue is 16,018 words against a median
+    # of 110, and it is exactly the kind of outlier that makes a
+    # non-resumable script expensive to interrupt.
+    done: dict[str, dict] = {}
+    if OUT_CSV.exists() and not args.restart:
+        with open(OUT_CSV, encoding="utf-8-sig") as fh:
+            done = {r["profile_url"]: r for r in csv.DictReader(fh)}
+        print(f"\n  {len(done)} profile pages already extracted, skipping those")
+
     print(f"\n  extracting with {args.model} / {STRATEGY} / {args.json_mode}\n")
-    out, verified, invented = [], 0, 0
+    out, verified, invented = list(done.values()), 0, 0
 
     for i, r in enumerate(rows, start=1):
         path = cache_path(r["target"])
-        if not path.exists():
+        if not path.exists() or r["target"] in done:
             continue
 
         html = path.read_text(encoding="utf-8", errors="ignore")
+        page = cleaner.process(html, r["target"])
+        haystack = page.text.lower()
+
+        # Measured on the CLEANED text, not raw HTML. Every profile page in
+        # this corpus is roughly 6,900 words of raw markup regardless of its
+        # content, so a raw-HTML threshold separates nothing: the real spread
+        # is 101 to 16,018 cleaned words. A page far larger than the rest costs
+        # minutes and still returns one company, so skipping it is the better
+        # trade, and it is recorded rather than silently dropped.
+        words = page.word_count
+        if args.max_words and words > args.max_words:
+            out.append({f: "" for f in FIELDS} | {
+                "url_id": r["url_id"], "org_name": r["org_name"],
+                "company": r["company"], "profile_url": r["target"],
+                "error": f"skipped: {words} words exceeds --max-words",
+            })
+            print(f"- [{i:>4}/{len(rows)}] {r['company'][:36]:<38}"
+                  f"skipped, {words:,} cleaned words")
+            continue
         page = cleaner.process(html, r["target"])
         haystack = page.text.lower()
 
@@ -207,6 +244,12 @@ def main() -> None:
         flag = {"yes": "  ", "NO": "! ", "": "- "}[on_page]
         print(f"{flag}[{i:>4}/{len(rows)}] {r['company'][:36]:<38}"
               f"{site[:40]:<42}{result.latency_seconds:>6.1f}s")
+
+        # Written every page so an interrupted run keeps its work.
+        with open(OUT_CSV, "w", newline="", encoding="utf-8-sig") as fh:
+            w = csv.DictWriter(fh, fieldnames=FIELDS)
+            w.writeheader()
+            w.writerows(out)
 
     with open(OUT_CSV, "w", newline="", encoding="utf-8-sig") as fh:
         w = csv.DictWriter(fh, fieldnames=FIELDS)
