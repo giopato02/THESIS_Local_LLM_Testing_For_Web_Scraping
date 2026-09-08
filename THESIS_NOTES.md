@@ -2240,7 +2240,71 @@ in the methodology rather than left for a reader to notice.
 
 ---
 
-## 3.13k The deliverable, and the gap that stage 4 exists to close
+## 3.13m The deliverable, complete: all four stages merged
+
+All three sources merged for the first time. `llama3.1:8b` +
+`few_shot_full_record` + `prompt_only` over 9 of the 10 ground-truth networks
+(SPECTARIS absent, §3.13k), plus stage 3 profile pages and stage 4 search.
+
+**409 companies, 336 with a website, 82%.**
+
+| website source | companies | share |
+|---|---:|---:|
+| directory page (stage 1, the model) | 138 | 34% |
+| profile page (stage 3, fetch + model) | 97 | 24% |
+| web search verified (stage 4) | 97 | 24% |
+| web search, domain evidence only | 4 | 1% |
+| none | 73 | 18% |
+
+**No single stage supplies even half.** The model reading the directory page,
+the best-measured part of this work and the whole subject of the benchmark,
+accounts for 34%. That is the most useful thing this table says: the model
+comparison answers which tool to use for a third of the problem, and the other
+two thirds are solved by fetching and searching, neither of which needs a model
+at all.
+
+### Contact fields, which the directory listings did not have
+
+| field | companies | share |
+|---|---:|---:|
+| city | 291 | 71% |
+| street | 175 | 43% |
+| postcode | 174 | 43% |
+| phone | 120 | 29% |
+| email | 39 | 10% |
+
+Almost all of this comes from stage 3. Directory listings print an address for
+a handful of members; profile pages carry one about 90% of the time. These are
+the fields Marco and Yusif asked for so that two companies with the same name
+in different cities can be told apart, and before stage 3 they were empty.
+
+### Per network, and why the spread is the finding
+
+| network | members | with website |
+|---|---:|---:|
+| automotive thüringen | 72 | 100% |
+| BDEW | 42 | 95% |
+| Life Science Nord | 52 | 94% |
+| German Water Partnership | 12 | 92% |
+| NMWP.NRW | 49 | 82% |
+| BVMed | 50 | 76% |
+| Automotive Nordwest | 33 | 73% |
+| Medical Valley EMN | 20 | 70% |
+| InnoZent OWL | 79 | 61% |
+
+Every network is above 60% and four are above 90%, but they get there by
+different routes. automotive thüringen prints every website on the page, so
+stage 1 alone reaches 100%. Life Science Nord prints none and links every
+member to a profile page, so it goes from 2% to 94% entirely through stage 3.
+InnoZent OWL prints neither and depends wholly on search, which is why it
+finishes lowest.
+
+**A pipeline built on any one of these stages would have failed on most of the
+corpus.** That is the practical result, and it is not a statement about models.
+
+---
+
+## 3.13k The deliverable before stage 3 and 4 were merged
 
 `export_deliverable.py` now builds the workbook from the configuration the
 study chose rather than from whichever run happened to return the most rows.
