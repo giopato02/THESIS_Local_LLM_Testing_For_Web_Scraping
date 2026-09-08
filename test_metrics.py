@@ -181,6 +181,45 @@ def test_generic_labels() -> None:
               "between claimed and paired may be redundant")
 
 
+def test_python38_compatible() -> None:
+    """
+    Nothing in the pipeline may need newer than Python 3.8.
+
+    The GPU node runs 3.8.10. That version gap has cost time twice: it aborted
+    a pip install by way of ddgs, and it crashed a stage 3 run on `dict | dict`
+    after the code had been written and tested on 3.14 locally. Neither was
+    catchable by running the code here, so it is checked by parsing instead.
+    """
+    import ast
+    import pathlib as _p
+    print("python 3.8 compatibility")
+
+    global FAIL, PASS
+    problems = []
+    for path in sorted(_p.Path(".").glob("*.py")):
+        try:
+            tree = ast.parse(path.read_text(encoding="utf-8"))
+        except SyntaxError:
+            continue
+        for node in ast.walk(tree):
+            if isinstance(node, ast.BinOp) and isinstance(node.op, ast.BitOr):
+                if isinstance(node.left, (ast.Dict, ast.DictComp)) or \
+                   isinstance(node.right, (ast.Dict, ast.DictComp)):
+                    problems.append(f"{path.name}:{node.lineno} dict | dict needs 3.9")
+            if isinstance(node, ast.Attribute) and node.attr in (
+                    "removeprefix", "removesuffix"):
+                problems.append(f"{path.name}:{node.lineno} .{node.attr}() needs 3.9")
+            if node.__class__.__name__ == "Match":
+                problems.append(f"{path.name}:{node.lineno} match needs 3.10")
+
+    if problems:
+        FAIL += len(problems)
+        for p in problems:
+            print(f"  FAIL  {p}")
+    else:
+        PASS += 1
+
+
 def test_clean_url() -> None:
     """
     Whatever the model returns for a URL must reduce to a bare URL or nothing.
@@ -342,7 +381,8 @@ def main() -> None:
     args = ap.parse_args()
 
     for fn in (test_match_key, test_score, test_same_org, test_generic_labels,
-               test_clean_url, test_host_of, test_website_classification):
+               test_python38_compatible, test_clean_url, test_host_of,
+               test_website_classification):
         fn()
     if args.corpus:
         scan_corpus()

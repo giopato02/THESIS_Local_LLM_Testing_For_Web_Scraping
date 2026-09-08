@@ -191,11 +191,16 @@ def main() -> None:
         # trade, and it is recorded rather than silently dropped.
         words = page.word_count
         if args.max_words and words > args.max_words:
-            out.append({f: "" for f in FIELDS} | {
+            # dict(**a, **b) rather than a | b: the GPU node's interpreter is
+            # Python 3.8, where the dict union operator does not exist. The
+            # same version gap silently aborted an earlier pip install.
+            blank = {f: "" for f in FIELDS}
+            blank.update({
                 "url_id": r["url_id"], "org_name": r["org_name"],
                 "company": r["company"], "profile_url": r["target"],
-                "error": f"skipped: {words} words exceeds --max-words",
+                "error": "skipped: {} cleaned words exceeds --max-words".format(words),
             })
+            out.append(blank)
             print(f"- [{i:>4}/{len(rows)}] {r['company'][:36]:<38}"
                   f"skipped, {words:,} cleaned words")
             continue
