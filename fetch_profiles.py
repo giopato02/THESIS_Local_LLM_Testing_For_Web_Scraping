@@ -261,6 +261,12 @@ def main() -> None:
         w.writeheader()
         w.writerows(out)
 
+    # Counted from the rows themselves rather than tallied as we go. A tally
+    # only sees the current session, so after a resume it reported "verified
+    # on page 6" for 95 verified websites: the number was wrong while the data
+    # was right, which is the more dangerous way round.
+    verified = sum(1 for r in out if r.get("url_on_page") == "yes")
+    invented = sum(1 for r in out if r.get("url_on_page") == "NO")
     filled = {f: sum(1 for r in out if r[f]) for f in
               ("company_url", "street", "postcode", "city", "phone", "email")}
     n = len(out) or 1

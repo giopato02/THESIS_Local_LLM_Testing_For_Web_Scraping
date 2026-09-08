@@ -83,6 +83,28 @@ def load_searched() -> dict[str, tuple[str, str]]:
     return out
 
 
+def load_profiles() -> dict:
+    """
+    {company name -> record} from stage 3, the profile-page fetch.
+
+    Richer than the other two sources: a profile page carries the street,
+    postcode, city, phone and email as well as the website, and those are the
+    fields the directory listings almost never print. Only websites verified
+    against the fetched page are used, on the same rule as everywhere else.
+    """
+    path = config.RESULTS_DIR / "profile_records.csv"
+    if not path.exists():
+        return {}
+    import benchmark
+    out = {}
+    with open(path, encoding="utf-8-sig") as fh:
+        for r in csv.DictReader(fh):
+            if r.get("error"):
+                continue
+            out[benchmark.match_key(r["company"])] = r
+    return out
+
+
 def load(stage: str | None, model: str | None = None,
          prompt: str | None = None, json_mode: str | None = None):
     """
@@ -143,8 +165,10 @@ def main() -> None:
         records = load(args.stage, args.model, args.prompt, args.json_mode)
         chosen = f"{args.model} / {args.prompt} / {args.json_mode}"
     searched = load_searched()
+    profiles = load_profiles()
     print(f"  configuration: {chosen}")
     print(f"  pages: {len(records)}")
+    print(f"  stage 3 profile records available: {len(profiles)}")
     print(f"  stage 4 websites available to merge: {len(searched)}")
     if not records:
         raise SystemExit("no extractions found -- run benchmark.py first")
@@ -170,7 +194,7 @@ def main() -> None:
                                      key=lambda r: r[0].get("org_name", "")):
         network = url_row.get("org_name", run["org_name"])
         net_url = url_row.get("url", run["url"])
-        kept = with_url = from_search = 0
+        kept = with_url = from_search = from_profile = 0
 
         # Prefer structured records; fall back to bare names for runs made
         # before the record schema existed.
@@ -180,22 +204,35 @@ def main() -> None:
             if not name:
                 continue
             kept += 1
+            import benchmark
+            key = benchmark.match_key(name)
+            prof = profiles.get(key, {})
+
             site = (rec.get("url") or "").strip()
             source = "directory page" if site else ""
+
+            # Website: the directory page first, then the profile page, then
+            # the search. Earlier sources are cheaper and better evidenced.
+            if not site and prof.get("company_url") and prof.get("url_on_page") == "yes":
+                site, source = prof["company_url"], "profile page"
+                from_profile += 1
             if not site:
-                import benchmark
-                hit = searched.get(benchmark.match_key(name))
+                hit = searched.get(key)
                 if hit:
                     site, source = hit
                     from_search += 1
             if site:
                 with_url += 1
+            # Contact fields: whatever the directory gave, else the profile
+            # page. A directory listing rarely prints an address; a profile
+            # page carries one about 90% of the time.
+            def field(k):
+                return ((rec.get(k) or "").strip()
+                        or (prof.get(k) or "").strip())
+
             values = [name, site, source, network, net_url,
-                      (rec.get("street") or "").strip(),
-                      (rec.get("postcode") or "").strip(),
-                      (rec.get("city") or "").strip(),
-                      (rec.get("phone") or "").strip(),
-                      (rec.get("email") or "").strip()]
+                      field("street"), field("postcode"), field("city"),
+                      field("phone"), field("email")]
             for col, val in enumerate(values, start=1):
                 c = ws.cell(row=row, column=col, value=val)
                 c.font = BASE
@@ -208,7 +245,7 @@ def main() -> None:
 
         per_network[network] = {
             "url": net_url, "members": kept, "with_url": with_url,
-            "from_search": from_search,
+            "from_search": from_search, "from_profile": from_profile,
             "model": run["model_name"], "prompt": run["prompt_technique"],
         }
 
