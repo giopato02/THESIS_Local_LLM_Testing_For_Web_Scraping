@@ -1,0 +1,147 @@
+# ============================================================================
+# GROUND TRUTH WORKSHEET  --  VDGH – Verband der Diagnostica-Industrie
+#
+# URL : https://www.vdgh.de/vdgh/mitgliedsunternehmen/
+# Saved copy (exactly what the model reads): results/html_cache/eaca6cac976deee4.html
+# Page: 2122 words, ~7049 tokens  -- this page is SPLIT INTO CHUNKS for the model
+#
+# WHAT TO DO
+#   1. Open the saved copy above (or the URL) in your browser, next to this file.
+#   2. SECTION A below is my best guess at the member companies.
+#      Read down it and DELETE any line that is not a member company.
+#   3. SECTION B is what I think is page furniture (menus, filters,
+#      categories). Skim it. If I wrongly binned a real company there,
+#      MOVE that line up into Section A.
+#   4. Then look at the WEBPAGE itself top to bottom. If a member is
+#      missing from Section A entirely, type it in. This step matters
+#      most -- it catches what my guessing missed. Only this page: do not
+#      follow "page 2" or "load more".
+#   5. Keep names EXACTLY as printed (keep GmbH, AG, umlauts), but leave out
+#      a city or address printed on the same line.
+#   6. Delete Section B entirely when you are done with it, or leave it --
+#      everything below the SECTION B marker is ignored either way.
+#   7. Save. Lines starting with # are ignored.
+#   8. When this page is finished, change TODO to DONE on the STATUS line
+#      below. --check turns only DONE worksheets into answer keys.
+#
+# When finished, run:  .venv/bin/python make_ground_truth.py --check
+# ============================================================================
+# STATUS: DONE
+
+# --- SECTION A: likely member companies (123) -------------------------
+
+A. Menarini Diagnostics Deutschland Division der Berlin-Chemie AG
+Abbott GmbH
+Abbott Rapid Diagnostics Germany GmbH
+Adaptive Biotechnologies B.V
+Agendia NV
+Agilent Technologies Deutschland GmbH
+AHLSTROM Germany GmbH
+AID - Autoimmun Diagnostika GmbH
+Aidian Germany GmbH
+analyticon Biotechnologies GmbH
+ANTITOXIN GmbH
+anvajo GmbH
+aprimeo diagnostics GmbH & Co. KG
+Asbach Medical Products GmbH
+Axon Lab GmbH
+BAG Diagnostics GmbH
+Beckman Coulter Biomedical GmbH
+Beckman Coulter GmbH
+Becton Dickinson GmbH
+Bestbion DX GmbH
+Bio-Rad Laboratories GmbH
+Bio-Rad Medical Diagnostics GmbH
+Bio-Techne GmbH
+BioEcho Life Sciences GmbH
+Bioline GmbH (Meridian Life Science Molecular)
+bioMérieux Deutschland GmbH
+Biotype GmbH
+BIT Analytical Instruments GmbH
+Bosch Healthcare Solutions GmbH
+Bruker Daltonics GmbH & Co. KG
+Cepheid GmbH
+Clemens GmbH
+COMED GmbH
+concile GmbH
+Diasorin Deutschland GmbH
+DiaSys Diagnostic Systems GmbH
+Dr. Fooke Laboratorien GmbH
+DRG Instruments GmbH
+DST Diagnostische Systeme & Technologien GmbH
+EKF-diagnostic GmbH
+Eppendorf SE
+EUROBIO-SCIENTIFIC Service GmbH
+EUROIMMUN Medizinische Labordiagnostika AG
+Exact Sciences Deutschland GmbH
+Friz Biochem GmbH
+FUJIFILM Wako Chemicals Europe GmbH
+Fujirebio Germany GmbH
+GFE Blut - Gesellschaft zur Forschung, Entwicklung und Distribution von Diagnostika im Blutspendewesen mbH
+Ginolis Oy
+Gold Standard Diagnostics Frankfurt GmbH
+Greiner Bio-One GmbH
+Hain Lifescience GmbH
+Hamilton Germany GmbH
+Heidelberg Epignostix GmbH
+Hologic Deutschland GmbH
+HUMAN Gesellschaft für Biochemica und Diagnostica mbH
+IBL International GmbH
+Illumina GmbH
+Immucor Medizinische Diagnostik GmbH
+Institut Virion\Serion GmbH
+LDN Labor Diagnostika Nord GmbH & Co. KG
+m-u-t GmbH
+Mast Diagnostica GmbH
+Mechatronic Medical Engineers GmbH
+MEON Medical Solutions GmbH & Co. KG
+Merck KGaA
+MERLIN Gesellschaft für mikrobiologische Diagnostika mbH
+Mikrogen GmbH
+Miltenyi Biotec B.V & Co. KG
+mir|detect GmbH
+möLab GmbH
+New England Biolabs GmbH
+NOVA Biomedical GmbH
+Orgentec Diagnostika GmbH
+Ortho-Clinical Diagnostics GmbH
+Oxford Nanopore Technologies GmbH
+Platomics GmbH
+Promega GmbH
+Proteomedix AG
+Qiagen GmbH
+Quidel Germany GmbH
+R-Biopharm AG
+ravo Diagnostika GmbH
+RECIPE Chemicals + Instruments GmbH
+Remi Health GmbH
+Roche Diagnostics Deutschland GmbH
+Sakura Finetek Germany GmbH
+Sanofi-Aventis Deutschland GmbH
+Sartorius Stedim Biotech GmbH
+ScheBo Biotech AG
+Sebia Labordiagnostische Systeme GmbH
+SECURETEC Detektionssysteme AG
+Seegene Germany GmbH
+Seramun Diagnostica GmbH
+SERVA Electrophoresis GmbH
+Siemens Healthineers AG
+sifin diagnostics gmbH
+sphingoTec GmbH
+Stago Deutschland GmbH
+STRATEC SE
+Sysmex Deutschland GmbH
+Th. Geyer GmbH & Co. KG
+TIB MOLBIOL Syntheselabor GmbH
+Tosoh Europe NV
+Tuxera Oy
+Veracyte Global B.V.
+Viramed Biotech AG
+Visiopharm A/S
+Waldeck GmbH & Co.KG
+Wallac Oy
+Werfen GmbH
+Zymo Research Europe GmbH
+
+# --- SECTION B: probably page furniture (6) -----------------------
+# Everything below this line is IGNORED. Move anything real up into Section A.

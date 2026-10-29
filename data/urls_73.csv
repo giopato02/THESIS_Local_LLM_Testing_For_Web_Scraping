@@ -72,3 +72,22 @@ id,org_name,url,url_type,source_file,collected_by,notes
 071,UnternehmerTUM,https://www.unternehmertum.de,homepage,Private_funded_innovation_clubs_FINAL_200,Yusuf,
 072,German Accelerator,https://www.germanaccelerator.com,homepage,Private_funded_innovation_clubs_FINAL_200,Yusuf,
 073,Startup-Verband,https://startupverband.de,homepage,Private_funded_innovation_clubs_FINAL_200,Yusuf,
+074,MAGNA BIO,https://www.magnabio.de/%C3%BCber-uns/mitglieder/,member_list,NEOHUB_final_merged_QA_reviewed (Finalv1),"Yusif, Diego","ground truth round 2 (2026-09-22); replaced LocaSenZ 2026-09-24, its site is gone"
+075,KliWaTex,https://www.kliwatex.de/unternehmen,member_list,NEOHUB_final_merged_QA_reviewed (Finalv1),"Yusif, Diego",ground truth round 2 (2026-09-22)
+076,SmartFactory5G+,https://5gplus.net/partner/,member_list,NEOHUB_final_merged_QA_reviewed (Finalv1),"Yusif, Diego",ground truth round 2 (2026-09-22)
+077,Mikroalgen,https://ti-consult.de/mikroalgen/,member_list,NEOHUB_final_merged_QA_reviewed (Finalv1),"Yusif, Diego",ground truth round 2 (2026-09-22)
+078,AgrarCycle,https://www.hs-osnabrueck.de/zim-agrarcycle/netzwerkpartner/,member_list,NEOHUB_final_merged_QA_reviewed (Finalv1),"Yusif, Diego",ground truth round 2 (2026-09-22)
+079,VDGH – Verband der Diagnostica-Industrie,https://www.vdgh.de/vdgh/mitgliedsunternehmen/,member_list,NEOHUB_final_merged_QA_reviewed (Finalv1),"Yusif, Diego",ground truth round 2 (2026-09-22)
+080,en2x – Wirtschaftsverband Fuels und Energie e.V.,https://en2x.de/ueber-en2x/mitglieder/,member_list,NEOHUB_final_merged_QA_reviewed (Finalv1),"Yusif, Diego",ground truth round 2 (2026-09-22)
+081,Wirtschaftsvereinigung Stahl,https://www.wvstahl.de/unternehmen/,member_list,NEOHUB_final_merged_QA_reviewed (Finalv1),"Yusif, Diego",ground truth round 2 (2026-09-22)
+082,VOICE – Bundesverband der IT-Anwender e.V.,https://voice-ev.org/verband/mitglieder/,member_list,NEOHUB_final_merged_QA_reviewed (Finalv1),"Yusif, Diego",ground truth round 2 (2026-09-22)
+083,BIM,https://bim-technologie.de/partner/,member_list,NEOHUB_final_merged_QA_reviewed (Finalv1),"Yusif, Diego",ground truth round 2 (2026-09-22)
+084,Open Source Business Alliance e.V. (OSBA),https://osb-alliance.de/mitglieder,member_list,NEOHUB_final_merged_QA_reviewed (Finalv1),"Yusif, Diego",ground truth round 2 (2026-09-22)
+085,PlasticsEurope Deutschland e.V.,https://plasticseurope.org/de/uber-uns/mitglieder/,member_list,NEOHUB_final_merged_QA_reviewed (Finalv1),"Yusif, Diego",ground truth round 2 (2026-09-22)
+086,Industrieverband Klebstoffe e.V. (IVK),https://www.klebstoffe.com/mitglieder/alle/,member_list,NEOHUB_final_merged_QA_reviewed (Finalv1),"Yusif, Diego",ground truth round 2 (2026-09-22)
+087,Verband deutscher Pfandbriefbanken e.V. (vdp),https://www.pfandbrief.de/mitglieder/,member_list,NEOHUB_final_merged_QA_reviewed (Finalv1),"Yusif, Diego",ground truth round 2 (2026-09-22)
+088,"BVIZ – Bundesverband Innovations-, Technologie- u. Gründerzentren",https://www.innovationszentren.de/mitglieder-zentren/ordentliche/,member_list,NEOHUB_final_merged_QA_reviewed (Finalv1),"Yusif, Diego",ground truth round 2 (2026-09-22)
+089,Verband Schmierstoff-Industrie e.V. (VSI),https://www.vsi-schmierstoffe.de/verband/mitgliederliste,member_list,NEOHUB_final_merged_QA_reviewed (Finalv1),"Yusif, Diego",ground truth round 2 (2026-09-22)
+090,SprayCloth,https://www.netzwerke-gemifo.de/spraycloth/index.php/en/,member_list,NEOHUB_final_merged_QA_reviewed (Finalv1),"Yusif, Diego",ground truth round 2 (2026-09-22)
+091,DGM – Deutsche Gesellschaft für Materialkunde e.V.,https://dgm.de/jahresbericht/2025/mitglieder-und-vereinsleben/firmen-und-institutsmitgliedschaften,member_list,NEOHUB_final_merged_QA_reviewed (Finalv1),"Yusif, Diego",ground truth round 2 (2026-09-22)
+092,Deutscher Schraubenverband e.V. (DSV),https://www.schraubenverband.de/mitglieder,member_list,NEOHUB_final_merged_QA_reviewed (Finalv1),"Yusif, Diego",ground truth round 2 (2026-09-22)

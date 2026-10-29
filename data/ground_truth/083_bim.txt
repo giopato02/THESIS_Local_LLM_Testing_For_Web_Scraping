@@ -1,0 +1,51 @@
+# ============================================================================
+# GROUND TRUTH WORKSHEET  --  BIM
+#
+# URL : https://bim-technologie.de/partner/
+# Saved copy (exactly what the model reads): results/html_cache/46115259fdb17c65.html
+# Page: 648 words, ~1690 tokens
+#
+# WHAT TO DO
+#   1. Open the saved copy above (or the URL) in your browser, next to this file.
+#   2. SECTION A below is my best guess at the member companies.
+#      Read down it and DELETE any line that is not a member company.
+#   3. SECTION B is what I think is page furniture (menus, filters,
+#      categories). Skim it. If I wrongly binned a real company there,
+#      MOVE that line up into Section A.
+#   4. Then look at the WEBPAGE itself top to bottom. If a member is
+#      missing from Section A entirely, type it in. This step matters
+#      most -- it catches what my guessing missed. Only this page: do not
+#      follow "page 2" or "load more".
+#   5. Keep names EXACTLY as printed (keep GmbH, AG, umlauts), but leave out
+#      a city or address printed on the same line.
+#   6. Delete Section B entirely when you are done with it, or leave it --
+#      everything below the SECTION B marker is ignored either way.
+#   7. Save. Lines starting with # are ignored.
+#   8. When this page is finished, change TODO to DONE on the STATUS line
+#      below. --check turns only DONE worksheets into answer keys.
+#
+# When finished, run:  .venv/bin/python make_ground_truth.py --check
+# ============================================================================
+# STATUS: DONE
+
+# --- SECTION A: likely member companies (15) -------------------------
+
+Handwerkskammer Cottbus
+Brandenburgische Technische Universität Cottbus-Senftenberg
+World In Sign EU GmbH
+m2m Germany GmbH
+ARCADIA Investment GmbH
+Anwaltskanzlei Albrecht
+Technische Universität Dresden (TUD)
+Keßler Real Estate Solutions GmbH
+Keßler Ingenieur Consult Vermessungs- und Ingenieurgesellschaft mbH
+fabrik-ID GmbH
+Gräbert GmbH
+TeamProQ GmbH
+IOTIQ GmbH
+appPlant GmbH
+Hochschule für Technik, Wirtschaft und Kultur Leipzig
+Institut für Angewandte Informatik (InfAI) e. V.
+
+# --- SECTION B: probably page furniture (3) -----------------------
+# Everything below this line is IGNORED. Move anything real up into Section A.

@@ -1,0 +1,51 @@
+# ============================================================================
+# GROUND TRUTH WORKSHEET  --  SprayCloth
+#
+# URL : https://www.netzwerke-gemifo.de/spraycloth/index.php/en/
+# Saved copy (exactly what the model reads): results/html_cache/b8068936b34b249e.html
+# Page: 325 words, ~780 tokens
+#
+# WHAT TO DO
+#   1. Open the saved copy above (or the URL) in your browser, next to this file.
+#   2. SECTION A below is my best guess at the member companies.
+#      Read down it and DELETE any line that is not a member company.
+#   3. SECTION B is what I think is page furniture (menus, filters,
+#      categories). Skim it. If I wrongly binned a real company there,
+#      MOVE that line up into Section A.
+#   4. Then look at the WEBPAGE itself top to bottom. If a member is
+#      missing from Section A entirely, type it in. This step matters
+#      most -- it catches what my guessing missed. Only this page: do not
+#      follow "page 2" or "load more".
+#   5. Keep names EXACTLY as printed (keep GmbH, AG, umlauts), but leave out
+#      a city or address printed on the same line.
+#   6. Delete Section B entirely when you are done with it, or leave it --
+#      everything below the SECTION B marker is ignored either way.
+#   7. Save. Lines starting with # are ignored.
+#   8. When this page is finished, change TODO to DONE on the STATUS line
+#      below. --check turns only DONE worksheets into answer keys.
+#
+# When finished, run:  .venv/bin/python make_ground_truth.py --check
+# ============================================================================
+# STATUS: DONE
+
+# --- SECTION A: likely member companies (35) -------------------------
+
+Held GmbH
+Batex Technische Textilien GmbH
+DMG Chemie GmbH
+VELOMAT Messelektronik GmbH
+Woldrich Engineering + Consulting
+Hörber + Hetzner GmbH
+Elnic in Dresden GmbH
+Pauly Steuer- und Regelanlagen GmbH & Co. KG
+Fabrican Ltd.
+Müller Knöpfe Produktions GmbH
+Grabher Group
+bcd Consulting GmbH
+SACHSEN!TEXTIL e.V.
+Textilforschungsinstitut Thüringen-Vogtland e.V. (TITV)
+bvse-Bundesverband Sekundärrohstoffe und Entsorgung e.V.
+
+# --- SECTION B: probably page furniture (4) -----------------------
+# Everything below this line is IGNORED. Move anything real up into Section A.
+

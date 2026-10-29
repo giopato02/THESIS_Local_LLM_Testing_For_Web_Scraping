@@ -1,0 +1,72 @@
+# ============================================================================
+# GROUND TRUTH WORKSHEET  --  Mikroalgen
+#
+# URL : https://ti-consult.de/mikroalgen/
+# Saved copy (exactly what the model reads): results/html_cache/7bef9477c359da1d.html
+# Page: 4259 words, ~12348 tokens  -- this page is SPLIT INTO CHUNKS for the model
+#
+# WHAT TO DO
+#   1. Open the saved copy above (or the URL) in your browser, next to this file.
+#   2. SECTION A below is my best guess at the member companies.
+#      Read down it and DELETE any line that is not a member company.
+#   3. SECTION B is what I think is page furniture (menus, filters,
+#      categories). Skim it. If I wrongly binned a real company there,
+#      MOVE that line up into Section A.
+#   4. Then look at the WEBPAGE itself top to bottom. If a member is
+#      missing from Section A entirely, type it in. This step matters
+#      most -- it catches what my guessing missed. Only this page: do not
+#      follow "page 2" or "load more".
+#   5. Keep names EXACTLY as printed (keep GmbH, AG, umlauts), but leave out
+#      a city or address printed on the same line.
+#   6. Delete Section B entirely when you are done with it, or leave it --
+#      everything below the SECTION B marker is ignored either way.
+#   7. Save. Lines starting with # are ignored.
+#   8. When this page is finished, change TODO to DONE on the STATUS line
+#      below. --check turns only DONE worksheets into answer keys.
+#
+# When finished, run:  .venv/bin/python make_ground_truth.py --check
+# ============================================================================
+# STATUS: DONE
+
+# --- SECTION A: likely member companies (76) -------------------------
+
+Akees Data Intelligence GmbH
+Bioactive Food GmbH
+Dr. Eberhard Bioenergie GmbH & Co. KG
+EvU – Innovative Umwelttechnik GmbH
+Füllner & Partner GmbH
+IGV Institut für Getreideverarbeitung GmbH
+INPUT Ingenieure GmbH
+KTS Alge GmbH
+LABOKLIN GmbH & Co. KG
+Microganic GmbH
+TERRA URBANA Umlandentwicklungsgesellschaft mbH
+Albert-Ludwigs Universität Freiburg
+Alfred-Wegener-Institut
+Brandenburgische Technische Universität Cottbus-Senftenberg
+Gesellschaft zur Förderung von Medizin- , Bio und Umwelttechnologien e.V.
+Hochschule Anhalt
+Hochschule Bremerhaven
+Hochschule Kaiserslautern
+Hochschule Neubrandenburg
+Humboldt Universität zu Berlin
+Martin – Luther Universität Halle
+Ruhr-Universität Bochum
+Technische Hochschule Wildau
+Universität Bielefeld
+Universität Potsdam
+Zentrum für Ernährung und Lebensmitteltechnologie gGmbH
+Phytolinc GbR
+Roquette Klötze GmbH & Co. KG
+Whapow Deutschland GmbH
+Klosterbrauerei Neuzelle GmbH
+IMB Centre for Solar Biotechnology – The University of Queensland
+Climate Change Cluster – University of Technology Sydney
+Plant Biotechnology Laboratory – Hanyang University
+Hochschule für Life Sciences FHNW
+AlgaEnviro Pty Ltd
+DSI Technology Pty Ltd
+Global Futuremakers Pty Ltd
+
+# --- SECTION B: probably page furniture (31) -----------------------
+# Everything below this line is IGNORED. Move anything real up into Section A.

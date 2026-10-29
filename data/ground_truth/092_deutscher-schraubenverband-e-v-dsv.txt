@@ -1,0 +1,180 @@
+# ============================================================================
+# GROUND TRUTH WORKSHEET  --  Deutscher Schraubenverband e.V. (DSV)
+#
+# URL : https://www.schraubenverband.de/mitglieder
+# Saved copy (exactly what the model reads): results/html_cache/861a1b30d175486f.html
+# Page: 1449 words, ~3699 tokens
+#
+# WHAT TO DO
+#   1. Open the saved copy above (or the URL) in your browser, next to this file.
+#   2. SECTION A below is my best guess at the member companies.
+#      Read down it and DELETE any line that is not a member company.
+#   3. SECTION B is what I think is page furniture (menus, filters,
+#      categories). Skim it. If I wrongly binned a real company there,
+#      MOVE that line up into Section A.
+#   4. Then look at the WEBPAGE itself top to bottom. If a member is
+#      missing from Section A entirely, type it in. This step matters
+#      most -- it catches what my guessing missed. Only this page: do not
+#      follow "page 2" or "load more".
+#   5. Keep names EXACTLY as printed (keep GmbH, AG, umlauts), but leave out
+#      a city or address printed on the same line.
+#   6. Delete Section B entirely when you are done with it, or leave it --
+#      everything below the SECTION B marker is ignored either way.
+#   7. Save. Lines starting with # are ignored.
+#   8. When this page is finished, change TODO to DONE on the STATUS line
+#      below. --check turns only DONE worksheets into answer keys.
+#
+# When finished, run:  .venv/bin/python make_ground_truth.py --check
+# ============================================================================
+# STATUS: DONE
+
+# --- SECTION A: likely member companies (266) -------------------------
+
+ABC Umformtechnik GmbH & Co. KG
+Abu-Verbindungselemente GmbH
+AFS Advanced Fastening Solutions GmbH
+ArcelorMittal Hamburg GmbH
+Arnold Umformtechnik GmbH & Co. KG
+Atlas Copco Tools Central Europe GmbH
+Atotech Deutschland GmbH
+August Friedberg GmbH
+Beckfort GmbH & Co. KG
+BENSELER Oberflächentechnik GmbH & Co. KG
+Bilstein & Siekermann GmbH + Co. KG
+Böllhoff Produktion GmbH
+Bosch Rexroth AG
+Bulten GmbH
+Camcar Innovations
+CARL BECHEM GMBH
+Cetim
+CONTI Fasteners AG
+COVENTYA GmbH
+CPM GmbH
+David Dorfmüller Söhne GmbH & Co. KG
+Dejond Fastening nv
+DEPRAG SCHULZ GMBH u. CO. KG
+Desoutter GmbH
+dibe Verbindungstechnik GmbH
+Dörken Coatings GmbH & Co. KG
+Dr. Hesse GmbH & Cie. KG
+Dr.-Ing. Max Schlötter GmbH & Co. KG
+Drahtwerk Elisental W. Erdmann GmbH
+Dreh-Norm Individuelle Verbindungstechnik GmbH
+ECKART Suisse SA
+Eibach Oberflächentechnik GmbH
+Eichsfelder Schraubenwerk GmbH
+EJOT SE & Co KG
+ESKA Automotive GmbH
+Fastenrath Befestigungstechnik GmbH
+ferQUEST GmbH
+Fr. u. H. Lüling GmbH & Co. KG
+Fraunhofer-Institut für Großstrukturen in der Produktionstechnik IGP Mechanische Verbindungstechnik
+Frey Schrauben GmbH
+Friedr. Brüninghaus & Söhne GmbH & Co KG
+FUCHS LUBRICANTS GERMANY GmbH
+FUCHS Schraubenwerk GmbH
+Galfa GmbH &Co. KG
+Georgsmarienhütte GmbH
+Gerster Deutschland GmbH
+GEVAG GmbH
+GRIS Umformtechnik GmbH
+Güde GmbH
+GUTMANN ALUMINIUM DRAHT GMBH
+GWI GmbH
+Hagener Feinstahl GmbH
+Hans Schriever GmbH & Co. KG
+HECO-Schrauben
+HEICO Befestigungstechnik GmbH
+Henkel Loctite-KID GmbH
+Hochschule Offenburg
+Hohage GmbH & Co. KG
+Huster Oberflächentechnik GmbH
+Immel, Seckelmann & Co. GmbH
+Ingersoll Rand GmbH
+Institut für Umformtechnik der mittelständischen Wirtschaft GmbH
+J. vom Cleff A. Sohn GmbH & Co. KG
+JUKO Technik GmbH
+Kaiser & Waltermann GmbH
+Karl Schilt GmbH + Co. KG
+Kerb-Konus-Vertriebs-GmbH
+Kistler Remscheid GmbH
+KLEVER Beschichtungstechnik GmbH & Co. KG
+Kohlhage Fasteners GmbH & Co. KG
+Koninklijke Nedschroef Holding B.V.
+Leist Oberflächentechnik GmbH & Co. KG
+LISI AUTOMOTIVE Knipping Verbindungstechnik GmbH
+Lück Schrauben GmbH
+M-PT Matjeschk-PowerTools GmbH & Co. KG
+MacDermid Enthone GmbH
+MAGNI Europe GmbH & Co. KG
+MARPOSS Monitoring Solutions GmbH
+Maschinenfabrik Wagner GmbH & Co. KG
+Max Mothes GmbH
+Max W. Claas GmbH & Co. KG
+MN Kaltformteile GmbH & Co.KG
+MODUMETAL Inc.
+Möhling GmbH & Co. KG
+NME National Machinery Europe GmbH
+NOF METAL COATINGS EUROPE S. A.
+Nord-Lock GmbH
+omniTECHNIK Mikroverkapselungs GmbH
+Otto Eichhoff GmbH & Co. KG
+Overhoff Verbindungstechnik GmbH
+PRELOK GmbH
+PRINZ VERBINDUNGSELEMENTE GMBH
+PROFIL Verbindungstechnik GmbH & Co. KG
+Profiroll Technologies GmbH
+prosimalys GmbH
+Pühl GmbH ＆ Co KG
+Quaker Houghton Deutschland
+R + FK SCHULTE KG
+RAMPA GmbH & Co KG
+REC solutions in fastening technology
+REISSER-Schraubentechnik GmbH
+RIBE - Richard Bergner Verbindungstechnik GmbH & Co.KG
+Richard Gruber GmbH
+RIO GmbH
+Robert Grass GmbH & Co. KG
+Saarstahl AG
+Schrauben Betzer GmbH & Co. KG
+Schraubenfabrik W. Rüggeberg GmbH
+Schraubenwerk Zerbst GmbH
+Schuhl & Co. GmbH
+SCS Concept Deutschland GmbH
+SDC GmbH
+SPAX International GmbH & Co. KG
+SSF-Verbindungsteile GmbH
+STAHLWILLE Eduard Wille GmbH
+STOCKMEIER Chemie GmbH & Co. KG
+Stranghöner Ingenieure GmbH
+SurTec Deutschland GmbH
+teckentrup SLI GmbH & Co. KG
+TesT GmbH
+Thielco Metal Coating BV / Thielco Staalindustrie BV
+Torc-nology GmbH
+Tribicon
+TU Dresden, Fakultät Maschinenwesen, Institut für Fertigungstechnik, Professur Fügetechnik
+Tweer & Lösenbeck GmbH & Co.KG
+Universität Duisburg-Essen - Institut für Metall- und Leichtbau
+Universität Siegen
+Verband der Automobilindustrie e.V.
+voestalpine Wire Rod Austria GmbH
+Vom Hofe Kaltstauchdraht GmbH
+VSM
+Wafios Umformtechnik GmbH
+Wagener Metallveredelung GmbH
+Weber Schraubautomaten GmbH
+WHW Walter Hillebrand GmbH & Co. KG
+Wilhelm Alte GmbH
+Wilhelm Schumacher GmbH Schraubenfabrik
+WIMA Control GmbH - Qualitätsprüfung
+WMV GmbH
+Wolters GmbH
+WSD GmbH
+Zentrum für Konstruktionswerkstoffe, Staatliche Materialprüfungsanstalt Darmstadt, Fachgebiet und Institut für Werkstoffkunde
+Zeschky Galvanik GmbH &Co. KG
+
+# --- SECTION B: probably page furniture (33) -----------------------
+# Everything below this line is IGNORED. Move anything real up into Section A.
+
+

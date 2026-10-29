@@ -28,7 +28,8 @@ scored against hand-labelled ground truth:
 |---|---|---|
 | `llama3.1:8b` | 4.9 GB | Best overall, F1 0.981 |
 | `qwen2.5-coder:7b` | 4.7 GB | Code-specialised; strong precision, weaker recall |
-| `gemma4:12b` | 7.6 GB | Largest, and the negative result: failed 118 of 180 runs |
+| `gemma4:12b` | 7.6 GB | Largest, and the negative result: failed 118 of 180 runs. **Retired on 2026-09-15** as too slow for the 30-page run; its 10-page results stay in the thesis |
+| `qwen3.5:9b` | 6.6 GB | Replaces gemma4 from 2026-09-15. Same size class as the other two, thinking mode switched off. Results pending |
 
 The research questions are about **which model and which prompt** do this job
 best, and what that costs in time and reliability. Parameter count turned out
@@ -98,7 +99,7 @@ python3 -m venv .venv
 
 ollama pull llama3.1:8b
 ollama pull qwen2.5-coder:7b
-ollama pull gemma4:12b          # ~17 GB for all three
+ollama pull qwen3.5:9b          # ~16 GB for all three (gemma4:12b is retired)
 ```
 
 `gpu_setup.sh` does all of this on a fresh GPU node and is safe to re-run:
@@ -149,13 +150,12 @@ Current ground truth: **761 companies across 10 pages.**
 
 ### Run the benchmark
 
-`config.MODELS` lists only llama and qwen, because `gemma4:12b` cannot share
-16 GB of laptop RAM with them. **Always name all three explicitly**, or you
-silently get a two-model grid:
+`config.MODELS` holds the three current models, so the default grid is
+complete. Naming them explicitly does the same thing:
 
 ```bash
 .venv/bin/python benchmark.py --stage a --arm guideline \
-    --models llama3.1:8b qwen2.5-coder:7b gemma4:12b
+    --models llama3.1:8b qwen2.5-coder:7b qwen3.5:9b
 ```
 
 Useful flags: `--dry-run` (show the plan), `--pages 043 050` (restrict pages),
@@ -169,6 +169,28 @@ identical repetitions (3% of qwen cells, 10% of llama, 23% of gemma4).
 
 Safe to interrupt. Progress is saved after every run and re-running the same
 command resumes.
+
+### Cloud models through the Constructor Model API
+
+Any model name starting with `constructor/` is sent to the Constructor Model
+API instead of Ollama (`cloud_client.py`). Prompts, cleaning, chunking and
+scoring are unchanged, so cloud and local results compare directly. Nothing
+runs on the local GPU, so this works from a laptop.
+
+```bash
+export CONSTRUCTOR_API_KEY=...          # Model > API Keys in Constructor Learn
+.venv/bin/python constructor_setup.py km       # prints the knowledge model ID
+export CONSTRUCTOR_KM_ID=...
+.venv/bin/python constructor_setup.py models   # model names you can use
+.venv/bin/python check_model.py constructor/gemini-3.6-flash
+.venv/bin/python benchmark.py --stage a --arm guideline \
+    --models constructor/gemini-3.6-flash --json-mode prompt_only
+```
+
+Measured quirks (2026-09-15): every answer arrives twice and the client
+removes the exact copy; token counts are always 0; schema-constrained output
+works for OpenAI models only, so use `--json-mode prompt_only` for the rest.
+Never put the key in code or in git.
 
 ### Read the results
 
@@ -222,6 +244,9 @@ command resumes.
 | `dump_extractions.py` | Flattens every run's raw output into one inspectable CSV and workbook. |
 | `make_xlsx.py` | Formatted workbook of the Stage A run. |
 | `export_deliverable.py` | The deliverable workbook in the layout Hendro specified. |
+| `check_model.py` | One-request check of a model before a grid: GPU placement, thinking off, speed. |
+| `cloud_client.py` | Sends `constructor/...` models to the Constructor Model API instead of Ollama. |
+| `constructor_setup.py` | Lists the cloud models and finds or creates the knowledge model. |
 | `make_documentation.py` | Work-package documentation in Neovation's template. |
 
 ---
@@ -317,8 +342,9 @@ or search route.
 
 **`cannot reach Ollama`**: start it with `ollama serve`.
 
-**Benchmark seems stuck**: `gemma4:12b` generates until the context window
-fills and can take 5+ minutes per page. `qwen2.5-coder` under `constrained`
+**Benchmark seems stuck**: a `qwen3.x` model that is slow is probably thinking
+before it answers; run `check_model.py <model>`. The retired `gemma4:12b`
+generated until the context window filled and could take 5+ minutes per page. `qwen2.5-coder` under `constrained`
 mode on the largest page took 45 minutes on GPU and still failed. The 7-8B
 models under `prompt_only` average 25-45 s.
 

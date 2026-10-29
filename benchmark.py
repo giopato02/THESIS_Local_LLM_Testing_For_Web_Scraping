@@ -95,8 +95,22 @@ CSV_FIELDS = [
     "error",
 ]
 
+# Where this run writes. --run puts both the CSV and the extraction files in
+# results/runs/<name>/, so a grid never appends to an older study's file and a
+# re-score always knows which runs produced which numbers. Without --run the
+# old shared paths are used, so existing commands keep working.
+RESULTS_CSV = config.BENCHMARK_CSV
 EXTRACTIONS_DIR = config.RESULTS_DIR / "extractions"
-EXTRACTIONS_DIR.mkdir(parents=True, exist_ok=True)
+
+
+def use_run_folder(name: str) -> None:
+    """Point this process at results/runs/<name>/ for output."""
+    global RESULTS_CSV, EXTRACTIONS_DIR
+    folder = config.RESULTS_DIR / "runs" / name
+    folder.mkdir(parents=True, exist_ok=True)
+    RESULTS_CSV = folder / "benchmark_results.csv"
+    EXTRACTIONS_DIR = folder / "extractions"
+    EXTRACTIONS_DIR.mkdir(parents=True, exist_ok=True)
 
 
 # --------------------------------------------------------------------------
@@ -148,10 +162,16 @@ def match_key(name: str) -> str:
     strip the legal suffix, drop accents and punctuation, and casefold before
     comparing. Without this the scores would measure formatting, not accuracy.
     """
-    base = strip_legal_suffix(name)
+    base = strip_legal_suffix(cleaner.strip_invisible(name))
     text = unicodedata.normalize("NFKD", base.casefold())
     text = "".join(c for c in text if not unicodedata.combining(c))
     text = re.sub(r"[^\w\s]", " ", text)
+    # German directories print the same firm as "Spitzen & Stickereien",
+    # "Spitzen und Stickereien" and "Kaelte- u. Klimatechnik", sometimes twice
+    # on one page (KliWaTex, 2026-09-24). Scored literally, a model copying
+    # the other spelling takes both a miss and a false alarm for one company.
+    # The joining word carries no identity, so it is dropped on both sides.
+    text = " ".join(w for w in text.split() if w not in ("und", "u", "and"))
     return re.sub(r"\s+", " ", text).strip()
 
 
@@ -291,6 +311,12 @@ def load_pages(stage: str) -> list[dict]:
         gt_file = config.GROUND_TRUTH_DIR / f"{uid}.json"
         if gt_file.exists():
             truth = json.loads(gt_file.read_text(encoding="utf-8"))["companies"]
+        # A Stage A run on a page without an answer key produces rows with no
+        # score, and the resume logic would then skip that run forever, even
+        # after the page is labelled. Unlabelled pages are left out instead.
+        if stage == "a" and truth is None:
+            print(f"  ! no answer key yet for {uid} ({row['org_name'][:40]}) -- skipping")
+            continue
 
         # Alphabet coverage of the member initials, computed once per page.
         # A complete directory spans most of the alphabet; a page showing only
@@ -313,7 +339,8 @@ def load_pages(stage: str) -> list[dict]:
 def build_plan(stage: str, models: list[str], pages: list[dict],
                prompt_only: str | None = None,
                json_mode_only: str | None = None,
-               arm: str = "guideline", reps_override: int | None = None) -> list[dict]:
+               arm: str = "guideline", reps_override: int | None = None,
+               interleave: bool = False) -> list[dict]:
     """
     Enumerate every run to perform, ordered MODEL-OUTERMOST.
 
@@ -346,7 +373,36 @@ def build_plan(stage: str, models: list[str], pages: list[dict],
                             "stage": stage, "model": model, "strategy": strategy,
                             "json_mode": mode, "page": page, "repetition": rep,
                         })
+    if interleave and len(models) > 1:
+        plan = _round_robin_by_model(plan, models)
     return plan
+
+
+def _round_robin_by_model(plan: list[dict], models: list[str]) -> list[dict]:
+    """
+    Rotate between models instead of finishing one before starting the next.
+
+    Only safe, and only useful, for hosted models. Locally the loop must stay
+    model-outermost because three models do not fit in 16 GB at once, and
+    swapping per run would time a reload as extraction.
+
+    It matters because a hosted endpoint's latency moves with load. Measured
+    on the first cloud grid: claude-haiku ran 31.8 s per run in the first half
+    of its session and 53.2 s in the second, a 67% drift on one model in one
+    afternoon. The two models were also benchmarked five days apart, so the
+    latency comparison between them was confounded by whenever each happened
+    to run. Interleaving puts every model under the same conditions.
+
+    Resume is unaffected: completed runs are keyed on their fields, not on
+    their position in the plan.
+    """
+    from itertools import zip_longest
+    order = {m: i for i, m in enumerate(models)}
+    buckets: list[list[dict]] = [[] for _ in models]
+    for item in plan:
+        buckets[order[item["model"]]].append(item)
+    return [item for row in zip_longest(*buckets) for item in row
+            if item is not None]
 
 
 def _migrate_csv(old_header: list[str]) -> None:
@@ -358,12 +414,12 @@ def _migrate_csv(old_header: list[str]) -> None:
     Nothing is discarded, and the previous file is kept alongside in case the
     migration itself is wrong.
     """
-    backup = config.BENCHMARK_CSV.with_name(
-        config.BENCHMARK_CSV.stem + "_premigration.csv")
+    backup = RESULTS_CSV.with_name(
+        RESULTS_CSV.stem + "_premigration.csv")
     if not backup.exists():
-        backup.write_bytes(config.BENCHMARK_CSV.read_bytes())
+        backup.write_bytes(RESULTS_CSV.read_bytes())
 
-    with open(config.BENCHMARK_CSV, encoding="utf-8") as fh:
+    with open(RESULTS_CSV, encoding="utf-8") as fh:
         rows = list(csv.reader(fh))[1:]
 
     added = [c for c in CSV_FIELDS if c not in old_header]
@@ -377,7 +433,7 @@ def _migrate_csv(old_header: list[str]) -> None:
         # Anything else is a partial write from an interrupted run; dropping it
         # is correct, since the run will simply be repeated.
 
-    with open(config.BENCHMARK_CSV, "w", newline="", encoding="utf-8") as fh:
+    with open(RESULTS_CSV, "w", newline="", encoding="utf-8") as fh:
         writer = csv.writer(fh)
         writer.writerow(CSV_FIELDS)
         writer.writerows(migrated)
@@ -397,10 +453,10 @@ def run_key(item: dict) -> str:
 
 def load_completed() -> set[str]:
     """Read the results CSV so an interrupted run can pick up where it left off."""
-    if not config.BENCHMARK_CSV.exists():
+    if not RESULTS_CSV.exists():
         return set()
     done = set()
-    with open(config.BENCHMARK_CSV, encoding="utf-8") as fh:
+    with open(RESULTS_CSV, encoding="utf-8") as fh:
         for row in csv.DictReader(fh):
             # Only completed rows count; failures are retried.
             if row.get("error"):
@@ -475,6 +531,16 @@ def execute(item: dict) -> dict:
 
 def preflight(models: list[str]) -> bool:
     """Fail fast on the obvious problems rather than four hours in."""
+    import cloud_client
+    cloud = [m for m in models if cloud_client.is_cloud(m)]
+    local = [m for m in models if not cloud_client.is_cloud(m)]
+    if cloud and cloud_client.missing_settings():
+        print(f"  ERROR: {', '.join(cloud)} need the environment variable(s) "
+              f"{', '.join(cloud_client.missing_settings())}")
+        return False
+    if not local:
+        return True
+
     try:
         available = {m.model for m in ollama.list().models}
     except Exception as exc:
@@ -482,7 +548,7 @@ def preflight(models: list[str]) -> bool:
         print("  Start it with:  ollama serve")
         return False
 
-    missing = [m for m in models if m not in available]
+    missing = [m for m in local if m not in available]
     if missing:
         print(f"  ERROR: model(s) not installed: {', '.join(missing)}")
         print(f"  Available: {', '.join(sorted(available))}")
@@ -507,11 +573,24 @@ def main() -> None:
     ap.add_argument("--limit", type=int, default=None, help="stop after N runs")
     ap.add_argument("--pages", nargs="+", default=None,
                     help="restrict to these url_ids, e.g. --pages 043 050")
+    ap.add_argument("--run", default=None,
+                    help="write this grid to results/runs/<name>/ instead of "
+                         "appending to the shared results file")
+    ap.add_argument("--interleave", action="store_true",
+                    help="rotate between models instead of finishing one "
+                         "before the next. For HOSTED models only: it makes "
+                         "the latency comparison fair when an endpoint's "
+                         "speed drifts with load. Never use it with local "
+                         "models, which would reload on every run.")
     ap.add_argument("--reps", type=int, default=None,
                     help="override repetitions. Note that output is NOT fully "
                          "deterministic even at temperature 0 (12%% of grid "
                          "cells varied), so 1 is for quick checks only")
     args = ap.parse_args()
+    if args.run:
+        use_run_folder(args.run)
+    else:
+        EXTRACTIONS_DIR.mkdir(parents=True, exist_ok=True)
 
     if not preflight(args.models):
         sys.exit(1)
@@ -536,7 +615,8 @@ def main() -> None:
             print("  Continuing, but those runs will have no accuracy scores.\n")
 
     plan = build_plan(args.stage, args.models, pages, args.prompt,
-                      args.json_mode, args.arm, args.reps)
+                      args.json_mode, args.arm, args.reps,
+                      interleave=args.interleave)
     done = load_completed()
     todo = [i for i in plan if run_key(i) not in done]
 
@@ -564,17 +644,17 @@ def main() -> None:
     # then reads back shifted by one. That happened when the five URL columns
     # were added, and it is silent: the run looks fine and the data is wrong.
     # Check the header on disk and migrate rather than trusting it.
-    is_new = not config.BENCHMARK_CSV.exists()
+    is_new = not RESULTS_CSV.exists()
     if not is_new:
-        with open(config.BENCHMARK_CSV, encoding="utf-8") as check:
+        with open(RESULTS_CSV, encoding="utf-8") as check:
             existing = next(csv.reader(check), [])
         if existing and existing != CSV_FIELDS:
             print(f"  ! results header has {len(existing)} columns, code expects "
                   f"{len(CSV_FIELDS)}")
-            print(f"  ! migrating {config.BENCHMARK_CSV.name} before appending")
+            print(f"  ! migrating {RESULTS_CSV.name} before appending")
             _migrate_csv(existing)
 
-    fh = open(config.BENCHMARK_CSV, "a", newline="", encoding="utf-8")
+    fh = open(RESULTS_CSV, "a", newline="", encoding="utf-8")
     writer = csv.DictWriter(fh, fieldnames=CSV_FIELDS, extrasaction="ignore")
     if is_new:
         writer.writeheader()
@@ -616,7 +696,7 @@ def main() -> None:
         print(f"  latency mean {statistics.mean(latencies):.1f}s", end="")
         if len(latencies) > 1:
             print(f"  stdev {statistics.stdev(latencies):.1f}s", end="")
-        print(f"\n  results -> {config.BENCHMARK_CSV}")
+        print(f"\n  results -> {RESULTS_CSV}")
         print(f"  next:    .venv/bin/python evaluate.py")
 
 

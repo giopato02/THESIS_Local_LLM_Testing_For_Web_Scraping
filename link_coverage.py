@@ -132,6 +132,24 @@ def same_org(host_a: str, host_b: str) -> bool:
     return bool(labels(pa) & labels(pb))
 
 
+def same_page_anchor(href: str, page_url: str) -> bool:
+    """
+    True when a link points at this same page, differing only by its #fragment.
+
+    `https://x.de/members/#m50` against `https://x.de/members/` is a jump
+    within the page, not a link to somewhere else. Trailing slashes and an
+    empty query are ignored, because they carry no meaning here.
+    """
+    def bare(u: str) -> tuple:
+        p = urlparse(u)
+        host = p.netloc.lower()
+        # Not str.removeprefix: the GPU node runs Python 3.8.
+        if host.startswith("www."):
+            host = host[4:]
+        return host, p.path.rstrip("/").lower(), p.query
+    return urlparse(href).fragment != "" and bare(href) == bare(page_url)
+
+
 def index_profile_links(html: str, page_url: str) -> dict[str, str]:
     """
     Return {company name -> profile page on the association's own site}.
@@ -160,6 +178,21 @@ def index_profile_links(html: str, page_url: str) -> dict[str, str]:
             continue
         if not same_org(own, urlparse(href).netloc):
             continue
+        # A link that differs from this page only by its #fragment is a jump
+        # to a spot on the page we are already reading, not a profile page.
+        #
+        # Measured on the production run: the Leasingverband links each of
+        # its 134 members to "mitglieder.leasingverband.de/#m2", "#m50",
+        # "#m426" and so on, and Composites United does the same for 582.
+        # Those 716 were routed to the profile stage, which then fetched the
+        # identical page 716 times: 716 URLs resolving to 3 distinct files.
+        #
+        # Worse than wasted work, it was a hole. The profile stage skipped
+        # them for exceeding its word limit, and stage 4 never queued them
+        # because their route said "profile", so 4.4% of the corpus was
+        # served by nothing at all.
+        if same_page_anchor(href, page_url):
+            continue
 
         text = " ".join(a.get_text(separator=" ").split())
         if not text:
@@ -170,7 +203,46 @@ def index_profile_links(html: str, page_url: str) -> dict[str, str]:
         if len(key) >= MIN_KEY_LEN:
             profile.setdefault(key, href)
 
-    return profile
+    return drop_shared_targets(profile)
+
+
+# How many companies may legitimately share one profile page. A handful do:
+# on the research corpus 482 companies mapped to 463 distinct pages, so a few
+# genuinely sit together. Hundreds sharing one is a listing, not a profile.
+MAX_COMPANIES_PER_PROFILE = 2
+
+
+def drop_shared_targets(profile: dict) -> dict:
+    """
+    Remove "profile" links that many companies point at: those are listings.
+
+    A profile page describes one company. When the same URL is the target for
+    hundreds of them, the directory is linking into a single page rather than
+    to per-member pages, and treating it as a profile is wrong twice over: the
+    same page gets fetched and read once per company, and the member never
+    reaches the search stage that could actually have found its website.
+
+    Measured on the production run, where this was a hole rather than mere
+    waste. The Leasingverband points all 134 of its members at
+    `mitglieder.leasingverband.de/#m2`, `#m50`, `#m426`; Composites United
+    does the same for 582. Fragments differ, so the URLs are distinct, but
+    they are one page: 716 URLs resolved to 3 distinct files. All 716 were
+    routed to the profile stage, skipped there for exceeding its word limit,
+    and never queued for search because their route said "profile". That is
+    4.4% of the corpus served by nothing.
+
+    Comparing URLs with the fragment removed is what catches it; comparing
+    them whole does not, because `#m2` and `#m50` are genuinely different
+    strings.
+    """
+    from collections import Counter
+
+    def bare(u: str) -> str:
+        return u.split("#", 1)[0]
+
+    shared = Counter(bare(u) for u in profile.values())
+    return {k: u for k, u in profile.items()
+            if shared[bare(u)] <= MAX_COMPANIES_PER_PROFILE}
 
 
 def index_websites_from_markup(html: str, page_url: str) -> dict[str, str]:
@@ -284,17 +356,99 @@ def index_websites(page_text: str, names: list[str]) -> dict[str, str]:
     return found
 
 
+def websites_on_page(html: str, page_url: str, names: list[str]) -> dict[str, str]:
+    """
+    Return {company name -> its own website} for `names`, using the page alone.
+
+    Shared by the ceiling calculation below and by export_deliverable.py, which
+    uses it to attach websites to names the full-record run did not return.
+    One implementation means the deliverable pairs addresses exactly the way
+    the ceiling was measured.
+    """
+    page = cleaner.process(html, page_url)
+
+    # Markup first, position second. Where an anchor names the company it
+    # points at, the page has stated the pairing and there is nothing to
+    # infer. Positional matching only fills the gap left by anchors
+    # labelled "Web", "Zur Website" and the like.
+    #
+    # A website belongs to ONE company, so a positional guess at an address
+    # the markup has already claimed is wrong by construction. Merging the
+    # two maps without enforcing that left both entries alive under
+    # different company names: on NMWP.NRW, 10 of 36 addresses were claimed
+    # twice, once correctly from the markup and once by a positional guess
+    # that had drifted into the wrong listing.
+    markup, labelled = index_websites_from_markup(html, page_url)
+    claimed = {host_of(u) for u in labelled}
+    website = {k: v for k, v in index_websites(page.text, names).items()
+               if host_of(v) not in claimed}
+    website.update(markup)
+    return website
+
+
+def names_from_run(run: str) -> dict:
+    """
+    {url_id -> [company names]} from a production run's saved extractions.
+
+    The research corpus has hand-labelled answer keys and this reads those.
+    The production networks have none: nobody is going to label 16,176
+    companies, which is the point of the pipeline. There the company list is
+    whatever stage 1 extracted, so routing has to be done against that.
+
+    Duplicates are dropped on the normalised key, because the same member can
+    appear twice on a page under slightly different spellings and each copy
+    would otherwise get its own row in the deliverable.
+    """
+    folder = config.RESULTS_DIR / "runs" / run / "extractions"
+    if not folder.exists():
+        raise SystemExit(f"no extractions at {folder}")
+    out: dict = {}
+    for path in sorted(folder.glob("*.json")):
+        blob = json.loads(path.read_text(encoding="utf-8"))
+        parts = blob.get("key", "").split("|")
+        if len(parts) != 6:
+            continue
+        uid = parts[4]
+        names, seen = [], set()
+        for name in blob.get("raw") or []:
+            name = (name or "").strip()
+            key = match_key(name)
+            if not key or key in seen:
+                continue
+            seen.add(key)
+            names.append(name)
+        if names:
+            out[uid] = names
+    return out
+
+
 def main() -> None:
     ap = argparse.ArgumentParser()
     ap.add_argument("--page", default=None, help="restrict to one url_id")
+    ap.add_argument("--from-run", default=None,
+                    help="take company names from this run's extractions "
+                         "instead of the hand-labelled ground truth. Required "
+                         "for the production networks, which have no answer "
+                         "keys")
     args = ap.parse_args()
 
     with open(config.URLS_CSV, encoding="utf-8") as fh:
         urls = {r["id"]: r for r in csv.DictReader(fh)}
 
+    if args.from_run:
+        source = names_from_run(args.from_run)
+        print(f"  names from run {args.from_run}: {len(source)} pages, "
+              f"{sum(len(v) for v in source.values()):,} companies")
+    else:
+        source = {}
+        for gt_file in sorted(config.GROUND_TRUTH_DIR.glob("*.json")):
+            source[gt_file.stem] = json.loads(
+                gt_file.read_text(encoding="utf-8"))["companies"]
+        print(f"  names from the ground truth: {len(source)} pages, "
+              f"{sum(len(v) for v in source.values()):,} companies")
+
     rows = []
-    for gt_file in sorted(config.GROUND_TRUTH_DIR.glob("*.json")):
-        uid = gt_file.stem
+    for uid in sorted(source):
         if args.page and uid != args.page:
             continue
         row = urls.get(uid)
@@ -306,27 +460,10 @@ def main() -> None:
             continue
 
         html = cache.read_text(encoding="utf-8", errors="ignore")
-        companies = json.loads(gt_file.read_text(encoding="utf-8"))["companies"]
+        companies = source[uid]
 
         profile = index_profile_links(html, row["url"])
-        page = cleaner.process(html, row["url"])
-
-        # Markup first, position second. Where an anchor names the company it
-        # points at, the page has stated the pairing and there is nothing to
-        # infer. Positional matching only fills the gap left by anchors
-        # labelled "Web", "Zur Website" and the like.
-        #
-        # A website belongs to ONE company, so a positional guess at an address
-        # the markup has already claimed is wrong by construction. Merging the
-        # two maps without enforcing that left both entries alive under
-        # different company names: on NMWP.NRW, 10 of 36 addresses were claimed
-        # twice, once correctly from the markup and once by a positional guess
-        # that had drifted into the wrong listing.
-        markup, labelled = index_websites_from_markup(html, row["url"])
-        claimed = {host_of(u) for u in labelled}
-        website = {k: v for k, v in index_websites(page.text, companies).items()
-                   if host_of(v) not in claimed}
-        website.update(markup)
+        website = websites_on_page(html, row["url"], companies)
 
         for name in companies:
             key = match_key(name)

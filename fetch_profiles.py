@@ -180,7 +180,7 @@ def main() -> None:
             continue
 
         html = path.read_text(encoding="utf-8", errors="ignore")
-        page = cleaner.process(html, r["target"])
+        page = cleaner.process(html, r["target"], keep_inner_sections=True)
         haystack = page.text.lower()
 
         # Measured on the CLEANED text, not raw HTML. Every profile page in
@@ -204,7 +204,7 @@ def main() -> None:
             print(f"- [{i:>4}/{len(rows)}] {r['company'][:36]:<38}"
                   f"skipped, {words:,} cleaned words")
             continue
-        page = cleaner.process(html, r["target"])
+        page = cleaner.process(html, r["target"], keep_inner_sections=True)
         haystack = page.text.lower()
 
         result = extractor.extract(chunks=page.chunks, model=args.model,

@@ -72,3 +72,22 @@ id,org_name,url,url_type,status,http_code,raw_bytes,word_count,est_tokens,would_
 071,UnternehmerTUM,https://www.unternehmertum.de,homepage,ok,200,112534,603,1594,False,unknown,efa4bcd89d88fd8e.html,(from cache)
 072,German Accelerator,https://www.germanaccelerator.com,homepage,ok,200,538258,2917,6188,True,unknown,ff94cb7e38542812.html,(from cache)
 073,Startup-Verband,https://startupverband.de,homepage,ok,200,52009,846,2075,False,unknown,8bb07e97654efa37.html,(from cache)
+074,MAGNA BIO,https://www.magnabio.de/%C3%BCber-uns/mitglieder/,member_list,ok,200,561540,3141,9017,True,unknown,ea2bd1ef8f7b3133.html,"(from the Finalv1 survey cache, fetched 2026-08-21)"
+075,KliWaTex,https://www.kliwatex.de/unternehmen,member_list,ok,200,79511,3908,10609,True,unknown,6f8c123e2f8e202b.html,"(from the Finalv1 survey cache, fetched 2026-08-21)"
+076,SmartFactory5G+,https://5gplus.net/partner/,member_list,ok,200,172424,389,1177,False,unknown,3b6aece7e52e91d6.html,"(from the Finalv1 survey cache, fetched 2026-08-21)"
+077,Mikroalgen,https://ti-consult.de/mikroalgen/,member_list,ok,200,254969,4259,12348,True,unknown,7bef9477c359da1d.html,"(from the Finalv1 survey cache, fetched 2026-08-21)"
+078,AgrarCycle,https://www.hs-osnabrueck.de/zim-agrarcycle/netzwerkpartner/,member_list,ok,200,93621,2143,6200,True,unknown,e23530f45777332f.html,"(from the Finalv1 survey cache, fetched 2026-08-21)"
+079,VDGH – Verband der Diagnostica-Industrie,https://www.vdgh.de/vdgh/mitgliedsunternehmen/,member_list,ok,200,367530,2122,7049,True,unknown,eaca6cac976deee4.html,"(from the Finalv1 survey cache, fetched 2026-08-21)"
+080,en2x – Wirtschaftsverband Fuels und Energie e.V.,https://en2x.de/ueber-en2x/mitglieder/,member_list,ok,200,63253,273,952,False,unknown,7bb6906ec50589c4.html,"(from the Finalv1 survey cache, fetched 2026-08-21)"
+081,Wirtschaftsvereinigung Stahl,https://www.wvstahl.de/unternehmen/,member_list,ok,200,82693,353,1484,False,unknown,de49d237bffa2dce.html,"(from the Finalv1 survey cache, fetched 2026-08-21)"
+082,VOICE – Bundesverband der IT-Anwender e.V.,https://voice-ev.org/verband/mitglieder/,member_list,ok,200,290008,1975,7633,True,unknown,5af588968e5a49f1.html,"(from the Finalv1 survey cache, fetched 2026-08-21)"
+083,BIM,https://bim-technologie.de/partner/,member_list,ok,200,289825,648,1690,False,unknown,46115259fdb17c65.html,"(from the Finalv1 survey cache, fetched 2026-08-21)"
+084,Open Source Business Alliance e.V. (OSBA),https://osb-alliance.de/mitglieder,member_list,ok,200,406512,2914,8007,True,unknown,d45bb2926e5f7f63.html,(pages 1 to 4 fetched and joined 2026-09-26; the list is paginated by sf_paged)
+085,PlasticsEurope Deutschland e.V.,https://plasticseurope.org/de/uber-uns/mitglieder/,member_list,ok,200,196837,548,1479,False,unknown,bbf30b719ceae2f4.html,"(from the Finalv1 survey cache, fetched 2026-08-21)"
+086,Industrieverband Klebstoffe e.V. (IVK),https://www.klebstoffe.com/mitglieder/alle/,member_list,ok,200,2218983,4967,12357,True,unknown,c5fd2db536f1c09e.html,"(from the Finalv1 survey cache, fetched 2026-08-21)"
+087,Verband deutscher Pfandbriefbanken e.V. (vdp),https://www.pfandbrief.de/mitglieder/,member_list,ok,200,103261,706,2019,False,unknown,7a99ec8abdc67641.html,"(from the Finalv1 survey cache, fetched 2026-08-21)"
+088,"BVIZ – Bundesverband Innovations-, Technologie- u. Gründerzentren",https://www.innovationszentren.de/mitglieder-zentren/ordentliche/,member_list,ok,200,195011,4014,13738,True,unknown,bd577c2972c93a97.html,"(from the Finalv1 survey cache, fetched 2026-08-21)"
+089,Verband Schmierstoff-Industrie e.V. (VSI),https://www.vsi-schmierstoffe.de/verband/mitgliederliste,member_list,ok,200,84427,1231,4296,False,unknown,1a64dfc46d312577.html,"(from the Finalv1 survey cache, fetched 2026-08-21)"
+090,SprayCloth,https://www.netzwerke-gemifo.de/spraycloth/index.php/en/,member_list,ok,200,16435,325,780,False,unknown,b8068936b34b249e.html,"(from the Finalv1 survey cache, fetched 2026-08-21)"
+091,DGM – Deutsche Gesellschaft für Materialkunde e.V.,https://dgm.de/jahresbericht/2025/mitglieder-und-vereinsleben/firmen-und-institutsmitgliedschaften,member_list,ok,200,319122,1225,3712,False,unknown,8744cb5fd5530cb2.html,"(from the Finalv1 survey cache, fetched 2026-08-21)"
+092,Deutscher Schraubenverband e.V. (DSV),https://www.schraubenverband.de/mitglieder,member_list,ok,200,188671,1449,3699,False,unknown,861a1b30d175486f.html,"(from the Finalv1 survey cache, fetched 2026-08-21)"

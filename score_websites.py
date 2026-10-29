@@ -37,12 +37,21 @@ from __future__ import annotations
 
 import argparse
 import csv
+import pathlib
 import json
 from collections import defaultdict
 
 import config
 
 EXTRACTIONS = config.RESULTS_DIR / "extractions"
+
+
+def use_run(results_csv: str) -> None:
+    """Score one grid: its extraction files sit next to its results CSV."""
+    global EXTRACTIONS
+    folder = pathlib.Path(results_csv).resolve().parent / "extractions"
+    if folder.is_dir():
+        EXTRACTIONS = folder
 COVERAGE_CSV = config.RESULTS_DIR / "link_coverage.csv"
 OUT_CSV = config.RESULTS_DIR / "website_scores.csv"
 
@@ -61,6 +70,44 @@ def host_of(url: str) -> str:
             break
     u = u.split("?")[0].split("#")[0].split("/")[0]
     return u[4:] if u.startswith("www.") else u
+
+
+def classify(host: str, want: str, on_page: set) -> str:
+    """
+    One returned address, sorted into the only four things it can be.
+
+        correct   the pairing has an address for this company and it matches
+        wrong     the pairing has a DIFFERENT address for this company
+        unscored  the pairing has no address for this company, so there is
+                  nothing to compare against
+        invented  the address is nowhere on the page
+
+    `unscored` is the one that was missing, and its absence produced a
+    confidently wrong result on 2026-09-30. Without it, every company that
+    `link_coverage.py` had not paired was counted as a misattribution the
+    moment the model returned anything: 4,632 of them, reported as "21.9%
+    wrong company" and precision 0.779.
+
+    Two checks showed that reading was false. Across the winning
+    configuration there were **zero** disagreements on companies the pairing
+    DOES cover, and a sample of the unpaired ones showed the model right and
+    the pairing incomplete:
+
+        Technologie Zentrum Dortmund GmbH  ->  tzdo.de
+        Deutsche Edelstahlwerke Services   ->  dew-stahl.com
+
+    The pairing covers 1,134 of 2,638 companies, so it has no opinion about
+    most of them. Counting its silence as the model's error measures the
+    yardstick, not the model. Reporting `unscored` separately states how much
+    of the output this method cannot judge, which is the honest answer.
+    """
+    if want and host == want:
+        return "correct"
+    if want:
+        return "wrong"
+    if host in on_page:
+        return "unscored"
+    return "invented"
 
 
 def load_expected() -> tuple[dict[str, dict[str, str]], dict[str, set[str]]]:
@@ -114,10 +161,14 @@ def load_expected() -> tuple[dict[str, dict[str, str]], dict[str, set[str]]]:
 
 def main() -> None:
     ap = argparse.ArgumentParser()
+    ap.add_argument("--results", default=None,
+                    help="results CSV of one run, e.g. results/runs/<name>/benchmark_results.csv")
     ap.add_argument("--by", default="config",
                     choices=["config", "page", "model"],
                     help="what to group the report by")
     args = ap.parse_args()
+    if args.results:
+        use_run(args.results)
 
     expected, on_page = load_expected()
 
@@ -138,7 +189,7 @@ def main() -> None:
 
         exp = expected.get(url_id, {})
         real = on_page.get(url_id, set())
-        correct = wrong = invented = 0
+        correct = wrong = invented = unscored = 0
 
         for rec in records:
             url = (rec.get("url") or "").strip()
@@ -146,14 +197,13 @@ def main() -> None:
                 continue
             host = host_of(url)
             want = exp.get(match_key(rec.get("name", "")))
-            if want and host == want:
-                correct += 1
-            elif host in real:
-                wrong += 1
-            else:
-                invented += 1
+            verdict = classify(host, want, real)
+            correct += verdict == "correct"
+            wrong += verdict == "wrong"
+            unscored += verdict == "unscored"
+            invented += verdict == "invented"
 
-        returned = correct + wrong + invented
+        returned = correct + wrong + invented + unscored
         ceiling = len(exp)
         rows.append({
             "url_id": url_id, "model_name": model,
@@ -161,8 +211,14 @@ def main() -> None:
             "repetition": rep,
             "returned": returned, "correct": correct,
             "wrong_company": wrong, "invented": invented,
+            "unscored": unscored,
             "ceiling": ceiling,
-            "precision": round(correct / returned, 4) if returned else "",
+            # Precision is over what CAN be judged. An unscored address is
+            # neither right nor wrong here, so including it in the
+            # denominator would report the pairing's coverage as the model's
+            # error rate, which is the mistake this column exists to undo.
+            "precision": (round(correct / (correct + wrong + invented), 4)
+                          if (correct + wrong + invented) else ""),
             "recall": round(correct / ceiling, 4) if ceiling else "",
         })
 
@@ -184,33 +240,45 @@ def main() -> None:
     for r in rows:
         groups[keyfn(r)].append(r)
 
-    label = {"config": 46, "page": 10, "model": 20}[args.by]
-    print(f"\n{'group':<{label}}{'runs':>6}{'returned':>10}{'correct':>9}"
-          f"{'wrong co':>10}{'invented':>10}{'prec':>7}{'recall':>8}")
-    print("-" * (label + 60))
-    for k in sorted(groups):
-        g = groups[k]
-        ret = sum(r["returned"] for r in g)
-        cor = sum(r["correct"] for r in g)
-        wro = sum(r["wrong_company"] for r in g)
-        inv = sum(r["invented"] for r in g)
-        ceil = sum(r["ceiling"] for r in g)
-        print(f"{' '.join(k)[:label]:<{label}}{len(g):>6}{ret:>10}{cor:>9}"
-              f"{wro:>10}{inv:>10}"
-              f"{(cor/ret if ret else 0):>7.3f}{(cor/ceil if ceil else 0):>8.3f}")
+    def totals(g):
+        s = {k: sum(r[k] for r in g) for k in
+             ("returned", "correct", "wrong_company", "invented",
+              "unscored", "ceiling")}
+        judged = s["correct"] + s["wrong_company"] + s["invented"]
+        s["precision"] = s["correct"] / judged if judged else 0
+        s["recall"] = s["correct"] / s["ceiling"] if s["ceiling"] else 0
+        return s
 
-    ret = sum(r["returned"] for r in rows)
-    cor = sum(r["correct"] for r in rows)
-    wro = sum(r["wrong_company"] for r in rows)
-    inv = sum(r["invented"] for r in rows)
-    ceil = sum(r["ceiling"] for r in rows)
-    print("-" * (label + 60))
-    print(f"{'TOTAL':<{label}}{len(rows):>6}{ret:>10}{cor:>9}{wro:>10}{inv:>10}"
-          f"{(cor/ret if ret else 0):>7.3f}{(cor/ceil if ceil else 0):>8.3f}")
-    print(f"\n  correct        {cor:>6}  the right address for that company")
-    print(f"  wrong company  {wro:>6}  a real address on the page, wrong member")
-    print(f"  invented       {inv:>6}  not on the page at all")
-    print(f"\n  -> {OUT_CSV}")
+    label = {"config": 46, "page": 10, "model": 20}[args.by]
+    head = (f"\n{'group':<{label}}{'runs':>6}{'returned':>10}{'correct':>9}"
+            f"{'wrong co':>10}{'invented':>10}{'unscored':>10}"
+            f"{'prec':>7}{'recall':>8}")
+    print(head)
+    print("-" * (label + 70))
+    for k in sorted(groups):
+        s = totals(groups[k])
+        print(f"{' '.join(k)[:label]:<{label}}{len(groups[k]):>6}"
+              f"{s['returned']:>10}{s['correct']:>9}{s['wrong_company']:>10}"
+              f"{s['invented']:>10}{s['unscored']:>10}"
+              f"{s['precision']:>7.3f}{s['recall']:>8.3f}")
+
+    s = totals(rows)
+    print("-" * (label + 70))
+    print(f"{'TOTAL':<{label}}{len(rows):>6}{s['returned']:>10}{s['correct']:>9}"
+          f"{s['wrong_company']:>10}{s['invented']:>10}{s['unscored']:>10}"
+          f"{s['precision']:>7.3f}{s['recall']:>8.3f}")
+    print(f"\n  correct        {s['correct']:>6}  the right address for that company")
+    print(f"  wrong company  {s['wrong_company']:>6}  the pairing has a DIFFERENT "
+          f"address for this company")
+    print(f"  invented       {s['invented']:>6}  not on the page at all")
+    print(f"  unscored       {s['unscored']:>6}  the pairing has no address for this "
+          f"company, so there is")
+    print(f"  {'':>6}         nothing to compare. NOT counted as an error: a sample")
+    print(f"  {'':>6}         showed these are mostly the model right and the")
+    print(f"  {'':>6}         pairing incomplete (see THESIS_NOTES 3.19).")
+    print(f"\n  precision is over what can be judged: "
+          f"correct / (correct + wrong + invented)")
+    print(f"  -> {OUT_CSV}")
 
 
 if __name__ == "__main__":

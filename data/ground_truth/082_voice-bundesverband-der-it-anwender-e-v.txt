@@ -1,0 +1,420 @@
+# ============================================================================
+# GROUND TRUTH WORKSHEET  --  VOICE – Bundesverband der IT-Anwender e.V.
+#
+# URL : https://voice-ev.org/verband/mitglieder/
+# Saved copy (exactly what the model reads): results/html_cache/5af588968e5a49f1.html
+# Page: 1975 words, ~7633 tokens  -- this page is SPLIT INTO CHUNKS for the model
+#
+# WHAT TO DO
+#   1. Open the saved copy above (or the URL) in your browser, next to this file.
+#   2. SECTION A below is my best guess at the member companies.
+#      Read down it and DELETE any line that is not a member company.
+#   3. SECTION B is what I think is page furniture (menus, filters,
+#      categories). Skim it. If I wrongly binned a real company there,
+#      MOVE that line up into Section A.
+#   4. Then look at the WEBPAGE itself top to bottom. If a member is
+#      missing from Section A entirely, type it in. This step matters
+#      most -- it catches what my guessing missed. Only this page: do not
+#      follow "page 2" or "load more".
+#   5. Keep names EXACTLY as printed (keep GmbH, AG, umlauts), but leave out
+#      a city or address printed on the same line.
+#   6. Delete Section B entirely when you are done with it, or leave it --
+#      everything below the SECTION B marker is ignored either way.
+#   7. Save. Lines starting with # are ignored.
+#   8. When this page is finished, change TODO to DONE on the STATUS line
+#      below. --check turns only DONE worksheets into answer keys.
+#
+# When finished, run:  .venv/bin/python make_ground_truth.py --check
+# ============================================================================
+# STATUS: DONE
+
+# --- SECTION A: likely member companies (394) -------------------------
+
+3C Holding GmbH
+AACHENER GRUNDVERMÖGEN Kapitalverwaltungsgesellschaft mbH
+ads-tec Administration GmbH
+Ahorn AG
+AIXTRON SE
+ALDI Einkauf SE & Co. oHG
+Alfred Kärcher SE & Co. KG
+All4Labels Group GmbH
+Allianz Deutschland AG
+Allianz Technology SE
+Allianz SE
+ALLPLAN GmbH
+Alpha Trains Europa GmbH
+ALTANA Management Services GmbH
+Amann & Söhne GmbH & Co. KG
+ams – OSRAM AG
+Andreas Dietrich
+Anton Franz
+ARBURG GmbH + Co. KG
+ASFINAG
+Atruvia AG
+AUDI AG
+Aug. Prien Bauunternehmung GmbH & Co. KG
+Aurubis AG
+Austria Wirtschaftsservice Gesellschaft mbH
+Autobahn GmbH des Bundes
+Autobahn Tank & Rast Gruppe GmbH & Co. KG
+AVANCO GmbH
+AVL List GmbH
+AWB Köln GmbH
+BG prevent GmbH
+Bader GmbH & Co. KG
+B. Braun Melsungen AG
+Bauer AG
+Bauerfeind AG
+Bayerischer Rundfunk
+Joh. Berenberg, Gossler & Co. KG
+Bender GmbH & Co. KG
+BENTELER Business Services GmbH
+Benteler Deutschland GmbH
+Berliner Stadtreinigungsbetriebe
+Berliner Wasserbetriebe
+Berner Trading Holding GmbH
+Bertelsmann SE & Co. KGaA
+Bharat Forge CDP GmbH
+Biesterfeld AG
+Bilfinger Global IT GmbH
+Biologische Heilmittel Heel GmbH
+BioNTech SE
+BITMARCK Holding GmbH
+BLUERE
+Booster Precision Components GmbH
+bremenports GmbH & Co. KG
+Bundesministerium des Innern
+B&O Service AG
+BWI GmbH
+C. Melchers GmbH & Co. KG
+C. Otto Gehrckens GmbH & Co. KG
+Chiron-Werke Gmbh & Co. KG
+Christoph Hermes
+CLAAS KGaA mbH
+Clyde Bergemann GmbH
+Commend International GmbH
+Compass Group Deutschland GmbH
+COMPO GmbH
+COMPO EXPERT GmbH
+CONITAS GmbH
+Constantia Flexibles International GmbH
+ControlExpert GmbH
+Continental AG
+Continental Automotive Technologies GmbH
+ContiTech AG
+CWS International GmbH
+Dachser SE
+DATEV eG
+DAW SE
+DC Aviation GmbH
+Deutsche Bahn AG
+Deutscher Alpenverein e.V.
+Deutscher Fachverlag GmbH
+Deutsches Zentrum für Luft- und Raumfahrt e.V.
+DHL Express Europe
+Dirk Altgassen
+direct services Gütersloh GmbH – Corporate Digital Marketing
+Dr. Ausbüttel & Co. GmbH
+Dr. Fritz Faulhaber GmbH & Co. KG
+Dr. Willmar Schwabe Business Service GmbH & Co. KG
+Drees & Sommer SE
+DSA Daten- und Systemtechnik GmbH
+DSV IT Service GmbH
+Dussmann Stiftung & Co. KGaA
+Dürr Dental AG
+ebm-papst Mulfingen GmbH & Co. KG
+Ecclesia Holding GmbH
+EEW Energy from Waste GmbH
+egeplast international GmbH
+elexis AG
+EMAG Holding GmbH
+Emil Frey Digital Services GmbH
+EMONS Services GmbH
+enercity AG
+Erwin Hymer Group AG & Co.KG
+ETEX Holding GmbH
+Evonik Industries AG
+EWE AG
+ewe Küchen GmbH
+Facelift brand building technologies GmbH (Facelift bbt)
+Feinmetall GmbH
+Ferdinand Bilstein GmbH & Co. KG
+FESTO AG & Co. KG
+Fielmann AG
+Flender GmbH
+Flughafen Hamburg GmbH
+Flughafen Köln-Bonn GmbH
+Flughafen München GmbH
+FN Herstal
+FOUR PAWS
+Framatome GmbH
+Frank Streichert
+Franke Management AG
+Frankfurter Allgemeine Zeitung GmbH
+Franz Wiltmann GmbH & Co. KG
+Fraport AG
+Fraunhofer Institut SIT
+Freiburger Stadtbau GmbH
+Fresenius Netcare GmbH
+Freudenberg SE
+Freudenberg Home and Cleaning Solutions GmbH
+FUCHS PETROLUB SE
+Funk Gruppe GmbH
+GARDENA GmbH
+Gebrüder Weiss Gesellschaft m.b.H.
+GEDIA Gebr. Dingerkus GmbH
+GEMÜ Gebrüder Müller Apparatebau GmbH & Co. KG
+geobra Brandstätter Stiftung & Co. KG
+Gerolsteiner Brunnen GmbH & Co. KG
+Getränke Ahlers GmbH
+Giesecke & Devrient GmbH
+Gigaset Technologies GmbH
+gkv informatik
+gmp International GmbH
+Grant Thornton AG Wirtschaftsprüfungsgesellschaft
+Groz-Beckert KG
+Grünbeck Wasseraufbereitung GmbH
+Gustavo Gusto GmbH & Co KG
+GvW Graf von Westphalen Rechtsanwälte Steuerberater Partnerschaft mbB
+H&R InfoTech GmbH
+Haas Fertigbau GmbH
+Häcker Küchen GmbH & Co. KG
+Hamburg Port Authority AöR
+Hannover Rück SE
+Hansgrohe SE
+Haufe Group
+HAWE Hydraulik SE
+Heidelberger Druckmaschinen AG
+Helmholtz-Zentrum hereon GmbH
+Helmholtz-Zentrum Potsdam – Deutsches GeoForschungsZentrum
+HENSOLDT Group
+Herbert Hänchen GmbH
+Hermann Jung-Kramer GmbH
+Hettich Holding GmbH & Co. oHG
+Heuking Kühn Lüer Wojtek – Partnerschaft von Rechtsanwälten und Steuerberatern
+Hosokawa Alpine AG
+Hoyer GmbH Internationale Fachspedition
+Huber und Suhner AG
+Hübner GmbH & Co. KG
+HYPOPORT SE
+IAV GmbH
+IBB Institut für Berufliche Bildung AG
+igefa IT-Service GmbH & Co. KG
+IMS Gear SE & Co. KGaA
+INTERSPORT Deutschland eG
+Investitions- und Förderbank Niedersachsen
+ITM Isotope Technologies Munich SE
+ITSMedia GmbH
+IT-Systemhaus der Bundesagentur für Arbeit
+IT-Verbund Uelzen
+JAB Josef Anstoetz KG
+Josef Witt GmbH
+Jowat SE
+Justus-Liebig-Universität Gießen
+Kassenärztliche Vereinigung Bayerns
+KGAL GmbH & Co. KG
+Klinikgruppe Dr. Guth GmbH & Co. KG
+Klinikum der Universität München
+Knauf Interfer SE
+Knick Elektronische Messgeräte GmbH & Co. KG
+KNIPPING KUNSTSTOFFTECHNIK Gessmann GmbH
+Koenig & Bauer AG
+Kommunale Unfallversicherung Bayern Bayerische Landesunfallkasse
+Kompetenzzentrum Digitale Wasserwirtschaft gGmbH
+Korian Deutschland GmbH
+Kreisverwaltung Recklinghausen
+Krombacher Brauerei Bernhard Schadeberg GmbH & Co. KG
+Krones AG
+Labora Holding GmbH
+Landesbetrieb Straßen.NRW
+Landgard Service GmbH
+Landratsamt Starnberg
+Landratsamt Weilheim-Schongau
+Leica Camera AG
+Lekkerland information systems GmbH
+Leopold Kostal GmbH & Co. KG
+Leuze electronic GmbH & Co. KG
+Liebherr-International AG
+Linde AG
+Loh Services GmbH & Co. KG
+Luther Rechtsanwaltsgesellschaft mbH
+LUTZ | ABEL Rechtsanwalts PartG mbB
+LVR-InfoKom
+MAIRDUMONT GmbH & Co. KG
+ManpowerGroup Deutschland GmbH & Co. KG
+Marabu GmbH & Co.KG
+Mast-Jägermeister SE
+Matthias Behrens
+Max-Delbrück-Centrum für Molekulare Medizin in der Helmholtz-Gemeinschaft
+Max-Planck-Gesellschaft zur Förderung der Wissenschaften e.V.
+MCM Klosterfrau Vertriebsgesellschaft mbH
+MEDICE Arzneimittel Pütter GmbH & Co. KG
+Melitta Business Service Center GmbH & Co. KG
+MENTZ GmbH
+Mey GmbH & Co. KG
+Messe Berlin GmbH
+Messe Düsseldorf GmbH
+Messe München GmbH
+Messer SE & Co. KGaA
+MEYLE AG
+Michael Kranz
+Miele & Cie. KG
+Miltenyi Biotec GmbH
+MLP Finanzdienstleistungen AG
+Mobidrom GmbH
+MTU Aero Engines AG
+N3 Engine Overhaul Services GmbH & Co. KG
+Netfonds AG
+Nexia GmbH
+NIRA
+nobilia Werke J. Stickling GmbH & Co. KG
+Nolte Küchen GmbH & Co. KG
+NORDWEST Handel AG
+NORMA Lebensmittelfilialbetrieb Stiftung & Co. KG
+novem car interior design GmbH
+Novoferm GmbH
+NürnbergMesse GmbH
+oekostrom AG energy group
+Open Grid Europe GmbH
+OPTIMA packaging group GmbH
+OQEMA AG
+Osborne Clarke
+Osram GmbH
+Otto Bock SE & Co.KGaA
+Otto Krahn Group GmbH
+PALFINGER AG
+PANDA. BLACK GmbH
+PD – Berater der öffentlichen Hand
+PETER HAHN GmbH
+Pfeifer & Langen IT-Solutions KG
+Phoenix Contact GmbH & Co. KG
+Piening GmbH Berlin
+Piller Blowers & Compressors GmbH
+Polipol Holding GmbH & Co KG
+PORR AG
+Porsche Informatik GmbH
+Prefere Resins Holding GmbH
+Prof. Dr. Eberhard Kurz
+Propan Rheingas GmbH & Co. KG
+Radeberger Gruppe KG
+R&M International GmbH
+Rail Power Systems GmbH
+Rausch & Pausch SE
+Refratechnik Holding GmbH
+Refresco Deutschland GmbH 
+regio iT
+Reifenhäuser GmbH & Co. KG
+Maschinenfabrik
+Rentschler Biopharma SE
+REWE Systems GmbH
+RIEDEL Communications GmbH & Co. KG
+rku.it GmbH
+Robert Bosch GmbH
+ROSE Bike GmbH
+Röchling SE & Co. KG
+Roto-Frank Fenster- und Türtechnologie GmbH
+RWZ AG
+s. Oliver Bernd Freier GmbH & Co. KG
+SachsenEnergie AG
+SAF-HOLLAND GmbH
+Salzgitter Digital Solutions GmbH
+SANA Kliniken AG
+Schenker AG
+Scheuerle Fahrzeugfabrik GmbH
+Schiesser AG
+Schüco International KG
+Seitz Rechtsanwälte Steuerberater PartG mbB
+Sennheiser electronic GmbH & Co. KG
+SEW-EURODRIVE GmbH & Co. KG
+Siegwerk Druckfarben AG & Co. KGaA
+Siemens AG
+Siemens Healthineers AG
+Siemens Financial Services GmbH
+Siltronic AG
+SMA Solar Technology AG
+SMS group GmbH
+SoCura GmbH
+Solarlux GmbH
+SONAX GmbH
+SPIE Germany Switzerland Austria GmbH
+Sprint Sanierung GmbH
+STADA Arzneimittel AG
+Stadtwerke Düsseldorf AG
+STRATEC SE
+Stiftung für Hochschulzulassung
+Stiftung Zentrale Stelle Verpackungsregister
+Sto SE & Co. KGaA
+STRABAG AG
+Ströer SE & Co. KGaA
+SV Informatik GmbH
+svt Services Holding GmbH
+SWG AG
+Syngenta AG
+Syntegon Technology GmbH
+TEDi GmbH & Co. KG
+Theo Förch GmbH & Co. KG
+Thomas C. Grempe
+THIMM Verpackung GmbH & Co. KG
+thyssenkrupp AG
+thyssenkrupp Steel Europe AG
+tk Accelis GmbH
+TRICOR Packaging & Logistics AG
+Trützschler GmbH & Co. KG
+TUM I17 (LS Wirtschaftsinformatik)
+Turck Holding GmbH
+TÜV NORD Service GmbH & Co. KG
+TÜV Rheinland AG
+Uhlmann Group Holding GmbH & Co. KG
+UMAREX GmbH & Co. KG
+Union IT Services GmbH
+Uniper SE
+uniVersa Krankenversicherung a.G.
+Universität des Saarlandes
+VACUUMSCHMELZE GmbH & Co. KG
+Vattenfall GmbH
+VDI/VDE Innovation + Technik GmbH
+Vebego Facility Services B.V. & Co. KG
+VELUX Commercial GmbH & Co. KG
+vent.io GmbH
+VERBUND AG
+Vetter Pharma-Fertigung GmbH & Co. KG
+Viebrockhaus AG
+Viega Holding GmbH & Co. KG
+VKBit Betrieb GmbH
+voestalpine group-IT GmbH
+Volkswagen AG
+Vorwerk Services GmbH
+VOSS Automotive GmbH
+Vossloh AG
+VHV solutions GmbH
+Vulcan Energie Ressourcen GmbH
+WAGO Kontakttechnik GmbH & Co. KG
+WALA Heilmittel GmbH
+Walbusch Walter Busch GmbH & Co.KG
+WASGAU Produktions & Handels AG
+Weidmüller Interface GmbH & Co. KG
+WEKA Media GmbH & Co. KG
+Weleda AG
+Werhahn KG
+Werner Sobek Group GmbH & Co. KG
+Westfalen AG
+Willi Meyer Bauunternehmen GmbH
+Windmöller & Hölscher KG
+WITTENSTEIN AG
+Witzel Erb Backu & Partner Rechtsanwälte mbB
+Wolfcraft GmbH
+Wortmann KG
+Würth IT GmbH
+X-FAB Global Services GmbH
+Zalando SE
+Zech Management GmbH
+Zentek Services GmbH & Co. KG
+ZEPPELIN GmbH
+ZF Foxconn Chassis Modules GmbH
+ZF Friedrichshafen AG
+ZKI e.V. Geschäftsstelle
+Zumtobel Group AG
+ZwickRoell GmbH & Co. KG
+
+# --- SECTION B: probably page furniture (5) -----------------------
+# Everything below this line is IGNORED. Move anything real up into Section A.

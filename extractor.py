@@ -25,14 +25,64 @@ import re
 import time
 from dataclasses import dataclass, field
 
+import httpx
 import ollama
 
+import cloud_client
 import config
 import prompts
 
-# Shared client so the timeout applies to every call in the pipeline. Ollama's
-# module-level functions use a default client with no deadline.
-_CLIENT = ollama.Client(timeout=getattr(config, "REQUEST_TIMEOUT_S", 900))
+# Shared client so the deadline applies to every call in the pipeline. Ollama's
+# module-level functions use a default client with no deadline. The timeout is
+# the GAP between pieces of a streamed reply, not the length of the call: see
+# config.STREAM_GAP_S and _chat_streaming below.
+_CLIENT = ollama.Client(timeout=getattr(config, "STREAM_GAP_S", 180))
+
+# A hang is nearly always the connection dying rather than the work being hard,
+# so one retry recovers the data point instead of losing the run to an error.
+# Deliberately NOT the total cap (TimeoutError from _chat_streaming): a model
+# still generating after half an hour is pathological, and retrying it would
+# just spend another half hour to fail the same way.
+_RETRY_ERRORS = (httpx.TimeoutException, httpx.TransportError)
+_RETRY_PAUSE_S = 5
+
+
+def _field(obj, name: str, default=None):
+    """
+    Read one field from an Ollama reply, whether it is a dict or a model.
+
+    The library returns plain dicts in older versions and pydantic objects in
+    newer ones. Streaming touches every chunk, so this is the one place that
+    difference would otherwise turn into a crash halfway through a long grid.
+    """
+    try:
+        value = obj[name]
+    except (KeyError, TypeError, AttributeError):
+        value = getattr(obj, name, default)
+    return default if value is None else value
+
+
+def _chat_streaming(kwargs: dict) -> tuple[str, dict]:
+    """
+    Read the reply as it is produced, so a stuck call is told apart from a slow one.
+
+    The client deadline applies to each read, which under streaming is the gap
+    between pieces of text. Before this, one deadline had to cover both cases,
+    so it was either tight enough to kill real work or loose enough that every
+    hang cost a quarter of an hour. Streaming does not change what the model
+    generates: temperature, seed and num_ctx are untouched.
+    """
+    parts: list[str] = []
+    final: dict = {}
+    started = time.perf_counter()
+    for chunk in _CLIENT.chat(**kwargs, stream=True):
+        parts.append(_field(_field(chunk, "message", {}), "content", "") or "")
+        if _field(chunk, "done", False):
+            final = dict(chunk)
+        if time.perf_counter() - started > config.REQUEST_TIMEOUT_S:
+            raise TimeoutError(
+                f"still generating after the {config.REQUEST_TIMEOUT_S}s total cap")
+    return "".join(parts), final
 
 
 @dataclass
@@ -150,6 +200,56 @@ def _clean_url(value: str) -> str:
     return v
 
 
+_EMAIL = re.compile(r"^[^@\s]+@[^@\s]+\.[a-z]{2,10}$", re.I)
+
+# "info (at) example (dot) de" and its bracketed variants. Written this way to
+# keep an address out of a spam crawler's reach, which is also what defeats a
+# plain text extractor.
+_AT = re.compile(r"\s*[\(\[\{]\s*(?:at|ät)\s*[\)\]\}]\s*|\s+at\s+", re.I)
+_DOT = re.compile(r"\s*[\(\[\{]\s*(?:dot|punkt)\s*[\)\]\}]\s*", re.I)
+
+
+def _clean_email(value: str) -> str:
+    """
+    Undo the ways a page hides an email address from crawlers.
+
+    Measured on the 30-page stage 3 output: of 331 addresses, 211 were
+    already valid, **119 were written backwards** and 1 used "(at)". The
+    reversed ones are the CSS trick, where the markup holds
+    `ed.elpmaxe@ofni` and a stylesheet flips it so a reader sees
+    `info@example.de`. The model reported exactly what the page contained,
+    so this is a page convention to undo rather than a model error:
+
+        ed.snorcim5@tkatnok   ->  kontakt@5microns.de
+        moc.ameraa@ofni       ->  info@aarema.com
+        hpi-info(at)hpi.de    ->  hpi-info@hpi.de
+
+    Order matters. A valid address is returned untouched, so nothing that
+    already works can be broken by this, and only a string that does not
+    parse is ever rewritten.
+    """
+    s = (value or "").strip()
+    if not s or _EMAIL.match(s):
+        return s
+
+    flipped = s[::-1]
+    if _EMAIL.match(flipped):
+        return flipped
+
+    spelled = _DOT.sub(".", _AT.sub("@", s)).strip()
+    if _EMAIL.match(spelled):
+        return spelled
+
+    # Reversal and spelling-out can be combined.
+    spelled_flipped = _DOT.sub(".", _AT.sub("@", flipped)).strip()
+    if _EMAIL.match(spelled_flipped):
+        return spelled_flipped
+
+    # Unrecognised: keep it rather than discard it. A human can still read a
+    # malformed address; a blank cell tells nobody anything.
+    return s
+
+
 def _as_record(item) -> dict | None:
     """
     Normalise one returned entry into a record dict.
@@ -190,7 +290,12 @@ def _as_record(item) -> dict | None:
         for k in keys:
             v = item.get(k)
             if isinstance(v, str) and v.strip():
-                value = _clean_url(v) if field == "url" else v.strip()
+                if field == "url":
+                    value = _clean_url(v)
+                elif field == "email":
+                    value = _clean_email(v)
+                else:
+                    value = v.strip()
                 if value:
                     rec[field] = value
                 break
@@ -221,9 +326,18 @@ def _coerce(obj) -> list[dict]:
 # Inference
 # --------------------------------------------------------------------------
 
+def _thinking_off(model: str) -> bool:
+    """True for models that must be told not to reason before answering."""
+    return model.startswith(tuple(getattr(config, "THINKING_MODEL_PREFIXES", ())))
+
+
 def _call_once(model: str, system: str, user: str, constrained: bool,
                schema: dict | None = None) -> tuple[str, dict, float]:
-    """One Ollama round trip. Returns (text, timing metadata, wall seconds)."""
+    """One model round trip. Returns (text, timing metadata, wall seconds)."""
+    # "constructor/<model>" goes to the Constructor Model API, everything else
+    # to Ollama. Prompts, schema and temperature are the same either way.
+    if cloud_client.is_cloud(model):
+        return cloud_client.call(model, system, user, constrained, schema)
     kwargs = {
         "model": model,
         "messages": [
@@ -234,22 +348,39 @@ def _call_once(model: str, system: str, user: str, constrained: bool,
             "temperature": config.TEMPERATURE,
             "seed": config.SEED,
             "num_ctx": config.NUM_CTX,   # never rely on the 4096 default
+            # Backstop against a repetition loop. Far above any honest reply
+            # measured here, so it only ever truncates garbage.
+            "num_predict": getattr(config, "NUM_PREDICT", 4096),
         },
         "keep_alive": config.KEEP_ALIVE,
     }
     if constrained:
         kwargs["format"] = schema or config.COMPANY_LIST_SCHEMA
+    # Only for models that have a thinking mode. The other models' requests
+    # stay byte-for-byte what they were when their results were measured.
+    if _thinking_off(model):
+        kwargs["think"] = False
 
-    start = time.perf_counter()
     # A request with no deadline can wait forever. Observed live: a 16,000-word
     # profile page stalled a run for 19 minutes, the model unloaded underneath
     # it, and the client kept waiting on a connection that was never going to
     # answer. A hang is indistinguishable from slow work, which is the worst
-    # property a long-running job can have.
-    resp = _CLIENT.chat(**kwargs)
-    elapsed = time.perf_counter() - start
-
-    return resp["message"]["content"], dict(resp), elapsed
+    # property a long-running job can have, so _chat_streaming separates them.
+    #
+    # The clock starts fresh on the retry: latency_seconds is meant to be the
+    # cost of the model's work, and a dead connection is not that. The retry is
+    # printed rather than swallowed, so the log still shows it happened.
+    for attempt in (1, 2):
+        start = time.perf_counter()
+        try:
+            text, meta = _chat_streaming(kwargs)
+            return text, meta, time.perf_counter() - start
+        except _RETRY_ERRORS as exc:
+            if attempt == 2:
+                raise
+            print(f"    ! {type(exc).__name__} after {time.perf_counter() - start:.0f}s"
+                  f" on {model}, retrying once", flush=True)
+            time.sleep(_RETRY_PAUSE_S)
 
 
 def _run_multi_stage(chunk: str, model: str, constrained: bool,

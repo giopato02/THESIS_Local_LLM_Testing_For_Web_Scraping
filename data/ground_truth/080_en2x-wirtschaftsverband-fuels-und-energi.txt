@@ -1,0 +1,71 @@
+# ============================================================================
+# GROUND TRUTH WORKSHEET  --  en2x – Wirtschaftsverband Fuels und Energie e.V.
+#
+# URL : https://en2x.de/ueber-en2x/mitglieder/
+# Saved copy (exactly what the model reads): results/html_cache/7bb6906ec50589c4.html
+# Page: 273 words, ~952 tokens
+#
+# WHAT TO DO
+#   1. Open the saved copy above (or the URL) in your browser, next to this file.
+#   2. SECTION A below is my best guess at the member companies.
+#      Read down it and DELETE any line that is not a member company.
+#   3. SECTION B is what I think is page furniture (menus, filters,
+#      categories). Skim it. If I wrongly binned a real company there,
+#      MOVE that line up into Section A.
+#   4. Then look at the WEBPAGE itself top to bottom. If a member is
+#      missing from Section A entirely, type it in. This step matters
+#      most -- it catches what my guessing missed. Only this page: do not
+#      follow "page 2" or "load more".
+#   5. Keep names EXACTLY as printed (keep GmbH, AG, umlauts), but leave out
+#      a city or address printed on the same line.
+#   6. Delete Section B entirely when you are done with it, or leave it --
+#      everything below the SECTION B marker is ignored either way.
+#   7. Save. Lines starting with # are ignored.
+#   8. When this page is finished, change TODO to DONE on the STATUS line
+#      below. --check turns only DONE worksheets into answer keys.
+#
+# When finished, run:  .venv/bin/python make_ground_truth.py --check
+# ============================================================================
+# STATUS: DONE
+
+# --- SECTION A: likely member companies (43) -------------------------
+
+Air Products GmbH
+AVIA AG
+BMV Energy GmbH
+BP Europa SE
+EHG Energie Handel GmbH
+Enilive Deutschland GmbH
+ESSO Deutschland GmbH
+FinCo Energie GmbH
+GKG Mineraloel Handel GmbH & Co. KG
+Gunvor Raffinerie Ingolstadt GmbH, Gunvor Deutschland GmbH
+H&R GmbH & Co. KGaA
+HOLBORN Europa Raffinerie Co. Ltd.
+JET Tankstellen Deutschland GmbH
+MB Energy Holding GmbH & Co. KG
+Mitsubishi International GmbH
+MOL Germany GmbH
+Neste Germany GmbH
+Nynas GmbH & Co. KG (Mitgliedschaft ruht)
+OG Clean Fuels
+OMV Deutschland GmbH
+ORLEN Deutschland GmbH
+Phillips 66 Continental GmbH
+Präg Energie GmbH & Co. KG
+Raffinerie Heide GmbH
+Propan Rheingas GmbH & Co. KG
+Rosneft Deutschland GmbH
+SCHARR FUELS GmbH
+Shell Deutschland GmbH
+STX Group
+team energie GmbH & Co. KG
+TotalEnergies Marketing Deutschland GmbH
+VARO Energy Refining GmbH, VAROPreem AG
+WEKO-PETROL GmbH
+
+
+# --- SECTION B: probably page furniture (3) -----------------------
+# Everything below this line is IGNORED. Move anything real up into Section A.
+
+

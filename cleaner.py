@@ -101,7 +101,8 @@ def annotate_links(soup, page_url: str) -> int:
     return count
 
 
-def clean_html(html: str, page_url: str = "") -> str:
+def clean_html(html: str, page_url: str = "",
+               keep_inner_sections: bool = False) -> str:
     """Reduce an HTML document to its readable text content."""
     # lxml is far faster than html.parser on the 800 KB pages in this corpus,
     # but it chokes on a few malformed documents -- fall back rather than die.
@@ -124,7 +125,32 @@ def clean_html(html: str, page_url: str = "") -> str:
     if page_url and config.PRESERVE_LINKS:
         annotate_links(soup, page_url)
 
-    for tag in soup(config.STRIP_TAGS):
+    # `header`, `footer`, `aside` and `nav` are site chrome on a listing page
+    # and part of the record on a single-company page, so which one a caller
+    # wants depends on what kind of page it is passing.
+    #
+    # Measured on OSB Alliance (page 084): its WordPress theme puts the member
+    # details in <header class="entry-content-header"> INSIDE <article>, which
+    # is valid HTML5. Stripping every <header> reduced a 98 KB profile page to
+    # 152 words of menu, and 183 of the 482 profile pages returned nothing at
+    # all: 1% on every field, against 87% for the network next to it.
+    #
+    # NOT the default, because on the 30 listing pages the same change adds
+    # only navigation. Measured: 7 of 30 pages gain text, 0 of the added lines
+    # are companies in the answer key, and what they do add is "Themenfelder",
+    # "Kontakt", "Mitglied werden". On a listing page that is precision the
+    # model would lose, so listing pages keep the blunt rule.
+    chrome = ("header", "footer", "aside", "nav")
+    if keep_inner_sections:
+        for tag in chrome:
+            for el in soup.find_all(tag):
+                if not any(p.name in ("main", "article") for p in el.parents):
+                    el.decompose()
+        strip = [t for t in config.STRIP_TAGS if t not in chrome]
+    else:
+        strip = config.STRIP_TAGS
+
+    for tag in soup(strip):
         tag.decompose()
 
     for comment in soup.find_all(string=lambda s: isinstance(s, Comment)):
@@ -201,9 +227,28 @@ def chunk_text(text: str, budget: int | None = None) -> list[str]:
     return chunks
 
 
-def process(html: str, page_url: str = "") -> CleanedPage:
-    """Full clean + chunk pipeline for one page."""
-    text = clean_html(html, page_url)
+# Characters that are invisible in a browser but sit in the text a model
+# reads. OptoNet puts a soft hyphen inside almost every word, so "Technologies"
+# arrives as "Tech\u00adno\u00adlo\u00adgies"; scored literally that is a
+# different company from "Technologies" (2026-09-24).
+INVISIBLE = dict.fromkeys(map(ord, "\u00ad\u200b\u200c\u200d\u2060\ufeff"))
+
+
+def strip_invisible(text: str) -> str:
+    """Remove soft hyphens and zero-width characters."""
+    return text.translate(INVISIBLE)
+
+
+def process(html: str, page_url: str = "",
+            keep_inner_sections: bool = False) -> CleanedPage:
+    """
+    Full clean + chunk pipeline for one page.
+
+    `keep_inner_sections` is for SINGLE-COMPANY pages, where a theme may put
+    the record inside <header> or <aside> within the article. Listing pages
+    leave it off: see the note in clean_html for what was measured either way.
+    """
+    text = strip_invisible(clean_html(html, page_url, keep_inner_sections))
     chunks = chunk_text(text)
     return CleanedPage(
         text=text,

@@ -8,79 +8,100 @@ Thesis: *Comparative Evaluation of Local LLM Models and Generic Prompt
 Strategies for Extracting Company Information from Innovation Network Websites*
 Giorgi Pataridze · Constructor University Bremen × Neovation GmbH (NeoHub AP1)
 
-### Status (2026-09-01)
+### Status (2026-09-15)
 
-All experiments complete: 960 runs. The 540-run names grid, a 60-run re-run of
-P3 after a validator bug, and the 540-run URL arm covering all three models,
-three strategies and both JSON modes.
+**Everything on the 10 ground-truth pages is complete.** 960 benchmark runs
+(§3.13j) and all four pipeline stages, merged into
+`results/NeoHub_Network_Members.xlsx`.
+
+**The deliverable holds 752 of the 760 ground-truth companies** (recall 0.989,
+precision 0.986), **684 of them with a website (90%)**. See §3.13n. These are
+the companies on the saved pages: 4 of the 10 pages are only the first page of
+a longer list (§3.14), so this is not those networks' full membership. Until
+2026-09-15 it held only 401: the full-record run failed outright on SPECTARIS
+and stopped silently at 72 of 124 members on automotive thüringen. The "82%
+with a website" reported earlier in §3.13m was a share of the 409 companies in
+the file at the time; as a share of all 760 it was 44%. Use §3.13n.
 
 **Two winners, and the difference between them is a finding.** For names only,
-`llama3.1:8b` + zero-shot + prompt-only, F1 0.981. For the full record that the
-deliverable needs, `llama3.1:8b` + few-shot + prompt-only, name F1 0.858 and
-website F1 0.811 with zero fabricated addresses. See §3.13j.
-**Primary results are §3.13**; §3.7 and §3.8 are the earlier laptop run and
-are superseded for accuracy, since link annotation (§3.11i) changed the input
-between them. Best configuration: `llama3.1:8b` + zero-shot + prompt-only JSON,
-F1 0.981.
+`llama3.1:8b` + zero-shot + prompt-only, F1 0.981. For the full record,
+`llama3.1:8b` + few-shot + prompt-only, name F1 0.858 and website F1 0.811
+with zero fabricated addresses. See §3.13j. The deliverable now uses both
+(§3.13n). **Primary results are §3.13**; §3.7 and §3.8 are the earlier laptop
+run and are superseded for accuracy, since link annotation (§3.11i) changed
+the input between them.
 
 **Multi-stage: use §3.13c-2, not the P3 rows in the §3.13 table.** A validator
 bug was found and fixed, and P3 re-run on 2026-08-28. The finding held and grew
-stronger; the corrected numbers live in §3.13c-2. The working dataset
-`results/benchmark_results.csv` now carries 420 rows: 360 original zero-shot and
-few-shot rows at 3 repetitions, plus 60 new P3 rows at 1 repetition. The
-original grid is archived as `results/benchmark_results_540_p3bug.csv`.
+stronger. The grid from before the fix is archived as
+`results/benchmark_results_540_p3bug.csv`.
 
-gemma4:12b is closed as a negative finding (§3.13): it still fails 89 of 120
+gemma4:12b is closed as a negative finding (§3.13): it fails 89 of 120
 single-stage runs. Its multi-stage failure rate dropping to zero after the fix
-is **unexplained** and must be diagnosed before it is written up (§3.13c-2).
+remains **unexplained** and is to be reported as such (§3.13c-2). It is to be
+replaced for the 30-page run (advised 2026-09-15: too slow).
 
-Outstanding: the URL arm (§3.13b, 180 runs), the gemma4 anomaly above,
-production extraction with `few_shot_full_record`, ground-truth expansion to
-30-60 pages.
-
-**Code sync.** The GPU node and this directory were reconciled on 2026-08-28;
-both now carry the same patched `benchmark.py`, `prompts.py`, `cleaner.py`,
-`extractor.py` and `gpu_setup.sh`. Neither syncs automatically: the GPU node's
-git remote is cluster-internal and unreachable from the laptop, so code moves
-by tarball, packed with `COPYFILE_DISABLE=1 tar --no-xattrs --no-mac-metadata`
+**Code sync.** Changed on the laptop on 2026-09-15 and not yet on the GPU:
+`link_coverage.py`, `export_deliverable.py`, `test_metrics.py`. The two
+copies of `results/link_coverage.csv` still differ (laptop `32220aa7`, GPU
+`583642bc`) although every per-page route count is identical; the cause is
+not known, and the GPU copy is the reference from now on. Code moves by
+tarball, packed with `COPYFILE_DISABLE=1 tar --no-xattrs --no-mac-metadata`,
 or macOS metadata arrives as unopenable binary twins of every file.
 
-### Next tasks, in order (2026-09-01)
+### Next tasks, in order (2026-09-15)
 
-Experiments are complete. Nothing below is blocked on GPU time.
+**1. Copy the three changed files to the GPU** and run `test_metrics.py` there
+(68 checks).
 
-**1. Finish stage 4 and merge it into the deliverable.**
-`search_websites.py` is running over the 165 companies with no link. When it
-finishes, the websites it confirms have to be joined into
-`NeoHub_Network_Members.xlsx`. Only `verified` and `domain_match` may be
-loaded; `page_only` is usually a directory and must stay out (§3.13l).
+**2. DONE (2026-09-26): the ground truth is 30 pages and 2,638 companies.**
+Selection method and checks in §3.14; frozen copy in
+`data/ground_truth_frozen_2026-09-26/`. Next is the grid over all 30 pages.
 
-**2. Run stage 3 extraction.**
-The 114 profile pages are already cached by `fetch_profiles.py --fetch-only`.
-Running the extraction needs a model and about 15 minutes. Those pages carry
-postcode 97% and website 96% of the time, so this is where the address and
-contact fields Marco and Yusif asked for actually come from (§3.13f).
+**3. gemma4 replaced by `qwen3.5:9b` (decided 2026-09-15).** Next: pull it on
+the GPU, run `check_model.py qwen3.5:9b`, a one-page test, then the grid on the
+existing 10 pages. Candidates considered on Ollama (checked
+2026-09-15): `qwen3.5:9b` (6.6 GB, same size class as the other two, the
+fairest comparison) or `qwen3.6:35b-a3b` (23 GB, mixture of experts with about
+3B parameters active per token). `qwen3.8:27b` is dense and likely slow.
+Thinking mode must be switched off or the model reasons at length before
+answering. Two of three models would then be Qwen: frame it as old versus new
+generation.
 
-**3. Recover SPECTARIS.**
-296 companies, the largest page, absent from the deliverable because every
-full-record configuration fails on it. Extract names with the names-arm winner
-(F1 0.995 there) and attach websites positionally (§3.13k).
+**4. One GPU run over all 30 pages** with the new model, then stages 2 to 4
+and the export. Hand-check more than the 14 stage 4 results checked so far.
 
-**4. Production run over the 291 Finalv1 networks.**
+**5. Production run over the 291 Finalv1 networks.**
 HTML already cached at `results/html_cache_finalv1/`. `build_urls.py` still
 targets the old 73-URL sheet and needs rewriting for Finalv1 first.
 
-**5. Work-package documentation for Neovation.**
-`make_documentation.py` generates it in Marco's template. Section 4c already
-holds the failed approaches he asked to see.
+**6. Work-package documentation for Neovation (Marco's report).**
+Requirements received 2026-09-22: **at most 10 pages**, general, **no code**
+(no script names or file paths either). A summary, not a rigid structure of
+timeframes and tasks. It may name the strategies used and their results, for
+example: "In June I spent three weeks on X. It did not work because Y, so I
+tried Z. The result was W." `make_documentation.py` still produces the older
+per-task Goal/Method/Metrics layout (Marco's template of 2026-08-11), which
+names a script in every Metrics section, so its output has to be rewritten
+into this form before sending. Section 4c already holds the failed approaches
+he asked to see.
 
-**6. Chase Hafiz for the cloud numbers.**
-`results/PROMPTS.txt` was shared so his Gemini runs use identical input. This
-is the only comparison still blocked on someone else.
+**7. Cloud comparison (Hafiz).** API access confirmed on 2026-09-15 after
+Andrei (Constructor Tech) pointed to the API keys page (§3.13o). The pipeline
+now runs cloud models through `cloud_client.py`, and a new bundle for Hafiz
+was built. Hafiz needs his own key. Still to ask Andrei: the doubled answers,
+and usage limits.
 
-**Deferred by decision:** expanding ground truth from 10 to 30 pages
-(Giorgi, 2026-09-01). Every accuracy figure keeps the ten-page caveat in §5
-until this is done, and one page still moves an aggregate F1 by about 0.03.
+**8. Separate Neovation job (Rayen, 2026-09-15).** Websites and emails for
+766,598 UDB companies that have no domain; 5,606 have an email. Free, one to
+two days. Plan: domains from existing emails, the Common Crawl domain list
+(119.7 million domains), name-based guesses, each confirmed by finding the
+company's postcode on its Impressum page. Not part of the thesis.
+
+**Ground truth expansion, no longer deferred.** Deferred on 2026-09-01
+(Giorgi); requested by Hendro on 2026-09-15, now task 2 above. Until it is
+done every accuracy figure keeps the ten-page caveat in §5, and one page still
+moves an aggregate F1 by about 0.03.
 
 ### Project roles
 
@@ -2240,13 +2261,1594 @@ in the methodology rather than left for a reader to notice.
 
 ---
 
-## 3.13m The deliverable, complete: all four stages merged
+## 3.22 ZIM networks versus privately funded networks (2026-10-20)
+
+Marco asked in meeting #21 whether extraction behaves differently on publicly
+funded ZIM networks than on privately funded ones, because the scoring work
+downstream treats the two separately. The answer has two halves, and they
+point in opposite directions.
+
+**Composition of the production database.**
+
+| | rows | distinct companies | networks |
+|---|---:|---:|---:|
+| ZIM network | 1,876 | 1,641 | 84 |
+| Privately funded | 14,226 | 13,235 | 128 |
+| **total** | **16,102** | **14,719** | **212** |
+
+The distinct columns do not add up (1,641 + 13,235 = 14,876 against 14,719)
+because **157 companies hold membership in both a ZIM and a privately funded
+network** and are therefore counted in both groups. The clean partition is
+1,484 ZIM only, 13,078 private only, 157 both.
+
+**Extraction accuracy does not depend on funding type.** On the 30 labelled
+pages, under the winning configuration:
+
+| funding type | pages | companies | mean F1 |
+|---|---:|---:|---:|
+| Privately funded | 19 | 2,210 | 0.9763 |
+| ZIM network | 7 | 143 | 0.9620 |
+| Technical association | 4 | 285 | 0.8954 |
+
+ZIM against all others is a difference of **-0.0002** with a permutation
+p-value of **0.997** over 20,000 relabellings, and a 95% bootstrap interval on
+the difference of [-0.052, +0.051]. Page size does not predict accuracy either
+(r = -0.054 against log company count). This is a clean null result and it is
+worth stating as one: the method is indifferent to who funds the network.
+
+**Data availability does depend on it, and significantly.** Per network, over
+the 208 production networks with at least three members:
+
+| metric | ZIM | private | difference | permutation p |
+|---|---:|---:|---:|---:|
+| has a website | 94.4% | 87.2% | +7.1% | 0.001 |
+| has a street address | 24.4% | 40.6% | -16.1% | 0.011 |
+| has a phone number | 20.2% | 26.1% | -5.9% | 0.289 |
+| website came from a profile page | 0.1% | 9.7% | -9.6% | <0.001 |
+
+**Size was tested as a confound and only partly survives.** ZIM networks are
+much smaller, a median of 14 members against 74, so an apparent funding effect
+could be a size effect. Restricting to networks of 30 members or fewer:
+
+* the website advantage **survives**: ZIM 94.7% against private 85.7%,
+  p = 0.002, slightly larger than in the full sample;
+* the street-address deficit **does not**: p rises from 0.011 to 0.117, so
+  that difference is substantially explained by network size rather than by
+  funding.
+
+**One structural difference explains both.** ZIM network pages are small
+partner lists that link straight to each member's own website. Privately
+funded association directories are larger and link first to their own internal
+profile pages, which is where 9.7% of their websites came from against 0.1%
+for ZIM, and those profile pages are also where postal addresses live. So ZIM
+hands you the website and withholds the address; the private directories do
+the reverse.
+
+**Consequence for the downstream scoring.** A score that rewards contact
+completeness will systematically under-rate ZIM-sourced companies. That would
+be measuring how a network chooses to publish its members, not anything about
+the companies themselves, and it needs to be normalised per source or stated
+as a known bias.
+
+Analysis written to `Extraction_Results_2026_10/ZIM_vs_Private_Analysis.xlsx`.
+Significance throughout is by permutation test rather than a t-test: n is 7
+for ZIM at the page level, far too small to assume normality.
+
+---
+
+## 3.21 The production run: 230 networks, 16,102 companies (2026-10-02)
+
+The benchmark answers "which model and prompt". This is the other thing: one
+model, one prompt, one pass, to fill Neovation's database. No answer keys, no
+grid, no comparison.
+
+**Configuration**: qwen3.5:9b / few_shot_full_record / constrained, chosen by
+the record arm (§3.19). Name F1 0.940, website precision 0.999, zero invented
+addresses, 2.35 s per company.
+
+**Scope**: the Finalv1 sheet holds 306 networks, 291 with a verified members
+URL. `survey_finalv1.py` had already fetched all 291 and sorted them by what
+the HTML contains, so the run covers every network whose page returns
+content:
+
+| category | networks | in the run |
+|---|---:|---|
+| directory | 153 | yes |
+| sparse | 85 | yes |
+| thin | 41 | yes |
+| http_error / unreachable | 12 | cannot be fetched |
+
+Including the thin pages was a late change and the right one: "sparse" alone
+contributed **1,540 companies, 9.5% of the total**, which excluding it would
+have silently lost. The thin pages contributed 25, which proves rather than
+assumes that they hold nothing.
+
+Re-fetched on 30 September rather than reusing the August cache, so the
+pages are current. 230 of 279 returned usable content: **49 member pages went
+down or empty in six weeks**, which is a drift figure for Neovation in its
+own right.
+
+### What each stage produced
+
+| stage | | of 16,102 |
+|---|---:|---:|
+| 1, the model reads the member page | 16,102 names | 100% |
+| 1, websites | 9,360 | 58.0% |
+| 1, cities / postcodes / streets | 7,051 / 5,550 / 4,421 | 44 / 34 / 27% |
+| 2, routing (Python, no model) | 4,769 / 2,881 / 8,452 | 30 / 18 / 52% |
+| 3, profile pages, of those readable | 88% website, 88% street | |
+| 4, web search, confirmed | 69.6% of those searched | |
+
+**Final coverage: 14,241 of 16,102 companies have a website, 88%.** 865 more
+have weak evidence that needs a human, and 949 have nothing.
+
+Runtime 11.3 h wall for stage 1, **100% efficiency again**, 1 failure in 230.
+
+### The production run validated the benchmark
+
+31 of the production networks are also research pages and kept their ids, so
+the shipped configuration could be scored against the hand-labelled keys on
+the pages the two corpora share:
+
+| | F1 |
+|---|---:|
+| benchmark, 30 pages, same configuration | 0.940 |
+| **production, the 23 scorable pages** | **0.933** |
+
+Seven tenths of a point. The benchmark predicted production almost exactly,
+which is the answer to the obvious objection that a method tuned on 30
+curated pages will not survive 230 real ones. Part of even that small gap is
+likely the web rather than the model: production pages were fetched on 30
+September, the answer keys were written against copies cached weeks earlier.
+
+### The headline result: the model doubles what rules achieve
+
+`link_coverage.py` paired **4,769** companies with a website. The model found
+**9,360** on the same HTML. Of the model's extras, **3,682 of 3,683
+hostnames are present in the page source**, a 0.03% invention rate.
+
+The cause is visible in the markup. The heuristic pairs a link to a company
+by matching the link's clickable text to the company name. Directories
+routinely write something else:
+
+```
+5-HT Chemistry & Health   ->  href="https://www.5-ht.com/">read more
+Bioneer A/S               ->  href="https://bioneer.dk/">read more
+```
+
+"read more" matches no company name, so a rule files that member as having
+no link while the address sits in the same tag. The model reads the entry as
+a reader would.
+
+**This is the strongest argument in the thesis for using a language model at
+all.** Everything else it does could be argued as convenience. This cannot:
+careful rule-based extraction, with a base-href fix, a generic-label list and
+a positional fallback, reaches 51% of what the model reaches on identical
+input, and fails invisibly by reporting a smaller ceiling rather than an
+error.
+
+A consequence for the write-up: the "stage 1 ceiling, 30% have a website
+printed on the page" line that `link_coverage.py` prints is false as stated.
+It is 30% that *this heuristic can pair*. The wording needs fixing wherever
+it appears.
+
+### Three defects the research corpus never showed
+
+All three were assumptions that held on 30 hand-picked pages and broke on 230
+real ones.
+
+**Fragment links read as profile pages.** The Leasingverband links all 134
+members to `mitglieder.leasingverband.de/#m2`, `#m50`, `#m426`. Composites
+United links its 582 to 582 distinct paths that all return the same page.
+716 URLs, 3 distinct files. All were routed to the profile stage, skipped
+there for exceeding its word limit, and never queued for search because
+their route said "profile": **4.4% of the corpus served by nothing**.
+
+A URL rule catches the first case and cannot catch the second. The fix that
+works needs no prediction: **stage 4 now also queues anyone stage 3 was
+routed to but did not produce a website for.** The general principle is worth
+stating in the thesis: *a pipeline stage should not assume the previous stage
+succeeded.*
+
+**A listing page shared by many members.** The same check found 19 companies
+in the research corpus pointing at one `netzwerkpartner` page. 0.7%, and the
+same class of error.
+
+**A whole network dropped for a partial failure.** The deliverable discarded
+any run with an error. Page p094 returned 162 companies and then failed on
+one chunk, so the eco Verband der Internetwirtschaft appeared nowhere in
+Neovation's sheet. A partial extraction is now kept, with a clean run still
+preferred over a partial one for the same page.
+
+**And one reporting artefact.** `make_report.py` averaged F1 over all 230
+production pages when only 31 have an answer key, printing "best
+configuration F1 0.0933". That number described the share of the corpus that
+was labelled, not the model. Accuracy is now computed over scorable pages
+and the count is printed beside it.
+
+## 3.20 Stage 4 on 30 pages, and the final coverage (2026-09-30)
+
+1,022 companies with no link of any kind, searched and verified. No model:
+a search returns candidates and Python decides whether any belongs to the
+company.
+
+| outcome | count | share |
+|---|---:|---:|
+| verified, two or more independent signals | 653 | 63.9% |
+| name found on the page only | 170 | 16.6% |
+| nothing usable | 70 | 6.8% |
+| no result at all | 78 | 7.6% |
+| domain resembles the name | 34 | 3.3% |
+| **derived from the company's own email, no search** | **17** | 1.7% |
+| confirmed | **704** | **68.9%** |
+
+### Where all 2,638 companies end up
+
+| source | companies | share |
+|---|---:|---:|
+| stage 1/2, website printed on the page | 1,134 | 43.0% |
+| stage 3, read off a profile page | 411 | 15.6% |
+| stage 4, found by search and confirmed | 704 | 26.7% |
+| **total with a website** | **2,249** | **85.3%** |
+| stage 4, weak evidence, needs a human | 170 | 6.4% |
+| nothing found | 219 | 8.3% |
+
+The projection made before stage 4 ran was 83% to 91%. The outcome is 85.3%,
+inside it and near the lower half, which is the useful direction for a
+projection to be wrong in.
+
+**No single stage gets past 43%.** The result comes from three different
+mechanisms, only one of which uses a model, and the argument for the pipeline
+having four stages is this table rather than an assertion.
+
+### The upgrade, and what it was worth
+
+Stage 4 was rebuilt before this run (2026-09-29). It now weighs evidence
+instead of accepting the first signal: a postcode is worth 2, a phone number
+3, the company's own email 4, a name mention only 1, and 3 confirms. So a
+name mention alone can never confirm a result, which is the directory case
+this stage exists to refuse, while a phone number can confirm on its own.
+
+Two supporting pieces: the company's own email address states its website
+outright, which answered 17 companies with no search at all, and directory
+brands are now matched on their registrable label so every country domain is
+covered at once (`cylex.de` was blocked while `cylex.at` came back as the top
+result for A. Höfer GmbH).
+
+The 170 weak results are reported, not shipped. A directory naturally
+mentions every company it lists, so "the page names the company" is satisfied
+by exactly the results that are wrong.
+
+### Where stage 4 has to run, and why it is not a preference
+
+DuckDuckGo hard-blocks the GPU node: all three backends returned `202
+Ratelimit` on the first query, while plain page requests still returned 200.
+It is the datacenter IP. The same search from a residential connection worked
+immediately and the full 1,022 completed at a 3-second delay with no
+throttling. Stage 4 performs no model inference, so it is the one stage that
+belongs on a laptop.
+
+Also: the GPU node runs Python 3.8.10, where the `ddgs` package will not
+install at all. `duckduckgo-search<6` does, and exposes the same interface.
+
+## 3.19 The record arm on 30 pages: misattribution, not invention (2026-09-30)
+
+540 runs, 3 models x 3 strategies x 2 JSON modes x 30 pages x 1 repetition,
+asking for the full record (name, website, street, postcode, city, phone,
+email) instead of a bare name. One repetition rather than three: the record
+arm generates about 80 tokens per company against 9 for a name, measured, so
+the full design would have been roughly 100 hours of GPU.
+
+### Asking for seven fields costs name accuracy
+
+Best name F1 falls from **0.962** in the names arm to **0.940** here, on the
+same pages with the same answer key. §3.11c predicted this: adding fields
+makes the task relational rather than one of recognition.
+
+The model ranking survives, which is what the arm existed to test:
+
+| | names arm | record arm |
+|---|---:|---:|
+| qwen3.5:9b | 0.893 | 0.908 |
+| llama3.1:8b | 0.891 | 0.845 |
+| qwen2.5-coder:7b | 0.803 | 0.789 |
+
+qwen3.5 first in both, qwen2.5-coder last in both. llama degrades most when
+the task gets harder.
+
+### The weak check said 0.999 and the real one says 0.779
+
+`score_urls` in `benchmark.py` asks only whether a returned host appears
+**somewhere** in the page text. By that measure every model scored 0.996 to
+1.000 and qwen3.5 was perfect.
+
+The count refutes it before any scorer runs. Stage 2 established that
+**1,134** companies have a website printed on their page. qwen3.5 returned
+**1,405** addresses, every host present in the text. A page cannot supply
+more correct answers than it contains, so the surplus must be real addresses
+bound to the wrong companies, which the weak check passes perfectly.
+
+Re-scored with `score_websites.py`, which compares each address against the
+company `link_coverage.py` pairs it with:
+
+| | count | share |
+|---|---:|---:|
+| correct | 16,506 | 77.9% |
+| wrong company | **4,632** | **21.9%** |
+| invented | 59 | 0.28% |
+
+**Re-scored after the fix, these are the real figures:**
+
+| | count | share of returned |
+|---|---:|---:|
+| correct | 16,506 | |
+| wrong company | **16** | **0.08%** |
+| invented | 43 | 0.20% |
+| unscored, the pairing has no opinion | 4,632 | |
+
+| model | precision | recall | website F1 |
+|---|---:|---:|---:|
+| qwen3.5:9b | **0.999** | 0.982 | **0.990** |
+| qwen2.5-coder:7b | 0.995 | 0.871 | 0.929 |
+| llama3.1:8b | 0.994 | 0.813 | 0.894 |
+| total | 0.996 | 0.892 | |
+
+Of 21,197 addresses returned, **16 went to the wrong company**. The first
+reading put that at 4,632, an overstatement of roughly 290 times, entirely
+caused by the missing category.
+
+### Why 0.999 must not be reported as "website precision"
+
+The corrected number is right arithmetic and a narrow claim, and the wording
+matters more here than the figure.
+
+**The denominator excludes the hard cases by construction.** Precision is
+computed only where `link_coverage.py` has a pairing, and the companies it
+pairs are the ones whose address sits beside their name in a layout a
+positional heuristic can resolve. The ambiguous ones are exactly what it
+leaves unpaired, and those become `unscored`. For qwen3.5 that is **1,704 of
+8,388 addresses, 20% of its output, unmeasured.**
+
+**It measures agreement, not correctness.** The model and the pairing read
+the same cleaned text with the same links annotated into it, so they are not
+independent witnesses. Where they agree it may be because both are right,
+because the page is unambiguous, or because both made the same mistake.
+
+**Recall inherits the same ceiling.** 0.982 is `correct / len(expected)`, so
+it means "of the websites the pairing knows about", not "of the websites on
+the page".
+
+Defensible wording for the thesis:
+
+> On the 78% of returned addresses where the structural pairing has an
+> opinion, the model agrees with it in 99.9% of cases, and returns an address
+> not present on the page in 0.2%. The remaining 20% of output cannot be
+> scored by this method.
+
+**The contrast with the names result is the point.** F1 0.962 for names is
+measured against 2,638 companies labelled by hand, independently of any code
+in this repository. That is the number to lead with. The website figures are
+agreement with a structural baseline and should be presented as such.
+
+**What would fix it:** hand-check a random sample of returned addresses,
+drawn across all four categories rather than only the scorable ones, against
+the live page. Fifty gives a usable confidence interval, a hundred a
+comfortable one. That converts an agreement rate into an absolute accuracy.
+Not done as of 2026-09-30.
+
+**That reading is wrong, and the rest of this section corrects it.** The
+first conclusion drawn from this table was "misattribution is 78 times more
+common than invention, and it is the dangerous error". Both halves are false,
+and the way the error was caught is the point (see "The yardstick was the
+weaker party" below).
+
+Per model, qwen3.5 leads on all three at once:
+
+| model | precision | recall | invented |
+|---|---:|---:|---:|
+| qwen3.5:9b | 0.796 | 0.982 | 6 of 8,388 |
+| llama3.1:8b | 0.778 | 0.813 | 31 of 6,728 |
+| qwen2.5-coder:7b | 0.756 | 0.871 | 22 of 6,081 |
+
+Best configuration overall: **qwen3.5 with few-shot**, name F1 0.940, website
+F1 0.882, zero invented addresses. The top of the website table is a
+five-way tie from 0.882 to 0.894, so name accuracy and invention count are
+what separate them, not the website score.
+
+### A published finding that did not reproduce
+
+§3.13j reported multi-stage collapsing on websites at 0.217 to 0.328 recall,
+and that was carried forward as established. On 30 pages it is false as a
+general claim: qwen2.5-coder's multi-stage reaches **0.985 recall and the
+best website F1 in the grid**. Only llama's multi-stage is poor, at 0.604.
+The collapse was specific to one model on the 10-page corpus.
+
+Worth reporting as such. A finding from a small corpus that survives into the
+write-up unchallenged is how a wrong general claim gets published, and the
+only reason this one was caught is that the larger corpus was run at all.
+
+### The yardstick was the weaker party
+
+The names in this project are hand-labelled; **the website pairings are not**.
+The truth here is `link_coverage.py`'s positional inference about which
+address sits with which company. That is a model measured against a
+heuristic, so the heuristic was checked before the number was believed.
+
+**Check one.** For every company the pairing DOES have a website for, compare
+the model's answer to it. Across the whole winning configuration:
+**0 disagreements.** Where the pairing knows the answer, the model gives the
+same answer, every time.
+
+So the 4,632 cannot be case (1). Reading the scorer confirms it:
+
+```python
+want = exp.get(match_key(rec.get("name", "")))
+if want and host == want:   correct
+elif host in real:          wrong        # <- anything else printed on the page
+else:                       invented
+```
+
+`wrong` catches two unrelated situations, and the docstring's fourth
+category, "unscored: the company has no website on the page", **has no branch
+in the code**. Every company the pairing left unpaired therefore counts as a
+misattribution the moment the model returns anything for it.
+
+**Check two.** Of the 283 addresses the winning configuration returned for
+unpaired companies, 194 (69%) have a hostname that resembles the company
+name. Inspecting twenty at random, the ones the resemblance test missed are
+right too, because it needs a four-letter token and these are acronyms:
+
+```
+UVR-FIA GmbH                      -> uvr-fia.de
+Technologie Zentrum Dortmund GmbH -> tzdo.de
+Deutsche Edelstahlwerke Services  -> dew-stahl.com
+Fördergesellschaft IZB mbH        -> izb-online.de
+Martin-Luther Universität Halle   -> pharmazie.uni-halle.de
+```
+
+**So the model is right and the pairing is incomplete.** Three consequences,
+in increasing order of importance:
+
+1. Website precision of 0.779 is a floor whose error is mostly the yardstick's.
+   The true figure is above 0.95, and the thesis should report the measurement
+   and its limit rather than the floor as a result.
+2. **The route ceiling of 43% is understated.** Stage 2 counted 1,134
+   companies with a website on the page; the model reads websites for
+   companies stage 2 filed as "profile only" or "no link", which also means
+   the stage 4 search queue of 1,022 is over-inclusive.
+3. **The model beats the Python heuristic at the one task Python was assumed
+   to do exactly.** §3.13f argues stages 2 and 4 need no model because
+   "deciding whether a link points at the association or at a company is a
+   hostname comparison, which Python does exactly and for free". That holds
+   for CLASSIFYING a link. It does not hold for PAIRING a link to a company,
+   and pairing is where the value is. The production pipeline should prefer
+   the model's pairing over the positional one.
+
+This is a design conclusion, not a number, and it was only reachable because
+the metric disagreed with a count: a page offering 1,134 websites cannot
+yield 1,405 correct ones, so something had to be wrong, and the first guess
+about what was wrong was itself wrong.
+
+### Runtime, measured per company rather than per page
+
+Seconds per page is not comparable across a corpus where one page has 14
+companies and another has 385. Per company:
+
+| arm | model | prompt | s/page | s/company | F1 |
+|---|---|---|---:|---:|---:|
+| names | llama3.1:8b | few_shot | 18 | **0.36** | 0.948 |
+| names | qwen3.5:9b | zero_shot | 26 | 0.50 | **0.962** |
+| names | qwen3.5:9b | multi_stage | 46 | 1.00 | 0.930 |
+| records | llama3.1:8b | few_shot | 81 | **1.89** | 0.918 |
+| records | qwen3.5:9b | few_shot | 105 | 2.35 | **0.940** |
+| records | llama3.1:8b | multi_stage | 106 | 3.32 | 0.811 |
+
+Three results:
+
+- **A full record costs about 5 times a name**, 2.35 against 0.50 seconds per
+  company for the best configuration. That is the price of the fields
+  Neovation asked for, stated in a unit that scales.
+- **Multi-stage costs roughly double for worse accuracy**, in both arms and
+  for all three models. It is dominated on both axes and should not be
+  recommended.
+- **The accuracy leader is not the speed leader.** llama's few-shot is 28%
+  faster per company than qwen3.5's best and gives up 1.4 points of name F1.
+  On a deadline that trade is worth stating rather than hiding behind a
+  single ranking.
+
+Scaling to the production target, 291 networks at roughly 88 companies each,
+about 25,600 companies on one GPU:
+
+| | best accuracy (qwen3.5 few-shot) | fastest (llama few-shot) |
+|---|---:|---:|
+| names only | ~3.6 h | ~2.6 h |
+| full records | **~16.7 h** | ~13.4 h |
+
+So the whole production database is under a day of compute either way, which
+is the answer to "is this feasible at scale" and did not need to be guessed.
+
+### Total runtime, and what the failure handling was worth
+
+| grid | runs | model time | wall clock | lost to overhead |
+|---|---:|---:|---:|---:|
+| names, before the fixes | 1,800 | 25.2 h | 46.5 h | **21.3 h, 46%** |
+| records, after the fixes | 540 | 30.1 h | 30.2 h | **0.1 h, 0.3%** |
+| total | 2,340 | 55.3 h | 76.7 h | |
+
+The record arm ran Monday 28 September 18:49 to Wednesday 30 September 01:03,
+202 seconds per run, 13 failures in 540.
+
+**The two rows differ only in when they ran.** The names grid predates the
+streaming deadline (§3.15) and the token cap (§3.16); the record grid came
+after. Same machine, same models, same kind of work. Turning a **46%
+overhead into 0.3%** is therefore a measured result of that work, not an
+impression of it, and it is the single largest efficiency figure in the
+project. Nothing about the models changed.
+
+The names row counts 1,800 rather than 1,620 because it includes the 180
+retries, and its wall clock spans three separate launches.
+
+A caution for anyone repeating this: 55.3 hours of model time is the research
+cost of comparing 18 configurations twice over. The production cost of
+running the winner once is about 17 hours. Conflating the two overstates what
+this approach costs to operate by a factor of three.
+
+## 3.18 Stage 3 on 30 pages, and a cleaning rule that deleted 183 pages (2026-09-28)
+
+463 profile pages fetched and read. The first run looked like a collapse
+against the 10-page study:
+
+| field | 30 pages | 10 pages |
+|---|---:|---:|
+| company website | 49.2% | 84.8% |
+| street | 53.4% | 91.1% |
+| postcode | 53.2% | 90.2% |
+| city | 53.4% | 91.1% |
+| phone | 39.7% | 42.0% |
+| email | 38.1% | 33.0% |
+
+The shape of the drop is the clue. Website, street, postcode and city fall
+together by about 38 points while phone and email do not move. A model that
+had got worse would not spare two fields.
+
+Per network, one page is responsible:
+
+| page | pages | website found |
+|---|---:|---:|
+| 084 OSB Alliance | 183 | **1%** |
+| 045 | 132 | 87% |
+| 039 | 51 | 94% |
+| 004 | 31 | 77% |
+| 076 | 14 | 100% |
+
+084 alone is 183 of 463. Excluding it the website rate is about 81%, in line
+with the earlier study. So nothing had degraded; one network returned nothing.
+
+### The cause
+
+The pages fetched correctly: 98 KB each, real content, correct URLs. But
+cleaning reduced them to **152 words** of navigation. Tracing the company's
+own email address through the markup:
+
+```
+<a href="mailto:patricka@element.io">
+  inside <p>
+  inside <div class="entry-content">
+  inside <header class="entry-content-header">   <- STRIPPED
+  inside <article>
+  inside <main>
+```
+
+`header` is in `STRIP_TAGS` to remove site banners. This WordPress theme puts
+the article's own content header in a `<header>`, which is valid HTML5, and
+the member record lives there. The cleaner therefore kept the menu and threw
+away the page.
+
+The model was not wrong either. Given 152 words of navigation it returned
+`Factorial GmbH` and `Camptocamp Germany GmbH`, the only company names in the
+text, from a sidebar of other members.
+
+### The fix, and why it is not applied everywhere
+
+`header`, `footer`, `aside` and `nav` are site chrome only when they sit
+OUTSIDE the main content. Inside `<main>` or `<article>` they are part of the
+article. `cleaner.process(..., keep_inner_sections=True)` applies that rule
+and stage 3 uses it.
+
+Listing pages deliberately do not, and this was measured rather than assumed.
+Applying the same rule to the 30 ground-truth pages changes 7 of them, adding
+between 1 and 63 words, and **0 of the added lines are companies in the answer
+key**. What they add is "Themenfelder", "Energie- und Klimapolitik",
+"Kontakt", "Mitglied werden". On a listing page that is precision the model
+would lose, and it would invalidate 1,620 completed runs to gain nothing.
+
+So the two page types are cleaned differently, for a stated reason: a listing
+page keeps its content in `<main>` and everything else is chrome, while a
+single-company page may keep the record in a `<header>` within the article.
+Both directions are asserted in `test_metrics.py`.
+
+### Stage 3 after the fix, and how the result was verified
+
+| field | before | after |
+|---|---:|---:|
+| company website | 49.2% | 85.2% |
+| street | 53.4% | 88.2% |
+| postcode | 53.2% | 88.0% |
+| phone | 39.7% | 71.7% |
+| email | 38.1% | 72.1% |
+
+084 went from 1% to 91%. Phone and email nearly doubled across the corpus,
+so the same stripped `<header>` had been hiding contact details on other
+networks too. The overall website rate, 85.2%, now matches the 10-page study's
+84.8%, which is the independent check that nothing else was wrong.
+
+"The model returned something" is not "the model returned the right thing", so
+three checks, not one:
+
+- **Every returned URL was verified present in the page text and not the
+  association's own domain.** 85.2% returned, 85.2% verified, 0 rejected.
+- **165 distinct hosts from 183 members** on page 084. Copying one URL or
+  inventing from the name would show as a few hosts repeated.
+- **A hand-checked sample**: Element Software to element.io, GONICUS to
+  gonicus.de, Nextcloud to nextcloud.com.
+
+Two small defects remain, both recorded rather than fixed. Pages 009 and 088
+have a listing URL in the profile column, so `link_coverage.py` classified a
+pagination link as a profile link: 2 of 463. And page 083's 16 pages carry the
+web agency's address, `kontakt@evermind.de`, on 12 companies, which is the
+footer-contamination problem described below.
+
+### 36% of the email field was written backwards
+
+Found by asking which email domains appear for more than one company, a check
+meant to catch footer contamination. It returned domains that are not domains:
+
+```
+  76  ofni        6  selas        5  tcatnoc        3  tkatnok
+```
+
+Those are "info", "sales", "contact" and "kontakt" reversed. The pages store
+the address backwards and flip it with CSS, which hides it from spam crawlers
+and equally from us. Of 331 addresses: 211 valid, **119 written backwards**,
+1 using "(at)", 1 unrecognisable.
+
+```
+ed.snorcim5@tkatnok   ->  kontakt@5microns.de
+moc.puorgsidokka@anej ->  jena@akkodisgroup.com
+hpi-info(at)hpi.de    ->  hpi-info@hpi.de
+```
+
+The model reported exactly what the page contained, so this is a page
+convention to undo, not a model error. `_clean_email` in `extractor.py`
+handles reversal, `(at)`/`(dot)` spelling and the two combined, and sits
+beside `_clean_url` because it is the same kind of repair. A valid address is
+returned untouched and an unrecognisable one is kept rather than blanked, both
+asserted in `test_metrics.py`: over-correcting a field is how a repair becomes
+the next bug.
+
+### Still open: contact details shared between companies
+
+`kontakt@evermind.de` on 12 companies is a web agency's address in a footer.
+`+49 341 253966-0` appears on 10. A company's own contact details should be
+close to unique to it, so anything shared across several companies is a
+footer, an agency or the association. Not yet handled. It matters more than
+its volume suggests, because a wrong-but-plausible phone number is the error
+nobody catches, the same argument as for fabricated URLs in §3.13h.
+
+### Worth carrying into the write-up
+
+A preprocessing rule that is right on one page type can silently destroy
+another, and it fails without any error: 183 pages returned a valid, parseable,
+completely empty answer. It was found only because the per-network breakdown
+was checked instead of the average. The average said 49%, which is a number
+that describes nothing that exists.
+
+The email discovery came the same way. Both were found by asking "which
+groups does this average hide?" rather than by any test, and neither would
+have been visible in a pooled figure.
+
+## 3.17 Stage A complete on 30 pages: the model and prompt comparison (2026-09-28)
+
+1,620 configurations: 3 models x 3 prompt strategies x 2 JSON modes x 30
+pages x 3 repetitions, against 2,638 hand-labelled companies. 1,600 produced
+a clean answer; the 20 that did not are model behaviour and are counted in
+the numbers below rather than dropped (§3.16).
+
+`F1/net` is the mean of per-page F1, which weights a 14-company page the same
+as a 385-company one. `pooled` counts every company once. Both are given
+because they answer different questions and they disagree in places.
+
+| model | prompt | mode | F1/net | pooled | prec | rec | fail | sec |
+|---|---|---|---:|---:|---:|---:|---:|---:|
+| qwen3.5:9b | zero_shot | prompt_only | **0.962** | 0.958 | 0.927 | 0.991 | 0 | 25 |
+| qwen3.5:9b | zero_shot | constrained | **0.962** | 0.958 | 0.927 | 0.990 | 0 | 26 |
+| qwen3.5:9b | few_shot_schema | constrained | 0.958 | 0.955 | 0.921 | 0.991 | 0 | 24 |
+| qwen3.5:9b | few_shot_schema | prompt_only | 0.958 | 0.955 | 0.921 | 0.991 | 0 | 21 |
+| llama3.1:8b | few_shot_schema | constrained | 0.947 | 0.950 | 0.969 | 0.932 | 1 | 18 |
+| llama3.1:8b | zero_shot | constrained | 0.939 | 0.957 | 0.961 | 0.954 | 0 | 16 |
+| llama3.1:8b | zero_shot | prompt_only | 0.926 | 0.943 | 0.962 | 0.924 | 3 | 16 |
+| llama3.1:8b | few_shot_schema | prompt_only | 0.926 | 0.934 | 0.967 | 0.903 | 3 | 18 |
+| qwen2.5-coder:7b | zero_shot | prompt_only | 0.909 | 0.912 | 0.970 | 0.860 | 0 | 18 |
+| qwen3.5:9b | generic_multi_stage | constrained | 0.903 | 0.932 | 0.954 | 0.911 | 3 | 46 |
+| qwen3.5:9b | generic_multi_stage | prompt_only | 0.903 | 0.932 | 0.954 | 0.911 | 3 | 46 |
+| qwen2.5-coder:7b | zero_shot | constrained | 0.901 | 0.927 | 0.973 | 0.886 | 0 | 18 |
+| qwen2.5-coder:7b | generic_multi_stage | constrained | 0.879 | 0.930 | 0.975 | 0.890 | 0 | 38 |
+| qwen2.5-coder:7b | generic_multi_stage | prompt_only | 0.866 | 0.901 | 0.974 | 0.839 | 3 | 39 |
+| llama3.1:8b | generic_multi_stage | constrained | 0.836 | 0.865 | 0.958 | 0.788 | 1 | 40 |
+| llama3.1:8b | generic_multi_stage | prompt_only | 0.818 | 0.848 | 0.957 | 0.760 | 3 | 40 |
+| qwen2.5-coder:7b | few_shot_schema | constrained | 0.669 | 0.711 | 0.921 | 0.580 | 0 | 13 |
+| qwen2.5-coder:7b | few_shot_schema | prompt_only | 0.647 | 0.614 | 0.906 | 0.464 | 0 | 12 |
+
+### Five results
+
+**1. The simplest prompt wins, and prompt engineering bought nothing.**
+Zero-shot is the best or joint-best strategy for every model. Few-shot with a
+schema example never beats it by more than noise and is catastrophic for one
+model. The multi-stage strategy is worse than zero-shot for all three models
+and takes two to three times as long. This is the answer to the thesis
+question about generic prompt strategies, and it is negative: on this task,
+elaboration does not help.
+
+**2. Constrained decoding buys reliability, not accuracy.** On the winning
+configuration the two modes are identical to three decimal places, 0.962 and
+0.962. What changes is failures: llama zero-shot fails 0 times constrained
+and 3 times free, few-shot 1 against 3, and qwen2.5-coder multi-stage 0
+against 3. Grammar-forced output does not make a model more correct, it makes
+it parseable. Reported as such rather than as an accuracy result.
+
+**3. Prompt strategy interacts with the model, so a single ranking is wrong.**
+Few-shot is qwen2.5-coder's worst strategy at 0.647, a 26-point drop from its
+own zero-shot 0.909, while for qwen3.5 the same strategy costs 0.004. A study
+that tested one model would have concluded few-shot is fine, or that it is
+ruinous, depending on which model it picked.
+
+**4. The models differ in the KIND of mistake, not just the amount.**
+
+| | precision | recall | of 2,638 companies |
+|---|---:|---:|---|
+| qwen3.5:9b zero-shot | 0.927 | 0.991 | misses 24, returns 206 not in the key |
+| llama3.1:8b few-shot constrained | 0.969 | 0.932 | misses 179, returns 79 not in the key |
+| qwen2.5-coder:7b zero-shot | 0.973 | 0.860 | misses 369, returns 69 not in the key |
+
+"Not in the key" is not the same as invented. Some of those 206 will be page
+furniture and some will be real members the answer key missed, and the two
+cannot be told apart from these numbers. That is precisely what the planned
+consensus-disagreement audit is for: a name all three models return and the
+key does not have is far more likely to be a gap in the key than a shared
+hallucination. Until that audit runs, qwen3.5's precision is a lower bound.
+
+qwen3.5 wins F1 by finding almost everything and being less careful about
+what it returns. llama returns less and is more often right. **Which is
+better is not a measurement, it is Neovation's decision**: a missing company
+is a visible gap that a later stage can fill, while a false company is a
+plausible-looking record nobody catches, which is the argument made about
+fabricated URLs in §3.13h. If precision is what matters for the database,
+llama with few-shot and constrained decoding is the honest recommendation
+despite losing on F1.
+
+**5. Multi-stage remains the worst idea in the study.** Worst or near-worst
+for every model, and the slowest by a factor of two to three. §3.13c-2 found
+why: the validation call deletes correct entries. Recall confirms it, at
+0.760 to 0.911 against 0.86 to 0.99 for single-call strategies. It is also
+where 14 of the 20 permanent failures sit.
+
+### What this does not yet say
+
+Names only. §3.13j established that name accuracy alone picks the wrong
+model, because the website field behaves differently: multi-stage scores
+acceptably on names and collapses to 0.217-0.328 recall on websites, since a
+deleted record takes its website with it. The record arm has to run before
+any of this becomes a production recommendation.
+
+## 3.16 The context window, not the model: how a 4% tokenizer difference destroyed 102 runs (2026-09-28)
+
+The most useful result of the 30-page names grid, and it is about the harness
+rather than about any model. Worth the space because the conclusion it nearly
+produced ("qwen3.5 is fragile on large pages") would have been wrong and
+publishable.
+
+### What it looked like
+
+158 of 1,620 runs failed. Split by cause, they were two unrelated problems:
+
+| model | hangs | unreadable JSON | of runs |
+|---|---:|---:|---:|
+| llama3.1:8b | 20 | 9 | 540 |
+| qwen2.5-coder:7b | 33 | 3 | 540 |
+| qwen3.5:9b | **0** | **84** | 540 |
+
+The obvious reading is that qwen3.5 cannot produce valid JSON. It is also
+wrong. The failures were not spread at random: on pages 005, 050, 079, 082
+and 088 qwen3.5 failed **every** run, every strategy, every mode, every
+repetition, while llama scored 297 of 296 on page 050. Determinism at
+temperature 0 says that is structural, not unlucky.
+
+### Ruling things out, including one of my own explanations
+
+Truncation was checked first by dividing each run's token counts by its chunk
+count. That gave about 5,400 per call against a limit of 8,192, which looked
+like ample room, and truncation was set aside. **That step was wrong.** The
+counts are summed over chunks, and the chunks are not equal: page 050's third
+chunk is 27 output tokens. Dividing by three understated the real chunks
+badly. A confounded average is exactly the kind of number this project has
+been bitten by before (§3.13g, and the header of `test_metrics.py`).
+
+The mistake was only caught because the raw reply was finally looked at, which
+required re-running one call, because the benchmark stores parsed names and
+not the model's text. Written up as `debug_one_call.py`.
+
+### What the text showed
+
+```
+chunk 1: UNREADABLE  2269 chars, wrote 726 tokens
+LAST 400: ... "FLAIR Modellbrillen Dr.
+ends with '.'   balanced braces: False
+```
+
+Cut off mid name. Then the counts, per call this time:
+
+| chunk | input | output | total | result |
+|---|---:|---:|---:|---|
+| 1 | 7,466 | 726 | **8,192** | cut off |
+| 2 | 6,129 | 998 | 7,127 | 114 names |
+| 3 | 558 | 27 | 585 | 3 names |
+
+8,192 to the token. Re-running chunk 1 with a 16,384 window returned **198
+complete names**, needing 1,760 output tokens.
+
+### The actual cause
+
+`CHUNK_TOKEN_BUDGET = 6000` is meant to leave room inside an 8,192 window. It
+measures the page text only, at `CHARS_PER_TOKEN_ESTIMATE`, and excludes the
+system prompt and instructions. Prefilling every chunk of all 30 pages with
+the largest wrapper and reading the real count back:
+
+| page | biggest chunk | room left at 8192 |
+|---|---:|---:|
+| 079 | 8,123 | **69** |
+| 088 | 7,845 | 347 |
+| 005 | 7,618 | 574 |
+| 050 | 7,573 | 619 |
+| 086 | 7,315 | 877 |
+
+A 6,000-token budget produces a measured 8,123-token prompt: a **35%
+underestimate**. On page 079 the model had 69 tokens in which to answer.
+
+**Why qwen3.5 and not llama.** On page 050 llama read 13,557 tokens where
+qwen3.5 read 14,153, a 4% difference in how the two tokenizers handle German
+compound words. The window is a cliff rather than a slope, so a 4% difference
+decided between a complete answer and a destroyed one. Nothing about model
+quality is involved.
+
+### What was checked before changing anything
+
+Ollama truncates an over-long input silently and never raises, so a cut input
+would finish normally, report no error, and merely score badly. Two checks:
+
+- Of the 684 single-call runs, where the recorded input is one call's input,
+  **0** had an input at or over 8,100 and **0** were at the total ceiling.
+- Across all 30 pages, measured directly, **0 chunks exceed 8,192**. The
+  largest is 8,123.
+
+A truncated *reply* also cannot hide, because unbalanced braces leave
+`_salvage_json` with no candidate and the run is recorded with an error. So
+all of the damage is inside the 158 known failures, and none of it leaked
+into the results that look fine.
+
+### The fix, and why the window rather than the chunker
+
+`NUM_CTX` 8192 -> **16384**. The chunker is left alone on purpose: changing
+`CHUNK_TOKEN_BUDGET` re-chunks every page, which changes the input to every
+call and invalidates all 1,462 completed runs. Raising the window changes
+nothing for a run that never reached the limit, so those runs stay valid and
+only the 158 are re-run. Guarded in `test_metrics.py` against the measured
+worst case so the window cannot quietly drop back.
+
+### What the re-run then exposed: two failures that are results, not bugs
+
+Raising the window recovered 29 of the first 51 retries. The 22 that failed
+again split into three kinds, and only one of them is the harness:
+
+**Invalid JSON without a grammar, and only without a grammar.** Every repeat
+failure on page 079 is `prompt_only`; none is `constrained`. Input 8,277 and
+output 1,052 against a 16,384 window, so nothing was truncated. The model
+simply wrote JSON that does not parse, most likely an unescaped quote inside
+a German company name. **This is the measurement, not an obstacle to it**:
+the constrained-versus-prompt-only comparison exists to find exactly this,
+and page 079 is where it shows. It is reported as a failure of that
+configuration, not repaired.
+
+**Repetition loops.** On 077, 082 and 088 the model kept generating until a
+clock stopped it. Under the old 8,192 window these looked like ordinary
+truncation and ended quickly; with 16,384 the same loops ran for a full 30
+minutes each. The behaviour did not change, only the time it took to notice.
+
+The cost, measured over 51 retries spanning 7.71 hours:
+
+| outcome | runs | seconds each | hours total |
+|---|---:|---:|---:|
+| worked | 28 | 94 | 0.73 |
+| invalid JSON | 9 | 43 | 0.11 |
+| runaway, stopped by the cap | 6 | 1,828 | 3.05 |
+| timeout, also a runaway | 7 | 1,967 | 3.82 |
+
+**6.9 of 7.7 hours went to 13 runs that failed anyway.**
+
+A time limit is the wrong instrument here, for the same reason a single
+deadline could not separate slow from stuck (§3.15). Tokens separate them
+cleanly, because honest answers are nowhere near the limit: the largest real
+reply measured is 1,760 tokens and the next 1,550, while a loop runs
+unbounded. `NUM_PREDICT = 4096` catches a loop in about two minutes, leaves
+better than twice the headroom over any honest reply, and still fits inside
+the window alongside the largest chunk (8,123 + 4,096 = 12,219 of 16,384).
+All three bounds are asserted in `test_metrics.py`, since each of them was
+wrong at some point in this investigation.
+
+### For the write-up
+
+1. Reported accuracy was measured with the failures excluded, and the
+   failures were the densest pages. Any figure computed before the re-run
+   flatters every model, and flatters qwen3.5 most, since it lost five whole
+   pages while llama kept them.
+2. A fixed context window turns a small tokenizer difference into a total
+   failure on exactly the inputs that matter most, the pages with the most
+   companies. When comparing models on one machine, the window is a property
+   of the harness that can masquerade as a property of the model.
+3. Store the model's raw reply, not only the parsed result. Three hours went
+   into inferring from token counts what one saved string would have shown
+   immediately, and one of those inferences was wrong.
+
+## 3.15 Half the run time went to hung requests, and the deadline that hid it (2026-09-27)
+
+Found while watching the 30-page names grid, not by a test. Worth reporting
+because it is a property of serving models locally, not a property of this
+code, and anyone repeating the work on one GPU will meet it.
+
+### What the numbers said
+
+At 1,053 of 1,620 runs:
+
+| | |
+|---|---:|
+| wall clock | 22.6 h = 81,360 s |
+| model time recorded in the results file | 38,974 s = 10.8 h |
+| unaccounted for | 42,386 s |
+| 47 timed-out runs x the 900 s deadline | 42,300 s |
+
+The two bottom figures agree to within 86 seconds. **More than half the run
+was spent waiting on connections that were never going to answer.**
+
+### Why it was invisible
+
+`latency_seconds` is accumulated as `result.latency_seconds += elapsed`, which
+only executes after a call returns. A call that hangs never returns, so its
+900 seconds were never written anywhere. Page 077 reports 10.8 s for a run
+that actually occupied over 15 minutes: chunks 1 and 2 finished normally, and
+chunk 3 hung.
+
+This is the same failure shape as the scoring bugs in §3.13g and the test
+file's header. Nothing raised, nothing looked wrong, and the number that was
+printed was confidently incorrect. The only reason it surfaced is that the
+wall clock and the sum of the latencies disagreed, and the gap was checked.
+
+A consequence for the results: failed runs are excluded from the accuracy
+averages, and the failures concentrate on the largest pages (079, 086, 077,
+082, 091, 050). Any accuracy figure computed before those gaps are filled is
+therefore slightly flattering, because it silently drops the hardest cases.
+
+### Why the obvious fix was wrong
+
+The first instinct was to lower the deadline. The 30-page data supports it:
+median call 12.5 s, 99th percentile 113 s, slowest 124 s. A 360 s deadline
+looked like ample headroom.
+
+Checking the archived 10-page study refuted this. A legitimate single call
+there took **468 s**. A 360 s deadline would have killed real work, and
+because the victims would be the biggest pages, it would have biased the
+results toward easy pages while reporting nothing unusual.
+
+The 2,769 s figure quoted in the old `config.py` comment was a whole
+multi-stage run of six calls, not one call. Reading it as a per-call figure
+was the error that made 360 s look safe.
+
+### The fix: two deadlines instead of one
+
+One deadline cannot separate **a call that is slow** from **a call that is
+dead**. Any single value is either too tight for the first or too loose for
+the second, which is exactly the trap above.
+
+Reading the reply as it streams separates them, because the deadline then
+applies to the gap between pieces of text rather than to the whole call:
+
+- `STREAM_GAP_S = 180` a model that is working emits something every few
+  seconds however long the total takes. A dead connection emits nothing and
+  is caught in three minutes instead of fifteen. A slow call is never cut off,
+  no matter how slow.
+- `REQUEST_TIMEOUT_S = 1800` a total cap for the opposite failure, a model
+  that never stops generating.
+- One retry, on transport errors only. A hang is usually the connection dying
+  rather than the work being hard, so a retry recovers the data point. The
+  total cap is deliberately **not** retried: a model still generating after
+  half an hour would just spend another half hour failing the same way.
+
+Streaming does not change what the model generates. Temperature, seed,
+`num_ctx` and the prompts are untouched, so rows produced before and after
+this change stay comparable. The retry clock starts fresh on the second
+attempt, because `latency_seconds` is meant to be the cost of the model's
+work, and a dead connection is not that.
+
+Covered by `test_streaming_calls` in `test_metrics.py`: the pair that matters
+is that a slow reply survives and a stuck one raises. A silent empty string
+would be worse than an error, because it would score as "the model found
+nothing" and enter the results as a real answer.
+
+### For the write-up
+
+Two points, both measured rather than asserted:
+
+1. Throughput on a single local GPU is governed by failure handling at least
+   as much as by model speed. Halving the wasted waiting is a larger win here
+   than any difference between the three models.
+2. A timing metric that only records successes will understate the true cost
+   of a strategy, and will understate it most on exactly the inputs that are
+   hardest. Wall clock and the sum of recorded latencies should be reconciled
+   as a matter of course.
+
+## 3.14 Ground-truth expansion to 30 pages: how the 20 new pages were chosen (2026-09-22)
+
+Hendro asked for 20 more ground-truth pages, chosen to be representative:
+"unique and different", not 20 of the same kind. The selection is purposive
+and stratified. Every step is recorded so it can be repeated or challenged.
+
+### Step 1: which pages can be labelled at all
+
+The Finalv1 sheet (Yusif and Diego) lists 291 networks. Their saved member
+pages (`results/html_cache_finalv1/`, survey of 2026-08-21) contain a member
+list in the HTML for **153**. The rest are rendered by JavaScript (85), nearly
+empty (41) or unreachable or erroring (12). Only the 153 can be labelled from
+the page the model actually reads. Removed from those:
+
+- **6 already in the ground truth:** BDEW, BVMed, German Water Partnership,
+  Life Science Nord, Medical Valley EMN, SPECTARIS.
+- **14 where legal forms appear only in running text**, not as list entries.
+  This is the entries-versus-prose test round 1 already used: at least 10
+  short lines carrying a legal form.
+
+### Step 2: describe every page without a model
+
+Measured from the HTML for each remaining page (`results/finalv1_page_features.csv`):
+
+| property | how it was measured |
+|---|---|
+| layout | the dominant kind of entry: name linked to the company site, name linked to a profile page, name plus a separate "Web" link, logo whose image text holds the name, table, or plain text |
+| size | number of short lines carrying a legal form |
+| long page | split into two or more chunks for the model |
+| network type | ZIM or privately funded |
+| look-alike websites | pages whose CSS class vocabularies overlap by 60% or more are grouped: 5 groups covering 27 pages, the largest 11 EurA-managed ZIM sites |
+| manager | the consultancy running a ZIM network |
+
+Layouts across the 153 pages: company site 87, profile page 27, plain text
+20, separate "Web" link 10, logo grid 5, table 4.
+
+### Step 3: choose
+
+Rules: cover every layout; mix small, medium and large lists; include long
+pages; include ZIM networks, of which the first 10 pages have none; at most
+one page per look-alike group and per manager; spread sectors. A seeded,
+rule-based draft came first. Sample lines from every candidate were then read,
+which rejected four: **BVDM** (its members are regional associations),
+**WSM** (associations), **VDMA** (only the first 10 of thousands of members
+load) and **INPREC-TEC** (the link points to another association's list of
+about 430 companies). The final 20 were picked by hand from the checked pool,
+each with a recorded reason.
+
+### Step 4: pagination check
+
+The saved HTML was scanned for page links, "next" and "load more" buttons,
+pager elements, A-to-Z tabs that load separate pages, and stated member
+totals. Two of the 20 held only their first page and were replaced:
+
+- **PROFIBUS**: 27 of "over 500" members, with a "load more" button, replaced
+  by **Wirtschaftsvereinigung Stahl**.
+- **DSAG**: 137 of "over 4,000" companies, pages 1 to 27 and more, replaced by
+  **Deutscher Schraubenverband**.
+
+Six more were flagged and judged complete: the stated total matched the page,
+or the flag belonged to another part of the page. **BVIZ** shows one member
+category ("ordentliche Mitglieder"), a sub-list rather than pagination. The
+scan sees only the saved HTML, and a list that loads more on scrolling can
+leave no trace, so every page is also checked in a browser before labelling.
+
+### Step 5: are the pages still online (2026-09-24)
+
+Five weeks after the snapshot, each of the 20 addresses was requested again:
+
+- **18 answer normally.**
+- **LocaSenZ no longer exists**: its domain does not resolve (NXDOMAIN). It was
+  replaced by **MAGNA BIO**, from the same look-alike template family, same
+  layout, 16 companies, also split into two chunks. **SCAS**, another page in
+  that family, is dead as well.
+- **PlasticsEurope returns 403 to a script** but opens normally in a browser,
+  so it stays. It has to be opened in a browser when labelling.
+
+Labelling always uses the saved copy, so a dead page is not an obstacle; the
+swap was made because a page that can still be opened is easier to label
+against. **The disappearance itself is a result worth reporting**: 1 of 20
+member pages vanished within five weeks, and both dead pages belong to ZIM
+networks, which end when their funding ends. A company database built from
+these sources needs a refresh schedule, and the ZIM half of the corpus is the
+perishable part.
+
+### The 20 pages
+
+| id | network | type | layout | ~entries | why it is in the sample |
+|---|---|---|---|---:|---|
+| 074 | MAGNA BIO | ZIM | company site | 16 | the most common ZIM template: 11 near-identical EurA sites (replaces LocaSenZ, whose site went offline) |
+| 075 | KliWaTex | ZIM | company site | 31 | the textile ZIM template: 6 near-identical sites |
+| 076 | SmartFactory5G+ | ZIM | company site | 18 | the embeteco ZIM template: 4 sites |
+| 077 | Mikroalgen | ZIM | company site | 16 | the T+I ZIM template, split into 3 chunks |
+| 078 | AgrarCycle | ZIM | company site | 17 | ZIM network run by a university, not a consultancy |
+| 079 | VDGH | private | company site | 104 | large and split into chunks; some names have no link |
+| 080 | en2x | private | company site | 32 | clean medium list, energy sector |
+| 081 | Wirtschaftsvereinigung Stahl | private | company site | 44 | replaces PROFIBUS, whose page holds 27 of 500+ members; clean medium list, steel |
+| 082 | VOICE | private | company site | 328 | the largest page in the sample, 2 chunks |
+| 083 | BIM | ZIM | profile page | 11 | the only ZIM page that links names to profile pages |
+| 084 | Open Source Business Alliance e.V. | private | profile page | 40 | profile pages, IT sector |
+| 045 | OptoNet | private | profile page | 115 | names broken by invisible hyphens (Tech-no-lo-gie) |
+| 085 | PlasticsEurope Deutschland e.V. | private | plain text | 55 | name and city on one line |
+| 086 | Industrieverband Klebstoffe e.V. | private | plain text | 144 | long plain-text list, 3 chunks |
+| 087 | Verband deutscher Pfandbriefbanken e.V. | private | separate 'Web' link | 33 | separate 'Web' link; banks, not manufacturers |
+| 088 | BVIZ | private | separate 'Web' link | 116 | separate 'Web' link, 3 chunks; innovation centres |
+| 089 | Verband Schmierstoff-Industrie e.V. | private | logo grid | 84 | the only logo grid left in the pool |
+| 090 | SprayCloth | ZIM | table | 12 | the only ZIM table, with broken name fragments |
+| 091 | DGM | private | table | 112 | a table inside an annual report page |
+| 092 | Deutscher Schraubenverband e.V. | private | table | 122 | replaces DSAG, whose page is 1 of 27+; a table with no pagination signs |
+
+Registered as ids 074 to 092 in `data/urls_73.csv`, plus 045 (OptoNet), which
+was already in the list. VDGH was already present as 055, but that saved page
+is empty, so round 2 uses the Finalv1 address as 079. Full record:
+`results/ground_truth_expansion_20.csv`.
+
+### The 30-page sample against the corpus
+
+| layout | first 10 | new 20 | 30 pages | share of the 30 | share of the 153 |
+|---|---:|---:|---:|---:|---:|
+| company site | 1 | 9 | 10 | 33% | 57% |
+| profile page | 3 | 3 | 6 | 20% | 18% |
+| plain text | 3 | 2 | 5 | 17% | 13% |
+| separate "Web" link | 2 | 2 | 4 | 13% | 7% |
+| logo grid | 1 | 1 | 2 | 7% | 3% |
+| table | 0 | 3 | 3 | 10% | 3% |
+
+Also: 7 of 30 pages are ZIM networks (23%, against 28% of the 153), and 10 of
+30 are long pages (2 in round 1, 8 in round 2).
+
+**Rare layouts are over-represented on purpose**, because that is where
+extraction is most likely to fail. Results should therefore be reported per
+layout as well as pooled, so the over-representation does not distort the
+headline figure.
+
+### The labelling rule, and what it revealed about round 1
+
+Ground truth records **exactly what the saved page shows**, as in round 1: the
+model and the answer key read the same document.
+
+The pagination check also found that **4 of the first 10 pages are only the
+first page of a longer list**: BVMed (page 1 of at least 3, "1-50, 51-100,
+101-150"), Life Science Nord (page 1 of 7), Medical Valley EMN (a "Weiter"
+button) and BDEW (letter A, already known). Their scores remain valid as a
+measure of extraction, since model and answer key saw the same page. But the
+deliverable's coverage ("752 of 760", §3.13n) describes the saved pages, not
+those networks' full membership.
+
+Across the 153 pages with a member list, 23 show clear pagination signs.
+`paginate.py` already follows URL-based pagination (`?page=2`, `?letter=B`);
+a JavaScript "load more" needs the browser fetcher. For the production run
+over all networks, pagination has to be handled at download time.
+
+### Labelling setup, and a silent failure it exposed
+
+The 20 worksheets (`data/ground_truth/<id>_<name>.txt`) are pre-filled by
+`make_ground_truth.py`, rules only, never a model. The first pre-fill left two
+pages empty: VSI (a logo wall, whose names exist only as image alt text) and
+vdp (a list printed as plain lines). Two rule-based sources were added for
+round 2: image alt texts, and lines of the cleaned page text carrying a legal
+form. VSI went from 0 to 90 candidates, vdp from 0 to 33, Klebstoffe from 27
+to 142. Each worksheet now also names the saved copy of the page, the exact
+file the model reads.
+
+**Silent failure.** Running `make_ground_truth.py --check` right after
+generating the worksheets turned all 20 **unedited** worksheets into answer
+keys and printed "30/30 worksheets complete. Ground truth ready". The check
+treated any existing worksheet as finished. Any benchmark run after that would
+have been scored against the unedited guesses, one of which listed 452
+"companies" and another "Zum Inhalt springen". It was caught by reading the
+output, and fixed three ways:
+
+- Worksheets carry a `# STATUS: TODO` line. `--check` turns only `DONE`
+  worksheets into answer keys, and removes any key left over for a `TODO` one.
+  Round-1 worksheets predate the line and count as done.
+- `benchmark.py` skips Stage A pages that have no answer key. Otherwise the
+  resume logic would treat an unscored run as finished and never repeat it.
+- Known-answer tests for the status line and worksheet parsing (93 checks).
+
+The 10 round-1 answer keys were compared with the copies made on 2026-09-15:
+all 761 names are identical, so nothing from round 1 was changed.
+
+### The finished ground truth (2026-09-26)
+
+**30 pages, 2,638 companies**, 760 from round 1 and 1,878 from the 20 new
+pages. Labelled by hand from the saved copies, never from a model.
+
+| route | companies | share | who can supply the website |
+|---|---:|---:|---|
+| website printed on the page | 1,134 | 43% | stage 1, the model |
+| profile page only | 482 | 18% | stage 3, one fetch each |
+| no link at all | 1,022 | 39% | stage 4, web search |
+
+The ten-page corpus gave 63 / 15 / 22; the thirty-page corpus is harder,
+because the new pages were chosen for variety rather than convenience. That
+shift is itself a result: **the share of companies whose website is simply
+printed next to them falls from 63% to 43%** once the sample stops being
+dominated by three generous directories.
+
+**Checks run before freezing**, all 30 answer keys: duplicates, contact
+details, filter entries, addresses left on a line, and whether every entry
+appears in the text the model receives. 22 pages were clean. The corrections:
+
+- **8 entries removed** that exist on the live sites but not in the saved
+  copies. They were typed while labelling from the browser. Left in, every
+  model would take a guaranteed miss. Recorded here because the originals are
+  not kept as files: 079 VDGH "Applyo Jena GmbH", "mevida Diagnostika GmbH";
+  082 VOICE "KAMAX Holding GmbH & Co. KG", "KKH Kaufmännische Krankenkasse",
+  "Kuraray Europe GmbH", "Oventrop GmbH & Co. KG"; 088 BVIZ "Artprojekt Nature
+  & Nutrition GmbH", "Augsburger Innovationspark GmbH". Checked against the
+  live sites on 2026-09-26: four are still there (the two VDGH ones, Kuraray,
+  Augsburger Innovationspark); for the other four the live page needs a
+  browser, so it cannot be told either way. Giorgi decided to keep the keys
+  describing the snapshot (2026-09-26).
+- **2 paste typos fixed** on DGM ("EurofinsQualitech AG", "TEGnologyApS").
+- **One bug in the checker itself**: the address stripper turned "Laser 2000
+  GmbH" into "Laser" and "BSK 1818 AG" into "BSK", because a four-digit number
+  followed by a word looks like a postcode and a city. A tail carrying a legal
+  form is now never treated as an address.
+- Flagged and deliberately kept: names that differ from the page only in
+  spacing or punctuation ("ChemCologne e. V." in a logo's alt text, "( Pty )",
+  "GLOCK Ges.m.b.H ."), since scoring ignores both.
+
+The answer keys and worksheets are frozen in
+`data/ground_truth_frozen_2026-09-26/`, so any later correction stays
+traceable.
+
+### Predictions to check after the 30-page run, written before it
+
+Recording these now, while labelling, so they are predictions rather than
+explanations after the fact. Report per layout, not only pooled.
+
+- **074 MAGNA BIO (noticed by Giorgi while labelling).** Every member is
+  printed as a name, then an address block, then a paragraph of prose about
+  the company. 3,141 words for 23 members, two chunks. The pre-fill offered 45
+  candidates for 23 real members, most of the surplus being sentence
+  fragments. Expect low precision here: the model has to pick one name line
+  out of a page that is mostly prose, and the prose repeats company and
+  institute names. Several of the EurA-template ZIM pages are built this way.
+- **078 AgrarCycle (predicted by Giorgi while labelling).** Each member is
+  printed as a name, then a line "Branche: <what the company does>", then
+  prose. 19 such lines. He expects models to return the trade description as
+  a company name. Evidence that the trap is real: one of those 19 lines ended
+  up in the hand-written answer key itself before it was caught.
+- **080 en2x.** Two members share one line, the first ending in a comma
+  ("Gunvor Raffinerie Ingolstadt GmbH," / "Gunvor Deutschland GmbH"). Expect
+  both models and humans to return them as one company.
+- **089 VSI, the logo grid.** Names exist only as image alt text. Whether a
+  model sees them at all depends entirely on the cleaner, not on the model.
+- **091 DGM and 092 Schraubenverband, tables.** Rows carry extra columns
+  (products, locations); expect names returned with the extra cell text
+  attached.
+- **085 PlasticsEurope.** Every line is "Name, City". Expect the city to be
+  returned as part of the name, which the scorer counts as wrong.
+- **045 OptoNet.** Names contained soft hyphens, invisible in the browser but
+  present in the text the model reads. The cleaner now removes them (below),
+  so this page is no longer expected to be hard for that reason.
+
+Also noted while labelling: many members on 074 are institutes and
+universities with no legal form in their name, so the legal-form estimate used
+for selection (16) understated the real count (23). The estimates in the table
+above are lower bounds for pages of that kind.
+
+### Invisible characters, and a page decoded with the wrong character set (2026-09-24)
+
+Giorgi reported "weird characters mixed into every word" while opening the
+OptoNet worksheet. Two separate faults sat behind it.
+
+**1. The page uses soft hyphens.** OptoNet puts U+00AD inside almost every
+word so the browser can break lines: "Tech<SHY>no<SHY>lo<SHY>gies". They are
+invisible on screen but sit in the text a model reads, and scored literally
+they split one company into fragments. Seven of the 30 sample pages carry such
+characters (soft hyphens, zero-width spaces, zero-width joiners).
+
+**2. One saved copy was decoded with the wrong character set.** The copy of
+OptoNet fetched on 2026-08-03 had every soft hyphen turned into the two
+letters "ôÙ", 457 times on one page. `fetcher.py` set the encoding from
+chardet's guess *before* looking at what the page declares, and OptoNet
+declares UTF-8 correctly. The copy taken by the Finalv1 survey on 2026-08-21
+is clean and is now the one in use. **Only this one page of the 30 was
+affected**, but the same fault would have corrupted names silently anywhere in
+the 291-network production run, and a browser shows nothing wrong.
+
+Fixes, with known-answer tests (111 checks):
+
+- `fetcher.pick_encoding` trusts the HTTP header first, then the page's own
+  `<meta charset>`, and only then chardet's guess.
+- `cleaner.strip_invisible` removes soft hyphens and zero-width characters
+  from the text the model reads, so the model never sees them.
+- The worksheet builder and `match_key` strip them as well, so an answer key
+  and a model answer cannot differ by an invisible character.
+
+The three affected worksheets (045, 079, 086) were rebuilt; none had been
+labelled yet.
+
+### The same company listed twice (2026-09-25)
+
+Industrieverband Klebstoffe lists Evonik Industries AG twice, once for
+Darmstadt and once for Marl, each with its own address and phone number; six
+names on that page repeat this way, 157 lines for 151 distinct companies.
+Across the labelled pages so far: 1,978 lines, 1,972 distinct companies.
+
+**The rule:** the answer key records the page as printed, repeats included,
+and **scoring counts distinct companies**. `score()` compares sets of
+normalised names, so a model that returns Evonik once scores 1.0 precision and
+1.0 recall against a key holding it twice, and one that returns it twice is
+not rewarded either. Network-level completeness counts distinct companies too.
+
+**Where this will need more care:** the record arm returns a name *with* an
+address, so Evonik Darmstadt and Evonik Marl are two different records there.
+Scoring records by name alone would merge them. If the record arm is scored
+per record rather than per company, the key has to become name plus postcode.
+Noted as a limitation rather than solved, since the deliverable's own
+uniqueness rule (Marco, 2026-08-07) is name plus city.
+
+### A scoring change the labelling exposed (2026-09-24)
+
+KliWaTex prints every member twice, once as a heading and once above its
+address, and the two printings do not always use the same spelling:
+
+| one printing | the other | scored before the fix |
+|---|---|---|
+| Wilfried Keßler Erdbau- **und** Abbruch GmbH | Wilfried Keßler Erdbau **&** Abbruch GmbH | two different firms |
+| Plauener Spitzen **&** Stickereien GmbH | Plauener Spitzen **und** Stickereien GmbH | two different firms |
+| A. Richter Kälte- **u.** Klimatechnik | A. Richter Kälte- **und** Klimatechnik | two different firms |
+
+A model copying the other spelling therefore took a miss and a false alarm for
+one company. `match_key` now drops the joining words `und`, `u` and `and`
+along with the legal suffix. Known-answer tests cover both directions: the
+spellings above must match, and "Siemens" must still not match "Siemens
+Energy", "Müller und Sohn" not "Müller und Tochter" (101 checks).
+
+Two consequences:
+
+- **Scores in `results/benchmark_results.csv` were computed with the old
+  matcher.** They stay as the record of the ten-page study; the 30-page run
+  recomputes everything with the new one. Do not mix the two in one table.
+- **The check surfaced a duplicate in round 1**: page 005 (automotive
+  thüringen) lists "SUR-TECH Surface Technology GmbH" and "Sur-Tech
+  Surface-Technology GmbH", one company under two spellings. Its answer key
+  holds 125 lines but 124 distinct companies, which is why the deliverable
+  audit in §3.13n counted 124 there. Worth deleting one line before the rerun.
+
+### Effort
+
+About 1,450 entries by the legal-form count, roughly twice round 1; VOICE
+alone has about 328. Real counts will differ, because names without a legal
+form are not in the estimate.
+
+### Limits of the method
+
+- The final choice involves judgement. It is purposive, not random; the
+  reason for every page is recorded.
+- The layout classification is heuristic.
+- Pagination detection sees the saved HTML only.
+
+---
+
+## 3.13o Cloud models through the Constructor Model API (2026-09-15)
+
+Constructor Learn's "Model" section has an API. A key is created under
+Model > API Keys and is shown **once**; requests go through a "knowledge
+model" the account owns (created private, via the API).
+
+**What the key reaches.** `GET /language_models` returned 92 entries from
+OpenAI, Google, Anthropic, xAI, Together AI and Constructor itself. Two of
+them match the local study's models:
+
+| cloud entry | hosted by | local counterpart |
+|---|---|---|
+| `llama3.1:8b-instruct-q4_K_M` | Constructor | `llama3.1:8b`, same quantisation as Ollama's default |
+| `Qwen/Qwen3.5-9B` | Together AI | `qwen3.5:9b` (quantisation of the hosted copy not known) |
+
+That allows a comparison the thesis does not otherwise have: **the same
+model run locally and hosted**, so any difference is attributable to the
+hosting rather than the model.
+
+**Measured on a two-company test request:**
+
+| check | result |
+|---|---|
+| knowledge model settings | no system message; nothing is added to our prompts |
+| latency | 4.6 to 6.4 s (`gpt-4.1-mini`), 15.3 s (`gemini-3.6-flash`) |
+| temperature 0 | accepted; whether it is applied is not yet verified |
+| token counts | always 0: cloud runs can report time, not tokens |
+| answer | **returned twice, concatenated**, for every model tried, with `stream` sent as the string "false" and as a real `false` |
+| `response_format` `json_object` | rejected: only `text` or `json_schema` are allowed |
+| `json_schema` | accepted for `gpt-4.1-mini`; rejected for `claude-haiku-4-5` ("not supported with this model"); accepted for `gemini-3.6-flash`, whose answer still came in a markdown fence, so not enforced |
+
+**Consequences for the comparison.** Cloud runs use `prompt_only`, the mode
+the local winners used, since constrained output is available for one
+provider only. Speed is compared on wall-clock time only.
+
+**The doubled answer, and why it is removed in code.** The pipeline's JSON
+repair would recover the first copy anyway, but it would flag every cloud
+answer as repaired and so misreport the cloud models' JSON reliability.
+`cloud_client.undouble` removes an exact second copy only; two different
+answers are left for the repair step (known-answer tests in
+`test_metrics.py`). This is a property of the platform and belongs in the
+limitations, not in the model comparison.
+
+---
+
+## 3.13n The full-record run fails silently on long pages, and the deliverable fix (2026-09-15)
+
+Counting the deliverable against the ground truth, instead of scoring each
+stage on its own, showed that the file from §3.13m held **401 of the 760**
+ground-truth companies.
+
+| network | members on page | in the file before the fix |
+|---|---:|---:|
+| SPECTARIS | 296 | 0 |
+| automotive thüringen | 124 | 71 |
+| the other eight | 340 | 330 |
+| **total** | **760** | **401** |
+
+SPECTARIS was known (§3.13k). automotive thüringen was not. No
+`llama3.1:8b` full-record run on that page, across all 18 (three strategies,
+two JSON modes, three repetitions), found more than 71 of its 124 members,
+and 15 of the 18 finished without any error. The chosen configuration returned
+exactly 72 records in all three repetitions, which looks like a complete,
+stable result. The names-only winner found 123 of 124 on the same page and 295
+of 296 on SPECTARIS, identically in all three repetitions.
+
+**Why it went unnoticed.** Every per-stage number was correct. Website F1 is
+computed per run against the page, stages 3 and 4 against their own queues,
+and each looked healthy. The loss existed only at the level of the merged
+file, and nothing checked that level. It belongs with silent context
+truncation and the cleaner dropping links (§3.13c): a component reporting
+success on incomplete output.
+
+The two affected pages are the two longest member lists in the corpus (296
+and 124; the next is 79). Asking for seven fields per company multiplies the
+output per member. Whether the run hits an output limit or the model ends the
+list early was not isolated, and should not be stated as a cause.
+
+### The fix
+
+`export_deliverable.py`, function `merge_page`:
+
+1. **Names from both runs.** The full-record run's records, plus every company
+   the names-only run found that the full-record run did not.
+2. **Websites in order of evidence.** The address the model returned; else the
+   address the page itself pairs with that name, using the same code as the
+   stage 2 ceiling (`link_coverage.websites_on_page`); else the profile page;
+   else a verified search result. No address is guessed from a name.
+3. **A warning that was missing.** When the full-record run returns fewer than
+   80% of the companies the names-only run found, the export prints a warning
+   and marks the page in the Summary sheet. It fired on exactly the two
+   affected pages and on none of the other eight.
+
+`test_metrics.py` gained 12 known-answer checks for the merge, including cases
+where the warning must stay silent (68 checks, all pass). Moving the pairing
+code into a shared function left stage 2 unchanged: `link_coverage.csv` has
+the same SHA-256 hash before and after.
+
+### Result
+
+| | before | after |
+|---|---:|---:|
+| rows in the file | 409 | 763 |
+| ground-truth companies in the file | 401 of 760 | **752 of 760** |
+| company recall / precision | 0.528 / 0.980 | **0.989 / 0.986** |
+| ground-truth companies with a website | 336 (44%) | **684 (90%)** |
+| pages flagged incomplete | not checked | 2 |
+
+| page | network | members | found | missing | not in ground truth | with website |
+|---|---|---:|---:|---:|---:|---:|
+| 004 | Automotive Nordwest | 33 | 32 | 1 | 1 | 24 |
+| 005 | automotive thüringen | 124 | 123 | 1 | 1 | 124 |
+| 009 | BDEW | 43 | 41 | 2 | 1 | 40 |
+| 012 | BVMed | 50 | 50 | 0 | 0 | 38 |
+| 025 | German Water Partnership | 14 | 14 | 0 | 1 | 13 |
+| 032 | InnoZent OWL | 79 | 76 | 3 | 3 | 48 |
+| 039 | Life Science Nord | 52 | 52 | 0 | 0 | 49 |
+| 040 | Medical Valley EMN | 20 | 20 | 0 | 0 | 14 |
+| 043 | NMWP.NRW | 49 | 49 | 0 | 2 | 43 |
+| 050 | SPECTARIS | 296 | 295 | 1 | 2 | 296 |
+
+"with website" counts rows in the file, so it includes the 11 names not in the
+ground truth. At least three of those 11 are a member written with extra text
+("Allego GmbH c/o Design Offices", "Brunel GmbH – neue Adresse ab
+01.02.2025", "Goldbeck Nord GmbH Niederlassung Bremen"); the rest were not
+checked.
+
+| website source | rows | share |
+|---|---:|---:|
+| directory page, paired in code (no model) | 349 | 46% |
+| directory page, returned by the model | 138 | 18% |
+| web search, verified (stage 4) | 100 | 13% |
+| profile page (stage 3) | 97 | 13% |
+| web search, domain evidence only | 5 | 1% |
+| none | 74 | 10% |
+
+**The largest single source of websites is now code, not the model.** This
+sharpens §3.13m: the benchmark decides which model reads the page, but most of
+the delivered websites come from fetching, pairing and searching.
+
+### Source dataset column (Marco, 2026-09-24)
+
+Neovation reports the publicly funded ZIM networks separately from the
+privately funded ones, so the deliverable carries a **source dataset** column
+per row rather than leaving the split to be rebuilt by hand. It is joined in
+Python: the Finalv1 sheet's own "Source dataset" value, matched by host; if
+the network is not in that sheet, the list the URL was collected in
+("Private funded", "Technical association"); never a guess, and "unknown" when
+neither applies. On the current ten pages that gives 476 rows privately funded
+and 287 from the technical-association list; the ZIM networks arrive with the
+20 new pages.
+
+### Verification, and its limit
+
+Scoring the paired websites against `link_coverage.csv` would be circular:
+that file is built by the same pairing code. The independent evidence is:
+
+- **Hand check:** 16 randomly sampled paired websites, 8 from SPECTARIS and 8
+  from automotive thüringen, each read against the page text. In every case
+  the address is printed in the same block, directly under that company's name
+  and address. 16 of 16 correct.
+- **Agreement with the model:** where the model returned an address for a
+  company whose website is printed on the page, it matched the page's pairing
+  on 131 of 131 companies.
+
+Sixteen is a small sample. The 30-page run should check more.
+
+### For the thesis
+
+- **The best benchmark configuration was not enough to build the deliverable.**
+  The full-record winner silently loses most of the two longest pages.
+  Splitting the task, names from one run and websites paired from the page,
+  beats asking for everything at once, on exactly the pages where asking for
+  everything fails. §3.13k observed this for SPECTARIS; §3.13n shows it on a
+  second page, and shows that the failure can look like success.
+- **Validate the final output, not only each stage.** Every per-stage metric
+  here was correct, and together they missed 359 companies.
+
+Counted with `benchmark.match_key` against `data/ground_truth/*.json`, after
+`.venv/bin/python export_deliverable.py`.
+
+---
+
+## 3.13m The deliverable with all four stages merged, before the long-page fix (superseded by §3.13n)
+
+> **Correction (2026-09-15).** The figures in this section describe the file
+> *before* the fix in §3.13n. "82%" is a share of the 409 companies that were
+> in the file; the file held only 401 of the 760 ground-truth companies, so as
+> a share of all 760 it was 44%. The "members" column in the per-network table
+> counts companies in the file, not on the page: automotive thüringen has 124
+> members, of which the file held 71. Use §3.13n.
 
 All three sources merged for the first time. `llama3.1:8b` +
 `few_shot_full_record` + `prompt_only` over 9 of the 10 ground-truth networks
 (SPECTARIS absent, §3.13k), plus stage 3 profile pages and stage 4 search.
 
-**409 companies, 336 with a website, 82%.**
+**409 companies, 336 with a website: 82% of the 409, 44% of the 760
+ground-truth companies.**
 
 | website source | companies | share |
 |---|---:|---:|
@@ -2336,6 +3938,10 @@ SPECTARIS's 296 companies have a website printed beside them, and the
 positional pairing in `link_coverage.py` recovers it without a model. Splitting
 the task beats asking for it all at once, on exactly the page where asking for
 it all at once fails.
+
+**Done on 2026-09-15 (§3.13n).** SPECTARIS now contributes 295 of its 296
+members to the deliverable. The same fix recovered 52 members of automotive
+thüringen, where the full-record run had also failed, but without any error.
 
 ### Why 34% coverage is the expected number, not a disappointment
 
@@ -2456,6 +4062,10 @@ reported rather than hidden inside a coverage percentage.
 63% any single-pass extraction could reach. The three stages are complementary
 rather than redundant: each covers a distinct failure of the one before, and
 none of them alone gets past two thirds.
+
+This is what the pipeline can **reach**, not what was **delivered**. The
+deliverable held a website for 336 of the 760 ground-truth companies (44%)
+until the long-page fix, and holds one for 684 (90%) after it (§3.13n).
 
 That framing is the practical contribution alongside the model comparison. The
 benchmark answers which model to use; this answers what the pipeline as a whole

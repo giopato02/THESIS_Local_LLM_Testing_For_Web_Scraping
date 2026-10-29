@@ -12,7 +12,7 @@
 set -uo pipefail
 
 DIR="$HOME/Web_Scraping_Engine"
-MODELS="llama3.1:8b qwen2.5-coder:7b gemma4:12b"
+MODELS="llama3.1:8b qwen2.5-coder:7b qwen3.5:9b"
 LOG="$DIR/results/stage_a_gpu.log"
 
 say() { printf '\n\033[1m==> %s\033[0m\n' "$1"; }

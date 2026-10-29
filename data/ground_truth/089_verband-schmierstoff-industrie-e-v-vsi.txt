@@ -1,0 +1,126 @@
+# ============================================================================
+# GROUND TRUTH WORKSHEET  --  Verband Schmierstoff-Industrie e.V. (VSI)
+#
+# URL : https://www.vsi-schmierstoffe.de/verband/mitgliederliste
+# Saved copy (exactly what the model reads): results/html_cache/1a64dfc46d312577.html
+# Page: 1231 words, ~4296 tokens
+#
+# WHAT TO DO
+#   1. Open the saved copy above (or the URL) in your browser, next to this file.
+#   2. SECTION A below is my best guess at the member companies.
+#      Read down it and DELETE any line that is not a member company.
+#   3. SECTION B is what I think is page furniture (menus, filters,
+#      categories). Skim it. If I wrongly binned a real company there,
+#      MOVE that line up into Section A.
+#   4. Then look at the WEBPAGE itself top to bottom. If a member is
+#      missing from Section A entirely, type it in. This step matters
+#      most -- it catches what my guessing missed. Only this page: do not
+#      follow "page 2" or "load more".
+#   5. Keep names EXACTLY as printed (keep GmbH, AG, umlauts), but leave out
+#      a city or address printed on the same line.
+#   6. Delete Section B entirely when you are done with it, or leave it --
+#      everything below the SECTION B marker is ignored either way.
+#   7. Save. Lines starting with # are ignored.
+#   8. When this page is finished, change TODO to DONE on the STATUS line
+#      below. --check turns only DONE worksheets into answer keys.
+#
+# When finished, run:  .venv/bin/python make_ground_truth.py --check
+# ============================================================================
+# STATUS: DONE
+
+# --- SECTION A: likely member companies (90) -------------------------
+
+Acmos Chemie KG
+Addinol Lube Oil GmbH
+Additiv-Chemie Luers GmbH & Co. KG (F)
+Afton Chemical GmbH (F)
+Troy Chemie GmbH (F)
+Avia AG
+AVISTA OIL Deutschland GmbH
+Hermann Bantleon GmbH
+BASF SE
+BayWa AG
+Carl Bechem GmbH
+Blaser Swisslube AG
+Boss Lubricants GmbH & Co. KG
+Brenntag GmbH (F)
+Bundesverband Altöl e. V. (F)
+Caldic Deutschland GmbH (F)
+Castrol Germany GmbH
+Cimcool Europe B.V.
+Clariant International Ltd (F)
+Curtis Systems GmbH
+DAKO AG
+DOG Deutsche Oelfabrik Ges. für chemische Erzeugnisse mbH & Co. KG (F)
+DuPont Specialty Products GmbH & Co. KG
+Emery Oleochemicals GmbH
+Enilive Schmiertechnik GmbH
+Ergon International Inc.
+esgemo GmbH & Co. KG
+Esso Deutschland GmbH
+Evonik Operations GmbH (F)
+Excor Korrosionsforschung GmbH (F)
+Finke Mineralölwerk GmbH
+FRAGOL AG
+FUCHS LUBRICANTS GERMANY GmbH
+GB-Chemie GmbH (F)
+Peter Greven GmbH & Co. KG
+Hammonia Oleochemicals GmbH (F)
+Haug Chemie GmbH
+hebro Chemie Zweigniederlassung der Rockwood Specialties Group GmbH
+helcotec Chemie u. Technik GmbH
+Henkel AG & Co. KGaA
+HOLIFA Fröhling GmbH & Co. KG
+HollyFrontier Europe B.V.
+Jokisch GmbH
+KAJO GmbH
+KAO Chemicals GmbH (F)
+KETTLITZ-CHEMIE GmbH & Co. KG
+Klüber Lubrication München GmbH & Co. KG
+Chemische Werke Kluthe GmbH
+LAEMMLE Chemicals AG
+LANXESS Deutschland GmbH (F)
+Lehmann & Voss & Co. KG (F)
+Lubricant Consult GmbH
+Lubrizol Deutschland GmbH (F)
+Master Fluid Solutions WDG GmbH
+Metall Chemie GmbH & Co. KG (F)
+ML Lubrication GmbH
+MOTOREX GmbH
+MOTUL Deutschland GmbH
+Nynas GmbH
+OELCHECK GmbH (F)
+oelheld GmbH
+Oemeta Chemische Werke GmbH
+OEST LUBRICANTS GmbH & Co. KG
+OKS Spezialschmierstoffe GmbH
+Petrofer Chemie H. R. Fischer GmbH & Co. KG
+Petronas Lubricants Deutschland GmbH
+Pfinder KG
+Quaker Houghton Sales B.V. Deutsche Zweigniederlassung
+Raziol Zibulla & Sohn GmbH
+Rhenus Lub GmbH & Co KG
+ROWE Mineralölwerk GmbH
+SASOL Germany GmbH (F)
+Schaeffler Technologies AG & Co. KG (F)
+Friedrich Scharr KG
+Setral Chemie GmbH
+Shell Deutschland GmbH
+SRS Schmierstoff Vertrieb GmbH
+Straetmans HighTAC GmbH (F)
+Swd Lubricants GmbH & Co. KG
+Ter Chemicals GmbH & Co. KG (F)
+TotalEnergies Glass Lubricants Europe GmbH
+TotalEnergies Marketing Deutschland GmbH
+TUNAP GmbH & Co. KG
+unitech Kühlschmierstoffe GmbH
+Uniti Bundesverband EnergieMittelstand e.V.
+Vanderbilt Worldwide Ltd (F)
+Vink Chemicals GmbH & Co. KG (F)
+Wieds Ecochem AG
+Zeller+Gmelin GmbH & Co. KG
+ZET-Chemie GmbH
+
+# --- SECTION B: probably page furniture (4) -----------------------
+# Everything below this line is IGNORED. Move anything real up into Section A.
+

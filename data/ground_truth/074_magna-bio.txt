@@ -1,0 +1,58 @@
+# ============================================================================
+# GROUND TRUTH WORKSHEET  --  MAGNA BIO
+#
+# URL : https://www.magnabio.de/%C3%BCber-uns/mitglieder/
+# Saved copy (exactly what the model reads): results/html_cache/ea2bd1ef8f7b3133.html
+# Page: 3141 words, ~9017 tokens  -- this page is SPLIT INTO CHUNKS for the model
+#
+# WHAT TO DO
+#   1. Open the saved copy above (or the URL) in your browser, next to this file.
+#   2. SECTION A below is my best guess at the member companies.
+#      Read down it and DELETE any line that is not a member company.
+#   3. SECTION B is what I think is page furniture (menus, filters,
+#      categories). Skim it. If I wrongly binned a real company there,
+#      MOVE that line up into Section A.
+#   4. Then look at the WEBPAGE itself top to bottom. If a member is
+#      missing from Section A entirely, type it in. This step matters
+#      most -- it catches what my guessing missed. Only this page: do not
+#      follow "page 2" or "load more".
+#   5. Keep names EXACTLY as printed (keep GmbH, AG, umlauts), but leave out
+#      a city or address printed on the same line.
+#   6. Delete Section B entirely when you are done with it, or leave it --
+#      everything below the SECTION B marker is ignored either way.
+#   7. Save. Lines starting with # are ignored.
+#   8. When this page is finished, change TODO to DONE on the STATUS line
+#      below. --check turns only DONE worksheets into answer keys.
+#
+# When finished, run:  .venv/bin/python make_ground_truth.py --check
+# ============================================================================
+# STATUS: DONE
+
+# --- SECTION A: likely member companies (45) -------------------------
+
+Insitut für Angewandte Medizintechnik (AME)
+Charité – Universitätsmedizin Berlin
+ERTRON GmbH
+fzmb GmbH
+General Numerics Research Lab e.V.
+Industrieelektronik Brandenburg GmbH
+INNOVENT e.V. Technologieentwicklung Jena
+JenLab GmbH
+Johannes Gutenberg-Universität Mainz Institut für Physik
+Karlsruher Institut für Technologie
+MABEL Mannheim Biomedical Engineering Laboratories
+Magnetworld AG
+Matesy GmbH
+mme Mannheim
+Micromod Partikeltechnologie GmbH
+Roche Diagnostics GmbH
+SEKELS GmbH
+senetics healthcare group GmbH und Co. KG
+simfo GmbH
+Technische Universität Ilmenau
+Universitätsklinikum Erlangen
+UVR-FIA GmbH
+WISO-TECH GmbH
+
+# --- SECTION B: probably page furniture (12) -----------------------
+# Everything below this line is IGNORED. Move anything real up into Section A.

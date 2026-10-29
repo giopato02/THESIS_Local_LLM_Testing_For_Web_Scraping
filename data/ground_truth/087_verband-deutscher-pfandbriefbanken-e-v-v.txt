@@ -1,0 +1,85 @@
+# ============================================================================
+# GROUND TRUTH WORKSHEET  --  Verband deutscher Pfandbriefbanken e.V. (vdp)
+#
+# URL : https://www.pfandbrief.de/mitglieder/
+# Saved copy (exactly what the model reads): results/html_cache/7a99ec8abdc67641.html
+# Page: 706 words, ~2019 tokens
+#
+# WHAT TO DO
+#   1. Open the saved copy above (or the URL) in your browser, next to this file.
+#   2. SECTION A below is my best guess at the member companies.
+#      Read down it and DELETE any line that is not a member company.
+#   3. SECTION B is what I think is page furniture (menus, filters,
+#      categories). Skim it. If I wrongly binned a real company there,
+#      MOVE that line up into Section A.
+#   4. Then look at the WEBPAGE itself top to bottom. If a member is
+#      missing from Section A entirely, type it in. This step matters
+#      most -- it catches what my guessing missed. Only this page: do not
+#      follow "page 2" or "load more".
+#   5. Keep names EXACTLY as printed (keep GmbH, AG, umlauts), but leave out
+#      a city or address printed on the same line.
+#   6. Delete Section B entirely when you are done with it, or leave it --
+#      everything below the SECTION B marker is ignored either way.
+#   7. Save. Lines starting with # are ignored.
+#   8. When this page is finished, change TODO to DONE on the STATUS line
+#      below. --check turns only DONE worksheets into answer keys.
+#
+# When finished, run:  .venv/bin/python make_ground_truth.py --check
+# ============================================================================
+# STATUS: DONE
+
+# --- SECTION A: likely member companies (33) -------------------------
+
+Aareal Bank AG
+AKA Ausfuhrkredit-Gesellschaft mbH
+ALTE LEIPZIGER Bauspar AG
+Bausparkasse Mainz AG
+Bausparkasse Schwäbisch Hall AG
+Bayerische Landesbank
+BBBank eG
+Berlin Hyp
+BSK 1818 AG
+Calenberger Kreditverein
+Commerzbank AG
+DekaBank Deutsche Girozentrale
+Deutsche Apotheker- und Ärztebank eG
+Deutsche Bank AG
+Deutsche Kreditbank AG
+Deutsche Pfandbriefbank AG
+Die Sparkasse Bremen
+DZ HYP AG
+Evangelische Bank
+Hamburg Commercial Bank AG
+Hamburger Sparkasse AG
+HYPO TIROL BANK AG
+ING-DiBa AG
+KfW IPEX-Bank GmbH
+Kreissparkasse Köln
+Landesbank Baden-Württemberg
+Landesbank Hessen-Thüringen
+LIGA Bank eG
+Lloyds Bank GmbH
+Münchener Hypothekenbank eG
+NATIXIS Pfandbriefbank AG
+Norddeutsche Landesbank Girozentrale
+Oldenburgische Landesbank AG
+PSD Bank Nürnberg eG
+PSD Bank Rhein-Ruhr eG
+Raiffeisen-Landesbank Steiermark AG
+Raiffeisenlandesbank Oberösterreich AG
+Ritterschaftliches Kreditinstitut Stade AG
+SaarLB Landesbank Saar
+Sparda-Bank Südwest eG
+Sparkasse Hannover
+Sparkasse KölnBonn
+Sparkasse Rhein-Nahe
+Sparkasse zu Lübeck AG
+Stadtsparkasse Düsseldorf
+TARGOBANK AG
+UniCredit Bank GmbH
+Volksbank Freiburg eG
+Wüstenrot Bausparkasse AG
+
+# --- SECTION B: probably page furniture (1) -----------------------
+# Everything below this line is IGNORED. Move anything real up into Section A.
+

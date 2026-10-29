@@ -44,6 +44,7 @@ from __future__ import annotations
 
 import argparse
 import csv
+import os
 import re
 import time
 from urllib.parse import urlparse
@@ -59,6 +60,16 @@ FIELDS = [
     "url_id", "org_name", "company", "query",
     "found_url", "status", "evidence", "candidates_seen",
 ]
+
+# Mailboxes hosted by a provider. The domain of one of these says where the
+# company reads its mail, not where its website is, so it is not evidence.
+FREEMAIL = {
+    "gmail.com", "googlemail.com", "web.de", "gmx.de", "gmx.net", "gmx.at",
+    "t-online.de", "outlook.com", "outlook.de", "hotmail.com", "hotmail.de",
+    "live.com", "live.de", "yahoo.com", "yahoo.de", "aol.com", "icloud.me",
+    "me.com", "mail.de", "posteo.de", "mailbox.org", "freenet.de",
+    "arcor.de", "online.de", "gmx.com", "protonmail.com", "proton.me",
+}
 
 # Business directories, registries, social networks and job boards. These
 # dominate German company searches and none of them is a company website.
@@ -131,8 +142,55 @@ def host_of(url: str) -> str:
     return u[4:] if u.startswith("www.") else u
 
 
+# Directory brands that run one domain per country. Listing every TLD is a
+# losing game: `cylex.de` was blocked and `cylex.at` still came back as the
+# top result for A. Höfer GmbH. These are matched on the registrable label
+# alone, so every country variant is covered at once.
+#
+# Only brands that are unmistakably directories belong here, because matching
+# by label ignores the TLD and would otherwise block a real company that
+# happens to share the word.
+AGGREGATOR_BRANDS = {
+    "cylex", "europages", "yelp", "kompass", "northdata", "gelbeseiten",
+    "dasoertliche", "meinestadt", "firmenwissen", "companyhouse",
+    "moneyhouse", "opencorporates", "dun-bradstreet", "implisense",
+    "wlw", "linkedin", "xing", "facebook", "instagram", "wikipedia",
+    # Seen live on the production run: "form & function GmbH" returned
+    # kompany.de/p/de/hrb91363, a commercial register entry. It was left
+    # unconfirmed, so it would not have shipped, but it cost a fetch.
+    "kompany", "hokify", "firmendb", "yellowmap", "branchenbuch",
+}
+
+
+# Suffixes that are two labels long, where the name sits one further left:
+# "europages.co.uk" is europages, not "co".
+COMPOUND_SUFFIXES = {
+    "co.uk", "org.uk", "ac.uk", "gov.uk", "com.au", "net.au", "org.au",
+    "co.nz", "co.za", "co.jp", "or.jp", "com.br", "com.mx", "com.tr",
+    "com.cn", "com.hk", "com.sg", "co.in", "co.kr", "com.pl",
+}
+
+
+def registrable_label(host: str) -> str:
+    """
+    The name part of a hostname, ignoring subdomains and the suffix.
+
+        web2.cylex.de      -> cylex
+        cylex.at           -> cylex
+        europages.co.uk    -> europages
+    """
+    parts = [p for p in host.lower().split(".") if p]
+    if len(parts) < 2:
+        return ""
+    if len(parts) >= 3 and ".".join(parts[-2:]) in COMPOUND_SUFFIXES:
+        return parts[-3]
+    return parts[-2]
+
+
 def is_aggregator(host: str) -> bool:
-    return any(host == a or host.endswith("." + a) for a in AGGREGATORS)
+    if any(host == a or host.endswith("." + a) for a in AGGREGATORS):
+        return True
+    return registrable_label(host) in AGGREGATOR_BRANDS
 
 
 def tokens(name: str) -> list[str]:
@@ -177,6 +235,138 @@ def domain_resembles(host: str, name: str) -> str:
     return ""
 
 
+def email_domain(email: str) -> str:
+    """
+    The host part of an address, or "" when it says nothing about a website.
+
+    A company's own address is the strongest single piece of evidence there
+    is: `info@5microns.de` states the website outright, with no search and no
+    guessing. A provider mailbox states only who carries the mail.
+    """
+    e = (email or "").strip().lower()
+    if "@" not in e:
+        return ""
+    host = e.rsplit("@", 1)[1].strip().strip(".")
+    if not host or "." not in host or host in FREEMAIL:
+        return ""
+    return host[4:] if host.startswith("www.") else host
+
+
+def phone_tail(phone: str) -> str:
+    """
+    The distinctive digits of a phone number, for comparing across formats.
+
+    The same number is printed as "+49 341 253966-0", "0341/253966-0" and
+    "0049 341 2539660". Country code, leading zero and every separator vary,
+    so only the last digits can be compared, and there have to be enough of
+    them that two unrelated numbers do not collide.
+    """
+    digits = re.sub(r"\D", "", phone or "")
+    return digits[-7:] if len(digits) >= 8 else ""
+
+
+def load_records(paths: list) -> dict:
+    """
+    Contact details per company, keyed by (url_id, normalised name).
+
+    Stage 4 handles the companies a directory names and does not link, so the
+    only thing it starts with is a name. Anything else the pipeline learned
+    about that company (a postcode, a phone number, an address) turns a guess
+    into a check, which is the whole difficulty of this stage: a search always
+    returns something, and everything it returns looks plausible.
+    """
+    out: dict = {}
+    for path in paths:
+        if not path or not os.path.exists(path):
+            continue
+        with open(path, encoding="utf-8-sig") as fh:
+            for r in csv.DictReader(fh):
+                company = (r.get("company") or r.get("name") or "").strip()
+                if not company:
+                    continue
+                key = (r.get("url_id", ""), match_key(company))
+                rec = out.setdefault(key, {})
+                # "website" is here so load_queue can skip a company stage 1
+                # already found an address for; the rest are evidence.
+                for f in ("website", "street", "postcode", "city",
+                          "phone", "email"):
+                    v = (r.get(f) or "").strip()
+                    if v and not rec.get(f):
+                        rec[f] = v
+    return out
+
+
+def page_evidence(url: str, name: str, rec: dict,
+                  session: requests.Session) -> set:
+    """
+    Fetch the candidate once and report every kind of evidence it carries.
+
+    One download answers several questions, so they are all asked here rather
+    than in separate passes. The kinds are deliberately unequal in strength,
+    and `decide` is where that is weighed:
+
+      name      the company is mentioned. A directory mentions every company
+                it lists, so on its own this is the weakest signal there is.
+      postcode  the company's postcode appears. Shared by a town, but a town
+                and a name together are unlikely to coincide.
+      phone     the company's number appears. Close to unique to one business.
+      email     the company's exact address appears. Decisive.
+    """
+    found = set()
+    try:
+        resp = session.get(url, timeout=15)
+        if resp.status_code != 200:
+            return found
+        resp.encoding = resp.apparent_encoding or resp.encoding
+        text = re.sub(r"<[^>]+>", " ", resp.text[:400_000]).lower()
+        text = re.sub(r"\s+", " ", text)
+        digits = re.sub(r"\D", "", text)
+    except requests.RequestException:
+        return found
+
+    for tok in tokens(name):
+        if len(tok) >= 4 and tok in text:
+            found.add("name")
+            break
+
+    postcode = (rec.get("postcode") or "").strip()
+    if len(postcode) == 5 and postcode.isdigit() and postcode in digits:
+        found.add("postcode")
+
+    tail = phone_tail(rec.get("phone", ""))
+    if tail and tail in digits:
+        found.add("phone")
+
+    mail = (rec.get("email") or "").strip().lower()
+    if mail and "@" in mail and mail in text:
+        found.add("email")
+
+    return found
+
+
+# What each kind of evidence is worth. Set so that no single weak signal can
+# confirm a result on its own, and any strong one can:
+#   name alone (1)                  -> page_only, reported but not confirmed
+#   domain resembles the name (2)   -> domain_match
+#   name + postcode (3)             -> verified
+#   phone (3) or email (4)          -> verified by itself
+WEIGHTS = {"domain": 2, "name": 1, "postcode": 2, "phone": 3, "email": 4}
+CONFIRMED = 3
+
+
+def decide(evidence: set) -> tuple:
+    """(status, evidence string) from the set of things that matched."""
+    score = sum(WEIGHTS.get(e, 0) for e in evidence)
+    detail = "+".join(sorted(evidence)) + f"={score}" if evidence else ""
+    if score >= CONFIRMED:
+        return "verified", detail
+    if "domain" in evidence:
+        return "domain_match", detail
+    if evidence:
+        return "page_only", detail
+    return "unverified", ""
+
+
 def page_mentions(url: str, name: str, session: requests.Session) -> str:
     """Fetch the candidate and return the token it mentions, or ""."""
     try:
@@ -194,11 +384,83 @@ def page_mentions(url: str, name: str, session: requests.Session) -> str:
     return ""
 
 
-def load_queue(limit: int | None) -> list[dict]:
+def load_profile_results() -> dict:
+    """
+    {(url_id, company key) -> True} for companies stage 3 gave a website.
+
+    Returns None when stage 3 has not run, so the queue falls back to the
+    route alone rather than silently treating every profile company as
+    unserved and searching for all of them.
+    """
+    path = config.RESULTS_DIR / "profile_records.csv"
+    if not path.exists():
+        return None
+    out = {}
+    with open(path, encoding="utf-8-sig") as fh:
+        for r in csv.DictReader(fh):
+            if (r.get("company_url") or "").strip():
+                out[(r.get("url_id", ""), match_key(r.get("company", "")))] = True
+    return out
+
+
+def load_queue(limit: int | None, records: dict = None) -> list[dict]:
+    """
+    The companies that genuinely need a search.
+
+    The route comes from `link_coverage.py`, which pairs a company with the
+    address printed beside it positionally. That pairing is conservative and
+    misses a great deal: on the production corpus it found 4,769 websites
+    where the model found 9,360, and of the model's extra ones **3,682 of
+    3,683 hostnames are present in the page**, a 0.03% invention rate
+    matching the research corpus.
+
+    So a company routed "none" may still have a perfectly good website that
+    stage 1 read and the pairing did not. Searching for it wastes 5 seconds
+    and, worse, risks returning a different and wrong answer for a company we
+    already had right. Those are skipped: 3,682 of 8,452 on the production
+    run, which is 5 hours and 3,682 chances to be wrong.
+    """
     if not IN_CSV.exists():
         raise SystemExit(f"run link_coverage.py first: {IN_CSV} is missing")
     with open(IN_CSV, encoding="utf-8-sig") as fh:
-        rows = [r for r in csv.DictReader(fh) if r["route"] == "none"]
+        all_rows = list(csv.DictReader(fh))
+    rows = [r for r in all_rows if r["route"] == "none"]
+
+    # Plus anyone the profile stage was routed to but could not serve. This
+    # is the backstop for every way a "profile link" turns out not to be a
+    # profile page, and there are more ways than can be predicted from a URL:
+    #
+    #   the Leasingverband points all 134 members at one page with different
+    #   #fragments, which a URL rule does catch
+    #   Composites United points its 582 members at 582 distinct paths that
+    #   all return the same page, which no URL rule can catch
+    #
+    # Both were skipped by stage 3 for exceeding its word limit and never
+    # queued here, because their route said "profile". 716 companies, 4.4% of
+    # the corpus, served by nothing. Asking "did stage 3 actually produce
+    # something?" needs no cleverness and cannot miss a case.
+    served = load_profile_results()
+    if served is not None:
+        unserved = [r for r in all_rows
+                    if r["route"] == "profile"
+                    and not served.get((r["url_id"], match_key(r["company"])))]
+        if unserved:
+            print(f"  {len(unserved):,} were routed to a profile page that "
+                  f"produced nothing, searching those too")
+            rows += unserved
+
+    if records:
+        keep, known = [], 0
+        for r in rows:
+            rec = records.get((r["url_id"], match_key(r["company"])), {})
+            if (rec.get("website") or "").strip():
+                known += 1
+                continue
+            keep.append(r)
+        if known:
+            print(f"  {known:,} already have a website from the directory page, "
+                  f"skipping those")
+        rows = keep
     return rows[:limit] if limit else rows
 
 
@@ -217,28 +479,76 @@ def main() -> None:
     ap.add_argument("--max-results", type=int, default=5)
     ap.add_argument("--delay", type=float, default=2.0,
                     help="seconds between searches, to stay polite")
+    ap.add_argument("--records", nargs="*",
+                    default=[str(config.RESULTS_DIR / "profile_records.csv")],
+                    help="CSVs of company contact details, used as evidence "
+                         "and for the email shortcut. Missing files are "
+                         "ignored, and without any the stage still runs on "
+                         "name evidence alone")
     args = ap.parse_args()
 
-    from ddgs import DDGS
+    # The library was renamed from `duckduckgo_search` to `ddgs`, and the new
+    # name requires Python 3.9. The GPU node runs 3.8.10, where only the old
+    # name installs, so accept either rather than pinning the environment to
+    # one of them. Same class, same `.text()` call.
+    try:
+        from ddgs import DDGS
+    except ImportError:
+        try:
+            from duckduckgo_search import DDGS
+        except ImportError:
+            raise SystemExit(
+                "  no search library installed. On Python 3.9+:\n"
+                "      .venv/bin/pip install ddgs\n"
+                "  on Python 3.8 (this GPU node):\n"
+                "      .venv/bin/pip install 'duckduckgo-search<6'")
 
-    queue = load_queue(args.limit)
+    # Records first: the queue depends on them, because a company stage 1
+    # already found a website for does not need searching at all.
+    records = load_records(args.records)
+    print(f"  contact details available for {len(records):,} companies")
+
+    queue = load_queue(args.limit, records)
     done = load_done()
     todo = [r for r in queue if f"{r['url_id']}|{r['company']}" not in done]
-    print(f"  {len(queue)} companies without a link, {len(done)} already "
-          f"searched, {len(todo)} to do\n")
+    print(f"  {len(queue):,} companies need a search, {len(done):,} already "
+          f"done, {len(todo):,} to do\n")
 
     session = requests.Session()
     session.headers.update({"User-Agent": config.USER_AGENT,
                             "Accept-Language": "de-DE,de;q=0.9,en;q=0.8"})
 
     out = list(done.values())
-    counts = {"verified": 0, "domain_match": 0, "page_only": 0,
-              "unverified": 0, "no_result": 0}
+    counts = {"email_domain": 0, "verified": 0, "domain_match": 0,
+              "page_only": 0, "unverified": 0, "no_result": 0}
 
     for i, r in enumerate(todo, start=1):
         company = r["company"].strip()
         query = f"{company} Firma Webseite"
         found, status, evidence, seen = "", "no_result", "", 0
+        rec = records.get((r["url_id"], match_key(company)), {})
+
+        # The company's own email address states its website. Deriving beats
+        # searching: no query, no candidate ranking, nothing to verify. Only
+        # skipped when the mailbox is a provider's, or when the address
+        # belongs to the association rather than the member.
+        derived = email_domain(rec.get("email", ""))
+        if derived and not is_aggregator(derived):
+            found = f"https://{derived}"
+            status, evidence = "email_domain", f"email={rec['email']}"
+            counts[status] += 1
+            out.append({
+                "url_id": r["url_id"], "org_name": r["org_name"],
+                "company": company, "query": "", "found_url": found,
+                "status": status, "evidence": evidence, "candidates_seen": 0,
+            })
+            print(f"@ [{i:>4}/{len(todo)}] {company[:34]:<36}"
+                  f"{found[:40]:<42}{evidence[:26]}")
+            with open(OUT_CSV, "w", newline="", encoding="utf-8-sig") as fh:
+                w = csv.DictWriter(fh, fieldnames=FIELDS)
+                w.writeheader()
+                w.writerows(out)
+            continue
 
         try:
             with DDGS() as ddgs:
@@ -258,29 +568,38 @@ def main() -> None:
             seen += 1
 
             tok = domain_resembles(host, company)
+
+            # A directory entry carries the name in the path, not the domain.
+            # Only skip when the domain gives us nothing, since a real company
+            # site whose name is also in its path must not be thrown away.
+            if not tok and looks_like_a_listing(url, company):
+                continue
+
+            # Gather every kind of evidence from one download, then weigh it
+            # all together. Previously each signal was judged on its own, so a
+            # postcode and a phone number could not combine into a confirmed
+            # result, and a domain match short-circuited before anything else
+            # was even looked at.
+            kinds = set()
             if tok:
-                found, status, evidence = url, "domain_match", f"domain~{tok}"
-                if not args.no_fetch:
-                    mention = page_mentions(url, company, session)
-                    if mention:
-                        status, evidence = "verified", f"domain~{tok}, page~{mention}"
-                break
-
-            if looks_like_a_listing(url, company):
-                continue        # a directory entry, not the company's site
-
-            # The page names the company but the domain does not. That is
-            # weaker evidence and is reported as its own category rather than
-            # counted as confirmed, because it is exactly what a directory
-            # looks like. Kept because a company trading under a different
-            # brand also lands here.
+                kinds.add("domain")
+            if rec.get("email") and email_domain(rec["email"]) == host:
+                kinds.add("email")
             if not args.no_fetch:
-                mention = page_mentions(url, company, session)
-                if mention and not found:
-                    found, status, evidence = url, "page_only", f"page~{mention}"
-                    continue
-            if not found:
-                found, status = url, "unverified"
+                kinds |= page_evidence(url, company, rec, session)
+
+            candidate_status, detail = decide(kinds)
+            if tok and detail:
+                detail = f"domain~{tok}, {detail}"
+
+            # Keep the best candidate, not the first: a confirmed result later
+            # in the list beats an unconfirmed one at the top.
+            rank = {"verified": 3, "domain_match": 2, "page_only": 1,
+                    "unverified": 0}
+            if not found or rank[candidate_status] > rank.get(status, -1):
+                found, status, evidence = url, candidate_status, detail
+            if status == "verified":
+                break
 
         counts[status] = counts.get(status, 0) + 1
         out.append({
@@ -290,8 +609,8 @@ def main() -> None:
             "status": status, "evidence": evidence, "candidates_seen": seen,
         })
 
-        mark = {"verified": "  ", "domain_match": "~ ", "page_only": "? ",
-                "unverified": "? ", "no_result": "! "}[status]
+        mark = {"email_domain": "@ ", "verified": "  ", "domain_match": "~ ",
+                "page_only": "? ", "unverified": "? ", "no_result": "! "}[status]
         print(f"{mark}[{i:>4}/{len(todo)}] {company[:34]:<36}"
               f"{(found or '-')[:40]:<42}{evidence[:26]}")
 

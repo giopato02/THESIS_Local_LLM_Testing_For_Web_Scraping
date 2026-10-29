@@ -1,0 +1,192 @@
+# ============================================================================
+# GROUND TRUTH WORKSHEET  --  Industrieverband Klebstoffe e.V. (IVK)
+#
+# URL : https://www.klebstoffe.com/mitglieder/alle/
+# Saved copy (exactly what the model reads): results/html_cache/c5fd2db536f1c09e.html
+# Page: 4967 words, ~12357 tokens  -- this page is SPLIT INTO CHUNKS for the model
+#
+# WHAT TO DO
+#   1. Open the saved copy above (or the URL) in your browser, next to this file.
+#   2. SECTION A below is my best guess at the member companies.
+#      Read down it and DELETE any line that is not a member company.
+#   3. SECTION B is what I think is page furniture (menus, filters,
+#      categories). Skim it. If I wrongly binned a real company there,
+#      MOVE that line up into Section A.
+#   4. Then look at the WEBPAGE itself top to bottom. If a member is
+#      missing from Section A entirely, type it in. This step matters
+#      most -- it catches what my guessing missed. Only this page: do not
+#      follow "page 2" or "load more".
+#   5. Keep names EXACTLY as printed (keep GmbH, AG, umlauts), but leave out
+#      a city or address printed on the same line.
+#   6. Delete Section B entirely when you are done with it, or leave it --
+#      everything below the SECTION B marker is ignored either way.
+#   7. Save. Lines starting with # are ignored.
+#   8. When this page is finished, change TODO to DONE on the STATUS line
+#      below. --check turns only DONE worksheets into answer keys.
+#
+# When finished, run:  .venv/bin/python make_ground_truth.py --check
+# ============================================================================
+# STATUS: DONE
+
+# --- SECTION A: likely member companies (141) -------------------------
+
+3M Deutschland GmbH
+Adchem GmbH
+ADEKA Europe GmbH
+Adtracon GmbH
+AKEMI chemisch technische Spezialfabrik GmbH
+Alberdingk Boley GmbH
+ALFA Klebstoffe AG
+Albert Invent Corp.
+Arakawa Europe GmbH
+ARDEX Baustoff GmbH
+ARDEX GmbH
+ARLANXEO Deutschland GmbH
+ASTORplast Klebetechnik GmbH
+BASF SE
+BCD Chemie GmbH
+Berger-Seidle GmbH
+Biesterfeld Spezialchemie GmbH
+Bilgram Chemie GmbH
+Bona Vertriebsgesellschaft mbH
+Bostik GmbH
+Botament GmbH
+Brenntag GmbH
+Bühnen GmbH & Co. KG
+Breuer Polymer Consulting
+BYK-Chemie GmbH
+Cabot GmbH
+Celanese Services Germany GmbH
+certoplast Tech. Klebebänder GmbH
+Chemetall GmbH
+ChemQuest Inc. Europe
+CHT Germany GmbH
+Clariant Produkte (Deutschland) GmbH
+CnP Polymer GmbH
+COIM Deutschland GmbH
+COROPLAST F. Müller GmbH & Co. KG
+Covestro Deutschland AG
+CPH Adhesives GmbH
+CTA GmbH
+Cyberbond Europe GmbH
+DEKA Kleben & Dichten GmbH
+DELO Industrie Klebstoffe GmbH & Co. KGaA
+Dow Deutschland
+Drei Bond GmbH
+Dunlop Tech GmbH
+DuPont Speciality Products GmbH & Co. KG
+Dymax Europe GmbH
+EPOXONIC GmbH
+Eluid Adhesive GmbH
+EUKALIN Spezial-Klebstoff Fabrik GmbH
+Forbo Eurocol Deutschland GmbH
+Evonik Goldschmidt GmbH
+Evonik Industries AG
+Evonik Industries AG
+Evonik Nutrition & Care GmbH
+Fermit GmbH
+Follmann GmbH & Co. KG
+IFAM Fraunhofer
+SKZ – KFE gGmbH
+Gludan (Deutschland) GmbH
+GLUKON GmbH
+Grünig KG
+Gustav Grolman GmbH & Co. KG
+HANSETACK GmbH
+H.B. Fuller Deutschland GmbH
+Henkel AG & Co. KGaA
+Henkel Central Eastern Europe GmbH
+Hermann Otto GmbH
+Hinterwaldner Consulting
+HOBUM Oleochemicals GmbH
+Hoenle Adhesives GmbH
+Huntsman Advanced Materials (Deutschland) GmbH
+IGK Isolierglasklebstoffe GmbH
+IMCD Deutschland GmbH & Co. KG
+Innotech Marketing und Konfektion Rot GmbH
+INTOPLAN GmbH Bauchemie
+ISGATEC GmbH
+Isochem kautschuk-GmbH
+Jowat Klebstoffe GmbH
+Jowat SE
+Kaneka Belgium N.V. Kunststoffe W. Hollbeck
+Keil Anlagenbau GmbH & Co. KG
+KEYSER & MACKAY
+Kiesel Bauchemie GmbH u. Co. KG
+Kisling Deutschland GmbH
+Kissel + Wolf GmbH
+Klebtechnik Dr. Hartwig Lohse e.K.
+KLEIBERIT SE & Co. KG
+KNAUF Gesellschaft m.b.H.
+Kömmerling Chemische Fabrik GmbH
+KRAHN Chemie Deutschland GmbH
+L&L Products Europe GmbH
+Lanxess Deutschland GmbH
+Lohmann GmbH & Co. KG
+LOOP GmbH
+LUGATO GmbH & Co.KG
+Mapei GmbH
+Möller Chemie GmbH & Co. KG
+MORCHEM GmbH
+Murexin GmbH
+Murexin GmbH
+Nordmann, Rassmann GmbH
+Omya Hamburg GmbH
+Organik Kimya A.S.
+Parker Hannifin Manufacturing Germany GmbH & Co. KG
+PCI Augsburg GmbH
+PCI Augsburg GmbH Niederlassung Österreich
+Planatol GmbH
+Planatol GmbH
+Plasmatreat GmbH
+POLY-CHEM GmbH
+Poly-clip System GmbH & Co. KG
+Polytec PT GmbH Polymere Technologien
+PolyU GmbH
+Rain Carbon Germany GmbH
+Power2Polymers GmbH
+Pronova Dichtstoffe GmbH & Co. KG
+RAMPF Advanced Polymers GmbH & Co. KG
+Ramsauer GmbH & Co. KG
+Reka Klebetechnik GmbH & Co. KG
+RENIA Ges. mbH
+Rilit Coatings GmbH
+Robatech GmbH
+Rocholl GmbH
+Röhm GmbH
+RUDERER KLEBETECHNIK GMBH
+Saint Gobain Weber GmbH
+Schill + Seilacher “Struktol” GmbH
+SCIGRIP Europe
+Sika Deutschland CH AG & Co KG
+Sika Deutschland CH AG & Co KG
+Sika Automotive Hamburg GmbH
+Sopro Bauchemie GmbH
+Sopro Bauchemie GmbH
+Stanger Produktions- und Vertriebs GmbH
+Stauf Klebstoffwerk GmbH
+STOCKMEIER Urethanes GmbH & Co. KG
+Synthopol Chemie Dr. rer. pol. Koch GmbH & Co. KG
+TER HELL & CO. GMBH
+tesa SE
+TSRC (Lux.) Corporation S.a.r.l.
+Türmerleim GmbH
+UHU GmbH & Co. KG
+Uzin Utz AG
+VINAVIL S.p.A. Vertretung Deutschland
+VITO Irmen GmbH & Co KG
+Wacker Chemie AG
+Wakol GmbH
+Wakol GmbH
+Weber & Schaer GmbH & Co. KG
+WEICON GmbH & Co. KG
+WEKEM GmbH
+Weiss Chemie + Technik GmbH & Co. KG
+Wöllner GmbH
+Worlée-Chemie GmbH
+WS INSEBO GmbH
+WULFF GmbH & Co. KG
+ZELU CHEMIE GmbH
+
+# --- SECTION B: probably page furniture (40) -----------------------
+# Everything below this line is IGNORED. Move anything real up into Section A.

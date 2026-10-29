@@ -20,8 +20,10 @@ Run:  .venv/bin/python fetcher.py            # fetch all, skip cached
 from __future__ import annotations
 
 import argparse
+import codecs
 import csv
 import hashlib
+import re
 import time
 import urllib.robotparser
 from dataclasses import asdict, dataclass
@@ -87,6 +89,32 @@ def cache_path(url: str):
     return config.HTML_CACHE_DIR / f"{digest}.html"
 
 
+def pick_encoding(content: bytes, content_type: str, guess: str | None):
+    """
+    Which character set to decode a page with, most trustworthy first.
+
+    German pages mix UTF-8 and Latin-1, so an encoding has to be chosen. This
+    used to take chardet's guess first, which silently mangled a page that
+    declared UTF-8 correctly: every soft hyphen in OptoNet's member list came
+    out as "\u00f4\u00d9", splitting 457 company names into fragments
+    (2026-09-24). What the page declares is believed first now, and the guess
+    is only the fallback.
+    """
+    m = re.search(r"charset=([\w-]+)", content_type or "", re.IGNORECASE)
+    if not m:
+        m = re.search(rb'charset=["\']?([\w-]+)', content[:4096], re.IGNORECASE)
+    declared = m.group(1) if m else None
+    if isinstance(declared, bytes):
+        declared = declared.decode("ascii", "ignore")
+    if declared:
+        try:
+            codecs.lookup(declared)
+            return declared
+        except LookupError:
+            pass
+    return guess
+
+
 def check_robots(url: str, session: requests.Session) -> str:
     """Report whether robots.txt permits this path. Recorded, not enforced."""
     try:
@@ -133,9 +161,9 @@ def fetch_one(row: dict, session: requests.Session, refetch: bool,
                     throttle.observe(time.perf_counter() - _t0)
                 base["http_code"] = resp.status_code
                 if resp.status_code == 200:
-                    # Let requests infer encoding; German pages are a mix of
-                    # UTF-8 and Latin-1 and mojibake would corrupt every umlaut.
-                    resp.encoding = resp.apparent_encoding or resp.encoding
+                    resp.encoding = pick_encoding(
+                        resp.content, resp.headers.get("content-type", ""),
+                        resp.apparent_encoding) or resp.encoding
                     html = resp.text
                     path.write_text(html, encoding="utf-8")
                     break

@@ -1,0 +1,1023 @@
+﻿url_id,org_name,company,query,found_url,status,evidence,candidates_seen
+004,Automotive Nordwest e.V.,Goldbeck Nord GmbH,Goldbeck Nord GmbH Firma Webseite,https://www.goldbeck.de/,domain_match,"domain~goldbeck, domain=2",3
+005,automotive thüringen e.V.,Brunel GmbH – neue Adresse ab,Brunel GmbH – neue Adresse ab Firma Webseite,https://www.brunel.net/de-de,verified,"domain~brunel, domain+name=3",1
+005,automotive thüringen e.V.,TARGO Leasing GmbH,TARGO Leasing GmbH Firma Webseite,https://www.targobank.de/de/firmenkunden/leasing/index.html,verified,"domain~targo, domain+name=3",1
+009,BDEW Bundesverband der Energie- und Wasserwirtschaft e.V.,Allego GmbH,Allego GmbH Firma Webseite,https://www.allego.eu/de/,verified,"domain~allego, domain+name=3",1
+009,BDEW Bundesverband der Energie- und Wasserwirtschaft e.V.,ANE GmbH & Co. KG,ANE GmbH & Co. KG Firma Webseite,,unverified,,2
+012,Bundesverband Medizintechnologie e.V. (BVMed),1stQ Deutschland GmbH,1stQ Deutschland GmbH Firma Webseite,,no_result,,3
+012,Bundesverband Medizintechnologie e.V. (BVMed),A. Höfer GmbH,A. Höfer GmbH Firma Webseite,,unverified,,3
+012,Bundesverband Medizintechnologie e.V. (BVMed),aap Implantate AG,aap Implantate AG Firma Webseite,https://www.aap.de/produkte,page_only,name=1,5
+012,Bundesverband Medizintechnologie e.V. (BVMed),Abbott GmbH,Abbott GmbH Firma Webseite,https://www.de.abbott/,page_only,name=1,5
+012,Bundesverband Medizintechnologie e.V. (BVMed),Abbott Medical GmbH,Abbott Medical GmbH Firma Webseite,https://www.abbott.com/en-us/global-locations-contacts,verified,"domain~abbott, domain+name=3",2
+012,Bundesverband Medizintechnologie e.V. (BVMed),Abena GmbH,Abena GmbH Firma Webseite,https://www.abena.de/,verified,"domain~abena, domain+name=3",1
+012,Bundesverband Medizintechnologie e.V. (BVMed),Abiomed Europe GmbH,Abiomed Europe GmbH Firma Webseite,https://abiomed.mitarbeiterangebote.de/meta/imprint?lang=de,verified,"domain~abiomed, domain+name=3",1
+012,Bundesverband Medizintechnologie e.V. (BVMed),Acandis GmbH,Acandis GmbH Firma Webseite,https://acandis.com/unternehmen/,verified,"domain~acandis, domain+name=3",2
+012,Bundesverband Medizintechnologie e.V. (BVMed),aescoLOGIC GmbH,aescoLOGIC GmbH Firma Webseite,https://www.aescologic.de/,verified,"domain~aescologic, domain+name=3",1
+012,Bundesverband Medizintechnologie e.V. (BVMed),Aesculap AG,Aesculap AG Firma Webseite,https://aesculap.ag/,verified,"domain~aesculap, domain+name=3",1
+012,Bundesverband Medizintechnologie e.V. (BVMed),ai6 Solutions GmbH,ai6 Solutions GmbH Firma Webseite,,unverified,,5
+012,Bundesverband Medizintechnologie e.V. (BVMed),AKANNI Healthcare GmbH,AKANNI Healthcare GmbH Firma Webseite,https://akanni.de/,verified,"domain~akanni, domain+name=3",1
+012,Bundesverband Medizintechnologie e.V. (BVMed),AKRUS GmbH & Co.KG,AKRUS GmbH & Co.KG Firma Webseite,https://www.akrus.de/,verified,"domain~akrus, domain+name=3",1
+012,Bundesverband Medizintechnologie e.V. (BVMed),aktivmed GmbH,aktivmed GmbH Firma Webseite,https://aktivmed.de/,verified,"domain~aktivmed, domain+name=3",1
+012,Bundesverband Medizintechnologie e.V. (BVMed),ALCON Deutschland GmbH,ALCON Deutschland GmbH Firma Webseite,https://www.alcon.com/de-DE/impressum/,verified,"domain~alcon, domain+name=3",1
+012,Bundesverband Medizintechnologie e.V. (BVMed),AllCON GmbH,AllCON GmbH Firma Webseite,https://allcon.eu/,verified,"domain~allcon, domain+name=3",1
+012,Bundesverband Medizintechnologie e.V. (BVMed),ALMO-Erzeugnisse GmbH,ALMO-Erzeugnisse GmbH Firma Webseite,https://www.almo-erzeugnisse.de/de.html,verified,"domain~erzeugnisse, domain+name=3",1
+012,Bundesverband Medizintechnologie e.V. (BVMed),Ambu GmbH,Ambu GmbH Firma Webseite,https://www.ambu.de/,verified,"domain~ambu, domain+name=3",1
+012,Bundesverband Medizintechnologie e.V. (BVMed),AMEFA GmbH,AMEFA GmbH Firma Webseite,https://www.amefa-med.com/,verified,"domain~amefa, domain+name=3",1
+012,Bundesverband Medizintechnologie e.V. (BVMed),amg International GmbH,amg International GmbH Firma Webseite,,unverified,,2
+012,Bundesverband Medizintechnologie e.V. (BVMed),AMPLITUDE GmbH,AMPLITUDE GmbH Firma Webseite,https://www.amplitude-ortho.com/de/ueber-amplitude,verified,"domain~amplitude, domain+name=3",1
+012,Bundesverband Medizintechnologie e.V. (BVMed),Andreas Fahl Medizintechnik-Vertrieb GmbH,Andreas Fahl Medizintechnik-Vertrieb GmbH Firma Webseite,https://www.fahl.com/,verified,"domain~fahl, domain+name=3",1
+012,Bundesverband Medizintechnologie e.V. (BVMed),Ansell GmbH,Ansell GmbH Firma Webseite,https://www.ansell.com/de/de,domain_match,"domain~ansell, domain=2",4
+012,Bundesverband Medizintechnologie e.V. (BVMed),Arjo Deutschland GmbH,Arjo Deutschland GmbH Firma Webseite,https://www.arjo.com/de-de/uber-uns/,verified,"domain~arjo, domain+name=3",1
+012,Bundesverband Medizintechnologie e.V. (BVMed),Arvato Supply Chain Solutions SE,Arvato Supply Chain Solutions SE Firma Webseite,https://arvato.com/de,verified,"domain~arvato, domain+name=3",1
+012,Bundesverband Medizintechnologie e.V. (BVMed),ASSAmed GmbH,ASSAmed GmbH Firma Webseite,,no_result,,2
+012,Bundesverband Medizintechnologie e.V. (BVMed),ATMOS MedizinTechnik GmbH & Co. KG,ATMOS MedizinTechnik GmbH & Co. KG Firma Webseite,https://atmosmed.com/,verified,"domain~atmos, domain+name=3",1
+012,Bundesverband Medizintechnologie e.V. (BVMed),Attends GmbH,Attends GmbH Firma Webseite,https://www.attends.de/,verified,"domain~attends, domain+name=3",1
+012,Bundesverband Medizintechnologie e.V. (BVMed),audibene GmbH,audibene GmbH Firma Webseite,https://www.audibene.de/,verified,"domain~audibene, domain+name=3",1
+012,Bundesverband Medizintechnologie e.V. (BVMed),auric-direct GmbH,auric-direct GmbH Firma Webseite,https://www.auric-direct.de/,verified,"domain~direct, domain+name=3",1
+012,Bundesverband Medizintechnologie e.V. (BVMed),Avanos Medical GmbH,Avanos Medical GmbH Firma Webseite,https://avanos.de/,verified,"domain~avanos, domain+name=3",1
+012,Bundesverband Medizintechnologie e.V. (BVMed),B. Braun Avitum AG,B. Braun Avitum AG Firma Webseite,https://www.bbraun.de/de.html,verified,"domain~braun, domain+name=3",1
+012,Bundesverband Medizintechnologie e.V. (BVMed),B. Braun Avitum Saxonia GmbH,B. Braun Avitum Saxonia GmbH Firma Webseite,https://www.bbraun.de/de.html,verified,"domain~braun, domain+name=3",1
+012,Bundesverband Medizintechnologie e.V. (BVMed),B. Braun Deutschland GmbH & Co. KG,B. Braun Deutschland GmbH & Co. KG Firma Webseite,https://www.bbraun.de/de.html,verified,"domain~braun, domain+name=3",1
+012,Bundesverband Medizintechnologie e.V. (BVMed),B. Braun Melsungen AG,B. Braun Melsungen AG Firma Webseite,https://www.bbraun.de/,verified,"domain~braun, domain+name=3",1
+012,Bundesverband Medizintechnologie e.V. (BVMed),B. Braun SE,B. Braun SE Firma Webseite,https://www.bbraun.de/de.html,verified,"domain~braun, domain+name=3",1
+012,Bundesverband Medizintechnologie e.V. (BVMed),B. Braun Surgical GmbH,B. Braun Surgical GmbH Firma Webseite,https://www.bbraun.de/de.html,verified,"domain~braun, domain+name=3",1
+012,Bundesverband Medizintechnologie e.V. (BVMed),Bausch & Lomb GmbH,Bausch & Lomb GmbH Firma Webseite,https://www.bausch-lomb.de/,verified,"domain~bausch, domain+name=3",1
+012,Bundesverband Medizintechnologie e.V. (BVMed),Baxter Deutschland GmbH,Baxter Deutschland GmbH Firma Webseite,https://www.baxter.de/de/kontakt,verified,"domain~baxter, domain+name=3",1
+012,Bundesverband Medizintechnologie e.V. (BVMed),BAYOOMED GmbH,BAYOOMED GmbH Firma Webseite,https://www.bayoomed.com/,verified,"domain~bayoomed, domain+name=3",1
+012,Bundesverband Medizintechnologie e.V. (BVMed),BD Becton Dickinson GmbH,BD Becton Dickinson GmbH Firma Webseite,https://rt-planung.de/aid=75.html,page_only,name=1,4
+012,Bundesverband Medizintechnologie e.V. (BVMed),Beaver-Visitec International (BVI),Beaver-Visitec International (BVI) Firma Webseite,https://www.mkoptics.ru/brands/bvi/,page_only,name=1,5
+012,Bundesverband Medizintechnologie e.V. (BVMed),Beiersdorf AG,Beiersdorf AG Firma Webseite,https://www.beiersdorf.de/,verified,"domain~beiersdorf, domain+name=3",1
+012,Bundesverband Medizintechnologie e.V. (BVMed),Bentley InnoMed GmbH,Bentley InnoMed GmbH Firma Webseite,,no_result,,2
+012,Bundesverband Medizintechnologie e.V. (BVMed),Berlin Heart GmbH,Berlin Heart GmbH Firma Webseite,https://www.berlinheart.com/en/about-us/,verified,"domain~heart, domain+name=3",3
+012,Bundesverband Medizintechnologie e.V. (BVMed),Best Care GmbH,Best Care GmbH Firma Webseite,https://www.best-care-gmbh.de/,verified,"domain~best, domain+name=3",1
+012,Bundesverband Medizintechnologie e.V. (BVMed),betaMed GmbH,betaMed GmbH Firma Webseite,https://www.betamed.de/medizinservice-fuer/kliniken-und-krankenhaeuser/,verified,"domain~betamed, domain+name=3",1
+012,Bundesverband Medizintechnologie e.V. (BVMed),BGS Beta-Gamma-Service GmbH & Co. KG,BGS Beta-Gamma-Service GmbH & Co. KG Firma Webseite,https://bgs.eu/,page_only,name=1,4
+012,Bundesverband Medizintechnologie e.V. (BVMed),BioCer Entwicklungs GmbH,BioCer Entwicklungs GmbH Firma Webseite,https://www.biocer-gmbh.de/,verified,"domain~biocer, domain+name=3",1
+012,Bundesverband Medizintechnologie e.V. (BVMed),Biocomposites GmbH,Biocomposites GmbH Firma Webseite,https://bio-composites.eu/impressum/,domain_match,"domain~biocomposites, domain=2",5
+025,German Water Partnership e.V.,MolAquaTech GmbH,MolAquaTech GmbH Firma Webseite,https://molaquatech.com/en/homepage/,verified,"domain~molaquatech, domain+name=3",1
+025,German Water Partnership e.V.,DHI WASY GmbH,DHI WASY GmbH Firma Webseite,https://www.wasy.de/,domain_match,"domain~wasy, domain=2",5
+032,InnoZent OWL e.V.,AEU Tech GmbH,AEU Tech GmbH Firma Webseite,https://aeu-tech.com/,verified,"domain~tech, domain+name=3",1
+032,InnoZent OWL e.V.,Artgerecht Werbeagentur GmbH,Artgerecht Werbeagentur GmbH Firma Webseite,https://www.artgerecht.de/,verified,"domain~artgerecht, domain+name=3",1
+032,InnoZent OWL e.V.,"Aßmann, Mike | Business // Motivation // Personality","Aßmann, Mike | Business // Motivation // Personality Firma Webseite",,unverified,,3
+032,InnoZent OWL e.V.,azur - Allianz Zukunft Reifen,azur - Allianz Zukunft Reifen Firma Webseite,https://azur-netzwerk.de/,verified,"domain~azur, domain+name=3",1
+032,InnoZent OWL e.V.,BEDEM,BEDEM Firma Webseite,,unverified,,3
+032,InnoZent OWL e.V.,bib International College,bib International College Firma Webseite,https://www.bib.de/?ref=xranks,page_only,name=1,4
+032,InnoZent OWL e.V.,BREMER West GmbH & Co. KG,BREMER West GmbH & Co. KG Firma Webseite,https://www.jobware.de/job/technischer-einkaeufer-m-w-d-im-industrie-und-gewerbebau.1962606845.html,page_only,name=1,5
+032,InnoZent OWL e.V.,BSA Kunststofftechnik GmbH,BSA Kunststofftechnik GmbH Firma Webseite,https://www.bsa-kunststofftechnik.de/karriere/,verified,"domain~kunststofftechnik, domain+name=3",1
+032,InnoZent OWL e.V.,Bundesverband Mittelständische Wirtschaft (BVMW),Bundesverband Mittelständische Wirtschaft (BVMW) Firma Webseite,https://www.bvmw.de/,verified,"domain~bvmw, domain+name=3",1
+032,InnoZent OWL e.V.,"christmann informationstechnik + medien GmbH & Co. KG, Ilsede","christmann informationstechnik + medien GmbH & Co. KG, Ilsede Firma Webseite",https://christmann.info/,verified,"domain~christmann, domain+name=3",1
+032,InnoZent OWL e.V.,C-LAB,C-LAB Firma Webseite,,unverified,,4
+032,InnoZent OWL e.V.,code-x GmbH,code-x GmbH Firma Webseite,https://www.code-x.de/,verified,"domain~code, domain+name=3",1
+032,InnoZent OWL e.V.,Condor MedTec,Condor MedTec Firma Webseite,https://condor-medtec.de/,verified,"domain~condor, domain+name=3",1
+032,InnoZent OWL e.V.,Creos Lernideen und Beratung GmbH,Creos Lernideen und Beratung GmbH Firma Webseite,https://www.creos.de/,verified,"domain~creos, domain+name=3",1
+032,InnoZent OWL e.V.,CTDI Schloss Holte GmbH,CTDI Schloss Holte GmbH Firma Webseite,https://www1.ctdi.eu/,page_only,name=1,5
+032,InnoZent OWL e.V.,DBS Training & Consulting GmbH,DBS Training & Consulting GmbH Firma Webseite,https://db-training.de/dbtraining-de,domain_match,"domain~training, domain=2",3
+032,InnoZent OWL e.V.,Delta Media GmbH,Delta Media GmbH Firma Webseite,https://www.deltamedia.de/agentur/,verified,"domain~delta, domain+name=3",1
+032,InnoZent OWL e.V.,Edacentrum e.V.,Edacentrum e.V. Firma Webseite,https://www.edacentrum.de/,verified,"domain~edacentrum, domain+name=3",1
+032,InnoZent OWL e.V.,Erfinderclub Paderborn e.V,Erfinderclub Paderborn e.V Firma Webseite,https://erfinderclub-pb.de/,verified,"domain~erfinderclub, domain+name=3",1
+032,InnoZent OWL e.V.,FINDIQ GmbH,FINDIQ GmbH Firma Webseite,https://findiq.de/,verified,"domain~findiq, domain+name=3",1
+032,InnoZent OWL e.V.,Fischer Panda GmbH,Fischer Panda GmbH Firma Webseite,,no_result,,2
+032,InnoZent OWL e.V.,Fraunhofer ENAS-ASE,Fraunhofer ENAS-ASE Firma Webseite,https://www.enas.fraunhofer.de/,verified,"domain~enas, domain+name=3",1
+032,InnoZent OWL e.V.,Fraunhofer IEM,Fraunhofer IEM Firma Webseite,https://www.iem.fraunhofer.de/,page_only,name=1,3
+032,InnoZent OWL e.V.,Fraunhofer IOSB-INA,Fraunhofer IOSB-INA Firma Webseite,https://www.iosb.fraunhofer.de/,verified,"domain~iosb, domain+name=3",1
+032,InnoZent OWL e.V.,Freund Maschinenfabrik GmbH & Co. KG,Freund Maschinenfabrik GmbH & Co. KG Firma Webseite,https://www.freund.eu/?___store=english,domain_match,"domain~freund, domain=2",2
+032,InnoZent OWL e.V.,HEGGEMANN AG,HEGGEMANN AG Firma Webseite,https://www.heggemann.com/,verified,"domain~heggemann, domain+name=3",1
+032,InnoZent OWL e.V.,Ingenieurbüro Andreas Heidemann GmbH & Co.KG,Ingenieurbüro Andreas Heidemann GmbH & Co.KG Firma Webseite,https://www.andreasheidemann.de/,verified,"domain~heidemann, domain+name=3",1
+032,InnoZent OWL e.V.,helectronics gmbh,helectronics gmbh Firma Webseite,https://helectronics.de/,verified,"domain~helectronics, domain+name=3",1
+032,InnoZent OWL e.V.,HellwegWind GmbH,HellwegWind GmbH Firma Webseite,https://hellwegwind.de/,verified,"domain~hellwegwind, domain+name=3",2
+032,InnoZent OWL e.V.,Hochschule Bielefeld (HSBI),Hochschule Bielefeld (HSBI) Firma Webseite,,unverified,,2
+032,InnoZent OWL e.V.,Industrieanlagen-Betriebsgesellschaft mbH,Industrieanlagen-Betriebsgesellschaft mbH Firma Webseite,https://www.lobbyregister.bundestag.de/suche/R002444,page_only,name=1,2
+032,InnoZent OWL e.V.,IANUS Simulation GmbH,IANUS Simulation GmbH Firma Webseite,https://ianus-simulation.de/,verified,"domain~simulation, domain+name=3",1
+032,InnoZent OWL e.V.,IHK Ostwestfalen zu Bielefeld,IHK Ostwestfalen zu Bielefeld Firma Webseite,,no_result,,3
+032,InnoZent OWL e.V.,Innovative Card Systems GmbH,Innovative Card Systems GmbH Firma Webseite,https://virtual.drupa.de/vis/v1/de/exhprofiles/p9De9oyDTWKPCfQrI4JbYw,page_only,name=1,4
+032,InnoZent OWL e.V.,insensiv GmbH,insensiv GmbH Firma Webseite,https://insensiv.de/,verified,"domain~insensiv, domain+name=3",1
+032,InnoZent OWL e.V.,"Ising, Thorsten | Social Media, Online Marketing, Digitale Kommunikation, Schlangen","Ising, Thorsten | Social Media, Online Marketing, Digitale Kommunikation, Schlangen Firma Webseite",https://www.thorsten-ising.com/,verified,"domain~thorsten, domain+name=3",1
+032,InnoZent OWL e.V.,Herbert Kannegiesser GmbH,Herbert Kannegiesser GmbH Firma Webseite,https://www.kannegiesser.com/de/de/index.html,verified,"domain~kannegiesser, domain+name=3",1
+032,InnoZent OWL e.V.,Kreishandwerkerschaft Paderborn-Lippe,Kreishandwerkerschaft Paderborn-Lippe Firma Webseite,https://www.kh-online.de/,page_only,name=1,4
+032,InnoZent OWL e.V.,mechOnics ag,mechOnics ag Firma Webseite,https://www.mechonics.de/,verified,"domain~mechonics, domain+name=3",1
+032,InnoZent OWL e.V.,Frank Michna | Kommunikationsberatung | Websites | Shops  | Social Media | KI-Anwendungsberatung,Frank Michna | Kommunikationsberatung | Websites | Shops  | Social Media | KI-Anwendungsberatung Firma Webseite,https://www.frank-michna.de/,verified,"domain~michna, domain+name=3",1
+032,InnoZent OWL e.V.,MöllerFlex GmbH,MöllerFlex GmbH Firma Webseite,,unverified,,2
+032,InnoZent OWL e.V.,MSF-Vathauer Antriebstechnik GmbH,MSF-Vathauer Antriebstechnik GmbH Firma Webseite,https://www.msf-technik.de/,page_only,name=1,4
+032,InnoZent OWL e.V.,myconsult GmbH,myconsult GmbH Firma Webseite,https://myconsult.de/,verified,"domain~myconsult, domain+name=3",1
+032,InnoZent OWL e.V.,Nuromedia GmbH,Nuromedia GmbH Firma Webseite,https://www.nuromedia.com/about-us/,verified,"domain~nuromedia, domain+name=3",1
+032,InnoZent OWL e.V.,ONLINE Systemlogistik GmbH & Co. KG,ONLINE Systemlogistik GmbH & Co. KG Firma Webseite,https://www.oslnet.de/de/impressum/,page_only,name=1,3
+032,InnoZent OWL e.V.,OPTANO GmbH,OPTANO GmbH Firma Webseite,https://optano.com/,verified,"domain~optano, domain+name=3",1
+032,InnoZent OWL e.V.,"Ostfalia Hochschule für angewandte Wissenschaften, Wolfenbüttel","Ostfalia Hochschule für angewandte Wissenschaften, Wolfenbüttel Firma Webseite",https://www.ostfalia.de/,verified,"domain~ostfalia, domain+name=3",1
+032,InnoZent OWL e.V.,OWITA GmbH,OWITA GmbH Firma Webseite,https://website.owita.com/,page_only,name=1,2
+032,InnoZent OWL e.V.,Raumtänzer GmbH,Raumtänzer GmbH Firma Webseite,,unverified,,5
+032,InnoZent OWL e.V.,RTB GmbH und Co. KG,RTB GmbH und Co. KG Firma Webseite,,unverified,,5
+032,InnoZent OWL e.V.,S&N Invent GmbH,S&N Invent GmbH Firma Webseite,https://its-owl.de/ueber-uns/mitglieder/sn/,page_only,name=1,3
+032,InnoZent OWL e.V.,S&Ü Hydraulik- und Maschinenbau GmbH,S&Ü Hydraulik- und Maschinenbau GmbH Firma Webseite,https://www.s-und-ue.de/,page_only,name=1,2
+032,InnoZent OWL e.V.,SBH West GmbH,SBH West GmbH Firma Webseite,,unverified,,4
+032,InnoZent OWL e.V.,"SHWire, Schwering & Hasse Elektrodraht GmbH","SHWire, Schwering & Hasse Elektrodraht GmbH Firma Webseite",https://www.sh-wire.de/,verified,"domain~shwire, domain+name=3",1
+032,InnoZent OWL e.V.,SIL System Integration Laboratory GmbH,SIL System Integration Laboratory GmbH Firma Webseite,https://www.yokogawa.com/de/solutions/products-and-services/information/production-management/oprex-lims/,page_only,name=1,4
+032,InnoZent OWL e.V.,Silence Aircraft GmbH,Silence Aircraft GmbH Firma Webseite,https://silence-aircraft.de/,verified,"domain~aircraft, domain+name=3",1
+032,InnoZent OWL e.V.,Skyline Express International GmbH,Skyline Express International GmbH Firma Webseite,https://www.skyline-express.de/startseite,verified,"domain~skyline, domain+name=3",1
+032,InnoZent OWL e.V.,Stührenberg GmbH,Stührenberg GmbH Firma Webseite,,unverified,,3
+032,InnoZent OWL e.V.,TEAM GmbH,TEAM GmbH Firma Webseite,https://www.corratec.com/,page_only,name=1,4
+032,InnoZent OWL e.V.,Technische Hochschule Ostwestfalen-Lippe,Technische Hochschule Ostwestfalen-Lippe Firma Webseite,https://www.th-owl.de/,page_only,name=1,4
+032,InnoZent OWL e.V.,Technische Hochschule Ostwestfalen-Lippe - inIT,Technische Hochschule Ostwestfalen-Lippe - inIT Firma Webseite,https://www.init-owl.nrw/,verified,"domain~init, domain+name=3",2
+032,InnoZent OWL e.V.,Technologie- und Berufsbildungszentrum Paderborn (tbz),Technologie- und Berufsbildungszentrum Paderborn (tbz) Firma Webseite,https://www.tbzpaderborn.de/das-tbz,page_only,name=1,3
+032,InnoZent OWL e.V.,T.F. Wickeltechnik GmbH,T.F. Wickeltechnik GmbH Firma Webseite,,no_result,,2
+032,InnoZent OWL e.V.,tomorrow bird GmbH,tomorrow bird GmbH Firma Webseite,https://www.tomorrowbird.de/,verified,"domain~tomorrow, domain+name=3",1
+032,InnoZent OWL e.V.,Top Light GmbH & Co. KG,Top Light GmbH & Co. KG Firma Webseite,https://top-light.de/,verified,"domain~light, domain+name=3",1
+032,InnoZent OWL e.V.,Trenz Electronic GmbH,Trenz Electronic GmbH Firma Webseite,https://www.trenz-electronic.de/,verified,"domain~electronic, domain+name=3",1
+032,InnoZent OWL e.V.,Ulrich Rotte Anlagenbau und Fördertechnik GmbH,Ulrich Rotte Anlagenbau und Fördertechnik GmbH Firma Webseite,https://www.ulrich-rotte.de/,verified,"domain~ulrich, domain+name=3",1
+032,InnoZent OWL e.V.,Universität Bielefeld,Universität Bielefeld Firma Webseite,,unverified,,4
+032,InnoZent OWL e.V.,Universität Bielefeld - CITEC,Universität Bielefeld - CITEC Firma Webseite,,unverified,,4
+032,InnoZent OWL e.V.,Universität Paderborn,Universität Paderborn Firma Webseite,,unverified,,4
+032,InnoZent OWL e.V.,Universität Paderborn - CeOPP,Universität Paderborn - CeOPP Firma Webseite,https://www.ceopp.de/,verified,"domain~ceopp, domain+name=3",1
+032,InnoZent OWL e.V.,Universität Paderborn - Heinz Nixdorf Institut,Universität Paderborn - Heinz Nixdorf Institut Firma Webseite,https://www.hni.uni-paderborn.de/,page_only,name=1,3
+032,InnoZent OWL e.V.,Universität Paderborn - Lehrstuhl für Konstruktions- und Antriebstechnik (KAt),Universität Paderborn - Lehrstuhl für Konstruktions- und Antriebstechnik (KAt) Firma Webseite,https://mb.uni-paderborn.de/kat,page_only,name=1,4
+032,InnoZent OWL e.V.,Universität Paderborn - Software Innovation Campus,Universität Paderborn - Software Innovation Campus Firma Webseite,https://www.sicp.de/,page_only,name=1,5
+032,InnoZent OWL e.V.,Universität Paderborn - TecUP,Universität Paderborn - TecUP Firma Webseite,https://www.uni-paderborn.de/nachricht/99907,page_only,name=1,5
+032,InnoZent OWL e.V.,VerbundVolksbank OWL,VerbundVolksbank OWL Firma Webseite,https://www.verbundvolksbank-owl-stiftung.de/startseite.html,verified,"domain~verbundvolksbank, domain+name=3",1
+032,InnoZent OWL e.V.,WestfalenWIND GmbH,WestfalenWIND GmbH Firma Webseite,https://www.westfalenwind.de/,verified,"domain~westfalenwind, domain+name=3",1
+032,InnoZent OWL e.V.,Wickord Buser Patentanwälte PartG mbB,Wickord Buser Patentanwälte PartG mbB Firma Webseite,https://patentprofi24.de/ueber-uns/,page_only,name=1,5
+032,InnoZent OWL e.V.,Wirtschaftsförderung Paderborn,Wirtschaftsförderung Paderborn Firma Webseite,,unverified,,3
+039,Life Science Nord e.V.,EurA AG,EurA AG Firma Webseite,https://www.eura-ag.com/,verified,"domain~eura, domain+name=3",1
+040,Medical Valley EMN e.V.,1A CUE Consulting & Engineering GmbH,1A CUE Consulting & Engineering GmbH Firma Webseite,,unverified,,4
+040,Medical Valley EMN e.V.,2be_die markenmacher GmbH,2be_die markenmacher GmbH Firma Webseite,,no_result,,2
+040,Medical Valley EMN e.V.,4BetterDevices,4BetterDevices Firma Webseite,https://4betterdevices.com/,verified,"domain~4betterdevices, domain+name=3",1
+040,Medical Valley EMN e.V.,A.R.C. Laser GmbH,A.R.C. Laser GmbH Firma Webseite,https://www.arclaser.com/,verified,"domain~laser, domain+name=3",1
+040,Medical Valley EMN e.V.,AB-CT – Advanced Breast-CT GmbH,AB-CT – Advanced Breast-CT GmbH Firma Webseite,https://ab-ct.com/,page_only,name=1,4
+040,Medical Valley EMN e.V.,"ABF-Pharmazie GmbH & Co. KG / ABF, Apothekerin Eva Schreier e. K.","ABF-Pharmazie GmbH & Co. KG / ABF, Apothekerin Eva Schreier e. K. Firma Webseite",https://www.medical-valley-emn.de/ueber-uns/mitglieder-partner/,page_only,name=1,4
+040,Medical Valley EMN e.V.,acad group GmbH,acad group GmbH Firma Webseite,https://acad-group.de/,verified,"domain~acad, domain+name=3",1
+040,Medical Valley EMN e.V.,acterience management partners GmbH & Co. KG,acterience management partners GmbH & Co. KG Firma Webseite,https://www.acterience.com/impressum/,verified,"domain~acterience, domain+name=3",1
+040,Medical Valley EMN e.V.,ADVANOVA GmbH,ADVANOVA GmbH Firma Webseite,https://www.advanova.de/,verified,"domain~advanova, domain+name=3",1
+040,Medical Valley EMN e.V.,AFRA GmbH,AFRA GmbH Firma Webseite,https://www.afra-gmbh.at/,verified,"domain~afra, domain+name=3",2
+040,Medical Valley EMN e.V.,Ahead Care GmbH,Ahead Care GmbH Firma Webseite,https://www.ahead-net.de/,verified,"domain~ahead, domain+name=3",2
+040,Medical Valley EMN e.V.,Ajambow GmbH,Ajambow GmbH Firma Webseite,https://www.ajambow.com/,verified,"domain~ajambow, domain+name=3",1
+040,Medical Valley EMN e.V.,Akkodis Edge Germany GmbH,Akkodis Edge Germany GmbH Firma Webseite,https://www.akkodis.com/de/portfolio/edge,verified,"domain~akkodis, domain+name=3",1
+040,Medical Valley EMN e.V.,ALBOMED GmbH,ALBOMED GmbH Firma Webseite,https://albomed.de/,verified,"domain~albomed, domain+name=3",1
+040,Medical Valley EMN e.V.,ALLISTRO GmbH,ALLISTRO GmbH Firma Webseite,https://www.allistro.de/,verified,"domain~allistro, domain+name=3",1
+040,Medical Valley EMN e.V.,ALPO Medizintechnik GmbH,ALPO Medizintechnik GmbH Firma Webseite,https://www.alpo-med.de/,verified,"domain~alpo, domain+name=3",1
+040,Medical Valley EMN e.V.,AMIPLANT GmbH,AMIPLANT GmbH Firma Webseite,https://amiplant.com/,verified,"domain~amiplant, domain+name=3",1
+040,Medical Valley EMN e.V.,Antaks GmbH,Antaks GmbH Firma Webseite,https://www.antaks.de/,verified,"domain~antaks, domain+name=3",3
+040,Medical Valley EMN e.V.,APAGCoSyst Control Systems GmbH,APAGCoSyst Control Systems GmbH Firma Webseite,https://www.apagcosyst.com/,verified,"domain~apagcosyst, domain+name=3",1
+040,Medical Valley EMN e.V.,AS Automation GmbH,AS Automation GmbH Firma Webseite,,unverified,,4
+043,NMWP.NRW e.V.,AMAC GmbH,AMAC GmbH Firma Webseite,https://amac.gmbh/,verified,"domain~amac, domain+name=3",1
+043,NMWP.NRW e.V.,AMO GmbH,AMO GmbH Firma Webseite,,unverified,,5
+043,NMWP.NRW e.V.,CTC GmbH,CTC GmbH Firma Webseite,,unverified,,5
+043,NMWP.NRW e.V.,Fraunhofer-Institut für Mikroelektronische Schaltungen und Systeme IMS,Fraunhofer-Institut für Mikroelektronische Schaltungen und Systeme IMS Firma Webseite,https://www.ims.fraunhofer.de/,page_only,name=1,3
+043,NMWP.NRW e.V.,"Institut für Umwelt & Energie, Technik & Analytik e. V. (IUTA)","Institut für Umwelt & Energie, Technik & Analytik e. V. (IUTA) Firma Webseite",https://www.iuta.de/,verified,"domain~iuta, domain+name=3",1
+043,NMWP.NRW e.V.,nanobay,nanobay Firma Webseite,https://www.wirtschaft-gronau.de/wirtschaftsfoerderung/wirtschaftszentrum/mieter-im-wirtschaftszentrum/,page_only,name=1,4
+043,NMWP.NRW e.V.,Pulsar Photonics GmbH,Pulsar Photonics GmbH Firma Webseite,https://www.pulsar-photonics.de/,verified,"domain~photonics, domain+name=3",1
+045,OptoNet e.V.,FERCHAU GmbH,FERCHAU GmbH Firma Webseite,https://www.ferchau.com/de/de,verified,"domain~ferchau, domain+name=3",1
+045,OptoNet e.V.,IQS GmbH,IQS GmbH Firma Webseite,,unverified,,5
+045,OptoNet e.V.,Mahr GmbH,Mahr GmbH Firma Webseite,https://mahr-gmbh.de/,verified,"domain~mahr, domain+name=3",2
+045,OptoNet e.V.,UX2B GmbH,UX2B GmbH Firma Webseite,https://www.ux2b.de/,verified,"domain~ux2b, domain+name=3",1
+050,SPECTARIS e.V.,VitalAire GmbH,VitalAire GmbH Firma Webseite,https://www.vitalaire.de/de/kontakt,verified,"domain~vitalaire, domain+name=3",2
+074,MAGNA BIO,Insitut für Angewandte Medizintechnik (AME),Insitut für Angewandte Medizintechnik (AME) Firma Webseite,https://www.ame.rwth-aachen.de/cms/AME/~nsnt/Das-Institut/,page_only,name=1,5
+074,MAGNA BIO,Charité – Universitätsmedizin Berlin,Charité – Universitätsmedizin Berlin Firma Webseite,https://www.charite.de/,verified,"domain~charite, domain+name+postcode=5",1
+074,MAGNA BIO,ERTRON GmbH,ERTRON GmbH Firma Webseite,https://www.ertron.de/,verified,"domain~ertron, domain+name+phone+postcode=8",1
+074,MAGNA BIO,fzmb GmbH,fzmb GmbH Firma Webseite,https://www.fzmb.de/,verified,"domain~fzmb, domain+name=3",1
+074,MAGNA BIO,General Numerics Research Lab e.V.,General Numerics Research Lab e.V. Firma Webseite,http://www.general-numerics-rl.de/de/,verified,"domain~numerics, domain+name+postcode=5",1
+074,MAGNA BIO,Industrieelektronik Brandenburg GmbH,Industrieelektronik Brandenburg GmbH Firma Webseite,https://www.industrieelektronik.de/,verified,"domain~industrieelektronik, domain+name=3",1
+074,MAGNA BIO,INNOVENT e.V. Technologieentwicklung Jena,INNOVENT e.V. Technologieentwicklung Jena Firma Webseite,https://idw-online.de/de/institution1387,verified,name+phone+postcode=6,4
+074,MAGNA BIO,JenLab GmbH,JenLab GmbH Firma Webseite,https://www.jenlab.de/principal-investigator/,verified,"domain~jenlab, domain+name+phone=6",2
+074,MAGNA BIO,Johannes Gutenberg-Universität Mainz Institut für Physik,Johannes Gutenberg-Universität Mainz Institut für Physik Firma Webseite,https://www.iph.uni-mainz.de/,verified,name+phone+postcode=6,1
+074,MAGNA BIO,Karlsruher Institut für Technologie,Karlsruher Institut für Technologie Firma Webseite,https://www.kit.edu/english/,page_only,name=1,4
+074,MAGNA BIO,MABEL Mannheim Biomedical Engineering Laboratories,MABEL Mannheim Biomedical Engineering Laboratories Firma Webseite,https://www.vitalmonitoring-netzwerk.de/mitglieder/,verified,name+postcode=3,2
+074,MAGNA BIO,Magnetworld AG,Magnetworld AG Firma Webseite,https://magnet-world.eu/,verified,"domain~magnetworld, domain+name=3",1
+074,MAGNA BIO,Matesy GmbH,Matesy GmbH Firma Webseite,https://matesy.de/de/,verified,"domain~matesy, domain+name+phone=6",1
+074,MAGNA BIO,mme Mannheim,mme Mannheim Firma Webseite,https://www.auskunft.de/firma/mme-mannheim-medizinelektronik-ug-(haftungsbeschränkt)/426rxf3x,page_only,postcode=2,3
+074,MAGNA BIO,Micromod Partikeltechnologie GmbH,Micromod Partikeltechnologie GmbH Firma Webseite,https://micromod.de/,verified,"domain~micromod, domain+name+phone+postcode=8",1
+074,MAGNA BIO,Roche Diagnostics GmbH,Roche Diagnostics GmbH Firma Webseite,https://www.roche.com/de/about/business/diagnostics,verified,"domain~roche, domain+name=3",1
+074,MAGNA BIO,SEKELS GmbH,SEKELS GmbH Firma Webseite,https://sekels.de/,verified,"domain~sekels, domain+name=3",1
+074,MAGNA BIO,senetics healthcare group GmbH und Co. KG,senetics healthcare group GmbH und Co. KG Firma Webseite,https://senetics.de/,verified,"domain~senetics, domain+name+phone+postcode=8",1
+074,MAGNA BIO,simfo GmbH,simfo GmbH Firma Webseite,https://simfo.de/en?lang=EN,verified,"domain~simfo, domain+name+phone+postcode=8",1
+074,MAGNA BIO,Technische Universität Ilmenau,Technische Universität Ilmenau Firma Webseite,https://www.ilmenau.de/de/unsere-stadt/universitaetsstandort/,verified,name+postcode=3,3
+074,MAGNA BIO,Universitätsklinikum Erlangen,Universitätsklinikum Erlangen Firma Webseite,https://www.uk-erlangen.de/,verified,"domain~erlangen, domain+name=3",1
+074,MAGNA BIO,UVR-FIA GmbH,UVR-FIA GmbH Firma Webseite,https://uvr-fia.de/,verified,phone+postcode=5,1
+074,MAGNA BIO,WISO-TECH GmbH,WISO-TECH GmbH Firma Webseite,https://wiso-gmbh.de/,verified,"domain~wiso, domain+name=3",1
+075,KliWaTex,A. Richter Kälte- u. Klimatechnik,,https://kaelte-richter.de,email_domain,email=mail@kaelte-richter.de,0
+075,KliWaTex,ALTERFIL Nähfaden GmbH,,https://alterfil.com,email_domain,email=amrhein@alterfil.com,0
+075,KliWaTex,B+M Textil GmbH & Co. KG,,https://bm-textil.de,email_domain,email=info@bm-textil.de,0
+075,KliWaTex,F. A. Kreißig & Sohn GmbH,,https://weberei-kreissig.de,email_domain,email=sekretariat@weberei-kreissig.de,0
+075,KliWaTex,Funke Stickerei GmbH,Funke Stickerei GmbH Firma Webseite,https://www.funke-stickerei.de/,verified,"domain~stickerei, domain+name+phone+postcode=8",1
+075,KliWaTex,Gefora Forster GmbH,,https://gefora.de,email_domain,email=g.hanisch@gefora.de,0
+075,KliWaTex,Grund GmbH & Co.KG - Kunststoff-Spritzguss,Grund GmbH & Co.KG - Kunststoff-Spritzguss Firma Webseite,https://www.grund-kv.de/,verified,"domain~grund, domain+name=3",1
+075,KliWaTex,Kaiser Holz GmbH,,https://kaiser-holz.de,email_domain,email=info@kaiser-holz.de,0
+075,KliWaTex,Kunststofftechnik Weißbach,,https://ktw-gornau.de,email_domain,email=info@ktw-gornau.de,0
+075,KliWaTex,KZV Sanitär GbR Körner - Zeuner - Voigt,KZV Sanitär GbR Körner - Zeuner - Voigt Firma Webseite,https://kzv-plauen.de/kontakt,verified,email+name+phone+postcode=10,1
+075,KliWaTex,M&S Umweltprojekt GmbH,,https://mus-umweltprojekt.de,email_domain,email=plauen@mus-umweltprojekt.de,0
+075,KliWaTex,Messner Versorgungstechnik GmbH,,https://messner-vt.de,email_domain,email=info@messner-vt.de,0
+075,KliWaTex,Plauener Spitzen & Stickereien GmbH,,https://plauspitz.de,email_domain,email=info@plauspitz.de,0
+075,KliWaTex,Pressless GmbH,,https://pressless.de,email_domain,email=info@pressless.de,0
+075,KliWaTex,Stickereien & Textilien GmbH,,https://stick-textil.de,email_domain,email=info@stick-textil.de,0
+075,KliWaTex,Textilausrüstung Pfand GmbH,,https://pfand-textil.de,email_domain,email=info@pfand-textil.de,0
+075,KliWaTex,TINAtex GmbH,TINAtex GmbH Firma Webseite,https://www.tinatex.eu/,verified,"domain~tinatex, domain+name+phone+postcode=8",1
+075,KliWaTex,Wilfried Keßler Erdbau- und Abbruch GmbH,,https://wilfried-kessler.de,email_domain,email=info@wilfried-kessler.de,0
+077,Mikroalgen,Akees Data Intelligence GmbH,Akees Data Intelligence GmbH Firma Webseite,,unverified,,2
+077,Mikroalgen,Bioactive Food GmbH,Bioactive Food GmbH Firma Webseite,https://bioactive-food.de/,verified,"domain~bioactive, domain+name=3",1
+077,Mikroalgen,Dr. Eberhard Bioenergie GmbH & Co. KG,Dr. Eberhard Bioenergie GmbH & Co. KG Firma Webseite,,no_result,,1
+077,Mikroalgen,EvU – Innovative Umwelttechnik GmbH,EvU – Innovative Umwelttechnik GmbH Firma Webseite,https://evu-gruppe.de/,page_only,name=1,5
+077,Mikroalgen,Füllner & Partner GmbH,Füllner & Partner GmbH Firma Webseite,,unverified,,1
+077,Mikroalgen,IGV Institut für Getreideverarbeitung GmbH,IGV Institut für Getreideverarbeitung GmbH Firma Webseite,https://www.igv-gmbh.de/,page_only,name=1,4
+077,Mikroalgen,INPUT Ingenieure GmbH,INPUT Ingenieure GmbH Firma Webseite,https://www.input-ingenieure.de/index.php/de/,verified,"domain~ingenieure, domain+name=3",1
+077,Mikroalgen,KTS Alge GmbH,KTS Alge GmbH Firma Webseite,,unverified,,3
+077,Mikroalgen,LABOKLIN GmbH & Co. KG,LABOKLIN GmbH & Co. KG Firma Webseite,https://www.laboklin.co.uk/,verified,"domain~laboklin, domain+name=3",2
+077,Mikroalgen,Microganic GmbH,Microganic GmbH Firma Webseite,https://microganic.de/,verified,"domain~microganic, domain+name=3",1
+077,Mikroalgen,TERRA URBANA Umlandentwicklungsgesellschaft mbH,TERRA URBANA Umlandentwicklungsgesellschaft mbH Firma Webseite,https://www.terraurbana.de/,verified,"domain~urbana, domain+name=3",1
+077,Mikroalgen,Albert-Ludwigs Universität Freiburg,Albert-Ludwigs Universität Freiburg Firma Webseite,https://uni-freiburg.de/,verified,"domain~freiburg, domain+name=3",1
+077,Mikroalgen,Alfred-Wegener-Institut,Alfred-Wegener-Institut Firma Webseite,https://www.awi.de/ueber-uns/service/presse/presse-detailansicht/webseite-der-helmholtz-klima-initiative-erstrahlt-im-neuen-design.html,page_only,name=1,4
+077,Mikroalgen,Brandenburgische Technische Universität Cottbus-Senftenberg,Brandenburgische Technische Universität Cottbus-Senftenberg Firma Webseite,,no_result,,2
+077,Mikroalgen,"Gesellschaft zur Förderung von Medizin- , Bio und Umwelttechnologien e.V.","Gesellschaft zur Förderung von Medizin- , Bio und Umwelttechnologien e.V. Firma Webseite",https://www.trustima.de/review/gmbu.de,page_only,name=1,3
+077,Mikroalgen,Hochschule Anhalt,Hochschule Anhalt Firma Webseite,https://www.hs-anhalt.de/startseite.html,verified,"domain~anhalt, domain+name=3",1
+077,Mikroalgen,Hochschule Bremerhaven,Hochschule Bremerhaven Firma Webseite,http://www.hs-bremerhaven.de/de,verified,"domain~bremerhaven, domain+name=3",1
+077,Mikroalgen,Hochschule Kaiserslautern,Hochschule Kaiserslautern Firma Webseite,https://www.kaiserslautern.de/arbeit_bildung_wissenschaft/hochschulen/hochschulen/fachhochschule/index.html.de,verified,"domain~kaiserslautern, domain+name=3",3
+077,Mikroalgen,Hochschule Neubrandenburg,Hochschule Neubrandenburg Firma Webseite,https://www.neubrandenburg.de/Wirtschaft-Stadtentwicklung/Wirtschaftsnahe-Infrastruktur/Hochschule-Neubrandenburg/index.php,verified,"domain~neubrandenburg, domain+name=3",3
+077,Mikroalgen,Humboldt Universität zu Berlin,Humboldt Universität zu Berlin Firma Webseite,,unverified,,5
+077,Mikroalgen,Martin – Luther Universität Halle,Martin – Luther Universität Halle Firma Webseite,https://www.uni-halle.de/,verified,"domain~halle, domain+name=3",1
+077,Mikroalgen,Ruhr-Universität Bochum,Ruhr-Universität Bochum Firma Webseite,https://www.ruhr-uni-bochum.de/de,verified,"domain~ruhr, domain+name=3",1
+077,Mikroalgen,Technische Hochschule Wildau,Technische Hochschule Wildau Firma Webseite,https://thonline.th-wildau.de/qisserver/a/fs.res.frontend/pub/view/3026,page_only,name=1,5
+077,Mikroalgen,Universität Bielefeld,Universität Bielefeld Firma Webseite,,unverified,,3
+077,Mikroalgen,Universität Potsdam,Universität Potsdam Firma Webseite,https://www.uni-potsdam.de/de?fh=2,verified,"domain~potsdam, domain+name=3",1
+077,Mikroalgen,Zentrum für Ernährung und Lebensmitteltechnologie gGmbH,Zentrum für Ernährung und Lebensmitteltechnologie gGmbH Firma Webseite,https://www.zelt-nb.de/,page_only,name=1,3
+077,Mikroalgen,Phytolinc GbR,Phytolinc GbR Firma Webseite,https://phytolinc.com/,domain_match,"domain~phytolinc, domain=2",3
+077,Mikroalgen,Roquette Klötze GmbH & Co. KG,Roquette Klötze GmbH & Co. KG Firma Webseite,,unverified,,3
+077,Mikroalgen,Whapow Deutschland GmbH,Whapow Deutschland GmbH Firma Webseite,https://ti-consult.de/mikroalgen/,page_only,name=1,3
+077,Mikroalgen,Klosterbrauerei Neuzelle GmbH,Klosterbrauerei Neuzelle GmbH Firma Webseite,https://neuzeller-bier.de/,verified,"domain~neuzelle, domain+name=3",1
+077,Mikroalgen,IMB Centre for Solar Biotechnology – The University of Queensland,IMB Centre for Solar Biotechnology – The University of Queensland Firma Webseite,,no_result,,5
+077,Mikroalgen,Climate Change Cluster – University of Technology Sydney,Climate Change Cluster – University of Technology Sydney Firma Webseite,https://www.uts.edu.au/,page_only,name=1,4
+077,Mikroalgen,Plant Biotechnology Laboratory – Hanyang University,Plant Biotechnology Laboratory – Hanyang University Firma Webseite,http://plantbiotech.hanyang.ac.kr/,domain_match,"domain~plant, domain=2",5
+077,Mikroalgen,Hochschule für Life Sciences FHNW,Hochschule für Life Sciences FHNW Firma Webseite,https://www.fhnw.ch/de/life-sciences,verified,"domain~fhnw, domain+name=3",1
+077,Mikroalgen,AlgaEnviro Pty Ltd,AlgaEnviro Pty Ltd Firma Webseite,https://ti-consult.de/mikroalgen/,page_only,name=1,4
+077,Mikroalgen,DSI Technology Pty Ltd,DSI Technology Pty Ltd Firma Webseite,,unverified,,4
+077,Mikroalgen,Global Futuremakers Pty Ltd,Global Futuremakers Pty Ltd Firma Webseite,https://futuremakers.mit.edu/,verified,"domain~futuremakers, domain+name=3",1
+078,AgrarCycle,"Entwicklung, Produktion und Vertrieb von elektronischen Steuerungssystemen","Entwicklung, Produktion und Vertrieb von elektronischen Steuerungssystemen Firma Webseite",https://www.ilmotronics.de/,page_only,name=1,3
+079,VDGH – Verband der Diagnostica-Industrie,Dr. Fooke Laboratorien GmbH,,https://fooke-labs.de,email_domain,email=information@ fooke-labs.de,0
+079,VDGH – Verband der Diagnostica-Industrie,m-u-t GmbH,,https://mut-group.com,email_domain,email=info@ mut-group.com,0
+079,VDGH – Verband der Diagnostica-Industrie,Oxford Nanopore Technologies GmbH,,https://nanoporetech.com,email_domain,email=support@ nanoporetech.com,0
+080,en2x – Wirtschaftsverband Fuels und Energie e.V.,AVIA AG,AVIA AG Firma Webseite,https://www.avia.de/,verified,"domain~avia, domain+name=3",1
+080,en2x – Wirtschaftsverband Fuels und Energie e.V.,H&R GmbH & Co. KGaA,H&R GmbH & Co. KGaA Firma Webseite,,unverified,,4
+080,en2x – Wirtschaftsverband Fuels und Energie e.V.,HOLBORN Europa Raffinerie Co. Ltd.,HOLBORN Europa Raffinerie Co. Ltd. Firma Webseite,https://www.holborn.de/,verified,"domain~holborn, domain+name=3",1
+080,en2x – Wirtschaftsverband Fuels und Energie e.V.,Rosneft Deutschland GmbH,Rosneft Deutschland GmbH Firma Webseite,https://www.rosneft.de/,verified,"domain~rosneft, domain+name=3",1
+081,Wirtschaftsvereinigung Stahl,AG der Dillinger Hüttenwerke,AG der Dillinger Hüttenwerke Firma Webseite,https://www.dillinger.de/,verified,"domain~dillinger, domain+name=3",1
+081,Wirtschaftsvereinigung Stahl,ArcelorMittal Bremen GmbH,ArcelorMittal Bremen GmbH Firma Webseite,https://germany.arcelormittal.com/icc/arcelor/nav/202/20230401-0000-1111-2222-300000000102.htm,page_only,name=1,3
+081,Wirtschaftsvereinigung Stahl,ArcelorMittal Duisburg GmbH,ArcelorMittal Duisburg GmbH Firma Webseite,https://duisburg.arcelormittal.com/,verified,"domain~duisburg, domain+name=3",1
+081,Wirtschaftsvereinigung Stahl,ArcelorMittal Eisenhüttenstadt GmbH,ArcelorMittal Eisenhüttenstadt GmbH Firma Webseite,https://eisenhuettenstadt.arcelormittal.com/,page_only,name=1,4
+081,Wirtschaftsvereinigung Stahl,ArcelorMittal Hamburg GmbH,ArcelorMittal Hamburg GmbH Firma Webseite,https://germany.arcelormittal.com/Impressum/,verified,name+postcode=3,2
+081,Wirtschaftsvereinigung Stahl,B.E.S. Brandenburger Elektrostahlwerke GmbH,B.E.S. Brandenburger Elektrostahlwerke GmbH Firma Webseite,,no_result,,5
+081,Wirtschaftsvereinigung Stahl,Badische Stahlwerke GmbH,Badische Stahlwerke GmbH Firma Webseite,https://bsw-kehl.de/,verified,name+postcode=3,1
+081,Wirtschaftsvereinigung Stahl,BENTELER Steel/Tube GmbH & Co. KG,BENTELER Steel/Tube GmbH & Co. KG Firma Webseite,https://www.benteler.com/de/,verified,"domain~benteler, domain+name+postcode=5",1
+081,Wirtschaftsvereinigung Stahl,BGH Edelstahl Freital GmbH,BGH Edelstahl Freital GmbH Firma Webseite,https://bgh.de/karriere/,verified,name+postcode=3,2
+081,Wirtschaftsvereinigung Stahl,BGH Edelstahl Lugau GmbH,BGH Edelstahl Lugau GmbH Firma Webseite,https://bgh.de/en,page_only,name=1,5
+081,Wirtschaftsvereinigung Stahl,BGH Edelstahl Siegen GmbH,BGH Edelstahl Siegen GmbH Firma Webseite,https://bgh.de/,page_only,name=1,5
+081,Wirtschaftsvereinigung Stahl,Deutsche Edelstahlwerke Services GmbH,Deutsche Edelstahlwerke Services GmbH Firma Webseite,https://bgh.de/,page_only,name=1,2
+081,Wirtschaftsvereinigung Stahl,DK Recycling und Roheisen GmbH,DK Recycling und Roheisen GmbH Firma Webseite,,no_result,,0
+081,Wirtschaftsvereinigung Stahl,Erasteel ALLOYS GmbH,Erasteel ALLOYS GmbH Firma Webseite,https://www.erasteel.com/,verified,"domain~erasteel, domain+name=3",1
+081,Wirtschaftsvereinigung Stahl,ESF Elbe-Stahlwerke Feralpi GmbH,ESF Elbe-Stahlwerke Feralpi GmbH Firma Webseite,https://feralpi-stahl.com/de/feralpi-stahl/unternehmen/esf-elbe-stahlwerke-feralpi-gmbh,verified,"domain~feralpi, domain+name+postcode=5",1
+081,Wirtschaftsvereinigung Stahl,EZM Edelstahlzieherei Mark GmbH,EZM Edelstahlzieherei Mark GmbH Firma Webseite,https://markmetall.de/,domain_match,"domain~mark, domain=2",5
+081,Wirtschaftsvereinigung Stahl,Friedr. Lohmann GmbH,Friedr. Lohmann GmbH Firma Webseite,https://www.lohmann-stahl.de/en/home,verified,"domain~lohmann, domain+name=3",1
+081,Wirtschaftsvereinigung Stahl,Georgsmarienhütte GmbH,Georgsmarienhütte GmbH Firma Webseite,https://www.gmh-gruppe.de/standorte/georgsmarienhuette-gmbh/,page_only,postcode=2,5
+081,Wirtschaftsvereinigung Stahl,H.E.S. Hennigsdorfer Elektrostahlwerke GmbH,H.E.S. Hennigsdorfer Elektrostahlwerke GmbH Firma Webseite,https://www.rivastahl.com/de/,verified,name+postcode=3,3
+081,Wirtschaftsvereinigung Stahl,Hüttenwerke Krupp Mannesmann GmbH,Hüttenwerke Krupp Mannesmann GmbH Firma Webseite,,no_result,,1
+081,Wirtschaftsvereinigung Stahl,Ilsenburger Grobblech GmbH,Ilsenburger Grobblech GmbH Firma Webseite,https://www.ilsenburger-grobblech.de/,verified,"domain~ilsenburger, domain+name+postcode=5",1
+081,Wirtschaftsvereinigung Stahl,Karl Diederichs GmbH & Co. KG (Dirostahl),Karl Diederichs GmbH & Co. KG (Dirostahl) Firma Webseite,https://dirostahl.com/impressum/,verified,"domain~dirostahl, domain+name+postcode=5",1
+081,Wirtschaftsvereinigung Stahl,Mannstaedt GmbH,Mannstaedt GmbH Firma Webseite,,no_result,,2
+081,Wirtschaftsvereinigung Stahl,Max Aicher GmbH & Co.KG,Max Aicher GmbH & Co.KG Firma Webseite,https://www.max-aicher.de/,verified,"domain~aicher, domain+name=3",1
+081,Wirtschaftsvereinigung Stahl,Outokumpu Nirosta GmbH,Outokumpu Nirosta GmbH Firma Webseite,https://www.outokumpu.com/de-de,verified,"domain~outokumpu, domain+name=3",1
+081,Wirtschaftsvereinigung Stahl,Peiner Träger GmbH,Peiner Träger GmbH Firma Webseite,https://www.peiner-traeger.de/,verified,"domain~peiner, domain+name+postcode=5",1
+081,Wirtschaftsvereinigung Stahl,Rogesa Roheisengesellschaft Saar mbH,Rogesa Roheisengesellschaft Saar mbH Firma Webseite,https://www.rogesa.de/rogesa/home/,verified,"domain~rogesa, domain+name=3",1
+081,Wirtschaftsvereinigung Stahl,Saarstahl AG,Saarstahl AG Firma Webseite,https://www.saarstahl.com/,verified,"domain~saarstahl, domain+name+postcode=5",1
+081,Wirtschaftsvereinigung Stahl,Salzgitter AG,Salzgitter AG Firma Webseite,https://www.salzgitter-ag.com/de/,verified,"domain~salzgitter, domain+name+postcode=5",1
+081,Wirtschaftsvereinigung Stahl,Salzgitter Flachstahl GmbH,Salzgitter Flachstahl GmbH Firma Webseite,https://www.salzgitter-flachstahl.de/,verified,"domain~salzgitter, domain+name+postcode=5",1
+081,Wirtschaftsvereinigung Stahl,Schmiedewerke Gröditz GmbH,Schmiedewerke Gröditz GmbH Firma Webseite,,unverified,,3
+081,Wirtschaftsvereinigung Stahl,SHS - Stahl-Holding-Saar GmbH & Co. KGaA,SHS - Stahl-Holding-Saar GmbH & Co. KGaA Firma Webseite,https://stahl-holding-saar.de/shs/en/home/,domain_match,"domain~stahl, domain=2",4
+081,Wirtschaftsvereinigung Stahl,Stahlwerk Bous GmbH,Stahlwerk Bous GmbH Firma Webseite,,no_result,,2
+081,Wirtschaftsvereinigung Stahl,Stahlwerk Thüringen GmbH,Stahlwerk Thüringen GmbH Firma Webseite,https://www.stahlwerk-thueringen.de/,verified,"domain~stahlwerk, domain+name+postcode=5",1
+081,Wirtschaftsvereinigung Stahl,Swiss Steel AG,Swiss Steel AG Firma Webseite,https://swisssteel-group.com/,verified,"domain~swiss, domain+name=3",2
+081,Wirtschaftsvereinigung Stahl,Swiss Steel Deutschland GmbH,Swiss Steel Deutschland GmbH Firma Webseite,https://www.swisssteel-group.com/de/group/standorte/deutschland/swiss-steel-deutschland-gmbh,verified,"domain~swiss, domain+name=3",1
+081,Wirtschaftsvereinigung Stahl,thyssenkrupp AG,thyssenkrupp AG Firma Webseite,https://www.thyssenkrupp.com/,verified,"domain~thyssenkrupp, domain+name=3",1
+081,Wirtschaftsvereinigung Stahl,thyssenkrupp Electrical Steel GmbH,thyssenkrupp Electrical Steel GmbH Firma Webseite,https://www.thyssenkrupp-steel.com/de/unternehmen/business-units/electrical-steel/,verified,"domain~thyssenkrupp, domain+name+postcode=5",1
+081,Wirtschaftsvereinigung Stahl,thyssenkrupp Hohenlimburg GmbH,thyssenkrupp Hohenlimburg GmbH Firma Webseite,https://www.thyssenkrupp-steel.com/de/unternehmen/business-units/precision-steel/,verified,"domain~thyssenkrupp, domain+name+postcode=5",1
+081,Wirtschaftsvereinigung Stahl,thyssenkrupp Rasselstein GmbH,thyssenkrupp Rasselstein GmbH Firma Webseite,https://www.thyssenkrupp-steel.com/de/unternehmen/business-units/packaging-steel/daten-und-fakten/historie/,verified,"domain~thyssenkrupp, domain+name=3",1
+081,Wirtschaftsvereinigung Stahl,thyssenkrupp Steel Europe AG,thyssenkrupp Steel Europe AG Firma Webseite,https://www.thyssenkrupp-steel.com/de/unternehmen/,verified,"domain~thyssenkrupp, domain+name+postcode=5",1
+081,Wirtschaftsvereinigung Stahl,VDM Metals GmbH,VDM Metals GmbH Firma Webseite,https://www.vdm-metals.com/de/,verified,"domain~metals, domain+name+postcode=5",1
+081,Wirtschaftsvereinigung Stahl,Walzwerke Einsal GmbH,Walzwerke Einsal GmbH Firma Webseite,https://einsal.com/ueber-uns/unser-unternehmen,verified,"domain~einsal, domain+name+postcode=5",1
+081,Wirtschaftsvereinigung Stahl,WW-K Warmwalzwerk Königswinter GmbH,WW-K Warmwalzwerk Königswinter GmbH Firma Webseite,https://www.ww-k.net/,verified,name+postcode=3,1
+082,VOICE – Bundesverband der IT-Anwender e.V.,Andreas Dietrich,Andreas Dietrich Firma Webseite,https://dietrich-consult.ch/,verified,"domain~dietrich, domain+name=3",2
+082,VOICE – Bundesverband der IT-Anwender e.V.,Anton Franz,Anton Franz Firma Webseite,https://www.franz-stettner.com/franzanton,verified,"domain~franz, domain+name=3",1
+082,VOICE – Bundesverband der IT-Anwender e.V.,AUDI AG,AUDI AG Firma Webseite,https://www.audi.com/de,verified,"domain~audi, domain+name=3",1
+082,VOICE – Bundesverband der IT-Anwender e.V.,BWI GmbH,BWI GmbH Firma Webseite,,unverified,,4
+082,VOICE – Bundesverband der IT-Anwender e.V.,Christoph Hermes,Christoph Hermes Firma Webseite,https://www.myhermes.de/,verified,"domain~hermes, domain+name=3",1
+082,VOICE – Bundesverband der IT-Anwender e.V.,DAW SE,DAW SE Firma Webseite,,unverified,,5
+082,VOICE – Bundesverband der IT-Anwender e.V.,Dirk Altgassen,Dirk Altgassen Firma Webseite,,no_result,,4
+082,VOICE – Bundesverband der IT-Anwender e.V.,EWE AG,EWE AG Firma Webseite,,unverified,,3
+082,VOICE – Bundesverband der IT-Anwender e.V.,Frank Streichert,Frank Streichert Firma Webseite,https://www.frank-gmbh.de/de/,verified,"domain~frank, domain+name=3",1
+082,VOICE – Bundesverband der IT-Anwender e.V.,IAV GmbH,IAV GmbH Firma Webseite,,unverified,,3
+082,VOICE – Bundesverband der IT-Anwender e.V.,KGAL GmbH & Co. KG,KGAL GmbH & Co. KG Firma Webseite,https://www.kgal.de/kontakt/,verified,"domain~kgal, domain+name=3",1
+082,VOICE – Bundesverband der IT-Anwender e.V.,Landratsamt Starnberg,Landratsamt Starnberg Firma Webseite,https://www.lk-starnberg.de/,verified,"domain~starnberg, domain+name=3",1
+082,VOICE – Bundesverband der IT-Anwender e.V.,Matthias Behrens,Matthias Behrens Firma Webseite,https://www.behrens-montagen.de/impressum,verified,"domain~behrens, domain+name=3",2
+082,VOICE – Bundesverband der IT-Anwender e.V.,Mey GmbH & Co. KG,Mey GmbH & Co. KG Firma Webseite,,unverified,,4
+082,VOICE – Bundesverband der IT-Anwender e.V.,Michael Kranz,Michael Kranz Firma Webseite,http://kranz.sellsite.de/,verified,"domain~kranz, domain+name=3",2
+082,VOICE – Bundesverband der IT-Anwender e.V.,NIRA,NIRA Firma Webseite,https://ni-ra.de/ueber-uns,verified,"domain~nira, domain+name=3",1
+082,VOICE – Bundesverband der IT-Anwender e.V.,PORR AG,PORR AG Firma Webseite,https://www.porr.de/,verified,"domain~porr, domain+name=3",1
+082,VOICE – Bundesverband der IT-Anwender e.V.,Prof. Dr. Eberhard Kurz,Prof. Dr. Eberhard Kurz Firma Webseite,,no_result,,3
+082,VOICE – Bundesverband der IT-Anwender e.V.,RWZ AG,RWZ AG Firma Webseite,,unverified,,5
+082,VOICE – Bundesverband der IT-Anwender e.V.,Sto SE & Co. KGaA,Sto SE & Co. KGaA Firma Webseite,,unverified,,3
+082,VOICE – Bundesverband der IT-Anwender e.V.,SWG AG,SWG AG Firma Webseite,,unverified,,4
+082,VOICE – Bundesverband der IT-Anwender e.V.,TEDi GmbH & Co. KG,TEDi GmbH & Co. KG Firma Webseite,https://www.tedi.com/,verified,"domain~tedi, domain+name=3",1
+082,VOICE – Bundesverband der IT-Anwender e.V.,Thomas C. Grempe,Thomas C. Grempe Firma Webseite,https://www.thomas-group.com/,verified,"domain~thomas, domain+name=3",2
+084,Open Source Business Alliance e.V. (OSBA),uib GmbH,uib GmbH Firma Webseite,,unverified,,4
+084,Open Source Business Alliance e.V. (OSBA),ETES GmbH,ETES GmbH Firma Webseite,http://etes.de/,verified,"domain~etes, domain+name=3",1
+084,Open Source Business Alliance e.V. (OSBA),NMMN GmbH,NMMN GmbH Firma Webseite,https://nmmn.com/,verified,"domain~nmmn, domain+name=3",1
+084,Open Source Business Alliance e.V. (OSBA),]init[ AG,]init[ AG Firma Webseite,https://www.init.de/impressum,verified,"domain~init, domain+name=3",1
+084,Open Source Business Alliance e.V. (OSBA),cmt GmbH,cmt GmbH Firma Webseite,,unverified,,5
+084,Open Source Business Alliance e.V. (OSBA),fme AG,fme AG Firma Webseite,,unverified,,3
+084,Open Source Business Alliance e.V. (OSBA),grit GmbH,grit GmbH Firma Webseite,https://grit.de/,verified,"domain~grit, domain+name=3",1
+084,Open Source Business Alliance e.V. (OSBA),IKU GmbH & Co. KG,IKU GmbH & Co. KG Firma Webseite,,unverified,,5
+084,Open Source Business Alliance e.V. (OSBA),SEP GmbH,SEP GmbH Firma Webseite,,unverified,,4
+085,PlasticsEurope Deutschland e.V.,"Akdeniz Chemson Additives GmbH, Köln","Akdeniz Chemson Additives GmbH, Köln Firma Webseite",https://akdenizchemson.com/de/,verified,"domain~akdeniz, domain+name=3",1
+085,PlasticsEurope Deutschland e.V.,"Allod Werkstoff GmbH & Co. KG, Burgbernheim","Allod Werkstoff GmbH & Co. KG, Burgbernheim Firma Webseite",https://allod.com/,verified,"domain~allod, domain+name=3",1
+085,PlasticsEurope Deutschland e.V.,"ALTANA AG, Wesel","ALTANA AG, Wesel Firma Webseite",https://www.altana.de/,verified,"domain~altana, domain+name=3",1
+085,PlasticsEurope Deutschland e.V.,"ARCUS Greencycling Technologies GmbH, Ludwigsburg","ARCUS Greencycling Technologies GmbH, Ludwigsburg Firma Webseite",https://www.arcus-greencycling.com/,verified,"domain~greencycling, domain+name=3",1
+085,PlasticsEurope Deutschland e.V.,"Arkema GmbH, Düsseldorf","Arkema GmbH, Düsseldorf Firma Webseite",https://www.arkema.com/germany/de/,verified,"domain~arkema, domain+name=3",1
+085,PlasticsEurope Deutschland e.V.,"Asahi Kasei Europe GmbH, Düsseldorf","Asahi Kasei Europe GmbH, Düsseldorf Firma Webseite",https://asahi-kasei.eu/de/start/,verified,"domain~asahi, domain+name=3",1
+085,PlasticsEurope Deutschland e.V.,"Baerlocher Germany GmbH & Co. KG, München","Baerlocher Germany GmbH & Co. KG, München Firma Webseite",https://www.baerlocher.com/de/,verified,"domain~baerlocher, domain+name=3",1
+085,PlasticsEurope Deutschland e.V.,"BASF SE, Ludwigshafen","BASF SE, Ludwigshafen Firma Webseite",,no_result,,4
+085,PlasticsEurope Deutschland e.V.,"BASF Performance Polymers GmbH, Rudolstadt","BASF Performance Polymers GmbH, Rudolstadt Firma Webseite",,no_result,,3
+085,PlasticsEurope Deutschland e.V.,"BASF Personal Care and Nutrition, Düsseldorf/Monheim","BASF Personal Care and Nutrition, Düsseldorf/Monheim Firma Webseite",https://www.basf.com/basf/www/global/de/who-we-are/organization/locations/europe/german-sites/duesseldorf-und-monheim.html,verified,"domain~basf, domain+name=3",1
+085,PlasticsEurope Deutschland e.V.,"Basell Polyolefine GmbH, Wesseling","Basell Polyolefine GmbH, Wesseling Firma Webseite",https://www.lyondellbasell.com/de/locations/europe/germany/wesseling-site/,verified,"domain~basell, domain+name=3",1
+085,PlasticsEurope Deutschland e.V.,"Borealis Polymer GmbH, Burghausen","Borealis Polymer GmbH, Burghausen Firma Webseite",https://www.borealisgroup.com/,verified,"domain~borealis, domain+name=3",1
+085,PlasticsEurope Deutschland e.V.,"Brenntag SE, Essen","Brenntag SE, Essen Firma Webseite",https://corporate.brenntag.com/de/,page_only,name=1,5
+085,PlasticsEurope Deutschland e.V.,"Cabot GmbH, Rheinfelden","Cabot GmbH, Rheinfelden Firma Webseite",https://www.buendnis-familie-rheinfelden.de/de/unternehmen-detailseite/cabot-rheinfelden-gmbh.html,verified,"domain~rheinfelden, domain+name=3",1
+085,PlasticsEurope Deutschland e.V.,"CARBOLIQ GmbH, Remscheid","CARBOLIQ GmbH, Remscheid Firma Webseite",https://carboliq.com/de/,verified,"domain~carboliq, domain+name=3",1
+085,PlasticsEurope Deutschland e.V.,"Celanese Sales Germany GmbH, Sulzbach","Celanese Sales Germany GmbH, Sulzbach Firma Webseite",https://www.celanese.de/de-de/,domain_match,"domain~celanese, domain=2",2
+085,PlasticsEurope Deutschland e.V.,"Clariant Plastics & Coatings (Deutschland) GmbH, Gersthofen","Clariant Plastics & Coatings (Deutschland) GmbH, Gersthofen Firma Webseite",https://gersthofen.de/wirtschaft/unternehmensverzeichnis/clariant-plastics-coatings-deutschland-gmbh/,verified,"domain~gersthofen, domain+name=3",3
+085,PlasticsEurope Deutschland e.V.,"Covestro Deutschland AG, Leverkusen","Covestro Deutschland AG, Leverkusen Firma Webseite",https://www.covestro.com/en/company/covestro-worldwide/deutschland/covestro-in-deutschland/standorte/leverkusen,verified,"domain~covestro, domain+name=3",1
+085,PlasticsEurope Deutschland e.V.,"Deutsche Infineum GmbH & Co. KG, Köln","Deutsche Infineum GmbH & Co. KG, Köln Firma Webseite",https://www.infineum.com/contact-us/,verified,"domain~infineum, domain+name=3",1
+085,PlasticsEurope Deutschland e.V.,"Dow Deutschland Anlagengesellschaft, Wiesbaden","Dow Deutschland Anlagengesellschaft, Wiesbaden Firma Webseite",https://de.dow.com/de-de/impressum.html,page_only,name=1,5
+085,PlasticsEurope Deutschland e.V.,"Dow Olefinverbund GmbH, Merseburg","Dow Olefinverbund GmbH, Merseburg Firma Webseite",https://www.hs-merseburg.de/netzwerk-und-kooperationen/kooperationspartner/bestehende-kooperationen/,verified,"domain~merseburg, domain+name=3",4
+085,PlasticsEurope Deutschland e.V.,"DuPont de Nemours (Deutschland) GmbH, Neu Isenburg","DuPont de Nemours (Deutschland) GmbH, Neu Isenburg Firma Webseite",https://www.dupont.de/,verified,"domain~dupont, domain+name=3",1
+085,PlasticsEurope Deutschland e.V.,"Emery Oleochemicals GmbH, Düsseldorf","Emery Oleochemicals GmbH, Düsseldorf Firma Webseite",https://www.emeryoleo.com/,verified,"domain~emery, domain+name=3",1
+085,PlasticsEurope Deutschland e.V.,"Evonik Industries AG, Hanau","Evonik Industries AG, Hanau Firma Webseite",https://www.evonik.com/de/unternehmen/worldwide-locations/europe/germany/hanau-wolfgang.html,verified,"domain~evonik, domain+name=3",1
+085,PlasticsEurope Deutschland e.V.,"ExxonMobil Chemical Central Europe A division of ESSO Deutschland GmbH, Köln","ExxonMobil Chemical Central Europe A division of ESSO Deutschland GmbH, Köln Firma Webseite",https://koln-6.defirmenkataloge.com/company/exxonmobil-chemical-central-europe-gmbh/,verified,"domain~koln, domain+name=3",4
+085,PlasticsEurope Deutschland e.V.,"Gustav Grolman GmbH & Co. KG, Neuss","Gustav Grolman GmbH & Co. KG, Neuss Firma Webseite",https://www.grolman-group.com/imprint/,verified,"domain~grolman, domain+name=3",1
+085,PlasticsEurope Deutschland e.V.,"Huckfeldt & Thorlichen GmbH & Co., Tornesch","Huckfeldt & Thorlichen GmbH & Co., Tornesch Firma Webseite",,unverified,,3
+085,PlasticsEurope Deutschland e.V.,"Huntsman Advanced Materials (Deutschland) GmbH & Co., Bergkamen","Huntsman Advanced Materials (Deutschland) GmbH & Co., Bergkamen Firma Webseite",https://www.huntsman.com/locations/detail/16469/bergkamen-germany,verified,"domain~huntsman, domain+name=3",1
+085,PlasticsEurope Deutschland e.V.,"IKA Innovative Kunststoffaufbereitung GmbH & Co. KG, Wolfen","IKA Innovative Kunststoffaufbereitung GmbH & Co. KG, Wolfen Firma Webseite",https://ika-wolfen.de/en/about-us/,verified,"domain~wolfen, domain+name=3",1
+085,PlasticsEurope Deutschland e.V.,"Ineos Manufacturing Deutschland GmbH, Köln","Ineos Manufacturing Deutschland GmbH, Köln Firma Webseite",https://www.ineoskoeln.de/,verified,"domain~ineos, domain+name=3",1
+085,PlasticsEurope Deutschland e.V.,"INOVYN Deutschland GmbH, Rheinberg","INOVYN Deutschland GmbH, Rheinberg Firma Webseite",http://www.inovyn.com/,verified,"domain~inovyn, domain+name=3",3
+085,PlasticsEurope Deutschland e.V.,"Kisuma Chemicals BV, Veendam","Kisuma Chemicals BV, Veendam Firma Webseite",https://kisuma.com/,verified,"domain~kisuma, domain+name=3",1
+085,PlasticsEurope Deutschland e.V.,"Lanxess Organometallics GmbH, Köln","Lanxess Organometallics GmbH, Köln Firma Webseite",https://lanxess.com/de-de,verified,"domain~lanxess, domain+name=3",1
+085,PlasticsEurope Deutschland e.V.,"Lehmann & Voss & Co. KG, Hamburg","Lehmann & Voss & Co. KG, Hamburg Firma Webseite",https://www.lehvoss.de/,verified,"domain~voss, domain+name=3",1
+085,PlasticsEurope Deutschland e.V.,"matterr GmbH, Braunschweig","matterr GmbH, Braunschweig Firma Webseite",,no_result,,3
+085,PlasticsEurope Deutschland e.V.,"Nabaltec AG, Schwandorf","Nabaltec AG, Schwandorf Firma Webseite",,no_result,,2
+085,PlasticsEurope Deutschland e.V.,"Neste Germany GmbH, Düsseldorf","Neste Germany GmbH, Düsseldorf Firma Webseite",https://www.neste.com/de-de/,verified,"domain~neste, domain+name=3",1
+085,PlasticsEurope Deutschland e.V.,"Otto Krahn Group, Hamburg","Otto Krahn Group, Hamburg Firma Webseite",https://www.ottokrahn.group/de,domain_match,"domain~krahn, domain=2",4
+085,PlasticsEurope Deutschland e.V.,"Peter Greven GmbH & Co. KG, Bad Münstereifel","Peter Greven GmbH & Co. KG, Bad Münstereifel Firma Webseite",https://www.peter-greven-gruppe.de/impressum,verified,"domain~greven, domain+name=3",2
+085,PlasticsEurope Deutschland e.V.,"PLIXXENT Holding GmbH, Hamburg","PLIXXENT Holding GmbH, Hamburg Firma Webseite",https://plixxent.com/de/impressum/,verified,"domain~plixxent, domain+name=3",1
+085,PlasticsEurope Deutschland e.V.,"Polymaterials AG, Kaufbeuren","Polymaterials AG, Kaufbeuren Firma Webseite",https://polymaterials.de/,verified,"domain~polymaterials, domain+name=3",1
+085,PlasticsEurope Deutschland e.V.,"Rain Carbon Germany GmbH, Duisburg","Rain Carbon Germany GmbH, Duisburg Firma Webseite",https://branchenindex.springerprofessional.de/insertiondetails.html?id=374424,page_only,name=1,1
+085,PlasticsEurope Deutschland e.V.,"Röhm GmbH, Darmstadt","Röhm GmbH, Darmstadt Firma Webseite",https://www.chemie.de/firmen/4582/roehm-gmbh.html,page_only,name=1,4
+085,PlasticsEurope Deutschland e.V.,"Sabic Holding Deutschland GmbH, Gelsenkirchen","Sabic Holding Deutschland GmbH, Gelsenkirchen Firma Webseite",https://www.sabic.com/,verified,"domain~sabic, domain+name=3",1
+085,PlasticsEurope Deutschland e.V.,"Sasol Germany GmbH, Hamburg","Sasol Germany GmbH, Hamburg Firma Webseite",https://chemicals.sasol.com/whoweare/regionalsitesandlocations/germany,page_only,name=1,3
+085,PlasticsEurope Deutschland e.V.,"Syensqo Specialty Polymers Germany GmbH, Düsseldorf","Syensqo Specialty Polymers Germany GmbH, Düsseldorf Firma Webseite",https://www.syensqo.com/de/deutschland/duesseldorf,domain_match,"domain~syensqo, domain=2",3
+085,PlasticsEurope Deutschland e.V.,"Trinseo Deutschland GmbH, Schkopau","Trinseo Deutschland GmbH, Schkopau Firma Webseite",https://www.trinseo.com/das-unternehmen/impressum,verified,"domain~trinseo, domain+name=3",1
+085,PlasticsEurope Deutschland e.V.,"UL International Germany GmbH, Krefeld","UL International Germany GmbH, Krefeld Firma Webseite",,unverified,,3
+085,PlasticsEurope Deutschland e.V.,"uppolluX GmbH & Co. KG, Tuttlingen","uppolluX GmbH & Co. KG, Tuttlingen Firma Webseite",https://uppollux.com/,verified,"domain~uppollux, domain+name=3",1
+085,PlasticsEurope Deutschland e.V.,"Versalis Deutschland GmbH, Eschborn","Versalis Deutschland GmbH, Eschborn Firma Webseite",https://www.versalis.eni.com/en-IT/home.html,verified,"domain~versalis, domain+name=3",3
+085,PlasticsEurope Deutschland e.V.,"Vestolit GmbH, Marl","Vestolit GmbH, Marl Firma Webseite",https://www.vestolit.com/de/homepage-de/,verified,"domain~vestolit, domain+name=3",1
+085,PlasticsEurope Deutschland e.V.,"Wacker Chemie AG, München","Wacker Chemie AG, München Firma Webseite",https://www.wacker.com/cms/de-de/home/home.html,domain_match,"domain~wacker, domain=2",3
+085,PlasticsEurope Deutschland e.V.,"Westlake Vinnolit GmbH & Co. KG, Ismaning","Westlake Vinnolit GmbH & Co. KG, Ismaning Firma Webseite",https://westlakevinnolit.com/,verified,"domain~westlake, domain+name=3",1
+085,PlasticsEurope Deutschland e.V.,Innonet Kunststoff Technologiezentrum Horb GmbH & Co. KG,Innonet Kunststoff Technologiezentrum Horb GmbH & Co. KG Firma Webseite,https://www.tz-horb.de/,verified,"domain~horb, domain+name=3",1
+085,PlasticsEurope Deutschland e.V.,kunststoffland NRW e. V.,kunststoffland NRW e. V. Firma Webseite,https://www.lobbyregister.bundestag.de/suche/R002890,page_only,name=1,5
+085,PlasticsEurope Deutschland e.V.,"Kunststoffnetzwerk Ems-Achse, Nordhorn","Kunststoffnetzwerk Ems-Achse, Nordhorn Firma Webseite",https://www.kunststoffnetzwerk-emsachse.de/,verified,"domain~kunststoffnetzwerk, domain+name=3",1
+085,PlasticsEurope Deutschland e.V.,Norddeutsches Kunststoffnetzwerk NORKUN,Norddeutsches Kunststoffnetzwerk NORKUN Firma Webseite,https://www.kunststoffnetzwerk-emsachse.de/,verified,"domain~kunststoffnetzwerk, domain+name=3",3
+085,PlasticsEurope Deutschland e.V.,PlasticsEurope Austria,PlasticsEurope Austria Firma Webseite,,no_result,,4
+085,PlasticsEurope Deutschland e.V.,Polykum e.V. Fördergemeinschaft für Polymerentwicklung und Kunststofftechnik in Mitteldeutschland,Polykum e.V. Fördergemeinschaft für Polymerentwicklung und Kunststofftechnik in Mitteldeutschland Firma Webseite,https://polykum.de/ueber-uns/,verified,"domain~polykum, domain+name=3",1
+085,PlasticsEurope Deutschland e.V.,"TÜV Rheinland LGA Products GmbH, Nürnberg","TÜV Rheinland LGA Products GmbH, Nürnberg Firma Webseite",https://www.tuv.com/usa/en/location-finder/location-detail-page_45021.html,page_only,name=1,4
+085,PlasticsEurope Deutschland e.V.,WAK – Wissenschaftlicher Arbeitskreis Kunststofftechnik,WAK – Wissenschaftlicher Arbeitskreis Kunststofftechnik Firma Webseite,https://www.wak-kunststofftechnik.de/home/,verified,"domain~kunststofftechnik, domain+name=3",1
+085,PlasticsEurope Deutschland e.V.,WIP-Kunststoffe e. V.,WIP-Kunststoffe e. V. Firma Webseite,https://wip-kunststoffe.de/,verified,"domain~kunststoffe, domain+name=3",1
+086,Industrieverband Klebstoffe e.V. (IVK),3M Deutschland GmbH,3M Deutschland GmbH Firma Webseite,,unverified,,4
+086,Industrieverband Klebstoffe e.V. (IVK),Adchem GmbH,Adchem GmbH Firma Webseite,https://www.adchem.de/,verified,"domain~adchem, domain+name=3",1
+086,Industrieverband Klebstoffe e.V. (IVK),ADEKA Europe GmbH,ADEKA Europe GmbH Firma Webseite,https://www.adeka.eu/de/,verified,"domain~adeka, domain+name=3",1
+086,Industrieverband Klebstoffe e.V. (IVK),Adtracon GmbH,Adtracon GmbH Firma Webseite,https://www.adtracon.de/,verified,"domain~adtracon, domain+name+phone+postcode=8",1
+086,Industrieverband Klebstoffe e.V. (IVK),AKEMI chemisch technische Spezialfabrik GmbH,AKEMI chemisch technische Spezialfabrik GmbH Firma Webseite,https://akemi.de/,verified,"domain~akemi, domain+name+phone=6",1
+086,Industrieverband Klebstoffe e.V. (IVK),Alberdingk Boley GmbH,Alberdingk Boley GmbH Firma Webseite,https://www.alberdingk-boley.de/,verified,"domain~alberdingk, domain+name+phone=6",1
+086,Industrieverband Klebstoffe e.V. (IVK),ALFA Klebstoffe AG,ALFA Klebstoffe AG Firma Webseite,https://simalfa.ch/,verified,"domain~alfa, domain+name+phone=6",1
+086,Industrieverband Klebstoffe e.V. (IVK),Albert Invent Corp.,Albert Invent Corp. Firma Webseite,https://www.albertinvent.com/,verified,"domain~albert, domain+name=3",1
+086,Industrieverband Klebstoffe e.V. (IVK),Arakawa Europe GmbH,Arakawa Europe GmbH Firma Webseite,https://wire-gripper.com/allgemeines/impressum/,page_only,name=1,2
+086,Industrieverband Klebstoffe e.V. (IVK),ARDEX Baustoff GmbH,ARDEX Baustoff GmbH Firma Webseite,https://www.ardex.de/,verified,"domain~ardex, domain+name=3",1
+086,Industrieverband Klebstoffe e.V. (IVK),ARDEX GmbH,ARDEX GmbH Firma Webseite,https://www.ardex.de/,verified,"domain~ardex, domain+name+phone=6",1
+086,Industrieverband Klebstoffe e.V. (IVK),ARLANXEO Deutschland GmbH,ARLANXEO Deutschland GmbH Firma Webseite,https://www.arlanxeo.com/en/brands,verified,"domain~arlanxeo, domain+name=3",2
+086,Industrieverband Klebstoffe e.V. (IVK),ASTORplast Klebetechnik GmbH,ASTORplast Klebetechnik GmbH Firma Webseite,https://www.astorplast.de/,verified,"domain~astorplast, domain+name+phone=6",1
+086,Industrieverband Klebstoffe e.V. (IVK),BASF SE,BASF SE Firma Webseite,https://www.basf.com/,verified,"domain~basf, domain+name=3",1
+086,Industrieverband Klebstoffe e.V. (IVK),BCD Chemie GmbH,BCD Chemie GmbH Firma Webseite,https://www.bcd-chemie.de/en/,verified,phone+postcode=5,1
+086,Industrieverband Klebstoffe e.V. (IVK),Berger-Seidle GmbH,Berger-Seidle GmbH Firma Webseite,https://berger-seidle.de/,verified,"domain~berger, domain+name+postcode=5",1
+086,Industrieverband Klebstoffe e.V. (IVK),Biesterfeld Spezialchemie GmbH,Biesterfeld Spezialchemie GmbH Firma Webseite,https://www.biesterfeld.com/de/de/deutschland/,verified,"domain~biesterfeld, domain+name=3",1
+086,Industrieverband Klebstoffe e.V. (IVK),Bilgram Chemie GmbH,Bilgram Chemie GmbH Firma Webseite,https://www.bilgram.de/,verified,"domain~bilgram, domain+name+phone+postcode=8",1
+086,Industrieverband Klebstoffe e.V. (IVK),Bona Vertriebsgesellschaft mbH,Bona Vertriebsgesellschaft mbH Firma Webseite,https://www.bona.com/de/,verified,"domain~bona, domain+name=3",1
+086,Industrieverband Klebstoffe e.V. (IVK),Bostik GmbH,Bostik GmbH Firma Webseite,https://www.bostik.com/germany/de/,verified,"domain~bostik, domain+name+phone+postcode=8",1
+086,Industrieverband Klebstoffe e.V. (IVK),Botament GmbH,Botament GmbH Firma Webseite,https://botament.com/,verified,"domain~botament, domain+name=3",1
+086,Industrieverband Klebstoffe e.V. (IVK),Brenntag GmbH,Brenntag GmbH Firma Webseite,https://www.brenntag.com/de-de/,verified,"domain~brenntag, domain+name+phone+postcode=8",1
+086,Industrieverband Klebstoffe e.V. (IVK),Bühnen GmbH & Co. KG,Bühnen GmbH & Co. KG Firma Webseite,https://www.buehnen.de/,verified,phone+postcode=5,1
+086,Industrieverband Klebstoffe e.V. (IVK),Breuer Polymer Consulting,Breuer Polymer Consulting Firma Webseite,https://polymer-consulting.de/,verified,"domain~polymer, domain+name=3",1
+086,Industrieverband Klebstoffe e.V. (IVK),BYK-Chemie GmbH,BYK-Chemie GmbH Firma Webseite,https://www.chemie.de/firmen/1038426/byk-chemie-gmbh.html,verified,phone+postcode=5,4
+086,Industrieverband Klebstoffe e.V. (IVK),Cabot GmbH,Cabot GmbH Firma Webseite,https://www.cabotcorp.com/?Language=DE-DE,verified,"domain~cabot, domain+name=3",1
+086,Industrieverband Klebstoffe e.V. (IVK),Celanese Services Germany GmbH,Celanese Services Germany GmbH Firma Webseite,https://www.lobbyregister.bundestag.de/suche/R007530,verified,name+postcode=3,2
+086,Industrieverband Klebstoffe e.V. (IVK),certoplast Tech. Klebebänder GmbH,certoplast Tech. Klebebänder GmbH Firma Webseite,https://certoplast.com/,verified,"domain~certoplast, domain+name+phone+postcode=8",1
+086,Industrieverband Klebstoffe e.V. (IVK),Chemetall GmbH,Chemetall GmbH Firma Webseite,https://www.chemetall.com/,verified,"domain~chemetall, domain+name=3",1
+086,Industrieverband Klebstoffe e.V. (IVK),ChemQuest Inc. Europe,ChemQuest Inc. Europe Firma Webseite,https://chemquest.com/,verified,"domain~chemquest, domain+name=3",1
+086,Industrieverband Klebstoffe e.V. (IVK),CHT Germany GmbH,CHT Germany GmbH Firma Webseite,,unverified,,3
+086,Industrieverband Klebstoffe e.V. (IVK),Clariant Produkte (Deutschland) GmbH,Clariant Produkte (Deutschland) GmbH Firma Webseite,https://www.clariant.com/de/Corporate,verified,"domain~clariant, domain+name=3",1
+086,Industrieverband Klebstoffe e.V. (IVK),CnP Polymer GmbH,CnP Polymer GmbH Firma Webseite,,no_result,,1
+086,Industrieverband Klebstoffe e.V. (IVK),COIM Deutschland GmbH,COIM Deutschland GmbH Firma Webseite,https://www.coimgroup.com/,verified,"domain~coim, domain+name=3",3
+086,Industrieverband Klebstoffe e.V. (IVK),COROPLAST F. Müller GmbH & Co. KG,COROPLAST F. Müller GmbH & Co. KG Firma Webseite,https://www.coroplast-group.com/de/,verified,"domain~coroplast, domain+name+phone+postcode=8",1
+086,Industrieverband Klebstoffe e.V. (IVK),Covestro Deutschland AG,Covestro Deutschland AG Firma Webseite,https://www.covestro.com/en/company/covestro-worldwide/deutschland,verified,"domain~covestro, domain+name=3",2
+086,Industrieverband Klebstoffe e.V. (IVK),CPH Adhesives GmbH,CPH Adhesives GmbH Firma Webseite,https://www.cph-adhesives.com/de,verified,"domain~adhesives, domain+name+phone+postcode=8",1
+086,Industrieverband Klebstoffe e.V. (IVK),CTA GmbH,CTA GmbH Firma Webseite,https://www.cta-gmbh.de/,verified,phone+postcode=5,1
+086,Industrieverband Klebstoffe e.V. (IVK),Cyberbond Europe GmbH,Cyberbond Europe GmbH Firma Webseite,,no_result,,3
+086,Industrieverband Klebstoffe e.V. (IVK),DEKA Kleben & Dichten GmbH,DEKA Kleben & Dichten GmbH Firma Webseite,,no_result,,1
+086,Industrieverband Klebstoffe e.V. (IVK),DELO Industrie Klebstoffe GmbH & Co. KGaA,DELO Industrie Klebstoffe GmbH & Co. KGaA Firma Webseite,https://www.delo-adhesives.com/,verified,"domain~delo, domain+name=3",1
+086,Industrieverband Klebstoffe e.V. (IVK),Dow Deutschland,Dow Deutschland Firma Webseite,,unverified,,4
+086,Industrieverband Klebstoffe e.V. (IVK),Drei Bond GmbH,Drei Bond GmbH Firma Webseite,https://dreibond.de/,verified,"domain~drei, domain+name+phone=6",1
+086,Industrieverband Klebstoffe e.V. (IVK),Dunlop Tech GmbH,Dunlop Tech GmbH Firma Webseite,https://www.dunloptech.com/,verified,"domain~dunlop, domain+name+phone+postcode=8",1
+086,Industrieverband Klebstoffe e.V. (IVK),DuPont Speciality Products GmbH & Co. KG,DuPont Speciality Products GmbH & Co. KG Firma Webseite,https://www.dupont.de/,verified,"domain~dupont, domain+name+phone+postcode=8",1
+086,Industrieverband Klebstoffe e.V. (IVK),Dymax Europe GmbH,Dymax Europe GmbH Firma Webseite,,no_result,,1
+086,Industrieverband Klebstoffe e.V. (IVK),EPOXONIC GmbH,EPOXONIC GmbH Firma Webseite,https://www.epoxonic.de/,verified,"domain~epoxonic, domain+name=3",1
+086,Industrieverband Klebstoffe e.V. (IVK),Eluid Adhesive GmbH,Eluid Adhesive GmbH Firma Webseite,https://www.eluid.de/,verified,"domain~eluid, domain+name+phone+postcode=8",1
+086,Industrieverband Klebstoffe e.V. (IVK),EUKALIN Spezial-Klebstoff Fabrik GmbH,EUKALIN Spezial-Klebstoff Fabrik GmbH Firma Webseite,https://www.eukalin.de/,verified,"domain~eukalin, domain+name+postcode=5",1
+086,Industrieverband Klebstoffe e.V. (IVK),Forbo Eurocol Deutschland GmbH,Forbo Eurocol Deutschland GmbH Firma Webseite,https://www.forbo.com/eurocol/de/,verified,"domain~forbo, domain+name+phone+postcode=8",1
+086,Industrieverband Klebstoffe e.V. (IVK),Evonik Goldschmidt GmbH,Evonik Goldschmidt GmbH Firma Webseite,https://www.evonik.com/en.html,verified,"domain~evonik, domain+name=3",1
+086,Industrieverband Klebstoffe e.V. (IVK),Evonik Industries AG,Evonik Industries AG Firma Webseite,https://www.evonik.com/en.html,verified,"domain~evonik, domain+name=3",1
+086,Industrieverband Klebstoffe e.V. (IVK),Evonik Industries AG,Evonik Industries AG Firma Webseite,https://www.evonik.com/de.html,verified,"domain~evonik, domain+name=3",1
+086,Industrieverband Klebstoffe e.V. (IVK),Evonik Nutrition & Care GmbH,Evonik Nutrition & Care GmbH Firma Webseite,https://www.evonik.com/de.html,verified,"domain~evonik, domain+name=3",1
+086,Industrieverband Klebstoffe e.V. (IVK),Fermit GmbH,Fermit GmbH Firma Webseite,https://www.fermit.de/,verified,"domain~fermit, domain+name+phone+postcode=8",1
+086,Industrieverband Klebstoffe e.V. (IVK),Follmann GmbH & Co. KG,Follmann GmbH & Co. KG Firma Webseite,https://www.follmann.com/,verified,"domain~follmann, domain+name+phone+postcode=8",1
+086,Industrieverband Klebstoffe e.V. (IVK),IFAM Fraunhofer,IFAM Fraunhofer Firma Webseite,https://www.ifam.fraunhofer.de/,verified,"domain~ifam, domain+name=3",1
+086,Industrieverband Klebstoffe e.V. (IVK),SKZ – KFE gGmbH,SKZ – KFE gGmbH Firma Webseite,https://www.skz.de/unternehmen,verified,phone+postcode=5,1
+086,Industrieverband Klebstoffe e.V. (IVK),Gludan (Deutschland) GmbH,Gludan (Deutschland) GmbH Firma Webseite,https://www.gludan.com/de/,verified,"domain~gludan, domain+name+phone+postcode=8",1
+086,Industrieverband Klebstoffe e.V. (IVK),GLUKON GmbH,GLUKON GmbH Firma Webseite,https://www.glukon.de/datenschutz,verified,"domain~glukon, domain+name+phone+postcode=8",1
+086,Industrieverband Klebstoffe e.V. (IVK),Grünig KG,Grünig KG Firma Webseite,https://www.gruenig-adhesives.com/,verified,name+phone+postcode=6,1
+086,Industrieverband Klebstoffe e.V. (IVK),Gustav Grolman GmbH & Co. KG,Gustav Grolman GmbH & Co. KG Firma Webseite,https://www.grolman-group.com/,verified,"domain~grolman, domain+name+phone+postcode=8",1
+086,Industrieverband Klebstoffe e.V. (IVK),HANSETACK GmbH,HANSETACK GmbH Firma Webseite,https://hansetack.com/,verified,"domain~hansetack, domain+name=3",1
+086,Industrieverband Klebstoffe e.V. (IVK),H.B. Fuller Deutschland GmbH,H.B. Fuller Deutschland GmbH Firma Webseite,https://www.hbfuller.com/de,verified,"domain~fuller, domain+name=3",1
+086,Industrieverband Klebstoffe e.V. (IVK),Henkel AG & Co. KGaA,Henkel AG & Co. KGaA Firma Webseite,https://www.henkel.de/,verified,"domain~henkel, domain+name=3",1
+086,Industrieverband Klebstoffe e.V. (IVK),Henkel Central Eastern Europe GmbH,Henkel Central Eastern Europe GmbH Firma Webseite,,no_result,,4
+086,Industrieverband Klebstoffe e.V. (IVK),Hermann Otto GmbH,Hermann Otto GmbH Firma Webseite,,no_result,,2
+086,Industrieverband Klebstoffe e.V. (IVK),Hinterwaldner Consulting,Hinterwaldner Consulting Firma Webseite,https://www.hiwaconsul.de/,verified,name+phone+postcode=6,1
+086,Industrieverband Klebstoffe e.V. (IVK),HOBUM Oleochemicals GmbH,HOBUM Oleochemicals GmbH Firma Webseite,https://www.hobum.de/de/karriere/stellenangebote/,verified,"domain~hobum, domain+name+phone+postcode=8",1
+086,Industrieverband Klebstoffe e.V. (IVK),Hoenle Adhesives GmbH,Hoenle Adhesives GmbH Firma Webseite,https://www.hoenle.com/de/,verified,"domain~hoenle, domain+name=3",1
+086,Industrieverband Klebstoffe e.V. (IVK),Huntsman Advanced Materials (Deutschland) GmbH,Huntsman Advanced Materials (Deutschland) GmbH Firma Webseite,,no_result,,2
+086,Industrieverband Klebstoffe e.V. (IVK),IGK Isolierglasklebstoffe GmbH,IGK Isolierglasklebstoffe GmbH Firma Webseite,https://igk.global/de/,verified,name+postcode=3,1
+086,Industrieverband Klebstoffe e.V. (IVK),IMCD Deutschland GmbH & Co. KG,IMCD Deutschland GmbH & Co. KG Firma Webseite,https://www.imcd.de/de/,verified,"domain~imcd, domain+name=3",1
+086,Industrieverband Klebstoffe e.V. (IVK),Innotech Marketing und Konfektion Rot GmbH,Innotech Marketing und Konfektion Rot GmbH Firma Webseite,https://www.innotech-rot.de/,verified,"domain~innotech, domain+name+phone+postcode=8",1
+086,Industrieverband Klebstoffe e.V. (IVK),INTOPLAN GmbH Bauchemie,INTOPLAN GmbH Bauchemie Firma Webseite,https://intoplan.de/,verified,"domain~intoplan, domain+name+phone+postcode=8",1
+086,Industrieverband Klebstoffe e.V. (IVK),ISGATEC GmbH,ISGATEC GmbH Firma Webseite,https://www.isgatec.com/,verified,"domain~isgatec, domain+name+phone+postcode=8",1
+086,Industrieverband Klebstoffe e.V. (IVK),Isochem kautschuk-GmbH,Isochem kautschuk-GmbH Firma Webseite,https://kautschuk.com/group/isochem-germany,verified,"domain~kautschuk, domain+name=3",1
+086,Industrieverband Klebstoffe e.V. (IVK),Jowat Klebstoffe GmbH,Jowat Klebstoffe GmbH Firma Webseite,https://www.jowat.com/de-DE/,verified,"domain~jowat, domain+name=3",1
+086,Industrieverband Klebstoffe e.V. (IVK),Jowat SE,Jowat SE Firma Webseite,https://www.jowat.com/de-DE/,verified,"domain~jowat, domain+name+phone+postcode=8",1
+086,Industrieverband Klebstoffe e.V. (IVK),Kaneka Belgium N.V. Kunststoffe W. Hollbeck,Kaneka Belgium N.V. Kunststoffe W. Hollbeck Firma Webseite,https://www.kaneka.be/,verified,"domain~kaneka, domain+name=3",1
+086,Industrieverband Klebstoffe e.V. (IVK),Keil Anlagenbau GmbH & Co. KG,Keil Anlagenbau GmbH & Co. KG Firma Webseite,https://www.keil-anlagenbau.de/unternehmen/,verified,"domain~anlagenbau, domain+name+phone=6",1
+086,Industrieverband Klebstoffe e.V. (IVK),KEYSER & MACKAY,KEYSER & MACKAY Firma Webseite,https://www.svlfc.ch/termine/2026-techniktag/,page_only,name=1,3
+086,Industrieverband Klebstoffe e.V. (IVK),Kiesel Bauchemie GmbH u. Co. KG,Kiesel Bauchemie GmbH u. Co. KG Firma Webseite,https://www.kiesel.com/,verified,"domain~kiesel, domain+name+phone+postcode=8",1
+086,Industrieverband Klebstoffe e.V. (IVK),Kisling Deutschland GmbH,Kisling Deutschland GmbH Firma Webseite,https://www.kisling.com/impressum,verified,"domain~kisling, domain+name+phone+postcode=8",2
+086,Industrieverband Klebstoffe e.V. (IVK),Kissel + Wolf GmbH,Kissel + Wolf GmbH Firma Webseite,https://www.kissel-wolf.com/,verified,"domain~kissel, domain+name+phone+postcode=8",1
+086,Industrieverband Klebstoffe e.V. (IVK),Klebtechnik Dr. Hartwig Lohse e.K.,Klebtechnik Dr. Hartwig Lohse e.K. Firma Webseite,,no_result,,1
+086,Industrieverband Klebstoffe e.V. (IVK),KLEIBERIT SE & Co. KG,KLEIBERIT SE & Co. KG Firma Webseite,https://www.kleiberit.com/de/startseite,verified,"domain~kleiberit, domain+name+postcode=5",1
+086,Industrieverband Klebstoffe e.V. (IVK),KNAUF Gesellschaft m.b.H.,KNAUF Gesellschaft m.b.H. Firma Webseite,https://knauf.com/,domain_match,"domain~knauf, domain=2",5
+086,Industrieverband Klebstoffe e.V. (IVK),Kömmerling Chemische Fabrik GmbH,Kömmerling Chemische Fabrik GmbH Firma Webseite,,unverified,,4
+086,Industrieverband Klebstoffe e.V. (IVK),KRAHN Chemie Deutschland GmbH,KRAHN Chemie Deutschland GmbH Firma Webseite,https://www.krahn-gmbh.de/,verified,"domain~krahn, domain+name=3",4
+086,Industrieverband Klebstoffe e.V. (IVK),L&L Products Europe GmbH,L&L Products Europe GmbH Firma Webseite,,no_result,,1
+086,Industrieverband Klebstoffe e.V. (IVK),Lanxess Deutschland GmbH,Lanxess Deutschland GmbH Firma Webseite,https://lanxess.com/de-de,verified,"domain~lanxess, domain+name=3",1
+086,Industrieverband Klebstoffe e.V. (IVK),Lohmann GmbH & Co. KG,Lohmann GmbH & Co. KG Firma Webseite,http://www.lohmann-adhesive-tapes.com/,verified,"domain~lohmann, domain+name+phone=6",1
+086,Industrieverband Klebstoffe e.V. (IVK),LOOP GmbH,LOOP GmbH Firma Webseite,https://www.loop-gmbh.de/,verified,"domain~loop, domain+name+phone=6",1
+086,Industrieverband Klebstoffe e.V. (IVK),LUGATO GmbH & Co.KG,LUGATO GmbH & Co.KG Firma Webseite,https://www.lugato.de/,verified,"domain~lugato, domain+name+postcode=5",1
+086,Industrieverband Klebstoffe e.V. (IVK),Mapei GmbH,Mapei GmbH Firma Webseite,https://www.mapei.com/de/de-de/ueber-uns,domain_match,"domain~mapei, domain=2",4
+086,Industrieverband Klebstoffe e.V. (IVK),Möller Chemie GmbH & Co. KG,Möller Chemie GmbH & Co. KG Firma Webseite,https://www.moellerchemie.com/,verified,phone+postcode=5,1
+086,Industrieverband Klebstoffe e.V. (IVK),MORCHEM GmbH,MORCHEM GmbH Firma Webseite,https://www.morchem.com/de/home-2-2-2/,verified,"domain~morchem, domain+name=3",1
+086,Industrieverband Klebstoffe e.V. (IVK),Murexin GmbH,Murexin GmbH Firma Webseite,https://www.murexin.de/,verified,"domain~murexin, domain+name+postcode=5",1
+086,Industrieverband Klebstoffe e.V. (IVK),Murexin GmbH,Murexin GmbH Firma Webseite,https://www.murexin.de/,verified,"domain~murexin, domain+name+postcode=5",1
+086,Industrieverband Klebstoffe e.V. (IVK),"Nordmann, Rassmann GmbH","Nordmann, Rassmann GmbH Firma Webseite",https://www.nordmann.global/de/nordmann-germany,verified,"domain~nordmann, domain+name+phone+postcode=8",1
+086,Industrieverband Klebstoffe e.V. (IVK),Omya Hamburg GmbH,Omya Hamburg GmbH Firma Webseite,https://www.omya.com/en/omya-group/locations/deutschland,verified,"domain~omya, domain+name=3",1
+086,Industrieverband Klebstoffe e.V. (IVK),Organik Kimya A.S.,Organik Kimya A.S. Firma Webseite,https://www.organikkimya.com/,domain_match,"domain~organik, domain=2",4
+086,Industrieverband Klebstoffe e.V. (IVK),Parker Hannifin Manufacturing Germany GmbH & Co. KG,Parker Hannifin Manufacturing Germany GmbH & Co. KG Firma Webseite,https://www.parker.com/de/de/home.html,domain_match,"domain~parker, domain=2",3
+086,Industrieverband Klebstoffe e.V. (IVK),PCI Augsburg GmbH,PCI Augsburg GmbH Firma Webseite,https://www.pci-augsburg.eu/en,verified,phone+postcode=5,1
+086,Industrieverband Klebstoffe e.V. (IVK),PCI Augsburg GmbH Niederlassung Österreich,PCI Augsburg GmbH Niederlassung Österreich Firma Webseite,https://www.pci.at/de/ueber-uns/unternehmen/kontakt,page_only,name=1,5
+086,Industrieverband Klebstoffe e.V. (IVK),Planatol GmbH,Planatol GmbH Firma Webseite,https://www.planatol.de/?trk=organization_guest_main-feed-card-text,domain_match,"domain~planatol, domain=2",2
+086,Industrieverband Klebstoffe e.V. (IVK),Planatol GmbH,Planatol GmbH Firma Webseite,https://www.planatol.de/?trk=organization_guest_main-feed-card-text,domain_match,"domain~planatol, domain=2",2
+086,Industrieverband Klebstoffe e.V. (IVK),Plasmatreat GmbH,Plasmatreat GmbH Firma Webseite,,no_result,,3
+086,Industrieverband Klebstoffe e.V. (IVK),POLY-CHEM GmbH,POLY-CHEM GmbH Firma Webseite,https://www.poly-chem.de/,verified,"domain~poly, domain+name+postcode=5",1
+086,Industrieverband Klebstoffe e.V. (IVK),Poly-clip System GmbH & Co. KG,Poly-clip System GmbH & Co. KG Firma Webseite,https://www.polyclip.com/de,verified,"domain~poly, domain+name=3",1
+086,Industrieverband Klebstoffe e.V. (IVK),Polytec PT GmbH Polymere Technologien,Polytec PT GmbH Polymere Technologien Firma Webseite,https://www.polytec-pt.com/,verified,"domain~polytec, domain+name=3",1
+086,Industrieverband Klebstoffe e.V. (IVK),PolyU GmbH,PolyU GmbH Firma Webseite,https://www.polyu.eu/,verified,"domain~polyu, domain+name=3",1
+086,Industrieverband Klebstoffe e.V. (IVK),Rain Carbon Germany GmbH,Rain Carbon Germany GmbH Firma Webseite,https://www.raincarbon.com/de,verified,"domain~carbon, domain+name=3",1
+086,Industrieverband Klebstoffe e.V. (IVK),Power2Polymers GmbH,Power2Polymers GmbH Firma Webseite,https://www.k-online.de/vis/v1/de/exhprofiles/nggbohKWT2GiyOnPDi4Qnw,verified,name+postcode=3,1
+086,Industrieverband Klebstoffe e.V. (IVK),Pronova Dichtstoffe GmbH & Co. KG,Pronova Dichtstoffe GmbH & Co. KG Firma Webseite,https://www.pronova-dichtstoffe.de/?s=captcha&cHash=93236c19648cc6bb82c7a2c38f4d6fe3,verified,"domain~dichtstoffe, domain+name+phone+postcode=8",1
+086,Industrieverband Klebstoffe e.V. (IVK),RAMPF Advanced Polymers GmbH & Co. KG,RAMPF Advanced Polymers GmbH & Co. KG Firma Webseite,https://www.rampf-group.com/de/unternehmen/business-units/advanced-polymers/,verified,"domain~rampf, domain+name=3",1
+086,Industrieverband Klebstoffe e.V. (IVK),Ramsauer GmbH & Co. KG,Ramsauer GmbH & Co. KG Firma Webseite,https://www.ramsauer.eu/,verified,"domain~ramsauer, domain+name=3",1
+086,Industrieverband Klebstoffe e.V. (IVK),Reka Klebetechnik GmbH & Co. KG,Reka Klebetechnik GmbH & Co. KG Firma Webseite,https://www.reka-klebetechnik.de/,verified,"domain~klebetechnik, domain+name=3",1
+086,Industrieverband Klebstoffe e.V. (IVK),RENIA Ges. mbH,RENIA Ges. mbH Firma Webseite,http://www.renia.com/impressum.html,verified,"domain~renia, domain+name+phone+postcode=8",1
+086,Industrieverband Klebstoffe e.V. (IVK),Rilit Coatings GmbH,Rilit Coatings GmbH Firma Webseite,https://rilit.de/,verified,"domain~rilit, domain+name+postcode=5",1
+086,Industrieverband Klebstoffe e.V. (IVK),Robatech GmbH,Robatech GmbH Firma Webseite,https://www.robatech.com/de-de/,verified,"domain~robatech, domain+name+phone+postcode=8",1
+086,Industrieverband Klebstoffe e.V. (IVK),Rocholl GmbH,Rocholl GmbH Firma Webseite,https://rocholl.eu/,verified,"domain~rocholl, domain+name=3",1
+086,Industrieverband Klebstoffe e.V. (IVK),Röhm GmbH,Röhm GmbH Firma Webseite,https://www.roehm.com/de/,verified,phone+postcode=5,1
+086,Industrieverband Klebstoffe e.V. (IVK),RUDERER KLEBETECHNIK GMBH,RUDERER KLEBETECHNIK GMBH Firma Webseite,https://www.ruderer.de/impressum/,verified,"domain~ruderer, domain+name+phone+postcode=8",1
+086,Industrieverband Klebstoffe e.V. (IVK),Saint Gobain Weber GmbH,Saint Gobain Weber GmbH Firma Webseite,https://www.saint-gobain.com/en/weber,domain_match,"domain~gobain, domain=2",4
+086,Industrieverband Klebstoffe e.V. (IVK),Schill + Seilacher “Struktol” GmbH,Schill + Seilacher “Struktol” GmbH Firma Webseite,https://struktol.de/,verified,"domain~struktol, domain+name+phone+postcode=8",1
+086,Industrieverband Klebstoffe e.V. (IVK),SCIGRIP Europe,SCIGRIP Europe Firma Webseite,https://scigripadhesives.com/scigrip-europe-distributors/,verified,"domain~scigrip, domain+name=3",1
+086,Industrieverband Klebstoffe e.V. (IVK),Sika Deutschland CH AG & Co KG,Sika Deutschland CH AG & Co KG Firma Webseite,https://deu.sika.com/,verified,name+postcode=3,1
+086,Industrieverband Klebstoffe e.V. (IVK),Sika Deutschland CH AG & Co KG,Sika Deutschland CH AG & Co KG Firma Webseite,,no_result,,5
+086,Industrieverband Klebstoffe e.V. (IVK),Sika Automotive Hamburg GmbH,Sika Automotive Hamburg GmbH Firma Webseite,https://automotive.sika.com/,verified,"domain~automotive, domain+name=3",1
+086,Industrieverband Klebstoffe e.V. (IVK),Sopro Bauchemie GmbH,Sopro Bauchemie GmbH Firma Webseite,https://www.sopro-bitumen.com/,verified,"domain~sopro, domain+name+phone=6",1
+086,Industrieverband Klebstoffe e.V. (IVK),Sopro Bauchemie GmbH,Sopro Bauchemie GmbH Firma Webseite,https://www.sopro.com/de-de/,verified,"domain~sopro, domain+name+phone=6",1
+086,Industrieverband Klebstoffe e.V. (IVK),Stanger Produktions- und Vertriebs GmbH,Stanger Produktions- und Vertriebs GmbH Firma Webseite,https://www.stanger.de/,verified,"domain~stanger, domain+name+phone+postcode=8",1
+086,Industrieverband Klebstoffe e.V. (IVK),Stauf Klebstoffwerk GmbH,Stauf Klebstoffwerk GmbH Firma Webseite,https://stauf.de/,verified,"domain~stauf, domain+name+phone+postcode=8",1
+086,Industrieverband Klebstoffe e.V. (IVK),STOCKMEIER Urethanes GmbH & Co. KG,STOCKMEIER Urethanes GmbH & Co. KG Firma Webseite,https://www.stockmeier.com/en/stockmeier-urethanes/,verified,"domain~stockmeier, domain+name=3",1
+086,Industrieverband Klebstoffe e.V. (IVK),Synthopol Chemie Dr. rer. pol. Koch GmbH & Co. KG,Synthopol Chemie Dr. rer. pol. Koch GmbH & Co. KG Firma Webseite,https://www.synthopol.com/,verified,"domain~synthopol, domain+name+phone+postcode=8",1
+086,Industrieverband Klebstoffe e.V. (IVK),TER HELL & CO. GMBH,TER HELL & CO. GMBH Firma Webseite,,no_result,,2
+086,Industrieverband Klebstoffe e.V. (IVK),tesa SE,tesa SE Firma Webseite,https://partner.tesa.com/,page_only,name=1,3
+086,Industrieverband Klebstoffe e.V. (IVK),TSRC (Lux.) Corporation S.a.r.l.,TSRC (Lux.) Corporation S.a.r.l. Firma Webseite,https://tsrcdexco.com/,verified,"domain~tsrc, domain+name+phone=6",4
+086,Industrieverband Klebstoffe e.V. (IVK),Türmerleim GmbH,Türmerleim GmbH Firma Webseite,https://www.tuermerleim.de/,verified,phone+postcode=5,1
+086,Industrieverband Klebstoffe e.V. (IVK),UHU GmbH & Co. KG,UHU GmbH & Co. KG Firma Webseite,,unverified,,4
+086,Industrieverband Klebstoffe e.V. (IVK),Uzin Utz AG,Uzin Utz AG Firma Webseite,https://de.uzin.com/,verified,name+phone+postcode=6,1
+086,Industrieverband Klebstoffe e.V. (IVK),VINAVIL S.p.A. Vertretung Deutschland,VINAVIL S.p.A. Vertretung Deutschland Firma Webseite,https://www.vinavil.com/,verified,"domain~vinavil, domain+name+phone+postcode=8",1
+086,Industrieverband Klebstoffe e.V. (IVK),VITO Irmen GmbH & Co KG,VITO Irmen GmbH & Co KG Firma Webseite,https://www.vito-irmen.de/,verified,"domain~irmen, domain+name+phone+postcode=8",1
+086,Industrieverband Klebstoffe e.V. (IVK),Wacker Chemie AG,Wacker Chemie AG Firma Webseite,,no_result,,4
+086,Industrieverband Klebstoffe e.V. (IVK),Wakol GmbH,Wakol GmbH Firma Webseite,https://www.wakol.com/,verified,"domain~wakol, domain+name=3",1
+086,Industrieverband Klebstoffe e.V. (IVK),Wakol GmbH,Wakol GmbH Firma Webseite,http://www.wakol.com/de,verified,"domain~wakol, domain+name=3",1
+086,Industrieverband Klebstoffe e.V. (IVK),Weber & Schaer GmbH & Co. KG,Weber & Schaer GmbH & Co. KG Firma Webseite,https://www.weber-schaer.com/en/,verified,"domain~schaer, domain+name+phone+postcode=8",1
+086,Industrieverband Klebstoffe e.V. (IVK),WEICON GmbH & Co. KG,WEICON GmbH & Co. KG Firma Webseite,https://www.weicon.de/produkte/,verified,"domain~weicon, domain+name+phone=6",2
+086,Industrieverband Klebstoffe e.V. (IVK),WEKEM GmbH,WEKEM GmbH Firma Webseite,https://wekem.de/,verified,"domain~wekem, domain+name+phone+postcode=8",1
+086,Industrieverband Klebstoffe e.V. (IVK),Weiss Chemie + Technik GmbH & Co. KG,Weiss Chemie + Technik GmbH & Co. KG Firma Webseite,https://www.weiss-chemie.com/unternehmen/impressum/,verified,"domain~weiss, domain+name+phone+postcode=8",1
+086,Industrieverband Klebstoffe e.V. (IVK),Wöllner GmbH,Wöllner GmbH Firma Webseite,https://www.woellner.de/,verified,phone+postcode=5,1
+086,Industrieverband Klebstoffe e.V. (IVK),Worlée-Chemie GmbH,Worlée-Chemie GmbH Firma Webseite,https://www.worlee.de/,verified,"domain~worlee, domain+name=3",1
+086,Industrieverband Klebstoffe e.V. (IVK),WS INSEBO GmbH,WS INSEBO GmbH Firma Webseite,https://www.insebo.com/,verified,"domain~insebo, domain+name=3",1
+086,Industrieverband Klebstoffe e.V. (IVK),WULFF GmbH & Co. KG,WULFF GmbH & Co. KG Firma Webseite,https://www.wulff-gmbh.de/,verified,"domain~wulff, domain+name+phone+postcode=8",1
+086,Industrieverband Klebstoffe e.V. (IVK),ZELU CHEMIE GmbH,ZELU CHEMIE GmbH Firma Webseite,https://www.zelu.de/,verified,"domain~zelu, domain+name+phone+postcode=8",1
+088,"BVIZ – Bundesverband Innovations-, Technologie- u. Gründerzentren",BioCampus Cologne Grundbesitz GmbH & Co. KG,BioCampus Cologne Grundbesitz GmbH & Co. KG Firma Webseite,https://biocampuscologne.de/bcc/home,verified,"domain~biocampus, domain+name+postcode=5",1
+088,"BVIZ – Bundesverband Innovations-, Technologie- u. Gründerzentren",Fördergesellschaft IZB mbH,Fördergesellschaft IZB mbH Firma Webseite,https://www.izb-online.de/impressum/,verified,phone+postcode=5,1
+088,"BVIZ – Bundesverband Innovations-, Technologie- u. Gründerzentren",Gesellschaft für Innovation und Unternehmensförderung mbH,Gesellschaft für Innovation und Unternehmensförderung mbH Firma Webseite,https://www.saarbruecken.de/le/wirtschaft/gewerbeflaechen_und_immobilien,page_only,name=1,3
+089,Verband Schmierstoff-Industrie e.V. (VSI),Acmos Chemie KG,Acmos Chemie KG Firma Webseite,https://www.acmos.com/start,verified,"domain~acmos, domain+name+postcode=5",1
+089,Verband Schmierstoff-Industrie e.V. (VSI),Addinol Lube Oil GmbH,Addinol Lube Oil GmbH Firma Webseite,https://addinol.de/,verified,"domain~addinol, domain+name+postcode=5",1
+089,Verband Schmierstoff-Industrie e.V. (VSI),Additiv-Chemie Luers GmbH & Co. KG (F),Additiv-Chemie Luers GmbH & Co. KG (F) Firma Webseite,https://www.additiv-chemie.de/de/,verified,"domain~additiv, domain+name+postcode=5",1
+089,Verband Schmierstoff-Industrie e.V. (VSI),Afton Chemical GmbH (F),Afton Chemical GmbH (F) Firma Webseite,,no_result,,0
+089,Verband Schmierstoff-Industrie e.V. (VSI),Troy Chemie GmbH (F),Troy Chemie GmbH (F) Firma Webseite,https://www.chemie.de/,page_only,name=1,3
+089,Verband Schmierstoff-Industrie e.V. (VSI),Avia AG,Avia AG Firma Webseite,https://www.avia.de/privatkunden,verified,"domain~avia, domain+name+postcode=5",1
+089,Verband Schmierstoff-Industrie e.V. (VSI),AVISTA OIL Deutschland GmbH,AVISTA OIL Deutschland GmbH Firma Webseite,https://www.avista-oil.de/,verified,"domain~avista, domain+name+postcode=5",1
+089,Verband Schmierstoff-Industrie e.V. (VSI),Hermann Bantleon GmbH,Hermann Bantleon GmbH Firma Webseite,https://bantleon.de/,verified,"domain~bantleon, domain+name+postcode=5",1
+089,Verband Schmierstoff-Industrie e.V. (VSI),BASF SE,BASF SE Firma Webseite,https://www.basf.com/global/de,verified,"domain~basf, domain+name=3",1
+089,Verband Schmierstoff-Industrie e.V. (VSI),BayWa AG,BayWa AG Firma Webseite,https://www.baywa.com/,verified,"domain~baywa, domain+name=3",1
+089,Verband Schmierstoff-Industrie e.V. (VSI),Carl Bechem GmbH,Carl Bechem GmbH Firma Webseite,https://www.bechem.com/de,verified,"domain~bechem, domain+name+postcode=5",1
+089,Verband Schmierstoff-Industrie e.V. (VSI),Blaser Swisslube AG,Blaser Swisslube AG Firma Webseite,,no_result,,2
+089,Verband Schmierstoff-Industrie e.V. (VSI),Boss Lubricants GmbH & Co. KG,Boss Lubricants GmbH & Co. KG Firma Webseite,http://www.boss-oil.de/index.php/de,verified,"domain~boss, domain+name+postcode=5",1
+089,Verband Schmierstoff-Industrie e.V. (VSI),Brenntag GmbH (F),Brenntag GmbH (F) Firma Webseite,https://www.brenntag.com/de-de/,verified,"domain~brenntag, domain+name+postcode=5",1
+089,Verband Schmierstoff-Industrie e.V. (VSI),Bundesverband Altöl e. V. (F),Bundesverband Altöl e. V. (F) Firma Webseite,https://bva-altoelrecycling.de/,verified,name+postcode=3,1
+089,Verband Schmierstoff-Industrie e.V. (VSI),Caldic Deutschland GmbH (F),Caldic Deutschland GmbH (F) Firma Webseite,https://www.caldic.com/en-de,verified,"domain~caldic, domain+name+postcode=5",1
+089,Verband Schmierstoff-Industrie e.V. (VSI),Castrol Germany GmbH,Castrol Germany GmbH Firma Webseite,https://www.castrol.com/de_de/germany/home.html,verified,"domain~castrol, domain+name=3",1
+089,Verband Schmierstoff-Industrie e.V. (VSI),Cimcool Europe B.V.,Cimcool Europe B.V. Firma Webseite,https://www.cimcool.net/en-us/contact-us,verified,"domain~cimcool, domain+name=3",1
+089,Verband Schmierstoff-Industrie e.V. (VSI),Clariant International Ltd (F),Clariant International Ltd (F) Firma Webseite,https://www.clariant.com/,verified,"domain~clariant, domain+name=3",1
+089,Verband Schmierstoff-Industrie e.V. (VSI),Curtis Systems GmbH,Curtis Systems GmbH Firma Webseite,https://www.curtis-systems.de/contact-1,verified,"domain~curtis, domain+name+postcode=5",3
+089,Verband Schmierstoff-Industrie e.V. (VSI),DAKO AG,DAKO AG Firma Webseite,https://dako-ag.com/,verified,"domain~dako, domain+name+postcode=5",1
+089,Verband Schmierstoff-Industrie e.V. (VSI),DOG Deutsche Oelfabrik Ges. für chemische Erzeugnisse mbH & Co. KG (F),DOG Deutsche Oelfabrik Ges. für chemische Erzeugnisse mbH & Co. KG (F) Firma Webseite,https://www.dog-chemie.de/,verified,name+postcode=3,1
+089,Verband Schmierstoff-Industrie e.V. (VSI),DuPont Specialty Products GmbH & Co. KG,DuPont Specialty Products GmbH & Co. KG Firma Webseite,https://www.dupont.de/,verified,"domain~dupont, domain+name+postcode=5",1
+089,Verband Schmierstoff-Industrie e.V. (VSI),Emery Oleochemicals GmbH,Emery Oleochemicals GmbH Firma Webseite,https://www.emeryoleo.com/,verified,"domain~emery, domain+name=3",1
+089,Verband Schmierstoff-Industrie e.V. (VSI),Enilive Schmiertechnik GmbH,Enilive Schmiertechnik GmbH Firma Webseite,,no_result,,3
+089,Verband Schmierstoff-Industrie e.V. (VSI),Ergon International Inc.,Ergon International Inc. Firma Webseite,https://www.ergonbike.com/de,verified,"domain~ergon, domain+name=3",1
+089,Verband Schmierstoff-Industrie e.V. (VSI),esgemo GmbH & Co. KG,esgemo GmbH & Co. KG Firma Webseite,https://www.esgemo.de/,verified,"domain~esgemo, domain+name+postcode=5",1
+089,Verband Schmierstoff-Industrie e.V. (VSI),Esso Deutschland GmbH,Esso Deutschland GmbH Firma Webseite,https://www.esso.de/de-de,verified,"domain~esso, domain+name=3",1
+089,Verband Schmierstoff-Industrie e.V. (VSI),Evonik Operations GmbH (F),Evonik Operations GmbH (F) Firma Webseite,https://evonik.de/,verified,"domain~evonik, domain+name=3",1
+089,Verband Schmierstoff-Industrie e.V. (VSI),Excor Korrosionsforschung GmbH (F),Excor Korrosionsforschung GmbH (F) Firma Webseite,https://www.excor.com/about-us/excor-corrosion-research,verified,"domain~excor, domain+name=3",3
+089,Verband Schmierstoff-Industrie e.V. (VSI),Finke Mineralölwerk GmbH,Finke Mineralölwerk GmbH Firma Webseite,https://www.finke-oil.de/home,verified,"domain~finke, domain+name+postcode=5",1
+089,Verband Schmierstoff-Industrie e.V. (VSI),FRAGOL AG,FRAGOL AG Firma Webseite,https://www.fragol.com/,verified,"domain~fragol, domain+name+postcode=5",1
+089,Verband Schmierstoff-Industrie e.V. (VSI),FUCHS LUBRICANTS GERMANY GmbH,FUCHS LUBRICANTS GERMANY GmbH Firma Webseite,https://www.fuchs.com/de/de/,verified,"domain~fuchs, domain+name=3",1
+089,Verband Schmierstoff-Industrie e.V. (VSI),GB-Chemie GmbH (F),GB-Chemie GmbH (F) Firma Webseite,https://www.vch-online.de/branche/mitgliedsfirmen,page_only,postcode=2,5
+089,Verband Schmierstoff-Industrie e.V. (VSI),Peter Greven GmbH & Co. KG,Peter Greven GmbH & Co. KG Firma Webseite,https://www.peter-greven.de/en/,verified,"domain~greven, domain+name=3",1
+089,Verband Schmierstoff-Industrie e.V. (VSI),Hammonia Oleochemicals GmbH (F),Hammonia Oleochemicals GmbH (F) Firma Webseite,https://www.hammonia-oleo.com/,verified,"domain~hammonia, domain+name+postcode=5",1
+089,Verband Schmierstoff-Industrie e.V. (VSI),Haug Chemie GmbH,Haug Chemie GmbH Firma Webseite,https://haugchemie.de/,verified,"domain~haug, domain+name+postcode=5",1
+089,Verband Schmierstoff-Industrie e.V. (VSI),hebro Chemie Zweigniederlassung der Rockwood Specialties Group GmbH,hebro Chemie Zweigniederlassung der Rockwood Specialties Group GmbH Firma Webseite,https://www.hebro-chemie.de/?trk=public_post_share-update_update-text,verified,"domain~hebro, domain+name+postcode=5",1
+089,Verband Schmierstoff-Industrie e.V. (VSI),helcotec Chemie u. Technik GmbH,helcotec Chemie u. Technik GmbH Firma Webseite,https://www.helcotec.com/,verified,"domain~helcotec, domain+name+postcode=5",1
+089,Verband Schmierstoff-Industrie e.V. (VSI),Henkel AG & Co. KGaA,Henkel AG & Co. KGaA Firma Webseite,https://www.henkel.de/,verified,"domain~henkel, domain+name=3",1
+089,Verband Schmierstoff-Industrie e.V. (VSI),HOLIFA Fröhling GmbH & Co. KG,HOLIFA Fröhling GmbH & Co. KG Firma Webseite,https://holifa.com/de/das-unternehmen,verified,"domain~holifa, domain+name=3",1
+089,Verband Schmierstoff-Industrie e.V. (VSI),HollyFrontier Europe B.V.,HollyFrontier Europe B.V. Firma Webseite,https://hollyfrontierspecialties.com/en-us,domain_match,"domain~hollyfrontier, domain=2",3
+089,Verband Schmierstoff-Industrie e.V. (VSI),Jokisch GmbH,Jokisch GmbH Firma Webseite,https://www.jokisch-fluids.de/,verified,"domain~jokisch, domain+name+postcode=5",1
+089,Verband Schmierstoff-Industrie e.V. (VSI),KAJO GmbH,KAJO GmbH Firma Webseite,,no_result,,0
+089,Verband Schmierstoff-Industrie e.V. (VSI),KAO Chemicals GmbH (F),KAO Chemicals GmbH (F) Firma Webseite,https://www.kaochemicals.de/,verified,"domain~chemicals, domain+name=3",1
+089,Verband Schmierstoff-Industrie e.V. (VSI),KETTLITZ-CHEMIE GmbH & Co. KG,KETTLITZ-CHEMIE GmbH & Co. KG Firma Webseite,https://www.kettlitz.com/,verified,"domain~kettlitz, domain+name+postcode=5",1
+089,Verband Schmierstoff-Industrie e.V. (VSI),Klüber Lubrication München GmbH & Co. KG,Klüber Lubrication München GmbH & Co. KG Firma Webseite,https://www.klueber.com/de/en/,verified,name+postcode=3,1
+089,Verband Schmierstoff-Industrie e.V. (VSI),Chemische Werke Kluthe GmbH,Chemische Werke Kluthe GmbH Firma Webseite,https://kluthe.com/,verified,"domain~kluthe, domain+name=3",1
+089,Verband Schmierstoff-Industrie e.V. (VSI),LAEMMLE Chemicals AG,LAEMMLE Chemicals AG Firma Webseite,https://laemmle-chemicals.ch/,verified,"domain~chemicals, domain+name=3",1
+089,Verband Schmierstoff-Industrie e.V. (VSI),LANXESS Deutschland GmbH (F),LANXESS Deutschland GmbH (F) Firma Webseite,https://lanxess.com/de-de,verified,"domain~lanxess, domain+name=3",1
+089,Verband Schmierstoff-Industrie e.V. (VSI),Lehmann & Voss & Co. KG (F),Lehmann & Voss & Co. KG (F) Firma Webseite,https://www.lehvoss.de/,verified,"domain~voss, domain+name=3",1
+089,Verband Schmierstoff-Industrie e.V. (VSI),Lubricant Consult GmbH,Lubricant Consult GmbH Firma Webseite,https://www.lubcon.com/de/company_profile,page_only,name=1,4
+089,Verband Schmierstoff-Industrie e.V. (VSI),Lubrizol Deutschland GmbH (F),Lubrizol Deutschland GmbH (F) Firma Webseite,,no_result,,1
+089,Verband Schmierstoff-Industrie e.V. (VSI),Master Fluid Solutions WDG GmbH,Master Fluid Solutions WDG GmbH Firma Webseite,https://www.masterfluids.com/de/de/,verified,"domain~master, domain+name=3",1
+089,Verband Schmierstoff-Industrie e.V. (VSI),Metall Chemie GmbH & Co. KG (F),Metall Chemie GmbH & Co. KG (F) Firma Webseite,,unverified,,2
+089,Verband Schmierstoff-Industrie e.V. (VSI),ML Lubrication GmbH,ML Lubrication GmbH Firma Webseite,https://www.ml-lubrication.com/,verified,"domain~lubrication, domain+name+postcode=5",1
+089,Verband Schmierstoff-Industrie e.V. (VSI),MOTOREX GmbH,MOTOREX GmbH Firma Webseite,https://motorex.com/de-de,verified,"domain~motorex, domain+name=3",1
+089,Verband Schmierstoff-Industrie e.V. (VSI),MOTUL Deutschland GmbH,MOTUL Deutschland GmbH Firma Webseite,https://www.motul.com/de-DE,verified,"domain~motul, domain+name=3",1
+089,Verband Schmierstoff-Industrie e.V. (VSI),Nynas GmbH,Nynas GmbH Firma Webseite,https://www.nynas.com/,verified,"domain~nynas, domain+name=3",1
+089,Verband Schmierstoff-Industrie e.V. (VSI),OELCHECK GmbH (F),OELCHECK GmbH (F) Firma Webseite,http://www.oelcheck.at/Startseite/,domain_match,"domain~oelcheck, domain=2",5
+089,Verband Schmierstoff-Industrie e.V. (VSI),oelheld GmbH,oelheld GmbH Firma Webseite,https://www.oelheld.com/de/weitere-informationen/impressum/,verified,"domain~oelheld, domain+name+postcode=5",1
+089,Verband Schmierstoff-Industrie e.V. (VSI),Oemeta Chemische Werke GmbH,Oemeta Chemische Werke GmbH Firma Webseite,https://www.oemeta.com/,verified,"domain~oemeta, domain+name+postcode=5",1
+089,Verband Schmierstoff-Industrie e.V. (VSI),OEST LUBRICANTS GmbH & Co. KG,OEST LUBRICANTS GmbH & Co. KG Firma Webseite,https://www.oest.de/,verified,"domain~oest, domain+name=3",1
+089,Verband Schmierstoff-Industrie e.V. (VSI),OKS Spezialschmierstoffe GmbH,OKS Spezialschmierstoffe GmbH Firma Webseite,https://www.oks-germany.com/partner/de/meta/impressum/,verified,name+postcode=3,1
+089,Verband Schmierstoff-Industrie e.V. (VSI),Petrofer Chemie H. R. Fischer GmbH & Co. KG,Petrofer Chemie H. R. Fischer GmbH & Co. KG Firma Webseite,https://petrofer.com/de/impressum/,verified,"domain~petrofer, domain+name+postcode=5",1
+089,Verband Schmierstoff-Industrie e.V. (VSI),Petronas Lubricants Deutschland GmbH,Petronas Lubricants Deutschland GmbH Firma Webseite,,unverified,,1
+089,Verband Schmierstoff-Industrie e.V. (VSI),Pfinder KG,Pfinder KG Firma Webseite,https://www.pfinder.de/,verified,"domain~pfinder, domain+name+postcode=5",1
+089,Verband Schmierstoff-Industrie e.V. (VSI),Quaker Houghton Sales B.V. Deutsche Zweigniederlassung,Quaker Houghton Sales B.V. Deutsche Zweigniederlassung Firma Webseite,https://home.quakerhoughton.com/,page_only,name=1,4
+089,Verband Schmierstoff-Industrie e.V. (VSI),Raziol Zibulla & Sohn GmbH,Raziol Zibulla & Sohn GmbH Firma Webseite,https://www.raziol.com/,verified,"domain~raziol, domain+name+postcode=5",1
+089,Verband Schmierstoff-Industrie e.V. (VSI),Rhenus Lub GmbH & Co KG,Rhenus Lub GmbH & Co KG Firma Webseite,https://www.rhenuslub.de/,verified,"domain~rhenus, domain+name+postcode=5",1
+089,Verband Schmierstoff-Industrie e.V. (VSI),ROWE Mineralölwerk GmbH,ROWE Mineralölwerk GmbH Firma Webseite,https://www.rowe-oil.com/de,verified,"domain~rowe, domain+name=3",1
+089,Verband Schmierstoff-Industrie e.V. (VSI),SASOL Germany GmbH (F),SASOL Germany GmbH (F) Firma Webseite,https://jobs.sasol.com/go/View-All-Jobs-DE/8825201/,page_only,name=1,2
+089,Verband Schmierstoff-Industrie e.V. (VSI),Schaeffler Technologies AG & Co. KG (F),Schaeffler Technologies AG & Co. KG (F) Firma Webseite,https://www.schaeffler.de/de/,verified,"domain~schaeffler, domain+name=3",1
+089,Verband Schmierstoff-Industrie e.V. (VSI),Friedrich Scharr KG,Friedrich Scharr KG Firma Webseite,https://scharr.de/,verified,"domain~scharr, domain+name=3",1
+089,Verband Schmierstoff-Industrie e.V. (VSI),Setral Chemie GmbH,Setral Chemie GmbH Firma Webseite,https://setral.com/de/,verified,"domain~setral, domain+name+postcode=5",1
+089,Verband Schmierstoff-Industrie e.V. (VSI),Shell Deutschland GmbH,Shell Deutschland GmbH Firma Webseite,https://www.shell.de/impressum.html,verified,"domain~shell, domain+name=3",1
+089,Verband Schmierstoff-Industrie e.V. (VSI),SRS Schmierstoff Vertrieb GmbH,SRS Schmierstoff Vertrieb GmbH Firma Webseite,https://www.motoroel.de/motoroel-hersteller/srs-motoroel/,page_only,name=1,3
+089,Verband Schmierstoff-Industrie e.V. (VSI),Straetmans HighTAC GmbH (F),Straetmans HighTAC GmbH (F) Firma Webseite,https://hightac.de/,verified,"domain~hightac, domain+name+postcode=5",1
+089,Verband Schmierstoff-Industrie e.V. (VSI),Swd Lubricants GmbH & Co. KG,Swd Lubricants GmbH & Co. KG Firma Webseite,https://www.swdrheinol.com/,page_only,name=1,3
+089,Verband Schmierstoff-Industrie e.V. (VSI),Ter Chemicals GmbH & Co. KG (F),Ter Chemicals GmbH & Co. KG (F) Firma Webseite,https://www.terchemicals.com/en/1,verified,"domain~chemicals, domain+name+postcode=5",1
+089,Verband Schmierstoff-Industrie e.V. (VSI),TotalEnergies Glass Lubricants Europe GmbH,TotalEnergies Glass Lubricants Europe GmbH Firma Webseite,https://totalenergies.de/,verified,"domain~totalenergies, domain+name=3",1
+089,Verband Schmierstoff-Industrie e.V. (VSI),TotalEnergies Marketing Deutschland GmbH,TotalEnergies Marketing Deutschland GmbH Firma Webseite,https://totalenergies.de/impressum,verified,"domain~totalenergies, domain+name+postcode=5",1
+089,Verband Schmierstoff-Industrie e.V. (VSI),TUNAP GmbH & Co. KG,TUNAP GmbH & Co. KG Firma Webseite,https://www.tunap.com/,verified,"domain~tunap, domain+name=3",1
+089,Verband Schmierstoff-Industrie e.V. (VSI),unitech Kühlschmierstoffe GmbH,unitech Kühlschmierstoffe GmbH Firma Webseite,https://unitech-kss.de/,verified,"domain~unitech, domain+name=3",1
+089,Verband Schmierstoff-Industrie e.V. (VSI),Uniti Bundesverband EnergieMittelstand e.V.,Uniti Bundesverband EnergieMittelstand e.V. Firma Webseite,https://www.uniti.de/,verified,"domain~uniti, domain+name+postcode=5",1
+089,Verband Schmierstoff-Industrie e.V. (VSI),Vanderbilt Worldwide Ltd (F),Vanderbilt Worldwide Ltd (F) Firma Webseite,https://www.vanderbiltworldwide.com/,verified,"domain~vanderbilt, domain+name=3",1
+089,Verband Schmierstoff-Industrie e.V. (VSI),Vink Chemicals GmbH & Co. KG (F),Vink Chemicals GmbH & Co. KG (F) Firma Webseite,https://www.vink-chemicals.com/,verified,"domain~chemicals, domain+name+postcode=5",1
+089,Verband Schmierstoff-Industrie e.V. (VSI),Wieds Ecochem AG,Wieds Ecochem AG Firma Webseite,https://www.wieds.de/,verified,"domain~wieds, domain+name+postcode=5",1
+089,Verband Schmierstoff-Industrie e.V. (VSI),Zeller+Gmelin GmbH & Co. KG,Zeller+Gmelin GmbH & Co. KG Firma Webseite,https://zeller-gmelin.de/,verified,"domain~zeller, domain+name+postcode=5",1
+089,Verband Schmierstoff-Industrie e.V. (VSI),ZET-Chemie GmbH,ZET-Chemie GmbH Firma Webseite,https://www.zet-chemie.de/,page_only,postcode=2,3
+090,SprayCloth,Held GmbH,Held GmbH Firma Webseite,https://www.held.de/,verified,"domain~held, domain+name=3",1
+090,SprayCloth,Batex Technische Textilien GmbH,Batex Technische Textilien GmbH Firma Webseite,https://www.batex.de/,verified,"domain~batex, domain+name=3",1
+090,SprayCloth,DMG Chemie GmbH,DMG Chemie GmbH Firma Webseite,,unverified,,3
+090,SprayCloth,VELOMAT Messelektronik GmbH,VELOMAT Messelektronik GmbH Firma Webseite,https://www.velomat.de/,verified,"domain~velomat, domain+name=3",1
+090,SprayCloth,Woldrich Engineering + Consulting,Woldrich Engineering + Consulting Firma Webseite,,no_result,,3
+090,SprayCloth,Hörber + Hetzner GmbH,Hörber + Hetzner GmbH Firma Webseite,https://www.hoerber-hetzner.de/de/,verified,"domain~hetzner, domain+name=3",1
+090,SprayCloth,Elnic in Dresden GmbH,Elnic in Dresden GmbH Firma Webseite,https://elnic-dresden.de/,verified,"domain~elnic, domain+name=3",1
+090,SprayCloth,Pauly Steuer- und Regelanlagen GmbH & Co. KG,Pauly Steuer- und Regelanlagen GmbH & Co. KG Firma Webseite,https://pauly-systems.com/,verified,"domain~pauly, domain+name=3",1
+090,SprayCloth,Fabrican Ltd.,Fabrican Ltd. Firma Webseite,https://www.welt.de/print/die_welt/wirtschaft/article108673439/Klamotten-aus-der-Spruehdose.html,page_only,name=1,2
+090,SprayCloth,Müller Knöpfe Produktions GmbH,Müller Knöpfe Produktions GmbH Firma Webseite,https://www.muellerknoepfe.at/,page_only,name=1,5
+090,SprayCloth,Grabher Group,Grabher Group Firma Webseite,https://www.grabher-group.company/impressum,verified,"domain~grabher, domain+name=3",1
+090,SprayCloth,bcd Consulting GmbH,bcd Consulting GmbH Firma Webseite,,unverified,,5
+090,SprayCloth,SACHSEN!TEXTIL e.V.,SACHSEN!TEXTIL e.V. Firma Webseite,https://www.sachsen-textil.de/,verified,"domain~sachsen, domain+name=3",1
+090,SprayCloth,Textilforschungsinstitut Thüringen-Vogtland e.V. (TITV),Textilforschungsinstitut Thüringen-Vogtland e.V. (TITV) Firma Webseite,,no_result,,5
+090,SprayCloth,bvse-Bundesverband Sekundärrohstoffe und Entsorgung e.V.,bvse-Bundesverband Sekundärrohstoffe und Entsorgung e.V. Firma Webseite,https://www.bvse.de/,verified,"domain~bvse, domain+name=3",1
+091,DGM – Deutsche Gesellschaft für Materialkunde e.V.,ABCircular GmbH,ABCircular GmbH Firma Webseite,http://abc-technolgies.com/webseite/index.html,page_only,name=1,2
+091,DGM – Deutsche Gesellschaft für Materialkunde e.V.,"Albert-Ludwigs-Universität Freiburg, Institut für Nachhaltige Technische Systeme - INATECH","Albert-Ludwigs-Universität Freiburg, Institut für Nachhaltige Technische Systeme - INATECH Firma Webseite",https://www.inatech.uni-freiburg.de/,verified,"domain~inatech, domain+name=3",1
+091,DGM – Deutsche Gesellschaft für Materialkunde e.V.,Akpa Chemie GmbH,Akpa Chemie GmbH Firma Webseite,https://akpachemie.de/,verified,"domain~akpa, domain+name=3",1
+091,DGM – Deutsche Gesellschaft für Materialkunde e.V.,AMAP GmbH - Forschungscluster an der RWTH Aachen University,AMAP GmbH - Forschungscluster an der RWTH Aachen University Firma Webseite,https://www.amap.de/,verified,"domain~amap, domain+name=3",1
+091,DGM – Deutsche Gesellschaft für Materialkunde e.V.,ALD Vacuum Technologies GmbH,ALD Vacuum Technologies GmbH Firma Webseite,https://en.industryarena.com/ald-vt,page_only,name=1,4
+091,DGM – Deutsche Gesellschaft für Materialkunde e.V.,Bayern Innovativ - Bayerische Gesellschaft für Innovation und Wissenstransfer mbH,Bayern Innovativ - Bayerische Gesellschaft für Innovation und Wissenstransfer mbH Firma Webseite,https://www.bayern-innovativ.de/,verified,"domain~innovativ, domain+name=3",1
+091,DGM – Deutsche Gesellschaft für Materialkunde e.V.,Alu Menziken Extrusion AG,Alu Menziken Extrusion AG Firma Webseite,https://www.alu-menziken.com/extrusion/,domain_match,"domain~menziken, domain=2",2
+091,DGM – Deutsche Gesellschaft für Materialkunde e.V.,BIAS - Bremer Institut für angewandte Strahltechnik GmbH,BIAS - Bremer Institut für angewandte Strahltechnik GmbH Firma Webseite,https://www.bias.de/,verified,"domain~bias, domain+name=3",1
+091,DGM – Deutsche Gesellschaft für Materialkunde e.V.,Aluminium Norf GmbH,Aluminium Norf GmbH Firma Webseite,https://www.aluminiumdeutschland.de/hersteller/aluminium-norf-gmbh/,domain_match,"domain~aluminium, domain=2",1
+091,DGM – Deutsche Gesellschaft für Materialkunde e.V.,"BTU Cottbus - Senftenberg, Fachgebiet Metallkunde und Werkstofftechnik","BTU Cottbus - Senftenberg, Fachgebiet Metallkunde und Werkstofftechnik Firma Webseite",https://www.b-tu.de/fg-mwt/,page_only,name=1,5
+091,DGM – Deutsche Gesellschaft für Materialkunde e.V.,Aluminium-Laufen AG,Aluminium-Laufen AG Firma Webseite,https://aluminium-laufen.com/,verified,"domain~aluminium, domain+name=3",1
+091,DGM – Deutsche Gesellschaft für Materialkunde e.V.,Bundesanstalt für Materialforschung und -prüfung (BAM),Bundesanstalt für Materialforschung und -prüfung (BAM) Firma Webseite,https://www.bam.de/en/topics/materials,page_only,name=1,4
+091,DGM – Deutsche Gesellschaft für Materialkunde e.V.,Aluminium-Werke Wutöschingen AG & Co. KG,Aluminium-Werke Wutöschingen AG & Co. KG Firma Webseite,https://www.aww.de/,page_only,name=1,2
+091,DGM – Deutsche Gesellschaft für Materialkunde e.V.,"Christian-Albrechts-Universität zu Kiel, Institut für Materialwissenschaft","Christian-Albrechts-Universität zu Kiel, Institut für Materialwissenschaft Firma Webseite",https://www.uni-kiel.de/de/kielmat-international,page_only,name=1,5
+091,DGM – Deutsche Gesellschaft für Materialkunde e.V.,ANDRITZ Metals Germany GmbH,ANDRITZ Metals Germany GmbH Firma Webseite,https://www.andritz.com/group-de,verified,"domain~andritz, domain+name=3",1
+091,DGM – Deutsche Gesellschaft für Materialkunde e.V.,Cluster NanoMikroWerkstoffePhotonik.NRW,Cluster NanoMikroWerkstoffePhotonik.NRW Firma Webseite,https://nmwp.nrw/,page_only,name=1,5
+091,DGM – Deutsche Gesellschaft für Materialkunde e.V.,ASP Isotopes South Africa (Pty) Ltd,ASP Isotopes South Africa (Pty) Ltd Firma Webseite,https://aspisotopes.com/,verified,"domain~isotopes, domain+name=3",1
+091,DGM – Deutsche Gesellschaft für Materialkunde e.V.,DECHEMA e.V.,DECHEMA e.V. Firma Webseite,http://www.dechema.de/,verified,"domain~dechema, domain+name=3",1
+091,DGM – Deutsche Gesellschaft für Materialkunde e.V.,Auerhammer Metallwerk GmbH,Auerhammer Metallwerk GmbH Firma Webseite,https://www.auerhammer.com/,verified,"domain~auerhammer, domain+name=3",1
+091,DGM – Deutsche Gesellschaft für Materialkunde e.V.,Deutsche Gesellschaft für Galvano- und Oberflächentechnik e.V.,Deutsche Gesellschaft für Galvano- und Oberflächentechnik e.V. Firma Webseite,https://www.dgo-online.de/,page_only,name=1,4
+091,DGM – Deutsche Gesellschaft für Materialkunde e.V.,Aurubis Stolberg GmbH & Co. KG,Aurubis Stolberg GmbH & Co. KG Firma Webseite,https://www.aurubis.com/stolberg,verified,"domain~aurubis, domain+name=3",1
+091,DGM – Deutsche Gesellschaft für Materialkunde e.V.,Deutsche Glastechnische Gesellschaft e.V.,Deutsche Glastechnische Gesellschaft e.V. Firma Webseite,,no_result,,2
+091,DGM – Deutsche Gesellschaft für Materialkunde e.V.,BAGR Berliner Aluminiumwerk GmbH,BAGR Berliner Aluminiumwerk GmbH Firma Webseite,,no_result,,3
+091,DGM – Deutsche Gesellschaft für Materialkunde e.V.,Deutsche Keramische Gesellschaft e.V.,Deutsche Keramische Gesellschaft e.V. Firma Webseite,https://www.dkg.de/,page_only,name=1,2
+091,DGM – Deutsche Gesellschaft für Materialkunde e.V.,Bruker Nano GmbH,Bruker Nano GmbH Firma Webseite,https://www.bruker.com/en/landingpages/bna/bruker-nano.html,verified,"domain~bruker, domain+name=3",1
+091,DGM – Deutsche Gesellschaft für Materialkunde e.V.,Deutscher Verband für Schweißen und verwandte Verfahren e. V.,Deutscher Verband für Schweißen und verwandte Verfahren e. V. Firma Webseite,https://www.dvs-home.de/,page_only,name=1,3
+091,DGM – Deutsche Gesellschaft für Materialkunde e.V.,Buehler - ITW Test & Measurement GmbH,Buehler - ITW Test & Measurement GmbH Firma Webseite,https://www.buehler.com/de/,verified,"domain~buehler, domain+name=3",1
+091,DGM – Deutsche Gesellschaft für Materialkunde e.V.,"Deutsches Zentrum für Luft- und Raumfahrt e.V. (DLR), Institut für Werkstoff-Forschung","Deutsches Zentrum für Luft- und Raumfahrt e.V. (DLR), Institut für Werkstoff-Forschung Firma Webseite",https://www.dlr.de/de/,page_only,name=1,2
+091,DGM – Deutsche Gesellschaft für Materialkunde e.V.,Carl Zeiss Microscopy GmbH,Carl Zeiss Microscopy GmbH Firma Webseite,https://www.zeiss.com/microscopy/en/home.html,verified,"domain~zeiss, domain+name=3",1
+091,DGM – Deutsche Gesellschaft für Materialkunde e.V.,"Eberhard-Karls-Universität Tübingen, Sektion Medizinische Werkstoffkunde und Technologie","Eberhard-Karls-Universität Tübingen, Sektion Medizinische Werkstoffkunde und Technologie Firma Webseite",https://www.medizin.uni-tuebingen.de/,page_only,name=1,4
+091,DGM – Deutsche Gesellschaft für Materialkunde e.V.,GUTMANN AG,GUTMANN AG Firma Webseite,https://gutmann.de/en/company/,verified,"domain~gutmann, domain+name=3",1
+091,DGM – Deutsche Gesellschaft für Materialkunde e.V.,"Ernst-Abbe-Hochschule Jena, Fachbereich SciTec - Präzision-Optik-Materialien","Ernst-Abbe-Hochschule Jena, Fachbereich SciTec - Präzision-Optik-Materialien Firma Webseite",,no_result,,3
+091,DGM – Deutsche Gesellschaft für Materialkunde e.V.,CS Additive GmbH,CS Additive GmbH Firma Webseite,https://cs-additive.de/,verified,"domain~additive, domain+name=3",1
+091,DGM – Deutsche Gesellschaft für Materialkunde e.V.,"ETH Zürich, Advanced Manufacturing Laboratory - AMLZ","ETH Zürich, Advanced Manufacturing Laboratory - AMLZ Firma Webseite",https://advanced-manufacturing.ethz.ch/,verified,"domain~manufacturing, domain+name=3",1
+091,DGM – Deutsche Gesellschaft für Materialkunde e.V.,Deutsche Giessdraht GmbH,Deutsche Giessdraht GmbH Firma Webseite,,no_result,,3
+091,DGM – Deutsche Gesellschaft für Materialkunde e.V.,FILK Freiberg Institute gGmbH,FILK Freiberg Institute gGmbH Firma Webseite,https://www.filkfreiberg.de/,verified,"domain~freiberg, domain+name=3",1
+091,DGM – Deutsche Gesellschaft für Materialkunde e.V.,Diehl Brass Solutions Stiftung & Co. KG,Diehl Brass Solutions Stiftung & Co. KG Firma Webseite,,no_result,,4
+091,DGM – Deutsche Gesellschaft für Materialkunde e.V.,Forschungsinstitut für Edelmetalle und Metallchemie (FEM),Forschungsinstitut für Edelmetalle und Metallchemie (FEM) Firma Webseite,https://fem-online.de/en/,page_only,name=1,4
+091,DGM – Deutsche Gesellschaft für Materialkunde e.V.,DODUCO Contacts and Refining GmbH,DODUCO Contacts and Refining GmbH Firma Webseite,https://www.doduco.net/,verified,"domain~doduco, domain+name=3",1
+091,DGM – Deutsche Gesellschaft für Materialkunde e.V.,"Forschungszentrum Jülich GmbH, Institute of Energy Materials and Devices (IMD)","Forschungszentrum Jülich GmbH, Institute of Energy Materials and Devices (IMD) Firma Webseite",https://www.fz-juelich.de/,page_only,name=1,5
+091,DGM – Deutsche Gesellschaft für Materialkunde e.V.,Dr. Fritsch GmbH,Dr. Fritsch GmbH Firma Webseite,https://www.fritsch.de/,verified,"domain~fritsch, domain+name=3",3
+091,DGM – Deutsche Gesellschaft für Materialkunde e.V.,"Forschungszentrum Jülich GmbH, Institut für Technologie und Engineering (ITE)","Forschungszentrum Jülich GmbH, Institut für Technologie und Engineering (ITE) Firma Webseite",https://www.fz-juelich.de/,page_only,name=1,3
+091,DGM – Deutsche Gesellschaft für Materialkunde e.V.,Drahtwerk Elisental W. Erdmann GmbH & Co.,Drahtwerk Elisental W. Erdmann GmbH & Co. Firma Webseite,https://www.elisental.de/de/,verified,"domain~elisental, domain+name=3",2
+091,DGM – Deutsche Gesellschaft für Materialkunde e.V.,Fraunhofer-Einrichtung für Wertstoffkreisläufe und Ressourcenstrategie IWKS,Fraunhofer-Einrichtung für Wertstoffkreisläufe und Ressourcenstrategie IWKS Firma Webseite,https://www.iwks.fraunhofer.de/,verified,"domain~iwks, domain+name=3",1
+091,DGM – Deutsche Gesellschaft für Materialkunde e.V.,EBNER Industrieofenbau GmbH,EBNER Industrieofenbau GmbH Firma Webseite,https://www.ebner.cc/,verified,"domain~ebner, domain+name=3",1
+091,DGM – Deutsche Gesellschaft für Materialkunde e.V.,Fraunhofer-Institut für Angewandte Polymerforschung,Fraunhofer-Institut für Angewandte Polymerforschung Firma Webseite,https://www.iap.fraunhofer.de/,page_only,name=1,4
+091,DGM – Deutsche Gesellschaft für Materialkunde e.V.,Ecoroll AG Werkzeugtechnik,Ecoroll AG Werkzeugtechnik Firma Webseite,https://www.ecoroll.com/de/,verified,"domain~ecoroll, domain+name=3",1
+091,DGM – Deutsche Gesellschaft für Materialkunde e.V.,Fraunhofer-Institut für Betriebsfestigkeit und Systemzuverlässigkeit,Fraunhofer-Institut für Betriebsfestigkeit und Systemzuverlässigkeit Firma Webseite,https://www.lbf.fraunhofer.de/,page_only,name=1,3
+091,DGM – Deutsche Gesellschaft für Materialkunde e.V.,Erbslöh Aluminium GmbH,Erbslöh Aluminium GmbH Firma Webseite,,no_result,,0
+091,DGM – Deutsche Gesellschaft für Materialkunde e.V.,Fraunhofer-Institut für chemische Technologie ICT,Fraunhofer-Institut für chemische Technologie ICT Firma Webseite,,unverified,,4
+091,DGM – Deutsche Gesellschaft für Materialkunde e.V.,Eurofins Qualitech AG,Eurofins Qualitech AG Firma Webseite,https://qualitech.ch/,verified,"domain~qualitech, domain+name=3",1
+091,DGM – Deutsche Gesellschaft für Materialkunde e.V.,"Fraunhofer-Institut für Fertigungstechnik und Angewandte Materialforschung, Bremen","Fraunhofer-Institut für Fertigungstechnik und Angewandte Materialforschung, Bremen Firma Webseite",https://www.ifam.fraunhofer.de/,page_only,name=1,4
+091,DGM – Deutsche Gesellschaft für Materialkunde e.V.,Extrutec GmbH,Extrutec GmbH Firma Webseite,https://www.extrutec-gmbh.de/,verified,"domain~extrutec, domain+name=3",1
+091,DGM – Deutsche Gesellschaft für Materialkunde e.V.,"Fraunhofer-Institut für Fertigungstechnik und Angewandte Materialforschung, Dresden","Fraunhofer-Institut für Fertigungstechnik und Angewandte Materialforschung, Dresden Firma Webseite",https://www.ifam.fraunhofer.de/de/Ueberuns/Standorte/Dresden.html,page_only,name=1,4
+091,DGM – Deutsche Gesellschaft für Materialkunde e.V.,Gebr. Kemper GmbH + Co. KG,Gebr. Kemper GmbH + Co. KG Firma Webseite,https://www.kemper-group.com/,verified,"domain~kemper, domain+name=3",1
+091,DGM – Deutsche Gesellschaft für Materialkunde e.V.,Fraunhofer-Institut für Keramische Technologien und Systeme IKTS,Fraunhofer-Institut für Keramische Technologien und Systeme IKTS Firma Webseite,,unverified,,3
+091,DGM – Deutsche Gesellschaft für Materialkunde e.V.,GLOCK Ges.m.b.H.,GLOCK Ges.m.b.H. Firma Webseite,https://glockone.com/,verified,"domain~glock, domain+name=3",4
+091,DGM – Deutsche Gesellschaft für Materialkunde e.V.,"Fraunhofer-Institut für Kurzzeitdynamik, Ernst-Mach-Institut - EMI","Fraunhofer-Institut für Kurzzeitdynamik, Ernst-Mach-Institut - EMI Firma Webseite",https://www.emi.fraunhofer.de/de/institut.html,page_only,name=1,3
+091,DGM – Deutsche Gesellschaft für Materialkunde e.V.,Helmholtz-Zentrum Hereon GmbH,Helmholtz-Zentrum Hereon GmbH Firma Webseite,https://www.hereon.de/index.php.en,verified,"domain~hereon, domain+name=3",1
+091,DGM – Deutsche Gesellschaft für Materialkunde e.V.,Fraunhofer-Institut für Lasertechnik ILT,Fraunhofer-Institut für Lasertechnik ILT Firma Webseite,https://www.ilt.fraunhofer.de/,page_only,name=1,5
+091,DGM – Deutsche Gesellschaft für Materialkunde e.V.,Heraeus Holding GmbH,Heraeus Holding GmbH Firma Webseite,https://www.heraeus.com/de/,verified,"domain~heraeus, domain+name=3",1
+091,DGM – Deutsche Gesellschaft für Materialkunde e.V.,Fraunhofer-Institut für Schicht- und Oberflächentechnik IST,Fraunhofer-Institut für Schicht- und Oberflächentechnik IST Firma Webseite,https://www.ist.fraunhofer.de/,page_only,name=1,4
+091,DGM – Deutsche Gesellschaft für Materialkunde e.V.,"HerkulesGroup Service GmbH, Innovation","HerkulesGroup Service GmbH, Innovation Firma Webseite",https://www.herkulesgroup.com/about-us/,verified,"domain~herkulesgroup, domain+name=3",1
+091,DGM – Deutsche Gesellschaft für Materialkunde e.V.,Fraunhofer-Institut für Siliziumtechnologie ISIT,Fraunhofer-Institut für Siliziumtechnologie ISIT Firma Webseite,https://www.isit.fraunhofer.de/,verified,"domain~isit, domain+name=3",1
+091,DGM – Deutsche Gesellschaft für Materialkunde e.V.,hpl-Neugnadenfelder Maschinenfabrik GmbH,hpl-Neugnadenfelder Maschinenfabrik GmbH Firma Webseite,https://hpl-group.de/de/home/,page_only,name=1,3
+091,DGM – Deutsche Gesellschaft für Materialkunde e.V.,Fraunhofer-Institut für Techno- und Wirtschaftsmathematik e.V.,Fraunhofer-Institut für Techno- und Wirtschaftsmathematik e.V. Firma Webseite,https://www.itwm.fraunhofer.de/,page_only,name=1,4
+091,DGM – Deutsche Gesellschaft für Materialkunde e.V.,HTV Conservation GmbH,HTV Conservation GmbH Firma Webseite,,no_result,search failed: DDGSException,0
+091,DGM – Deutsche Gesellschaft für Materialkunde e.V.,Fraunhofer-Institut für Werkstoff- und Strahltechnik IWS,Fraunhofer-Institut für Werkstoff- und Strahltechnik IWS Firma Webseite,https://www.iws.fraunhofer.de/,page_only,name=1,2
+091,DGM – Deutsche Gesellschaft für Materialkunde e.V.,Hydro Extrusion,Hydro Extrusion Firma Webseite,https://www.hydro.com/en/global/about-hydro/management-and-organization/organization-overview/hydro-extrusions/,verified,"domain~hydro, domain+name=3",1
+091,DGM – Deutsche Gesellschaft für Materialkunde e.V.,Fraunhofer-Institut für Werkstoffmechanik IWM,Fraunhofer-Institut für Werkstoffmechanik IWM Firma Webseite,https://www.iwm.fraunhofer.de/,page_only,name=1,3
+091,DGM – Deutsche Gesellschaft für Materialkunde e.V.,IAS GmbH,IAS GmbH Firma Webseite,,unverified,,4
+091,DGM – Deutsche Gesellschaft für Materialkunde e.V.,Fraunhofer-Institut für Werkzeugmaschinen und Umformtechnik IWU,Fraunhofer-Institut für Werkzeugmaschinen und Umformtechnik IWU Firma Webseite,https://www.iwu.fraunhofer.de/,page_only,name=1,3
+091,DGM – Deutsche Gesellschaft für Materialkunde e.V.,Imerys Villach GmbH,Imerys Villach GmbH Firma Webseite,https://www.imerys.com/de/osterreich,domain_match,"domain~imerys, domain=2",5
+091,DGM – Deutsche Gesellschaft für Materialkunde e.V.,Fraunhofer-Institut für zerstörungsfreie Prüfverfahren IZFP,Fraunhofer-Institut für zerstörungsfreie Prüfverfahren IZFP Firma Webseite,https://www.izfp.fraunhofer.de/,verified,"domain~izfp, domain+name=3",1
+091,DGM – Deutsche Gesellschaft für Materialkunde e.V.,IMS Messsysteme GmbH,IMS Messsysteme GmbH Firma Webseite,https://www.ims-gmbh.de/,page_only,name=1,3
+091,DGM – Deutsche Gesellschaft für Materialkunde e.V.,"Friedrich-Alexander-Universität Erlangen-Nürnberg, LS - Fertigungstechnologie","Friedrich-Alexander-Universität Erlangen-Nürnberg, LS - Fertigungstechnologie Firma Webseite",https://www.fau.de/,page_only,name=1,4
+091,DGM – Deutsche Gesellschaft für Materialkunde e.V.,Industriekeramik Hochrhein GmbH,Industriekeramik Hochrhein GmbH Firma Webseite,https://ik-hochrhein.com/,verified,"domain~hochrhein, domain+name=3",1
+091,DGM – Deutsche Gesellschaft für Materialkunde e.V.,"Friedrich-Alexander-Universität Erlangen-Nürnberg, Department Werkstoffwissenschaften (WW)","Friedrich-Alexander-Universität Erlangen-Nürnberg, Department Werkstoffwissenschaften (WW) Firma Webseite",https://erlangen.de/aktuelles/fau,verified,"domain~erlangen, domain+name=3",4
+091,DGM – Deutsche Gesellschaft für Materialkunde e.V.,KME Germany GmbH,KME Germany GmbH Firma Webseite,,unverified,,2
+091,DGM – Deutsche Gesellschaft für Materialkunde e.V.,"Friedrich-Schiller-Universität Jena, Otto-Schott-Institut für Materialforschung OSIM","Friedrich-Schiller-Universität Jena, Otto-Schott-Institut für Materialforschung OSIM Firma Webseite",https://www.osim.uni-jena.de/,verified,"domain~osim, domain+name=3",1
+091,DGM – Deutsche Gesellschaft für Materialkunde e.V.,KME Mansfeld GmbH,KME Mansfeld GmbH Firma Webseite,https://www.kme-mansfeld.com/,domain_match,"domain~mansfeld, domain=2",2
+091,DGM – Deutsche Gesellschaft für Materialkunde e.V.,Gemeinnützige KIMW Forschungs-GmbH,Gemeinnützige KIMW Forschungs-GmbH Firma Webseite,https://kunststoff-institut.de/precursoren/impressum/,page_only,name=1,2
+091,DGM – Deutsche Gesellschaft für Materialkunde e.V.,Leichtmetall Aluminium Giesserei Hannover GmbH,Leichtmetall Aluminium Giesserei Hannover GmbH Firma Webseite,https://www.leichtmetall.eu/en/,verified,"domain~leichtmetall, domain+name=3",1
+091,DGM – Deutsche Gesellschaft für Materialkunde e.V.,Gesellschaft zur Förderung angewandter Informatik e.V.,Gesellschaft zur Förderung angewandter Informatik e.V. Firma Webseite,https://www.gfai.de/,page_only,name=1,5
+091,DGM – Deutsche Gesellschaft für Materialkunde e.V.,LKR Leichtmetallkompetenzzentrum Ranshofen GmbH,LKR Leichtmetallkompetenzzentrum Ranshofen GmbH Firma Webseite,https://www.lmt.ait.ac.at/the-lkr,page_only,name=1,5
+091,DGM – Deutsche Gesellschaft für Materialkunde e.V.,Helmholtz Zentrum Berlin für Materialien und Energie GmbH,Helmholtz Zentrum Berlin für Materialien und Energie GmbH Firma Webseite,,unverified,,3
+091,DGM – Deutsche Gesellschaft für Materialkunde e.V.,Matplus GmbH,Matplus GmbH Firma Webseite,https://www.matplus.eu/de/,verified,"domain~matplus, domain+name=3",1
+091,DGM – Deutsche Gesellschaft für Materialkunde e.V.,"Helmut-Schmidt-Universität / Universität der Bundeswehr Hamburg, Institut für Werkstofftechnik","Helmut-Schmidt-Universität / Universität der Bundeswehr Hamburg, Institut für Werkstofftechnik Firma Webseite",https://www.hsu-hh.de/,page_only,name=1,3
+091,DGM – Deutsche Gesellschaft für Materialkunde e.V.,Montanwerke Brixlegg AG,Montanwerke Brixlegg AG Firma Webseite,https://www.montanwerke-brixlegg.com/,verified,"domain~montanwerke, domain+name=3",1
+091,DGM – Deutsche Gesellschaft für Materialkunde e.V.,"Hochschule Aalen, Institut für Materialforschung - IMFAA","Hochschule Aalen, Institut für Materialforschung - IMFAA Firma Webseite",https://www.hs-aalen.de/forschung/forschungsinstitute/institut-fuer-materialforschung-imfaa/,verified,"domain~aalen, domain+name=3",1
+091,DGM – Deutsche Gesellschaft für Materialkunde e.V.,MTU Aero Engines AG,MTU Aero Engines AG Firma Webseite,,no_result,,4
+091,DGM – Deutsche Gesellschaft für Materialkunde e.V.,"Hochschule Bonn-Rhein-Sieg, Konstruktion, Technische Mechanik, Festigkeitslehre","Hochschule Bonn-Rhein-Sieg, Konstruktion, Technische Mechanik, Festigkeitslehre Firma Webseite",https://www.h-brs.de/de/anna/news/michael-heinzelmann-feiert-25-jaehriges-dienstjubilaeum,page_only,name=1,5
+091,DGM – Deutsche Gesellschaft für Materialkunde e.V.,Nanoval GmbH & Co. KG,Nanoval GmbH & Co. KG Firma Webseite,https://www.nanoval.de/,verified,"domain~nanoval, domain+name=3",1
+091,DGM – Deutsche Gesellschaft für Materialkunde e.V.,"Hochschule für Angewandte Wissenschaften Hamburg, Institut für Werkstoffkunde und Schweißtechnik","Hochschule für Angewandte Wissenschaften Hamburg, Institut für Werkstoffkunde und Schweißtechnik Firma Webseite",https://www.haw-hamburg.de/,page_only,name=1,4
+091,DGM – Deutsche Gesellschaft für Materialkunde e.V.,Neuman Aluminium Strangpresswerk GmbH,Neuman Aluminium Strangpresswerk GmbH Firma Webseite,https://www.neuman.at/de/technology/direct-extrusion,verified,"domain~neuman, domain+name=3",1
+091,DGM – Deutsche Gesellschaft für Materialkunde e.V.,"Hochschule für Technik und Wirtschaft des Saarlandes, Labor Werkstoffkunde","Hochschule für Technik und Wirtschaft des Saarlandes, Labor Werkstoffkunde Firma Webseite",https://www.htwsaar.de/,page_only,name=1,4
+091,DGM – Deutsche Gesellschaft für Materialkunde e.V.,Novelis Deutschland GmbH,Novelis Deutschland GmbH Firma Webseite,https://www.novelis.de/,verified,"domain~novelis, domain+name=3",1
+091,DGM – Deutsche Gesellschaft für Materialkunde e.V.,"Hochschule Heilbronn, Werkstoffzentrum","Hochschule Heilbronn, Werkstoffzentrum Firma Webseite",https://www.hochschule-stralsund.de/,verified,"domain~hochschule, domain+name=3",1
+091,DGM – Deutsche Gesellschaft für Materialkunde e.V.,Otto Fuchs KG,Otto Fuchs KG Firma Webseite,https://www.otto-fuchs.com/de/start,verified,"domain~fuchs, domain+name=3",1
+091,DGM – Deutsche Gesellschaft für Materialkunde e.V.,"Hochschule Koblenz, Werkstofftechnik Glas und Keramik","Hochschule Koblenz, Werkstofftechnik Glas und Keramik Firma Webseite",https://www.hs-koblenz.de/wwc/fachbereiche/bauen-kunst-werkstoffe-werkstofftechnik-glas-und-keramik/werkstofftechnik-studieren,verified,"domain~koblenz, domain+name=3",1
+091,DGM – Deutsche Gesellschaft für Materialkunde e.V.,Otto Junker GmbH,Otto Junker GmbH Firma Webseite,https://www.otto-junker.com/en/,verified,"domain~junker, domain+name=3",1
+091,DGM – Deutsche Gesellschaft für Materialkunde e.V.,"Hochschule Pforzheim, Institut für strategische Technologie- und Edelmetalle - STI","Hochschule Pforzheim, Institut für strategische Technologie- und Edelmetalle - STI Firma Webseite",https://www.sti-pforzheim.de/,verified,"domain~pforzheim, domain+name=3",1
+091,DGM – Deutsche Gesellschaft für Materialkunde e.V.,Pfarr Stanztechnik GmbH,Pfarr Stanztechnik GmbH Firma Webseite,https://www.pfarr.de/,verified,"domain~pfarr, domain+name=3",1
+091,DGM – Deutsche Gesellschaft für Materialkunde e.V.,Institut für Bioprozess- und Analysenmesstechnik e.V.,Institut für Bioprozess- und Analysenmesstechnik e.V. Firma Webseite,https://idw-online.de/en/institution1723,page_only,name=1,4
+091,DGM – Deutsche Gesellschaft für Materialkunde e.V.,Piller Blowers & Compressors GmbH,Piller Blowers & Compressors GmbH Firma Webseite,https://www.piller.de/de/,verified,"domain~piller, domain+name=3",1
+091,DGM – Deutsche Gesellschaft für Materialkunde e.V.,Institut für Kunststofftechnologie und –recycling e.V.,Institut für Kunststofftechnologie und –recycling e.V. Firma Webseite,https://iktr-online.de/,page_only,name=1,4
+091,DGM – Deutsche Gesellschaft für Materialkunde e.V.,Plansee SE,Plansee SE Firma Webseite,https://www.plansee.com/,verified,"domain~plansee, domain+name=3",1
+091,DGM – Deutsche Gesellschaft für Materialkunde e.V.,Institut für Schadenverhütung und Schadenforschung e.V.,Institut für Schadenverhütung und Schadenforschung e.V. Firma Webseite,https://www.ifs-ev.org/,page_only,name=1,4
+091,DGM – Deutsche Gesellschaft für Materialkunde e.V.,Quality Analysis GmbH,Quality Analysis GmbH Firma Webseite,http://www.quality-analysis.org/,verified,"domain~analysis, domain+name=3",2
+091,DGM – Deutsche Gesellschaft für Materialkunde e.V.,"Institute of Space Technology, Center for Surface Engineering and Tribology","Institute of Space Technology, Center for Surface Engineering and Tribology Firma Webseite",https://ist.edu.pk/,page_only,name=1,2
+091,DGM – Deutsche Gesellschaft für Materialkunde e.V.,Rheinzink GmbH  &  Co. KG,Rheinzink GmbH  &  Co. KG Firma Webseite,https://www.rheinzink.de/,verified,"domain~rheinzink, domain+name=3",1
+091,DGM – Deutsche Gesellschaft für Materialkunde e.V.,"Jožef Stefan Institute, Department for Nanostructured Materials","Jožef Stefan Institute, Department for Nanostructured Materials Firma Webseite",https://www-f5.ijs.si/en,page_only,name=1,5
+091,DGM – Deutsche Gesellschaft für Materialkunde e.V.,Robert Bosch GmbH,Robert Bosch GmbH Firma Webseite,https://www.bosch.com/,verified,"domain~bosch, domain+name=3",1
+091,DGM – Deutsche Gesellschaft für Materialkunde e.V.,"Karlsruher Institut für Technologie (KIT), Institut für Angewandte Materialien - IAM","Karlsruher Institut für Technologie (KIT), Institut für Angewandte Materialien - IAM Firma Webseite",https://www.iam.kit.edu/,page_only,name=1,5
+091,DGM – Deutsche Gesellschaft für Materialkunde e.V.,Rolls-Royce Deutschland Ltd & CO KG,Rolls-Royce Deutschland Ltd & CO KG Firma Webseite,https://www.rolls-royce.com/country-sites/deutschland.aspx,domain_match,"domain~rolls, domain=2",2
+091,DGM – Deutsche Gesellschaft für Materialkunde e.V.,"Karlsruher Institut für Technologie (KIT), Institut für Photonenforschung und Synchrotronstrahlung (IPS)","Karlsruher Institut für Technologie (KIT), Institut für Photonenforschung und Synchrotronstrahlung (IPS) Firma Webseite",https://www.kit.edu/kit/institute.php,page_only,name=1,3
+091,DGM – Deutsche Gesellschaft für Materialkunde e.V.,Saxonia Edelmetalle GmbH,Saxonia Edelmetalle GmbH Firma Webseite,https://saxonia.de/,verified,"domain~saxonia, domain+name=3",1
+091,DGM – Deutsche Gesellschaft für Materialkunde e.V.,Kupferverband e. V.,Kupferverband e. V. Firma Webseite,https://kupfer.de/,page_only,name=1,4
+091,DGM – Deutsche Gesellschaft für Materialkunde e.V.,SAXONIA Technical Materials GmbH,SAXONIA Technical Materials GmbH Firma Webseite,https://saxonia-tm.de/en/,verified,"domain~saxonia, domain+name=3",1
+091,DGM – Deutsche Gesellschaft für Materialkunde e.V.,"Leibniz Universität Hannover, Institut für Umformtechnik und Umformmaschinen - IFUM","Leibniz Universität Hannover, Institut für Umformtechnik und Umformmaschinen - IFUM Firma Webseite",https://www.ifum.uni-hannover.de/forschung,verified,"domain~ifum, domain+name=3",1
+091,DGM – Deutsche Gesellschaft für Materialkunde e.V.,Schlenk Metallic Pigments GmbH,Schlenk Metallic Pigments GmbH Firma Webseite,,no_result,,2
+091,DGM – Deutsche Gesellschaft für Materialkunde e.V.,"Leibniz Universität Hannover, Institut für Werkstoffkunde","Leibniz Universität Hannover, Institut für Werkstoffkunde Firma Webseite",https://www.iw.uni-hannover.de/studium,page_only,name=1,4
+091,DGM – Deutsche Gesellschaft für Materialkunde e.V.,Schoeller Werk GmbH & Co. KG7,Schoeller Werk GmbH & Co. KG7 Firma Webseite,https://www.schoellerwerk.de/en/,verified,"domain~schoeller, domain+name=3",1
+091,DGM – Deutsche Gesellschaft für Materialkunde e.V.,Leibniz-Institut für Festkörper- und Werkstoffforschung Dresden,Leibniz-Institut für Festkörper- und Werkstoffforschung Dresden Firma Webseite,https://www.leibniz-gemeinschaft.de/en/institutes/list-of-leibniz-institutes/leibniz-institute-for-solid-state-and-materials-research-dresden,verified,"domain~leibniz, domain+name=3",3
+091,DGM – Deutsche Gesellschaft für Materialkunde e.V.,Schwermetall Halbzeugwerk GmbH & Co. KG,Schwermetall Halbzeugwerk GmbH & Co. KG Firma Webseite,https://www.schwermetall.de/,verified,"domain~schwermetall, domain+name=3",1
+091,DGM – Deutsche Gesellschaft für Materialkunde e.V.,Leibniz-Institut für Neue Materialien gGmbH,Leibniz-Institut für Neue Materialien gGmbH Firma Webseite,,unverified,,4
+091,DGM – Deutsche Gesellschaft für Materialkunde e.V.,SGL Carbon GmbH,SGL Carbon GmbH Firma Webseite,https://www.sglcarbon.com/unternehmen/ueber-uns/aufsichtsrat/,verified,"domain~carbon, domain+name=3",2
+091,DGM – Deutsche Gesellschaft für Materialkunde e.V.,Leibniz-Institut für Polymerforschung Dresden e.V.,Leibniz-Institut für Polymerforschung Dresden e.V. Firma Webseite,https://idw-online.de/de/institution478,page_only,name=1,3
+091,DGM – Deutsche Gesellschaft für Materialkunde e.V.,Shimadzu Deutschland GmbH,Shimadzu Deutschland GmbH Firma Webseite,https://www.shimadzu.de/,verified,"domain~shimadzu, domain+name=3",1
+091,DGM – Deutsche Gesellschaft für Materialkunde e.V.,Leibniz-Institut für Verbundwerkstoffe GmbH,Leibniz-Institut für Verbundwerkstoffe GmbH Firma Webseite,https://www.leibniz-gemeinschaft.de/institute/leibniz-institute-im-ueberblick/leibniz-institut-fuer-verbundwerkstoffe,verified,"domain~leibniz, domain+name=3",5
+091,DGM – Deutsche Gesellschaft für Materialkunde e.V.,Siemens AG,Siemens AG Firma Webseite,https://siemens.com/,verified,"domain~siemens, domain+name=3",1
+091,DGM – Deutsche Gesellschaft für Materialkunde e.V.,Leibniz-Institut für Werkstofforientierte Technologien – IWT,Leibniz-Institut für Werkstofforientierte Technologien – IWT Firma Webseite,https://www.leibniz-gemeinschaft.de/en/institutes/list-of-leibniz-institutes/leibniz-institute-for-materials-engineering-iwt,verified,"domain~leibniz, domain+name=3",3
+091,DGM – Deutsche Gesellschaft für Materialkunde e.V.,Soluterials GmbH,Soluterials GmbH Firma Webseite,,no_result,,1
+091,DGM – Deutsche Gesellschaft für Materialkunde e.V.,Lette-Verein Berlin,Lette-Verein Berlin Firma Webseite,https://www.letteverein.berlin/,verified,"domain~lette, domain+name=3",1
+091,DGM – Deutsche Gesellschaft für Materialkunde e.V.,Speira GmbH,Speira GmbH Firma Webseite,https://www.speira.com/,verified,"domain~speira, domain+name=3",1
+091,DGM – Deutsche Gesellschaft für Materialkunde e.V.,"Martin-Luther-Universität Halle-Wittenberg, AG Aufarbeitung biotechnischer Produkte","Martin-Luther-Universität Halle-Wittenberg, AG Aufarbeitung biotechnischer Produkte Firma Webseite",https://downstream.pharmazie.uni-halle.de/,page_only,name=1,2
+091,DGM – Deutsche Gesellschaft für Materialkunde e.V.,Struers GmbH,Struers GmbH Firma Webseite,https://www.struers.com/de,verified,"domain~struers, domain+name=3",1
+091,DGM – Deutsche Gesellschaft für Materialkunde e.V.,Max-Planck-Institut für Nachhaltige Materialien GmbH,Max-Planck-Institut für Nachhaltige Materialien GmbH Firma Webseite,https://www.mpie.de/person/172442,page_only,name=1,5
+091,DGM – Deutsche Gesellschaft für Materialkunde e.V.,Sundwiger Messingwerk GmbH,Sundwiger Messingwerk GmbH Firma Webseite,,no_result,search failed: DDGSException,0
+091,DGM – Deutsche Gesellschaft für Materialkunde e.V.,Max-Planck-Institut für Plasmaphysik,Max-Planck-Institut für Plasmaphysik Firma Webseite,https://www.ipp.mpg.de/en,page_only,name=1,4
+091,DGM – Deutsche Gesellschaft für Materialkunde e.V.,TEGnology ApS,TEGnology ApS Firma Webseite,https://tegnology.dk/,verified,"domain~tegnology, domain+name=3",1
+091,DGM – Deutsche Gesellschaft für Materialkunde e.V.,"Montanuniversität Leoben, Department Werkstoffwissenschaft","Montanuniversität Leoben, Department Werkstoffwissenschaft Firma Webseite",https://materials.unileoben.ac.at/,page_only,name=1,4
+091,DGM – Deutsche Gesellschaft für Materialkunde e.V.,Tenneco Inc.,Tenneco Inc. Firma Webseite,https://www.tenneco.com/,verified,"domain~tenneco, domain+name=3",1
+091,DGM – Deutsche Gesellschaft für Materialkunde e.V.,"Montanuniversität Leoben, Institut für Mechanik","Montanuniversität Leoben, Institut für Mechanik Firma Webseite",https://www.unileoben.ac.at/,verified,"domain~leoben, domain+name=3",1
+091,DGM – Deutsche Gesellschaft für Materialkunde e.V.,TESCAN GmbH,TESCAN GmbH Firma Webseite,https://tescan.com/distributors/tescan-gmbh,verified,"domain~tescan, domain+name=3",1
+091,DGM – Deutsche Gesellschaft für Materialkunde e.V.,"Montanuniversität Leoben, Lehrstuhl für Werkstoffkunde und Prüfung der Kunststoffe","Montanuniversität Leoben, Lehrstuhl für Werkstoffkunde und Prüfung der Kunststoffe Firma Webseite",https://www.unileoben.ac.at/universitaet/departments-und-lehrstuehle/kunststofftechnik/lehrstuhl-fuer-werkstoffkunde-und-pruefung-der-kunststoffe/,verified,"domain~leoben, domain+name=3",1
+091,DGM – Deutsche Gesellschaft für Materialkunde e.V.,Thermo Fisher Scientific GmbH,Thermo Fisher Scientific GmbH Firma Webseite,https://www.thermofisher.com/de/de/home/brands/thermo-scientific.html,verified,"domain~thermo, domain+name=3",2
+091,DGM – Deutsche Gesellschaft für Materialkunde e.V.,"Otto-von-Guericke-Universität Magdeburg, Institut für Werkstoffe, Technologien und Mechanik (IWTM)","Otto-von-Guericke-Universität Magdeburg, Institut für Werkstoffe, Technologien und Mechanik (IWTM) Firma Webseite",https://iwtm.ovgu.de/,verified,"domain~iwtm, domain+name=3",1
+091,DGM – Deutsche Gesellschaft für Materialkunde e.V.,ThyssenKrupp Marine Systems GmbH,ThyssenKrupp Marine Systems GmbH Firma Webseite,,no_result,,3
+091,DGM – Deutsche Gesellschaft für Materialkunde e.V.,"RPTU Kaiserslautern-Landau, Institut für Oberflächen- und Schichttechnik IFOS GmbH","RPTU Kaiserslautern-Landau, Institut für Oberflächen- und Schichttechnik IFOS GmbH Firma Webseite",https://www.ifos.uni-kl.de/,verified,"domain~ifos, domain+name=3",1
+091,DGM – Deutsche Gesellschaft für Materialkunde e.V.,TRIMET Aluminium SE,TRIMET Aluminium SE Firma Webseite,https://www.lobbyregister.bundestag.de/suche/R001979,page_only,name=1,2
+091,DGM – Deutsche Gesellschaft für Materialkunde e.V.,"RWTH Aachen University, Institut für Eisenhüttenkunde - IEHK","RWTH Aachen University, Institut für Eisenhüttenkunde - IEHK Firma Webseite",https://www.iehk.rwth-aachen.de/cms/iehk/Footer/Service/~lzgi/Impressum/,verified,"domain~iehk, domain+name=3",1
+091,DGM – Deutsche Gesellschaft für Materialkunde e.V.,TÜV Thüringen e.V.,TÜV Thüringen e.V. Firma Webseite,,unverified,,3
+091,DGM – Deutsche Gesellschaft für Materialkunde e.V.,"RWTH Aachen University, Institut für Werkstoffanwendungen im Maschinenbau","RWTH Aachen University, Institut für Werkstoffanwendungen im Maschinenbau Firma Webseite",https://www.iwm.rwth-aachen.de/cms/IWM/Das-Institut/~made/Ueber-uns/,page_only,name=1,4
+091,DGM – Deutsche Gesellschaft für Materialkunde e.V.,Vacuumschmelze GmbH & Co. KG,Vacuumschmelze GmbH & Co. KG Firma Webseite,,no_result,,3
+091,DGM – Deutsche Gesellschaft für Materialkunde e.V.,"RWTH Aachen University, Institut für Oberflächentechnik - IOT","RWTH Aachen University, Institut für Oberflächentechnik - IOT Firma Webseite",https://rwth-aachen.de/,verified,"domain~rwth, domain+name=3",2
+091,DGM – Deutsche Gesellschaft für Materialkunde e.V.,voestalpine BÖHLER Edelstahl GmbH & Co KG,voestalpine BÖHLER Edelstahl GmbH & Co KG Firma Webseite,https://www.voestalpine.com/bohler-edelstahl/de/datenschutz-impressum/,verified,"domain~voestalpine, domain+name=3",1
+091,DGM – Deutsche Gesellschaft für Materialkunde e.V.,"RWTH Aachen University, Gemeinschaftslabor für Elektronenmikroskopie","RWTH Aachen University, Gemeinschaftslabor für Elektronenmikroskopie Firma Webseite",https://www.rwth-aachen.de/cms/root/die-rwth/Kontakt-Anreise/Kontakt/~bdfr/Mitarbeiter-CAMPUS-/?gguid=0x4BF812310809D611BDB70002A5871170&allou=1,verified,"domain~rwth, domain+name=3",1
+091,DGM – Deutsche Gesellschaft für Materialkunde e.V.,Volkswagen AG,Volkswagen AG Firma Webseite,https://www.volkswagen.de/,verified,"domain~volkswagen, domain+name=3",1
+091,DGM – Deutsche Gesellschaft für Materialkunde e.V.,"RWTH Aachen University, Institut für Metallkunde und Materialphysik (IMM)","RWTH Aachen University, Institut für Metallkunde und Materialphysik (IMM) Firma Webseite",https://www.mygermanuniversity.com/universities/RWTH-Aachen-University,verified,"domain~university, domain+name=3",4
+091,DGM – Deutsche Gesellschaft für Materialkunde e.V.,W.S. Werkstoff Service GmbH,W.S. Werkstoff Service GmbH Firma Webseite,https://www.werkstoff-service.de/,verified,"domain~werkstoff, domain+name=3",1
+091,DGM – Deutsche Gesellschaft für Materialkunde e.V.,"RWTH Aachen University, Institut für Bildsame Formgebung","RWTH Aachen University, Institut für Bildsame Formgebung Firma Webseite",https://www.ibf.rwth-aachen.de/cms/IBF/Footer/Service/~oxcb/Impressum/,page_only,name=1,3
+091,DGM – Deutsche Gesellschaft für Materialkunde e.V.,WEFA Singen GmbH,WEFA Singen GmbH Firma Webseite,https://wefa.com/,verified,"domain~wefa, domain+name=3",1
+091,DGM – Deutsche Gesellschaft für Materialkunde e.V.,Silicon Saxony e. V.,Silicon Saxony e. V. Firma Webseite,https://silicon-saxony.de/seite-nicht-gefunden/,verified,"domain~silicon, domain+name=3",2
+091,DGM – Deutsche Gesellschaft für Materialkunde e.V.,WESERALU GmbH & Co. KG,WESERALU GmbH & Co. KG Firma Webseite,https://weseralu.de/,verified,"domain~weseralu, domain+name=3",1
+091,DGM – Deutsche Gesellschaft für Materialkunde e.V.,SPC Werkstofflabor GmbH,SPC Werkstofflabor GmbH Firma Webseite,,unverified,,4
+091,DGM – Deutsche Gesellschaft für Materialkunde e.V.,Wickeder Westfalenstahl GmbH,Wickeder Westfalenstahl GmbH Firma Webseite,https://wickeder-group.com/,verified,"domain~wickeder, domain+name=3",1
+091,DGM – Deutsche Gesellschaft für Materialkunde e.V.,SRH Berlin University Applied Science,SRH Berlin University Applied Science Firma Webseite,"https://campus.srh-hochschule-berlin.de/scripts/mgrqispi.dll?APPNAME=CampusNet&PRGNAME=EXTERNALPAGES&ARGUMENTS=-N000000000000001,-N000299,-AHomedeWelcome",page_only,name=1,4
+091,DGM – Deutsche Gesellschaft für Materialkunde e.V.,Wieland-Werke AG,Wieland-Werke AG Firma Webseite,https://www.wieland.com/de,verified,"domain~wieland, domain+name=3",1
+091,DGM – Deutsche Gesellschaft für Materialkunde e.V.,"Technische Hochschule Deggendorf, Technologie- und Studienzentrum Weißenburg GmbH","Technische Hochschule Deggendorf, Technologie- und Studienzentrum Weißenburg GmbH Firma Webseite",https://europa-hochschule.de/tz-weissenburg,domain_match,"domain~hochschule, domain=2",4
+091,DGM – Deutsche Gesellschaft für Materialkunde e.V.,Wiley-VCH GmbH,Wiley-VCH GmbH Firma Webseite,https://www.wiley-vch.de/de/service/dozenten/72-ansprechpartner,verified,"domain~wiley, domain+name=3",1
+091,DGM – Deutsche Gesellschaft für Materialkunde e.V.,"Technische Hochschule Ingolstadt, Kompetenzfeld Werkstoff- und Oberflächentechnik","Technische Hochschule Ingolstadt, Kompetenzfeld Werkstoff- und Oberflächentechnik Firma Webseite",https://www.thi.de/,page_only,name=1,5
+091,DGM – Deutsche Gesellschaft für Materialkunde e.V.,WSP GmbH,WSP GmbH Firma Webseite,,unverified,,5
+091,DGM – Deutsche Gesellschaft für Materialkunde e.V.,"Technische Universität Bergakademie Freiberg, Institut für Metallformung","Technische Universität Bergakademie Freiberg, Institut für Metallformung Firma Webseite",https://tu-freiberg.de/fakult5/imf,verified,"domain~freiberg, domain+name=3",1
+091,DGM – Deutsche Gesellschaft für Materialkunde e.V.,"Technische Universität Bergakademie Freiberg, Institut für Werkstoffwissenschaft","Technische Universität Bergakademie Freiberg, Institut für Werkstoffwissenschaft Firma Webseite",https://tu-freiberg.de/,verified,"domain~freiberg, domain+name=3",1
+091,DGM – Deutsche Gesellschaft für Materialkunde e.V.,"Technische Universität Bergakademie Freiberg, Institut für Werkstofftechnik","Technische Universität Bergakademie Freiberg, Institut für Werkstofftechnik Firma Webseite",https://tu-freiberg.de/,verified,"domain~freiberg, domain+name=3",2
+091,DGM – Deutsche Gesellschaft für Materialkunde e.V.,"Technische Universität Bergakademie Freiberg, Institut für NE-Metallurgie und Reinststoffe","Technische Universität Bergakademie Freiberg, Institut für NE-Metallurgie und Reinststoffe Firma Webseite",https://tu-freiberg.de/fakultaet5/inemet,verified,"domain~freiberg, domain+name=3",1
+091,DGM – Deutsche Gesellschaft für Materialkunde e.V.,"Technische Universität Berlin, Forschungszentrum Strangpressen (FZS)","Technische Universität Berlin, Forschungszentrum Strangpressen (FZS) Firma Webseite",https://strangpressen.berlin/forschungszentrum/,verified,"domain~strangpressen, domain+name=3",1
+091,DGM – Deutsche Gesellschaft für Materialkunde e.V.,"Technische Universität Berlin, Institut für Werkstoffwissenschaften und -technologien","Technische Universität Berlin, Institut für Werkstoffwissenschaften und -technologien Firma Webseite",https://www.tu.berlin/materials,page_only,name=1,3
+091,DGM – Deutsche Gesellschaft für Materialkunde e.V.,"Technische Universität Chemnitz, Institut für Werkstoffwissenschaft und Werkstofftechnik","Technische Universität Chemnitz, Institut für Werkstoffwissenschaft und Werkstofftechnik Firma Webseite",https://www.tu-chemnitz.de/mb/iww/,page_only,name=1,5
+091,DGM – Deutsche Gesellschaft für Materialkunde e.V.,"Technische Universität Chemnitz, Professur Schweißtechnik","Technische Universität Chemnitz, Professur Schweißtechnik Firma Webseite",https://www.tu-chemnitz.de/mb/SchweiTech/,page_only,name=1,2
+091,DGM – Deutsche Gesellschaft für Materialkunde e.V.,"Technische Universität Clausthal, Institut für Schweißtechnik und Trennende Fertigungsverfahren","Technische Universität Clausthal, Institut für Schweißtechnik und Trennende Fertigungsverfahren Firma Webseite",https://tu-clausthal.atlassian.net/wiki/spaces/VER/pages/27460112/1.33.07+Institut+f+r+Schwei+technik+und+Trennende+Fertigungsverfahren,domain_match,"domain~clausthal, domain=2",4
+091,DGM – Deutsche Gesellschaft für Materialkunde e.V.,"Technische Universität Clausthal, Institut für Metallurgie","Technische Universität Clausthal, Institut für Metallurgie Firma Webseite",https://www.tu-clausthal.de/,verified,"domain~clausthal, domain+name=3",3
+091,DGM – Deutsche Gesellschaft für Materialkunde e.V.,"Technische Universität Clausthal, Institut für Werkstoffkunde und Werkstofftechnik","Technische Universität Clausthal, Institut für Werkstoffkunde und Werkstofftechnik Firma Webseite",https://www.tu-clausthal.de/,verified,"domain~clausthal, domain+name=3",1
+091,DGM – Deutsche Gesellschaft für Materialkunde e.V.,"Technische Universität Darmstadt, FG Physikalische Metallkunde","Technische Universität Darmstadt, FG Physikalische Metallkunde Firma Webseite",https://www.tu-darmstadt.de/index.en.jsp,verified,"domain~darmstadt, domain+name=3",4
+091,DGM – Deutsche Gesellschaft für Materialkunde e.V.,"Technische Universität Darmstadt, Staatliche Materialprüfungsanstalt (MPA)","Technische Universität Darmstadt, Staatliche Materialprüfungsanstalt (MPA) Firma Webseite",https://darmstadt-post.de/unternehmen/darmstadt/wissenschaftliches-institut/technische-universitaet-darmstadt-staatl-materialpruefungsanstalt-mpa-374/,verified,"domain~darmstadt, domain+name=3",5
+091,DGM – Deutsche Gesellschaft für Materialkunde e.V.,"Technische Universität Dortmund, Institut für Spanende Fertigung","Technische Universität Dortmund, Institut für Spanende Fertigung Firma Webseite",https://isf.mb.tu-dortmund.de/,page_only,name=1,5
+091,DGM – Deutsche Gesellschaft für Materialkunde e.V.,"Technische Universität Dortmund, Institut für Umformtechnik und Leichtbau","Technische Universität Dortmund, Institut für Umformtechnik und Leichtbau Firma Webseite",https://iul.mb.tu-dortmund.de/impressum/,page_only,name=1,5
+091,DGM – Deutsche Gesellschaft für Materialkunde e.V.,"Technische Universität Dortmund, Lehrstuhl für Werkstofftechnologie","Technische Universität Dortmund, Lehrstuhl für Werkstofftechnologie Firma Webseite",https://lwt.mb.tu-dortmund.de/,page_only,name=1,4
+091,DGM – Deutsche Gesellschaft für Materialkunde e.V.,"Technische Universität Dortmund, Lehrstuhl für Werkstoffprüftechnik (WPT)","Technische Universität Dortmund, Lehrstuhl für Werkstoffprüftechnik (WPT) Firma Webseite",https://wpt.mb.tu-dortmund.de/,page_only,name=1,3
+091,DGM – Deutsche Gesellschaft für Materialkunde e.V.,"Technische Universität Dresden, Institut für Leichtbau und Kunststofftechnik - ILK","Technische Universität Dresden, Institut für Leichtbau und Kunststofftechnik - ILK Firma Webseite",https://tu-dresden.de/ing/maschinenwesen/ilk,page_only,name=1,4
+091,DGM – Deutsche Gesellschaft für Materialkunde e.V.,"Technische Universität Dresden, Institut für Werkstoffwissenschaft (IfWW)","Technische Universität Dresden, Institut für Werkstoffwissenschaft (IfWW) Firma Webseite",https://dgm.de/jahresbericht/2024/mitglieder-und-vereinsleben/firmen-und-institutsmitgliedschaften,page_only,name=1,5
+091,DGM – Deutsche Gesellschaft für Materialkunde e.V.,"Technische Universität Dresden, Professur für Numerische und Experimentelle Festkörpermechanik","Technische Universität Dresden, Professur für Numerische und Experimentelle Festkörpermechanik Firma Webseite",https://tu-dresden.de/ing/maschinenwesen/ifkm/nefm,page_only,name=1,4
+091,DGM – Deutsche Gesellschaft für Materialkunde e.V.,"Technische Universität Hamburg, Institut für Industrialisierung Smarter Werkstoffe","Technische Universität Hamburg, Institut für Industrialisierung Smarter Werkstoffe Firma Webseite",https://www.tuhh.de/ism/willkommen,page_only,name=1,4
+091,DGM – Deutsche Gesellschaft für Materialkunde e.V.,"Technische Universität München, Lehrstuhl für Umformtechnik und Gießereiwesen","Technische Universität München, Lehrstuhl für Umformtechnik und Gießereiwesen Firma Webseite",https://www.mec.ed.tum.de/utg/startseite/,page_only,name=1,4
+091,DGM – Deutsche Gesellschaft für Materialkunde e.V.,"Technische Universität München, Lehrstuhl für Werkstofftechnik der Additiven Fertigung","Technische Universität München, Lehrstuhl für Werkstofftechnik der Additiven Fertigung Firma Webseite",https://arbeitskreis-werkstofftechnik.de/mitglieder-des-waw/,verified,"domain~werkstofftechnik, domain+name=3",3
+091,DGM – Deutsche Gesellschaft für Materialkunde e.V.,"Technische Universität Wien, Institut für Chemische Technologien und Analytik","Technische Universität Wien, Institut für Chemische Technologien und Analytik Firma Webseite",https://www.tuwien.at/tch/institute,verified,"domain~wien, domain+name=3",1
+091,DGM – Deutsche Gesellschaft für Materialkunde e.V.,Thüringisches Institut für Textil- und Kunststoff-Forschung e.V.,Thüringisches Institut für Textil- und Kunststoff-Forschung e.V. Firma Webseite,https://polykum.de/member/titk/,page_only,name=1,5
+091,DGM – Deutsche Gesellschaft für Materialkunde e.V.,"Universität Bayreuth, Lehrstuhl Metallische Werkstoffe","Universität Bayreuth, Lehrstuhl Metallische Werkstoffe Firma Webseite",https://www.metalle.uni-bayreuth.de/,page_only,name=1,5
+091,DGM – Deutsche Gesellschaft für Materialkunde e.V.,"Universität Bremen, ISEMP - Airbus Stiftungsprofessur für Integrative Simulation","Universität Bremen, ISEMP - Airbus Stiftungsprofessur für Integrative Simulation Firma Webseite",,no_result,,4
+091,DGM – Deutsche Gesellschaft für Materialkunde e.V.,"Universität der Bundeswehr München, Universitätsbibliothek - ZV I.2","Universität der Bundeswehr München, Universitätsbibliothek - ZV I.2 Firma Webseite",https://www.unibw.de/ub,page_only,name=1,5
+091,DGM – Deutsche Gesellschaft für Materialkunde e.V.,"Universität des Saarlandes, Experimentelle Methodik der Werkstoffwissenschaften - MWW","Universität des Saarlandes, Experimentelle Methodik der Werkstoffwissenschaften - MWW Firma Webseite",https://www.uni-saarland.de/lehrstuhl/motz/kontakt-info.html,page_only,name=1,4
+091,DGM – Deutsche Gesellschaft für Materialkunde e.V.,"Universität des Saarlandes, Lehrstuhl für Angewandte Mechanik","Universität des Saarlandes, Lehrstuhl für Angewandte Mechanik Firma Webseite",https://www.mec.ed.tum.de/am/forschung/,page_only,name=1,5
+091,DGM – Deutsche Gesellschaft für Materialkunde e.V.,"Universität Duisburg-Essen, Institut für Produkt Engineering","Universität Duisburg-Essen, Institut für Produkt Engineering Firma Webseite",https://www.uni-due.de/ipe/,page_only,name=1,4
+091,DGM – Deutsche Gesellschaft für Materialkunde e.V.,"Universität Duisburg-Essen, Lehrstuhl für Angewandte Quantenmaterialien","Universität Duisburg-Essen, Lehrstuhl für Angewandte Quantenmaterialien Firma Webseite",https://www.uni-due.de/empi/,page_only,name=1,3
+091,DGM – Deutsche Gesellschaft für Materialkunde e.V.,"Universität für Bodenkultur Wien, Institut für Physik und Materialwissenschaft","Universität für Bodenkultur Wien, Institut für Physik und Materialwissenschaft Firma Webseite",https://forschung.boku.ac.at/de/department/iPHYM,page_only,name=1,4
+091,DGM – Deutsche Gesellschaft für Materialkunde e.V.,"Universität Kassel, Institut für Werkstofftechnik","Universität Kassel, Institut für Werkstofftechnik Firma Webseite",https://www.ingenieur.de/fachmedien/wt-werkstattstechnik/bmftr-zukunft_der_wertschoepfung/direktcompoundierung-fuer-die-medizintechnik/,page_only,name=1,5
+091,DGM – Deutsche Gesellschaft für Materialkunde e.V.,"Universität Kassel, FG Trennende und Fügende Fertigungsverfahren","Universität Kassel, FG Trennende und Fügende Fertigungsverfahren Firma Webseite",https://www.tff-kassel.de/,page_only,name=1,3
+091,DGM – Deutsche Gesellschaft für Materialkunde e.V.,"Universität Koblenz, Institut für Integrierte Naturwissenschaften (IfIN)","Universität Koblenz, Institut für Integrierte Naturwissenschaften (IfIN) Firma Webseite",https://www.uni-koblenz.de/de/mathematik-naturwissenschaften/ifin,verified,"domain~koblenz, domain+name=3",1
+091,DGM – Deutsche Gesellschaft für Materialkunde e.V.,"Universität Münster, Institut für Materialphysik","Universität Münster, Institut für Materialphysik Firma Webseite",https://www.uni-muenster.de/Physik.MP/,page_only,name=1,4
+091,DGM – Deutsche Gesellschaft für Materialkunde e.V.,"Universität Paderborn, FB Leichtbau im Automobil","Universität Paderborn, FB Leichtbau im Automobil Firma Webseite",https://www.fh-swf.de/de/ueber_uns/standorte_4/soest_4/fb_ma/dozentinnen_2/lehrkraefte_fuer_besondere_aufgaben_4/_weiss_borkowski/index.php,page_only,name=1,5
+091,DGM – Deutsche Gesellschaft für Materialkunde e.V.,"Universität Rostock, Lehrstuhl für Mikrofluidik","Universität Rostock, Lehrstuhl für Mikrofluidik Firma Webseite",https://www.lfm.uni-rostock.de/,page_only,name=1,5
+091,DGM – Deutsche Gesellschaft für Materialkunde e.V.,"Universität Siegen, Institut für Werkstofftechnik","Universität Siegen, Institut für Werkstofftechnik Firma Webseite",https://gerit.org/de/institutiondetail/9034389,page_only,name=1,5
+091,DGM – Deutsche Gesellschaft für Materialkunde e.V.,"Universität Siegen, Lehrstuhl für Umformtechnik","Universität Siegen, Lehrstuhl für Umformtechnik Firma Webseite",https://protech.mb.uni-siegen.de/uts/,page_only,name=1,4
+091,DGM – Deutsche Gesellschaft für Materialkunde e.V.,"Universität Siegen, Lehrstuhl für Fahrzeugleichtbau (FLB)","Universität Siegen, Lehrstuhl für Fahrzeugleichtbau (FLB) Firma Webseite",https://werkstoffsysteme-siegen.de/,verified,"domain~siegen, domain+name=3",3
+091,DGM – Deutsche Gesellschaft für Materialkunde e.V.,"Universität Stuttgart, Materialprüfungsanstalt - MPA","Universität Stuttgart, Materialprüfungsanstalt - MPA Firma Webseite",,unverified,,4
+091,DGM – Deutsche Gesellschaft für Materialkunde e.V.,"Universität Stuttgart, Institut für Fertigungstechnologie keramischer Bauteile (IFKB)","Universität Stuttgart, Institut für Fertigungstechnologie keramischer Bauteile (IFKB) Firma Webseite",,no_result,search failed: DDGSException,0
+091,DGM – Deutsche Gesellschaft für Materialkunde e.V.,"Universität zu Köln, Institut für Anorganische Chemie","Universität zu Köln, Institut für Anorganische Chemie Firma Webseite",https://www.iac.uni-stuttgart.de/lehre/,page_only,name=1,5
+091,DGM – Deutsche Gesellschaft für Materialkunde e.V.,Wehrwissenschaftliches Institut für Werk- und Betriebsstoffe (WIWeB),Wehrwissenschaftliches Institut für Werk- und Betriebsstoffe (WIWeB) Firma Webseite,,no_result,,4
+091,DGM – Deutsche Gesellschaft für Materialkunde e.V.,Wirtschaftsvereinigung Metalle e.V.,Wirtschaftsvereinigung Metalle e.V. Firma Webseite,https://www.wvmetalle.de/,verified,"domain~metalle, domain+name=3",1
+091,DGM – Deutsche Gesellschaft für Materialkunde e.V.,"ZHAW Zürcher Hochschule für Angewandte Wissenschaften, Institut für Material und Verfahrenstechnik (IMPE)","ZHAW Zürcher Hochschule für Angewandte Wissenschaften, Institut für Material und Verfahrenstechnik (IMPE) Firma Webseite",https://www.zhaw.ch/,verified,"domain~zhaw, domain+name=3",1
+092,Deutscher Schraubenverband e.V. (DSV),ABC Umformtechnik GmbH & Co. KG,ABC Umformtechnik GmbH & Co. KG Firma Webseite,https://www.abc-umformtechnik.com/,verified,"domain~umformtechnik, domain+name=3",1
+092,Deutscher Schraubenverband e.V. (DSV),Abu-Verbindungselemente GmbH,Abu-Verbindungselemente GmbH Firma Webseite,https://abu-verbindungselemente.de/,verified,"domain~verbindungselemente, domain+name+postcode=5",1
+092,Deutscher Schraubenverband e.V. (DSV),AFS Advanced Fastening Solutions GmbH,AFS Advanced Fastening Solutions GmbH Firma Webseite,https://afs-engineering.de/,verified,name+postcode=3,1
+092,Deutscher Schraubenverband e.V. (DSV),ArcelorMittal Hamburg GmbH,ArcelorMittal Hamburg GmbH Firma Webseite,https://barsandrods.arcelormittal.com/mill-hamburg,verified,name+postcode=3,4
+092,Deutscher Schraubenverband e.V. (DSV),Arnold Umformtechnik GmbH & Co. KG,Arnold Umformtechnik GmbH & Co. KG Firma Webseite,https://www.arnold-fastening.com/de/,verified,"domain~arnold, domain+name=3",1
+092,Deutscher Schraubenverband e.V. (DSV),Atlas Copco Tools Central Europe GmbH,Atlas Copco Tools Central Europe GmbH Firma Webseite,https://www.atlascopco.com/de-de/itba/datenschutzerklaerung-gotowebinar,verified,"domain~atlas, domain+name+postcode=5",3
+092,Deutscher Schraubenverband e.V. (DSV),Atotech Deutschland GmbH,Atotech Deutschland GmbH Firma Webseite,https://www.atotech.com/de/,verified,"domain~atotech, domain+name+postcode=5",1
+092,Deutscher Schraubenverband e.V. (DSV),August Friedberg GmbH,August Friedberg GmbH Firma Webseite,https://www.august-friedberg.com/,verified,"domain~friedberg, domain+name=3",1
+092,Deutscher Schraubenverband e.V. (DSV),Beckfort GmbH & Co. KG,Beckfort GmbH & Co. KG Firma Webseite,https://www.beckfort.de/impressum.html,verified,"domain~beckfort, domain+name+postcode=5",1
+092,Deutscher Schraubenverband e.V. (DSV),BENSELER Oberflächentechnik GmbH & Co. KG,BENSELER Oberflächentechnik GmbH & Co. KG Firma Webseite,https://www.benseler.de/de/,verified,"domain~benseler, domain+name=3",1
+092,Deutscher Schraubenverband e.V. (DSV),Bilstein & Siekermann GmbH + Co. KG,Bilstein & Siekermann GmbH + Co. KG Firma Webseite,https://www.bsh-vs.com/?article_id=5&chash=cbd9bb161c949daf471a1d47964a661c&clang=1&cHash=96b0925921f66b9fd388fa01da8e238f,verified,name+postcode=3,1
+092,Deutscher Schraubenverband e.V. (DSV),Böllhoff Produktion GmbH,Böllhoff Produktion GmbH Firma Webseite,,unverified,,1
+092,Deutscher Schraubenverband e.V. (DSV),Bosch Rexroth AG,Bosch Rexroth AG Firma Webseite,https://www.boschrexroth.com/de/de/,verified,"domain~rexroth, domain+name=3",1
+092,Deutscher Schraubenverband e.V. (DSV),Bulten GmbH,Bulten GmbH Firma Webseite,,no_result,,1
+092,Deutscher Schraubenverband e.V. (DSV),Camcar Innovations,Camcar Innovations Firma Webseite,https://camcar.com/,verified,"domain~camcar, domain+name=3",1
+092,Deutscher Schraubenverband e.V. (DSV),CARL BECHEM GMBH,CARL BECHEM GMBH Firma Webseite,https://www.bechem.com/de,verified,"domain~bechem, domain+name+postcode=5",1
+092,Deutscher Schraubenverband e.V. (DSV),Cetim,Cetim Firma Webseite,https://www.louisvuitton.com/,page_only,name=1,5
+092,Deutscher Schraubenverband e.V. (DSV),CONTI Fasteners AG,CONTI Fasteners AG Firma Webseite,https://taptite.com/de/,page_only,name=1,4
+092,Deutscher Schraubenverband e.V. (DSV),COVENTYA GmbH,COVENTYA GmbH Firma Webseite,,no_result,,1
+092,Deutscher Schraubenverband e.V. (DSV),CPM GmbH,CPM GmbH Firma Webseite,http://cpmgmbh.de/firma.html,page_only,postcode=2,3
+092,Deutscher Schraubenverband e.V. (DSV),David Dorfmüller Söhne GmbH & Co. KG,David Dorfmüller Söhne GmbH & Co. KG Firma Webseite,https://david-dorfmueller.de/,verified,"domain~david, domain+name+postcode=5",1
+092,Deutscher Schraubenverband e.V. (DSV),Dejond Fastening nv,Dejond Fastening nv Firma Webseite,https://dejondfastening.com/,verified,"domain~fastening, domain+name=3",1
+092,Deutscher Schraubenverband e.V. (DSV),DEPRAG SCHULZ GMBH u. CO. KG,DEPRAG SCHULZ GMBH u. CO. KG Firma Webseite,,no_result,,4
+092,Deutscher Schraubenverband e.V. (DSV),Desoutter GmbH,Desoutter GmbH Firma Webseite,https://www.desouttertools.com/,verified,"domain~desoutter, domain+name=3",1
+092,Deutscher Schraubenverband e.V. (DSV),dibe Verbindungstechnik GmbH,dibe Verbindungstechnik GmbH Firma Webseite,https://dibe-gmbh.de/,verified,"domain~dibe, domain+name+postcode=5",1
+092,Deutscher Schraubenverband e.V. (DSV),Dörken Coatings GmbH & Co. KG,Dörken Coatings GmbH & Co. KG Firma Webseite,https://www.doerken.com/global/en/home,verified,name+postcode=3,1
+092,Deutscher Schraubenverband e.V. (DSV),Dr. Hesse GmbH & Cie. KG,Dr. Hesse GmbH & Cie. KG Firma Webseite,,no_result,,2
+092,Deutscher Schraubenverband e.V. (DSV),Dr.-Ing. Max Schlötter GmbH & Co. KG,Dr.-Ing. Max Schlötter GmbH & Co. KG Firma Webseite,https://www.dgo-online.de/bildung/betreuung-studien-und-abschlussarbeiten/detailansicht/dr-ing-max-schloetter-gmbh-co-kg-1,page_only,postcode=2,4
+092,Deutscher Schraubenverband e.V. (DSV),Drahtwerk Elisental W. Erdmann GmbH,Drahtwerk Elisental W. Erdmann GmbH Firma Webseite,https://www.elisental.de/de/,verified,"domain~elisental, domain+name+postcode=5",1
+092,Deutscher Schraubenverband e.V. (DSV),Dreh-Norm Individuelle Verbindungstechnik GmbH,Dreh-Norm Individuelle Verbindungstechnik GmbH Firma Webseite,https://www.dreh-norm.de/,verified,"domain~dreh, domain+name+postcode=5",1
+092,Deutscher Schraubenverband e.V. (DSV),ECKART Suisse SA,ECKART Suisse SA Firma Webseite,https://www.eckart.net/en/,verified,"domain~eckart, domain+name=3",2
+092,Deutscher Schraubenverband e.V. (DSV),Eibach Oberflächentechnik GmbH,Eibach Oberflächentechnik GmbH Firma Webseite,https://www.eot-gmbh.de/,verified,name+postcode=3,1
+092,Deutscher Schraubenverband e.V. (DSV),Eichsfelder Schraubenwerk GmbH,Eichsfelder Schraubenwerk GmbH Firma Webseite,,no_result,,0
+092,Deutscher Schraubenverband e.V. (DSV),EJOT SE & Co KG,EJOT SE & Co KG Firma Webseite,https://www.ejot.de/,domain_match,"domain~ejot, domain=2",3
+092,Deutscher Schraubenverband e.V. (DSV),ESKA Automotive GmbH,ESKA Automotive GmbH Firma Webseite,https://eska.net/,verified,"domain~eska, domain+name+postcode=5",1
+092,Deutscher Schraubenverband e.V. (DSV),Fastenrath Befestigungstechnik GmbH,Fastenrath Befestigungstechnik GmbH Firma Webseite,https://www.fastenrath.de/,verified,"domain~fastenrath, domain+name=3",1
+092,Deutscher Schraubenverband e.V. (DSV),ferQUEST GmbH,ferQUEST GmbH Firma Webseite,https://www.ferquest.de/,verified,"domain~ferquest, domain+name+postcode=5",1
+092,Deutscher Schraubenverband e.V. (DSV),Fr. u. H. Lüling GmbH & Co. KG,Fr. u. H. Lüling GmbH & Co. KG Firma Webseite,https://www.lueling.com/,page_only,postcode=2,3
+092,Deutscher Schraubenverband e.V. (DSV),Fraunhofer-Institut für Großstrukturen in der Produktionstechnik IGP Mechanische Verbindungstechnik,Fraunhofer-Institut für Großstrukturen in der Produktionstechnik IGP Mechanische Verbindungstechnik Firma Webseite,https://idw-online.de/de/institution2781,verified,name+postcode=3,4
+092,Deutscher Schraubenverband e.V. (DSV),Frey Schrauben GmbH,Frey Schrauben GmbH Firma Webseite,https://www.frey-schrauben.de/,verified,"domain~schrauben, domain+name+postcode=5",1
+092,Deutscher Schraubenverband e.V. (DSV),Friedr. Brüninghaus & Söhne GmbH & Co KG,Friedr. Brüninghaus & Söhne GmbH & Co KG Firma Webseite,https://www.brueninghaus-draht.de/impressum/,verified,name+postcode=3,2
+092,Deutscher Schraubenverband e.V. (DSV),FUCHS LUBRICANTS GERMANY GmbH,FUCHS LUBRICANTS GERMANY GmbH Firma Webseite,https://www.fuchs.com/de/de/,verified,"domain~fuchs, domain+name=3",1
+092,Deutscher Schraubenverband e.V. (DSV),FUCHS Schraubenwerk GmbH,FUCHS Schraubenwerk GmbH Firma Webseite,https://www.fasteners.eu/de/company/detail711/,verified,name+postcode=3,3
+092,Deutscher Schraubenverband e.V. (DSV),Galfa GmbH &Co. KG,Galfa GmbH &Co. KG Firma Webseite,https://galfa.de/,verified,"domain~galfa, domain+name+postcode=5",1
+092,Deutscher Schraubenverband e.V. (DSV),Georgsmarienhütte GmbH,Georgsmarienhütte GmbH Firma Webseite,https://www.gmh-gruppe.de/en/locations/georgsmarienhuette-gmbh/,page_only,postcode=2,2
+092,Deutscher Schraubenverband e.V. (DSV),Gerster Deutschland GmbH,Gerster Deutschland GmbH Firma Webseite,https://www.edelstahl-rostfrei.de/mitglieder/ch,verified,name+postcode=3,3
+092,Deutscher Schraubenverband e.V. (DSV),GEVAG GmbH,GEVAG GmbH Firma Webseite,https://www.gevag.de/,verified,"domain~gevag, domain+name+postcode=5",1
+092,Deutscher Schraubenverband e.V. (DSV),GRIS Umformtechnik GmbH,GRIS Umformtechnik GmbH Firma Webseite,https://www.gris-group.com/de/,verified,"domain~gris, domain+name+postcode=5",1
+092,Deutscher Schraubenverband e.V. (DSV),Güde GmbH,Güde GmbH Firma Webseite,https://www.guede-solingen.de/,page_only,name=1,2
+092,Deutscher Schraubenverband e.V. (DSV),GUTMANN ALUMINIUM DRAHT GMBH,GUTMANN ALUMINIUM DRAHT GMBH Firma Webseite,https://www.gutmann-wire.com/,verified,"domain~gutmann, domain+name+postcode=5",1
+092,Deutscher Schraubenverband e.V. (DSV),GWI GmbH,GWI GmbH Firma Webseite,https://www.schraubenverband.de/firma/gwi,page_only,postcode=2,5
+092,Deutscher Schraubenverband e.V. (DSV),Hagener Feinstahl GmbH,Hagener Feinstahl GmbH Firma Webseite,,no_result,,1
+092,Deutscher Schraubenverband e.V. (DSV),Hans Schriever GmbH & Co. KG,Hans Schriever GmbH & Co. KG Firma Webseite,,no_result,,1
+092,Deutscher Schraubenverband e.V. (DSV),HECO-Schrauben,HECO-Schrauben Firma Webseite,,no_result,,5
+092,Deutscher Schraubenverband e.V. (DSV),HEICO Befestigungstechnik GmbH,HEICO Befestigungstechnik GmbH Firma Webseite,https://www.heico-group.com/de/,verified,"domain~heico, domain+name+postcode=5",1
+092,Deutscher Schraubenverband e.V. (DSV),Henkel Loctite-KID GmbH,Henkel Loctite-KID GmbH Firma Webseite,,no_result,,2
+092,Deutscher Schraubenverband e.V. (DSV),Hochschule Offenburg,Hochschule Offenburg Firma Webseite,https://www.hs-offenburg.de/,verified,"domain~offenburg, domain+name=3",1
+092,Deutscher Schraubenverband e.V. (DSV),Hohage GmbH & Co. KG,Hohage GmbH & Co. KG Firma Webseite,https://hohage.de/,verified,"domain~hohage, domain+name=3",1
+092,Deutscher Schraubenverband e.V. (DSV),Huster Oberflächentechnik GmbH,Huster Oberflächentechnik GmbH Firma Webseite,,no_result,,2
+092,Deutscher Schraubenverband e.V. (DSV),"Immel, Seckelmann & Co. GmbH","Immel, Seckelmann & Co. GmbH Firma Webseite",https://www.internetbranchenbuch.org/detail.php?id=22466,verified,name+postcode=3,3
+092,Deutscher Schraubenverband e.V. (DSV),Ingersoll Rand GmbH,Ingersoll Rand GmbH Firma Webseite,,no_result,,1
+092,Deutscher Schraubenverband e.V. (DSV),Institut für Umformtechnik der mittelständischen Wirtschaft GmbH,Institut für Umformtechnik der mittelständischen Wirtschaft GmbH Firma Webseite,https://www.efb.de/ifu-luedenscheid.html,verified,name+postcode=3,1
+092,Deutscher Schraubenverband e.V. (DSV),J. vom Cleff A. Sohn GmbH & Co. KG,J. vom Cleff A. Sohn GmbH & Co. KG Firma Webseite,https://www.vomcleff.de/,verified,"domain~cleff, domain+name=3",1
+092,Deutscher Schraubenverband e.V. (DSV),JUKO Technik GmbH,JUKO Technik GmbH Firma Webseite,,no_result,,1
+092,Deutscher Schraubenverband e.V. (DSV),Kaiser & Waltermann GmbH,Kaiser & Waltermann GmbH Firma Webseite,https://www.kaiser-waltermann.de/,verified,"domain~waltermann, domain+name+postcode=5",1
+092,Deutscher Schraubenverband e.V. (DSV),Karl Schilt GmbH + Co. KG,Karl Schilt GmbH + Co. KG Firma Webseite,https://www.schilt.de/,verified,"domain~schilt, domain+name+postcode=5",1
+092,Deutscher Schraubenverband e.V. (DSV),Kerb-Konus-Vertriebs-GmbH,Kerb-Konus-Vertriebs-GmbH Firma Webseite,https://www.kerb-konus.de/,verified,"domain~konus, domain+name=3",1
+092,Deutscher Schraubenverband e.V. (DSV),Kistler Remscheid GmbH,Kistler Remscheid GmbH Firma Webseite,https://www.kistler.com/DE/de/schatz-ag/C00000683,verified,"domain~kistler, domain+name=3",3
+092,Deutscher Schraubenverband e.V. (DSV),KLEVER Beschichtungstechnik GmbH & Co. KG,KLEVER Beschichtungstechnik GmbH & Co. KG Firma Webseite,https://kleverplast.de/,verified,"domain~klever, domain+name=3",1
+092,Deutscher Schraubenverband e.V. (DSV),Kohlhage Fasteners GmbH & Co. KG,Kohlhage Fasteners GmbH & Co. KG Firma Webseite,https://www.kohlhage.de/impressum/,verified,"domain~kohlhage, domain+name+postcode=5",3
+092,Deutscher Schraubenverband e.V. (DSV),Koninklijke Nedschroef Holding B.V.,Koninklijke Nedschroef Holding B.V. Firma Webseite,,unverified,,4
+092,Deutscher Schraubenverband e.V. (DSV),Leist Oberflächentechnik GmbH & Co. KG,Leist Oberflächentechnik GmbH & Co. KG Firma Webseite,https://www.leist.de/,verified,"domain~leist, domain+name+postcode=5",1
+092,Deutscher Schraubenverband e.V. (DSV),LISI AUTOMOTIVE Knipping Verbindungstechnik GmbH,LISI AUTOMOTIVE Knipping Verbindungstechnik GmbH Firma Webseite,,no_result,,3
+092,Deutscher Schraubenverband e.V. (DSV),Lück Schrauben GmbH,Lück Schrauben GmbH Firma Webseite,https://www.lueck-schrauben.de/,verified,"domain~schrauben, domain+name+postcode=5",1
+092,Deutscher Schraubenverband e.V. (DSV),M-PT Matjeschk-PowerTools GmbH & Co. KG,M-PT Matjeschk-PowerTools GmbH & Co. KG Firma Webseite,https://www.m-pt.de/,page_only,name=1,1
+092,Deutscher Schraubenverband e.V. (DSV),MacDermid Enthone GmbH,MacDermid Enthone GmbH Firma Webseite,http://macdermidenthone.com/about-us,domain_match,"domain~macdermid, domain=2",4
+092,Deutscher Schraubenverband e.V. (DSV),MAGNI Europe GmbH & Co. KG,MAGNI Europe GmbH & Co. KG Firma Webseite,,no_result,,1
+092,Deutscher Schraubenverband e.V. (DSV),MARPOSS Monitoring Solutions GmbH,MARPOSS Monitoring Solutions GmbH Firma Webseite,https://www.marposs.com/ger/address/marposs-monitoring-solutions,verified,"domain~marposs, domain+name+postcode=5",1
+092,Deutscher Schraubenverband e.V. (DSV),Maschinenfabrik Wagner GmbH & Co. KG,Maschinenfabrik Wagner GmbH & Co. KG Firma Webseite,https://www.induux.de/firmen/935,verified,name+postcode=3,1
+092,Deutscher Schraubenverband e.V. (DSV),Max Mothes GmbH,Max Mothes GmbH Firma Webseite,https://www.maxmothes.com/,verified,"domain~mothes, domain+name+postcode=5",1
+092,Deutscher Schraubenverband e.V. (DSV),Max W. Claas GmbH & Co. KG,Max W. Claas GmbH & Co. KG Firma Webseite,https://www.claas-draht.de/,verified,"domain~claas, domain+name+postcode=5",1
+092,Deutscher Schraubenverband e.V. (DSV),MN Kaltformteile GmbH & Co.KG,MN Kaltformteile GmbH & Co.KG Firma Webseite,,no_result,,2
+092,Deutscher Schraubenverband e.V. (DSV),MODUMETAL Inc.,MODUMETAL Inc. Firma Webseite,https://www.modumetal.com/,verified,"domain~modumetal, domain+name+postcode=5",1
+092,Deutscher Schraubenverband e.V. (DSV),Möhling GmbH & Co. KG,Möhling GmbH & Co. KG Firma Webseite,https://www.karriere-suedwestfalen.de/moehling,page_only,postcode=2,4
+092,Deutscher Schraubenverband e.V. (DSV),NME National Machinery Europe GmbH,NME National Machinery Europe GmbH Firma Webseite,https://www.nationalmachinery.com/national-headquarters?lang=de,verified,"domain~machinery, domain+name=3",1
+092,Deutscher Schraubenverband e.V. (DSV),NOF METAL COATINGS EUROPE S. A.,NOF METAL COATINGS EUROPE S. A. Firma Webseite,https://www.nofmetalcoatings.com/europe/de/,verified,"domain~coatings, domain+name=3",1
+092,Deutscher Schraubenverband e.V. (DSV),Nord-Lock GmbH,Nord-Lock GmbH Firma Webseite,https://www.nord-lock.com/de-de/,verified,"domain~lock, domain+name=3",1
+092,Deutscher Schraubenverband e.V. (DSV),omniTECHNIK Mikroverkapselungs GmbH,omniTECHNIK Mikroverkapselungs GmbH Firma Webseite,https://www.precote.com/en/,verified,name+postcode=3,1
+092,Deutscher Schraubenverband e.V. (DSV),Otto Eichhoff GmbH & Co. KG,Otto Eichhoff GmbH & Co. KG Firma Webseite,,no_result,,3
+092,Deutscher Schraubenverband e.V. (DSV),Overhoff Verbindungstechnik GmbH,Overhoff Verbindungstechnik GmbH Firma Webseite,https://www.overhoff.de/,verified,"domain~overhoff, domain+name+postcode=5",1
+092,Deutscher Schraubenverband e.V. (DSV),PRELOK GmbH,PRELOK GmbH Firma Webseite,https://www.prelok.com/,verified,"domain~prelok, domain+name=3",1
+092,Deutscher Schraubenverband e.V. (DSV),PRINZ VERBINDUNGSELEMENTE GMBH,PRINZ VERBINDUNGSELEMENTE GMBH Firma Webseite,https://prinz-h.de/,verified,"domain~prinz, domain+name+postcode=5",1
+092,Deutscher Schraubenverband e.V. (DSV),PROFIL Verbindungstechnik GmbH & Co. KG,PROFIL Verbindungstechnik GmbH & Co. KG Firma Webseite,https://www.efb.de/index.php?menuid=24&reporeid=500,verified,name+postcode=3,1
+092,Deutscher Schraubenverband e.V. (DSV),Profiroll Technologies GmbH,Profiroll Technologies GmbH Firma Webseite,https://www.profiroll.de/,verified,"domain~profiroll, domain+name=3",1
+092,Deutscher Schraubenverband e.V. (DSV),prosimalys GmbH,prosimalys GmbH Firma Webseite,https://www.prosimalys.de/,verified,"domain~prosimalys, domain+name+postcode=5",1
+092,Deutscher Schraubenverband e.V. (DSV),Pühl GmbH ＆ Co KG,Pühl GmbH ＆ Co KG Firma Webseite,https://www.karriere-suedwestfalen.de/puehl,page_only,postcode=2,3
+092,Deutscher Schraubenverband e.V. (DSV),Quaker Houghton Deutschland,Quaker Houghton Deutschland Firma Webseite,https://de.fireresistantfluids.com/standorte/,verified,name+postcode=3,3
+092,Deutscher Schraubenverband e.V. (DSV),R + FK SCHULTE KG,R + FK SCHULTE KG Firma Webseite,https://www.schulte.de/,verified,"domain~schulte, domain+name=3",4
+092,Deutscher Schraubenverband e.V. (DSV),RAMPA GmbH & Co KG,RAMPA GmbH & Co KG Firma Webseite,https://www.rampa.com/,verified,"domain~rampa, domain+name+postcode=5",1
+092,Deutscher Schraubenverband e.V. (DSV),REC solutions in fastening technology,REC solutions in fastening technology Firma Webseite,,no_result,,2
+092,Deutscher Schraubenverband e.V. (DSV),REISSER-Schraubentechnik GmbH,REISSER-Schraubentechnik GmbH Firma Webseite,https://reisser-screws.com/,verified,"domain~reisser, domain+name+postcode=5",1
+092,Deutscher Schraubenverband e.V. (DSV),RIBE - Richard Bergner Verbindungstechnik GmbH & Co.KG,RIBE - Richard Bergner Verbindungstechnik GmbH & Co.KG Firma Webseite,https://ribe.de/,verified,"domain~ribe, domain+name+postcode=5",1
+092,Deutscher Schraubenverband e.V. (DSV),Richard Gruber GmbH,Richard Gruber GmbH Firma Webseite,https://richard-gruber.com/,verified,"domain~richard, domain+name=3",1
+092,Deutscher Schraubenverband e.V. (DSV),RIO GmbH,RIO GmbH Firma Webseite,https://www.rio.de/impressum/,page_only,postcode=2,2
+092,Deutscher Schraubenverband e.V. (DSV),Robert Grass GmbH & Co. KG,Robert Grass GmbH & Co. KG Firma Webseite,https://www.robert-grass.com/,verified,"domain~robert, domain+name+postcode=5",1
+092,Deutscher Schraubenverband e.V. (DSV),Saarstahl AG,Saarstahl AG Firma Webseite,https://www.saarstahl.com/,verified,"domain~saarstahl, domain+name+postcode=5",1
+092,Deutscher Schraubenverband e.V. (DSV),Schrauben Betzer GmbH & Co. KG,Schrauben Betzer GmbH & Co. KG Firma Webseite,https://www.betzer.de/,verified,"domain~betzer, domain+name+postcode=5",1
+092,Deutscher Schraubenverband e.V. (DSV),Schraubenfabrik W. Rüggeberg GmbH,Schraubenfabrik W. Rüggeberg GmbH Firma Webseite,https://rueggeberg-schrauben.de/,verified,name+postcode=3,1
+092,Deutscher Schraubenverband e.V. (DSV),Schraubenwerk Zerbst GmbH,Schraubenwerk Zerbst GmbH Firma Webseite,https://www.schraubenwerk.de/,verified,"domain~schraubenwerk, domain+name+postcode=5",1
+092,Deutscher Schraubenverband e.V. (DSV),Schuhl & Co. GmbH,Schuhl & Co. GmbH Firma Webseite,https://schuhl.de/unternehmen/,verified,"domain~schuhl, domain+name+postcode=5",1
+092,Deutscher Schraubenverband e.V. (DSV),SCS Concept Deutschland GmbH,SCS Concept Deutschland GmbH Firma Webseite,https://www.scsconcept.com/de/,verified,"domain~concept, domain+name=3",1
+092,Deutscher Schraubenverband e.V. (DSV),SDC GmbH,SDC GmbH Firma Webseite,https://sdc-control.de/,page_only,postcode=2,4
+092,Deutscher Schraubenverband e.V. (DSV),SPAX International GmbH & Co. KG,SPAX International GmbH & Co. KG Firma Webseite,https://www.spax.com/de-de.html,domain_match,"domain~spax, domain=2",4
+092,Deutscher Schraubenverband e.V. (DSV),SSF-Verbindungsteile GmbH,SSF-Verbindungsteile GmbH Firma Webseite,https://ssf-nuernberg.de/de/,verified,name+postcode=3,1
+092,Deutscher Schraubenverband e.V. (DSV),STAHLWILLE Eduard Wille GmbH,STAHLWILLE Eduard Wille GmbH Firma Webseite,,no_result,,3
+092,Deutscher Schraubenverband e.V. (DSV),STOCKMEIER Chemie GmbH & Co. KG,STOCKMEIER Chemie GmbH & Co. KG Firma Webseite,https://www.stockmeier.com/en/stockmeier-chemie/,verified,"domain~stockmeier, domain+name=3",1
+092,Deutscher Schraubenverband e.V. (DSV),Stranghöner Ingenieure GmbH,Stranghöner Ingenieure GmbH Firma Webseite,https://www.stranghoener-ing.de/,verified,name+postcode=3,1
+092,Deutscher Schraubenverband e.V. (DSV),SurTec Deutschland GmbH,SurTec Deutschland GmbH Firma Webseite,https://www.surtec-cn.com/landingpages/de/de/,domain_match,"domain~surtec, domain=2",2
+092,Deutscher Schraubenverband e.V. (DSV),teckentrup SLI GmbH & Co. KG,teckentrup SLI GmbH & Co. KG Firma Webseite,https://www.teckentrup-sli.de/de/,verified,"domain~teckentrup, domain+name+postcode=5",1
+092,Deutscher Schraubenverband e.V. (DSV),TesT GmbH,TesT GmbH Firma Webseite,https://www.empfohlen.de/,page_only,name=1,3
+092,Deutscher Schraubenverband e.V. (DSV),Thielco Metal Coating BV / Thielco Staalindustrie BV,Thielco Metal Coating BV / Thielco Staalindustrie BV Firma Webseite,https://www.thielco.net/,verified,"domain~thielco, domain+name=3",2
+092,Deutscher Schraubenverband e.V. (DSV),Torc-nology GmbH,Torc-nology GmbH Firma Webseite,,no_result,,3
+092,Deutscher Schraubenverband e.V. (DSV),Tribicon,Tribicon Firma Webseite,https://tribicon.de/,verified,"domain~tribicon, domain+name=3",1
+092,Deutscher Schraubenverband e.V. (DSV),"TU Dresden, Fakultät Maschinenwesen, Institut für Fertigungstechnik, Professur Fügetechnik","TU Dresden, Fakultät Maschinenwesen, Institut für Fertigungstechnik, Professur Fügetechnik Firma Webseite",https://www.efb.de/if-ftm-dresden.html,verified,name+postcode=3,3
+092,Deutscher Schraubenverband e.V. (DSV),Tweer & Lösenbeck GmbH & Co.KG,Tweer & Lösenbeck GmbH & Co.KG Firma Webseite,https://www.tweer-loesenbeck.de/,verified,"domain~tweer, domain+name+postcode=5",1
+092,Deutscher Schraubenverband e.V. (DSV),Universität Duisburg-Essen - Institut für Metall- und Leichtbau,Universität Duisburg-Essen - Institut für Metall- und Leichtbau Firma Webseite,https://www.uni-due.de/iml/,verified,name+postcode=3,1
+092,Deutscher Schraubenverband e.V. (DSV),Universität Siegen,Universität Siegen Firma Webseite,https://www.uni-siegen.de/,verified,"domain~siegen, domain+name=3",1
+092,Deutscher Schraubenverband e.V. (DSV),Verband der Automobilindustrie e.V.,Verband der Automobilindustrie e.V. Firma Webseite,https://www.automobil-industrie.vogel.de/vda-verband-der-automobilindustrie-e-v-c-69195/,verified,"domain~automobilindustrie, domain+name+postcode=5",3
+092,Deutscher Schraubenverband e.V. (DSV),voestalpine Wire Rod Austria GmbH,voestalpine Wire Rod Austria GmbH Firma Webseite,https://www.voestalpine.com/wiretechnology/de/unternehmen/produktionsstandorte/voestalpine-wire-rod-austria/,verified,"domain~voestalpine, domain+name=3",1
+092,Deutscher Schraubenverband e.V. (DSV),Vom Hofe Kaltstauchdraht GmbH,Vom Hofe Kaltstauchdraht GmbH Firma Webseite,https://vom-hofe-kaltstauchdraht.de/,verified,"domain~kaltstauchdraht, domain+name=3",1
+092,Deutscher Schraubenverband e.V. (DSV),VSM,VSM Firma Webseite,,unverified,,4
+092,Deutscher Schraubenverband e.V. (DSV),Wafios Umformtechnik GmbH,Wafios Umformtechnik GmbH Firma Webseite,https://www.wafios-umformtechnik.com/,verified,"domain~umformtechnik, domain+name=3",1
+092,Deutscher Schraubenverband e.V. (DSV),Wagener Metallveredelung GmbH,Wagener Metallveredelung GmbH Firma Webseite,https://wagenergmbh.de/ueberuns.html,verified,"domain~wagener, domain+name=3",1
+092,Deutscher Schraubenverband e.V. (DSV),Weber Schraubautomaten GmbH,Weber Schraubautomaten GmbH Firma Webseite,https://www.weber-online.com/,verified,"domain~weber, domain+name+postcode=5",1
+092,Deutscher Schraubenverband e.V. (DSV),WHW Walter Hillebrand GmbH & Co. KG,WHW Walter Hillebrand GmbH & Co. KG Firma Webseite,https://www.whw.de/,page_only,name=1,4
+092,Deutscher Schraubenverband e.V. (DSV),Wilhelm Alte GmbH,Wilhelm Alte GmbH Firma Webseite,https://alte.de/,verified,"domain~alte, domain+name+postcode=5",1
+092,Deutscher Schraubenverband e.V. (DSV),Wilhelm Schumacher GmbH Schraubenfabrik,Wilhelm Schumacher GmbH Schraubenfabrik Firma Webseite,https://www.wsh-schrauben.com/,verified,name+postcode=3,1
+092,Deutscher Schraubenverband e.V. (DSV),WIMA Control GmbH - Qualitätsprüfung,WIMA Control GmbH - Qualitätsprüfung Firma Webseite,,no_result,search failed: DDGSException,0
+092,Deutscher Schraubenverband e.V. (DSV),WMV GmbH,WMV GmbH Firma Webseite,,unverified,,4
+092,Deutscher Schraubenverband e.V. (DSV),Wolters GmbH,Wolters GmbH Firma Webseite,https://hofbrauhaus-wolters.de/,verified,"domain~wolters, domain+name=3",1
+092,Deutscher Schraubenverband e.V. (DSV),WSD GmbH,WSD GmbH Firma Webseite,,unverified,,3
+092,Deutscher Schraubenverband e.V. (DSV),"Zentrum für Konstruktionswerkstoffe, Staatliche Materialprüfungsanstalt Darmstadt, Fachgebiet und Institut für Werkstoffkunde","Zentrum für Konstruktionswerkstoffe, Staatliche Materialprüfungsanstalt Darmstadt, Fachgebiet und Institut für Werkstoffkunde Firma Webseite",https://www.mpa-ifw.tu-darmstadt.de/,page_only,name=1,4
+092,Deutscher Schraubenverband e.V. (DSV),Zeschky Galvanik GmbH &Co. KG,Zeschky Galvanik GmbH &Co. KG Firma Webseite,https://www.zeschky.de/kontakt/,verified,"domain~zeschky, domain+name+postcode=5",1

@@ -25,6 +25,7 @@ import re
 
 from bs4 import BeautifulSoup
 
+import cleaner
 import config
 import fetcher
 
@@ -53,6 +54,18 @@ SAMPLE_IDS = [
     "025",  #   2872    15   medium
     "005",  #   4873   112   large, still fits one chunk
     "050",  #   9383   268   CHUNKED - exercises the chunk/merge path
+]
+
+# Round 2 (2026-09-22): 20 pages chosen from the 291 Finalv1 networks to cover
+# every layout, a range of sizes, long pages and ZIM networks, with each
+# look-alike website template and each network manager at most once. Two
+# first choices were replaced because their saved page held only page one of
+# a longer list. Method and reasons: THESIS_NOTES section 3.14 and
+# results/ground_truth_expansion_20.csv. 045 (OptoNet) was already in the URL
+# list; 079 is VDGH at its Finalv1 address, because 055's saved page is empty.
+SAMPLE_IDS += [
+    "074", "075", "076", "077", "078", "079", "080", "081", "082", "083",
+    "084", "045", "085", "086", "087", "088", "089", "090", "091", "092",
 ]
 
 # Text that appears in navigation and cookie banners on nearly every German
@@ -125,6 +138,86 @@ ORG_HINT = re.compile(
     re.IGNORECASE)
 
 
+def is_contact_detail(text: str) -> bool:
+    """
+    A web address, e-mail address or phone number rather than a name.
+
+    The old rule wanted an e-mail to be one unbroken token, which missed
+    VDGH's spam-protected form, "info@ avoid-unrequested-mails agendia.com".
+    85 of that page's 203 candidates were contact details (2026-09-25). Any
+    "@" is enough to disqualify a line, since company names do not carry one.
+    """
+    # An e-mail has a domain after the "@". A bare "@" does not disqualify a
+    # line: "ST@RT HÜRTH Zentrum für Technologie und Existenzgründung" is a
+    # real member of BVIZ, and the first version of this rule deleted it.
+    if re.search(r"@[^@]{0,40}\.[a-z]{2,}\b", text, re.IGNORECASE):
+        return True
+    if re.match(r"^(https?://|www\.)", text, re.IGNORECASE):
+        return True
+    # A bare domain on its own line: "cepheid.com/de", "WWW.BIOTYPE.DE".
+    if re.match(r"^[\w.-]+\.(de|com|eu|net|org|info|io|ch|at|nl|fr|uk)(/\S*)?$",
+                text, re.IGNORECASE):
+        return True
+    if re.match(r"^(tel|telefon|fax|mobil|phone)\b", text, re.IGNORECASE):
+        return True
+    if re.match(r"^\+?\d[\d\s/()-]{6,}$", text):
+        return True
+    # Address lines. Wirtschaftsvereinigung Stahl prints "47137 Duisburg"
+    # under every member, 43 of its 132 candidates (2026-09-25). A line with a
+    # legal form in it is a name, never an address, so it is safe from here.
+    if LEGAL_HINT.search(text):
+        return False
+    if re.match(r"^\d{4,5}\s+[A-ZÄÖÜ][\w.\-/ ]{1,40}$", text):
+        return True
+    return bool(re.match(
+        r"^[\w.\-äöüßÄÖÜ ]{2,40}(stra(ß|ss)e|str\.|weg|allee|platz|gasse|ring|damm)"
+        r"\s+\d+[a-z]?$", text, re.IGNORECASE))
+
+
+DOMAIN_TAIL = re.compile(
+    r"\s+(https?://\S+|www\.\S+|[\w.-]+\.(de|com|eu|net|org|info|io|ch|at|nl|fr|uk)(/\S*)?)$",
+    re.IGNORECASE)
+PLACE_TAIL = re.compile(r"\s+\d{4,5}\s+[A-ZÄÖÜ][\w.\-/ ]{1,40}$")
+
+
+def is_filter_facet(text: str) -> bool:
+    """
+    A filter checkbox from the page's search sidebar, not a member.
+
+    OSBA's page ends its member list with a filter widget whose every entry
+    carries the number of matching companies: "Agile Methoden / Scrum (24)",
+    "Beratung (94)". 157 of that worksheet's 252 candidates were these
+    (2026-09-25). A real company name can end in brackets, so the count alone
+    decides, and a line carrying a legal form is never a facet.
+    """
+    if not re.search(r"\(\d{1,4}\)\s*$", text):
+        return False
+    return not LEGAL_HINT.search(text)
+
+
+def core_name(text: str) -> str:
+    """
+    Strip a trailing address and web address from a candidate line.
+
+    Wirtschaftsvereinigung Stahl prints every member twice: once as
+    "ArcelorMittal Bremen GmbH 28237 Bremen bremen.arcelormittal.com" and once
+    as "ArcelorMittal Bremen GmbH" (2026-09-25). Ground truth holds the name
+    alone, so the tail comes off and the pair collapses into one entry.
+    """
+    out = text.strip()
+    for _ in range(3):
+        new = PLACE_TAIL.sub("", DOMAIN_TAIL.sub("", out)).strip(" ,;|-")
+        # "Laser 2000 GmbH" and "BSK 1818 AG" look like "<something> <postcode>
+        # <Word>" to the address rule. A tail carrying a legal form is part of
+        # the name, never an address (2026-09-26).
+        if new != out and LEGAL_HINT.search(out[len(new):]):
+            break
+        if new == out:
+            break
+        out = new
+    return out or text.strip()
+
+
 def looks_like_company(text: str) -> bool:
     """
     Split candidates into 'probably a company' and 'probably page furniture'.
@@ -195,6 +288,7 @@ def _tidy(text: str) -> str:
     "Brandes Innovation Brandes Innovation 23. Oktober 2017" is one candidate.
     Removing the date and de-duplicating the halves recovers the actual name.
     """
+    text = cleaner.strip_invisible(text)
     text = DATE_RE.sub(" ", text)
     text = " ".join(text.split()).strip(" -|,;")
 
@@ -208,7 +302,7 @@ def _tidy(text: str) -> str:
     return text
 
 
-def extract_candidates(html: str) -> list[str]:
+def extract_candidates(html: str, page_url: str | None = None) -> list[str]:
     """Pull plausible organisation names out of structured page elements."""
     try:
         soup = BeautifulSoup(html, "lxml")
@@ -238,8 +332,7 @@ def extract_candidates(html: str) -> list[str]:
             continue
         if not re.search(r"[A-Za-zÄÖÜäöüß]", text):
             continue
-        # Pure URLs, e-mail addresses and phone numbers are not names.
-        if re.match(r"^(https?://|www\.|\+?\d[\d\s/()-]{6,}$|\S+@\S+)", text):
+        if is_contact_detail(text) or is_filter_facet(text):
             continue
         # Sentences are page copy, not company names.
         if text.count(" ") > 9 or text.endswith((".", "!", "?")) and " " in text:
@@ -250,6 +343,34 @@ def extract_candidates(html: str) -> list[str]:
             continue
         seen.add(key)
         out.append(text)
+
+    # Round 2 (2026-09-22) found pages the element walk above barely sees: a
+    # logo wall, where each name exists only as an image's alt text (VSI, 0
+    # candidates), and a list printed as plain lines (vdp, 0 candidates). Both
+    # are added here: image alt texts, and lines of the cleaned page text that
+    # carry a legal form. Still rules only, never a model, and still only a
+    # pre-fill for a human to correct.
+    extra = []
+    for img in soup.find_all("img"):
+        extra.append(re.sub(r"^(logo|firmenlogo)\s*[:-]?\s*", "",
+                            (img.get("alt") or img.get("title") or "").strip(),
+                            flags=re.IGNORECASE))
+    if page_url is not None:
+        import cleaner
+        for line in cleaner.process(html, page_url).text.split("\n"):
+            line = re.sub(r"\s*<https?://[^>]+>", "", line).strip()
+            if LEGAL_HINT.search(line):
+                extra.append(line)
+    for text in extra:
+        text = _tidy(" ".join(text.split()))
+        if not (3 <= len(text) <= 90) or not re.search(r"[A-Za-zÄÖÜäöüß]{2}", text):
+            continue
+        if text.casefold() in NAV_NOISE or text.count(" ") > 9:
+            continue
+        key = text.casefold()
+        if key not in seen:
+            seen.add(key)
+            out.append(text)
 
     return out
 
@@ -264,10 +385,11 @@ HEADER = """\
 # GROUND TRUTH WORKSHEET  --  {org_name}
 #
 # URL : {url}
+# Saved copy (exactly what the model reads): results/html_cache/{cache_file}
 # Page: {words} words, ~{tokens} tokens{chunk_note}
 #
 # WHAT TO DO
-#   1. Open the URL above in your browser, next to this file.
+#   1. Open the saved copy above (or the URL) in your browser, next to this file.
 #   2. SECTION A below is my best guess at the member companies.
 #      Read down it and DELETE any line that is not a member company.
 #   3. SECTION B is what I think is page furniture (menus, filters,
@@ -275,14 +397,19 @@ HEADER = """\
 #      MOVE that line up into Section A.
 #   4. Then look at the WEBPAGE itself top to bottom. If a member is
 #      missing from Section A entirely, type it in. This step matters
-#      most -- it catches what my guessing missed.
-#   5. Keep names EXACTLY as printed (keep GmbH, AG, umlauts).
+#      most -- it catches what my guessing missed. Only this page: do not
+#      follow "page 2" or "load more".
+#   5. Keep names EXACTLY as printed (keep GmbH, AG, umlauts), but leave out
+#      a city or address printed on the same line.
 #   6. Delete Section B entirely when you are done with it, or leave it --
 #      everything below the SECTION B marker is ignored either way.
 #   7. Save. Lines starting with # are ignored.
+#   8. When this page is finished, change TODO to DONE on the STATUS line
+#      below. --check turns only DONE worksheets into answer keys.
 #
 # When finished, run:  .venv/bin/python make_ground_truth.py --check
 # ============================================================================
+# STATUS: TODO
 
 # --- SECTION A: likely member companies ({n_likely}) -------------------------
 
@@ -311,7 +438,7 @@ def generate() -> None:
 
         html = fetcher.cache_path(row["url"]).read_text(
             encoding="utf-8", errors="ignore")
-        candidates = extract_candidates(html)
+        candidates = extract_candidates(html, row["url"])
 
         # Page order is preserved within each section so the worksheet still
         # scrolls alongside the live page.
@@ -321,6 +448,7 @@ def generate() -> None:
                       if man["would_chunk"] == "True" else "")
         header = HEADER.format(
             org_name=row["org_name"], url=row["url"],
+            cache_file=fetcher.cache_path(row["url"]).name,
             words=man["word_count"], tokens=man["est_tokens"],
             chunk_note=chunk_note, n_likely=len(likely))
 
@@ -333,48 +461,79 @@ def generate() -> None:
               f"{len(likely):>4} likely + {len(unlikely):>4} binned")
 
 
+def worksheet_status(text: str) -> str:
+    """'todo' or 'done'. Round-1 worksheets predate the STATUS line: done."""
+    m = re.search(r"^# STATUS:\s*(\w+)", text, re.MULTILINE)
+    return "todo" if m and m.group(1).upper() != "DONE" else "done"
+
+
+def parse_worksheet(text: str) -> list[str]:
+    """The names in Section A. Section B and comment lines are ignored."""
+    names = []
+    for line in text.splitlines():
+        # Everything from the Section B marker onward is discarded --
+        # that is the bin, and leaving it in place is allowed.
+        if line.startswith("# --- SECTION B"):
+            break
+        line = line.strip()
+        if line and not line.startswith("#"):
+            names.append(line)
+    return names
+
+
 def check() -> None:
-    """Validate completed worksheets and write the JSON the evaluator reads."""
+    """Turn finished (DONE) worksheets into the JSON answer keys."""
     with open(config.URLS_CSV, encoding="utf-8") as fh:
         urls = {r["id"]: r for r in csv.DictReader(fh)}
 
-    done = 0
+    done = todo = 0
     for uid in SAMPLE_IDS:
         row = urls[uid]
         path = worksheet_path(row)
+        out = config.GROUND_TRUTH_DIR / f"{uid}.json"
         if not path.exists():
             print(f"  MISSING   {uid} {row['org_name'][:44]}")
             continue
+        text = path.read_text(encoding="utf-8")
 
-        names = []
-        for line in path.read_text(encoding="utf-8").splitlines():
-            # Everything from the Section B marker onward is discarded --
-            # that is the bin, and leaving it in place is allowed.
-            if line.startswith("# --- SECTION B"):
-                break
-            line = line.strip()
-            if not line or line.startswith("#"):
-                continue
-            names.append(line)
+        # An unfinished worksheet must never become an answer key. Before the
+        # STATUS line existed, --check converted every worksheet it found, and
+        # the unedited pre-fill of the 20 new pages briefly became "ground
+        # truth" (2026-09-22). A stale key from such a run is removed here.
+        if worksheet_status(text) == "todo":
+            if out.exists():
+                out.unlink()
+            print(f"  todo      {uid} {row['org_name'][:44]}")
+            todo += 1
+            continue
 
-        # Duplicates in a worksheet mean the same firm gets counted twice.
-        dupes = {n for n in names if sum(1 for m in names
-                                         if m.casefold() == n.casefold()) > 1}
+        names = parse_worksheet(text)
 
-        out = config.GROUND_TRUTH_DIR / f"{uid}.json"
+        # A repeated name is normal: a directory lists the same firm once per
+        # site, as Industrieverband Klebstoffe does for Evonik in Darmstadt and
+        # in Marl (2026-09-25). Scoring compares sets, so the company counts
+        # once and a model that returns it once loses nothing. Both numbers are
+        # reported rather than warned about.
+        import benchmark
+        distinct = len({benchmark.match_key(n) for n in names
+                        if benchmark.match_key(n)})
+
         out.write_text(json.dumps({
             "id": uid, "org_name": row["org_name"], "url": row["url"],
             "companies": names,
         }, ensure_ascii=False, indent=2), encoding="utf-8")
 
-        warn = f"  ! {len(dupes)} duplicate(s)" if dupes else ""
+        note = ("" if distinct == len(names)
+                else f"  ({distinct} distinct, a name listed twice is one company)")
         print(f"  ok        {uid} {len(names):>4} companies  "
-              f"{row['org_name'][:38]}{warn}")
+              f"{row['org_name'][:38]}{note}")
         done += 1
 
-    print(f"\n  {done}/{len(SAMPLE_IDS)} worksheets complete")
+    print(f"\n  {done}/{len(SAMPLE_IDS)} worksheets done, {todo} still to label")
     if done == len(SAMPLE_IDS):
         print("  Ground truth ready -- Stage A can run.")
+    else:
+        print("  Stage A skips every page without an answer key until it is done.")
 
 
 if __name__ == "__main__":

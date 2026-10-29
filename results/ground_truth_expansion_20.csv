@@ -1,0 +1,21 @@
+id,network,dataset,layout,entries_approx,chunks,template_group,manager,why,url
+074,MAGNA BIO,ZIM,name links to company site,16,2,T01,"EurA AG, Ellwangen","the most common ZIM template: 11 near-identical EurA sites (replaces LocaSenZ, whose site went offline)",https://www.magnabio.de/%C3%BCber-uns/mitglieder/
+075,KliWaTex,ZIM,name links to company site,31,2,T02,"LUVO-IMPEX GmbH Ludwig & Volland, Oelsnitz",the textile ZIM template: 6 near-identical sites,https://www.kliwatex.de/unternehmen
+076,SmartFactory5G+,ZIM,name links to company site,18,1,T03,"embeteco GmbH & Co. KG, Rastede",the embeteco ZIM template: 4 sites,https://5gplus.net/partner/
+077,Mikroalgen,ZIM,name links to company site,16,3,T04,"T+ I Technologie- und InnovationsConsult GmbH, Berlin","the T+I ZIM template, split into 3 chunks",https://ti-consult.de/mikroalgen/
+078,AgrarCycle,ZIM,name links to company site,17,2,,Hochschule Osnabrück,"ZIM network run by a university, not a consultancy",https://www.hs-osnabrueck.de/zim-agrarcycle/netzwerkpartner/
+079,VDGH – Verband der Diagnostica-Industrie,private,name links to company site,104,2,,,large and split into chunks; some names have no link,https://www.vdgh.de/vdgh/mitgliedsunternehmen/
+080,en2x – Wirtschaftsverband Fuels und Energie e.V.,private,name links to company site,32,1,,,"clean medium list, energy sector",https://en2x.de/ueber-en2x/mitglieder/
+081,Wirtschaftsvereinigung Stahl,private,name links to company site,44,1,,,"replaces PROFIBUS, whose page holds 27 of 500+ members; clean medium list, steel",https://www.wvstahl.de/unternehmen/
+082,VOICE – Bundesverband der IT-Anwender e.V.,private,name links to company site,328,2,,,"the largest page in the sample, 2 chunks",https://voice-ev.org/verband/mitglieder/
+083,BIM,ZIM,name links to profile page,11,1,,"evermind GmbH, Leipzig",the only ZIM page that links names to profile pages,https://bim-technologie.de/partner/
+084,Open Source Business Alliance e.V. (OSBA),private,name links to profile page,40,1,,,"profile pages, IT sector",https://osb-alliance.de/mitglieder
+045,OptoNet,private,name links to profile page,115,1,,,names broken by invisible hyphens (Tech-no-lo-gie),https://optonet-jena.de/mitglieder/
+085,PlasticsEurope Deutschland e.V.,private,"plain text, no links",55,1,,,name and city on one line,https://plasticseurope.org/de/uber-uns/mitglieder/
+086,Industrieverband Klebstoffe e.V. (IVK),private,"plain text, no links",144,3,,,"long plain-text list, 3 chunks",https://www.klebstoffe.com/mitglieder/alle/
+087,Verband deutscher Pfandbriefbanken e.V. (vdp),private,name + separate 'Web' link,33,1,,,"separate 'Web' link; banks, not manufacturers",https://www.pfandbrief.de/mitglieder/
+088,"BVIZ – Bundesverband Innovations-, Technologie- u. Gründerzentren",private,name + separate 'Web' link,116,3,,,"separate 'Web' link, 3 chunks; innovation centres",https://www.innovationszentren.de/mitglieder-zentren/ordentliche/
+089,Verband Schmierstoff-Industrie e.V. (VSI),private,logo grid (name only in image),84,1,,,the only logo grid left in the pool,https://www.vsi-schmierstoffe.de/verband/mitgliederliste
+090,SprayCloth,ZIM,table,12,1,,"GEMIFO Gesellschaft für Mittelstandsförderung mbH, Großröhrsdorf","the only ZIM table, with broken name fragments",https://www.netzwerke-gemifo.de/spraycloth/index.php/en/
+091,DGM – Deutsche Gesellschaft für Materialkunde e.V.,private,table,112,1,,,a table inside an annual report page,https://dgm.de/jahresbericht/2025/mitglieder-und-vereinsleben/firmen-und-institutsmitgliedschaften
+092,Deutscher Schraubenverband e.V. (DSV),private,table,122,1,,,"replaces DSAG, whose page is 1 of 27+; a table with no pagination signs",https://www.schraubenverband.de/mitglieder

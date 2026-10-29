@@ -1,0 +1,172 @@
+# ============================================================================
+# GROUND TRUTH WORKSHEET  --  OptoNet e.V.
+#
+# URL : https://optonet-jena.de/mitglieder/
+# Saved copy (exactly what the model reads): results/html_cache/e2b22fee589fb5d7.html
+# Page: 609 words, ~1930 tokens
+#
+# WHAT TO DO
+#   1. Open the saved copy above (or the URL) in your browser, next to this file.
+#   2. SECTION A below is my best guess at the member companies.
+#      Read down it and DELETE any line that is not a member company.
+#   3. SECTION B is what I think is page furniture (menus, filters,
+#      categories). Skim it. If I wrongly binned a real company there,
+#      MOVE that line up into Section A.
+#   4. Then look at the WEBPAGE itself top to bottom. If a member is
+#      missing from Section A entirely, type it in. This step matters
+#      most -- it catches what my guessing missed. Only this page: do not
+#      follow "page 2" or "load more".
+#   5. Keep names EXACTLY as printed (keep GmbH, AG, umlauts), but leave out
+#      a city or address printed on the same line.
+#   6. Delete Section B entirely when you are done with it, or leave it --
+#      everything below the SECTION B marker is ignored either way.
+#   7. Save. Lines starting with # are ignored.
+#   8. When this page is finished, change TODO to DONE on the STATUS line
+#      below. --check turns only DONE worksheets into answer keys.
+#
+# When finished, run:  .venv/bin/python make_ground_truth.py --check
+# ============================================================================
+# STATUS: DONE
+
+# --- SECTION A: likely member companies (163) -------------------------
+
+5microns GmbH Ilmenau
+aarema Technologies GmbH
+ACM Coatings GmbH (subsidiary of Acktar Ltd.)
+Active Fiber Systems GmbH
+Advanced Micro-optics Technologies GmbH
+AIM Micro Systems GmbH
+Akkodis Germany Tech Experts GmbH
+Alpha Analytics UG (haftungsbeschränkt) & Co. KG
+Amphenol Sachsenkabel
+ams Sensors Germany GmbH
+AMX – Active Medical Xcellence GmbH
+asphericon GmbH
+aufweiss TECHNISCHE DOKUMENTATION
+Avance Academy GmbH
+B5-Optics UG
+Badische Industrie-Edelstein GmbH
+BATOP GmbH
+bm‑t beteiligungsmanagement thüringen gmbh
+Bonsack Präzisionstechnik GmbH
+Carl Zeiss AG
+CiS Forschungsinstitut für Mikrosensorik GmbH
+confovis GmbH
+DeepEn GmbH
+DERMALOG JENETRIC GmbH
+DOCTER OPTICS SE
+eCeramix GmbH
+Edmund Optics GmbH
+EQUIcon Software GmbH Jena
+ERA Group
+Ernst-Abbe-Hochschule Jena
+FabuLens GmbH
+FBGS Technologies GmbH
+Feinoptik Meyer
+FERCHAU GmbH
+fiberware Generalunternehmen für Nachrichtentechnik GmbH
+Fibotec Fiberoptics GmbH
+FluIDect GmbH
+Fraunhofer-Institut für Angewandte Optik und Feinmechanik IOF
+Fraunhofer-Institut für Keramische Technologien und Systeme IKTS
+Fraunhofer-Institut für Optronik, Systemtechnik und Bildauswertung IOSB-AST
+Friedrich-Schiller-Universität Jena
+GBneuhaus GmbH
+Gesellschaft für Fertigungstechnik und Entwicklung e.V.
+Gesellschaft zur Förderung von Wissenschaft und Wirtschaft e.V.
+Gitterwerk GmbH
+GÖPEL electronic GmbH
+GRINTECH GmbH
+Günter-Köhler-Institut für Fügetechnik und Werkstoffprüfung GmbH
+HEADBORNE.AI GmbH
+heracle GmbH
+HETEROMERGE GmbH
+HID Technologies GmbH
+Huawei Technologies Düsseldorf GmbH
+IDloop GmbH
+Illuminatio Solutions GmbH
+IMMS Institut für Mikroelektronik- und Mechatronik-Systeme gemeinnützige GmbH (IMMS GmbH)
+Indigo Optical Systems GmbH
+INNOCISE GmbH
+INNOMAN GmbH
+INNOVENT e.V.
+IQS GmbH
+Jabil Optics Germany GmbH
+JAT – Jenaer Antriebstechnik GmbH
+Jenaer Bildungszentrum gGmbH
+JenaWirtschaft Wirtschaftsförderungsgesellschaft mbH
+JenControl GmbH
+JENOPTIK AG
+JETI Technische Instrumente GmbH
+Joya Team Phoenix LTD
+K‑Optics
+KLA (Laser Imaging Systems GmbH)
+Labor- und Reinraumtechnik Arnsdorf GmbH
+LaCoSys Laser Control Systems GmbH
+Laserverbund Berlin-Brandenburg e.V.
+LASOS Lasertechnik GmbH
+LAYERTEC GmbH
+Leibniz-Institut für Photonische Technologien e.V.
+Leistungselektronik JENA GmbH
+LensTec Jena GmbH
+LightTrans International GmbH
+LLT Applikation GmbH
+Löslein Solutions GmbH | SAPPHCOM
+LUCAS instruments GmbH
+Machinix Ltd.
+Mahr GmbH
+Matesy GmbH
+Mecademic Inc.
+Messe Erfurt GmbH
+Michael Gebauer Personalberatung
+Micro-Hybrid Electronic GmbH
+microfluidic ChipShop GmbH
+MINT Gera GmbH
+nanoplus Nanosystems and Technologies GmbH
+Navimatix GmbH
+openUC2 GmbH
+OPTEC Jena GmbH
+Optics Balzers Jena GmbH
+OPTIKRON GmbH
+optiX fab GmbH
+OQmented GmbH
+ORAFOL Fresnel Optics GmbH
+orbit Sensorfusion GmbH
+ORISA Software GmbH
+Orizon GmbH
+PartPrinZ GmbH
+PERCEPTEC GmbH
+Photonics Austria
+Photonics Precision Engineering GmbH
+piezosystem jena GmbH
+POG Präzisionsoptik Gera GmbH
+PVA TePla MPS GmbH
+PWB encoders GmbH
+Quantum Optics Jena GmbH
+RayVen
+RhySearch
+Robust AO GmbH
+Schneider Engineering Solutions GmbH
+ShapeFab GmbH
+Silicon Saxony e.V.
+siOPTICA GmbH
+SIOS Meßtechnik GmbH
+SP Training & Consulting GmbH
+SPACEOPTIX GmbH
+Stiftung Deutsches Optisches Museum (D.O.M.)
+Technische Universität Ilmenau
+Technologie- und Innovationspark Jena GmbH
+Technology Recruiting Experts GmbH
+TechnoTeam Bildverarbeitung GmbH
+Trionplas Technologies GmbH
+Universitätsklinikum Jena
+UX2B GmbH
+Vision & Control GmbH
+Vistec Electron Beam GmbH
+VITRON Spezialwerkstoffe GmbH
+WEINERT Fiber Optics GmbH
+X‑FAB Global Services GmbH
+Zellatec Ätz- und Lasertechnik GmbH
+
+# --- SECTION B: probably page furniture (8) -----------------------
+# Everything below this line is IGNORED. Move anything real up into Section A.

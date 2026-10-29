@@ -1,0 +1,97 @@
+# ============================================================================
+# GROUND TRUTH WORKSHEET  --  PlasticsEurope Deutschland e.V.
+#
+# URL : https://plasticseurope.org/de/uber-uns/mitglieder/
+# Saved copy (exactly what the model reads): results/html_cache/bbf30b719ceae2f4.html
+# Page: 548 words, ~1479 tokens
+#
+# WHAT TO DO
+#   1. Open the saved copy above (or the URL) in your browser, next to this file.
+#   2. SECTION A below is my best guess at the member companies.
+#      Read down it and DELETE any line that is not a member company.
+#   3. SECTION B is what I think is page furniture (menus, filters,
+#      categories). Skim it. If I wrongly binned a real company there,
+#      MOVE that line up into Section A.
+#   4. Then look at the WEBPAGE itself top to bottom. If a member is
+#      missing from Section A entirely, type it in. This step matters
+#      most -- it catches what my guessing missed. Only this page: do not
+#      follow "page 2" or "load more".
+#   5. Keep names EXACTLY as printed (keep GmbH, AG, umlauts), but leave out
+#      a city or address printed on the same line.
+#   6. Delete Section B entirely when you are done with it, or leave it --
+#      everything below the SECTION B marker is ignored either way.
+#   7. Save. Lines starting with # are ignored.
+#   8. When this page is finished, change TODO to DONE on the STATUS line
+#      below. --check turns only DONE worksheets into answer keys.
+#
+# When finished, run:  .venv/bin/python make_ground_truth.py --check
+# ============================================================================
+# STATUS: DONE
+
+# --- SECTION A: likely member companies (60) -------------------------
+
+Akdeniz Chemson Additives GmbH, Köln
+Allod Werkstoff GmbH & Co. KG, Burgbernheim
+ALTANA AG, Wesel
+ARCUS Greencycling Technologies GmbH, Ludwigsburg
+Arkema GmbH, Düsseldorf
+Asahi Kasei Europe GmbH, Düsseldorf
+Baerlocher Germany GmbH & Co. KG, München
+BASF SE, Ludwigshafen
+BASF Performance Polymers GmbH, Rudolstadt
+BASF Personal Care and Nutrition, Düsseldorf/Monheim
+Basell Polyolefine GmbH, Wesseling
+Borealis Polymer GmbH, Burghausen
+Brenntag SE, Essen
+Cabot GmbH, Rheinfelden
+CARBOLIQ GmbH, Remscheid
+Celanese Sales Germany GmbH, Sulzbach
+Clariant Plastics & Coatings (Deutschland) GmbH, Gersthofen
+Covestro Deutschland AG, Leverkusen
+Deutsche Infineum GmbH & Co. KG, Köln
+Dow Deutschland Anlagengesellschaft, Wiesbaden
+Dow Olefinverbund GmbH, Merseburg
+DuPont de Nemours (Deutschland) GmbH, Neu Isenburg
+Emery Oleochemicals GmbH, Düsseldorf
+Evonik Industries AG, Hanau
+ExxonMobil Chemical Central Europe A division of ESSO Deutschland GmbH, Köln
+Gustav Grolman GmbH & Co. KG, Neuss
+Huckfeldt & Thorlichen GmbH & Co., Tornesch
+Huntsman Advanced Materials (Deutschland) GmbH & Co., Bergkamen
+IKA Innovative Kunststoffaufbereitung GmbH & Co. KG, Wolfen
+Ineos Manufacturing Deutschland GmbH, Köln
+INOVYN Deutschland GmbH, Rheinberg
+Kisuma Chemicals BV, Veendam
+Lanxess Organometallics GmbH, Köln
+Lehmann & Voss & Co. KG, Hamburg
+matterr GmbH, Braunschweig
+Nabaltec AG, Schwandorf
+Neste Germany GmbH, Düsseldorf
+Otto Krahn Group, Hamburg
+Peter Greven GmbH & Co. KG, Bad Münstereifel
+PLIXXENT Holding GmbH, Hamburg
+Polymaterials AG, Kaufbeuren
+Rain Carbon Germany GmbH, Duisburg
+Röhm GmbH, Darmstadt
+Sabic Holding Deutschland GmbH, Gelsenkirchen
+Sasol Germany GmbH, Hamburg
+Syensqo Specialty Polymers Germany GmbH, Düsseldorf
+Trinseo Deutschland GmbH, Schkopau
+UL International Germany GmbH, Krefeld
+uppolluX GmbH & Co. KG, Tuttlingen
+Versalis Deutschland GmbH, Eschborn
+Vestolit GmbH, Marl
+Wacker Chemie AG, München
+Westlake Vinnolit GmbH & Co. KG, Ismaning
+Innonet Kunststoff Technologiezentrum Horb GmbH & Co. KG
+kunststoffland NRW e. V.
+Kunststoffnetzwerk Ems-Achse, Nordhorn
+Norddeutsches Kunststoffnetzwerk NORKUN
+PlasticsEurope Austria
+Polykum e.V. Fördergemeinschaft für Polymerentwicklung und Kunststofftechnik in Mitteldeutschland
+TÜV Rheinland LGA Products GmbH, Nürnberg
+WAK – Wissenschaftlicher Arbeitskreis Kunststofftechnik
+WIP-Kunststoffe e. V.
+
+# --- SECTION B: probably page furniture (47) -----------------------
+# Everything below this line is IGNORED. Move anything real up into Section A.

@@ -1,0 +1,31 @@
+id,network,url,funding,layout,companies,size_band,words,chunks,website_on_page,profile_only,no_link,round
+039,Life Science Nord e.V.,https://www.lifesciencenord.de/de/mitglieder/member-companies.html,Private funded,name links to profile page,52,medium (30-99),185,1,0,51,1,1
+043,NMWP.NRW e.V.,https://verein.nmwp.nrw/mitglieder,Technical association,logo grid,49,medium (30-99),436,1,24,18,7,1
+009,BDEW Bundesverband der Energie- und Wasserwirtschaft e.V.,https://www.bdew.de/verband/mitglieder/mitgliederuebersicht/?letter=A,Private funded,name links to company site,43,medium (30-99),322,1,39,2,2,1
+012,Bundesverband Medizintechnologie e.V. (BVMed),https://www.bvmed.de/verband/mitglieder,Private funded,"plain text, no links",50,medium (30-99),398,1,0,0,50,1
+004,Automotive Nordwest e.V.,https://www.automotive-nordwest.de/mitgliederliste/,Technical association,name links to profile page,33,medium (30-99),400,1,0,32,1,1
+032,InnoZent OWL e.V.,https://www.innozent-owl.de/netzwerk/mitglieder/,Technical association,"plain text, no links",79,medium (30-99),419,1,0,0,79,1
+040,Medical Valley EMN e.V.,https://www.medical-valley-emn.de/ueber-uns/mitglieder-partner/,Private funded,"plain text, no links",20,small (<30),714,1,0,0,20,1
+025,German Water Partnership e.V.,https://germanwaterpartnership.de/mitglieder/,Private funded,name links to profile page,14,small (<30),1010,1,0,12,2,1
+005,automotive thüringen e.V.,https://www.automotive-thueringen.de/mitglieder/mitgliedsunternehmen/,Technical association,name + separate Web link,124,large (100+),2080,2,122,0,2,1
+050,SPECTARIS e.V.,https://www.spectaris.de/verband/mitglieder,Private funded,name + separate Web link,296,large (100+),4203,3,295,0,1,1
+074,MAGNA BIO,https://www.magnabio.de/%C3%BCber-uns/mitglieder/,ZIM network,name links to company site,23,small (<30),3141,2,0,0,23,2
+075,KliWaTex,https://www.kliwatex.de/unternehmen,ZIM network,name links to company site,18,small (<30),3908,2,0,0,18,2
+076,SmartFactory5G+,https://5gplus.net/partner/,ZIM network,name links to company site,14,small (<30),389,1,0,14,0,2
+077,Mikroalgen,https://ti-consult.de/mikroalgen/,ZIM network,name links to company site,37,medium (30-99),4259,3,0,0,37,2
+078,AgrarCycle,https://www.hs-osnabrueck.de/zim-agrarcycle/netzwerkpartner/,ZIM network,name links to company site,20,small (<30),2143,2,0,19,1,2
+079,VDGH – Verband der Diagnostica-Industrie,https://www.vdgh.de/vdgh/mitgliedsunternehmen/,Private funded,name links to company site,112,large (100+),2122,2,109,0,3,2
+080,en2x – Wirtschaftsverband Fuels und Energie e.V.,https://en2x.de/ueber-en2x/mitglieder/,Private funded,name links to company site,33,medium (30-99),273,1,29,0,4,2
+081,Wirtschaftsvereinigung Stahl,https://www.wvstahl.de/unternehmen/,Private funded,name links to company site,44,medium (30-99),353,1,0,0,44,2
+082,VOICE – Bundesverband der IT-Anwender e.V.,https://voice-ev.org/verband/mitglieder/,Private funded,name links to company site,385,large (100+),1975,2,360,2,23,2
+083,BIM,https://bim-technologie.de/partner/,ZIM network,name links to profile page,16,small (<30),648,1,0,16,0,2
+084,Open Source Business Alliance e.V. (OSBA),https://osb-alliance.de/mitglieder,Private funded,name links to profile page,192,large (100+),2914,2,0,183,9,2
+045,OptoNet e.V.,https://optonet-jena.de/mitglieder/,Private funded,name links to profile page,137,large (100+),607,1,1,132,4,2
+085,PlasticsEurope Deutschland e.V.,https://plasticseurope.org/de/uber-uns/mitglieder/,Private funded,"plain text, no links",62,medium (30-99),548,1,0,0,62,2
+086,Industrieverband Klebstoffe e.V. (IVK),https://www.klebstoffe.com/mitglieder/alle/,Private funded,"plain text, no links",157,large (100+),4967,3,0,0,157,2
+087,Verband deutscher Pfandbriefbanken e.V. (vdp),https://www.pfandbrief.de/mitglieder/,Private funded,name + separate Web link,49,medium (30-99),706,1,49,0,0,2
+088,"BVIZ – Bundesverband Innovations-, Technologie- u. Gründerzentren",https://www.innovationszentren.de/mitglieder-zentren/ordentliche/,Private funded,name links to company site,110,large (100+),4014,3,106,1,3,2
+089,Verband Schmierstoff-Industrie e.V. (VSI),https://www.vsi-schmierstoffe.de/verband/mitgliederliste,Private funded,logo grid,90,medium (30-99),1231,1,0,0,90,2
+090,SprayCloth,https://www.netzwerke-gemifo.de/spraycloth/index.php/en/,ZIM network,table,15,small (<30),325,1,0,0,15,2
+091,DGM – Deutsche Gesellschaft für Materialkunde e.V.,https://dgm.de/jahresbericht/2025/mitglieder-und-vereinsleben/firmen-und-institutsmitgliedschaften,Private funded,table,221,large (100+),1225,1,0,0,221,2
+092,Deutscher Schraubenverband e.V. (DSV),https://www.schraubenverband.de/mitglieder,Private funded,table,143,large (100+),1449,1,0,0,143,2

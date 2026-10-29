@@ -1,0 +1,166 @@
+﻿url_id,org_name,company,query,found_url,status,evidence,candidates_seen
+004,Automotive Nordwest e.V.,Goldbeck Nord GmbH,Goldbeck Nord GmbH Firma Webseite,https://www.goldbeck.de/standort/hamburg,domain_match,domain~goldbeck,1
+005,automotive thüringen e.V.,Brunel GmbH – neue Adresse ab,Brunel GmbH – neue Adresse ab Firma Webseite,https://www.brunel.net/de-de,verified,"domain~brunel, page~brunel",1
+005,automotive thüringen e.V.,TARGO Leasing GmbH,TARGO Leasing GmbH Firma Webseite,https://www.targobank.de/de/firmenkunden/leasing/index.html,verified,"domain~targo, page~targo",1
+009,BDEW Bundesverband der Energie- und Wasserwirtschaft e.V.,Allego GmbH,Allego GmbH Firma Webseite,https://www.allego.eu/de/,verified,"domain~allego, page~allego",1
+009,BDEW Bundesverband der Energie- und Wasserwirtschaft e.V.,ANE GmbH & Co. KG,ANE GmbH & Co. KG Firma Webseite,,unverified,,3
+012,Bundesverband Medizintechnologie e.V. (BVMed),1stQ Deutschland GmbH,1stQ Deutschland GmbH Firma Webseite,https://www.1stq.de/de/,verified,"domain~1stq, page~1stq",1
+012,Bundesverband Medizintechnologie e.V. (BVMed),A. Höfer GmbH,A. Höfer GmbH Firma Webseite,,unverified,,5
+012,Bundesverband Medizintechnologie e.V. (BVMed),aap Implantate AG,aap Implantate AG Firma Webseite,https://www.aap.de/,page_only,page~implantate,2
+012,Bundesverband Medizintechnologie e.V. (BVMed),Abbott GmbH,Abbott GmbH Firma Webseite,https://www.de.abbott/,page_only,page~abbott,4
+012,Bundesverband Medizintechnologie e.V. (BVMed),Abbott Medical GmbH,Abbott Medical GmbH Firma Webseite,https://www.abbott.com/de-de/homepage,verified,"domain~abbott, page~abbott",1
+012,Bundesverband Medizintechnologie e.V. (BVMed),Abena GmbH,Abena GmbH Firma Webseite,https://www.abena.de/,verified,"domain~abena, page~abena",1
+012,Bundesverband Medizintechnologie e.V. (BVMed),Abiomed Europe GmbH,Abiomed Europe GmbH Firma Webseite,,no_result,,2
+012,Bundesverband Medizintechnologie e.V. (BVMed),Acandis GmbH,Acandis GmbH Firma Webseite,https://acandis.com/,verified,"domain~acandis, page~acandis",1
+012,Bundesverband Medizintechnologie e.V. (BVMed),aescoLOGIC GmbH,aescoLOGIC GmbH Firma Webseite,https://www.aescologic.de/?id=145,verified,"domain~aescologic, page~aescologic",1
+012,Bundesverband Medizintechnologie e.V. (BVMed),Aesculap AG,Aesculap AG Firma Webseite,https://www.bkk-bba.de/unternehmen/traegerunternehmen,page_only,page~aesculap,5
+012,Bundesverband Medizintechnologie e.V. (BVMed),ai6 Solutions GmbH,ai6 Solutions GmbH Firma Webseite,,unverified,,3
+012,Bundesverband Medizintechnologie e.V. (BVMed),AKANNI Healthcare GmbH,AKANNI Healthcare GmbH Firma Webseite,https://akanni.de/,verified,"domain~akanni, page~healthcare",1
+012,Bundesverband Medizintechnologie e.V. (BVMed),AKRUS GmbH & Co.KG,AKRUS GmbH & Co.KG Firma Webseite,https://www.akrus.de/,verified,"domain~akrus, page~akrus",1
+012,Bundesverband Medizintechnologie e.V. (BVMed),aktivmed GmbH,aktivmed GmbH Firma Webseite,https://aktivmed.de/,verified,"domain~aktivmed, page~aktivmed",1
+012,Bundesverband Medizintechnologie e.V. (BVMed),ALCON Deutschland GmbH,ALCON Deutschland GmbH Firma Webseite,https://www.alcon.com/de-DE/impressum/,verified,"domain~alcon, page~alcon",1
+012,Bundesverband Medizintechnologie e.V. (BVMed),AllCON GmbH,AllCON GmbH Firma Webseite,https://allcon.de/,verified,"domain~allcon, page~allcon",1
+012,Bundesverband Medizintechnologie e.V. (BVMed),ALMO-Erzeugnisse GmbH,ALMO-Erzeugnisse GmbH Firma Webseite,https://www.almo-erzeugnisse.de/,verified,"domain~erzeugnisse, page~erzeugnisse",1
+012,Bundesverband Medizintechnologie e.V. (BVMed),Ambu GmbH,Ambu GmbH Firma Webseite,https://www.ambu.de/,verified,"domain~ambu, page~ambu",1
+012,Bundesverband Medizintechnologie e.V. (BVMed),AMEFA GmbH,AMEFA GmbH Firma Webseite,,unverified,,2
+012,Bundesverband Medizintechnologie e.V. (BVMed),amg International GmbH,amg International GmbH Firma Webseite,,unverified,,5
+012,Bundesverband Medizintechnologie e.V. (BVMed),AMPLITUDE GmbH,AMPLITUDE GmbH Firma Webseite,https://www.amplitude-ortho.com/de/ueber-amplitude,verified,"domain~amplitude, page~amplitude",1
+012,Bundesverband Medizintechnologie e.V. (BVMed),Andreas Fahl Medizintechnik-Vertrieb GmbH,Andreas Fahl Medizintechnik-Vertrieb GmbH Firma Webseite,https://www.fahl.com/de/unternehmen,verified,"domain~fahl, page~medizintechnik",1
+012,Bundesverband Medizintechnologie e.V. (BVMed),Ansell GmbH,Ansell GmbH Firma Webseite,https://www.ansell.com/de/de,domain_match,domain~ansell,1
+012,Bundesverband Medizintechnologie e.V. (BVMed),Arjo Deutschland GmbH,Arjo Deutschland GmbH Firma Webseite,https://www.arjo.com/de-de/,verified,"domain~arjo, page~arjo",1
+012,Bundesverband Medizintechnologie e.V. (BVMed),Arvato Supply Chain Solutions SE,Arvato Supply Chain Solutions SE Firma Webseite,https://arvato.com/,verified,"domain~arvato, page~arvato",1
+012,Bundesverband Medizintechnologie e.V. (BVMed),ASSAmed GmbH,ASSAmed GmbH Firma Webseite,https://www.assamed.de/,verified,"domain~assamed, page~assamed",1
+012,Bundesverband Medizintechnologie e.V. (BVMed),ATMOS MedizinTechnik GmbH & Co. KG,ATMOS MedizinTechnik GmbH & Co. KG Firma Webseite,https://atmosmed.com/,verified,"domain~atmos, page~medizintechnik",1
+012,Bundesverband Medizintechnologie e.V. (BVMed),Attends GmbH,Attends GmbH Firma Webseite,https://www.attends.de/,verified,"domain~attends, page~attends",1
+012,Bundesverband Medizintechnologie e.V. (BVMed),audibene GmbH,audibene GmbH Firma Webseite,https://www.audibene.de/?srsltid=AfmBOopk_XAekM9jpsHceJNFdXIm21lU0NntnYTiERMCHPxbu8vBhVMn,verified,"domain~audibene, page~audibene",1
+012,Bundesverband Medizintechnologie e.V. (BVMed),auric-direct GmbH,auric-direct GmbH Firma Webseite,https://www.auric.de/ueber-uns/,verified,"domain~auric, page~direct",1
+012,Bundesverband Medizintechnologie e.V. (BVMed),Avanos Medical GmbH,Avanos Medical GmbH Firma Webseite,https://avanos.de/,verified,"domain~avanos, page~avanos",1
+012,Bundesverband Medizintechnologie e.V. (BVMed),B. Braun Avitum AG,B. Braun Avitum AG Firma Webseite,https://www.bbraun.de/,verified,"domain~braun, page~braun",1
+012,Bundesverband Medizintechnologie e.V. (BVMed),B. Braun Avitum Saxonia GmbH,B. Braun Avitum Saxonia GmbH Firma Webseite,https://www.bbraun.de/,verified,"domain~braun, page~braun",1
+012,Bundesverband Medizintechnologie e.V. (BVMed),B. Braun Deutschland GmbH & Co. KG,B. Braun Deutschland GmbH & Co. KG Firma Webseite,https://www.bbraun.de/de/ueber-uns/unternehmen/b-braun-deutschland.html,verified,"domain~braun, page~braun",1
+012,Bundesverband Medizintechnologie e.V. (BVMed),B. Braun Melsungen AG,B. Braun Melsungen AG Firma Webseite,https://www.bbraun.de/,verified,"domain~braun, page~braun",1
+012,Bundesverband Medizintechnologie e.V. (BVMed),B. Braun SE,B. Braun SE Firma Webseite,https://www.bbraun.com/,verified,"domain~braun, page~braun",1
+012,Bundesverband Medizintechnologie e.V. (BVMed),B. Braun Surgical GmbH,B. Braun Surgical GmbH Firma Webseite,https://www.bbraun.com/en.html,verified,"domain~braun, page~surgical",1
+012,Bundesverband Medizintechnologie e.V. (BVMed),Bausch & Lomb GmbH,Bausch & Lomb GmbH Firma Webseite,https://www.bausch-lomb.de/,verified,"domain~bausch, page~bausch",1
+012,Bundesverband Medizintechnologie e.V. (BVMed),Baxter Deutschland GmbH,Baxter Deutschland GmbH Firma Webseite,https://www.baxter.de/de/kontakt,verified,"domain~baxter, page~baxter",1
+012,Bundesverband Medizintechnologie e.V. (BVMed),BAYOOMED GmbH,BAYOOMED GmbH Firma Webseite,https://www.bayoomed.com/,verified,"domain~bayoomed, page~bayoomed",1
+012,Bundesverband Medizintechnologie e.V. (BVMed),BD Becton Dickinson GmbH,BD Becton Dickinson GmbH Firma Webseite,https://investors.bd.com/,page_only,page~dickinson,3
+012,Bundesverband Medizintechnologie e.V. (BVMed),Beaver-Visitec International (BVI),Beaver-Visitec International (BVI) Firma Webseite,,unverified,,5
+012,Bundesverband Medizintechnologie e.V. (BVMed),Beiersdorf AG,Beiersdorf AG Firma Webseite,https://www.beiersdorf.de/,verified,"domain~beiersdorf, page~beiersdorf",1
+012,Bundesverband Medizintechnologie e.V. (BVMed),Bentley InnoMed GmbH,Bentley InnoMed GmbH Firma Webseite,,unverified,,5
+012,Bundesverband Medizintechnologie e.V. (BVMed),Berlin Heart GmbH,Berlin Heart GmbH Firma Webseite,https://www.berlinheart.de/,domain_match,domain~berlin,1
+012,Bundesverband Medizintechnologie e.V. (BVMed),Best Care GmbH,Best Care GmbH Firma Webseite,https://ehringshausen.best-care-gmbh.de/kontakt/,page_only,page~best,5
+012,Bundesverband Medizintechnologie e.V. (BVMed),betaMed GmbH,betaMed GmbH Firma Webseite,https://www.betamed.de/,verified,"domain~betamed, page~betamed",1
+012,Bundesverband Medizintechnologie e.V. (BVMed),BGS Beta-Gamma-Service GmbH & Co. KG,BGS Beta-Gamma-Service GmbH & Co. KG Firma Webseite,https://bgs.eu/en/,page_only,page~gamma,3
+012,Bundesverband Medizintechnologie e.V. (BVMed),BioCer Entwicklungs GmbH,BioCer Entwicklungs GmbH Firma Webseite,https://www.biocer-gmbh.de/,verified,"domain~biocer, page~entwicklungs",1
+012,Bundesverband Medizintechnologie e.V. (BVMed),Biocomposites GmbH,Biocomposites GmbH Firma Webseite,https://biocomposites.com/de/?change_language=true,verified,"domain~biocomposites, page~biocomposites",1
+025,German Water Partnership e.V.,MolAquaTech GmbH,MolAquaTech GmbH Firma Webseite,https://molaquatech.com/,verified,"domain~molaquatech, page~molaquatech",1
+025,German Water Partnership e.V.,DHI WASY GmbH,DHI WASY GmbH Firma Webseite,https://www.wasy.de/,domain_match,domain~wasy,1
+032,InnoZent OWL e.V.,AEU Tech GmbH,AEU Tech GmbH Firma Webseite,https://aeu-tech.com/,verified,"domain~tech, page~tech",1
+032,InnoZent OWL e.V.,Artgerecht Werbeagentur GmbH,Artgerecht Werbeagentur GmbH Firma Webseite,https://www.artgerecht.de/,verified,"domain~artgerecht, page~werbeagentur",1
+032,InnoZent OWL e.V.,"Aßmann, Mike | Business // Motivation // Personality","Aßmann, Mike | Business // Motivation // Personality Firma Webseite",,no_result,,2
+032,InnoZent OWL e.V.,azur - Allianz Zukunft Reifen,azur - Allianz Zukunft Reifen Firma Webseite,https://azur-netzwerk.de/ueber-uns/,verified,"domain~azur, page~allianz",1
+032,InnoZent OWL e.V.,BEDEM,BEDEM Firma Webseite,https://www.bedem.de/,verified,"domain~bedem, page~bedem",1
+032,InnoZent OWL e.V.,bib International College,bib International College Firma Webseite,https://www.bib.de/campus-paderborn/,page_only,page~college,3
+032,InnoZent OWL e.V.,BREMER West GmbH & Co. KG,BREMER West GmbH & Co. KG Firma Webseite,https://bremerbau.de/de/,verified,"domain~bremer, page~bremer",1
+032,InnoZent OWL e.V.,BSA Kunststofftechnik GmbH,BSA Kunststofftechnik GmbH Firma Webseite,https://www.bsa-kunststofftechnik.de/,verified,"domain~kunststofftechnik, page~kunststofftechnik",1
+032,InnoZent OWL e.V.,Bundesverband Mittelständische Wirtschaft (BVMW),Bundesverband Mittelständische Wirtschaft (BVMW) Firma Webseite,https://www.bvmw.de/,verified,"domain~bvmw, page~wirtschaft",1
+032,InnoZent OWL e.V.,"christmann informationstechnik + medien GmbH & Co. KG, Ilsede","christmann informationstechnik + medien GmbH & Co. KG, Ilsede Firma Webseite",https://christmann.info/,domain_match,domain~christmann,1
+032,InnoZent OWL e.V.,C-LAB,C-LAB Firma Webseite,,unverified,,5
+032,InnoZent OWL e.V.,code-x GmbH,code-x GmbH Firma Webseite,https://www.code-x.de/digitales-marketing/suchmaschinenoptimierung/,verified,"domain~code, page~code",1
+032,InnoZent OWL e.V.,Condor MedTec,Condor MedTec Firma Webseite,https://condor-medtec.de/,verified,"domain~condor, page~condor",1
+032,InnoZent OWL e.V.,Creos Lernideen und Beratung GmbH,Creos Lernideen und Beratung GmbH Firma Webseite,https://www.creos.de/,verified,"domain~creos, page~lernideen",1
+032,InnoZent OWL e.V.,CTDI Schloss Holte GmbH,CTDI Schloss Holte GmbH Firma Webseite,https://www1.ctdi.eu/,page_only,page~ctdi,5
+032,InnoZent OWL e.V.,DBS Training & Consulting GmbH,DBS Training & Consulting GmbH Firma Webseite,https://dbs-consulting.net/,page_only,page~training,4
+032,InnoZent OWL e.V.,Delta Media GmbH,Delta Media GmbH Firma Webseite,https://www.deltamedia.de/kontakt/,verified,"domain~delta, page~delta",1
+032,InnoZent OWL e.V.,Edacentrum e.V.,Edacentrum e.V. Firma Webseite,https://www.edacentrum.de/,verified,"domain~edacentrum, page~edacentrum",1
+032,InnoZent OWL e.V.,Erfinderclub Paderborn e.V,Erfinderclub Paderborn e.V Firma Webseite,https://erfinderclub-pb.de/,verified,"domain~erfinderclub, page~erfinderclub",1
+032,InnoZent OWL e.V.,FINDIQ GmbH,FINDIQ GmbH Firma Webseite,https://findiq.de/,verified,"domain~findiq, page~findiq",1
+032,InnoZent OWL e.V.,Fischer Panda GmbH,Fischer Panda GmbH Firma Webseite,https://www.fischerpanda.de/,verified,"domain~fischer, page~fischer",1
+032,InnoZent OWL e.V.,Fraunhofer ENAS-ASE,Fraunhofer ENAS-ASE Firma Webseite,https://www.enas.fraunhofer.de/,verified,"domain~enas, page~fraunhofer",1
+032,InnoZent OWL e.V.,Fraunhofer IEM,Fraunhofer IEM Firma Webseite,https://www.fraunhofer.de/,verified,"domain~fraunhofer, page~fraunhofer",3
+032,InnoZent OWL e.V.,Fraunhofer IOSB-INA,Fraunhofer IOSB-INA Firma Webseite,https://www.iosb-ina.fraunhofer.de/,verified,"domain~iosb, page~fraunhofer",1
+032,InnoZent OWL e.V.,Freund Maschinenfabrik GmbH & Co. KG,Freund Maschinenfabrik GmbH & Co. KG Firma Webseite,,no_result,,1
+032,InnoZent OWL e.V.,HEGGEMANN AG,HEGGEMANN AG Firma Webseite,http://www.heggemann.com/de/,domain_match,domain~heggemann,1
+032,InnoZent OWL e.V.,Ingenieurbüro Andreas Heidemann GmbH & Co.KG,Ingenieurbüro Andreas Heidemann GmbH & Co.KG Firma Webseite,,no_result,,1
+032,InnoZent OWL e.V.,helectronics gmbh,helectronics gmbh Firma Webseite,,unverified,,3
+032,InnoZent OWL e.V.,HellwegWind GmbH,HellwegWind GmbH Firma Webseite,https://hellwegwind.de/kontakt/,verified,"domain~hellwegwind, page~hellwegwind",1
+032,InnoZent OWL e.V.,Hochschule Bielefeld (HSBI),Hochschule Bielefeld (HSBI) Firma Webseite,https://www.chancenportal-bielefeld.de/anbieter/info/hochschule-bielefeld-hsbi,domain_match,domain~bielefeld,3
+032,InnoZent OWL e.V.,Industrieanlagen-Betriebsgesellschaft mbH,Industrieanlagen-Betriebsgesellschaft mbH Firma Webseite,https://www.lobbyregister.bundestag.de/suche/R002444,page_only,page~industrieanlagen,1
+032,InnoZent OWL e.V.,IANUS Simulation GmbH,IANUS Simulation GmbH Firma Webseite,https://ianus-simulation.de/,verified,"domain~simulation, page~simulation",1
+032,InnoZent OWL e.V.,IHK Ostwestfalen zu Bielefeld,IHK Ostwestfalen zu Bielefeld Firma Webseite,https://www.ostwestfalen.ihk.de/,verified,"domain~ostwestfalen, page~ostwestfalen",1
+032,InnoZent OWL e.V.,Innovative Card Systems GmbH,Innovative Card Systems GmbH Firma Webseite,,no_result,,1
+032,InnoZent OWL e.V.,insensiv GmbH,insensiv GmbH Firma Webseite,https://insensiv.de/,verified,"domain~insensiv, page~insensiv",1
+032,InnoZent OWL e.V.,"Ising, Thorsten | Social Media, Online Marketing, Digitale Kommunikation, Schlangen","Ising, Thorsten | Social Media, Online Marketing, Digitale Kommunikation, Schlangen Firma Webseite",https://www.thorsten-ising.com/,verified,"domain~thorsten, page~kommunikation",1
+032,InnoZent OWL e.V.,Herbert Kannegiesser GmbH,Herbert Kannegiesser GmbH Firma Webseite,https://www.kannegiesser.com/de/de/index.html,verified,"domain~kannegiesser, page~kannegiesser",1
+032,InnoZent OWL e.V.,Kreishandwerkerschaft Paderborn-Lippe,Kreishandwerkerschaft Paderborn-Lippe Firma Webseite,https://www.kh-online.de/,page_only,page~kreishandwerkerschaft,5
+032,InnoZent OWL e.V.,mechOnics ag,mechOnics ag Firma Webseite,https://www.mechonics.de/de/unternehmen/,verified,"domain~mechonics, page~mechonics",2
+032,InnoZent OWL e.V.,Frank Michna | Kommunikationsberatung | Websites | Shops  | Social Media | KI-Anwendungsberatung,Frank Michna | Kommunikationsberatung | Websites | Shops  | Social Media | KI-Anwendungsberatung Firma Webseite,https://www.frank-michna.de/,verified,"domain~michna, page~kommunikationsberatung",1
+032,InnoZent OWL e.V.,MöllerFlex GmbH,MöllerFlex GmbH Firma Webseite,,unverified,,1
+032,InnoZent OWL e.V.,MSF-Vathauer Antriebstechnik GmbH,MSF-Vathauer Antriebstechnik GmbH Firma Webseite,https://www.msf-technik.de/,page_only,page~antriebstechnik,5
+032,InnoZent OWL e.V.,myconsult GmbH,myconsult GmbH Firma Webseite,https://myconsult.de/,verified,"domain~myconsult, page~myconsult",1
+032,InnoZent OWL e.V.,Nuromedia GmbH,Nuromedia GmbH Firma Webseite,https://www.nuromedia.com/project/digi-eat/,verified,"domain~nuromedia, page~nuromedia",2
+032,InnoZent OWL e.V.,ONLINE Systemlogistik GmbH & Co. KG,ONLINE Systemlogistik GmbH & Co. KG Firma Webseite,https://www.oslnet.de/de/,page_only,page~systemlogistik,3
+032,InnoZent OWL e.V.,OPTANO GmbH,OPTANO GmbH Firma Webseite,https://www.podcast.de/podcast/3200840/optcast,page_only,page~optano,4
+032,InnoZent OWL e.V.,"Ostfalia Hochschule für angewandte Wissenschaften, Wolfenbüttel","Ostfalia Hochschule für angewandte Wissenschaften, Wolfenbüttel Firma Webseite",https://www.ostfalia.de/hochschule,verified,"domain~ostfalia, page~wissenschaften",1
+032,InnoZent OWL e.V.,OWITA GmbH,OWITA GmbH Firma Webseite,https://website.owita.com/,page_only,page~owita,4
+032,InnoZent OWL e.V.,Raumtänzer GmbH,Raumtänzer GmbH Firma Webseite,,unverified,,5
+032,InnoZent OWL e.V.,RTB GmbH und Co. KG,RTB GmbH und Co. KG Firma Webseite,,unverified,,5
+032,InnoZent OWL e.V.,S&N Invent GmbH,S&N Invent GmbH Firma Webseite,https://www.sn-invent.de/,verified,"domain~invent, page~invent",1
+032,InnoZent OWL e.V.,S&Ü Hydraulik- und Maschinenbau GmbH,S&Ü Hydraulik- und Maschinenbau GmbH Firma Webseite,https://www.s-und-ue.de/,page_only,page~hydraulik,5
+032,InnoZent OWL e.V.,SBH West GmbH,SBH West GmbH Firma Webseite,,unverified,,4
+032,InnoZent OWL e.V.,"SHWire, Schwering & Hasse Elektrodraht GmbH","SHWire, Schwering & Hasse Elektrodraht GmbH Firma Webseite",https://www.sh-wire.de/,verified,"domain~shwire, page~elektrodraht",1
+032,InnoZent OWL e.V.,SIL System Integration Laboratory GmbH,SIL System Integration Laboratory GmbH Firma Webseite,,no_result,,3
+032,InnoZent OWL e.V.,Silence Aircraft GmbH,Silence Aircraft GmbH Firma Webseite,https://silence-aircraft.de/,verified,"domain~aircraft, page~aircraft",1
+032,InnoZent OWL e.V.,Skyline Express International GmbH,Skyline Express International GmbH Firma Webseite,https://www.skyline-express.de/,verified,"domain~skyline, page~skyline",1
+032,InnoZent OWL e.V.,Stührenberg GmbH,Stührenberg GmbH Firma Webseite,,unverified,,3
+032,InnoZent OWL e.V.,TEAM GmbH,TEAM GmbH Firma Webseite,https://www.team.de/,verified,"domain~team, page~team",1
+032,InnoZent OWL e.V.,Technische Hochschule Ostwestfalen-Lippe,Technische Hochschule Ostwestfalen-Lippe Firma Webseite,https://onlinestreet.de/poi/RnpKTVVEdjV4TXNOZWFTMWVxeWo5UT09,page_only,page~ostwestfalen,5
+032,InnoZent OWL e.V.,Technische Hochschule Ostwestfalen-Lippe - inIT,Technische Hochschule Ostwestfalen-Lippe - inIT Firma Webseite,https://www.init-owl.de/,verified,"domain~init, page~ostwestfalen",1
+032,InnoZent OWL e.V.,Technologie- und Berufsbildungszentrum Paderborn (tbz),Technologie- und Berufsbildungszentrum Paderborn (tbz) Firma Webseite,https://www.tbzpaderborn.de/,verified,"domain~paderborn, page~berufsbildungszentrum",1
+032,InnoZent OWL e.V.,T.F. Wickeltechnik GmbH,T.F. Wickeltechnik GmbH Firma Webseite,https://www.neulingen.de/firmenverzeichnis/141/,page_only,page~wickeltechnik,4
+032,InnoZent OWL e.V.,tomorrow bird GmbH,tomorrow bird GmbH Firma Webseite,https://tomorrowbird.com/,verified,"domain~tomorrow, page~tomorrow",1
+032,InnoZent OWL e.V.,Top Light GmbH & Co. KG,Top Light GmbH & Co. KG Firma Webseite,https://top-light.de/,verified,"domain~light, page~light",1
+032,InnoZent OWL e.V.,Trenz Electronic GmbH,Trenz Electronic GmbH Firma Webseite,https://www.trenz-electronic.de/,verified,"domain~electronic, page~electronic",1
+032,InnoZent OWL e.V.,Ulrich Rotte Anlagenbau und Fördertechnik GmbH,Ulrich Rotte Anlagenbau und Fördertechnik GmbH Firma Webseite,https://www.ulrich-rotte.de/,verified,"domain~ulrich, page~anlagenbau",1
+032,InnoZent OWL e.V.,Universität Bielefeld,Universität Bielefeld Firma Webseite,https://www.uni-bielefeld.de/,verified,"domain~bielefeld, page~bielefeld",1
+032,InnoZent OWL e.V.,Universität Bielefeld - CITEC,Universität Bielefeld - CITEC Firma Webseite,https://www.uni-bielefeld.de/fakultaeten/technische-fakultaet/forschung/forschungszentren/citec/,verified,"domain~bielefeld, page~bielefeld",1
+032,InnoZent OWL e.V.,Universität Paderborn,Universität Paderborn Firma Webseite,https://www.uni-paderborn.de/,verified,"domain~paderborn, page~paderborn",1
+032,InnoZent OWL e.V.,Universität Paderborn - CeOPP,Universität Paderborn - CeOPP Firma Webseite,https://www.ceopp.de/,verified,"domain~ceopp, page~paderborn",1
+032,InnoZent OWL e.V.,Universität Paderborn - Heinz Nixdorf Institut,Universität Paderborn - Heinz Nixdorf Institut Firma Webseite,https://www.hni.uni-paderborn.de/,page_only,page~paderborn,4
+032,InnoZent OWL e.V.,Universität Paderborn - Lehrstuhl für Konstruktions- und Antriebstechnik (KAt),Universität Paderborn - Lehrstuhl für Konstruktions- und Antriebstechnik (KAt) Firma Webseite,https://mb.uni-paderborn.de/kat,page_only,page~antriebstechnik,4
+032,InnoZent OWL e.V.,Universität Paderborn - Software Innovation Campus,Universität Paderborn - Software Innovation Campus Firma Webseite,https://www.sicp.de/impressum/,page_only,page~paderborn,3
+032,InnoZent OWL e.V.,Universität Paderborn - TecUP,Universität Paderborn - TecUP Firma Webseite,https://www.uni-paderborn.de/nachricht/58662,verified,"domain~paderborn, page~paderborn",1
+032,InnoZent OWL e.V.,VerbundVolksbank OWL,VerbundVolksbank OWL Firma Webseite,https://www.verbundvolksbank-owl-stiftung.de/startseite.html,verified,"domain~verbundvolksbank, page~verbundvolksbank",1
+032,InnoZent OWL e.V.,WestfalenWIND GmbH,WestfalenWIND GmbH Firma Webseite,https://www.westfalenwind.de/,verified,"domain~westfalenwind, page~westfalenwind",5
+032,InnoZent OWL e.V.,Wickord Buser Patentanwälte PartG mbB,Wickord Buser Patentanwälte PartG mbB Firma Webseite,https://www.ib-patent.de/,page_only,page~partg,3
+032,InnoZent OWL e.V.,Wirtschaftsförderung Paderborn,Wirtschaftsförderung Paderborn Firma Webseite,https://www.paderborn.de/wirtschaft-technologie/wfg/index.php,verified,"domain~paderborn, page~paderborn",1
+039,Life Science Nord e.V.,EurA AG,EurA AG Firma Webseite,https://www.eura-ag.com/,verified,"domain~eura, page~eura",1
+040,Medical Valley EMN e.V.,1A CUE Consulting & Engineering GmbH,1A CUE Consulting & Engineering GmbH Firma Webseite,,unverified,,5
+040,Medical Valley EMN e.V.,2be_die markenmacher GmbH,2be_die markenmacher GmbH Firma Webseite,,no_result,,2
+040,Medical Valley EMN e.V.,4BetterDevices,4BetterDevices Firma Webseite,,no_result,,1
+040,Medical Valley EMN e.V.,A.R.C. Laser GmbH,A.R.C. Laser GmbH Firma Webseite,https://www.arclaser.de/,verified,"domain~laser, page~laser",1
+040,Medical Valley EMN e.V.,AB-CT – Advanced Breast-CT GmbH,AB-CT – Advanced Breast-CT GmbH Firma Webseite,https://ab-ct.de/datenschutz/,page_only,page~advanced,3
+040,Medical Valley EMN e.V.,"ABF-Pharmazie GmbH & Co. KG / ABF, Apothekerin Eva Schreier e. K.","ABF-Pharmazie GmbH & Co. KG / ABF, Apothekerin Eva Schreier e. K. Firma Webseite",,unverified,,5
+040,Medical Valley EMN e.V.,acad group GmbH,acad group GmbH Firma Webseite,https://acad-group.de/,verified,"domain~acad, page~acad",1
+040,Medical Valley EMN e.V.,acterience management partners GmbH & Co. KG,acterience management partners GmbH & Co. KG Firma Webseite,https://www.acterience.com/impressum/,verified,"domain~acterience, page~acterience",1
+040,Medical Valley EMN e.V.,ADVANOVA GmbH,ADVANOVA GmbH Firma Webseite,https://www.advanova.de/,verified,"domain~advanova, page~advanova",1
+040,Medical Valley EMN e.V.,AFRA GmbH,AFRA GmbH Firma Webseite,https://www.afra.de/,verified,"domain~afra, page~afra",1
+040,Medical Valley EMN e.V.,Ahead Care GmbH,Ahead Care GmbH Firma Webseite,https://www.ahead-nutrition.com/policies/privacy-policy,verified,"domain~ahead, page~ahead",4
+040,Medical Valley EMN e.V.,Ajambow GmbH,Ajambow GmbH Firma Webseite,https://www.ajambow.com/,verified,"domain~ajambow, page~ajambow",1
+040,Medical Valley EMN e.V.,Akkodis Edge Germany GmbH,Akkodis Edge Germany GmbH Firma Webseite,https://www.akkodis.com/de/portfolio/edge,verified,"domain~akkodis, page~akkodis",1
+040,Medical Valley EMN e.V.,ALBOMED GmbH,ALBOMED GmbH Firma Webseite,https://albomed.de/,verified,"domain~albomed, page~albomed",1
+040,Medical Valley EMN e.V.,ALLISTRO GmbH,ALLISTRO GmbH Firma Webseite,https://www.allistro.de/impressum/,verified,"domain~allistro, page~allistro",1
+040,Medical Valley EMN e.V.,ALPO Medizintechnik GmbH,ALPO Medizintechnik GmbH Firma Webseite,https://www.alpo-med.de/alpo-medizintechnik/,verified,"domain~alpo, page~medizintechnik",1
+040,Medical Valley EMN e.V.,AMIPLANT GmbH,AMIPLANT GmbH Firma Webseite,https://amiplant.com/ueber-uns-neu,verified,"domain~amiplant, page~amiplant",1
+040,Medical Valley EMN e.V.,Antaks GmbH,Antaks GmbH Firma Webseite,https://www.antaks.de/,verified,"domain~antaks, page~antaks",2
+040,Medical Valley EMN e.V.,APAGCoSyst Control Systems GmbH,APAGCoSyst Control Systems GmbH Firma Webseite,https://www.apagcosyst.com/de/,verified,"domain~apagcosyst, page~apagcosyst",1
+040,Medical Valley EMN e.V.,AS Automation GmbH,AS Automation GmbH Firma Webseite,,unverified,,5
+043,NMWP.NRW e.V.,AMAC GmbH,AMAC GmbH Firma Webseite,https://amac.gmbh/,verified,"domain~amac, page~amac",1
+043,NMWP.NRW e.V.,AMO GmbH,AMO GmbH Firma Webseite,,unverified,,5
+043,NMWP.NRW e.V.,CTC GmbH,CTC GmbH Firma Webseite,,unverified,,5
+043,NMWP.NRW e.V.,Fraunhofer-Institut für Mikroelektronische Schaltungen und Systeme IMS,Fraunhofer-Institut für Mikroelektronische Schaltungen und Systeme IMS Firma Webseite,https://www.ims.fraunhofer.de/,page_only,page~mikroelektronische,4
+043,NMWP.NRW e.V.,"Institut für Umwelt & Energie, Technik & Analytik e. V. (IUTA)","Institut für Umwelt & Energie, Technik & Analytik e. V. (IUTA) Firma Webseite",https://www.iuta.de/,verified,"domain~iuta, page~analytik",1
+043,NMWP.NRW e.V.,nanobay,nanobay Firma Webseite,https://www.nanobay.com/,domain_match,domain~nanobay,1
+043,NMWP.NRW e.V.,Pulsar Photonics GmbH,Pulsar Photonics GmbH Firma Webseite,https://www.pulsar-photonics.de/,verified,"domain~photonics, page~photonics",1
+050,SPECTARIS e.V.,VitalAire GmbH,VitalAire GmbH Firma Webseite,https://de.vitalaire.com/,page_only,page~vitalaire,4

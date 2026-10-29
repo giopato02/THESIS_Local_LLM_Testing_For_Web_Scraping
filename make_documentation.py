@@ -13,6 +13,17 @@ Template supplied by Marco (2026-08-11):
 One document, one section per task, author marked per section (Marco's
 requirement so the reader knows whom to ask).
 
+UPDATED REQUIREMENTS (2026-09-22), which this script does not meet yet:
+
+  * at most 10 pages
+  * general and readable: no code, no script names, no file paths
+  * a summary, not a rigid grid of timeframes and tasks. It may name the
+    strategies used and their results: "In June I spent three weeks on X.
+    It did not work because Y, so I tried Z. The result was W."
+
+The per-task Goal/Method/Metrics sections below, and the script named in each
+Metrics section, have to be rewritten into that form before the report is sent.
+
 Run:  .venv/bin/python make_documentation.py
 """
 
