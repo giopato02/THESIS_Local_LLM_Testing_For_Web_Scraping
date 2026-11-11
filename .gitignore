@@ -18,3 +18,8 @@ results/html_cache_static_backup/
 results/extractions_orphaned/
 *.tar.gz
 nohup.out
+
+# Internal working documents. Kept locally, not published: a draft report for
+# the industry partner and the running research notes, which name colleagues.
+MARCO_WORK_SUMMARY_DRAFT.md
+THESIS_NOTES.md
